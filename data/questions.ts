@@ -1,4 +1,5 @@
 import { Question } from '@/lib/types';
+import { expansionQuestions } from './question-bank-expansion';
 
 export const questions: Question[] = [
   {
@@ -34,14 +35,14 @@ export const questions: Question[] = [
     instruction:'音声を 聞いて、質問に 答えてください。',
     prompt:'男の人は 何時に 会社へ 行きますか。',
     choices:['7時','8時','9時','10時'], answer:1,
-    explanationVi:'Audio mẫu sẽ nói người đàn ông đi công ty lúc 8 giờ.', audioSrc:'/audio/sample-01.mp3', tags:['time','listening']
+    explanationVi:'Audio nói người đàn ông đi công ty lúc 8 giờ.', audioSrc:'/audio/sample-01.wav', tags:['category:conversation','topic:work','can-do:understand-time']
   },
   {
     id:'LI-002', section:'listening', type:'audio_choice', level:'A2.1',
     instruction:'音声を 聞いて、いちばん いいものを えらんでください。',
     prompt:'店員は 客に 何を お願いしていますか。',
     choices:['ここで待つ','外で食べる','名前を書く','電話をする'], answer:2,
-    explanationVi:'Audio mẫu sẽ yêu cầu khách viết tên.', audioSrc:'/audio/sample-02.mp3', tags:['service','listening']
+    explanationVi:'Audio yêu cầu khách viết tên.', audioSrc:'/audio/sample-02.wav', tags:['category:shop-public-place','topic:service','can-do:follow-request']
   },
   {
     id:'RE-001', section:'reading', type:'choice', level:'A1',
@@ -56,7 +57,8 @@ export const questions: Question[] = [
     prompt:'田中さんへ\n明日の会議は10時から11時半までです。会議室Aではなく、3階の会議室Bに来てください。資料は今日中にメールで送ります。\n\n田中さんは 明日 どこへ 行きますか。',
     choices:['会議室A','3階の会議室B','受付','食堂'], answer:1,
     explanationVi:'Thông báo đổi địa điểm sang phòng họp B ở tầng 3.', tags:['work','reading']
-  }
+  },
+  ...expansionQuestions,
 ];
 
 export const sectionLabels = {

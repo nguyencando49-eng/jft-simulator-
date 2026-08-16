@@ -15,7 +15,7 @@
     "qa:full": "npm run typecheck && npm test && npm run build && npm run test:e2e"
   },
   "dependencies": {
-    "next": "15.4.6",
+    "next": "15.4.10",
     "react": "19.1.1",
     "react-dom": "19.1.1"
   },

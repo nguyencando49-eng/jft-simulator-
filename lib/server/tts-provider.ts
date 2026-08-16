@@ -24,5 +24,20 @@ class HttpTtsProvider implements TtsProvider {
     throw new Error('TTS response must be audio bytes, audioUrl, or audioBase64.');
   }
 }
-export function getTtsProvider():TtsProvider{return process.env.TTS_PROVIDER==='http'?new HttpTtsProvider():new MockTtsProvider();}
-export function ttsProviderMode(){return process.env.TTS_PROVIDER==='http'?'http':'mock';}
+function escapeXml(value:string){return value.replace(/[<>&"']/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&apos;'}[c]!));}
+export class AzureTtsProvider implements TtsProvider {
+  name='azure'; voice=process.env.AZURE_SPEECH_VOICE||'ja-JP-NanamiNeural';
+  async synthesize(text:string):Promise<TtsResult>{
+    const key=process.env.AZURE_SPEECH_KEY,region=process.env.AZURE_SPEECH_REGION;
+    if(!key||!region) throw new Error('AZURE_SPEECH_KEY and AZURE_SPEECH_REGION are required for Azure TTS.');
+    const endpoint=`https://${region}.tts.speech.microsoft.com/cognitiveservices/v1`;
+    const ssml=`<speak version="1.0" xml:lang="ja-JP"><voice name="${escapeXml(this.voice)}"><prosody rate="${escapeXml(process.env.AZURE_SPEECH_RATE||'-5%')}">${escapeXml(text)}</prosody></voice></speak>`;
+    const res=await fetch(endpoint,{method:'POST',headers:{'Ocp-Apim-Subscription-Key':key,'Content-Type':'application/ssml+xml','X-Microsoft-OutputFormat':'riff-48khz-16bit-mono-pcm','User-Agent':'jft-simulator'},body:ssml});
+    if(!res.ok) throw new Error(`Azure Speech synthesis failed: ${res.status} ${await res.text()}`);
+    const bytes=new Uint8Array(await res.arrayBuffer());
+    if(bytes.length<44||String.fromCharCode(...bytes.slice(0,4))!=='RIFF') throw new Error('Azure Speech returned invalid WAV audio.');
+    return {bytes,contentType:'audio/wav',extension:'wav',provider:this.name,voice:this.voice};
+  }
+}
+export function getTtsProvider():TtsProvider{const mode=process.env.TTS_PROVIDER;return mode==='azure'?new AzureTtsProvider():mode==='http'?new HttpTtsProvider():new MockTtsProvider();}
+export function ttsProviderMode(){const mode=process.env.TTS_PROVIDER;return mode==='azure'?'azure':mode==='http'?'http':'mock';}

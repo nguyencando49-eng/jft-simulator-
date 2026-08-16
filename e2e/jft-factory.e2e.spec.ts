@@ -98,4 +98,20 @@ test.describe.serial('JFT E2E release journeys',()=>{
     await page.getByRole('button',{name:'Publish version'}).click();
     await expect(page.getByText(/Published JFT-MOCK-001-v\d+/)).toBeVisible({timeout:15_000});
   });
+
+  test('admin can run source pilot into Factory Review',async({page})=>{
+    await devLogin(page,'admin');
+    await page.goto('/admin/sources');
+    await expect(page.getByRole('heading',{name:/Source → Knowledge/})).toBeVisible();
+    await page.getByRole('button',{name:'Confirm import'}).click();
+    await expect(page.getByRole('heading',{name:'Hospital reception pilot'})).toBeVisible();
+    await page.getByRole('button',{name:'1. Chunk'}).click();
+    await expect(page.getByText(/Chunks: [1-9]/)).toBeVisible();
+    await page.getByRole('button',{name:'2. Extract'}).click();
+    await page.getByRole('button',{name:'Approve knowledge'}).first().click();
+    await page.getByRole('button',{name:'3. Generate plan'}).click();
+    await expect(page.getByText(/Plan: 4 items/)).toBeVisible();
+    await page.getByRole('button',{name:'4. Generate via Existing Factory'}).click();
+    await expect(page.getByText(/Candidates: 4/)).toBeVisible({timeout:20_000});
+  });
 });

@@ -1,0 +1,2 @@
+import { NextResponse } from 'next/server';import { requireAuth } from '@/lib/server/auth';import { apiError } from '@/lib/server/http';import { createQuestionPlan } from '@/lib/server/source-service';
+export async function POST(req:Request,{params}:{params:Promise<{id:string}>}){try{const user=await requireAuth(req,'admin'),{id}=await params,body=await req.json();return NextResponse.json({ok:true,plan:await createQuestionPlan(id,body.requestedCount,user.userId)},{status:201});}catch(e){return apiError(e);}}

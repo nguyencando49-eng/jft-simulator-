@@ -2,6 +2,8 @@ import { ExamDraft, ExamVersion, QuestionRecord } from './admin-types';
 import { Question, SectionId } from './types';
 import type { UserRole } from './server/domain';
 import type { FactoryJob, FactoryRequest } from './server/factory-domain';
+import type { KnowledgeUnit, QuestionPlan, QuestionProvenance, SourceChunk, SourceDocument } from './server/source-domain';
+import type { CoverageCell, ReadinessResult } from './server/curriculum-production';
 
 export type ApiErrorPayload={ok?:false;error?:string;[key:string]:unknown};
 export class ApiError extends Error{status:number;payload:ApiErrorPayload;constructor(status:number,payload:ApiErrorPayload){super(payload.error||`API ${status}`);this.status=status;this.payload=payload;}}
@@ -42,6 +44,15 @@ export const adminApi={
   createFactoryJob:(input:FactoryRequest)=>raw<{ok:boolean;job:FactoryJob}>('/api/v1/factory/jobs',{method:'POST',body:JSON.stringify(input)}),
   approveFactoryCandidates:(jobId:string,candidateIds:string[])=>raw<{ok:true;approved:number;job:FactoryJob}>(`/api/v1/factory/jobs/${encodeURIComponent(jobId)}/approve`,{method:'POST',body:JSON.stringify({candidateIds})}),
   renderFactoryAudio:(jobId:string,candidateId:string)=>raw<{ok:true;job:FactoryJob;candidate:FactoryJob['candidates'][number]}>(`/api/v1/factory/jobs/${encodeURIComponent(jobId)}/candidates/${encodeURIComponent(candidateId)}/audio`,{method:'POST'}),
+  sources:()=>raw<{ok:true;sources:SourceDocument[]}>('/api/v1/sources'),
+  createSource:(input:{title:string;fileName?:string;sourceType?:string;content:string})=>raw<{ok:true;source:SourceDocument}>('/api/v1/sources',{method:'POST',body:JSON.stringify(input)}),
+  source:(id:string)=>raw<{ok:true;source:SourceDocument;chunks:SourceChunk[];knowledgeUnits:KnowledgeUnit[];plans:QuestionPlan[];provenance:QuestionProvenance[]}>(`/api/v1/sources/${id}`),
+  chunkSource:(id:string)=>raw<{ok:true;chunks:SourceChunk[]}>(`/api/v1/sources/${id}/chunk`,{method:'POST',body:'{}'}),
+  extractSource:(id:string)=>raw<{ok:true;knowledgeUnits:KnowledgeUnit[]}>(`/api/v1/sources/${id}/extract`,{method:'POST',body:JSON.stringify({maxKnowledgeUnits:20})}),
+  approveKnowledge:(id:string)=>raw<{ok:true;knowledgeUnit:KnowledgeUnit}>(`/api/v1/knowledge/${id}/approve`,{method:'POST'}),
+  planSource:(id:string,requestedCount:number)=>raw<{ok:true;plan:QuestionPlan}>(`/api/v1/sources/${id}/plan`,{method:'POST',body:JSON.stringify({requestedCount})}),
+  generatePlan:(id:string)=>raw<{ok:true;plan:QuestionPlan;jobs:FactoryJob[]}>(`/api/v1/question-plans/${id}/generate`,{method:'POST'}),
+  contentProduction:()=>raw<{ok:true;levels:Record<string,{approved:number;targetMin:number;targetMax:number;coverage:{total:number;covered:number};readiness:ReadinessResult}>;sources:{total:number;approvedKnowledgeUnits:number};deficits:CoverageCell[];qa:{listeningAudioDeficits:number;outOfCurriculumFailures:number}}>('/api/v1/content-production'),
 };
 
 export type CandidateQuestion=Omit<Question,'answer'|'explanationVi'> & {answer?:never;explanationVi?:never};

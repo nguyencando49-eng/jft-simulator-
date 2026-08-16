@@ -1,8 +1,9 @@
 import { ExamDraft, ExamVersion, QuestionRecord } from '@/lib/admin-types';
 import type { FactoryJob } from './factory-domain';
+import type { KnowledgeUnit, QuestionPlan, QuestionProvenance, SourceChunk, SourceDocument } from './source-domain';
 
 export type QaSeverity = 'error' | 'warning';
-export type QaCheckCode = 'schema'|'choice_count'|'answer_index'|'duplicate_choice'|'audio_required'|'prompt_required'|'explanation_required'|'semantic_alignment'|'duplicate_similarity'|'audio_render'|'question_id_collision';
+export type QaCheckCode = 'schema'|'choice_count'|'answer_index'|'duplicate_choice'|'audio_required'|'prompt_required'|'explanation_required'|'semantic_alignment'|'duplicate_similarity'|'source_similarity'|'audio_render'|'question_id_collision';
 export interface QaIssue { code: QaCheckCode; severity: QaSeverity; message: string; }
 export interface QaReport { passed: boolean; checkedAt: string; issues: QaIssue[]; }
 
@@ -48,4 +49,17 @@ export interface Repository {
   listFactoryJobs(): Promise<FactoryJob[]>;
   getFactoryJob(id: string): Promise<FactoryJob | null>;
   saveFactoryJob(job: FactoryJob): Promise<FactoryJob>;
+  listSourceDocuments(): Promise<SourceDocument[]>;
+  getSourceDocument(id:string): Promise<SourceDocument|null>;
+  saveSourceDocument(document:SourceDocument): Promise<SourceDocument>;
+  saveSourceChunks(chunks:SourceChunk[]): Promise<SourceChunk[]>;
+  listSourceChunks(sourceDocumentId:string): Promise<SourceChunk[]>;
+  saveKnowledgeUnits(units:KnowledgeUnit[]): Promise<KnowledgeUnit[]>;
+  updateKnowledgeUnit(unit:KnowledgeUnit): Promise<KnowledgeUnit>;
+  listKnowledgeUnits(sourceDocumentId:string): Promise<KnowledgeUnit[]>;
+  saveQuestionPlan(plan:QuestionPlan): Promise<QuestionPlan>;
+  getQuestionPlan(id:string): Promise<QuestionPlan|null>;
+  listQuestionPlans(sourceDocumentId:string): Promise<QuestionPlan[]>;
+  saveQuestionProvenance(value:QuestionProvenance): Promise<QuestionProvenance>;
+  listQuestionProvenance(sourceDocumentId:string): Promise<QuestionProvenance[]>;
 }

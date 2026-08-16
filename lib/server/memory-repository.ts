@@ -3,6 +3,7 @@ import { ExamDraft, ExamVersion, QuestionRecord } from '@/lib/admin-types';
 import { CandidateSessionRecord, ProfileRecord, Repository } from './domain';
 import { generateExamVersion } from '@/lib/exam-generator';
 import type { FactoryJob } from './factory-domain';
+import type { KnowledgeUnit, QuestionPlan, QuestionProvenance, SourceChunk, SourceDocument } from './source-domain';
 
 type Store = {
   questions: QuestionRecord[];
@@ -11,13 +12,15 @@ type Store = {
   sessions: CandidateSessionRecord[];
   profiles: ProfileRecord[];
   factoryJobs: FactoryJob[];
+  sourceDocuments:SourceDocument[];sourceChunks:SourceChunk[];knowledgeUnits:KnowledgeUnit[];questionPlans:QuestionPlan[];questionProvenance:QuestionProvenance[];
 };
 
 declare global { var __jftV4MemoryStore: Store | undefined; }
 const initialVersion = generateExamVersion(seedExamDraft, seedQuestions, 1);
 const store: Store = globalThis.__jftV4MemoryStore ?? {
-  questions: structuredClone(seedQuestions), drafts: [structuredClone(seedExamDraft)], versions: initialVersion.ok ? [structuredClone(initialVersion.version)] : [], sessions: [], profiles: [], factoryJobs: [],
+  questions: structuredClone(seedQuestions), drafts: [structuredClone(seedExamDraft)], versions: initialVersion.ok ? [structuredClone(initialVersion.version)] : [], sessions: [], profiles: [], factoryJobs: [],sourceDocuments:[],sourceChunks:[],knowledgeUnits:[],questionPlans:[],questionProvenance:[],
 };
+for(const [key,value] of Object.entries({sourceDocuments:[],sourceChunks:[],knowledgeUnits:[],questionPlans:[],questionProvenance:[]}) as Array<[keyof Store,never[]]>) if(!store[key]) (store as any)[key]=value;
 if (process.env.NODE_ENV !== 'production') globalThis.__jftV4MemoryStore = store;
 
 export class MemoryRepository implements Repository {
@@ -38,4 +41,17 @@ export class MemoryRepository implements Repository {
   async listFactoryJobs(){ return structuredClone(store.factoryJobs); }
   async getFactoryJob(id:string){ return structuredClone(store.factoryJobs.find(j=>j.id===id) ?? null); }
   async saveFactoryJob(job:FactoryJob){ const i=store.factoryJobs.findIndex(j=>j.id===job.id); if(i>=0) store.factoryJobs[i]=structuredClone(job); else store.factoryJobs.push(structuredClone(job)); return structuredClone(job); }
+  async listSourceDocuments(){return structuredClone(store.sourceDocuments);}
+  async getSourceDocument(id:string){return structuredClone(store.sourceDocuments.find(x=>x.id===id)||null);}
+  async saveSourceDocument(x:SourceDocument){const i=store.sourceDocuments.findIndex(v=>v.id===x.id);if(i>=0)store.sourceDocuments[i]=structuredClone(x);else store.sourceDocuments.push(structuredClone(x));return structuredClone(x);}
+  async saveSourceChunks(xs:SourceChunk[]){for(const x of xs){const i=store.sourceChunks.findIndex(v=>v.id===x.id);if(i>=0)store.sourceChunks[i]=structuredClone(x);else store.sourceChunks.push(structuredClone(x));}return structuredClone(xs);}
+  async listSourceChunks(id:string){return structuredClone(store.sourceChunks.filter(x=>x.sourceDocumentId===id).sort((a,b)=>a.sequence-b.sequence));}
+  async saveKnowledgeUnits(xs:KnowledgeUnit[]){for(const x of xs)await this.updateKnowledgeUnit(x);return structuredClone(xs);}
+  async updateKnowledgeUnit(x:KnowledgeUnit){const i=store.knowledgeUnits.findIndex(v=>v.id===x.id);if(i>=0)store.knowledgeUnits[i]=structuredClone(x);else store.knowledgeUnits.push(structuredClone(x));return structuredClone(x);}
+  async listKnowledgeUnits(id:string){return structuredClone(store.knowledgeUnits.filter(x=>x.sourceDocumentId===id));}
+  async saveQuestionPlan(x:QuestionPlan){const i=store.questionPlans.findIndex(v=>v.id===x.id);if(i>=0)store.questionPlans[i]=structuredClone(x);else store.questionPlans.push(structuredClone(x));return structuredClone(x);}
+  async getQuestionPlan(id:string){return structuredClone(store.questionPlans.find(x=>x.id===id)||null);}
+  async listQuestionPlans(id:string){return structuredClone(store.questionPlans.filter(x=>x.sourceDocumentId===id));}
+  async saveQuestionProvenance(x:QuestionProvenance){const i=store.questionProvenance.findIndex(v=>v.id===x.id);if(i>=0)store.questionProvenance[i]=structuredClone(x);else store.questionProvenance.push(structuredClone(x));return structuredClone(x);}
+  async listQuestionProvenance(id:string){return structuredClone(store.questionProvenance.filter(x=>x.sourceDocumentId===id));}
 }

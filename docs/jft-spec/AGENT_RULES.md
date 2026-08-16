@@ -1,5 +1,7 @@
 # Mandatory agent rules
 
+Before implementing Source Question Factory, recursively read `docs/jft-spec/`. Treat `JFT_OFFICIAL_SPEC.md` and this file as mandatory domain constraints. Treat taxonomy, topic, blueprint, production targets and QA thresholds explicitly marked as simulator design decisions as internal product rules, not official JFT facts.
+
 These constraints apply to implementation, content generation, prompts, UI copy, tests, and documentation.
 
 1. Treat `JFT_OFFICIAL_SPEC.md` and its Japan Foundation sources as the domain source of truth.

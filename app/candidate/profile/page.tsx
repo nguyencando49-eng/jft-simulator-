@@ -1,0 +1,1 @@
+import AuthGate from '@/components/auth/AuthGate'; import ProfileClient from '@/components/account/ProfileClient'; export default function ProfilePage(){return <AuthGate role="candidate"><ProfileClient/></AuthGate>}

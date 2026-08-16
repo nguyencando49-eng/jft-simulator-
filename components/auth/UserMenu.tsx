@@ -1,0 +1,3 @@
+'use client';
+import { useEffect,useState } from 'react'; import { useRouter } from 'next/navigation'; import { authApi,UserProfile } from '@/lib/api-client';
+export default function UserMenu({compact=false}:{compact?:boolean}){const [user,setUser]=useState<UserProfile|null>(null);const router=useRouter();useEffect(()=>{void authApi.me().then(r=>setUser(r.user)).catch(()=>{})},[]);if(!user)return null;return <div className={compact?'user-menu compact':'user-menu'}><div><b>{user.displayName||user.email}</b><small>{user.role}</small></div><button onClick={async()=>{await authApi.logout();router.replace('/login')}}>Logout</button></div>}

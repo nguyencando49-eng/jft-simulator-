@@ -1,0 +1,2 @@
+id,section,type,level,instruction,prompt,choices,answer,explanationVi,audioSrc,tags,status,version
+VOC-IMPORT-001,script_vocabulary,choice,A2.1,Chọn đáp án đúng,きのう会社で＿＿＿＿。,"[""はたらきます"",""はたらきました"",""はたらいて""]",1,Dùng quá khứ ました,,"[""仕事"",""過去形""]",draft,1

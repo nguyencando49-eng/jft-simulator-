@@ -1,0 +1,14 @@
+[
+  {
+    "id": "SV-1001",
+    "section": "script_vocabulary",
+    "type": "choice",
+    "level": "A2.1",
+    "instruction": "（　）に何が入りますか。",
+    "prompt": "...",
+    "choices": ["...", "...", "...", "..."],
+    "answer": 0,
+    "explanationVi": "...",
+    "tags": ["work", "vocabulary"]
+  }
+]

@@ -1,0 +1,3 @@
+import { describe,expect,it } from 'vitest';
+import { MemoryRepository } from '@/lib/server/memory-repository';
+describe('autosave concurrency',()=>{it('merges independent answer writes instead of replacing the answers object',async()=>{const repo=new MemoryRepository();const id=crypto.randomUUID();await repo.createSession({id,examVersionId:'JFT-MOCK-001-v1',candidateId:'qa-user',status:'active',startedAt:new Date().toISOString(),expiresAt:new Date(Date.now()+60000).toISOString(),currentIndex:0,answers:{}});await Promise.all([repo.saveSessionProgress(id,{questionId:'q-a',choice:0}),repo.saveSessionProgress(id,{questionId:'q-b',choice:1})]);const s=await repo.getSession(id);expect(s?.answers).toMatchObject({'q-a':0,'q-b':1});});});

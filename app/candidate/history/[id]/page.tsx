@@ -1,0 +1,1 @@
+import AuthGate from '@/components/auth/AuthGate'; import AttemptDetailClient from '@/components/candidate/AttemptDetailClient'; export default async function AttemptPage({params}:{params:Promise<{id:string}>}){const {id}=await params;return <AuthGate role="candidate"><AttemptDetailClient sessionId={id}/></AuthGate>}

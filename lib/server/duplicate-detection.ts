@@ -1,0 +1,4 @@
+function normalize(s:string){return s.normalize('NFKC').toLowerCase().replace(/[\s\p{P}\p{S}]+/gu,'');}
+function grams(s:string,n=3){const x=normalize(s);const set=new Set<string>();if(x.length<=n){if(x)set.add(x);return set;}for(let i=0;i<=x.length-n;i++)set.add(x.slice(i,i+n));return set;}
+export function textSimilarity(a:string,b:string){const A=grams(a),B=grams(b);if(!A.size&&!B.size)return 1;let inter=0;for(const x of A)if(B.has(x))inter++;return inter/(A.size+B.size-inter||1);}
+export function findNearDuplicates<T>(items:T[],text:(x:T)=>string,threshold=.82){const out:Array<{a:T;b:T;score:number}>=[];for(let i=0;i<items.length;i++)for(let j=i+1;j<items.length;j++){const score=textSimilarity(text(items[i]),text(items[j]));if(score>=threshold)out.push({a:items[i],b:items[j],score});}return out;}

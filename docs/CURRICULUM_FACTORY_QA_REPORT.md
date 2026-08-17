@@ -16,6 +16,19 @@
 - Audio format: 24 kHz, 48 kbit/s mono MP3; total generated size approximately 53.46 MB.
 - Release status: human review required. These are unofficial simulator questions with uncalibrated practice difficulty.
 
+### Independent JFT_CONTENT_QA_V1 audit
+
+The stronger independent judge supersedes structural-pass language as a release decision. It audited all 2,100 questions without editing them:
+
+- PASS: 0.
+- REVIEW: 965.
+- FAIL: 1,135.
+- Hard failures: 640.
+- Eligible for automatic Question Bank admission: 0.
+- Major evidence: 456 answer-leakage findings, 251 answer-key mismatches, 507 low-quality distractor findings, 44 out-of-curriculum findings, and missing source-originality evidence for all 2,100 items.
+- Release decision: BLOCKED. Structural, audio and n-gram duplicate checks passed, but they are insufficient evidence of valid assessment quality.
+- Machine-readable report: `data/qa/jft-content-qa-v1-report.json`.
+
 Implemented: canonical taxonomy; enriched KnowledgeUnits; approved-only multi-unit planning; provenance; curriculum hard-fail QA; originality; coverage/deficits; readiness; seeded assembly; reuse/overlap measurement; Azure Japanese WAV TTS; admin summary; migration and focused tests.
 
 ## QA run — 2026-08-17

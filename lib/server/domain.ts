@@ -3,7 +3,7 @@ import type { FactoryJob } from './factory-domain';
 import type { KnowledgeUnit, QuestionPlan, QuestionProvenance, SourceChunk, SourceDocument } from './source-domain';
 
 export type QaSeverity = 'error' | 'warning';
-export type QaCheckCode = 'schema'|'choice_count'|'answer_index'|'duplicate_choice'|'audio_required'|'prompt_required'|'explanation_required'|'semantic_alignment'|'duplicate_similarity'|'source_similarity'|'audio_render'|'question_id_collision';
+export type QaCheckCode = 'schema'|'choice_count'|'answer_index'|'duplicate_choice'|'audio_required'|'prompt_required'|'explanation_required'|'semantic_alignment'|'duplicate_similarity'|'source_similarity'|'audio_render'|'question_id_collision'|'content_qa_fail'|'content_qa_review';
 export interface QaIssue { code: QaCheckCode; severity: QaSeverity; message: string; }
 export interface QaReport { passed: boolean; checkedAt: string; issues: QaIssue[]; }
 

@@ -24,6 +24,8 @@ describe('planning and originality',()=>{
   const copied=`${baseline.candidates[0].question.prompt} ${baseline.candidates[0].question.choices.join(' ')}`;
   const guarded=await runFactoryJob(makeJob(`guarded-${crypto.randomUUID()}`,[copied]));
   expect(guarded.candidates[0].qa.issues.some(x=>x.code==='source_similarity')).toBe(true);
+  expect(guarded.candidates[0].contentQa?.qaVersion).toBe('JFT_CONTENT_QA_V1');
+  expect(guarded.candidates[0].contentQa?.release.eligibleForQuestionBank).toBe(false);
   const before=(await getRepository().listQuestions()).length;
   const result=await approveFactoryCandidates(guarded.id,[guarded.candidates[0].id]);
   expect(result.approved).toBe(0);

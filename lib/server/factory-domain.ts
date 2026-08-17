@@ -1,6 +1,7 @@
 import { QuestionRecord } from '@/lib/admin-types';
 import type { QaIssue } from './domain';
 import { Question, SectionId } from '@/lib/types';
+import type { JftContentQaResultV1 } from './jft-content-qa-agent';
 
 export type FactoryDifficulty = 'easy'|'balanced'|'hard';
 export type FactoryProviderName = 'mock'|'http';
@@ -11,6 +12,7 @@ export interface FactoryRequest {
   level: Question['level'];
   topic: string;
   canDo?: string;
+  category?: string;
   count: number;
   difficulty: FactoryDifficulty;
   includeExplanation: boolean;
@@ -39,6 +41,7 @@ export interface FactoryCandidate {
   };
   semanticQa?: { score:number; passed:boolean; summary:string; issues:FactoryQaIssue[]; provider:string; model?:string };
   curriculumQa?: { curriculumGrounded:boolean; knowledgeUnitIds:string[]; outsideKnowledge:string[]; score:number; hardFail:boolean };
+  contentQa?: JftContentQaResultV1;
   audio?: { status:'pending'|'ready'|'failed'; provider?:string; voice?:string; storage?:string; renderedAt?:string; error?:string };
   approvedAt?: string;
 }

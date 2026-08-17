@@ -16,3 +16,4 @@ These constraints apply to implementation, content generation, prompts, UI copy,
 10. Mark taxonomy, topic coverage, item allocation, QA thresholds, and score mappings as **Simulator design decision**.
 11. Do not imply access to secure official questions or official affiliation.
 12. A verified official constraint wins over a conflicting internal rule.
+13. Run the independent `JFT_CONTENT_QA_V1` judge during generation, after Listening audio rendering, and before Question Bank approval. The judge must report rather than rewrite. FAIL and hard-fail verdicts block admission.

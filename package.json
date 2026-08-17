@@ -13,6 +13,7 @@
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "audio:production": "vite-node scripts/generate-production-audio.ts",
+    "qa:content": "vite-node scripts/run-jft-content-qa.ts",
     "qa:full": "npm run typecheck && npm test && npm run build && npm run test:e2e"
   },
   "dependencies": {

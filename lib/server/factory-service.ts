@@ -11,6 +11,28 @@ import { persistGeneratedAudio } from './asset-storage';
 import { hasQuestionIdCollision } from './question-integrity';
 import { checkSourceSimilarity } from './source-similarity';
 import { runCurriculumQa } from './curriculum-production';
+import { DeterministicJftContentQaJudge,type QaQuestion } from './jft-content-qa-agent';
+
+const contentQaJudge=new DeterministicJftContentQaJudge();
+
+async function applyContentQa(job:FactoryJob,candidate:FactoryCandidate,existing:QuestionRecord[]){
+  candidate.qa.issues=candidate.qa.issues.filter(issue=>!issue.code.startsWith('content_qa_'));
+  const ids=job.sourceContext?.knowledgeUnitIds||[job.sourceContext?.knowledgeUnitId].filter((id):id is string=>!!id);
+  const units=job.sourceContext?await getRepository().listKnowledgeUnits(job.sourceContext.sourceDocumentId):[];
+  const unit=units.find(item=>ids.includes(item.id));
+  const candidateText=`${candidate.question.prompt} ${candidate.question.choices.join(' ')} ${candidate.audioScript||''}`;
+  const sourceSimilarityScore=job.sourceContext?Math.max(0,...job.sourceContext.sourceTexts.map(text=>textSimilarity(candidateText,text))):undefined;
+  const duplicateSimilarityScore=Math.max(0,...existing.map(question=>textSimilarity(candidate.question.prompt,question.prompt)),...job.candidates.filter(item=>item.id!==candidate.id).map(item=>textSimilarity(candidate.question.prompt,item.question.prompt)));
+  const qaQuestion:QaQuestion={...candidate.question,category:job.request.category,canDo:job.request.canDo,knowledgeUnitIds:ids,sourceDocument:job.sourceContext?.sourceDocumentId,audioScript:candidate.audioScript};
+  candidate.contentQa=contentQaJudge.judge(qaQuestion,{unit:unit?{id:unit.id,anchors:[...unit.vocabulary,...(unit.kanji||[]),...unit.grammar,...unit.expressions,...unit.keyKnowledge].filter(Boolean)}:undefined,audioAvailable:candidate.question.type!=='audio_choice'||candidate.audio?.status==='ready'&&!!candidate.question.audioSrc,sourceSimilarityScore,duplicateSimilarityScore});
+  if(candidate.contentQa.verdict==='FAIL'){
+    candidate.qa.issues.push({code:'content_qa_fail',severity:'error',category:'pedagogy',message:`${candidate.contentQa.qaVersion} FAIL: ${candidate.contentQa.release.blockReason.join(', ')||'score below release threshold'}.`});
+    candidate.qa.passed=false;candidate.qa.score=Math.min(candidate.qa.score,candidate.contentQa.scores.total);
+  }else if(candidate.contentQa.verdict==='REVIEW'){
+    candidate.qa.issues.push({code:'content_qa_review',severity:'warning',category:'pedagogy',message:`${candidate.contentQa.qaVersion} requires explicit human review (${candidate.contentQa.scores.total}/100).`});
+    candidate.qa.score=Math.min(candidate.qa.score,candidate.contentQa.scores.total);
+  }
+}
 
 function applySourceOriginalityQa(job:FactoryJob,candidate:FactoryCandidate,existing:QuestionRecord[]){
   if(!job.sourceContext) return;
@@ -66,6 +88,7 @@ export async function runFactoryJob(job:FactoryJob):Promise<FactoryJob>{
         c.curriculumQa=curriculum;
         if(curriculum.hardFail){c.qa.issues.push({code:'semantic_alignment',severity:'error',category:'pedagogy',message:`OUT_OF_CURRICULUM: ${curriculum.outsideKnowledge.join(', ')}`});c.qa.passed=false;c.qa.score=Math.min(c.qa.score,curriculum.score);}
       }
+      await applyContentQa(job,c,existing);
     }
     job.status='review'; job.provider=provider.name; job.updatedAt=new Date().toISOString();
   }catch(e){ job.status='failed'; job.error=e instanceof Error?e.message:String(e); job.updatedAt=new Date().toISOString(); }
@@ -83,6 +106,7 @@ export async function renderFactoryCandidateAudio(jobId:string,candidateId:strin
     c.question.audioSrc=stored.src; c.question.updatedAt=now; c.audio={status:'ready',provider:rendered.provider,voice:rendered.voice,storage:stored.storage,renderedAt:now};
     const bare={id:c.id,question:c.question,audioScript:c.audioScript,generation:c.generation,semanticQa:c.semanticQa,audio:c.audio,approvedAt:c.approvedAt}; c.qa=runFactoryQa(bare);
     applySourceOriginalityQa(job,c,await repo.listQuestions());
+    await applyContentQa(job,c,await repo.listQuestions());
   }catch(e){c.audio={status:'failed',provider:tts.name,voice:tts.voice,error:e instanceof Error?e.message:String(e)}; throw e;}
   finally{job.updatedAt=new Date().toISOString();await repo.saveFactoryJob(job);}
   return {job,candidate:c};
@@ -96,6 +120,8 @@ export async function approveFactoryCandidates(jobId:string,candidateIds:string[
     const bare={id:c.id,question:c.question,audioScript:c.audioScript,generation:c.generation,semanticQa:c.semanticQa,audio:c.audio,approvedAt:c.approvedAt}; c.qa=runFactoryQa(bare);
     applySourceOriginalityQa(job,c,existingQuestions);
     if(job.sourceContext){const ids=job.sourceContext.knowledgeUnitIds||[job.sourceContext.knowledgeUnitId];const units=(await repo.listKnowledgeUnits(job.sourceContext.sourceDocumentId)).filter(u=>ids.includes(u.id));c.curriculumQa=runCurriculumQa(c.question,units);if(c.curriculumQa.hardFail){c.qa.issues.push({code:'semantic_alignment',severity:'error',category:'pedagogy',message:`OUT_OF_CURRICULUM: ${c.curriculumQa.outsideKnowledge.join(', ')}`});c.qa.passed=false;}}
+    await applyContentQa(job,c,existingQuestions);
+    if(c.contentQa?.verdict==='FAIL'||c.contentQa?.hardFail)continue;
     if(hasQuestionIdCollision(existingQuestions,c.question.id) || existingIds.has(c.question.id)){
       c.qa.issues.push({code:'question_id_collision',severity:'error',category:'schema',message:`Question id ${c.question.id} already exists in Question Bank.`});
       c.qa.passed=false; c.qa.score=Math.max(0,c.qa.score-50); continue;

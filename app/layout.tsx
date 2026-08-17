@@ -1,4 +1,5 @@
 import './globals.css';
+import './rebuild.css';
 
 export const metadata = {
   title: 'JFT Simulator',

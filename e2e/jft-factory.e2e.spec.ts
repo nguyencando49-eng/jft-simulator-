@@ -2,23 +2,23 @@ import { expect, test, type Page } from '@playwright/test';
 
 async function devLogin(page: Page, role: 'candidate'|'admin') {
   await page.goto('/login');
-  await expect(page.getByLabel('Development role')).toBeVisible();
+  await expect(page.getByLabel('Vai trò phát triển')).toBeVisible();
   await page.getByLabel('Email').fill(`e2e-${role}@local.test`);
-  await page.getByLabel('Development role').selectOption(role);
-  await page.getByRole('button', { name: 'Enter development session' }).click();
+  await page.getByLabel('Vai trò phát triển').selectOption(role);
+  await page.getByRole('button', { name: 'Đăng nhập' }).click();
   await expect(page).toHaveURL(role === 'admin' ? /\/admin(?:\/|$)/ : /\/candidate(?:\/|$)/);
 }
 
 async function startCandidateExam(page: Page, durationSeconds = 120) {
   await page.context().addCookies([{name:'jft-e2e-duration-seconds',value:String(durationSeconds),url:'http://127.0.0.1:3100'}]);
   await page.goto('/exam');
-  await expect(page.getByRole('heading',{name:'Test Instructions'})).toBeVisible();
-  await page.getByRole('button',{name:'Continue'}).click();
-  await expect(page.getByRole('heading',{name:'Audio Check'})).toBeVisible();
-  await page.getByRole('button',{name:'Start Test'}).click();
-  await expect(page.getByRole('button',{name:'Begin Section'})).toBeVisible();
-  await page.getByRole('button',{name:'Begin Section'}).click();
-  await expect(page.getByText(/Question 1 \/ 2/)).toBeVisible();
+  await expect(page.getByRole('heading',{name:'Hướng dẫn làm bài'})).toBeVisible();
+  await page.getByRole('button',{name:'Kiểm tra âm thanh'}).click();
+  await expect(page.getByRole('heading',{name:'Kiểm tra âm thanh'})).toBeVisible();
+  await page.getByRole('button',{name:'Bắt đầu làm bài'}).click();
+  await expect(page.getByRole('button',{name:'Bắt đầu phần này'})).toBeVisible();
+  await page.getByRole('button',{name:'Bắt đầu phần này'}).click();
+  await expect(page.getByText(/Câu 1 \/ 2/)).toBeVisible();
 }
 
 async function answerCurrent(page: Page, choice = 0) {
@@ -26,14 +26,13 @@ async function answerCurrent(page: Page, choice = 0) {
   await expect(radios.first()).toBeVisible();
   const count=await radios.count();
   await radios.nth(Math.min(choice,count-1)).check();
-  await expect(page.getByText('Server synced')).toBeVisible();
+  await expect(page.getByText('Đã lưu tự động')).toBeVisible();
 }
 
 async function moveNext(page: Page) {
-  await page.getByRole('button',{name:/^(Next|Review & End)$/}).click();
-  const begin=page.getByRole('button',{name:'Begin Section'});
-  const sectionChanged=await begin.waitFor({state:'visible',timeout:800}).then(()=>true).catch(()=>false);
-  if(sectionChanged) await begin.click();
+  await page.getByRole('button',{name:/^(Tiếp theo|Kiểm tra & nộp)$/}).click();
+  const confirm=page.getByRole('button',{name:'Tiếp tục'});if(await confirm.isVisible().catch(()=>false))await confirm.click();
+  const begin=page.getByRole('button',{name:'Bắt đầu phần này'});if(await begin.isVisible().catch(()=>false))await begin.click();
 }
 
 test.describe.serial('JFT E2E release journeys',()=>{
@@ -45,7 +44,7 @@ test.describe.serial('JFT E2E release journeys',()=>{
     // Prove account-backed resume works even without the localStorage session hint.
     await page.evaluate(()=>localStorage.clear());
     await page.reload();
-    await expect(page.getByText(/Question 1 \/ 2/)).toBeVisible();
+    await expect(page.getByText(/Câu 1 \/ 2/)).toBeVisible();
     await expect(page.getByRole('radio').first()).toBeChecked();
 
     // Move through Script/Vocabulary + Conversation and into Listening.
@@ -53,18 +52,18 @@ test.describe.serial('JFT E2E release journeys',()=>{
     await moveNext(page); await answerCurrent(page,0);
     await moveNext(page); await answerCurrent(page,0);
     await moveNext(page);
-    await expect(page.getByText('Listening Comprehension').first()).toBeVisible();
+    await expect(page.getByText('Nghe hiểu').first()).toBeVisible();
     await answerCurrent(page,0);
     await moveNext(page);
-    await expect(page.getByRole('button',{name:'Back'})).toBeDisabled();
+    await expect(page.getByRole('button',{name:'Quay lại'})).toBeDisabled();
     await answerCurrent(page,0);
 
     // Finish Reading and submit normally.
     await moveNext(page); await answerCurrent(page,0);
     await moveNext(page); await answerCurrent(page,0);
     await moveNext(page);
-    await expect(page.getByRole('heading',{name:'End Test?'})).toBeVisible();
-    await page.getByRole('button',{name:'Submit Test'}).click();
+    await expect(page.getByRole('heading',{name:'Nộp bài luyện tập?'})).toBeVisible();
+    await page.getByRole('button',{name:'Nộp bài'}).click();
     await expect(page).toHaveURL(/\/result\?sessionId=/);
     await expect(page.getByText(/Overall|Score|Result/i).first()).toBeVisible();
   });
@@ -80,7 +79,7 @@ test.describe.serial('JFT E2E release journeys',()=>{
   test('admin can generate Listening, render TTS, approve, and publish an exam version',async({page})=>{
     await devLogin(page,'admin');
     await page.goto('/admin/factory');
-    await expect(page.getByRole('heading',{name:/Generate → Semantic QA/})).toBeVisible();
+    await expect(page.getByRole('heading',{name:'AI Question Factory'})).toBeVisible();
     await page.getByLabel('Section').selectOption('listening');
     await page.getByLabel('Topic').fill(`E2E仕事-${Date.now()}`);
     await page.getByLabel('Count').fill('1');

@@ -3,7 +3,7 @@ import type { Question } from '@/lib/types';
 export type PilotQuestion = Question & { category:string; canDo:string; knowledgeUnitIds:string[]; audioScript?:string };
 const common={level:'A1' as const,knowledgeUnitIds:['nyumon-03-self-introduction']};
 
-export const a1Lesson03Candidates:PilotQuestion[]=[
+const a1Lesson03Drafts:PilotQuestion[]=[
   {...common,id:'A1P3-SV-001',section:'script_vocabulary',type:'choice',category:'word_meaning',canDo:'Can understand basic nationality words.',instruction:'ことばの いみを えらんでください。',prompt:'「ベトナム人」は どれですか。',choices:['ベトナムの 人','日本の 会社','韓国の ことば','わたしの 名前'],answer:0,explanationVi:'ベトナム人 nghĩa là người Việt Nam.',tags:['topic:personal_information','can-do:identify-nationality','difficulty:easy']},
   {...common,id:'A1P3-SV-002',section:'script_vocabulary',type:'choice',category:'kanji_reading',canDo:'Can read basic identity kanji.',instruction:'漢字の よみかたを えらんでください。',prompt:'「名前」を おしえてください。',choices:['なまえ','なかま','まいにち','なまい'],answer:0,explanationVi:'名前 đọc là なまえ, nghĩa là tên.',tags:['topic:personal_information','can-do:read-name','difficulty:easy']},
   {...common,id:'A1P3-SV-003',section:'script_vocabulary',type:'choice',category:'kanji_meaning_usage',canDo:'Can understand the word for country.',instruction:'「国」の いみを えらんでください。',prompt:'あなたの 国は どこですか。',choices:['nước/quốc gia','công ty','tên','bạn bè'],answer:0,explanationVi:'国 nghĩa là đất nước hoặc quốc gia.',tags:['topic:personal_information','can-do:understand-country','difficulty:easy']},
@@ -28,3 +28,7 @@ export const a1Lesson03Candidates:PilotQuestion[]=[
   {...common,id:'A1P3-RE-004',section:'reading',type:'choice',category:'information_search',canDo:'Can match people who share an attribute.',instruction:'プロフィールを 見て、答えてください。',prompt:'ミン：ベトナム人・みどり会社\nラン：ベトナム人・さくら会社\nユキ：日本人・みどり会社\n\nミンさんと 同じ 会社の 人は だれですか。',choices:['ユキさん','ランさん','ミンさんだけ','だれも いません'],answer:0,explanationVi:'Min và Yuki cùng làm ở công ty Midori.',tags:['topic:work','can-do:compare-profile','difficulty:medium']},
   {...common,id:'A1P3-RE-005',section:'reading',type:'choice',category:'content_comprehension',canDo:'Can understand a polite introduction message.',instruction:'メッセージを 読んで、答えてください。',prompt:'みなさん、はじめまして。チャンです。ベトナムから 来ました。日本語は 少し わかります。よろしく お願いします。\n\nチャンさんについて 正しいものは どれですか。',choices:['日本語が 少し わかります','日本から 来ました','名前は みなさんです','日本語が ぜんぜん わかりません'],answer:0,explanationVi:'Chan viết rằng mình hiểu một ít tiếng Nhật.',tags:['topic:personal_information','can-do:read-introduction','difficulty:medium']},
 ];
+
+export const a1Lesson03Candidates:PilotQuestion[]=a1Lesson03Drafts.map(question => question.section === 'listening'
+  ? { ...question, audioSrc: `/audio/${question.id.toLowerCase()}.wav` }
+  : question);

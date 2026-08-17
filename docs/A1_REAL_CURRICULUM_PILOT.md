@@ -1,6 +1,6 @@
 # A1 Real Curriculum Pilot
 
-Status: 20 question candidates created; awaiting Listening audio and human question review.
+Status: 20 question candidates and 5 fixed Listening audio assets created; awaiting human question review.
 
 ## Source inventory
 
@@ -37,13 +37,13 @@ Only lesson knowledge, objectives, vocabulary, kanji, grammar, expressions, and 
 - 20 original A1 candidates created: 5 Script/Vocabulary, 5 Conversation/Expression, 5 Listening, and 5 Reading.
 - All 20 pass pre-audio structural validation and retain the declared curriculum KnowledgeUnit ID.
 - Internal prompt similarity is below the pilot threshold of 0.82; no near-duplicate pair was detected.
-- The 5 Listening candidates correctly remain ineligible for approval until fixed playable WAV files exist.
+- The 5 Listening candidates use fixed Azure Neural TTS WAV assets and pass the playable-audio gate.
 - No candidate has been inserted into the APPROVED Question Bank. Human approval remains mandatory.
 
 ## Azure audio checkpoint
 
-Azure audio generation requires `TTS_PROVIDER=azure`, `AZURE_SPEECH_KEY`, and `AZURE_SPEECH_REGION` in a server-only environment such as `.env.local` or Vercel Environment Variables. Secrets must never be placed in `.env.example` or committed.
+Azure audio generation uses `ja-JP-NanamiNeural`. All five pilot assets were validated as RIFF/WAVE, PCM 16-bit, mono, 48 kHz. Runtime configuration requires `TTS_PROVIDER=azure`, `AZURE_SPEECH_KEY`, and `AZURE_SPEECH_REGION` in a server-only environment such as `.env.local` or Vercel Environment Variables. Secrets must never be placed in `.env.example` or committed.
 
 ## Next checkpoint
 
-Rotate the exposed Azure key, configure the replacement safely, generate and validate the five fixed WAV assets, then submit the 20 candidates for human review. Stop after this pilot; do not begin mass generation.
+Submit the 20 candidates and five audio assets for human review. Stop after this pilot; do not begin mass generation.

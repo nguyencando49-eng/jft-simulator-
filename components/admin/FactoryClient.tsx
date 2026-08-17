@@ -16,7 +16,7 @@ export default function FactoryClient(){
   const approve=async()=>{if(!selected)return;const ids=Object.entries(picked).filter(([,v])=>v).map(([id])=>id);setBusy(true);try{const r=await adminApi.approveFactoryCandidates(selected.id,ids);setSelected(r.job);setMessage(`Approved ${r.approved} question(s) into Question Bank.`);await load()}catch(e){setMessage(e instanceof Error?e.message:String(e))}finally{setBusy(false)}};
   const stats=useMemo(()=>selected?{pass:selected.candidates.filter(c=>c.qa.passed).length,avg:selected.candidates.length?Math.round(selected.candidates.reduce((s,c)=>s+c.qa.score,0)/selected.candidates.length):0}:{pass:0,avg:0},[selected]);
   return <>
-    <div className="admin-title"><div><span className="eyebrow">V5.1 · LISTENING FACTORY</span><h1>Generate → Semantic QA → TTS → Human Review</h1><p>Tạo batch câu hỏi, chạy QA cấu trúc + semantic, phát hiện gần-trùng, render TTS cho Listening rồi mới cho phép approve.</p></div><span className="badge green">Provider: {provider||'...'}</span></div>
+    <div className="admin-title"><div><span className="eyebrow">CONTENT REVIEW WORKSPACE</span><h1>AI Question Factory</h1><p>Generate a controlled batch, review content and QA, prepare listening audio, then approve items into the Question Bank.</p></div></div>
     {message&&<div className={`admin-alert ${message.includes('failed')||message.includes('required')?'error':'ok'}`}>{message}</div>}
     <section className="factory-layout">
       <div className="admin-panel factory-form"><div className="panel-head"><h2>Generation brief</h2><span className="badge">Prompt v5.1</span></div>
@@ -41,7 +41,7 @@ export default function FactoryClient(){
         {c.audioScript&&<div className="audio-script"><b>Audio script</b><p>{c.audioScript}</p>{c.question.type==='audio_choice'&&<div style={{display:'flex',gap:8,alignItems:'center',flexWrap:'wrap'}}><button className="secondary" disabled={busy} onClick={()=>renderAudio(c.id)}>{c.audio?.status==='ready'?'Re-render audio':'Render TTS audio'}</button>{c.audio&&<span className={`badge ${c.audio.status==='ready'?'green':c.audio.status==='failed'?'error':''}`}>{c.audio.status}</span>}{c.question.audioSrc&&<audio controls preload="none" src={c.question.audioSrc}/>}</div>}</div>}
         {c.semanticQa&&<div className="audio-script"><b>Semantic QA · {c.semanticQa.score}/100</b><p>{c.semanticQa.summary}</p><small>{c.semanticQa.provider}{c.semanticQa.model?` / ${c.semanticQa.model}`:''}</small></div>}
         <details><summary>QA report · {c.qa.issues.length} issue(s)</summary>{c.qa.issues.length===0?<p className="ok-text">No issues found.</p>:<ul className="qa-issues">{c.qa.issues.map((x,i)=><li key={i} className={x.severity}><b>{x.severity}</b> {x.message}</li>)}</ul>}</details>
-        <small className="factory-meta">{c.generation.provider} / {c.generation.model||'default'} · {c.generation.promptVersion}</small>
+        <details><summary>Generation audit</summary><small className="factory-meta">{c.generation.provider} / {c.generation.model||'default'} · {c.generation.promptVersion}</small></details>
       </article>)}</div>
     </section>}
   </>

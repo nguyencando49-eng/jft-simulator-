@@ -1,6 +1,7 @@
 import { ExamDraft, ExamVersion, QuestionRecord } from '@/lib/admin-types';
 import { CandidateSessionRecord, ProfileRecord, Repository } from './domain';
 import type { FactoryJob } from './factory-domain';
+import type { KnowledgeUnit, QuestionPlan, QuestionProvenance, SourceChunk, SourceDocument } from './source-domain';
 
 function env(name:string){ const v=process.env[name]; if(!v) throw new Error(`Missing ${name}`); return v; }
 function base(){ return `${env('SUPABASE_URL').replace(/\/$/,'')}/rest/v1`; }
@@ -26,4 +27,17 @@ export class SupabaseRepository implements Repository {
   async listFactoryJobs(){ const rows=await request('/factory_jobs?select=payload&order=updated_at.desc'); return rows.map((r:{payload:FactoryJob})=>r.payload); }
   async getFactoryJob(id:string){ const rows=await request(`/factory_jobs?id=eq.${encode(id)}&select=payload&limit=1`); return rows[0]?.payload ?? null; }
   async saveFactoryJob(job:FactoryJob){ await request('/factory_jobs?on_conflict=id',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=minimal'},body:JSON.stringify([{id:job.id,status:job.status,requested_by:job.requestedBy,payload:job,updated_at:job.updatedAt}])}); return job; }
+  async listSourceDocuments(){const rows=await request('/source_documents?select=payload&order=created_at.desc');return rows.map((r:{payload:SourceDocument})=>r.payload);}
+  async getSourceDocument(id:string){const rows=await request(`/source_documents?id=eq.${encode(id)}&select=payload&limit=1`);return rows[0]?.payload||null;}
+  async saveSourceDocument(x:SourceDocument){await request('/source_documents?on_conflict=id',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=minimal'},body:JSON.stringify([{id:x.id,title:x.title,status:x.status,source_type:x.sourceType,created_by:x.createdBy,payload:x,created_at:x.createdAt}])});return x;}
+  async saveSourceChunks(xs:SourceChunk[]){if(xs.length)await request('/source_chunks?on_conflict=id',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=minimal'},body:JSON.stringify(xs.map(x=>({id:x.id,source_document_id:x.sourceDocumentId,sequence:x.sequence,payload:x,created_at:x.createdAt})))});return xs;}
+  async listSourceChunks(id:string){const rows=await request(`/source_chunks?source_document_id=eq.${encode(id)}&select=payload&order=sequence`);return rows.map((r:{payload:SourceChunk})=>r.payload);}
+  async saveKnowledgeUnits(xs:KnowledgeUnit[]){for(const x of xs)await this.updateKnowledgeUnit(x);return xs;}
+  async updateKnowledgeUnit(x:KnowledgeUnit){await request('/knowledge_units?on_conflict=id',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=minimal'},body:JSON.stringify([{id:x.id,source_document_id:x.sourceDocumentId,status:x.status,level:x.level,payload:x,created_at:x.createdAt}])});return x;}
+  async listKnowledgeUnits(id:string){const rows=await request(`/knowledge_units?source_document_id=eq.${encode(id)}&select=payload&order=created_at`);return rows.map((r:{payload:KnowledgeUnit})=>r.payload);}
+  async saveQuestionPlan(x:QuestionPlan){await request('/question_plans?on_conflict=id',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=minimal'},body:JSON.stringify([{id:x.id,source_document_id:x.sourceDocumentId,status:x.status,payload:x,created_at:x.createdAt}])});return x;}
+  async getQuestionPlan(id:string){const rows=await request(`/question_plans?id=eq.${encode(id)}&select=payload&limit=1`);return rows[0]?.payload||null;}
+  async listQuestionPlans(id:string){const rows=await request(`/question_plans?source_document_id=eq.${encode(id)}&select=payload&order=created_at`);return rows.map((r:{payload:QuestionPlan})=>r.payload);}
+  async saveQuestionProvenance(x:QuestionProvenance){await request('/question_provenance?on_conflict=id',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=minimal'},body:JSON.stringify([{id:x.id,question_id:x.questionId,source_document_id:x.sourceDocumentId,factory_job_id:x.factoryJobId,payload:x,created_at:x.createdAt}])});return x;}
+  async listQuestionProvenance(id:string){const rows=await request(`/question_provenance?source_document_id=eq.${encode(id)}&select=payload&order=created_at`);return rows.map((r:{payload:QuestionProvenance})=>r.payload);}
 }

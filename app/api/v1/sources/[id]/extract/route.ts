@@ -1,0 +1,2 @@
+import { NextResponse } from 'next/server';import { requireAuth } from '@/lib/server/auth';import { apiError } from '@/lib/server/http';import { extractKnowledge } from '@/lib/server/source-service';
+export async function POST(req:Request,{params}:{params:Promise<{id:string}>}){try{await requireAuth(req,'admin');const {id}=await params;let body:any={};try{body=await req.json();}catch{}return NextResponse.json({ok:true,knowledgeUnits:await extractKnowledge(id,body.maxKnowledgeUnits)},{status:201});}catch(e){return apiError(e);}}

@@ -15,6 +15,7 @@ export interface FactoryRequest {
   difficulty: FactoryDifficulty;
   includeExplanation: boolean;
   generateAudioScript: boolean;
+  sourceGuidance?: { objective:string; originalityRules:string[] };
 }
 
 export interface FactoryQaIssue extends QaIssue {
@@ -37,6 +38,7 @@ export interface FactoryCandidate {
     createdAt: string;
   };
   semanticQa?: { score:number; passed:boolean; summary:string; issues:FactoryQaIssue[]; provider:string; model?:string };
+  curriculumQa?: { curriculumGrounded:boolean; knowledgeUnitIds:string[]; outsideKnowledge:string[]; score:number; hardFail:boolean };
   audio?: { status:'pending'|'ready'|'failed'; provider?:string; voice?:string; storage?:string; renderedAt?:string; error?:string };
   approvedAt?: string;
 }
@@ -51,6 +53,7 @@ export interface FactoryJob {
   updatedAt: string;
   error?: string;
   candidates: FactoryCandidate[];
+  sourceContext?: {sourceDocumentId:string;sourceChunkIds:string[];knowledgeUnitId:string;knowledgeUnitIds?:string[];questionPlanId:string;objective:string;sourceTexts:string[];originalityPromptVersion?:string};
 }
 
 export interface GeneratedQuestionDraft {

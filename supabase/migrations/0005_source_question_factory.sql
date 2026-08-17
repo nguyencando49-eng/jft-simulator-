@@ -1,0 +1,13 @@
+create table if not exists public.source_documents (id uuid primary key,title text not null,source_type text not null check(source_type in ('txt','md','pdf','text')),status text not null check(status in ('draft','parsed','chunked','extracting','review','ready','failed')),created_by uuid references public.profiles(id),payload jsonb not null,created_at timestamptz not null default now());
+create index if not exists source_documents_status_idx on public.source_documents(status,created_at desc);
+create table if not exists public.source_chunks (id uuid primary key,source_document_id uuid not null references public.source_documents(id) on delete cascade,sequence integer not null,payload jsonb not null,created_at timestamptz not null default now(),unique(source_document_id,sequence));
+create index if not exists source_chunks_document_idx on public.source_chunks(source_document_id,sequence);
+create table if not exists public.knowledge_units (id uuid primary key,source_document_id uuid not null references public.source_documents(id) on delete cascade,status text not null check(status in ('draft','review','approved','rejected')),level text not null check(level in ('A1','A2.1','A2.2')),payload jsonb not null,created_at timestamptz not null default now());
+create index if not exists knowledge_units_document_status_idx on public.knowledge_units(source_document_id,status);
+create table if not exists public.question_plans (id uuid primary key,source_document_id uuid not null references public.source_documents(id) on delete cascade,status text not null check(status in ('draft','ready','generated','failed')),payload jsonb not null,created_at timestamptz not null default now());
+create index if not exists question_plans_document_idx on public.question_plans(source_document_id,created_at desc);
+create table if not exists public.question_provenance (id uuid primary key,question_id text not null,factory_job_id uuid not null references public.factory_jobs(id),source_document_id uuid not null references public.source_documents(id),payload jsonb not null,created_at timestamptz not null default now());
+create index if not exists question_provenance_question_idx on public.question_provenance(question_id);
+alter table public.source_documents enable row level security;alter table public.source_chunks enable row level security;alter table public.knowledge_units enable row level security;alter table public.question_plans enable row level security;alter table public.question_provenance enable row level security;
+-- No browser policies are intentionally created. Versioned admin routes use the
+-- service role after requireAuth(admin), while candidate/browser clients receive no access.

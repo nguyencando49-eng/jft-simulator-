@@ -1,16 +1,32 @@
 import { questions } from '../questions';
+import { massQuestionCandidates } from '../production/mass-question-candidates';
+import { a1Lesson03Candidates } from '../pilots/a1-lesson-03-candidates';
 import { QuestionRecord, ExamDraft, AttemptSummary } from '@/lib/admin-types';
 
 const now = '2026-08-11T05:00:00.000Z';
 
-export const seedQuestions: QuestionRecord[] = questions.map((q, index) => ({
+export const seedQuestions: QuestionRecord[] = [...questions.map((q) => ({
   ...q,
   version: 1,
-  status: 'approved',
-  source: 'original',
+  status: 'approved' as const,
+  source: 'original' as const,
   createdAt: now,
   updatedAt: now,
-}));
+})),...a1Lesson03Candidates.map(q=>({
+  ...q,
+  version:1,
+  status:'review' as const,
+  source:'ai' as const,
+  createdAt:now,
+  updatedAt:now,
+})),...massQuestionCandidates.map(q=>({
+  ...q,
+  version:1,
+  status:'review' as const,
+  source:'ai' as const,
+  createdAt:now,
+  updatedAt:now,
+}))];
 
 export const seedExamDraft: ExamDraft = {
   id: 'JFT-MOCK-001',

@@ -1,5 +1,21 @@
 # Curriculum factory QA report
 
+## Controlled 2,100-question production run (2026-08-18)
+
+- Total repository production set: 2,100 questions.
+- Per level: A1 700, A2.1 700, A2.2 700.
+- Per section within each level: 175 Script/Vocabulary, 175 Conversation/Expression, 175 Listening, 175 Reading.
+- Existing approved seed: 50 questions. The A1 pilot contributes 20 additional review candidates to the production set.
+- New mass-production candidates: 2,030, all held at `REVIEW`; AI did not self-approve them.
+- Curriculum catalog: 52 KnowledgeUnits sourced from `入門`, `初級1`, and `初級2` materials. Mapping these books to A1/A2.1/A2.2 is a simulator design decision.
+- Provenance: every mass candidate records one KnowledgeUnit ID and its source document.
+- Structural QA: pass for 2,030/2,030 before audio and after fixed audio generation.
+- Exact duplicate prompts: 0.
+- Near-duplicate prompts at n-gram Jaccard 0.82: 0.
+- Listening: 508 new fixed MP3 assets generated with Azure `ja-JP-NanamiNeural`, rate `-5%`; existing seed and pilot audio remain unchanged.
+- Audio format: 24 kHz, 48 kbit/s mono MP3; total generated size approximately 53.46 MB.
+- Release status: human review required. These are unofficial simulator questions with uncalibrated practice difficulty.
+
 Implemented: canonical taxonomy; enriched KnowledgeUnits; approved-only multi-unit planning; provenance; curriculum hard-fail QA; originality; coverage/deficits; readiness; seeded assembly; reuse/overlap measurement; Azure Japanese WAV TTS; admin summary; migration and focused tests.
 
 ## QA run — 2026-08-17

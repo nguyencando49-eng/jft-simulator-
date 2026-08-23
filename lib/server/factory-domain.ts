@@ -10,7 +10,7 @@ import type { DifficultyCalibrationGateResult } from './difficulty-calibration';
 import type { OriginalityDuplicateGateResult } from './originality-duplicate';
 
 export type FactoryDifficulty = 'easy'|'balanced'|'hard';
-export type FactoryProviderName = 'mock'|'http';
+export type FactoryProviderName = 'mock'|'http'|'azure-openai';
 export type FactoryJobStatus = 'queued'|'running'|'review'|'completed'|'failed';
 
 export interface FactoryRequest {

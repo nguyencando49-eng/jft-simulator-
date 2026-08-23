@@ -1,4 +1,11 @@
 import type { FactoryCandidate, FactoryQaIssue, FactoryRequest } from './factory-domain';
+import { AZURE_OPENAI_PROVIDER, azureOpenAiConfig, requestAzureOpenAiJson } from './azure-openai';
+
+export const JFT_SEMANTIC_QA_AZURE_OPENAI_PROMPT_VERSION='JFT_SEMANTIC_QA_AZURE_OPENAI_V1';
+const AZURE_SEMANTIC_SYSTEM_PROMPT=`You are an independent semantic reviewer for an unofficial JFT-Basic practice question factory.
+Judge whether the candidate is coherent and aligned with the requested topic and Can-do. This is a general semantic screen, not a substitute for the specialized answer, naturalness, curriculum, alignment, difficulty, or originality judges.
+Return JSON only: {"score":0-100,"passed":boolean,"summary":"...","issues":[{"code":"semantic_alignment|audio_required|schema","severity":"error|warning","category":"pedagogy|language|jft_style|audio|schema","message":"..."}]}.
+Use passed=false for a semantic defect that blocks further use. Do not rewrite the question.`;
 
 export interface SemanticQaResult {
   score: number;
@@ -51,7 +58,30 @@ class HttpSemanticQaProvider implements SemanticQaProvider {
   }
 }
 
-export function getSemanticQaProvider():SemanticQaProvider {
-  return process.env.AI_QA_PROVIDER==='http' ? new HttpSemanticQaProvider() : new MockSemanticQaProvider();
+export class AzureOpenAiSemanticQaProvider implements SemanticQaProvider {
+  name='azure-openai-semantic';
+  model=azureOpenAiConfig('qa').deployment || 'not-configured';
+  async review(candidate:Omit<FactoryCandidate,'qa'>,request:FactoryRequest):Promise<SemanticQaResult>{
+    const config=azureOpenAiConfig('qa');
+    const json=await requestAzureOpenAiJson<Partial<SemanticQaResult>>({...config,systemPrompt:AZURE_SEMANTIC_SYSTEM_PROMPT,input:{task:'jft_semantic_qa',promptVersion:JFT_SEMANTIC_QA_AZURE_OPENAI_PROMPT_VERSION,request,candidate:{question:candidate.question,audioScript:candidate.audioScript}},maxOutputTokens:1800});
+    const score=Number(json.score);
+    if(!Number.isFinite(score)||score<0||score>100)throw new Error('Azure OpenAI Semantic QA response requires a score from 0 to 100.');
+    if(!Array.isArray(json.issues))throw new Error('Azure OpenAI Semantic QA response requires issues[].');
+    const issues=json.issues.map((raw,index)=>validateSemanticIssue(raw,index));
+    const normalized=Math.round(score);
+    return {score:normalized,passed:json.passed===true&&normalized>=65&&issues.every(issue=>issue.severity!=='error'),summary:typeof json.summary==='string'?json.summary:'',issues,provider:this.name,model:this.model};
+  }
 }
-export function semanticQaProviderMode(){return process.env.AI_QA_PROVIDER==='http'?'http':'mock';}
+
+function validateSemanticIssue(value:unknown,index:number):FactoryQaIssue{
+  if(!value||typeof value!=='object')throw new Error(`Azure OpenAI Semantic QA issue ${index+1} is invalid.`);
+  const issue=value as Partial<FactoryQaIssue>;
+  if(!['semantic_alignment','audio_required','schema'].includes(String(issue.code))||!['error','warning'].includes(String(issue.severity))||typeof issue.message!=='string'||!issue.message.trim())throw new Error(`Azure OpenAI Semantic QA issue ${index+1} has an invalid contract.`);
+  const categories=['pedagogy','language','jft_style','audio','schema'];
+  return {code:issue.code as FactoryQaIssue['code'],severity:issue.severity as FactoryQaIssue['severity'],message:issue.message,category:categories.includes(String(issue.category))?issue.category:undefined};
+}
+
+export function getSemanticQaProvider():SemanticQaProvider {
+  return process.env.AI_QA_PROVIDER===AZURE_OPENAI_PROVIDER ? new AzureOpenAiSemanticQaProvider() : process.env.AI_QA_PROVIDER==='http' ? new HttpSemanticQaProvider() : new MockSemanticQaProvider();
+}
+export function semanticQaProviderMode(){return process.env.AI_QA_PROVIDER===AZURE_OPENAI_PROVIDER?AZURE_OPENAI_PROVIDER:process.env.AI_QA_PROVIDER==='http'?'http':'mock';}

@@ -1,4 +1,12 @@
 import { FactoryRequest, GeneratedQuestionDraft } from './factory-domain';
+import { AZURE_OPENAI_PROVIDER, azureOpenAiConfig, requestAzureOpenAiJson } from './azure-openai';
+
+export const JFT_FACTORY_AZURE_OPENAI_PROMPT_VERSION='JFT_FACTORY_AZURE_OPENAI_V1';
+const AZURE_FACTORY_SYSTEM_PROMPT=`You are a Japanese-language assessment author for an unofficial JFT-Basic practice simulator.
+Create original, practical A1/A2.1/A2.2 multiple-choice questions from the supplied brief. Never copy official questions or claim official calibration.
+Return JSON only with this exact top-level shape: {"questions":[...]}. Each question must contain:
+instruction (Japanese string), prompt (Japanese string), choices (exactly four Japanese strings), answer (zero-based integer index), explanationVi (concise Vietnamese explanation), tags (string array), and optional audioScript (Japanese string).
+There must be exactly one defensible answer. Distractors must be plausible and the same semantic or grammatical type. For listening, the answer-discriminating information must occur in audioScript and must not be revealed by visible text. For non-listening items, omit audioScript. Obey the requested count, level, section, category, Can-do, topic, difficulty and source originality rules.`;
 
 export interface FactoryProvider {
   name: string;
@@ -63,7 +71,31 @@ class HttpFactoryProvider implements FactoryProvider {
   }
 }
 
-export function getFactoryProvider():FactoryProvider {
-  return process.env.AI_FACTORY_PROVIDER==='http' ? new HttpFactoryProvider() : new MockFactoryProvider();
+export class AzureOpenAiFactoryProvider implements FactoryProvider {
+  name=AZURE_OPENAI_PROVIDER;
+  model=azureOpenAiConfig('factory').deployment || 'not-configured';
+  async generate(input:FactoryRequest){
+    const config=azureOpenAiConfig('factory');
+    const json=await requestAzureOpenAiJson<{questions?:unknown[]}>({...config,systemPrompt:AZURE_FACTORY_SYSTEM_PROMPT,input:{task:'jft_question_generation',promptVersion:JFT_FACTORY_AZURE_OPENAI_PROMPT_VERSION,input},maxOutputTokens:Math.min(12000,Math.max(2500,input.count*900))});
+    if(!Array.isArray(json.questions)) throw new Error('Azure OpenAI Factory response must contain questions[].');
+    const questions=json.questions.slice(0,input.count).map((value,index)=>validateDraft(value,index,input));
+    if(questions.length!==input.count) throw new Error(`Azure OpenAI Factory returned ${questions.length}/${input.count} requested questions.`);
+    return questions;
+  }
 }
-export function factoryProviderMode(){ return process.env.AI_FACTORY_PROVIDER==='http' ? 'http' : 'mock'; }
+
+function validateDraft(value:unknown,index:number,input:FactoryRequest):GeneratedQuestionDraft{
+  if(!value||typeof value!=='object')throw new Error(`Azure OpenAI question ${index+1} is not an object.`);
+  const item=value as Partial<GeneratedQuestionDraft>;
+  if(typeof item.instruction!=='string'||!item.instruction.trim()||typeof item.prompt!=='string'||!item.prompt.trim())throw new Error(`Azure OpenAI question ${index+1} is missing instruction or prompt.`);
+  if(!Array.isArray(item.choices)||item.choices.length!==4||item.choices.some(choice=>typeof choice!=='string'||!choice.trim()))throw new Error(`Azure OpenAI question ${index+1} must contain four non-empty choices.`);
+  if(!Number.isInteger(item.answer)||Number(item.answer)<0||Number(item.answer)>=item.choices.length)throw new Error(`Azure OpenAI question ${index+1} has an invalid answer index.`);
+  if(typeof item.explanationVi!=='string'||!Array.isArray(item.tags)||item.tags.some(tag=>typeof tag!=='string'))throw new Error(`Azure OpenAI question ${index+1} has invalid explanation or tags.`);
+  if(input.section==='listening'&&input.generateAudioScript&&(!item.audioScript||typeof item.audioScript!=='string'))throw new Error(`Azure OpenAI listening question ${index+1} is missing audioScript.`);
+  return {instruction:item.instruction,prompt:item.prompt,choices:item.choices,answer:Number(item.answer),explanationVi:item.explanationVi,tags:item.tags,audioScript:typeof item.audioScript==='string'?item.audioScript:undefined};
+}
+
+export function getFactoryProvider():FactoryProvider {
+  return process.env.AI_FACTORY_PROVIDER===AZURE_OPENAI_PROVIDER ? new AzureOpenAiFactoryProvider() : process.env.AI_FACTORY_PROVIDER==='http' ? new HttpFactoryProvider() : new MockFactoryProvider();
+}
+export function factoryProviderMode(){ return process.env.AI_FACTORY_PROVIDER===AZURE_OPENAI_PROVIDER ? AZURE_OPENAI_PROVIDER : process.env.AI_FACTORY_PROVIDER==='http' ? 'http' : 'mock'; }

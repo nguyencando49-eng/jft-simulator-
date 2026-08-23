@@ -39,6 +39,7 @@ V5 intentionally avoids a provider SDK dependency.
 
 - `AI_FACTORY_PROVIDER=mock` — deterministic local development provider.
 - `AI_FACTORY_PROVIDER=http` — POSTs a provider-neutral generation contract to `AI_FACTORY_ENDPOINT`.
+- `AI_FACTORY_PROVIDER=azure-openai` — calls a deployed Azure OpenAI model through the native JSON adapter.
 
 Optional variables:
 
@@ -48,6 +49,18 @@ AI_FACTORY_ENDPOINT=https://your-provider-adapter.example/generate
 AI_FACTORY_API_KEY=...
 AI_FACTORY_MODEL=...
 ```
+
+For Azure OpenAI, the endpoint and API key are not sufficient by themselves: the Azure resource must also contain a model deployment. Configure either the scoped values above or these shared fallbacks:
+
+```env
+AI_FACTORY_PROVIDER=azure-openai
+AI_QA_PROVIDER=azure-openai
+AOAI_ENDPOINT=https://YOUR-RESOURCE.openai.azure.com
+API_KEY=...
+AZURE_OPENAI_DEPLOYMENT=jft-gpt-4-1-mini
+```
+
+`AI_FACTORY_*` overrides the shared values for generation, and `AI_QA_*` overrides them for semantic QA. An Azure `DeploymentNotFound` response means the model has not been deployed; changing only the provider label is not a working integration.
 
 The HTTP endpoint receives:
 

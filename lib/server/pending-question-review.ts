@@ -33,10 +33,11 @@ const qa1ById=new Map(qaReport.results.map(result=>[result.questionId,result]));
 const seedById=new Map(seedQuestions.map(question=>[question.id,question]));
 
 function learnerVisibleFingerprint(question:QuestionRecord){
+  const semanticTags=question.tags.filter(tag=>!tag.startsWith('production-batch:')&&!tag.startsWith('qa-state:')).sort();
   return createHash('sha256').update(JSON.stringify({
     section:question.section,type:question.type,level:question.level,instruction:question.instruction,
     prompt:question.prompt,choices:question.choices,answer:question.answer,explanationVi:question.explanationVi,
-    audioSrc:question.audioSrc??null,tags:question.tags,
+    audioSrc:question.audioSrc??null,tags:semanticTags,
   })).digest('hex');
 }
 

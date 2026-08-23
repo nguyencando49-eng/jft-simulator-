@@ -34,15 +34,12 @@ opened by any candidate. The detailed pre-change status is recorded in
 - Added correct, incorrect, unanswered, answered and total result counts.
 - Added focused ownership, leakage, selected-exam, mobile and review regressions.
 
-### Content gap not silently bypassed
+### Content gap closed without mass approval
 
-The repository production batch contains 2,100 questions in `review`, not
-automatically approved. The existing approved seed contains 50 questions. The
-local development repository publishes one eight-question A1 exam for the MVP
-journey. Production credentials are not available in the local environment, so
-the current deployed Supabase publication count was not re-verified during this
-run. Five distinct human-approved, immutable A1 exam versions are therefore still
-a release-content blocker.
+Production now contains the 50 canonical authored seed questions as approved.
+The remaining 2,050 mass-production items stay in `review` and none was
+automatically approved. Five distinct eight-question A1 ExamVersions were
+published as `JFT-A1-01-v1` through `JFT-A1-05-v1`.
 
 ## 3. Files changed
 
@@ -191,19 +188,17 @@ Run on 2026-08-23:
 
 ## 10. Remaining blockers
 
-1. Production must contain at least five distinct human-reviewed and published A1
-   exams. The 2,100-item batch remains review content and must not be promoted in bulk.
-2. Production Supabase counts and audio readiness need a credentialed pre-release
-   audit; local `.env.local` does not contain the production service-role setup.
-3. This code has not been deployed by this task, so the Vercel environment still
-   requires deployment and a production smoke test.
-4. Listening play count is enforced in the current browser session, not persisted
+There is no blocker for the first usable A1 MVP. The following limitations remain:
+
+1. The five released exams contain eight questions each and up to 37.5% pairwise
+   overlap because only 17 A1 questions have completed approval.
+2. Listening play count is enforced in the current browser session, not persisted
    across devices. This is explicitly deferred unless product policy requires it.
-5. Next.js dev E2E reports a future `allowedDevOrigins` warning; it does not affect
+3. Next.js dev E2E reports a future `allowedDevOrigins` warning; it does not affect
    the production build or current tests.
 
-MVP code is usable for one real A1 learner journey, but the public release status
-remains **PARTIAL** until blockers 1–3 are closed.
+The public A1 MVP release status is **READY**. Production smoke passed against
+`https://jft-simulator.vercel.app` and all temporary release/smoke secrets were removed.
 
 ## 11. Deployment checklist
 
@@ -229,7 +224,7 @@ remains **PARTIAL** until blockers 1–3 are closed.
 
 ## 12. Exact recommended next task
 
-**A1 Content Release Pack:** credentialed production audit, human review of the
-existing Question Bank, constraint-based assembly and publication of five distinct
-A1 practice exams with complete Azure audio, followed by the production Vercel
-smoke journey. Do not mass-approve the 2,100 review questions.
+**A1 Bank Expansion Pilot:** create and human-review enough new original A1 items
+to reduce pairwise overlap below 15% while preserving QA1–QA7, curriculum
+provenance and complete Azure Listening audio. Do not mass-approve the 2,050
+remaining review questions.

@@ -1,0 +1,168 @@
+{
+  "reviewVersion": "FULL_BANK_MANUAL_REPAIR_V1",
+  "batchId": "BATCH-001",
+  "baselineCommit": "4806c09f2edac09516717684a4691626a31694a4",
+  "queueOrder": "level, section, question ID",
+  "records": [
+    {
+      "questionId": "A1P3-SV-001", "batchId": "BATCH-001", "decision": "KEEP", "confidence": "HIGH", "currentStatus": "review", "section": "script_vocabulary", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": true, "distractorsAcceptable": true, "sectionAligned": true, "levelAligned": true, "metadataAligned": true, "explanationAligned": true, "audioVerified": null,
+      "issues": ["SPECIALIZED_QA_EVIDENCE_MISSING", "PROVENANCE_INCOMPLETE"], "before": {}, "after": {},
+      "reviewReason": "The item directly and uniquely tests the everyday meaning of ベトナム人 at A1. The learner-visible content is sound, but source-chunk provenance and QA2–QA7 evidence remain incomplete.",
+      "remainingHumanCheck": "Complete provenance and QA2–QA7 before publication."
+    },
+    {
+      "questionId": "A1P3-SV-002", "batchId": "BATCH-001", "decision": "REVISE", "confidence": "HIGH", "currentStatus": "review", "section": "script_vocabulary", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": false, "distractorsAcceptable": true, "sectionAligned": true, "levelAligned": true, "metadataAligned": true, "explanationAligned": true, "audioVerified": null,
+      "issues": ["PROMPT_TASK_MISMATCH", "SPECIALIZED_QA_EVIDENCE_MISSING", "PROVENANCE_INCOMPLETE"],
+      "before": {"prompt": "「名前」を おしえてください。"}, "after": {"prompt": "「名前」の よみかたは どれですか。"},
+      "reviewReason": "The stored answer なまえ is uniquely correct, but the original prompt asks the learner to tell a name rather than select the kanji reading. The replacement states the tested task directly without changing the answer or choices.",
+      "remainingHumanCheck": "Complete provenance and QA2–QA7 before publication."
+    },
+    {
+      "questionId": "A1P3-CE-003", "batchId": "BATCH-001", "decision": "KEEP", "confidence": "HIGH", "currentStatus": "review", "section": "conversation_expression", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": true, "distractorsAcceptable": true, "sectionAligned": true, "levelAligned": true, "metadataAligned": true, "explanationAligned": true, "audioVerified": null,
+      "issues": ["SPECIALIZED_QA_EVIDENCE_MISSING", "PROVENANCE_INCOMPLETE"], "before": {}, "after": {},
+      "reviewReason": "B's reply ソンです makes お名前は？ the only contextually defensible completion. The polite expression, Can-do and A1 load align.",
+      "remainingHumanCheck": "Complete provenance and QA2–QA7 before publication."
+    },
+    {
+      "questionId": "A1P3-CE-005", "batchId": "BATCH-001", "decision": "KEEP", "confidence": "HIGH", "currentStatus": "review", "section": "conversation_expression", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": true, "distractorsAcceptable": true, "sectionAligned": true, "levelAligned": true, "metadataAligned": true, "explanationAligned": true, "audioVerified": null,
+      "issues": ["SPECIALIZED_QA_EVIDENCE_MISSING", "PROVENANCE_INCOMPLETE"], "before": {}, "after": {},
+      "reviewReason": "Only the reciprocal first-meeting greeting is pragmatically valid. The dialogue and explanation are natural and aligned to the declared expression Can-do.",
+      "remainingHumanCheck": "Complete provenance and QA2–QA7 before publication."
+    },
+    {
+      "questionId": "PROD-A1-CO-0184", "batchId": "BATCH-001", "decision": "REMOVE", "confidence": "HIGH", "currentStatus": "review", "section": "conversation_expression", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": false, "distractorsAcceptable": false, "sectionAligned": true, "levelAligned": true, "metadataAligned": false, "explanationAligned": true, "audioVerified": null,
+      "issues": ["JAPANESE_UNNATURAL", "CAN_DO_MISMATCH", "DISTRACTOR_QUALITY", "DUPLICATE_RISK"], "before": {}, "after": {},
+      "reviewReason": "飲み物を案内を読みます is broken Japanese; the item does not measure stating liked food/drink, and three distractors are unrelated stock phrases. Repair would require authoring a new item.", "remainingHumanCheck": null
+    },
+    {
+      "questionId": "PROD-A1-CO-0214", "batchId": "BATCH-001", "decision": "REMOVE", "confidence": "HIGH", "currentStatus": "review", "section": "conversation_expression", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": false, "distractorsAcceptable": false, "sectionAligned": true, "levelAligned": true, "metadataAligned": false, "explanationAligned": true, "audioVerified": null,
+      "issues": ["JAPANESE_UNNATURAL", "CAN_DO_MISMATCH", "DISTRACTOR_QUALITY", "DUPLICATE_RISK"], "before": {}, "after": {},
+      "reviewReason": "友達を案内を読みます is broken and the generic confirmation exchange does not assess self-introduction or identity exchange. Repair would amount to replacing the question.", "remainingHumanCheck": null
+    },
+    {
+      "questionId": "PROD-A1-CO-0233", "batchId": "BATCH-001", "decision": "REMOVE", "confidence": "HIGH", "currentStatus": "review", "section": "conversation_expression", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": false, "distractorsAcceptable": false, "sectionAligned": true, "levelAligned": true, "metadataAligned": false, "explanationAligned": true, "audioVerified": null,
+      "issues": ["JAPANESE_UNNATURAL", "CAN_DO_MISMATCH", "DISTRACTOR_QUALITY", "DUPLICATE_RISK"], "before": {}, "after": {},
+      "reviewReason": "店員を案内を読みます is broken, and the task is generic confirmation rather than ordering food or drink. The distractors are copied stock phrases outside the decision space.", "remainingHumanCheck": null
+    },
+    {
+      "questionId": "PROD-A1-CO-0278", "batchId": "BATCH-001", "decision": "REMOVE", "confidence": "HIGH", "currentStatus": "review", "section": "conversation_expression", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": false, "distractorsAcceptable": false, "sectionAligned": true, "levelAligned": true, "metadataAligned": false, "explanationAligned": true, "audioVerified": null,
+      "issues": ["JAPANESE_UNNATURAL", "CAN_DO_MISMATCH", "DISTRACTOR_QUALITY", "DUPLICATE_RISK"], "before": {}, "after": {},
+      "reviewReason": "友達を担当者に聞きます is unnatural and semantically unclear. The item does not assess identity exchange and reuses the same unrelated distractor template.", "remainingHumanCheck": null
+    },
+    {
+      "questionId": "A1P3-LI-001", "batchId": "BATCH-001", "decision": "HOLD_AUDIO", "confidence": "MEDIUM", "currentStatus": "review", "section": "listening", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": true, "distractorsAcceptable": true, "sectionAligned": true, "levelAligned": true, "metadataAligned": true, "explanationAligned": true, "audioVerified": false,
+      "issues": ["AUDIO_NOT_AUDIBLY_VERIFIED", "SPECIALIZED_QA_EVIDENCE_MISSING", "PROVENANCE_INCOMPLETE"], "before": {}, "after": {},
+      "reviewReason": "The canonical script uniquely supports マイ and the deployed WAV resolves, but pronunciation, truncation, speed and script/audio identity were not verified by listening to the rendered file.",
+      "remainingHumanCheck": "Listen to the complete rendered audio and compare it with the canonical script."
+    },
+    {
+      "questionId": "A1P3-LI-002", "batchId": "BATCH-001", "decision": "HOLD_AUDIO", "confidence": "MEDIUM", "currentStatus": "review", "section": "listening", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": true, "distractorsAcceptable": true, "sectionAligned": true, "levelAligned": true, "metadataAligned": true, "explanationAligned": true, "audioVerified": false,
+      "issues": ["AUDIO_NOT_AUDIBLY_VERIFIED", "SPECIALIZED_QA_EVIDENCE_MISSING", "PROVENANCE_INCOMPLETE"], "before": {}, "after": {},
+      "reviewReason": "The script uniquely supports 韓国人 and the deployed WAV resolves, but actual acoustic content was not independently listened to and matched to the script.",
+      "remainingHumanCheck": "Listen to the complete rendered audio and compare it with the canonical script."
+    },
+    {
+      "questionId": "A1P3-LI-003", "batchId": "BATCH-001", "decision": "HOLD_AUDIO", "confidence": "MEDIUM", "currentStatus": "review", "section": "listening", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": true, "distractorsAcceptable": true, "sectionAligned": true, "levelAligned": true, "metadataAligned": true, "explanationAligned": true, "audioVerified": false,
+      "issues": ["AUDIO_NOT_AUDIBLY_VERIFIED", "SPECIALIZED_QA_EVIDENCE_MISSING", "PROVENANCE_INCOMPLETE"], "before": {}, "after": {},
+      "reviewReason": "The script uniquely supports ベトナム and the deployed WAV resolves, but the rendered speech has not been audibly verified.",
+      "remainingHumanCheck": "Listen to the complete rendered audio and compare it with the canonical script."
+    },
+    {
+      "questionId": "A1P3-LI-004", "batchId": "BATCH-001", "decision": "HOLD_AUDIO", "confidence": "MEDIUM", "currentStatus": "review", "section": "listening", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": true, "distractorsAcceptable": true, "sectionAligned": true, "levelAligned": true, "metadataAligned": true, "explanationAligned": true, "audioVerified": false,
+      "issues": ["AUDIO_NOT_AUDIBLY_VERIFIED", "SPECIALIZED_QA_EVIDENCE_MISSING", "PROVENANCE_INCOMPLETE"], "before": {}, "after": {},
+      "reviewReason": "The script clearly negates Japanese nationality and supports いいえ、ちがいます. The deployed WAV resolves but its rendered speech was not audibly verified.",
+      "remainingHumanCheck": "Listen to the complete rendered audio and compare it with the canonical script."
+    },
+    {
+      "questionId": "A1P3-LI-005", "batchId": "BATCH-001", "decision": "HOLD_AUDIO", "confidence": "MEDIUM", "currentStatus": "review", "section": "listening", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": true, "distractorsAcceptable": true, "sectionAligned": true, "levelAligned": true, "metadataAligned": true, "explanationAligned": true, "audioVerified": false,
+      "issues": ["AUDIO_NOT_AUDIBLY_VERIFIED", "SPECIALIZED_QA_EVIDENCE_MISSING", "PROVENANCE_INCOMPLETE"], "before": {}, "after": {},
+      "reviewReason": "The script uniquely establishes that both speakers belong to さくら会社. The deployed WAV resolves but acoustic/script equivalence has not been verified by listening.",
+      "remainingHumanCheck": "Listen to the complete rendered audio and compare it with the canonical script."
+    },
+    {
+      "questionId": "PROD-A1-LI-0332", "batchId": "BATCH-001", "decision": "REMOVE", "confidence": "HIGH", "currentStatus": "review", "section": "listening", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": false, "distractorsAcceptable": false, "sectionAligned": true, "levelAligned": true, "metadataAligned": false, "explanationAligned": true, "audioVerified": false,
+      "issues": ["CAN_DO_MISMATCH", "CATEGORY_MISMATCH", "DISTRACTOR_QUALITY", "DUPLICATE_RISK", "AUDIO_NOT_AUDIBLY_VERIFIED"], "before": {}, "after": {},
+      "reviewReason": "The audio task asks for the first action in a one-way announcement, not identity exchange or Listening/Conversation. The prompt invents a named actor absent from the script and uses formulaic distractors; safe repair requires a new plan.", "remainingHumanCheck": null
+    },
+    {
+      "questionId": "PROD-A1-LI-0333", "batchId": "BATCH-001", "decision": "REMOVE", "confidence": "HIGH", "currentStatus": "review", "section": "listening", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": false, "distractorsAcceptable": false, "sectionAligned": true, "levelAligned": true, "metadataAligned": false, "explanationAligned": true, "audioVerified": false,
+      "issues": ["CAN_DO_MISMATCH", "DISTRACTOR_QUALITY", "DUPLICATE_RISK", "AUDIO_NOT_AUDIBLY_VERIFIED"], "before": {}, "after": {},
+      "reviewReason": "A generic announcement about 父 and procedural actions does not assess talking about family or residence. The named actor is absent from audio and distractors repeat the same weak template.", "remainingHumanCheck": null
+    },
+    {
+      "questionId": "PROD-A1-LI-0334", "batchId": "BATCH-001", "decision": "REMOVE", "confidence": "HIGH", "currentStatus": "review", "section": "listening", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": true, "distractorsAcceptable": false, "sectionAligned": true, "levelAligned": true, "metadataAligned": false, "explanationAligned": true, "audioVerified": false,
+      "issues": ["CAN_DO_MISMATCH", "DISTRACTOR_QUALITY", "DUPLICATE_RISK", "AUDIO_NOT_AUDIBLY_VERIFIED"], "before": {}, "after": {},
+      "reviewReason": "Although the procedural script is intelligible, choosing the first action does not assess saying which food or drink one likes. The prompt actor is unsupported and distractors are formulaic.", "remainingHumanCheck": null
+    },
+    {
+      "questionId": "PROD-A1-LI-0335", "batchId": "BATCH-001", "decision": "REMOVE", "confidence": "HIGH", "currentStatus": "review", "section": "listening", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": false, "distractorsAcceptable": false, "sectionAligned": true, "levelAligned": true, "metadataAligned": false, "explanationAligned": true, "audioVerified": false,
+      "issues": ["CAN_DO_MISMATCH", "CATEGORY_MISMATCH", "DISTRACTOR_QUALITY", "DUPLICATE_RISK", "AUDIO_NOT_AUDIBLY_VERIFIED"], "before": {}, "after": {},
+      "reviewReason": "The one-way announcement neither models a conversation nor assesses ordering at a restaurant. 店員について説明します is contextually weak, and the generic action choices require a new item plan.", "remainingHumanCheck": null
+    },
+    {
+      "questionId": "PROD-A1-LI-0336", "batchId": "BATCH-001", "decision": "REMOVE", "confidence": "HIGH", "currentStatus": "review", "section": "listening", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": true, "distractorsAcceptable": false, "sectionAligned": true, "levelAligned": true, "metadataAligned": false, "explanationAligned": true, "audioVerified": false,
+      "issues": ["CAN_DO_MISMATCH", "DISTRACTOR_QUALITY", "DUPLICATE_RISK", "AUDIO_NOT_AUDIBLY_VERIFIED"], "before": {}, "after": {},
+      "reviewReason": "The item tests the order of public-announcement actions, not describing a home or available rooms. The actor named in the question is absent from the script and distractors are stock alternatives.", "remainingHumanCheck": null
+    },
+    {
+      "questionId": "PROD-A1-LI-0337", "batchId": "BATCH-001", "decision": "REMOVE", "confidence": "HIGH", "currentStatus": "review", "section": "listening", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": true, "distractorsAcceptable": false, "sectionAligned": true, "levelAligned": true, "metadataAligned": false, "explanationAligned": true, "audioVerified": false,
+      "issues": ["CAN_DO_MISMATCH", "DISTRACTOR_QUALITY", "DUPLICATE_RISK", "AUDIO_NOT_AUDIBLY_VERIFIED"], "before": {}, "after": {},
+      "reviewReason": "The announcement requires sequencing actions and contains no request about where a person is. This is a construct mismatch despite an intelligible script.", "remainingHumanCheck": null
+    },
+    {
+      "questionId": "PROD-A1-LI-0338", "batchId": "BATCH-001", "decision": "REMOVE", "confidence": "HIGH", "currentStatus": "review", "section": "listening", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": false, "distractorsAcceptable": false, "sectionAligned": true, "levelAligned": true, "metadataAligned": false, "explanationAligned": true, "audioVerified": false,
+      "issues": ["JAPANESE_UNNATURAL", "CAN_DO_MISMATCH", "CATEGORY_MISMATCH", "DISTRACTOR_QUALITY", "DUPLICATE_RISK", "AUDIO_NOT_AUDIBLY_VERIFIED"], "before": {}, "after": {},
+      "reviewReason": "始まりますについて説明します is broken, the actual task is not a conversation or schedule-time comprehension, and the item uses the repeated action template.", "remainingHumanCheck": null
+    },
+    {
+      "questionId": "PROD-A1-LI-0339", "batchId": "BATCH-001", "decision": "REMOVE", "confidence": "HIGH", "currentStatus": "review", "section": "listening", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": false, "distractorsAcceptable": false, "sectionAligned": true, "levelAligned": true, "metadataAligned": false, "explanationAligned": true, "audioVerified": false,
+      "issues": ["JAPANESE_UNNATURAL", "CAN_DO_MISMATCH", "DISTRACTOR_QUALITY", "DUPLICATE_RISK", "AUDIO_NOT_AUDIBLY_VERIFIED"], "before": {}, "after": {},
+      "reviewReason": "貸してくださいについて説明します is unnatural; the announcement sequence does not assess making or understanding a workplace request, and distractors are not realistic competing interpretations.", "remainingHumanCheck": null
+    },
+    {
+      "questionId": "PROD-A1-LI-0340", "batchId": "BATCH-001", "decision": "REMOVE", "confidence": "HIGH", "currentStatus": "review", "section": "listening", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": true, "distractorsAcceptable": false, "sectionAligned": true, "levelAligned": true, "metadataAligned": false, "explanationAligned": true, "audioVerified": false,
+      "issues": ["CAN_DO_MISMATCH", "DISTRACTOR_QUALITY", "DUPLICATE_RISK", "AUDIO_NOT_AUDIBLY_VERIFIED"], "before": {}, "after": {},
+      "reviewReason": "The learner identifies the first procedural action, not hobbies or preferred manga. The named actor is missing from the audio and the action distractors repeat the mass template.", "remainingHumanCheck": null
+    },
+    {
+      "questionId": "PROD-A1-LI-0341", "batchId": "BATCH-001", "decision": "REMOVE", "confidence": "HIGH", "currentStatus": "review", "section": "listening", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": true, "distractorsAcceptable": false, "sectionAligned": true, "levelAligned": true, "metadataAligned": false, "explanationAligned": true, "audioVerified": false,
+      "issues": ["CAN_DO_MISMATCH", "CATEGORY_MISMATCH", "DISTRACTOR_QUALITY", "DUPLICATE_RISK", "AUDIO_NOT_AUDIBLY_VERIFIED"], "before": {}, "after": {},
+      "reviewReason": "This is a one-way procedure, not an invitation conversation or outing arrangement. The generic actions and distractors do not assess the declared Can-do.", "remainingHumanCheck": null
+    },
+    {
+      "questionId": "PROD-A1-LI-0342", "batchId": "BATCH-001", "decision": "REMOVE", "confidence": "HIGH", "currentStatus": "review", "section": "listening", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": true, "distractorsAcceptable": false, "sectionAligned": true, "levelAligned": true, "metadataAligned": false, "explanationAligned": true, "audioVerified": false,
+      "issues": ["CAN_DO_MISMATCH", "DISTRACTOR_QUALITY", "DUPLICATE_RISK", "AUDIO_NOT_AUDIBLY_VERIFIED"], "before": {}, "after": {},
+      "reviewReason": "The item asks for the first generic action and never requires understanding or following a transportation route. The script and metadata share a topic only, not a competency.", "remainingHumanCheck": null
+    },
+    {
+      "questionId": "PROD-A1-LI-0343", "batchId": "BATCH-001", "decision": "REMOVE", "confidence": "HIGH", "currentStatus": "review", "section": "listening", "currentLevel": "A1", "recommendedLevel": "A1",
+      "answerValid": true, "answerUnique": true, "japaneseNatural": false, "distractorsAcceptable": false, "sectionAligned": true, "levelAligned": true, "metadataAligned": false, "explanationAligned": true, "audioVerified": false,
+      "issues": ["JAPANESE_UNNATURAL", "CAN_DO_MISMATCH", "DISTRACTOR_QUALITY", "DUPLICATE_RISK", "AUDIO_NOT_AUDIBLY_VERIFIED"], "before": {}, "after": {},
+      "reviewReason": "入りたいについて説明します is unnatural and the task does not assess saying what one wants to do at a destination. Rebuilding it safely would require a new question.", "remainingHumanCheck": null
+    }
+  ]
+}

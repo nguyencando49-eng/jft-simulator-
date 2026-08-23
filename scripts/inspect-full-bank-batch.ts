@@ -16,7 +16,9 @@ const queue=pendingReview.records
     ||sectionOrder[left.section]-sectionOrder[right.section]
     ||left.questionId.localeCompare(right.questionId),
   );
-const selected=queue.slice((requestedBatch-1)*batchSize,requestedBatch*batchSize);
+const batchStart=requestedBatch===1?0:25+(requestedBatch-2)*50;
+const effectiveBatchSize=requestedBatch===1?batchSize:50;
+const selected=queue.slice(batchStart,batchStart+effectiveBatchSize);
 
 if(inventoryOnly){
   const decisionById=new Map(pendingReview.records.map(record=>[record.questionId,record.decision]));
@@ -57,7 +59,7 @@ const questions=selected.map(record=>{
 console.log(JSON.stringify({
   queueSize:queue.length,
   batchId:`BATCH-${String(requestedBatch).padStart(3,'0')}`,
-  start:(requestedBatch-1)*batchSize,
-  end:(requestedBatch-1)*batchSize+selected.length-1,
+  start:batchStart,
+  end:batchStart+selected.length-1,
   questions,
 },null,2));

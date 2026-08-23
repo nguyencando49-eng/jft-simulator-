@@ -3,7 +3,7 @@ import { requireAuth } from '@/lib/server/auth';
 import { apiError } from '@/lib/server/http';
 import { getRepository } from '@/lib/server/repository';
 import { hasPendingQuestionReviewToken } from '@/lib/server/pending-question-review-auth';
-import { auditPendingQuestionReviewState, buildPendingQuestionReviewRecords, pendingReviewDigest, reviewPendingQuestionBatch, summarizePendingQuestionReviews } from '@/lib/server/pending-question-review';
+import { auditPendingQuestionReviewState, buildPendingQuestionReviewRecords, pendingReviewDigest, reconcilePendingQuestionReviewState, reviewPendingQuestionBatch, summarizePendingQuestionReviews } from '@/lib/server/pending-question-review';
 
 async function authorize(req:Request){if(!hasPendingQuestionReviewToken(req))await requireAuth(req,'admin')}
 
@@ -16,7 +16,8 @@ export async function GET(req:Request){
 
 export async function POST(req:Request){
   try{
-    await authorize(req);const body=await req.json() as {afterId?:string;limit?:number;apply?:boolean};
+    await authorize(req);const body=await req.json() as {afterId?:string;limit?:number;apply?:boolean;reconcile?:boolean};
+    if(body.reconcile)return NextResponse.json({ok:true,...await reconcilePendingQuestionReviewState(getRepository())});
     return NextResponse.json({ok:true,...await reviewPendingQuestionBatch(getRepository(),body)});
   }catch(error){return apiError(error)}
 }

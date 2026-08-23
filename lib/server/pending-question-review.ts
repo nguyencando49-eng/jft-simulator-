@@ -31,6 +31,7 @@ export interface PendingQuestionReviewRecord {
 const qaReport=qaReportJson as unknown as {results:Qa1Evidence[]};
 const qa1ById=new Map(qaReport.results.map(result=>[result.questionId,result]));
 const seedById=new Map(seedQuestions.map(question=>[question.id,question]));
+const evidenceOnlyIssueCodes=new Set(['INSUFFICIENT_EVIDENCE','ORIGINALITY_EVIDENCE_MISSING','PROVENANCE_MISSING']);
 
 function learnerVisibleFingerprint(question:QuestionRecord){
   const semanticTags=question.tags.filter(tag=>!tag.startsWith('production-batch:')&&!tag.startsWith('qa-state:')).sort();
@@ -78,7 +79,9 @@ export function buildPendingQuestionReviewRecords(questions:QuestionRecord[],job
       ...(!reported?['QA1_EVIDENCE_MISSING']:[]),
       ...(gateValues.slice(1).some(value=>value==='MISSING')?['SPECIALIZED_QA_EVIDENCE_MISSING']:[]),
     ]);
-    const hardBlock=!q0.passed||question.section==='listening'&&!question.audioSrc||gateValues.includes('FAIL');
+    const specializedFail=Object.values(qaSummary).slice(1).includes('FAIL');
+    const substantiveQa1Failure=qa1==='FAIL'&&!!reported&&(reported.hardFail||reported.issues.some(issue=>(issue.severity==='CRITICAL'||issue.severity==='MAJOR')&&!evidenceOnlyIssueCodes.has(issue.code)));
+    const hardBlock=!q0.passed||question.section==='listening'&&!question.audioSrc||specializedFail||substantiveQa1Failure;
     const allPass=gateValues.every(value=>value==='PASS');
     const decision:PendingReviewDecision=hardBlock?'REJECT':allPass?'APPROVE':'KEEP_REVIEW';
     const critical=qaIssues.filter(issue=>issue.severity==='CRITICAL'||issue.severity==='MAJOR');
@@ -92,7 +95,7 @@ export function buildPendingQuestionReviewRecords(questions:QuestionRecord[],job
       : decision==='APPROVE'
         ? ['All QA1–QA7 gates are PASS and deterministic structure/audio requirements are satisfied.']
         : unique([
-            ...(qa1==='REVIEW'?['QA1 requires unresolved human review.']:[]),
+            ...(qa1==='REVIEW'||qa1==='FAIL'?['QA1 requires unresolved human review and remains blocked.']:[]),
             ...(qa1==='MISSING'?['QA1 evidence is missing.']:[]),
             ...(qa1==='STALE'?['QA1 evidence does not match the current learner-visible content.']:[]),
             ...(Object.entries(qaSummary).slice(1).filter(([,value])=>value!=='PASS').length?['One or more specialized QA2–QA7 results are missing or unresolved.']:[]),
@@ -144,4 +147,16 @@ export async function reviewPendingQuestionBatch(repo:Repository,options:{afterI
   if(changed.length)await repo.upsertQuestions(changed);
   const nextAfterId=batch.at(-1)?.questionId??afterId;
   return {summary:summarizePendingQuestionReviews(all),digest:pendingReviewDigest(all),processed:batch.length,changed:changed.map(question=>({id:question.id,status:question.status})),decisions:batch.map(record=>({id:record.questionId,decision:record.decision})),nextAfterId,done:batch.length<limit};
+}
+
+export async function reconcilePendingQuestionReviewState(repo:Repository){
+  const questions=await repo.listQuestions(),jobs=await repo.listFactoryJobs(),audit=auditPendingQuestionReviewState(questions,jobs),byId=new Map(questions.map(question=>[question.id,question]));
+  const changed:QuestionRecord[]=[];
+  for(const drift of audit.drift){
+    if(drift.expectedStatus==='approved')throw new Error(`Reconciliation cannot approve ${drift.id}.`);
+    const question=byId.get(drift.id);if(!question)continue;
+    changed.push({...question,status:drift.expectedStatus as 'review'|'archived',version:question.version+1,updatedAt:new Date().toISOString()});
+  }
+  if(changed.length)await repo.upsertQuestions(changed);
+  return {before:audit,changed:changed.map(question=>({id:question.id,status:question.status}))};
 }

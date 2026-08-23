@@ -56,3 +56,12 @@ No level was changed for: `CE-002`, `RE-002`, `SV-009`, `SV-010`, `LI-009`, `LI-
 ## Published ExamVersions
 
 Existing ExamVersions remain immutable and retain their historical snapshots. Revised Question Bank records do not silently alter already-published exams. A new ExamVersion is required if the product owner wants the revised A1 items to replace their historical snapshots in the five published A1 exams.
+
+## Production application
+
+- Applied all 15 revised records to the production Question Bank; each changed record received a new question version while retaining its existing workflow status.
+- Moved `LI-002` from `approved` to `review` without changing its question version or audio asset.
+- Verified the operation idempotently: a second preview returned 15 unchanged revised items and no remaining content/status mutation.
+- Final production inventory after the audio hold: `approved=49`, `review=974`, `archived=1077`.
+- Removed the temporary production-import token and completed a clean Vercel deployment.
+- Production smoke: `/admin` returned HTTP 200 and the unauthenticated Gold audit endpoint returned HTTP 401.

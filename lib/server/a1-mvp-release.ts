@@ -1,6 +1,8 @@
 import type { ExamDraft, ExamVersion, QuestionRecord } from '@/lib/admin-types';
 import type { SectionId } from '@/lib/types';
 import type { Repository } from './domain';
+import { questions as authoredQuestions } from '@/data/questions';
+import { runQuestionQa } from './qa';
 
 export const A1_MVP_BLUEPRINT_VERSION = 'JFT_A1_MVP_5X8_V1';
 export const A1_MVP_EXAM_COUNT = 5;
@@ -85,6 +87,37 @@ export interface A1MvpReleaseReport {
 
 export class A1MvpReleaseError extends Error {
   constructor(public readonly code:string, message:string){ super(message); this.name='A1MvpReleaseError'; }
+}
+
+export function buildApprovedAuthoredSeed(now=new Date().toISOString()):QuestionRecord[]{
+  return authoredQuestions.map(question=>{
+    const record:QuestionRecord={...structuredClone(question),version:1,status:'approved',source:'original',createdAt:now,updatedAt:now};
+    if(!runQuestionQa(record).passed)throw new A1MvpReleaseError('A1_MVP_SEED_Q0_FAILED',`${record.id} không đạt kiểm tra cấu trúc.`);
+    return record;
+  });
+}
+
+export function previewApprovedAuthoredSeed(bank:QuestionRecord[],now=new Date().toISOString()){
+  const existing=new Map(bank.map(question=>[question.id,question]));
+  const approvedSeed=buildApprovedAuthoredSeed(now).map(question=>{
+    const saved=existing.get(question.id);
+    return saved?.status==='approved'||saved?.status==='archived'?saved:question;
+  });
+  const seedIds=new Set(approvedSeed.map(question=>question.id));
+  return [...bank.filter(question=>!seedIds.has(question.id)),...approvedSeed];
+}
+
+export async function syncApprovedAuthoredSeed(repo:Repository,now=new Date().toISOString()){
+  const existing=new Map((await repo.listQuestions()).map(question=>[question.id,question]));
+  const promoted:QuestionRecord[]=[];
+  const preserved:string[]=[];
+  for(const question of buildApprovedAuthoredSeed(now)){
+    const saved=existing.get(question.id);
+    if(saved?.status==='approved'||saved?.status==='archived'){preserved.push(question.id);continue;}
+    promoted.push(question);
+  }
+  if(promoted.length)await repo.upsertQuestions(promoted);
+  return {promoted:promoted.map(question=>question.id),preserved};
 }
 
 function draftFor(index:number):ExamDraft {

@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 import type { CandidateReviewItem } from '@/lib/api-client';
 import type { SectionId } from '@/lib/types';
+import { formatQuestionPrompt } from '@/lib/question-presentation';
 import { Card, EmptyState } from '@/components/ui';
 
 const labels:Record<SectionId,string>={script_vocabulary:'Chữ viết & Từ vựng',conversation_expression:'Hội thoại & Biểu đạt',listening:'Nghe hiểu',reading:'Đọc hiểu'};
@@ -27,7 +28,7 @@ export default function AnswerReview({items}:{items:CandidateReviewItem[]}){
           </header>
           <p className="review-instruction">{item.question.instruction}</p>
           {item.question.type==='audio_choice'&&item.question.audioSrc?<audio controls preload="none" src={item.question.audioSrc}>Trình duyệt không hỗ trợ âm thanh.</audio>:null}
-          <div className="review-prompt" lang="ja">{item.question.prompt}</div>
+          <div className="review-prompt" lang="ja">{formatQuestionPrompt(item.question.prompt)}</div>
           <ol className="review-choices">{item.question.choices.map((choice,choiceIndex)=>{
             const isCorrect=choiceIndex===item.correctAnswer;
             const isSelected=choiceIndex===item.selectedAnswer;

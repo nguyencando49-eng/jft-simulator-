@@ -24,17 +24,28 @@ function context(unit:CurriculumCatalogUnit,n:number){return {name:names[n%names
 
 function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,serial:number):ProductionCandidate{
   const c=context(unit,n),id=`PROD-${unit.level.replace('.','')}-${section.slice(0,2).toUpperCase()}-${String(serial).padStart(4,'0')}`;
-  const reference=`${unit.lesson}${String(10000+serial).slice(-5)}`;
+  const practicalDate=`${1+(serial*5)%12}月${1+(serial*11)%28}日`;
   const base={id,level:unit.level,section,canDo:unit.canDo,knowledgeUnitIds:[unit.id],sourceDocument:unit.sourceDocument,productionStatus:'REVIEW' as const,tags:[`category:${section}`,`topic:${unit.topic}`,`can-do:${unit.id}`,`lesson:${unit.lesson}`,`difficulty:${n%10<3?'easy':n%10<8?'medium':'hard'}`]};
   if(section==='script_vocabulary'){
     const categories=['word_meaning','word_usage','kanji_reading','kanji_meaning_usage'];
+    const schedule=`予定は${practicalDate}の${c.hour}時${c.minute?`${c.minute}分`:''}です。`;
+    const detail=[
+      `そのあと、${actions[(n+1)%actions.length]}。`,
+      `${c.hour}時までに、${actions[(n+2)%actions.length]}。`,
+      `わからないときは、${c.place}の人に聞きます。`,
+      `案内を読んでから、${actions[(n+3)%actions.length]}。`,
+      `${c.day}の予定もいっしょに確認します。`,
+      `${c.anchor}のメモを見て、${actions[(n+4)%actions.length]}。`,
+      `${c.name}さんは入口で短いメモを書きます。`,
+      `必要なときは電話でも確認します。`,
+    ][(n+unit.lesson)%8];
     const prompts=[
       `${c.place}で、${c.name}さんは「${c.anchor}」について聞きたいです。関係がいちばん深いことばはどれですか。`,
       `${c.day}、${c.name}さんは${unit.title}の場面で使うことばを探しています。いちばん合うものはどれですか。`,
       `${c.place}の「${unit.title}」という案内で大切なことばを一つ選びます。必要なことばはどれですか。`,
       `${c.name}さんは${unit.title}について短いメモを書きます。中心になることばはどれですか。`,
     ];
-    const q:ProductionCandidate={...base,category:categories[n%4],type:'choice',instruction:'ことばを見て、いちばんいいものを一つ選んでください。',prompt:`資料番号 ${reference}\n${prompts[n%prompts.length]}`,choices:[c.anchor,...c.other],answer:0,explanationVi:`Từ trọng tâm của tình huống “${unit.title}” trong đơn vị kiến thức ${unit.id} là 「${c.anchor}」.`};
+    const q:ProductionCandidate={...base,category:categories[n%4],type:'choice',instruction:'ことばを見て、いちばんいいものを一つ選んでください。',prompt:`${prompts[n%prompts.length]}\n${schedule} ${detail}`,choices:[c.anchor,...c.other],answer:0,explanationVi:`Từ trọng tâm của tình huống “${unit.title}” trong đơn vị kiến thức ${unit.id} là 「${c.anchor}」.`};
     return decorate(q,serial);
   }
   if(section==='conversation_expression'){
@@ -45,13 +56,13 @@ function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,seri
       `${c.name}：このあと${c.anchor}を${actions[n%actions.length]}。これでいいですか。`,
     ];
     const choices=['はい。わかりました。いっしょに確認しましょう。','いいえ、昨日は雨でした。','いただきます。ごちそうさまでした。','その電車は青いです。'];
-    const q:ProductionCandidate={...base,category:n%2?'expression':'grammar',type:'choice',instruction:'会話を完成させるために、いちばんいいものを一つ選んでください。',prompt:`受付番号 ${reference}\n【${unit.title}】${requests[n%requests.length]}\n担当者：＿＿＿＿＿＿。`,choices,answer:0,explanationVi:'Người phụ trách đồng ý hỗ trợ và đề nghị cùng kiểm tra, phù hợp với lời hỏi/nhờ trong hội thoại.'};
+    const q:ProductionCandidate={...base,category:n%2?'expression':'grammar',type:'choice',instruction:'会話を完成させるために、いちばんいいものを一つ選んでください。',prompt:`【${unit.title}】\n${practicalDate}の予定について話しています。\n${requests[n%requests.length]}\n担当者：＿＿＿＿＿＿。`,choices,answer:0,explanationVi:'Người phụ trách đồng ý hỗ trợ và đề nghị cùng kiểm tra, phù hợp với lời hỏi/nhờ trong hội thoại.'};
     return decorate(q,serial);
   }
   if(section==='listening'){
     const next=actions[(n+2)%actions.length],later=actions[(n+5)%actions.length];
     const script=`${c.place}からのお知らせです。${c.day}の${c.hour}時${c.minute?`${c.minute}分`:''}に、${c.anchor}について説明します。はじめに${next}。そのあと${later}。わからないときは受付に聞いてください。`;
-    const q:ProductionCandidate={...base,category:['conversation','shop_public','announcement_instruction'][n%3],type:'audio_choice',instruction:'音声を聞いて、いちばんいい答えを一つ選んでください。',prompt:`放送番号 ${reference}\n${c.place}の${c.day}の「${unit.title}」について聞きます。${c.name}さんは、はじめに何をしますか。`,choices:[next,later,'すぐ家に帰ります','何もしません'],answer:0,explanationVi:`Thông báo yêu cầu trước tiên “${next}”, sau đó mới “${later}”.`,audioSrc:`/audio/production/${id.toLowerCase()}.mp3`,audioScript:script};
+    const q:ProductionCandidate={...base,category:['conversation','shop_public','announcement_instruction'][n%3],type:'audio_choice',instruction:'音声を聞いて、いちばんいい答えを一つ選んでください。',prompt:`${practicalDate}に行われる、${c.place}の${c.day}の「${unit.title}」について聞きます。${c.name}さんは、はじめに何をしますか。`,choices:[next,later,'すぐ家に帰ります','何もしません'],answer:0,explanationVi:`Thông báo yêu cầu trước tiên “${next}”, sau đó mới “${later}”.`,audioSrc:`/audio/production/${id.toLowerCase()}.mp3`,audioScript:script};
     return decorate(q,serial);
   }
   const closeHour=c.hour+2,first=actions[n%actions.length],second=actions[(n+3)%actions.length];
@@ -61,7 +72,8 @@ function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,seri
     `利用案内\nテーマ：${c.anchor}\n場所：${c.place}\n曜日：${c.day}\n受付：${c.hour}時${c.minute?`${c.minute}分`:''}\n必要なこと：${first}`,
     `仕事のメモ\n${c.name}さんは${c.place}で${c.anchor}を確認してください。${c.day}の${c.hour}時から始めます。終わったら${second}。`,
   ];
-  const q:ProductionCandidate={...base,category:n%2?'information_search':'content_comprehension',type:'choice',instruction:'文章を読んで、いちばんいい答えを一つ選んでください。',prompt:`文書番号 ${reference}\n${materials[n%materials.length]}\n\n最初に何をしますか。`,choices:[first,second,'家で休みます','予定を全部中止します'],answer:0,explanationVi:`Thông tin thực hành yêu cầu hành động đầu tiên là “${first}”.`};
+  const room=`${1+(serial*7)%9}階の第${1+(serial*13)%20}会議室`;
+  const q:ProductionCandidate={...base,category:n%2?'information_search':'content_comprehension',type:'choice',instruction:'文章を読んで、いちばんいい答えを一つ選んでください。',prompt:`${practicalDate}の予定です。会場は${room}です。\n${materials[n%materials.length]}\n\n最初に何をしますか。`,choices:[first,second,'家で休みます','予定を全部中止します'],answer:0,explanationVi:`Thông tin thực hành yêu cầu hành động đầu tiên là “${first}”.`};
   return decorate(q,serial);
 }
 

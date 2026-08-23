@@ -81,3 +81,18 @@ Two implementation defects found by the pilot were fixed:
 - the QuestionPlan bridge keeps originality instructions in `sourceGuidance` instead of leaking them into the learner-visible topic.
 
 Production remains blocked until a production-capable generation/judge provider is configured and a new small pilot produces human-reviewable candidates without QA2/QA4/QA5 hard failures.
+
+## Live review-bank import — 2026-08-23
+
+After explicit human authorization to continue beyond the pilot, batch `JFT-2100-V1` was imported into the production Supabase Question Bank:
+
+- Total imported: 2,100.
+- A1: 700; A2.1: 700; A2.2: 700.
+- Status after import: 2,100 `review`, 0 automatically approved.
+- The import is idempotent and preserves any question that is already `approved` or `archived` on a later rerun.
+- Q0 structural validation must pass before any database write.
+- The stronger independent audit remains: PASS 0, REVIEW 965, FAIL 1,135, hard failures 640. Import into the review workspace does not override those verdicts.
+- Admin Console was localized to Vietnamese and Question Bank rendering was paginated at 50 rows per page for this inventory size.
+- The one-time automation token used for the production import was removed immediately after completion; normal Admin authentication remains required.
+
+This import makes the candidates human-reviewable in production. It does **not** make the level banks exam-ready and does not authorize mass approval or publication.

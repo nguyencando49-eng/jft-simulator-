@@ -19,11 +19,12 @@ Target queue: 973 unpublished AI questions in signed `KEEP_REVIEW` state
 | BATCH-011 | queue 475–524 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
 | BATCH-012 | queue 525–574 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
 | BATCH-013 | queue 575–624 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-014 | queue 625–674 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
 
 ## Current totals
 
-Reviewed: 625 / 973
-Remaining: 348
+Reviewed: 675 / 973
+Remaining: 298
 Approved: 0
 
 Production mutation remains blocked until an authenticated live inventory can be compared with the signed baseline snapshot. Existing published ExamVersions remain untouched.

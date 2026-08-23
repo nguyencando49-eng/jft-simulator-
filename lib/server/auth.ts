@@ -1,4 +1,5 @@
 import { UserRole } from './domain';
+import { hasProductionSmokeToken, PRODUCTION_SMOKE_USER_ID } from './production-smoke-auth';
 
 export interface AuthContext { userId: string; role: UserRole; email?: string; displayName?: string; }
 export const ACCESS_COOKIE='jft-access-token';
@@ -27,6 +28,11 @@ export function devAuth(req:Request):AuthContext {
   return {userId:devUserId(role,email),role,email,displayName:role==='admin'?'Dev Admin':'Dev Candidate'};
 }
 export async function requireAuth(req:Request, required?:UserRole):Promise<AuthContext>{
+  if(hasProductionSmokeToken(req)){
+    const ctx:AuthContext={userId:PRODUCTION_SMOKE_USER_ID,role:'candidate',email:'production-smoke@internal.invalid',displayName:'Production Smoke'};
+    if(required&&required!==ctx.role)throw new Error('FORBIDDEN');
+    return ctx;
+  }
   if(authDisabled()){
     const ctx=devAuth(req); if(required&&ctx.role!==required)throw new Error('FORBIDDEN'); return ctx;
   }

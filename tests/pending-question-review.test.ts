@@ -1,0 +1,18 @@
+import { describe,expect,it } from 'vitest';
+import { buildPendingQuestionReviewRecords,pendingReviewDigest,reviewPendingQuestionBatch,summarizePendingQuestionReviews } from '@/lib/server/pending-question-review';
+import { hasPendingQuestionReviewToken } from '@/lib/server/pending-question-review-auth';
+import type { QuestionRecord } from '@/lib/admin-types';
+import { seedQuestions } from '@/data/admin/seed';
+import { questions as authoredQuestions } from '@/data/questions';
+import type { Repository } from '@/lib/server/domain';
+
+const question=(id:string):QuestionRecord=>({id,section:'reading',type:'choice',level:'A1',instruction:'読んでください。',prompt:'店は6時に閉まります。何時に閉まりますか。',choices:['5時','6時','7時','8時'],answer:1,explanationVi:'6 giờ.',tags:[],version:1,status:'review',source:'ai',createdAt:'x',updatedAt:'x'});
+
+describe('pending Question Bank review',()=>{
+  it('keeps an unknown item in review when QA evidence is missing',()=>{const [record]=buildPendingQuestionReviewRecords([question('UNKNOWN')]);expect(record).toMatchObject({decision:'KEEP_REVIEW',qaSummary:{qa1:'MISSING',qa2:'MISSING',qa3:'MISSING',qa4:'MISSING',qa5:'MISSING',qa6:'MISSING',qa7:'MISSING'}})});
+  it('rejects a current reported QA1 FAIL and never promotes it from score alone',()=>{const source=seedQuestions.find(item=>item.id==='PROD-A1-SC-0001')!;const [record]=buildPendingQuestionReviewRecords([{...source,status:'review'}]);expect(record).toMatchObject({decision:'REJECT',confidence:'HIGH',qaSummary:{qa1:'FAIL'}})});
+  it('produces stable summaries and decision digests',()=>{const records=buildPendingQuestionReviewRecords([question('B'),question('A')]);expect(summarizePendingQuestionReviews(records)).toMatchObject({reviewed:2,approved:0,review:2,rejected:0});expect(pendingReviewDigest(records)).toMatch(/^[a-f0-9]{64}$/)});
+  it('reviews all 2,050 pending production items individually without mass approval',()=>{const approved=new Set(authoredQuestions.map(item=>item.id));const bank=seedQuestions.map(item=>approved.has(item.id)?{...item,status:'approved' as const}:{...item,status:'review' as const});const records=buildPendingQuestionReviewRecords(bank),summary=summarizePendingQuestionReviews(records);expect(summary).toMatchObject({reviewed:2050,approved:0,review:961,rejected:1089});expect(new Set(records.map(item=>item.questionId)).size).toBe(2050)});
+  it('applies REJECT through the supported archived state and increments the record version',async()=>{const source={...seedQuestions.find(item=>item.id==='PROD-A1-SC-0001')!,status:'review' as const};let saved:QuestionRecord[]=[];const repo={listQuestions:async()=>[source],listFactoryJobs:async()=>[],upsertQuestions:async(items:QuestionRecord[])=>{saved=items;return items}} as unknown as Repository;const result=await reviewPendingQuestionBatch(repo,{limit:10,apply:true});expect(result).toMatchObject({processed:1,done:true,changed:[{id:source.id,status:'archived'}]});expect(saved[0]).toMatchObject({status:'archived',version:source.version+1})});
+  it('uses an exact timing-safe one-time token',()=>{process.env.PENDING_QUESTION_REVIEW_TOKEN='review-secret';expect(hasPendingQuestionReviewToken(new Request('https://test',{headers:{'x-pending-question-review-token':'review-secret'}}))).toBe(true);expect(hasPendingQuestionReviewToken(new Request('https://test',{headers:{'x-pending-question-review-token':'wrong'}}))).toBe(false);delete process.env.PENDING_QUESTION_REVIEW_TOKEN});
+});

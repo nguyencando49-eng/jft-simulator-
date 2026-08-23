@@ -2,6 +2,11 @@ import { QuestionRecord } from '@/lib/admin-types';
 import type { QaIssue } from './domain';
 import { Question, SectionId } from '@/lib/types';
 import type { JftContentQaResultV1 } from './jft-content-qa-agent';
+import type { AnswerOracleGateResult } from './answer-oracle';
+import type { JapaneseNaturalnessGateResult } from './japanese-naturalness';
+import type { CurriculumGroundingGateResult } from './curriculum-grounding';
+import type { JftAlignmentGateResult } from './jft-alignment';
+import type { DifficultyCalibrationGateResult } from './difficulty-calibration';
 
 export type FactoryDifficulty = 'easy'|'balanced'|'hard';
 export type FactoryProviderName = 'mock'|'http';
@@ -42,6 +47,11 @@ export interface FactoryCandidate {
   semanticQa?: { score:number; passed:boolean; summary:string; issues:FactoryQaIssue[]; provider:string; model?:string };
   curriculumQa?: { curriculumGrounded:boolean; knowledgeUnitIds:string[]; outsideKnowledge:string[]; score:number; hardFail:boolean };
   contentQa?: JftContentQaResultV1;
+  answerOracleQa?: AnswerOracleGateResult;
+  japaneseNaturalnessQa?: JapaneseNaturalnessGateResult;
+  curriculumGroundingQa?: CurriculumGroundingGateResult;
+  jftAlignmentQa?: JftAlignmentGateResult;
+  difficultyCalibrationQa?: DifficultyCalibrationGateResult;
   audio?: { status:'pending'|'ready'|'failed'; provider?:string; voice?:string; storage?:string; renderedAt?:string; error?:string };
   approvedAt?: string;
 }

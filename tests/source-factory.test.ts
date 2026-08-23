@@ -6,6 +6,9 @@ import { MockQuestionPlanningProvider,MockSourceKnowledgeProvider } from '@/lib/
 import { runFactoryJob,approveFactoryCandidates } from '@/lib/server/factory-service';
 import { getRepository } from '@/lib/server/repository';
 import type { FactoryJob } from '@/lib/server/factory-domain';
+import { CURRICULUM_GROUNDING_PROMPT_VERSION } from '@/lib/server/curriculum-grounding';
+import { JFT_ALIGNMENT_PROMPT_VERSION } from '@/lib/server/jft-alignment';
+import {DIFFICULTY_CALIBRATION_POLICY_V1,DIFFICULTY_CALIBRATION_PROMPT_VERSION} from '@/lib/server/difficulty-calibration';
 
 const fixture='病院で受付をします。\n\n受付で保険証を出します。\n\nどこが痛いか簡単に説明します。\n\n診察が終わったら会計をします。';
 describe('source ingestion',()=>{
@@ -21,6 +24,9 @@ describe('planning and originality',()=>{
   const now=new Date().toISOString();
   const makeJob=(id:string,sourceTexts?:string[]):FactoryJob=>({id,requestedBy:'admin',status:'queued',provider:'mock',createdAt:now,updatedAt:now,candidates:[],request:{section:'reading',level:'A2.1',topic:'originality-gate',count:1,difficulty:'balanced',includeExplanation:true,generateAudioScript:false},...(sourceTexts?{sourceContext:{sourceDocumentId:'s',sourceChunkIds:['c'],knowledgeUnitId:'u',questionPlanId:'p',objective:'test',sourceTexts,originalityPromptVersion:'source-originality-v1'}}:{})});
   const baseline=await runFactoryJob(makeJob(`baseline-${crypto.randomUUID()}`));
+  expect(baseline.candidates[0].curriculumGroundingQa?.promptVersion).toBe(CURRICULUM_GROUNDING_PROMPT_VERSION);
+  expect(baseline.candidates[0].jftAlignmentQa).toMatchObject({promptVersion:JFT_ALIGNMENT_PROMPT_VERSION,referenceVersion:'JFT_OFFICIAL_SPEC_2026_08_17',taxonomyVersion:'JFT_SIMULATOR_TAXONOMY_V1'});
+  expect(baseline.candidates[0].difficultyCalibrationQa).toMatchObject({promptVersion:DIFFICULTY_CALIBRATION_PROMPT_VERSION,calibrationVersion:DIFFICULTY_CALIBRATION_POLICY_V1.version,calibrationSource:'CONTENT_ESTIMATE'});
   const copied=`${baseline.candidates[0].question.prompt} ${baseline.candidates[0].question.choices.join(' ')}`;
   const guarded=await runFactoryJob(makeJob(`guarded-${crypto.randomUUID()}`,[copied]));
   expect(guarded.candidates[0].qa.issues.some(x=>x.code==='source_similarity')).toBe(true);

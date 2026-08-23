@@ -82,13 +82,17 @@ test.describe.serial('JFT E2E release journeys',()=>{
     await expect(page.getByRole('heading',{name:'AI Question Factory'})).toBeVisible();
     await page.getByLabel('Section').selectOption('listening');
     await page.getByLabel('Topic').fill(`E2E仕事-${Date.now()}`);
-    await page.getByLabel('Count').fill('1');
+    // The third deterministic fixture has one answer stated verbatim in audio,
+    // so the independent QA2 oracle can validate it without special-casing QA.
+    await page.getByLabel('Count').fill('3');
     await page.getByRole('button',{name:'Generate candidates'}).click();
-    await expect(page.getByText(/Generated 1 candidates/)).toBeVisible({timeout:15_000});
-    await expect(page.getByRole('button',{name:'Render TTS audio'})).toBeVisible();
-    await page.getByRole('button',{name:'Render TTS audio'}).click();
+    await expect(page.getByText(/Generated 3 candidates/)).toBeVisible({timeout:15_000});
+    await expect(page.getByRole('button',{name:'Render TTS audio'})).toHaveCount(3);
+    await page.getByRole('button',{name:'Render TTS audio'}).nth(2).click();
     await expect(page.getByText('Audio rendered and QA refreshed.')).toBeVisible({timeout:15_000});
     await expect(page.locator('audio')).toBeVisible();
+    await expect(page.getByTestId('difficulty-calibration-result').nth(2)).toBeVisible();
+    await page.locator('.factory-candidate input[type="checkbox"]').nth(2).check();
     await page.getByRole('button',{name:/Approve selected/}).click();
     await expect(page.getByText(/Approved 1 question/)).toBeVisible({timeout:15_000});
 

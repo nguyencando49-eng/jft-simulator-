@@ -2106,6 +2106,16 @@ Every pending item is listed below. Full structured QA summaries and reason arra
 | PROD-A22-SC-1515 | REJECT | HIGH | ANSWER_KEY_MISMATCH: The independently derived answer differs from the stored key. | Verify the source evidence and replace the invalid candidate. Reject and regenerate without repeating the keyed choice in the stem. Return the item to planning with a Script/Vocabulary-specific Can-do. Edit or regenerate the item, then rerun the complete QA1–QA7 pipeline before reconsideration. |
 | PROD-A22-SC-1516 | REJECT | HIGH | ANSWER_KEY_MISMATCH: The independently derived answer differs from the stored key. | Verify the source evidence and replace the invalid candidate. Reject and regenerate without repeating the keyed choice in the stem. Return the item to planning with a Script/Vocabulary-specific Can-do. Review taxonomy metadata or reject the candidate. Edit or regenerate the item, then rerun the complete QA1–QA7 pipeline before reconsideration. |
 
+## Production application
+
+- Applied to the production Question Bank on 2026-08-23 through the digest-bound Admin reconciliation workflow.
+- Decision-set SHA-256: `ed9efe894cf7f27aa3eae8c7eb0458246b5949ca754bb8a72ddd9def776d3862`.
+- Final inventory: `approved=50`, `review=973`, `archived=1077` (`2100` total).
+- Post-application drift against the signed decision set: `0`.
+- Existing 50 approved canonical questions and all frozen/published ExamVersions were preserved.
+- The temporary production review token was removed after verification; the final deployment is `Ready` at `https://jft-simulator.vercel.app`.
+- Supabase pagination was corrected so repositories and Admin workflows read all rows beyond PostgREST's 1,000-row page limit.
+
 ## Quality sampling
 
 Approved from this pending batch: 0. Therefore the requested approved-item re-sample is not applicable. As a safety substitute, the deterministic decision set is verified by digest and production preflight before any status mutation.

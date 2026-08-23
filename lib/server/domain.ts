@@ -34,6 +34,7 @@ export interface ImportResult { accepted: QuestionRecord[]; rejected: Array<{ ro
 export interface Repository {
   listQuestions(): Promise<QuestionRecord[]>;
   upsertQuestion(question: QuestionRecord): Promise<QuestionRecord>;
+  upsertQuestions(questions: QuestionRecord[]): Promise<QuestionRecord[]>;
   getExamDraft(id: string): Promise<ExamDraft | null>;
   saveExamDraft(draft: ExamDraft): Promise<ExamDraft>;
   listExamVersions(examId?: string): Promise<ExamVersion[]>;

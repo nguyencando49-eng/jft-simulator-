@@ -32,6 +32,7 @@ export const accountApi={
 
 export const adminApi={
   questions:()=>raw<{ok:true;mode:string;questions:QuestionRecord[]}>('/api/v1/questions'),
+  importProductionQuestions:()=>raw<{ok:true;batch:string;imported:number;status:Record<string,number>;byLevel:Record<string,number>}>('/api/v1/admin/import-production',{method:'POST'}),
   saveQuestion:(q:QuestionRecord)=>raw<{ok:true;question:QuestionRecord}>('/api/v1/questions',{method:'POST',body:JSON.stringify(q)}),
   exam:(id='JFT-MOCK-001')=>raw<{ok:true;draft:ExamDraft|null;versions:ExamVersion[]}>(`/api/v1/exams?id=${encodeURIComponent(id)}`),
   saveExam:(draft:ExamDraft)=>raw<{ok:true;draft:ExamDraft}>('/api/v1/exams',{method:'PUT',body:JSON.stringify(draft)}),

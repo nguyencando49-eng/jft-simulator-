@@ -1,7 +1,7 @@
 {
   "qaVersion": "JFT_CONTENT_QA_V1",
   "judge": "deterministic-independent-judge-v1",
-  "generatedAt": "2026-08-17T18:48:45.095Z",
+  "generatedAt": "2026-08-23T10:01:22.874Z",
   "questionCount": 2100,
   "summary": {
     "verdicts": {

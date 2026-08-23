@@ -79,43 +79,43 @@ test.describe.serial('JFT E2E release journeys',()=>{
   test('admin can generate Listening, render TTS, approve, and publish an exam version',async({page})=>{
     await devLogin(page,'admin');
     await page.goto('/admin/factory');
-    await expect(page.getByRole('heading',{name:'AI Question Factory'})).toBeVisible();
-    await page.getByLabel('Section').selectOption('listening');
-    await page.getByLabel('Topic').fill(`E2E仕事-${Date.now()}`);
+    await expect(page.getByRole('heading',{name:'Xưởng tạo câu hỏi AI'})).toBeVisible();
+    await page.getByLabel('Phần thi').selectOption('listening');
+    await page.getByLabel('Chủ đề').fill(`E2E仕事-${Date.now()}`);
     // The third deterministic fixture has one answer stated verbatim in audio,
     // so the independent QA2 oracle can validate it without special-casing QA.
-    await page.getByLabel('Count').fill('3');
-    await page.getByRole('button',{name:'Generate candidates'}).click();
-    await expect(page.getByText(/Generated 3 candidates/)).toBeVisible({timeout:15_000});
-    await expect(page.getByRole('button',{name:'Render TTS audio'})).toHaveCount(3);
-    await page.getByRole('button',{name:'Render TTS audio'}).nth(2).click();
-    await expect(page.getByText('Audio rendered and QA refreshed.')).toBeVisible({timeout:15_000});
+    await page.getByLabel('Số lượng').fill('3');
+    await page.getByRole('button',{name:'Sinh câu ứng viên'}).click();
+    await expect(page.getByText(/Đã tạo 3 câu ứng viên/)).toBeVisible({timeout:15_000});
+    await expect(page.getByRole('button',{name:'Tạo âm thanh TTS'})).toHaveCount(3);
+    await page.getByRole('button',{name:'Tạo âm thanh TTS'}).nth(2).click();
+    await expect(page.getByText('Đã tạo lại âm thanh và cập nhật QA.')).toBeVisible({timeout:15_000});
     await expect(page.locator('audio')).toBeVisible();
     await expect(page.getByTestId('difficulty-calibration-result').nth(2)).toBeVisible();
     await expect(page.getByTestId('originality-duplicate-result').nth(2)).toBeVisible();
     await page.locator('.factory-candidate input[type="checkbox"]').nth(2).check();
-    await page.getByRole('button',{name:/Approve selected/}).click();
-    await expect(page.getByText(/Approved 1 question/)).toBeVisible({timeout:15_000});
+    await page.getByRole('button',{name:/Duyệt mục đã chọn/}).click();
+    await expect(page.getByText(/Đã đưa 1 câu vào Ngân hàng câu hỏi/)).toBeVisible({timeout:15_000});
 
     await page.goto('/admin/exams');
-    await expect(page.getByRole('heading',{name:'Exam Builder'})).toBeVisible();
-    await page.getByRole('button',{name:'Publish version'}).click();
-    await expect(page.getByText(/Published JFT-MOCK-001-v\d+/)).toBeVisible({timeout:15_000});
+    await expect(page.getByRole('heading',{name:'Trình tạo đề'})).toBeVisible();
+    await page.getByRole('button',{name:'Phát hành phiên bản'}).click();
+    await expect(page.getByText(/Đã phát hành JFT-MOCK-001-v\d+/)).toBeVisible({timeout:15_000});
   });
 
   test('admin can run source pilot into Factory Review',async({page})=>{
     await devLogin(page,'admin');
     await page.goto('/admin/sources');
-    await expect(page.getByRole('heading',{name:/Source → Knowledge/})).toBeVisible();
-    await page.getByRole('button',{name:'Confirm import'}).click();
-    await expect(page.getByRole('heading',{name:'Hospital reception pilot'})).toBeVisible();
-    await page.getByRole('button',{name:'1. Chunk'}).click();
-    await expect(page.getByText(/Chunks: [1-9]/)).toBeVisible();
-    await page.getByRole('button',{name:'2. Extract'}).click();
-    await page.getByRole('button',{name:'Approve knowledge'}).first().click();
-    await page.getByRole('button',{name:'3. Generate plan'}).click();
-    await expect(page.getByText(/Plan: 4 items/)).toBeVisible();
-    await page.getByRole('button',{name:'4. Generate via Existing Factory'}).click();
-    await expect(page.getByText(/Candidates: 4/)).toBeVisible({timeout:20_000});
+    await expect(page.getByRole('heading',{name:/Nguồn → Kiến thức/})).toBeVisible();
+    await page.getByRole('button',{name:'Xác nhận nhập'}).click();
+    await expect(page.getByRole('heading',{name:'Thử nghiệm tiếp nhận tại bệnh viện'})).toBeVisible();
+    await page.getByRole('button',{name:'1. Chia đoạn'}).click();
+    await expect(page.getByText(/Đoạn: [1-9]/)).toBeVisible();
+    await page.getByRole('button',{name:'2. Trích xuất'}).click();
+    await page.getByRole('button',{name:'Duyệt kiến thức'}).first().click();
+    await page.getByRole('button',{name:'3. Tạo kế hoạch'}).click();
+    await expect(page.getByText(/Kế hoạch: 4 mục/)).toBeVisible();
+    await page.getByRole('button',{name:'4. Sinh qua Xưởng câu hỏi'}).click();
+    await expect(page.getByText(/Câu đã tạo: 4/)).toBeVisible({timeout:20_000});
   });
 });

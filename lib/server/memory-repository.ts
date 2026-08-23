@@ -26,6 +26,7 @@ if (process.env.NODE_ENV !== 'production') globalThis.__jftV4MemoryStore = store
 export class MemoryRepository implements Repository {
   async listQuestions(){ return structuredClone(store.questions); }
   async upsertQuestion(q:QuestionRecord){ const i=store.questions.findIndex(x=>x.id===q.id); if(i>=0) store.questions[i]=structuredClone(q); else store.questions.push(structuredClone(q)); return structuredClone(q); }
+  async upsertQuestions(questions:QuestionRecord[]){for(const question of questions)await this.upsertQuestion(question);return structuredClone(questions);}
   async getExamDraft(id:string){ return structuredClone(store.drafts.find(x=>x.id===id) ?? null); }
   async saveExamDraft(d:ExamDraft){ const i=store.drafts.findIndex(x=>x.id===d.id); if(i>=0) store.drafts[i]=structuredClone(d); else store.drafts.push(structuredClone(d)); return structuredClone(d); }
   async listExamVersions(examId?:string){ return structuredClone(examId ? store.versions.filter(v=>v.examId===examId) : store.versions); }

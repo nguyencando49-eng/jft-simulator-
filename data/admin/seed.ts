@@ -8,7 +8,7 @@ const now = '2026-08-11T05:00:00.000Z';
 export const seedQuestions: QuestionRecord[] = [...questions.map((q) => ({
   ...q,
   version: 1,
-  status: 'approved' as const,
+  status: q.id==='LI-002' ? 'review' as const : 'approved' as const,
   source: 'original' as const,
   createdAt: now,
   updatedAt: now,

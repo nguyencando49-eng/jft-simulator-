@@ -5,16 +5,16 @@ export const questions: Question[] = [
   {
     id:'SV-001', section:'script_vocabulary', type:'choice', level:'A1',
     instruction:'（　）に 何が 入りますか。いちばん いいものを ひとつ えらんでください。',
-    prompt:'わたしは まいあさ 7時に（　）。',
-    choices:['おきます','のみます','かえります','あいます'], answer:0,
-    explanationVi:'「7 giờ mỗi sáng tôi thức dậy」→ おきます。', tags:['daily-life','verb']
+    prompt:'わたしは まいあさ 7時に（　）。8時に 会社へ 行きます。',
+    choices:['おきます','およぎます','かします','しめます'], answer:0,
+    explanationVi:'Người nói thức dậy lúc 7 giờ rồi đi làm lúc 8 giờ, vì vậy おきます là đáp án duy nhất phù hợp.', tags:['daily-life','verb']
   },
   {
     id:'SV-002', section:'script_vocabulary', type:'choice', level:'A2.1',
     instruction:'ことばの つかいかたとして いちばん いいものを えらんでください。',
     prompt:'「予約」の つかいかたとして いちばん いいものは どれですか。',
-    choices:['病院を予約しました。','雨を予約しました。','電車を予約に乗りました。','会社で予約を働きました。'], answer:0,
-    explanationVi:'予約する dùng cho đặt lịch/chỗ, ví dụ đặt lịch bệnh viện.', tags:['kanji','usage']
+    choices:['来週の病院の診察を予約しました。','来週の病院の診察に予約しました。','来週の病院で診察を予約にしました。','来週の病院の診察が予約しました。'], answer:0,
+    explanationVi:'予約する dùng với を để đặt lịch; ở đây người nói đã đặt lịch khám bệnh cho tuần sau.', tags:['kanji','usage']
   },
   {
     id:'CE-001', section:'conversation_expression', type:'choice', level:'A2.1',

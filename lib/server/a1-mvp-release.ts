@@ -91,7 +91,7 @@ export class A1MvpReleaseError extends Error {
 
 export function buildApprovedAuthoredSeed(now=new Date().toISOString()):QuestionRecord[]{
   return authoredQuestions.map(question=>{
-    const record:QuestionRecord={...structuredClone(question),version:1,status:'approved',source:'original',createdAt:now,updatedAt:now};
+    const record:QuestionRecord={...structuredClone(question),version:1,status:question.id==='LI-002'?'review':'approved',source:'original',createdAt:now,updatedAt:now};
     if(!runQuestionQa(record).passed)throw new A1MvpReleaseError('A1_MVP_SEED_Q0_FAILED',`${record.id} không đạt kiểm tra cấu trúc.`);
     return record;
   });

@@ -3,12 +3,13 @@ import { requireAuth } from '@/lib/server/auth';
 import { apiError } from '@/lib/server/http';
 import { getRepository } from '@/lib/server/repository';
 import { importProductionQuestionBank } from '@/lib/server/production-question-import';
+import { hasProductionImportToken } from '@/lib/server/production-import-auth';
 
 export const maxDuration = 60;
 
 export async function POST(req:Request){
   try{
-    await requireAuth(req,'admin');
+    if(!hasProductionImportToken(req))await requireAuth(req,'admin');
     const result=await importProductionQuestionBank(getRepository());
     return NextResponse.json({ok:true,...result},{status:201});
   }catch(error){return apiError(error);}

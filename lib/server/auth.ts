@@ -11,7 +11,10 @@ function cookie(req:Request,name:string){
   for(const item of raw.split(';')){ const i=item.indexOf('='); if(i<0)continue; if(item.slice(0,i).trim()===name)return decodeURIComponent(item.slice(i+1).trim()); }
   return null;
 }
-export function authDisabled(){ return process.env.AUTH_DISABLED==='true' || (!process.env.SUPABASE_URL && process.env.NODE_ENV!=='production'); }
+export function authDisabled(){
+  if(process.env.NODE_ENV==='production')return false;
+  return process.env.AUTH_DISABLED==='true'||!process.env.SUPABASE_URL;
+}
 export function devAuth(req:Request):AuthContext {
   const role=(cookie(req,DEV_ROLE_COOKIE)==='candidate'?'candidate':'admin') as UserRole;
   const email=cookie(req,DEV_USER_COOKIE)||`dev-${role}@local.test`;

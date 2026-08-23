@@ -3,7 +3,7 @@ import type { FactoryJob } from './factory-domain';
 import type { KnowledgeUnit, QuestionPlan, QuestionProvenance, SourceChunk, SourceDocument } from './source-domain';
 
 export type QaSeverity = 'error' | 'warning';
-export type QaCheckCode = 'schema'|'choice_count'|'answer_index'|'duplicate_choice'|'audio_required'|'prompt_required'|'explanation_required'|'semantic_alignment'|'duplicate_similarity'|'source_similarity'|'audio_render'|'question_id_collision'|'content_qa_fail'|'content_qa_review'|'answer_oracle_fail'|'answer_oracle_review'|'japanese_naturalness_fail'|'japanese_naturalness_review'|'curriculum_grounding_fail'|'curriculum_grounding_review'|'jft_alignment_fail'|'jft_alignment_review'|'difficulty_calibration_fail'|'difficulty_calibration_review';
+export type QaCheckCode = 'schema'|'choice_count'|'answer_index'|'duplicate_choice'|'audio_required'|'prompt_required'|'explanation_required'|'semantic_alignment'|'duplicate_similarity'|'source_similarity'|'audio_render'|'question_id_collision'|'content_qa_fail'|'content_qa_review'|'answer_oracle_fail'|'answer_oracle_review'|'japanese_naturalness_fail'|'japanese_naturalness_review'|'curriculum_grounding_fail'|'curriculum_grounding_review'|'jft_alignment_fail'|'jft_alignment_review'|'difficulty_calibration_fail'|'difficulty_calibration_review'|'originality_duplicate_fail'|'originality_duplicate_review';
 export interface QaIssue { code: QaCheckCode; severity: QaSeverity; message: string; }
 export interface QaReport { passed: boolean; checkedAt: string; issues: QaIssue[]; }
 

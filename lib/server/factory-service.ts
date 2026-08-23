@@ -6,11 +6,10 @@ import { runFactoryQa } from './factory-qa';
 import { runQuestionQa } from './qa';
 import { getRepository } from './repository';
 import { getSemanticQaProvider } from './semantic-qa-provider';
-import { findNearDuplicates, textSimilarity } from './duplicate-detection';
+import { textSimilarity } from './duplicate-detection';
 import { getTtsProvider } from './tts-provider';
 import { persistGeneratedAudio } from './asset-storage';
 import { hasQuestionIdCollision } from './question-integrity';
-import { checkSourceSimilarity } from './source-similarity';
 import { DeterministicJftContentQaJudge,type QaQuestion } from './jft-content-qa-agent';
 import { AnswerOracleError,buildAnswerOracleInput,compareOracleWithDeclaredAnswer,technicalAnswerOracleResult } from './answer-oracle';
 import { getAnswerOracleProvider,type AnswerOracleProvider } from './answer-oracle-provider';
@@ -24,6 +23,8 @@ import { getJftAlignmentProvider,type JftAlignmentProvider } from './jft-alignme
 import {bindDifficultyReviewEvidence,buildDifficultyCalibrationInput,difficultyReviewFingerprint,DifficultyCalibrationError,finalizeDifficultyCalibration,technicalDifficultyCalibrationResult,validateDifficultyCalibrationAnalysis,withDifficultyCalibrationAudit} from './difficulty-calibration';
 import {getDifficultyCalibrationProvider,type DifficultyCalibrationProvider} from './difficulty-calibration-provider';
 import {emptyQuestionPerformance,loadQuestionPerformanceCatalog,type QuestionPerformanceAggregate} from './question-performance';
+import {bindOriginalityReviewEvidence,buildOriginalityDuplicateInput,finalizeOriginalityDuplicate,OriginalityDuplicateError,originalityReviewFingerprint,technicalOriginalityDuplicateResult,validateOriginalityDuplicateAnalysis,withOriginalityDuplicateAudit,type OriginalityCorpusItem,type OriginalityDuplicateInput} from './originality-duplicate';
+import {getOriginalityDuplicateProvider,type OriginalityDuplicateProvider} from './originality-duplicate-provider';
 
 const contentQaJudge=new DeterministicJftContentQaJudge();
 
@@ -139,6 +140,34 @@ export async function runDifficultyCalibrationGate(candidate:FactoryCandidate,co
 }
 async function applyDifficultyCalibrationQa(job:FactoryJob,candidate:FactoryCandidate,performance:Map<string,QuestionPerformanceAggregate>){return runDifficultyCalibrationGate(candidate,{category:job.request.category,performance:performance.get(candidate.question.id)||emptyQuestionPerformance(candidate.question.id)})}
 
+export async function runOriginalityDuplicateGate(candidate:FactoryCandidate,input:OriginalityDuplicateInput,provider:OriginalityDuplicateProvider=getOriginalityDuplicateProvider()){
+  candidate.qa.issues=candidate.qa.issues.filter(issue=>!issue.code.startsWith('originality_duplicate_'));
+  try{
+    const analysis=validateOriginalityDuplicateAnalysis(await provider.analyze(input),input);
+    candidate.originalityDuplicateQa=withOriginalityDuplicateAudit(finalizeOriginalityDuplicate(analysis,input,candidate.question.id),{provider:provider.name,model:provider.model});
+  }catch(error){
+    const code=error instanceof OriginalityDuplicateError?error.code:'ORIGINALITY_DUPLICATE_PROVIDER_FAILURE';
+    candidate.originalityDuplicateQa=technicalOriginalityDuplicateResult(input,code,provider.name,provider.model,candidate.question.id);
+  }
+  bindOriginalityReviewEvidence(candidate.originalityDuplicateQa,input);
+  if(candidate.originalityDuplicateQa.verdict==='FAIL'){
+    candidate.qa.issues.push({code:'originality_duplicate_fail',severity:'error',category:'pedagogy',message:`${candidate.originalityDuplicateQa.promptVersion} FAIL: ${candidate.originalityDuplicateQa.release.blockReason.join(', ')||'source copy or duplicate confirmed'}.`});
+    candidate.qa.passed=false;candidate.qa.score=Math.min(candidate.qa.score,45);
+  }else if(candidate.originalityDuplicateQa.verdict==='REVIEW'){
+    candidate.qa.issues.push({code:'originality_duplicate_review',severity:'warning',category:'pedagogy',message:`${candidate.originalityDuplicateQa.promptVersion} requires human review (source ${candidate.originalityDuplicateQa.summary.sourceCopyRisk}, batch ${candidate.originalityDuplicateQa.summary.batchDuplicateRisk}, bank ${candidate.originalityDuplicateQa.summary.bankDuplicateRisk}).`});
+    candidate.qa.score=Math.min(candidate.qa.score,85);
+  }
+  return candidate.originalityDuplicateQa;
+}
+function comparisonText(value:FactoryCandidate){return `${value.question.instruction} ${value.question.prompt} ${value.question.choices.join(' ')} ${value.audioScript||''}`.trim()}
+function originalityCorpus(job:FactoryJob,candidate:FactoryCandidate,existing:QuestionRecord[]):OriginalityCorpusItem[]{
+  const source=(job.sourceContext?.sourceTexts||[]).map((text,index)=>({id:job.sourceContext?.sourceChunkIds[index]||`source-${index}`,kind:'SOURCE' as const,text}));
+  const batch=job.candidates.filter(item=>item.id!==candidate.id).map(item=>({id:item.question.id,kind:'BATCH' as const,text:comparisonText(item)}));
+  const bank=existing.map(item=>({id:item.id,kind:'BANK' as const,text:`${item.instruction} ${item.prompt} ${item.choices.join(' ')}`.trim()}));
+  return [...source,...batch,...bank];
+}
+async function applyOriginalityDuplicateQa(job:FactoryJob,candidate:FactoryCandidate,existing:QuestionRecord[]){const input=buildOriginalityDuplicateInput(candidate.question,{audioScript:candidate.audioScript,sourceExpected:!!job.sourceContext,corpus:originalityCorpus(job,candidate,existing)});return runOriginalityDuplicateGate(candidate,input)}
+
 async function applyContentQa(job:FactoryJob,candidate:FactoryCandidate,existing:QuestionRecord[]){
   candidate.qa.issues=candidate.qa.issues.filter(issue=>!issue.code.startsWith('content_qa_'));
   const ids=job.sourceContext?.knowledgeUnitIds||[job.sourceContext?.knowledgeUnitId].filter((id):id is string=>!!id);
@@ -156,22 +185,6 @@ async function applyContentQa(job:FactoryJob,candidate:FactoryCandidate,existing
     candidate.qa.issues.push({code:'content_qa_review',severity:'warning',category:'pedagogy',message:`${candidate.contentQa.qaVersion} requires explicit human review (${candidate.contentQa.scores.total}/100).`});
     candidate.qa.score=Math.min(candidate.qa.score,candidate.contentQa.scores.total);
   }
-}
-
-function applySourceOriginalityQa(job:FactoryJob,candidate:FactoryCandidate,existing:QuestionRecord[]){
-  if(!job.sourceContext) return;
-  const report=checkSourceSimilarity(
-    [candidate.question.instruction,candidate.question.prompt,candidate.question.choices.join(' '),candidate.audioScript||''].filter(Boolean),
-    {
-      source:job.sourceContext.sourceTexts.map((text,i)=>({id:job.sourceContext!.sourceChunkIds[i]||String(i),text})),
-      bank:existing.map(q=>({id:q.id,text:`${q.prompt} ${q.choices.join(' ')}`})),
-      batch:job.candidates.filter(x=>x.id!==candidate.id).map(x=>({id:x.id,text:`${x.question.prompt} ${x.question.choices.join(' ')}`})),
-    },
-  );
-  if(report.passed) return;
-  candidate.qa.issues.push({code:'source_similarity',severity:'error',category:'pedagogy',message:`Originality FAIL: ${report.best?.kind} similarity ${Math.round((report.best?.score||0)*100)}% (${job.sourceContext.originalityPromptVersion||'source-originality-v1'}).`});
-  candidate.qa.passed=false;
-  candidate.qa.score=Math.max(0,candidate.qa.score-40);
 }
 
 export function validateFactoryRequest(input:FactoryRequest){
@@ -197,20 +210,15 @@ export async function runFactoryJob(job:FactoryJob):Promise<FactoryJob>{
     }
     job.candidates=candidates;
 
-    for(const hit of findNearDuplicates(job.candidates,c=>c.question.prompt,.82)){
-      for(const c of [hit.a,hit.b]){c.qa.issues.push({code:'duplicate_similarity',severity:'error',category:'pedagogy',message:`Near-duplicate prompt in this batch (${Math.round(hit.score*100)}% similarity).`});c.qa.passed=false;c.qa.score=Math.max(0,c.qa.score-35);}
-    }
     const existing=await repo.listQuestions();const curriculumCatalog=await loadCurriculumCatalog(repo,[job.sourceContext?.sourceDocumentId||'']);const performanceCatalog=await loadQuestionPerformanceCatalog(repo);
     for(const c of job.candidates){
-      let best=0; for(const q of existing) best=Math.max(best,textSimilarity(c.question.prompt,q.prompt));
-      if(best>=.86){c.qa.issues.push({code:'duplicate_similarity',severity:'error',category:'pedagogy',message:`Similar to an existing Question Bank item (${Math.round(best*100)}% similarity).`});c.qa.passed=false;c.qa.score=Math.max(0,c.qa.score-35);}
-      applySourceOriginalityQa(job,c,existing);
       await applyContentQa(job,c,existing);
       await runAnswerOracleGate(c);
       await runJapaneseNaturalnessGate(c,{category:job.request.category,topic:job.request.topic,canDo:job.request.canDo});
       await applyCurriculumGroundingQa(job,c,curriculumCatalog);
       await applyJftAlignmentQa(job,c);
       await applyDifficultyCalibrationQa(job,c,performanceCatalog);
+      await applyOriginalityDuplicateQa(job,c,existing);
     }
     job.status='review'; job.provider=provider.name; job.updatedAt=new Date().toISOString();
   }catch(e){ job.status='failed'; job.error=e instanceof Error?e.message:String(e); job.updatedAt=new Date().toISOString(); }
@@ -227,13 +235,14 @@ export async function renderFactoryCandidateAudio(jobId:string,candidateId:strin
     const rendered=await tts.synthesize(c.audioScript); const stored=await persistGeneratedAudio(rendered,job.id,c.id); const now=new Date().toISOString();
     c.question.audioSrc=stored.src; c.question.updatedAt=now; c.audio={status:'ready',provider:rendered.provider,voice:rendered.voice,storage:stored.storage,renderedAt:now};
     const bare={id:c.id,question:c.question,audioScript:c.audioScript,generation:c.generation,semanticQa:c.semanticQa,audio:c.audio,approvedAt:c.approvedAt}; c.qa=runFactoryQa(bare);
-    applySourceOriginalityQa(job,c,await repo.listQuestions());
-    await applyContentQa(job,c,await repo.listQuestions());
+    const existing=await repo.listQuestions();
+    await applyContentQa(job,c,existing);
     await runAnswerOracleGate(c);
     await runJapaneseNaturalnessGate(c,{category:job.request.category,topic:job.request.topic,canDo:job.request.canDo});
     await applyCurriculumGroundingQa(job,c,await loadCurriculumCatalog(repo,[job.sourceContext?.sourceDocumentId||'']));
     await applyJftAlignmentQa(job,c);
     await applyDifficultyCalibrationQa(job,c,await loadQuestionPerformanceCatalog(repo));
+    await applyOriginalityDuplicateQa(job,c,existing);
   }catch(e){c.audio={status:'failed',provider:tts.name,voice:tts.voice,error:e instanceof Error?e.message:String(e)}; throw e;}
   finally{job.updatedAt=new Date().toISOString();await repo.saveFactoryJob(job);}
   return {job,candidate:c};
@@ -245,7 +254,6 @@ export async function approveFactoryCandidates(jobId:string,candidateIds:string[
   for(const c of job.candidates){
     if(!candidateIds.includes(c.id) || c.approvedAt) continue;
     const bare={id:c.id,question:c.question,audioScript:c.audioScript,generation:c.generation,semanticQa:c.semanticQa,audio:c.audio,approvedAt:c.approvedAt}; c.qa=runFactoryQa(bare);
-    applySourceOriginalityQa(job,c,existingQuestions);
     await applyContentQa(job,c,existingQuestions);
     if(c.contentQa?.verdict==='FAIL'||c.contentQa?.hardFail)continue;
     await runAnswerOracleGate(c);
@@ -262,6 +270,10 @@ export async function approveFactoryCandidates(jobId:string,candidateIds:string[
     await applyDifficultyCalibrationQa(job,c,performanceCatalog);
     if(c.difficultyCalibrationQa?.verdict==='FAIL'||c.difficultyCalibrationQa?.hardFail)continue;
     if(c.difficultyCalibrationQa?.verdict==='REVIEW'&&(!previouslyReviewedDifficulty||previouslyReviewedDifficulty.verdict!=='REVIEW'||difficultyReviewFingerprint(previouslyReviewedDifficulty)!==difficultyReviewFingerprint(c.difficultyCalibrationQa)))continue;
+    const previouslyReviewedOriginality=c.originalityDuplicateQa;
+    await applyOriginalityDuplicateQa(job,c,existingQuestions);
+    if(c.originalityDuplicateQa?.verdict==='FAIL'||c.originalityDuplicateQa?.hardFail)continue;
+    if(c.originalityDuplicateQa?.verdict==='REVIEW'&&(!previouslyReviewedOriginality||previouslyReviewedOriginality.verdict!=='REVIEW'||originalityReviewFingerprint(previouslyReviewedOriginality)!==originalityReviewFingerprint(c.originalityDuplicateQa)))continue;
     if(hasQuestionIdCollision(existingQuestions,c.question.id) || existingIds.has(c.question.id)){
       c.qa.issues.push({code:'question_id_collision',severity:'error',category:'schema',message:`Question id ${c.question.id} already exists in Question Bank.`});
       c.qa.passed=false; c.qa.score=Math.max(0,c.qa.score-50); continue;

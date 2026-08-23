@@ -7,6 +7,7 @@ import type { JapaneseNaturalnessGateResult } from './japanese-naturalness';
 import type { CurriculumGroundingGateResult } from './curriculum-grounding';
 import type { JftAlignmentGateResult } from './jft-alignment';
 import type { DifficultyCalibrationGateResult } from './difficulty-calibration';
+import type { OriginalityDuplicateGateResult } from './originality-duplicate';
 
 export type FactoryDifficulty = 'easy'|'balanced'|'hard';
 export type FactoryProviderName = 'mock'|'http';
@@ -52,6 +53,7 @@ export interface FactoryCandidate {
   curriculumGroundingQa?: CurriculumGroundingGateResult;
   jftAlignmentQa?: JftAlignmentGateResult;
   difficultyCalibrationQa?: DifficultyCalibrationGateResult;
+  originalityDuplicateQa?: OriginalityDuplicateGateResult;
   audio?: { status:'pending'|'ready'|'failed'; provider?:string; voice?:string; storage?:string; renderedAt?:string; error?:string };
   approvedAt?: string;
 }

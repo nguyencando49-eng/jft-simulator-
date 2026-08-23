@@ -6,6 +6,7 @@ import { calculateCoverage, checkExamReadiness, DEFAULT_BLUEPRINTS, rankDeficits
 import { CONTENT_LEVELS } from '@/lib/server/content-taxonomy';
 import { summarizeJftAlignmentMetrics } from '@/lib/server/jft-alignment';
 import {summarizeDifficultyCalibrationMetrics} from '@/lib/server/difficulty-calibration';
+import {summarizeOriginalityDuplicateMetrics} from '@/lib/server/originality-duplicate';
 
 export async function GET(req:Request){
   try{
@@ -24,6 +25,8 @@ export async function GET(req:Request){
     const alignmentMetrics=summarizeJftAlignmentMetrics(alignmentResults);
     const difficultyResults=factoryJobs.flatMap(job=>job.candidates.map(candidate=>candidate.difficultyCalibrationQa).filter((result):result is NonNullable<typeof result>=>!!result));
     const difficultyMetrics=summarizeDifficultyCalibrationMetrics(difficultyResults);
+    const originalityResults=factoryJobs.flatMap(job=>job.candidates.map(candidate=>candidate.originalityDuplicateQa).filter((result):result is NonNullable<typeof result>=>!!result));
+    const originalityMetrics=summarizeOriginalityDuplicateMetrics(originalityResults);
     return NextResponse.json({
       ok:true,
       levels,
@@ -40,6 +43,7 @@ export async function GET(req:Request){
         retrievalIncompleteRate:groundingResults.length?countGroundingIssue('CURRICULUM_SEARCH_INCOMPLETE')/groundingResults.length:0,
         ...alignmentMetrics,
         ...difficultyMetrics,
+        ...originalityMetrics,
       },
     });
   }catch(e){return apiError(e);}

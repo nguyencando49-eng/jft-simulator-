@@ -9,6 +9,7 @@ import type { FactoryJob } from '@/lib/server/factory-domain';
 import { CURRICULUM_GROUNDING_PROMPT_VERSION } from '@/lib/server/curriculum-grounding';
 import { JFT_ALIGNMENT_PROMPT_VERSION } from '@/lib/server/jft-alignment';
 import {DIFFICULTY_CALIBRATION_POLICY_V1,DIFFICULTY_CALIBRATION_PROMPT_VERSION} from '@/lib/server/difficulty-calibration';
+import {ORIGINALITY_DUPLICATE_PROMPT_VERSION} from '@/lib/server/originality-duplicate';
 
 const fixture='病院で受付をします。\n\n受付で保険証を出します。\n\nどこが痛いか簡単に説明します。\n\n診察が終わったら会計をします。';
 describe('source ingestion',()=>{
@@ -27,15 +28,17 @@ describe('planning and originality',()=>{
   expect(baseline.candidates[0].curriculumGroundingQa?.promptVersion).toBe(CURRICULUM_GROUNDING_PROMPT_VERSION);
   expect(baseline.candidates[0].jftAlignmentQa).toMatchObject({promptVersion:JFT_ALIGNMENT_PROMPT_VERSION,referenceVersion:'JFT_OFFICIAL_SPEC_2026_08_17',taxonomyVersion:'JFT_SIMULATOR_TAXONOMY_V1'});
   expect(baseline.candidates[0].difficultyCalibrationQa).toMatchObject({promptVersion:DIFFICULTY_CALIBRATION_PROMPT_VERSION,calibrationVersion:DIFFICULTY_CALIBRATION_POLICY_V1.version,calibrationSource:'CONTENT_ESTIMATE'});
+  expect(baseline.candidates[0].originalityDuplicateQa).toMatchObject({promptVersion:ORIGINALITY_DUPLICATE_PROMPT_VERSION,policyVersion:'ORIGINALITY_DUPLICATE_POLICY_V1'});
   const copied=`${baseline.candidates[0].question.prompt} ${baseline.candidates[0].question.choices.join(' ')}`;
   const guarded=await runFactoryJob(makeJob(`guarded-${crypto.randomUUID()}`,[copied]));
-  expect(guarded.candidates[0].qa.issues.some(x=>x.code==='source_similarity')).toBe(true);
+  expect(guarded.candidates[0].qa.issues.some(x=>x.code==='originality_duplicate_fail')).toBe(true);
+  expect(guarded.candidates[0].originalityDuplicateQa?.verdict).toBe('FAIL');
   expect(guarded.candidates[0].contentQa?.qaVersion).toBe('JFT_CONTENT_QA_V1');
   expect(guarded.candidates[0].contentQa?.release.eligibleForQuestionBank).toBe(false);
   const before=(await getRepository().listQuestions()).length;
   const result=await approveFactoryCandidates(guarded.id,[guarded.candidates[0].id]);
   expect(result.approved).toBe(0);
-  expect(result.job.candidates[0].qa.issues.some(x=>x.code==='source_similarity')).toBe(true);
+  expect(result.job.candidates[0].originalityDuplicateQa?.verdict).toBe('FAIL');
   expect((await getRepository().listQuestions()).length).toBe(before);
  });
 });

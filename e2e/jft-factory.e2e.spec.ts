@@ -92,6 +92,7 @@ test.describe.serial('JFT E2E release journeys',()=>{
     await expect(page.getByText('Audio rendered and QA refreshed.')).toBeVisible({timeout:15_000});
     await expect(page.locator('audio')).toBeVisible();
     await expect(page.getByTestId('difficulty-calibration-result').nth(2)).toBeVisible();
+    await expect(page.getByTestId('originality-duplicate-result').nth(2)).toBeVisible();
     await page.locator('.factory-candidate input[type="checkbox"]').nth(2).check();
     await page.getByRole('button',{name:/Approve selected/}).click();
     await expect(page.getByText(/Approved 1 question/)).toBeVisible({timeout:15_000});

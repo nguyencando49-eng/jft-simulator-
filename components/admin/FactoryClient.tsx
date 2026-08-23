@@ -7,7 +7,7 @@ import type { SectionId } from '@/lib/types';
 const defaults:FactoryRequest={section:'script_vocabulary',level:'A2.1',topic:'仕事',canDo:'職場で簡単なやり取りができる',count:4,difficulty:'balanced',includeExplanation:true,generateAudioScript:true};
 const labels:Record<SectionId,string>={script_vocabulary:'Script & Vocabulary',conversation_expression:'Conversation & Expression',listening:'Listening',reading:'Reading'};
 type Candidate=FactoryJob['candidates'][number];
-const hasSpecializedReview=(candidate:Candidate)=>[candidate.contentQa,candidate.answerOracleQa,candidate.japaneseNaturalnessQa,candidate.curriculumGroundingQa,candidate.jftAlignmentQa,candidate.difficultyCalibrationQa].some(result=>result?.verdict==='REVIEW');
+const hasSpecializedReview=(candidate:Candidate)=>[candidate.contentQa,candidate.answerOracleQa,candidate.japaneseNaturalnessQa,candidate.curriculumGroundingQa,candidate.jftAlignmentQa,candidate.difficultyCalibrationQa,candidate.originalityDuplicateQa].some(result=>result?.verdict==='REVIEW');
 const automaticallySelectable=(candidate:Candidate)=>candidate.qa.passed&&!candidate.approvedAt&&!hasSpecializedReview(candidate);
 
 export default function FactoryClient(){
@@ -48,6 +48,7 @@ export default function FactoryClient(){
         {c.curriculumGroundingQa&&<CurriculumGroundingPanel result={c.curriculumGroundingQa}/>}
         {c.jftAlignmentQa&&<JftAlignmentPanel result={c.jftAlignmentQa}/>}
         {c.difficultyCalibrationQa&&<DifficultyCalibrationPanel result={c.difficultyCalibrationQa}/>}
+        {c.originalityDuplicateQa&&<OriginalityDuplicatePanel result={c.originalityDuplicateQa}/>}
         <details><summary>QA report · {c.qa.issues.length} issue(s)</summary>{c.qa.issues.length===0?<p className="ok-text">No issues found.</p>:<ul className="qa-issues">{c.qa.issues.map((x,i)=><li key={i} className={x.severity}><b>{x.severity}</b> {x.message}</li>)}</ul>}</details>
         <details><summary>Generation audit</summary><small className="factory-meta">{c.generation.provider} / {c.generation.model||'default'} · {c.generation.promptVersion}</small></details>
       </article>)}</div>
@@ -107,5 +108,19 @@ function DifficultyCalibrationPanel({result}:{result:NonNullable<FactoryJob['can
       {result.release.blockReason.length>0&&<p><b>Release blockers</b><br/><small>{result.release.blockReason.join(', ')}</small></p>}
     </details>
     <small>{result.provider}{result.model?` / ${result.model}`:''} · {result.promptVersion} · Calibration {result.calibrationVersion}</small>
+  </div>
+}
+
+function OriginalityDuplicatePanel({result}:{result:NonNullable<FactoryJob['candidates'][number]['originalityDuplicateQa']>}){
+  return <div className="audio-script" data-testid="originality-duplicate-result">
+    <b>QA7 — Originality &amp; Duplicate</b>
+    <p><span className={`badge ${result.verdict==='PASS'?'green':result.verdict==='FAIL'?'error':'review'}`}>{result.verdict}</span> Source: {result.summary.sourceCopyRisk} · Batch: {result.summary.batchDuplicateRisk} · Bank: {result.summary.bankDuplicateRisk} · Confidence: {result.confidence}</p>
+    <p><small>Maximum similarity — source {Math.round(result.summary.maxSourceSimilarity*100)}% · batch {Math.round(result.summary.maxBatchSimilarity*100)}% · bank {Math.round(result.summary.maxBankSimilarity*100)}%</small></p>
+    <details><summary>Comparisons, evidence and release decision</summary>
+      {result.comparisons.length?<ul className="qa-issues">{result.comparisons.map(item=><li key={`${item.kind}-${item.id}`} className={item.semanticRisk==='HIGH'?'error':item.semanticRisk==='MEDIUM'?'warning':''}><b>{item.kind} · {item.semanticRisk}</b> — {item.id}<br/><small>{item.relationship.replaceAll('_',' ')} · n-gram {Math.round(item.ngramSimilarity*100)}% · pattern {Math.round(item.patternSimilarity*100)}% · containment {Math.round(item.containmentSimilarity*100)}%<br/>{item.evidence}</small></li>)}</ul>:<p className="empty">No comparison candidates required detailed semantic review.</p>}
+      {result.issues.length?<><b>QA7 issues</b><ul className="qa-issues">{result.issues.map((item,index)=><li key={index} className={item.severity==='CRITICAL'||item.severity==='MAJOR'?'error':'warning'}><b>{item.code}</b> — {item.evidence}<br/><small>{item.reason}<br/><b>Action:</b> {item.suggestedAction}</small></li>)}</ul></>:<p className="ok-text">No source-copy or duplicate risk found.</p>}
+      {result.release.blockReason.length>0&&<p><b>Release blockers</b><br/><small>{result.release.blockReason.join(', ')}</small></p>}
+    </details>
+    <small>{result.provider}{result.model?` / ${result.model}`:''} · {result.promptVersion} · Policy {result.policyVersion} · {result.algorithmVersion}</small>
   </div>
 }

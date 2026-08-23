@@ -64,8 +64,7 @@ export async function requestAzureOpenAiJson<T>(request: AzureOpenAiJsonRequest)
           { role: 'user', content: JSON.stringify(request.input) },
         ],
         response_format: { type: 'json_object' },
-        temperature: 0.2,
-        max_tokens: request.maxOutputTokens ?? 4096,
+        max_completion_tokens: request.maxOutputTokens ?? 4096,
       }),
     });
   } catch (error) {

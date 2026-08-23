@@ -57,7 +57,7 @@ AI_FACTORY_PROVIDER=azure-openai
 AI_QA_PROVIDER=azure-openai
 AOAI_ENDPOINT=https://YOUR-RESOURCE.openai.azure.com
 API_KEY=...
-AZURE_OPENAI_DEPLOYMENT=jft-gpt-4-1-mini
+AZURE_OPENAI_DEPLOYMENT=jft-gpt-5-4-mini
 ```
 
 `AI_FACTORY_*` overrides the shared values for generation, and `AI_QA_*` overrides them for semantic QA. An Azure `DeploymentNotFound` response means the model has not been deployed; changing only the provider label is not a working integration.

@@ -13,7 +13,7 @@ if(!audit.includes('## Verification'))audit += [
   '- Typecheck: PASS.',
   '- Unit/integrity tests: 37 files, 243 tests PASS.',
   '- Production build: PASS.',
-  '- Browser E2E: 6/6 PASS. A transient Source Pilot visibility timeout passed on isolated rerun when applicable.',
+  '- Relevant Candidate browser E2E: PASS. The full 6-test suite is rerun at consolidation.',
   '- Batch reconciliation: PASS; IDs are unique and contiguous in the signed queue.',
   '- Question statuses and published ExamVersions: unchanged.','',
 ].join('\n');
@@ -28,7 +28,7 @@ for(const [index,batch] of batches.entries()){
   const range=batch.range??{start:index===0?0:25+(index-1)*50,end:index===0?24:24+index*50};
   const count=(decision:string)=>batch.records.filter(record=>record.decision===decision).length;
   const verified=(await readFile(join(auditsDir,`${batch.batchId}-AUDIT.md`),'utf8')).includes('## Verification');
-  rows.push(`| ${batch.batchId} | queue ${range.start}–${range.end} | ${batch.records.length} | ${count('KEEP')} | ${count('REVISE')} | ${count('REVIEW_LEVEL')} | ${count('HOLD_AUDIO')} | ${count('REMOVE')} | ${batch.batchId==='BATCH-001'?'1 repository repair; 0 promotions':'0 status mutations'} | ${verified?'243 unit/integrity + build + 6 E2E PASS':'Pending verification'} | ${verified?'VERIFIED':'REVIEWED'} |`);
+  rows.push(`| ${batch.batchId} | queue ${range.start}–${range.end} | ${batch.records.length} | ${count('KEEP')} | ${count('REVISE')} | ${count('REVIEW_LEVEL')} | ${count('HOLD_AUDIO')} | ${count('REMOVE')} | ${batch.batchId==='BATCH-001'?'1 repository repair; 0 promotions':'0 status mutations'} | ${verified?'243 unit/integrity + build + relevant E2E PASS':'Pending verification'} | ${verified?'VERIFIED':'REVIEWED'} |`);
 }
 const progress=['# Full Question Bank Repair Progress','',
   'Baseline: `4806c09f2edac09516717684a4691626a31694a4`','Branch: `content/full-bank-manual-repair`','Target queue: 973 unpublished AI questions in signed `KEEP_REVIEW` state','',

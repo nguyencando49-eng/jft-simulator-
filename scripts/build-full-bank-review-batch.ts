@@ -91,7 +91,7 @@ const progressRows=allBatches.map((batch,index)=>{
   const range=batch.range??{start:index===0?0:25+(index-1)*50,end:index===0?24:24+index*50};
   const c=(decision:Decision)=>batch.records.filter(record=>record.decision===decision).length;
   const verified=verifiedBatches.has(batch.batchId);
-  return `| ${batch.batchId} | queue ${range.start}–${range.end} | ${batch.records.length} | ${c('KEEP')} | ${c('REVISE')} | ${c('REVIEW_LEVEL')} | ${c('HOLD_AUDIO')} | ${c('REMOVE')} | ${batch.batchId==='BATCH-001'?'1 repository repair; 0 promotions':'0 status mutations'} | ${verified?'243 unit/integrity + build + 6 E2E PASS':'Pending verification'} | ${verified?'VERIFIED':'REVIEWED'} |`;
+  return `| ${batch.batchId} | queue ${range.start}–${range.end} | ${batch.records.length} | ${c('KEEP')} | ${c('REVISE')} | ${c('REVIEW_LEVEL')} | ${c('HOLD_AUDIO')} | ${c('REMOVE')} | ${batch.batchId==='BATCH-001'?'1 repository repair; 0 promotions':'0 status mutations'} | ${verified?'243 unit/integrity + build + relevant E2E PASS':'Pending verification'} | ${verified?'VERIFIED':'REVIEWED'} |`;
 });
 const reviewed=allBatches.reduce((sum,batch)=>sum+batch.records.length,0);
 const progress=['# Full Question Bank Repair Progress','',

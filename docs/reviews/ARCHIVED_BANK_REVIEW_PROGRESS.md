@@ -19,11 +19,12 @@ Target queue: 1,077 AI questions in signed `REJECT` / archived state
 | ARCHIVE-BATCH-011 | queue 500–549 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 251 unit/integrity + build + relevant E2E PASS | VERIFIED |
 | ARCHIVE-BATCH-012 | queue 550–599 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 251 unit/integrity + build + relevant E2E PASS | VERIFIED |
 | ARCHIVE-BATCH-013 | queue 600–649 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 251 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| ARCHIVE-BATCH-014 | queue 650–699 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 251 unit/integrity + build + relevant E2E PASS | VERIFIED |
 
 ## Current totals
 
-Reviewed: 650 / 1077
-Remaining: 427
+Reviewed: 700 / 1077
+Remaining: 377
 Restored/published: 0
 
 Archived statuses, published ExamVersions and production data remain unchanged.

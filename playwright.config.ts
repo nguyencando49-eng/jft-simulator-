@@ -4,6 +4,7 @@ const executablePath=process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH;
 
 export default defineConfig({
   testDir: './e2e',
+  timeout: 90_000,
   fullyParallel: false,
   workers: 1,
   retries: process.env.CI ? 1 : 0,

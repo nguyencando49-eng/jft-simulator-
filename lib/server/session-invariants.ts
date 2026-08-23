@@ -3,7 +3,7 @@ import type { CandidateSessionRecord, UserRole } from './domain';
 
 export type SessionMutation = { questionId?: string; choice?: number; currentIndex?: number };
 export function canAccessSession(session:CandidateSessionRecord,userId:string,role:UserRole){
-  return !session.candidateId || session.candidateId===userId || role==='admin';
+  return role==='admin' || (!!session.candidateId && session.candidateId===userId);
 }
 
 export type SessionInvariantResult = { ok: true } | { ok: false; status: number; error: string };
@@ -43,6 +43,11 @@ export function validateSessionMutation(
       const current = version.questions[session.currentIndex];
       const rule = version.rules?.find(r => r.section === current?.snapshot.section);
       if (rule && !rule.allowBack) return { ok: false, status: 409, error: 'Back navigation is disabled for this section' };
+    }
+    if (mutation.currentIndex > session.currentIndex + 1) {
+      const current = version.questions[session.currentIndex];
+      const rule = version.rules?.find(r => r.section === current?.snapshot.section);
+      if (rule && !rule.allowBack) return { ok: false, status: 409, error: 'This section must be completed sequentially' };
     }
   }
 

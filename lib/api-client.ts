@@ -4,6 +4,7 @@ import type { UserRole } from './server/domain';
 import type { FactoryJob, FactoryRequest } from './server/factory-domain';
 import type { KnowledgeUnit, QuestionPlan, QuestionProvenance, SourceChunk, SourceDocument } from './server/source-domain';
 import type { CoverageCell, ReadinessResult } from './server/curriculum-production';
+import type { A1MvpReleaseReport } from './server/a1-mvp-release';
 
 export type ApiErrorPayload={ok?:false;error?:string;[key:string]:unknown};
 export class ApiError extends Error{status:number;payload:ApiErrorPayload;constructor(status:number,payload:ApiErrorPayload){super(payload.error||`API ${status}`);this.status=status;this.payload=payload;}}
@@ -37,6 +38,8 @@ export const adminApi={
   exam:(id='JFT-MOCK-001')=>raw<{ok:true;draft:ExamDraft|null;versions:ExamVersion[]}>(`/api/v1/exams?id=${encodeURIComponent(id)}`),
   saveExam:(draft:ExamDraft)=>raw<{ok:true;draft:ExamDraft}>('/api/v1/exams',{method:'PUT',body:JSON.stringify(draft)}),
   publishExam:(examId:string)=>raw<{ok:true;version:ExamVersion}>('/api/v1/exams',{method:'POST',body:JSON.stringify({examId})}),
+  a1MvpRelease:()=>raw<{ok:true;ready:true;report:A1MvpReleaseReport;publishedVersionIds:string[]}>('/api/v1/admin/a1-mvp-release'),
+  publishA1MvpRelease:()=>raw<{ok:true;published:string[];skipped:string[];report:A1MvpReleaseReport}>('/api/v1/admin/a1-mvp-release',{method:'POST'}),
   attempts:()=>raw<{ok:true;attempts:Array<{id:string;examVersionId:string;status:string;startedAt:string;submittedAt?:string;answered:number;total:number;scorePercent?:number}>}>('/api/v1/attempts'),
   candidates:()=>raw<{ok:true;candidates:Array<UserProfile&{attempts:number;submitted:number;active:number;averageScore:number|null;lastAttemptAt?:string}>}>('/api/v1/admin/candidates'),
   updateCandidateRole:(id:string,role:UserRole)=>raw<{ok:true;profile:UserProfile}>(`/api/v1/admin/candidates/${encodeURIComponent(id)}`,{method:'PATCH',body:JSON.stringify({role})}),
@@ -56,18 +59,21 @@ export const adminApi={
   contentProduction:()=>raw<{ok:true;levels:Record<string,{approved:number;targetMin:number;targetMax:number;coverage:{total:number;covered:number};readiness:ReadinessResult}>;sources:{total:number;approvedKnowledgeUnits:number};deficits:CoverageCell[];qa:{listeningAudioDeficits:number;outOfCurriculumFailures:number;curriculumPassRate:number;unsupportedGrammarRate:number;unsupportedVocabularyRate:number;unsupportedKanjiRate:number;partialSupportRate:number;retrievalIncompleteRate:number;alignmentSampleCount:number;alignmentEvaluableSampleCount:number;alignmentTechnicalReviewCount:number;listeningAlignmentSampleCount:number;readingAlignmentSampleCount:number;sectionMismatchRate:number|null;categoryMismatchRate:number|null;canDoMismatchRate:number|null;listeningDependencyFailureRate:number|null;readingDependencyFailureRate:number|null;constructUnderrepresentationRate:number|null;alignmentReviewRate:number|null;difficultySampleCount:number;difficultyEvaluableSampleCount:number;difficultyTechnicalReviewCount:number;declaredVsEstimatedMismatchRate:number|null;difficultyReviewRate:number|null;empiricalCalibrationCoverage:number|null;unexpectedlyEasyRate:number|null;unexpectedlyHardRate:number|null;questionsByEstimatedLevel:Record<'A1'|'A2.1'|'A2.2',number>;originalitySampleCount:number;originalityEvaluableSampleCount:number;originalityTechnicalReviewCount:number;sourceCopyFailureRate:number|null;bankDuplicateFailureRate:number|null;batchDuplicateFailureRate:number|null;originalityReviewRate:number|null}}>('/api/v1/content-production'),
 };
 
-export type CandidateQuestion=Omit<Question,'answer'|'explanationVi'> & {answer?:never;explanationVi?:never};
+export type CandidateQuestion=Pick<Question,'id'|'section'|'type'|'level'|'instruction'|'prompt'|'choices'|'audioSrc'> & {answer?:never;explanationVi?:never};
 export interface CandidateExam {id:string;title:string;durationMinutes:number;rules:Array<{section:SectionId;allowBack:boolean}>;questions:CandidateQuestion[]}
-export interface CandidateSession {id:string;examVersionId:string;status:'active'|'submitted'|'expired';startedAt:string;expiresAt:string;currentIndex:number;answers:Record<string,number>}
-export interface ServerResult {correct:number;total:number;scorePercent:number;answered:number;sectionScores:Record<string,{correct:number;total:number;percent:number}>;submittedAt:string}
+export interface CandidateSession {id:string;examVersionId:string;status:'active'|'submitted'|'expired';startedAt:string;expiresAt:string;submittedAt?:string;currentIndex:number;answers:Record<string,number>}
+export interface CandidateExamSummary {id:string;examId:string;title:string;durationMinutes:number;publishedAt:string;questionCount:number;level:'A1'|'A2.1'|'A2.2'|'MIXED';sections:SectionId[]}
+export interface CandidateReviewItem {question:CandidateQuestion;selectedAnswer:number|null;correctAnswer:number;correct:boolean;explanationVi:string}
+export interface ServerResult {correct:number;incorrect:number;unanswered:number;total:number;scorePercent:number;answered:number;sectionScores:Record<string,{correct:number;total:number;percent:number}>;submittedAt:string;review:CandidateReviewItem[];timedOut?:boolean}
 export interface CandidateAttempt {id:string;examVersionId:string;examTitle:string;status:'active'|'submitted'|'expired';startedAt:string;expiresAt:string;submittedAt?:string;currentIndex:number;answered:number;total:number;scorePercent?:number}
 
 export const candidateApi={
-  latestExam:()=>raw<{ok:true;version:{id:string;examId:string;title:string;durationMinutes:number;publishedAt:string}|null}>('/api/v1/exams/published'),
+  publishedExams:()=>raw<{ok:true;versions:CandidateExamSummary[];version:CandidateExamSummary|null}>('/api/v1/exams/published'),
+  latestExam:()=>raw<{ok:true;versions:CandidateExamSummary[];version:CandidateExamSummary|null}>('/api/v1/exams/published'),
   attempts:()=>raw<{ok:true;attempts:CandidateAttempt[]}>('/api/v1/sessions'),
   createSession:(examVersionId:string)=>raw<{ok:true;session:CandidateSession;exam:CandidateExam}>('/api/v1/sessions',{method:'POST',body:JSON.stringify({examVersionId})}),
   resume:(sessionId:string)=>raw<{ok:true;session:CandidateSession;exam:CandidateExam}>(`/api/v1/sessions/${encodeURIComponent(sessionId)}`),
-  saveAnswer:(sessionId:string,questionId:string|undefined,choice:number|undefined,currentIndex:number)=>raw<{ok:true;savedAt:string}>(`/api/v1/sessions/${encodeURIComponent(sessionId)}/answers`,{method:'PUT',body:JSON.stringify({questionId,choice,currentIndex})}),
-  submit:(sessionId:string)=>raw<{ok:true;result:ServerResult}>(`/api/v1/sessions/${encodeURIComponent(sessionId)}/submit`,{method:'POST'}),
+  saveAnswer:(sessionId:string,questionId?:string,choice?:number,currentIndex?:number)=>raw<{ok:true;savedAt:string}>(`/api/v1/sessions/${encodeURIComponent(sessionId)}/answers`,{method:'PUT',body:JSON.stringify({questionId,choice,currentIndex})}),
+  submit:(sessionId:string)=>raw<{ok:true;alreadySubmitted?:boolean;result:ServerResult}>(`/api/v1/sessions/${encodeURIComponent(sessionId)}/submit`,{method:'POST'}),
   result:(sessionId:string)=>raw<{ok:true;result:ServerResult;exam:{id:string;title:string}}>(`/api/v1/sessions/${encodeURIComponent(sessionId)}/result`),
 };

@@ -6,6 +6,12 @@ export const REFRESH_COOKIE='jft-refresh-token';
 export const DEV_ROLE_COOKIE='jft-dev-role';
 export const DEV_USER_COOKIE='jft-dev-user';
 
+export function devUserId(role:UserRole,email:string){
+  let hash=2166136261;
+  for(const char of email.trim().toLowerCase()){hash^=char.charCodeAt(0);hash=Math.imul(hash,16777619);}
+  return `dev-${role}-${(hash>>>0).toString(16)}`;
+}
+
 function cookie(req:Request,name:string){
   const raw=req.headers.get('cookie')||'';
   for(const item of raw.split(';')){ const i=item.indexOf('='); if(i<0)continue; if(item.slice(0,i).trim()===name)return decodeURIComponent(item.slice(i+1).trim()); }
@@ -18,7 +24,7 @@ export function authDisabled(){
 export function devAuth(req:Request):AuthContext {
   const role=(cookie(req,DEV_ROLE_COOKIE)==='candidate'?'candidate':'admin') as UserRole;
   const email=cookie(req,DEV_USER_COOKIE)||`dev-${role}@local.test`;
-  return {userId:`dev-${role}`,role,email,displayName:role==='admin'?'Dev Admin':'Dev Candidate'};
+  return {userId:devUserId(role,email),role,email,displayName:role==='admin'?'Dev Admin':'Dev Candidate'};
 }
 export async function requireAuth(req:Request, required?:UserRole):Promise<AuthContext>{
   if(authDisabled()){

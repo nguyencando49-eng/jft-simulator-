@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { ACCESS_COOKIE, DEV_ROLE_COOKIE, DEV_USER_COOKIE, REFRESH_COOKIE, authDisabled } from '@/lib/server/auth';
+import { ACCESS_COOKIE, DEV_ROLE_COOKIE, DEV_USER_COOKIE, REFRESH_COOKIE, authDisabled, devUserId } from '@/lib/server/auth';
 import { getRepository } from '@/lib/server/repository';
 
 const cookieBase={httpOnly:true,sameSite:'lax' as const,secure:process.env.NODE_ENV==='production',path:'/'};
@@ -8,7 +8,7 @@ export async function POST(req:Request){
   if(!body.email||!body.password)return NextResponse.json({ok:false,error:'Email and password are required.'},{status:422});
   if(body.password.length<8)return NextResponse.json({ok:false,error:'Password must be at least 8 characters.'},{status:422});
   if(authDisabled()){
-    const now=new Date().toISOString(); const email=body.email.trim().toLowerCase(); const profile={id:'dev-candidate',email,displayName:body.displayName?.trim()||email.split('@')[0],role:'candidate' as const,createdAt:now,lastSeenAt:now};
+    const now=new Date().toISOString(); const email=body.email.trim().toLowerCase(); const profile={id:devUserId('candidate',email),email,displayName:body.displayName?.trim()||email.split('@')[0],role:'candidate' as const,createdAt:now,lastSeenAt:now};
     await getRepository().upsertProfile(profile); const res=NextResponse.json({ok:true,user:profile,mode:'dev',verificationRequired:false});
     res.cookies.set(DEV_ROLE_COOKIE,'candidate',{...cookieBase,maxAge:60*60*24*30}); res.cookies.set(DEV_USER_COOKIE,email,{...cookieBase,maxAge:60*60*24*30}); return res;
   }

@@ -1,0 +1,34 @@
+{
+  "blueprintVersion": "JFT_A1_MVP_5X8_V1",
+  "provider": "azure",
+  "voice": "ja-JP-NanamiNeural",
+  "rate": "-5%",
+  "format": "riff-48khz-16bit-mono-pcm",
+  "generatedAt": "2026-08-23T12:12:24.949Z",
+  "entries": [
+    {
+      "questionId": "LI-001",
+      "audioSrc": "/audio/sample-01.wav",
+      "bytes": 500332,
+      "sha256": "ea463fcfbf212cb5d8b75b5d561a7ef5061baeb145d432aaf0ccdca4b38693af"
+    },
+    {
+      "questionId": "LI-003",
+      "audioSrc": "/audio/li-003.wav",
+      "bytes": 606512,
+      "sha256": "a64b7e2614e29b2a41b9f628482c7b33aa0bc2348217a9cc423f431204699622"
+    },
+    {
+      "questionId": "LI-004",
+      "audioSrc": "/audio/li-004.wav",
+      "bytes": 675842,
+      "sha256": "d479a1917ee34dae4dc04f256c2775a8712790893d97c7b96a2d153b1a84ade5"
+    },
+    {
+      "questionId": "LI-005",
+      "audioSrc": "/audio/li-005.wav",
+      "bytes": 706230,
+      "sha256": "680456a11d9a222a3ae363c9bd272c89d96e046175a58440f45e1241a084129d"
+    }
+  ]
+}

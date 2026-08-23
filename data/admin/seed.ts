@@ -30,14 +30,14 @@ export const seedQuestions: QuestionRecord[] = [...questions.map((q) => ({
 
 export const seedExamDraft: ExamDraft = {
   id: 'JFT-MOCK-001',
-  title: 'JFT-Basic Mock Test #001',
+  title: 'JFT Practice A1 — Đề 01',
   durationMinutes: 60,
   status: 'draft',
   rules: [
-    { section: 'script_vocabulary', count: 2, allowBack: true, levels: ['A1','A2.1','A2.2'] },
-    { section: 'conversation_expression', count: 2, allowBack: true, levels: ['A1','A2.1','A2.2'] },
-    { section: 'listening', count: 2, allowBack: false, levels: ['A1','A2.1','A2.2'] },
-    { section: 'reading', count: 2, allowBack: true, levels: ['A1','A2.1','A2.2'] },
+    { section: 'script_vocabulary', count: 2, allowBack: true, levels: ['A1'] },
+    { section: 'conversation_expression', count: 2, allowBack: true, levels: ['A1'] },
+    { section: 'listening', count: 2, allowBack: false, levels: ['A1'] },
+    { section: 'reading', count: 2, allowBack: true, levels: ['A1'] },
   ],
 };
 

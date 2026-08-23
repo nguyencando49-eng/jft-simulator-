@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { ACCESS_COOKIE,DEV_ROLE_COOKIE,DEV_USER_COOKIE,REFRESH_COOKIE,authDisabled } from '@/lib/server/auth';
+import { ACCESS_COOKIE,DEV_ROLE_COOKIE,DEV_USER_COOKIE,REFRESH_COOKIE,authDisabled,devUserId } from '@/lib/server/auth';
 import { getRepository } from '@/lib/server/repository';
 import type { UserRole } from '@/lib/server/domain';
 
@@ -8,8 +8,8 @@ const cookieBase={httpOnly:true,sameSite:'lax' as const,secure,path:'/'};
 export async function POST(req:Request){
   const body=await req.json() as {email?:string;password?:string;role?:UserRole};
   if(authDisabled()){
-    const role:UserRole=body.role==='candidate'?'candidate':'admin'; const email=(body.email||`dev-${role}@local.test`).trim();
-    const now=new Date().toISOString(); const profile={id:`dev-${role}`,email,displayName:role==='admin'?'Dev Admin':'Dev Candidate',role,createdAt:now,lastSeenAt:now};
+    const role:UserRole=body.role==='candidate'?'candidate':'admin'; const email=(body.email||`dev-${role}@local.test`).trim().toLowerCase();
+    const now=new Date().toISOString(); const profile={id:devUserId(role,email),email,displayName:role==='admin'?'Dev Admin':'Dev Candidate',role,createdAt:now,lastSeenAt:now};
     await getRepository().upsertProfile(profile);
     const res=NextResponse.json({ok:true,user:profile,mode:'dev'});
     res.cookies.set(DEV_ROLE_COOKIE,role,{...cookieBase,maxAge:60*60*24*30}); res.cookies.set(DEV_USER_COOKIE,email,{...cookieBase,maxAge:60*60*24*30}); return res;

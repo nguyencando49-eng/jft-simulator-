@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it } from 'vitest';
 import { e2eSessionDurationMs } from '@/lib/server/e2e';
-import { toCandidateQuestion } from '@/lib/server/candidate-question';
+import { toCandidateQuestion, toCandidateSession } from '@/lib/server/candidate-question';
 import type {QuestionRecord} from '@/lib/admin-types';
 import {authDisabled} from '@/lib/server/auth';
 
@@ -20,6 +20,14 @@ it('candidate projection cannot expose answers, explanations, or QA evidence',()
   const q={id:'q',section:'reading',type:'choice',level:'A1',instruction:'i',prompt:'p',choices:['a','b'],answer:1,explanationVi:'secret',tags:[],version:1,status:'approved',source:'ai',createdAt:'x',updatedAt:'x',answerOracleQa:{verdict:'PASS'},japaneseNaturalnessQa:{verdict:'PASS'},curriculumGroundingQa:{verdict:'PASS',knowledgeUnitIds:['KU-SECRET'],sourceChunkIds:['SC-SECRET']},jftAlignmentQa:{verdict:'FAIL',independentAssessment:{actualAssessmentTarget:'ALIGNMENT-SECRET'},provider:'QA5-PROVIDER-SECRET'},difficultyCalibrationQa:{verdict:'REVIEW',difficultyScore:.73,provider:'QA6-PROVIDER-SECRET',issues:[{evidence:'DIFFICULTY-SECRET'}]},originalityDuplicateQa:{verdict:'FAIL',provider:'QA7-PROVIDER-SECRET',comparisons:[{evidence:'SOURCE-COPY-SECRET'}]}} as QuestionRecord & {answerOracleQa:unknown;japaneseNaturalnessQa:unknown;curriculumGroundingQa:unknown;jftAlignmentQa:unknown;difficultyCalibrationQa:unknown;originalityDuplicateQa:unknown};
   const safe=toCandidateQuestion(q);
   expect(safe).not.toHaveProperty('answer');expect(safe).not.toHaveProperty('explanationVi');expect(safe).not.toHaveProperty('answerOracleQa');expect(safe).not.toHaveProperty('japaneseNaturalnessQa');expect(safe).not.toHaveProperty('curriculumGroundingQa');expect(safe).not.toHaveProperty('jftAlignmentQa');expect(safe).not.toHaveProperty('difficultyCalibrationQa');expect(safe).not.toHaveProperty('originalityDuplicateQa');expect(JSON.stringify(safe)).not.toContain('KU-SECRET');expect(JSON.stringify(safe)).not.toContain('SC-SECRET');expect(JSON.stringify(safe)).not.toContain('ALIGNMENT-SECRET');expect(JSON.stringify(safe)).not.toContain('QA5-PROVIDER-SECRET');expect(JSON.stringify(safe)).not.toContain('QA6-PROVIDER-SECRET');expect(JSON.stringify(safe)).not.toContain('DIFFICULTY-SECRET');expect(JSON.stringify(safe)).not.toContain('QA7-PROVIDER-SECRET');expect(JSON.stringify(safe)).not.toContain('SOURCE-COPY-SECRET');
+  expect(Object.keys(safe).sort()).toEqual(['choices','id','instruction','level','prompt','section','type'].sort());
+});
+
+it('candidate session projection omits owner identity and internal fields',()=>{
+  const safe=toCandidateSession({id:'s',examVersionId:'v',candidateId:'USER-SECRET',status:'active',startedAt:'x',expiresAt:'y',currentIndex:1,answers:{q:2}});
+  expect(safe).not.toHaveProperty('candidateId');
+  expect(JSON.stringify(safe)).not.toContain('USER-SECRET');
+  expect(safe.answers).toEqual({q:2});
 });
 function requestWith(seconds:string){return new Request('http://local.test',{headers:{cookie:`jft-e2e-duration-seconds=${seconds}`}})}
 

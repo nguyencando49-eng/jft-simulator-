@@ -9,7 +9,7 @@ try{
   const context=await browser.newContext({extraHTTPHeaders:headers,viewport:{width:390,height:844}});
   const page=await context.newPage();
   await page.goto(base,{waitUntil:'domcontentloaded'});
-  await expect(page.getByRole('link',{name:'Thi thử miễn phí'}).first()).toBeVisible();
+  await expect(page.getByRole('link',{name:'Bắt đầu luyện tập'}).first()).toBeVisible();
   await page.goto(`${base}/candidate`);
   await expect(page.getByText(/Chào Production Smoke/)).toBeVisible({timeout:20_000});
   const cards=page.getByTestId('candidate-exam-card');

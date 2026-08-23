@@ -3,10 +3,15 @@ import { requireAuth } from '@/lib/server/auth';
 import { apiError } from '@/lib/server/http';
 import { getRepository } from '@/lib/server/repository';
 import { A1MvpReleaseError, buildA1MvpReleasePack, publishA1MvpReleasePack } from '@/lib/server/a1-mvp-release';
+import { hasProductionImportToken } from '@/lib/server/production-import-auth';
+
+async function requireReleaseAuthorization(req:Request){
+  if(!hasProductionImportToken(req))await requireAuth(req,'admin');
+}
 
 export async function GET(req:Request){
   try{
-    await requireAuth(req,'admin');
+    await requireReleaseAuthorization(req);
     const repo=getRepository();
     const pack=buildA1MvpReleasePack(await repo.listQuestions());
     const existing=new Set((await repo.listExamVersions()).map(version=>version.id));
@@ -19,7 +24,7 @@ export async function GET(req:Request){
 
 export async function POST(req:Request){
   try{
-    await requireAuth(req,'admin');
+    await requireReleaseAuthorization(req);
     const result=await publishA1MvpReleasePack(getRepository());
     return NextResponse.json({ok:true,...result},{status:result.published.length?201:200});
   }catch(error){

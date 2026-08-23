@@ -7,3 +7,9 @@ node_modules
 *.tsbuildinfo
 playwright-report
 test-results
+
+.vercel
+.tools/
+supabase/.temp/
+TAI LIEU SACH/
+*.zip

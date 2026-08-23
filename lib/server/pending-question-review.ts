@@ -119,6 +119,17 @@ export function pendingReviewDigest(records:PendingQuestionReviewRecord[]){
   return createHash('sha256').update(records.map(record=>`${record.questionId}:${record.decision}`).join('\n')).digest('hex');
 }
 
+export function auditPendingQuestionReviewState(questions:QuestionRecord[],jobs:FactoryJob[]=[]){
+  const authoredIds=new Set(seedQuestions.filter(question=>question.source==='original').map(question=>question.id));
+  const governed=questions.filter(question=>seedById.has(question.id)&&!authoredIds.has(question.id));
+  const expected=buildPendingQuestionReviewRecords(governed.map(question=>({...question,status:'review'})),jobs);
+  const actualById=new Map(governed.map(question=>[question.id,question.status]));
+  const expectedStatus=(decision:PendingReviewDecision)=>decision==='APPROVE'?'approved':decision==='REJECT'?'archived':'review';
+  const drift=expected.filter(record=>actualById.get(record.questionId)!==expectedStatus(record.decision)).map(record=>({id:record.questionId,decision:record.decision,expectedStatus:expectedStatus(record.decision),actualStatus:actualById.get(record.questionId)??'missing'}));
+  const statusCounts=questions.reduce<Record<string,number>>((counts,question)=>{counts[question.status]=(counts[question.status]??0)+1;return counts},{});
+  return {governedCount:governed.length,expectedSummary:summarizePendingQuestionReviews(expected),expectedDigest:pendingReviewDigest(expected),statusCounts,driftCount:drift.length,drift};
+}
+
 export async function reviewPendingQuestionBatch(repo:Repository,options:{afterId?:string;limit?:number;apply?:boolean}={}){
   const questions=await repo.listQuestions(),jobs=await repo.listFactoryJobs();
   const all=buildPendingQuestionReviewRecords(questions,jobs),afterId=options.afterId??'',limit=Math.min(100,Math.max(1,options.limit??50));

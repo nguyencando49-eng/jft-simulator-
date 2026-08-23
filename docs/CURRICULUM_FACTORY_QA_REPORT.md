@@ -50,3 +50,34 @@ Implemented: canonical taxonomy; enriched KnowledgeUnits; approved-only multi-un
 The bundled approved seed bank contains A1: 17, A2.1: 19, A2.2: 14. It predates curriculum provenance, so all levels are `NOT_READY` for a grounded 20-exam release. To reach the simulator design target floor of 700 approved questions, the simple quantity gaps are A1: 683, A2.1: 681, A2.2: 686; actual needs may be higher after section/category/Can-do/audio constraints.
 
 Mass generation has not started and awaits human pilot approval.
+
+## Live Supabase pilot — 2026-08-23
+
+This pilot exercised the deployed persistence path after Supabase migrations `0001`–`0007` were applied. It used the synthetic `Hospital reception pilot` source and the configured deterministic mock providers; it did not use copyrighted textbook content.
+
+- Source: 1 selected document (a duplicate import remains untouched).
+- Chunking: 1 chunk.
+- Knowledge extraction: 1 A1 KnowledgeUnit. The raw deterministic extraction was rejected at the human checkpoint because it split Japanese words and omitted grammar/expressions.
+- Human review: the KnowledgeUnit was corrected against the synthetic source, retained its mock-provider provenance, and was explicitly approved.
+- Planning: 4 items, one per canonical section, with canonical categories `word_usage`, `expression`, `conversation`, and `information_search`.
+- Existing Factory: 4 jobs and 4 candidates; no candidate was approved into the Question Bank.
+- Listening: 1 candidate; production audio was not generated because earlier QA gates blocked release.
+
+| Gate | Pass | Review | Fail |
+| --- | ---: | ---: | ---: |
+| QA1 General Content | 0 | 1 | 3 |
+| QA2 Answer Oracle | 0 | 0 | 4 |
+| QA3 Japanese Naturalness | 4 | 0 | 0 |
+| QA4 Curriculum Grounding | 0 | 1 | 3 |
+| QA5 JFT Alignment | 0 | 2 | 2 |
+| QA6 Difficulty Calibration | 1 | 3 | 0 |
+| QA7 Originality / Duplicate | 4 | 0 | 0 |
+
+Pilot release decision: **BLOCKED**. The deterministic generator produces generic questions that do not reliably measure the reviewed Can-do, while the deterministic QA2 provider only recognizes literal answer evidence and cannot independently solve these item forms. No score or QA failure was silently relaxed, and the 2,100-question review set was not imported into the live Question Bank.
+
+Two implementation defects found by the pilot were fixed:
+
+- the mock planner now emits canonical section/category pairs;
+- the QuestionPlan bridge keeps originality instructions in `sourceGuidance` instead of leaking them into the learner-visible topic.
+
+Production remains blocked until a production-capable generation/judge provider is configured and a new small pilot produces human-reviewable candidates without QA2/QA4/QA5 hard failures.

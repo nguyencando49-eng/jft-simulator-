@@ -10,6 +10,7 @@ import { CURRICULUM_GROUNDING_PROMPT_VERSION } from '@/lib/server/curriculum-gro
 import { JFT_ALIGNMENT_PROMPT_VERSION } from '@/lib/server/jft-alignment';
 import {DIFFICULTY_CALIBRATION_POLICY_V1,DIFFICULTY_CALIBRATION_PROMPT_VERSION} from '@/lib/server/difficulty-calibration';
 import {ORIGINALITY_DUPLICATE_PROMPT_VERSION} from '@/lib/server/originality-duplicate';
+import {isCategoryForSection} from '@/lib/server/content-taxonomy';
 
 const fixture='病院で受付をします。\n\n受付で保険証を出します。\n\nどこが痛いか簡単に説明します。\n\n診察が終わったら会計をします。';
 describe('source ingestion',()=>{
@@ -18,7 +19,7 @@ describe('source ingestion',()=>{
  it('extracts structured knowledge but no answer key',async()=>{const doc=parseSource({title:'hospital',content:fixture},'admin'),chunks=chunkSourceText(doc,200);const result=await new MockSourceKnowledgeProvider().extract({document:doc,chunks,maxKnowledgeUnits:20});expect(result.units.length).toBeGreaterThan(0);result.units.forEach(assertKnowledgeUnit);expect(JSON.stringify(result.units)).not.toContain('"answer"');});
 });
 describe('planning and originality',()=>{
- it('creates a mixed question plan with requested count',async()=>{const result=await new MockQuestionPlanningProvider().plan({requestedCount:4,units:[{id:'u',sourceDocumentId:'s',sourceChunkIds:['c'],topic:'病院',situation:'受付',level:'A2.1',canDo:'受付で説明できる',grammar:[],vocabulary:[],expressions:[],keyKnowledge:['保険証を出す'],skills:['vocabulary','conversation','listening','reading'],confidence:.8,status:'approved',createdAt:'x',provider:'mock',promptVersion:'v1'}]});expect(result.items).toHaveLength(4);expect(new Set(result.items.map(x=>x.section)).size).toBe(4);});
+ it('creates a mixed question plan with canonical categories',async()=>{const result=await new MockQuestionPlanningProvider().plan({requestedCount:4,units:[{id:'u',sourceDocumentId:'s',sourceChunkIds:['c'],topic:'病院',situation:'受付',level:'A2.1',canDo:'受付で説明できる',grammar:[],vocabulary:[],expressions:[],keyKnowledge:['保険証を出す'],skills:['vocabulary','conversation','listening','reading'],confidence:.8,status:'approved',createdAt:'x',provider:'mock',promptVersion:'v1'}]});expect(result.items).toHaveLength(4);expect(new Set(result.items.map(x=>x.section)).size).toBe(4);expect(result.items.every(x=>isCategoryForSection(x.section,x.category))).toBe(true);});
  it('fails a near-copy and passes a new context',()=>{expect(checkSourceSimilarity('受付で保険証を出します。',{source:[{id:'c',text:'受付で保険証を出します。'}]},.7).passed).toBe(false);expect(checkSourceSimilarity('薬局で番号札を取って待ちます。',{source:[{id:'c',text:'受付で保険証を出します。'}]},.7).passed).toBe(true);});
  it('rejects invalid provider-shaped knowledge',()=>{expect(()=>assertKnowledgeUnit({topic:'x'})).toThrow(/schema/);});
  it('keeps an originality failure blocking approval after QA is refreshed',async()=>{

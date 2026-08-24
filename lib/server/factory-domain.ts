@@ -8,6 +8,8 @@ import type { CurriculumGroundingGateResult } from './curriculum-grounding';
 import type { JftAlignmentGateResult } from './jft-alignment';
 import type { DifficultyCalibrationGateResult } from './difficulty-calibration';
 import type { OriginalityDuplicateGateResult } from './originality-duplicate';
+import type { ItemBlueprint } from './generator-v2';
+import type { GeneratorPreflightResult } from './generator-v2';
 
 export type FactoryDifficulty = 'easy'|'balanced'|'hard';
 export type FactoryProviderName = 'mock'|'http'|'azure-openai';
@@ -23,6 +25,8 @@ export interface FactoryRequest {
   difficulty: FactoryDifficulty;
   includeExplanation: boolean;
   generateAudioScript: boolean;
+  /** Generator V2: immutable contracts. When present, count must match this array. */
+  itemBlueprints?: ItemBlueprint[];
   sourceGuidance?: { objective:string; originalityRules:string[] };
 }
 
@@ -43,8 +47,11 @@ export interface FactoryCandidate {
     provider: string;
     model?: string;
     promptVersion: string;
+    architecture?: string;
+    blueprintId?: string;
     createdAt: string;
   };
+  generatorPreflight?: GeneratorPreflightResult;
   semanticQa?: { score:number; passed:boolean; summary:string; issues:FactoryQaIssue[]; provider:string; model?:string };
   curriculumQa?: { curriculumGrounded:boolean; knowledgeUnitIds:string[]; outsideKnowledge:string[]; score:number; hardFail:boolean };
   contentQa?: JftContentQaResultV1;

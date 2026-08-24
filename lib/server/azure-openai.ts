@@ -7,6 +7,7 @@ export interface AzureOpenAiJsonRequest {
   systemPrompt: string;
   input: unknown;
   maxOutputTokens?: number;
+  jsonSchema?: { name: string; schema: Record<string, unknown> };
 }
 
 interface AzureOpenAiErrorBody {
@@ -63,7 +64,7 @@ export async function requestAzureOpenAiJson<T>(request: AzureOpenAiJsonRequest)
           { role: 'system', content: request.systemPrompt },
           { role: 'user', content: JSON.stringify(request.input) },
         ],
-        response_format: { type: 'json_object' },
+        response_format: request.jsonSchema ? {type:'json_schema',json_schema:{name:request.jsonSchema.name,strict:true,schema:request.jsonSchema.schema}} : { type: 'json_object' },
         max_completion_tokens: request.maxOutputTokens ?? 4096,
       }),
     });

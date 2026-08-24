@@ -1,0 +1,369 @@
+{
+  "version": "CONTROLLED_A1_SCALE_MANIFEST_V1",
+  "generatedAt": "2026-08-24T15:48:39.143Z",
+  "target": 1000,
+  "batchSize": 20,
+  "generated": 820,
+  "remaining": 180,
+  "remainingBatchCount": 9,
+  "reviewPolicy": "CUMULATIVE_REVIEW_AT_1000",
+  "publicationPolicy": "NO_AUTO_APPROVAL_OR_PUBLISH",
+  "providerRequirement": {
+    "provider": "azure-openai",
+    "model": "jft-gpt-5-mini",
+    "configuredLocally": true
+  },
+  "artifacts": [
+    {
+      "artifactVersion": "GENERATOR_RECOVERY_A1_PILOT_V1",
+      "path": "data/pilots/generator-recovery-a1-pilot.json",
+      "generated": 40,
+      "preflightPass": 40,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 40,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "GENERATOR_RECOVERY_A1_PILOT_2_V1",
+      "path": "data/pilots/generator-recovery-a1-pilot-2.json",
+      "generated": 40,
+      "preflightPass": 40,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 40,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_001_V1",
+      "path": "data/production/controlled-a1-batch-001.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_002_V1",
+      "path": "data/production/controlled-a1-batch-002.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_003_V1",
+      "path": "data/production/controlled-a1-batch-003.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_004_V1",
+      "path": "data/production/controlled-a1-batch-004.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_005_V1",
+      "path": "data/production/controlled-a1-batch-005.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_006_V1",
+      "path": "data/production/controlled-a1-batch-006.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_007_V1",
+      "path": "data/production/controlled-a1-batch-007.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_008_V1",
+      "path": "data/production/controlled-a1-batch-008.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_009_V1",
+      "path": "data/production/controlled-a1-batch-009.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_010_V1",
+      "path": "data/production/controlled-a1-batch-010.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_011_V1",
+      "path": "data/production/controlled-a1-batch-011.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_012_V1",
+      "path": "data/production/controlled-a1-batch-012.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_013_V1",
+      "path": "data/production/controlled-a1-batch-013.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_014_V1",
+      "path": "data/production/controlled-a1-batch-014.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_015_V1",
+      "path": "data/production/controlled-a1-batch-015.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_016_V1",
+      "path": "data/production/controlled-a1-batch-016.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_017_V1",
+      "path": "data/production/controlled-a1-batch-017.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_018_V1",
+      "path": "data/production/controlled-a1-batch-018.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_019_V1",
+      "path": "data/production/controlled-a1-batch-019.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_020_V1",
+      "path": "data/production/controlled-a1-batch-020.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_021_V1",
+      "path": "data/production/controlled-a1-batch-021.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_022_V1",
+      "path": "data/production/controlled-a1-batch-022.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_023_V1",
+      "path": "data/production/controlled-a1-batch-023.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_024_V1",
+      "path": "data/production/controlled-a1-batch-024.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_025_V1",
+      "path": "data/production/controlled-a1-batch-025.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_026_V1",
+      "path": "data/production/controlled-a1-batch-026.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_027_V1",
+      "path": "data/production/controlled-a1-batch-027.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_028_V1",
+      "path": "data/production/controlled-a1-batch-028.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_029_V1",
+      "path": "data/production/controlled-a1-batch-029.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_030_V1",
+      "path": "data/production/controlled-a1-batch-030.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_031_V1",
+      "path": "data/production/controlled-a1-batch-031.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_032_V1",
+      "path": "data/production/controlled-a1-batch-032.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_033_V1",
+      "path": "data/production/controlled-a1-batch-033.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_034_V1",
+      "path": "data/production/controlled-a1-batch-034.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_035_V1",
+      "path": "data/production/controlled-a1-batch-035.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_036_V1",
+      "path": "data/production/controlled-a1-batch-036.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    },
+    {
+      "artifactVersion": "CONTROLLED_A1_BATCH_037_V1",
+      "path": "data/production/controlled-a1-batch-037.json",
+      "generated": 20,
+      "preflightPass": 20,
+      "humanReviewStatus": "COMPLETED",
+      "humanGold": 20,
+      "machinePass": 0
+    }
+  ]
+}

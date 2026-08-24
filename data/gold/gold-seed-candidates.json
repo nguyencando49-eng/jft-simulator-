@@ -1,0 +1,438 @@
+{
+  "version": "GOLD_SEED_CANDIDATES_V1",
+  "warning": "KEEP with explicit item-level evidence is a candidate signal, not automatic production Gold approval.",
+  "candidates": [
+    {
+      "questionId": "A1P3-SV-001",
+      "evidence": {
+        "decision": "KEEP",
+        "confidence": "HIGH",
+        "batchId": "BATCH-001",
+        "reviewReason": "The item directly and uniquely tests the everyday meaning of ベトナム人 at A1. The learner-visible content is sound, but source-chunk provenance and QA2–QA7 evidence remain incomplete.",
+        "sourceArtifact": "data/reviews/full-bank/FINAL-DECISIONS.json"
+      },
+      "question": {
+        "level": "A1",
+        "knowledgeUnitIds": [
+          "nyumon-03-self-introduction"
+        ],
+        "id": "A1P3-SV-001",
+        "section": "script_vocabulary",
+        "type": "choice",
+        "category": "word_meaning",
+        "canDo": "Can understand basic nationality words.",
+        "instruction": "ことばの いみを えらんでください。",
+        "prompt": "「ベトナム人」は どれですか。",
+        "choices": [
+          "ベトナムの 人",
+          "日本の 会社",
+          "韓国の ことば",
+          "わたしの 名前"
+        ],
+        "answer": 0,
+        "explanationVi": "ベトナム人 nghĩa là người Việt Nam.",
+        "tags": [
+          "topic:personal_information",
+          "can-do:identify-nationality",
+          "difficulty:easy"
+        ]
+      }
+    },
+    {
+      "questionId": "A1P3-CE-003",
+      "evidence": {
+        "decision": "KEEP",
+        "confidence": "HIGH",
+        "batchId": "BATCH-001",
+        "reviewReason": "B's reply ソンです makes お名前は？ the only contextually defensible completion. The polite expression, Can-do and A1 load align.",
+        "sourceArtifact": "data/reviews/full-bank/FINAL-DECISIONS.json"
+      },
+      "question": {
+        "level": "A1",
+        "knowledgeUnitIds": [
+          "nyumon-03-self-introduction"
+        ],
+        "id": "A1P3-CE-003",
+        "section": "conversation_expression",
+        "type": "choice",
+        "category": "expression",
+        "canDo": "Can ask a name politely.",
+        "instruction": "会話に 入る ものを えらんでください。",
+        "prompt": "A：失礼ですが、（　）。\nB：ソンです。",
+        "choices": [
+          "お名前は？",
+          "お国も？",
+          "会社です",
+          "わかりますか"
+        ],
+        "answer": 0,
+        "explanationVi": "失礼ですが、お名前は？ là cách hỏi tên lịch sự.",
+        "tags": [
+          "topic:personal_information",
+          "can-do:ask-name-politely",
+          "difficulty:easy"
+        ]
+      }
+    },
+    {
+      "questionId": "A1P3-CE-005",
+      "evidence": {
+        "decision": "KEEP",
+        "confidence": "HIGH",
+        "batchId": "BATCH-001",
+        "reviewReason": "Only the reciprocal first-meeting greeting is pragmatically valid. The dialogue and explanation are natural and aligned to the declared expression Can-do.",
+        "sourceArtifact": "data/reviews/full-bank/FINAL-DECISIONS.json"
+      },
+      "question": {
+        "level": "A1",
+        "knowledgeUnitIds": [
+          "nyumon-03-self-introduction"
+        ],
+        "id": "A1P3-CE-005",
+        "section": "conversation_expression",
+        "type": "choice",
+        "category": "expression",
+        "canDo": "Can respond to a first introduction.",
+        "instruction": "会話に 入る ものを えらんでください。",
+        "prompt": "A：はじめまして。リーです。\nB：（　）",
+        "choices": [
+          "はじめまして。よろしくお願いします。",
+          "いただきます。",
+          "お大事に。",
+          "いってきます。"
+        ],
+        "answer": 0,
+        "explanationVi": "Đây là lời đáp phù hợp khi gặp và giới thiệu lần đầu.",
+        "tags": [
+          "topic:personal_information",
+          "can-do:respond-introduction",
+          "difficulty:easy"
+        ]
+      }
+    },
+    {
+      "questionId": "A1P3-RE-001",
+      "evidence": {
+        "decision": "KEEP",
+        "confidence": "HIGH",
+        "batchId": "BATCH-005",
+        "reviewReason": "The profile explicitly states France, so フランス人 is the only defensible answer. The short profile, A1 load, Reading/content-comprehension category and declared Can-do align.",
+        "sourceArtifact": "data/reviews/full-bank/FINAL-DECISIONS.json"
+      },
+      "question": {
+        "level": "A1",
+        "knowledgeUnitIds": [
+          "nyumon-03-self-introduction"
+        ],
+        "id": "A1P3-RE-001",
+        "section": "reading",
+        "type": "choice",
+        "category": "content_comprehension",
+        "canDo": "Can understand a short self-introduction card.",
+        "instruction": "カードを 読んで、答えてください。",
+        "prompt": "はじめまして。\n名前：エマ\n国：フランス\n会社：ひかり会社\n\nエマさんは どこの 人ですか。",
+        "choices": [
+          "フランス人",
+          "日本人",
+          "ベトナム人",
+          "韓国人"
+        ],
+        "answer": 0,
+        "explanationVi": "Thẻ giới thiệu ghi quốc gia là Pháp.",
+        "tags": [
+          "topic:personal_information",
+          "can-do:read-profile",
+          "difficulty:easy"
+        ]
+      }
+    },
+    {
+      "questionId": "A1P3-RE-003",
+      "evidence": {
+        "decision": "KEEP",
+        "confidence": "HIGH",
+        "batchId": "BATCH-005",
+        "reviewReason": "The passage explicitly corrects Japanese nationality to Indonesian; only the first choice is supported. The negative identity Can-do and A1 reading load align.",
+        "sourceArtifact": "data/reviews/full-bank/FINAL-DECISIONS.json"
+      },
+      "question": {
+        "level": "A1",
+        "knowledgeUnitIds": [
+          "nyumon-03-self-introduction"
+        ],
+        "id": "A1P3-RE-003",
+        "section": "reading",
+        "type": "choice",
+        "category": "content_comprehension",
+        "canDo": "Can understand a negative identity statement.",
+        "instruction": "メッセージを 読んで、答えてください。",
+        "prompt": "はじめまして。わたしは アリです。日本人じゃありません。インドネシア人です。\n\n正しいものは どれですか。",
+        "choices": [
+          "アリさんは インドネシア人です",
+          "アリさんは 日本人です",
+          "アリさんの 名前は インドネシアです",
+          "アリさんは 会社です"
+        ],
+        "answer": 0,
+        "explanationVi": "Ali nói mình không phải người Nhật mà là người Indonesia.",
+        "tags": [
+          "topic:personal_information",
+          "can-do:read-correction",
+          "difficulty:medium"
+        ]
+      }
+    },
+    {
+      "questionId": "A1P3-RE-005",
+      "evidence": {
+        "decision": "KEEP",
+        "confidence": "HIGH",
+        "batchId": "BATCH-005",
+        "reviewReason": "The message explicitly says 日本語は少しわかります, uniquely supporting the first choice. The practical introduction message and declared Can-do align.",
+        "sourceArtifact": "data/reviews/full-bank/FINAL-DECISIONS.json"
+      },
+      "question": {
+        "level": "A1",
+        "knowledgeUnitIds": [
+          "nyumon-03-self-introduction"
+        ],
+        "id": "A1P3-RE-005",
+        "section": "reading",
+        "type": "choice",
+        "category": "content_comprehension",
+        "canDo": "Can understand a polite introduction message.",
+        "instruction": "メッセージを 読んで、答えてください。",
+        "prompt": "みなさん、はじめまして。チャンです。ベトナムから 来ました。日本語は 少し わかります。よろしく お願いします。\n\nチャンさんについて 正しいものは どれですか。",
+        "choices": [
+          "日本語が 少し わかります",
+          "日本から 来ました",
+          "名前は みなさんです",
+          "日本語が ぜんぜん わかりません"
+        ],
+        "answer": 0,
+        "explanationVi": "Chan viết rằng mình hiểu một ít tiếng Nhật.",
+        "tags": [
+          "topic:personal_information",
+          "can-do:read-introduction",
+          "difficulty:medium"
+        ]
+      }
+    },
+    {
+      "questionId": "A1P3-SV-004",
+      "evidence": {
+        "decision": "KEEP",
+        "confidence": "HIGH",
+        "batchId": "ARCHIVE-BATCH-001",
+        "reviewReason": "ご出身 is the only grammatically and semantically valid completion. The item directly assesses everyday word usage at A1; it remains unpublished until specialized QA and provenance are complete.",
+        "sourceArtifact": "data/reviews/archived-bank/FINAL-ARCHIVED-DECISIONS.json"
+      },
+      "question": {
+        "level": "A1",
+        "knowledgeUnitIds": [
+          "nyumon-03-self-introduction"
+        ],
+        "id": "A1P3-SV-004",
+        "section": "script_vocabulary",
+        "type": "choice",
+        "category": "word_usage",
+        "canDo": "Can use the word for origin.",
+        "instruction": "（　）に 入る ことばを えらんでください。",
+        "prompt": "ご（　）は どちらですか。",
+        "choices": [
+          "出身",
+          "会社",
+          "友達",
+          "日本語"
+        ],
+        "answer": 0,
+        "explanationVi": "ご出身はどちらですか hỏi quê quán/xuất thân một cách lịch sự.",
+        "tags": [
+          "topic:personal_information",
+          "can-do:ask-origin",
+          "difficulty:medium"
+        ]
+      }
+    },
+    {
+      "questionId": "A1P3-CE-001",
+      "evidence": {
+        "decision": "KEEP",
+        "confidence": "HIGH",
+        "batchId": "ARCHIVE-BATCH-004",
+        "reviewReason": "わたしはアンです is the only valid completed sentence. The basic topic particle, self-introduction Can-do and A1 processing load align.",
+        "sourceArtifact": "data/reviews/archived-bank/FINAL-ARCHIVED-DECISIONS.json"
+      },
+      "question": {
+        "level": "A1",
+        "knowledgeUnitIds": [
+          "nyumon-03-self-introduction"
+        ],
+        "id": "A1P3-CE-001",
+        "section": "conversation_expression",
+        "type": "choice",
+        "category": "grammar",
+        "canDo": "Can introduce oneself.",
+        "instruction": "（　）に 入る ものを えらんでください。",
+        "prompt": "わたし（　）アンです。",
+        "choices": [
+          "は",
+          "も",
+          "の",
+          "から"
+        ],
+        "answer": 0,
+        "explanationVi": "Mẫu tự giới thiệu là わたしはアンです.",
+        "tags": [
+          "topic:personal_information",
+          "can-do:introduce-self",
+          "difficulty:easy"
+        ]
+      }
+    },
+    {
+      "questionId": "A1P3-CE-002",
+      "evidence": {
+        "decision": "KEEP",
+        "confidence": "HIGH",
+        "batchId": "ARCHIVE-BATCH-004",
+        "reviewReason": "じゃありません uniquely completes the noun negation before the correction 韓国人です. The answer, explanation and declared grammar task align.",
+        "sourceArtifact": "data/reviews/archived-bank/FINAL-ARCHIVED-DECISIONS.json"
+      },
+      "question": {
+        "level": "A1",
+        "knowledgeUnitIds": [
+          "nyumon-03-self-introduction"
+        ],
+        "id": "A1P3-CE-002",
+        "section": "conversation_expression",
+        "type": "choice",
+        "category": "grammar",
+        "canDo": "Can deny incorrect identity information.",
+        "instruction": "（　）に 入る ものを えらんでください。",
+        "prompt": "ミナさんは 日本人（　）。韓国人です。",
+        "choices": [
+          "じゃありません",
+          "ですか",
+          "もです",
+          "から来ました"
+        ],
+        "answer": 0,
+        "explanationVi": "じゃありません dùng để phủ định danh từ.",
+        "tags": [
+          "topic:personal_information",
+          "can-do:correct-nationality",
+          "difficulty:medium"
+        ]
+      }
+    },
+    {
+      "questionId": "A1P3-CE-004",
+      "evidence": {
+        "decision": "KEEP",
+        "confidence": "HIGH",
+        "batchId": "ARCHIVE-BATCH-004",
+        "reviewReason": "Only も expresses the shared nationality established by the preceding turn. The dialogue is natural and uniquely answerable at A1.",
+        "sourceArtifact": "data/reviews/archived-bank/FINAL-ARCHIVED-DECISIONS.json"
+      },
+      "question": {
+        "level": "A1",
+        "knowledgeUnitIds": [
+          "nyumon-03-self-introduction"
+        ],
+        "id": "A1P3-CE-004",
+        "section": "conversation_expression",
+        "type": "choice",
+        "category": "grammar",
+        "canDo": "Can say a shared attribute.",
+        "instruction": "（　）に 入る ものを えらんでください。",
+        "prompt": "A：わたしは ベトナム人です。\nB：わたし（　）ベトナム人です。",
+        "choices": [
+          "も",
+          "は",
+          "の",
+          "から"
+        ],
+        "answer": 0,
+        "explanationVi": "も biểu thị “cũng”.",
+        "tags": [
+          "topic:personal_information",
+          "can-do:share-nationality",
+          "difficulty:easy"
+        ]
+      }
+    },
+    {
+      "questionId": "A1P3-RE-002",
+      "evidence": {
+        "decision": "KEEP",
+        "confidence": "HIGH",
+        "batchId": "ARCHIVE-BATCH-007",
+        "reviewReason": "The visible employee list explicitly maps パク・ジン to 韓国, so the information-search task has one defensible answer and no outside knowledge is needed.",
+        "sourceArtifact": "data/reviews/archived-bank/FINAL-ARCHIVED-DECISIONS.json"
+      },
+      "question": {
+        "level": "A1",
+        "knowledgeUnitIds": [
+          "nyumon-03-self-introduction"
+        ],
+        "id": "A1P3-RE-002",
+        "section": "reading",
+        "type": "choice",
+        "category": "information_search",
+        "canDo": "Can find a name in a simple list.",
+        "instruction": "リストを 見て、答えてください。",
+        "prompt": "新しい 社員\n1. グエン・ハー　ベトナム\n2. パク・ジン　韓国\n3. 田中 りな　日本\n\n韓国から 来た 人は だれですか。",
+        "choices": [
+          "パク・ジン",
+          "グエン・ハー",
+          "田中 りな",
+          "わかりません"
+        ],
+        "answer": 0,
+        "explanationVi": "Danh sách ghi Park Jin đến từ Hàn Quốc.",
+        "tags": [
+          "topic:work",
+          "can-do:find-origin-in-list",
+          "difficulty:easy"
+        ]
+      }
+    },
+    {
+      "questionId": "A1P3-RE-004",
+      "evidence": {
+        "decision": "KEEP",
+        "confidence": "HIGH",
+        "batchId": "ARCHIVE-BATCH-007",
+        "reviewReason": "The profiles explicitly show that ミン and ユキ share みどり会社. The comparison is a valid short A1 information-search task.",
+        "sourceArtifact": "data/reviews/archived-bank/FINAL-ARCHIVED-DECISIONS.json"
+      },
+      "question": {
+        "level": "A1",
+        "knowledgeUnitIds": [
+          "nyumon-03-self-introduction"
+        ],
+        "id": "A1P3-RE-004",
+        "section": "reading",
+        "type": "choice",
+        "category": "information_search",
+        "canDo": "Can match people who share an attribute.",
+        "instruction": "プロフィールを 見て、答えてください。",
+        "prompt": "ミン：ベトナム人・みどり会社\nラン：ベトナム人・さくら会社\nユキ：日本人・みどり会社\n\nミンさんと 同じ 会社の 人は だれですか。",
+        "choices": [
+          "ユキさん",
+          "ランさん",
+          "ミンさんだけ",
+          "だれも いません"
+        ],
+        "answer": 0,
+        "explanationVi": "Min và Yuki cùng làm ở công ty Midori.",
+        "tags": [
+          "topic:work",
+          "can-do:compare-profile",
+          "difficulty:medium"
+        ]
+      }
+    }
+  ]
+}

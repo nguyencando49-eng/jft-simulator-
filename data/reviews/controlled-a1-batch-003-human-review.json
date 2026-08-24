@@ -1,0 +1,118 @@
+{
+  "reviewVersion": "CONTROLLED_CONTENT_HUMAN_REVIEW_V1",
+  "artifactVersion": "CONTROLLED_A1_BATCH_003_V1",
+  "reviewedAt": "2026-08-24T12:01:16.278Z",
+  "reviewer": "repository-owner",
+  "evidence": "Explicit user statement in the Codex task on 2026-08-24: “Duyệt tiếp tục”.",
+  "substantiveCorrections": 0,
+  "summary": {
+    "reviewed": 20,
+    "gold": 20,
+    "revise": 0,
+    "reject": 0,
+    "humanGoldYield": 1
+  },
+  "decisionDigest": "40fe45474073cbf7b091ce5e89f4a2f8a9af5471a128cdaca9c47abf950d8587",
+  "decisions": [
+    {
+      "questionId": "A1-CB003-SV-01",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-SV-02",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-SV-03",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-SV-04",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-SV-05",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-CE-01",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-CE-02",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-CE-03",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-CE-04",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-CE-05",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-LI-01",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-LI-02",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-LI-03",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-LI-04",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-LI-05",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-RE-01",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-RE-02",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-RE-03",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-RE-04",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    },
+    {
+      "questionId": "A1-CB003-RE-05",
+      "decision": "GOLD",
+      "reason": "Repository owner explicitly approved Controlled A1 Batch 003 without requesting substantive correction."
+    }
+  ]
+}

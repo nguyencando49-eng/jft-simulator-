@@ -160,3 +160,12 @@ export async function reconcilePendingQuestionReviewState(repo:Repository){
   if(changed.length)await repo.upsertQuestions(changed);
   return {before:audit,changed:changed.map(question=>({id:question.id,status:question.status}))};
 }
+
+export async function ownerApproveAllDeployedQuestions(repo:Repository){
+  const questions=await repo.listQuestions(),reviewedAt=new Date().toISOString();
+  const before=questions.reduce<Record<string,number>>((counts,question)=>{counts[question.status]=(counts[question.status]??0)+1;return counts},{});
+  const changed=questions.filter(question=>question.status!=='approved').map(question=>({...question,status:'approved' as const,version:question.version+1,updatedAt:reviewedAt}));
+  if(changed.length)await repo.upsertQuestions(changed);
+  const verified=await repo.listQuestions(),remaining=verified.filter(question=>question.status!=='approved');
+  return {reviewer:'repository-owner',reviewedAt,scope:'ALL_DEPLOYED_QUESTION_BANK_ITEMS',total:questions.length,before,changed:changed.length,approvedAfter:verified.filter(question=>question.status==='approved').length,remainingUnapproved:remaining.length};
+}

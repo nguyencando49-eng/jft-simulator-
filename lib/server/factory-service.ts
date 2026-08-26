@@ -25,6 +25,8 @@ import {getDifficultyCalibrationProvider,type DifficultyCalibrationProvider} fro
 import {emptyQuestionPerformance,loadQuestionPerformanceCatalog,type QuestionPerformanceAggregate} from './question-performance';
 import {bindOriginalityReviewEvidence,buildOriginalityDuplicateInput,finalizeOriginalityDuplicate,OriginalityDuplicateError,originalityReviewFingerprint,technicalOriginalityDuplicateResult,validateOriginalityDuplicateAnalysis,withOriginalityDuplicateAudit,type OriginalityCorpusItem,type OriginalityDuplicateInput} from './originality-duplicate';
 import {getOriginalityDuplicateProvider,type OriginalityDuplicateProvider} from './originality-duplicate-provider';
+import {generateBlueprintItem} from './generator-v2';
+import {getBlueprintGenerationProvider} from './generator-v2-provider';
 
 const contentQaJudge=new DeterministicJftContentQaJudge();
 
@@ -192,18 +194,20 @@ export function validateFactoryRequest(input:FactoryRequest){
   if(!['script_vocabulary','conversation_expression','listening','reading'].includes(input.section)) throw new Error('invalid section');
   if(!['A1','A2.1','A2.2'].includes(input.level)) throw new Error('invalid level');
   if(!Number.isInteger(input.count)||input.count<1||input.count>20) throw new Error('count must be 1..20');
+  if(input.itemBlueprints&&input.itemBlueprints.length!==input.count)throw new Error('itemBlueprints must match count');
 }
 
 export async function runFactoryJob(job:FactoryJob):Promise<FactoryJob>{
   const repo=getRepository(); const provider=getFactoryProvider(); const semantic=getSemanticQaProvider();
   job.status='running'; job.updatedAt=new Date().toISOString(); await repo.saveFactoryJob(job);
   try{
-    const drafts=await provider.generate(job.request);
     const candidates:FactoryCandidate[]=[];
-    for(let i=0;i<drafts.length;i++){
-      const d=drafts[i], now=new Date().toISOString();
-      const q:QuestionRecord={id:`AI-${job.request.section.toUpperCase().replaceAll('_','-')}-${job.id.slice(0,8)}-${String(i+1).padStart(3,'0')}`,section:job.request.section,type:job.request.section==='listening'?'audio_choice':'choice',level:job.request.level,instruction:d.instruction,prompt:d.prompt,choices:d.choices,answer:d.answer,explanationVi:job.request.includeExplanation?d.explanationVi:'',audioSrc:undefined,tags:Array.from(new Set([...(d.tags||[]),job.request.topic,job.request.canDo||''].filter(Boolean))),version:1,status:'review',source:'ai',createdAt:now,updatedAt:now};
-      const bare:Omit<FactoryCandidate,'qa'>={id:crypto.randomUUID(),question:q,audioScript:job.request.generateAudioScript?d.audioScript:undefined,generation:{provider:provider.name,model:provider.model,promptVersion:'v5.1',createdAt:now},audio:q.type==='audio_choice'?{status:'pending'}:undefined};
+    const generated=job.request.itemBlueprints
+      ? await Promise.all(job.request.itemBlueprints.map((blueprint,index)=>generateBlueprintItem(blueprint,getBlueprintGenerationProvider(),{id:`AI-V2-${job.id.slice(0,8)}-${String(index+1).padStart(3,'0')}`})))
+      : (await provider.generate(job.request)).map((draft,index)=>({question:{id:`AI-${job.request.section.toUpperCase().replaceAll('_','-')}-${job.id.slice(0,8)}-${String(index+1).padStart(3,'0')}`,section:job.request.section,type:job.request.section==='listening'?'audio_choice':'choice',level:job.request.level,instruction:draft.instruction,prompt:draft.prompt,choices:draft.choices,answer:draft.answer,explanationVi:job.request.includeExplanation?draft.explanationVi:'',audioSrc:undefined,tags:Array.from(new Set([...(draft.tags||[]),job.request.topic,job.request.canDo||''].filter(Boolean))),version:1,status:'review',source:'ai',createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()} as QuestionRecord,audioScript:draft.audioScript,generation:{provider:provider.name,model:provider.model,promptVersion:'v5.1'},preflight:undefined}));
+    for(const item of generated){
+      const now=new Date().toISOString();const q=item.question;
+      const bare:Omit<FactoryCandidate,'qa'>={id:crypto.randomUUID(),question:q,audioScript:job.request.generateAudioScript?item.audioScript:undefined,generation:{provider:item.generation.provider,model:item.generation.model,promptVersion:item.generation.promptVersion,architecture:'architecture' in item.generation?item.generation.architecture:undefined,blueprintId:'blueprint' in item?item.blueprint.id:undefined,createdAt:now},generatorPreflight:item.preflight,audio:q.type==='audio_choice'?{status:'pending'}:undefined};
       const semanticQa=await semantic.review(bare,job.request);
       const withSemantic={...bare,semanticQa};
       candidates.push({...withSemantic,qa:runFactoryQa(withSemantic)});

@@ -1,0 +1,36 @@
+# Full Question Bank Repair Progress
+
+Baseline: `4806c09f2edac09516717684a4691626a31694a4`
+Branch: `content/full-bank-manual-repair`
+Target queue: 973 unpublished AI questions in signed `KEEP_REVIEW` state
+
+| Batch | Range | Reviewed | KEEP | REVISE | REVIEW_LEVEL | HOLD_AUDIO | REMOVE | Applied | Tests | Status |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---|---|
+| BATCH-001 | queue 0–24 | 25 | 3 | 1 | 0 | 5 | 16 | 1 repository repair; 0 promotions | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-002 | queue 25–74 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-003 | queue 75–124 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-004 | queue 125–174 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-005 | queue 175–224 | 50 | 3 | 0 | 0 | 0 | 47 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-006 | queue 225–274 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-007 | queue 275–324 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-008 | queue 325–374 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-009 | queue 375–424 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-010 | queue 425–474 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-011 | queue 475–524 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-012 | queue 525–574 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-013 | queue 575–624 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-014 | queue 625–674 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-015 | queue 675–724 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-016 | queue 725–774 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-017 | queue 775–824 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-018 | queue 825–874 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-019 | queue 875–924 | 50 | 0 | 0 | 0 | 0 | 50 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+| BATCH-020 | queue 925–972 | 48 | 0 | 0 | 0 | 0 | 48 | 0 status mutations | 243 unit/integrity + build + relevant E2E PASS | VERIFIED |
+
+## Current totals
+
+Reviewed: 973 / 973
+Remaining: 0
+Approved: 0
+
+Production mutation remains blocked until an authenticated live inventory can be compared with the signed baseline snapshot. Existing published ExamVersions remain untouched.

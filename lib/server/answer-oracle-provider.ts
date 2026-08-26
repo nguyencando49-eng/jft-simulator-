@@ -2,7 +2,8 @@ import { ANSWER_ORACLE_PROMPT_VERSION,AnswerOracleError,type AnswerOracleInput,t
 
 export interface AnswerOracleProvider {name:string;model?:string;solve(input:AnswerOracleInput):Promise<AnswerOracleSolveResult>}
 
-function occurrences(text:string,choice:string){return choice.trim()&&text.includes(choice.trim())?1:0}
+function normalizeEvidence(value:string){return value.normalize('NFKC').replace(/[\s\p{P}\p{S}]+/gu,'').toLowerCase()}
+function occurrences(text:string,choice:string){const normalizedChoice=normalizeEvidence(choice);return normalizedChoice&&normalizeEvidence(text).includes(normalizedChoice)?1:0}
 export class DeterministicAnswerOracleProvider implements AnswerOracleProvider{
   name='mock-answer-oracle';model='learner-visible-heuristic-v1';
   async solve(input:AnswerOracleInput):Promise<AnswerOracleSolveResult>{

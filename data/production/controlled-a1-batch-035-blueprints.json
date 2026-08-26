@@ -1,0 +1,742 @@
+[
+  {
+    "id": "A1-CB035-SV-01",
+    "section": "script_vocabulary",
+    "category": "kanji_meaning_usage",
+    "unit": "A1-N08",
+    "topic": "work",
+    "canDo": "ask where a person is in a workplace",
+    "taskIntent": "空所に入る職場の場所の語を選ぶ",
+    "templateId": "SV-KMU-01",
+    "correct": "受付",
+    "evidence": "田中さんは受付にいます。",
+    "facts": [
+      "term=受付",
+      "sentence=田中さんは＿＿＿にいます。",
+      "context=",
+      "turnA=",
+      "turnBPrefix=",
+      "explanationVi=",
+      "script=",
+      "question=",
+      "stimulus="
+    ],
+    "distractors": [
+      "会議室",
+      "事務所",
+      "ロビー"
+    ],
+    "knowledge": [
+      "事務所",
+      "会議室",
+      "受付",
+      "います"
+    ],
+    "format": "sentence",
+    "reasoning": "direct-recognition",
+    "answerSource": "target_knowledge"
+  },
+  {
+    "id": "A1-CB035-SV-02",
+    "section": "script_vocabulary",
+    "category": "word_meaning",
+    "unit": "A1-N11",
+    "topic": "leisure",
+    "canDo": "talk about hobbies and free-time activities",
+    "taskIntent": "単語の意味（日本語の簡単な説明）を選ぶ",
+    "templateId": "SV-WM-02",
+    "correct": "運動",
+    "evidence": "スポーツ",
+    "facts": [
+      "term=スポーツ",
+      "sentence=",
+      "context=",
+      "turnA=",
+      "turnBPrefix=",
+      "explanationVi=",
+      "script=",
+      "question=",
+      "stimulus="
+    ],
+    "distractors": [
+      "映画を見ること",
+      "本を読むこと",
+      "絵を描くこと"
+    ],
+    "knowledge": [
+      "漫画",
+      "映画",
+      "スポーツ",
+      "趣味"
+    ],
+    "format": "isolated-term",
+    "reasoning": "direct-recognition",
+    "answerSource": "target_knowledge"
+  },
+  {
+    "id": "A1-CB035-SV-03",
+    "section": "script_vocabulary",
+    "category": "word_usage",
+    "unit": "A1-N14",
+    "topic": "leisure",
+    "canDo": "say what one wants to do at a destination",
+    "taskIntent": "文の空所に入る適切な動詞（～たい）を選ぶ",
+    "templateId": "SV-WU-03",
+    "correct": "入りたい",
+    "evidence": "明日、温泉に入りたい。",
+    "facts": [
+      "term=入りたい",
+      "sentence=明日、温泉に＿＿＿。",
+      "context=",
+      "turnA=",
+      "turnBPrefix=",
+      "explanationVi=",
+      "script=",
+      "question=",
+      "stimulus="
+    ],
+    "distractors": [
+      "行きたい",
+      "見たい",
+      "泊まりたい"
+    ],
+    "knowledge": [
+      "温泉",
+      "景色",
+      "寺",
+      "入りたい"
+    ],
+    "format": "sentence",
+    "reasoning": "direct-recognition",
+    "answerSource": "target_knowledge"
+  },
+  {
+    "id": "A1-CB035-SV-04",
+    "section": "script_vocabulary",
+    "category": "kanji_reading",
+    "unit": "A1-N17",
+    "topic": "daily_routine",
+    "canDo": "talk simply about past days off",
+    "taskIntent": "漢字の正しい読み方を選ぶ",
+    "templateId": "SV-KR-04",
+    "correct": "やすみ",
+    "evidence": "休み（やすみ）",
+    "facts": [
+      "term=休み",
+      "sentence=",
+      "context=",
+      "turnA=",
+      "turnBPrefix=",
+      "explanationVi=",
+      "script=",
+      "question=",
+      "stimulus="
+    ],
+    "distractors": [
+      "やすむ",
+      "きゅう",
+      "おやすみ"
+    ],
+    "knowledge": [
+      "休み",
+      "買い物",
+      "掃除",
+      "しました"
+    ],
+    "format": "isolated-term",
+    "reasoning": "direct-recognition",
+    "answerSource": "target_knowledge"
+  },
+  {
+    "id": "A1-CB035-SV-05",
+    "section": "script_vocabulary",
+    "category": "kanji_meaning_usage",
+    "unit": "A1-N04",
+    "topic": "family",
+    "canDo": "talk simply about family and where people live",
+    "taskIntent": "空所に入る家族を表す語を選ぶ",
+    "templateId": "SV-KMU-05",
+    "correct": "家族",
+    "evidence": "私の家族は東京に住んでいます。",
+    "facts": [
+      "term=家族",
+      "sentence=私の＿＿＿は東京に住んでいます。",
+      "context=",
+      "turnA=",
+      "turnBPrefix=",
+      "explanationVi=",
+      "script=",
+      "question=",
+      "stimulus="
+    ],
+    "distractors": [
+      "父",
+      "母",
+      "友達"
+    ],
+    "knowledge": [
+      "家族",
+      "父",
+      "母",
+      "住んでいます"
+    ],
+    "format": "sentence",
+    "reasoning": "direct-recognition",
+    "answerSource": "target_knowledge"
+  },
+  {
+    "id": "A1-CB035-CE-01",
+    "section": "conversation_expression",
+    "category": "grammar",
+    "unit": "A1-N03",
+    "topic": "personal_information",
+    "canDo": "introduce oneself and exchange basic identity information",
+    "taskIntent": "相手の求める名前・国・会社の情報を全部伝える返答を選ぶ",
+    "templateId": "CE-GR-01",
+    "correct": "名前は佐藤です。中国です。山田株式会社です。",
+    "evidence": "名前は佐藤です。中国です。山田株式会社です。",
+    "facts": [
+      "term=",
+      "sentence=",
+      "context=初対面で、名前・国・会社を聞かれた場面。",
+      "turnA=はじめまして。お名前と国と会社を教えてください。",
+      "turnBPrefix=はい、",
+      "explanationVi=Tên, nước, công ty—Chọn câu trả lời đầy đủ có cả ba thông tin.",
+      "script=",
+      "question=",
+      "stimulus="
+    ],
+    "distractors": [
+      "佐藤です。よろしくお願いします。",
+      "中国から来ました。",
+      "山田株式会社です。"
+    ],
+    "knowledge": [
+      "名前",
+      "国",
+      "会社",
+      "友達"
+    ],
+    "format": "dialogue",
+    "reasoning": "appropriate-response",
+    "answerSource": "communicative_intent"
+  },
+  {
+    "id": "A1-CB035-CE-02",
+    "section": "conversation_expression",
+    "category": "expression",
+    "unit": "A1-N10",
+    "topic": "workplace_instructions",
+    "canDo": "make and understand simple workplace requests",
+    "taskIntent": "道具を貸してほしいという依頼に対して丁寧に貸す返事を選ぶ",
+    "templateId": "CE-EX-02",
+    "correct": "はい、どうぞ。ここにあります。",
+    "evidence": "はい、どうぞ。ここにあります。",
+    "facts": [
+      "term=",
+      "sentence=",
+      "context=オフィスで同僚が道具を借りたいと頼んでいる。",
+      "turnA=ホチキスを貸してください。",
+      "turnBPrefix=はい、",
+      "explanationVi=Xin mượn đồ trong văn phòng. Chọn cách trả lời lịch sự để cho mượn.",
+      "script=",
+      "question=",
+      "stimulus="
+    ],
+    "distractors": [
+      "ありません。",
+      "いいえ、だめです。",
+      "自分で使ってください。"
+    ],
+    "knowledge": [
+      "ホチキス",
+      "コピー",
+      "段ボール",
+      "貸してください"
+    ],
+    "format": "dialogue",
+    "reasoning": "appropriate-response",
+    "answerSource": "communicative_intent"
+  },
+  {
+    "id": "A1-CB035-CE-03",
+    "section": "conversation_expression",
+    "category": "grammar",
+    "unit": "A1-N14",
+    "topic": "leisure",
+    "canDo": "say what one wants to do at a destination",
+    "taskIntent": "行き先で何をしたいかを～たいで言う返答を選ぶ",
+    "templateId": "CE-GR-03",
+    "correct": "温泉に入りたいです。",
+    "evidence": "温泉に入りたいです。",
+    "facts": [
+      "term=",
+      "sentence=",
+      "context=旅行の計画で、行きたいことを聞かれている。",
+      "turnA=箱根に行きます。何をしたいですか？",
+      "turnBPrefix=私は",
+      "explanationVi=Hỏi bạn muốn làm gì ở điểm đến; chọn câu dùng ～たいです để biểu lộ mong muốn.",
+      "script=",
+      "question=",
+      "stimulus="
+    ],
+    "distractors": [
+      "寺に入ります。",
+      "景色を買いたいです。",
+      "温泉があります。"
+    ],
+    "knowledge": [
+      "温泉",
+      "景色",
+      "寺",
+      "入りたい"
+    ],
+    "format": "dialogue",
+    "reasoning": "appropriate-response",
+    "answerSource": "communicative_intent"
+  },
+  {
+    "id": "A1-CB035-CE-04",
+    "section": "conversation_expression",
+    "category": "expression",
+    "unit": "A1-N18",
+    "topic": "leisure",
+    "canDo": "say what one wants to experience in Japan",
+    "taskIntent": "どちらをしたいかの好みを言う返答を選ぶ",
+    "templateId": "CE-EX-04",
+    "correct": "新幹線に乗りたいです。",
+    "evidence": "新幹線に乗りたいです。",
+    "facts": [
+      "term=",
+      "sentence=",
+      "context=旅行代理店で、日本での体験の希望を聞かれている。",
+      "turnA=日本で新幹線に乗りたいですか、それとも富士山を見たいですか？",
+      "turnBPrefix=B：＿＿＿＿＿＿。",
+      "explanationVi=Hỏi bạn muốn trải nghiệm nào ở Nhật; chọn câu thể hiện sở thích (muốn làm cái gì).",
+      "script=",
+      "question=",
+      "stimulus="
+    ],
+    "distractors": [
+      "富士山を見たいです。",
+      "旅行をしたいです。",
+      "分かりません。"
+    ],
+    "knowledge": [
+      "新幹線",
+      "富士山",
+      "旅行",
+      "したい"
+    ],
+    "format": "dialogue",
+    "reasoning": "appropriate-response",
+    "answerSource": "communicative_intent"
+  },
+  {
+    "id": "A1-CB035-CE-05",
+    "section": "conversation_expression",
+    "category": "grammar",
+    "unit": "A1-N06",
+    "topic": "restaurant",
+    "canDo": "order simple food and drinks at a shop or restaurant",
+    "taskIntent": "店員に食べ物と飲み物を注文する適切な文を選ぶ",
+    "templateId": "CE-GR-05",
+    "correct": "ハンバーガーとコーヒーをください。",
+    "evidence": "ハンバーガーとコーヒーをください。",
+    "facts": [
+      "term=",
+      "sentence=",
+      "context=レストランで注文する場面。",
+      "turnA=すみません、注文いいですか？",
+      "turnBPrefix=はい、",
+      "explanationVi=Chọn câu nói đúng để gọi món (thực phẩm và đồ uống) với cửa hàng/nhân viên.",
+      "script=",
+      "question=",
+      "stimulus="
+    ],
+    "distractors": [
+      "ハンバーガーをお願いします。",
+      "コーヒーだけください。",
+      "注文はまだです。"
+    ],
+    "knowledge": [
+      "注文",
+      "ハンバーガー",
+      "コーヒー",
+      "店員"
+    ],
+    "format": "dialogue",
+    "reasoning": "appropriate-response",
+    "answerSource": "communicative_intent"
+  },
+  {
+    "id": "A1-CB035-LI-01",
+    "section": "listening",
+    "category": "conversation",
+    "unit": "A1-N06",
+    "topic": "restaurant",
+    "canDo": "order simple food and drinks at a shop or restaurant",
+    "taskIntent": "Listen and identify what the customer orders.",
+    "templateId": "dialogue_short",
+    "correct": "ハンバーガーとコーヒーをお願いします。",
+    "evidence": "ハンバーガーとコーヒーをお願いします。",
+    "facts": [
+      "term=",
+      "sentence=",
+      "context=",
+      "turnA=",
+      "turnBPrefix=",
+      "explanationVi=Mục tiêu nghe là nhận biết món ăn/đồ uống được gọi. Tìm câu khách nói 'お願いします' để biết họ注文したもの.",
+      "script=店員：いらっしゃいませ。お決まりですか？\n客：ハンバーガーとコーヒーをお願いします。",
+      "question=お客さんは何を注文しましたか？",
+      "stimulus="
+    ],
+    "distractors": [
+      "ハンバーガーだけをお願いします。",
+      "コーヒーだけをお願いします。",
+      "ピザと水をお願いします。"
+    ],
+    "knowledge": [
+      "注文",
+      "ハンバーガー",
+      "コーヒー",
+      "店員"
+    ],
+    "format": "dialogue",
+    "reasoning": "single-step-comprehension",
+    "answerSource": "explicit_fact"
+  },
+  {
+    "id": "A1-CB035-LI-02",
+    "section": "listening",
+    "category": "shop_public",
+    "unit": "A1-N09",
+    "topic": "schedule",
+    "canDo": "understand simple workplace times and schedules",
+    "taskIntent": "Listen for the start time of the lunch break.",
+    "templateId": "dialogue_short",
+    "correct": "１２時からです。",
+    "evidence": "１２時からです。",
+    "facts": [
+      "term=",
+      "sentence=",
+      "context=",
+      "turnA=",
+      "turnBPrefix=",
+      "explanationVi=Nghe câu nói về thời gian bắt đầu nghỉ trưa. Tìm '１２時からです' để trả lời.",
+      "script=同僚：昼休みは何時からですか？\n店長：１２時からです。１３時に終わります。",
+      "question=昼休みは何時に始まりますか？",
+      "stimulus="
+    ],
+    "distractors": [
+      "１３時に終わります。",
+      "９時からです。",
+      "午前中です。"
+    ],
+    "knowledge": [
+      "昼休み",
+      "時間",
+      "始まります",
+      "終わります"
+    ],
+    "format": "dialogue",
+    "reasoning": "single-step-comprehension",
+    "answerSource": "explicit_fact"
+  },
+  {
+    "id": "A1-CB035-LI-03",
+    "section": "listening",
+    "category": "announcement_instruction",
+    "unit": "A1-N12",
+    "topic": "appointment",
+    "canDo": "invite someone and arrange a simple outing",
+    "taskIntent": "Listen and identify what the speaker is inviting the listener to.",
+    "templateId": "dialogue_short",
+    "correct": "飲み会",
+    "evidence": "飲み会に行きませんか？",
+    "facts": [
+      "term=",
+      "sentence=",
+      "context=",
+      "turnA=",
+      "turnBPrefix=",
+      "explanationVi=Nghe lời mời. Tìm từ '飲み会' để biết loại sự kiện được mời đi.",
+      "script=友人：週末、一緒に飲み会に行きませんか？\n私：いいですね。行きましょう。",
+      "question=友人は何に誘っていますか？",
+      "stimulus="
+    ],
+    "distractors": [
+      "映画",
+      "旅行",
+      "買い物"
+    ],
+    "knowledge": [
+      "一緒に",
+      "飲み会",
+      "週末",
+      "行きませんか"
+    ],
+    "format": "dialogue",
+    "reasoning": "single-step-comprehension",
+    "answerSource": "explicit_fact"
+  },
+  {
+    "id": "A1-CB035-LI-04",
+    "section": "listening",
+    "category": "conversation",
+    "unit": "A1-N15",
+    "topic": "shopping",
+    "canDo": "ask where a wanted item can be bought",
+    "taskIntent": "Listen and say which floor the batteries are on.",
+    "templateId": "dialogue_short",
+    "correct": "２階",
+    "evidence": "電池は２階の売り場です。",
+    "facts": [
+      "term=",
+      "sentence=",
+      "context=",
+      "turnA=",
+      "turnBPrefix=",
+      "explanationVi=Nghe nhân viên nói chỗ bán pin. Tìm '２階' trong câu trả lời để biết tầng.",
+      "script=客：電池がほしいです。店員：電池は２階の売り場です。",
+      "question=電池は何階ですか？",
+      "stimulus="
+    ],
+    "distractors": [
+      "１階",
+      "３階",
+      "地下"
+    ],
+    "knowledge": [
+      "電池",
+      "売り場",
+      "何階",
+      "ほしい"
+    ],
+    "format": "dialogue",
+    "reasoning": "single-step-comprehension",
+    "answerSource": "explicit_fact"
+  },
+  {
+    "id": "A1-CB035-LI-05",
+    "section": "listening",
+    "category": "shop_public",
+    "unit": "A1-N18",
+    "topic": "leisure",
+    "canDo": "say what one wants to experience in Japan",
+    "taskIntent": "Listen and identify what the speaker wants to ride.",
+    "templateId": "dialogue_short",
+    "correct": "新幹線",
+    "evidence": "新幹線に乗りたいです。",
+    "facts": [
+      "term=",
+      "sentence=",
+      "context=",
+      "turnA=",
+      "turnBPrefix=",
+      "explanationVi=Nghe mong muốn trải nghiệm ở Nhật. Tìm '新幹線' để biết phương tiện muốn乗る.",
+      "script=旅行者：日本で新幹線に乗りたいです。富士山を見る旅行がしたいです。",
+      "question=話し手は何に乗りたいですか？",
+      "stimulus="
+    ],
+    "distractors": [
+      "電車",
+      "バス",
+      "船"
+    ],
+    "knowledge": [
+      "新幹線",
+      "富士山",
+      "旅行",
+      "したい"
+    ],
+    "format": "dialogue",
+    "reasoning": "single-step-comprehension",
+    "answerSource": "explicit_fact"
+  },
+  {
+    "id": "A1-CB035-RE-01",
+    "section": "reading",
+    "category": "content_comprehension",
+    "unit": "A1-N05",
+    "topic": "food",
+    "canDo": "say which foods and drinks one likes",
+    "taskIntent": "Read and choose what the writer does not eat much.",
+    "templateId": "message_short",
+    "correct": "肉",
+    "evidence": "肉はあまり食べません。",
+    "facts": [
+      "term=",
+      "sentence=",
+      "context=",
+      "turnA=",
+      "turnBPrefix=",
+      "explanationVi=Đọc thông báo về sở thích đồ ăn. Tìm câu '肉はあまり食べません' để trả lời.",
+      "script=",
+      "question=筆者があまり食べないものは何ですか？",
+      "stimulus=私の好きな食べ物：魚が好きです。肉はあまり食べません。野菜と飲み物は好きです。"
+    ],
+    "distractors": [
+      "魚",
+      "野菜",
+      "飲み物"
+    ],
+    "knowledge": [
+      "魚",
+      "肉",
+      "野菜",
+      "飲み物"
+    ],
+    "format": "message",
+    "reasoning": "single-information-retrieval",
+    "answerSource": "explicit_fact"
+  },
+  {
+    "id": "A1-CB035-RE-02",
+    "section": "reading",
+    "category": "information_search",
+    "unit": "A1-N08",
+    "topic": "work",
+    "canDo": "ask where a person is in a workplace",
+    "taskIntent": "Read and find where Tanaka-san is now.",
+    "templateId": "notice_short",
+    "correct": "会議室",
+    "evidence": "会議室にいます。",
+    "facts": [
+      "term=",
+      "sentence=",
+      "context=",
+      "turnA=",
+      "turnBPrefix=",
+      "explanationVi=Đọc thông báo để biết vị trí của người được nêu. Tìm '会議室にいます' trong văn bản.",
+      "script=",
+      "question=田中さんはどこにいますか？",
+      "stimulus=お知らせ：田中さんは今、会議室にいます。事務所には午後にいます。受付にはいません。"
+    ],
+    "distractors": [
+      "事務所",
+      "受付",
+      "ロビー"
+    ],
+    "knowledge": [
+      "事務所",
+      "会議室",
+      "受付",
+      "います"
+    ],
+    "format": "notice",
+    "reasoning": "single-information-retrieval",
+    "answerSource": "explicit_fact"
+  },
+  {
+    "id": "A1-CB035-RE-03",
+    "section": "reading",
+    "category": "content_comprehension",
+    "unit": "A1-N11",
+    "topic": "leisure",
+    "canDo": "talk about hobbies and free-time activities",
+    "taskIntent": "Read and select the writer's hobbies.",
+    "templateId": "message_short",
+    "correct": "漫画を読むことと映画を見ること",
+    "evidence": "漫画を読むことと映画を見ることが好きです。",
+    "facts": [
+      "term=",
+      "sentence=",
+      "context=",
+      "turnA=",
+      "turnBPrefix=",
+      "explanationVi=Đọc đoạn văn về sở thích. Câu chứa '漫画を読むことと映画を見ることが好きです' nêu rõ趣味.",
+      "script=",
+      "question=筆者の趣味は何ですか？",
+      "stimulus=私は趣味で漫画を読むことと映画を見ることが好きです。スポーツはあまりしません。"
+    ],
+    "distractors": [
+      "スポーツ",
+      "映画を見ることだけ",
+      "漫画だけ"
+    ],
+    "knowledge": [
+      "漫画",
+      "映画",
+      "スポーツ",
+      "趣味"
+    ],
+    "format": "message",
+    "reasoning": "single-information-retrieval",
+    "answerSource": "explicit_fact"
+  },
+  {
+    "id": "A1-CB035-RE-04",
+    "section": "reading",
+    "category": "information_search",
+    "unit": "A1-N14",
+    "topic": "leisure",
+    "canDo": "say what one wants to do at a destination",
+    "taskIntent": "Read and identify where the speaker wants to bathe.",
+    "templateId": "message_short",
+    "correct": "温泉",
+    "evidence": "温泉に入りたいです。",
+    "facts": [
+      "term=",
+      "sentence=",
+      "context=",
+      "turnA=",
+      "turnBPrefix=",
+      "explanationVi=Đọc kế hoạch du lịch. Tìm '温泉に入りたいです' để biết nơi muốn入る.",
+      "script=",
+      "question=話し手はどこに入りたいですか？",
+      "stimulus=旅行の計画：温泉に入りたいです。景色のいい寺も見たいです。"
+    ],
+    "distractors": [
+      "寺",
+      "海",
+      "山"
+    ],
+    "knowledge": [
+      "温泉",
+      "景色",
+      "寺",
+      "入りたい"
+    ],
+    "format": "message",
+    "reasoning": "single-information-retrieval",
+    "answerSource": "explicit_fact"
+  },
+  {
+    "id": "A1-CB035-RE-05",
+    "section": "reading",
+    "category": "content_comprehension",
+    "unit": "A1-N17",
+    "topic": "daily_routine",
+    "canDo": "talk simply about past days off",
+    "taskIntent": "Read and choose what the writer did first on their day off.",
+    "templateId": "message_short",
+    "correct": "買い物をした",
+    "evidence": "買い物をしました。",
+    "facts": [
+      "term=",
+      "sentence=",
+      "context=",
+      "turnA=",
+      "turnBPrefix=",
+      "explanationVi=Đọc đoạn về ngày nghỉ. Câu đầu là '買い物をしました' cho biết việc đầu tiên làm.",
+      "script=",
+      "question=休みの日に最初にしたことは何ですか？",
+      "stimulus=休みの日に買い物をしました。それから掃除もしました。"
+    ],
+    "distractors": [
+      "掃除をした",
+      "友達と会った",
+      "家で休んだ"
+    ],
+    "knowledge": [
+      "休み",
+      "買い物",
+      "掃除",
+      "しました"
+    ],
+    "format": "message",
+    "reasoning": "single-information-retrieval",
+    "answerSource": "explicit_fact"
+  }
+]

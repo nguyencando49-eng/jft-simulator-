@@ -11,10 +11,10 @@ async function loadLocalEnv(){
 await loadLocalEnv();
 
 const firstBatch=Number(process.env.CONTROLLED_A1_START_BATCH??5);
-const lastBatch=Number(process.env.CONTROLLED_A1_END_BATCH??46);
+const lastBatch=Number(process.env.CONTROLLED_A1_END_BATCH??62);
 const batchSize=20;
-if(!Number.isInteger(firstBatch)||!Number.isInteger(lastBatch)||firstBatch<5||lastBatch>46||firstBatch>lastBatch){
-  throw new Error('Controlled A1 batch range must be integer values within 005..046.');
+if(!Number.isInteger(firstBatch)||!Number.isInteger(lastBatch)||firstBatch<5||lastBatch>100||firstBatch>lastBatch){
+  throw new Error('Controlled A1 batch range must be integer values within 005..100.');
 }
 const a1Units=curriculumCatalog.filter(unit=>unit.level==='A1');
 const conversationUnitIds=new Set(['A1-N03','A1-N05','A1-N06','A1-N10','A1-N11','A1-N12','A1-N14','A1-N15','A1-N17','A1-N18']);

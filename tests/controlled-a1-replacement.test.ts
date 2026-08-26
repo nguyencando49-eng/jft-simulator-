@@ -6,6 +6,7 @@ import {
   previewControlledA1Replacement,
 } from '@/lib/server/controlled-a1-replacement';
 import { runQuestionQa } from '@/lib/server/qa';
+import { hasControlledA1ReplacementToken } from '@/lib/server/controlled-a1-replacement-auth';
 
 describe('controlled A1 500-question replacement release', () => {
   it('builds exactly 500 pending A1 questions with valid static Listening audio', () => {
@@ -39,5 +40,12 @@ describe('controlled A1 500-question replacement release', () => {
       byLevel: { A1: 500, 'A2.1': 0, 'A2.2': 0 },
       listeningAudio: 125,
     });
+  });
+
+  it('accepts only the exact one-time replacement token', () => {
+    process.env.CONTROLLED_A1_REPLACEMENT_TOKEN = 'release-secret';
+    expect(hasControlledA1ReplacementToken(new Request('https://test', { headers: { 'x-controlled-a1-replacement-token': 'release-secret' } }))).toBe(true);
+    expect(hasControlledA1ReplacementToken(new Request('https://test', { headers: { 'x-controlled-a1-replacement-token': 'wrong' } }))).toBe(false);
+    delete process.env.CONTROLLED_A1_REPLACEMENT_TOKEN;
   });
 });

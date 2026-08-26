@@ -7,12 +7,17 @@ import {
   previewControlledA1Replacement,
   rollbackControlledA1Replacement,
 } from '@/lib/server/controlled-a1-replacement';
+import { hasControlledA1ReplacementToken } from '@/lib/server/controlled-a1-replacement-auth';
 
 export const maxDuration = 60;
 
+async function authorize(req: Request) {
+  if (!hasControlledA1ReplacementToken(req)) await requireAuth(req, 'admin');
+}
+
 export async function GET(req: Request) {
   try {
-    await requireAuth(req, 'admin');
+    await authorize(req);
     const repository = getRepository();
     return NextResponse.json({ ok: true, preview: previewControlledA1Replacement(await repository.listQuestions()) });
   } catch (error) {
@@ -22,7 +27,7 @@ export async function GET(req: Request) {
 
 export async function POST(req: Request) {
   try {
-    await requireAuth(req, 'admin');
+    await authorize(req);
     const body = (await req.json()) as { action?: string; confirmation?: string };
     if (body.action === 'rollback') {
       if (body.confirmation !== 'ROLLBACK_CONTROLLED_A1_500') {

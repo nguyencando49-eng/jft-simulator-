@@ -30,6 +30,8 @@
     "generator:controlled-a1-manifest": "vite-node scripts/build-controlled-a1-scale-manifest.ts",
     "generator:check-factory": "vite-node scripts/check-ai-factory.ts",
     "generator:controlled-a1-to-1000": "vite-node scripts/run-controlled-a1-to-1000.ts",
+    "release:build-controlled-a1-500": "vite-node scripts/build-controlled-a1-replacement-pack.ts",
+    "release:audio-controlled-a1-500": "vite-node scripts/generate-controlled-a1-replacement-audio.ts",
     "qa:full": "npm run typecheck && npm test && npm run build && npm run test:e2e"
   },
   "dependencies": {

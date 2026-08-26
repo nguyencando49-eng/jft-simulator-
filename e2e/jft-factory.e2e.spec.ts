@@ -44,18 +44,20 @@ async function expectNoHorizontalOverflow(page:Page){
 
 test.describe.serial('JFT E2E release journeys',()=>{
   test('new learner can register and reach the candidate portal',async({page})=>{
-    for(const width of [375,390,430]){
-      await page.setViewportSize({width,height:800});
+    for(const width of [375,390,430,768,1024,1440]){
+      await page.setViewportSize({width,height:width<700?800:900});
       await page.goto('/');
       await expectNoHorizontalOverflow(page);
+      await expect(page.getByRole('heading',{name:'Thi thử JFT theo trải nghiệm CBT'})).toBeVisible();
       await page.goto('/login');
       await expectNoHorizontalOverflow(page);
+      await expect(page.getByRole('heading',{name:'Đăng nhập'})).toBeVisible();
     }
     await page.setViewportSize({width:390,height:844});
     await page.goto('/register');
     await page.getByLabel('Tên hiển thị').fill('Học viên MVP');
     await page.getByLabel('Email').fill('e2e-signup@example.com');
-    await page.getByLabel('Mật khẩu').fill('practice123');
+    await page.getByLabel('Mật khẩu',{exact:true}).fill('practice123');
     await page.getByRole('button',{name:'Tạo tài khoản'}).click();
     await expect(page).toHaveURL(/\/candidate(?:\/|$)/);
     await expect(page.getByText(/Chào Học viên MVP/)).toBeVisible({timeout:15_000});

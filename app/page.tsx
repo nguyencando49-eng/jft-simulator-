@@ -1,4 +1,43 @@
 import Link from 'next/link';
-const levels=[['A1','Bắt đầu giao tiếp trong các tình huống quen thuộc.'],['A2.1','Củng cố khả năng xử lý hội thoại và thông tin thực tế.'],['A2.2','Luyện tập toàn diện ở mức A2.']];
-const features=[['語彙','Chữ viết & Từ vựng'],['会話','Hội thoại & Biểu đạt'],['聴解','Nghe hiểu'],['読解','Đọc hiểu']];
-export default function Home(){return <main className="public-site"><header className="public-nav"><Link href="/" className="candidate-brand"><span>日本語</span><b>JFT Practice</b></Link><nav><a href="#levels">Cấp độ</a><a href="#practice">Nội dung luyện tập</a></nav><div className="page-actions"><Link href="/login" className="secondary">Đăng nhập</Link><Link href="/register" className="primary">Bắt đầu luyện tập</Link></div></header><section className="public-hero"><div><span className="eyebrow">JAPANESE FOR EVERYDAY LIFE</span><h1>Luyện tiếng Nhật cho cuộc sống và công việc tại Nhật Bản</h1><p>Trải nghiệm bài luyện tập theo phong cách CBT với bốn kỹ năng thực tế, kết quả chi tiết và lịch sử học tập của riêng bạn.</p><div className="hero-actions"><Link href="/candidate" className="primary">Luyện tập ngay</Link><Link href="/login" className="secondary">Tôi đã có tài khoản</Link></div><small>Không cần hiểu thuật ngữ kỹ thuật. Chỉ cần chọn bài và bắt đầu.</small></div><div className="hero-japanese" aria-label="Japanese learning sample"><span>毎日の日本語</span><b>聞く · 読む · 話す</b><p>生活と仕事のために</p></div></section><section id="levels" className="public-section"><div className="section-intro"><span className="eyebrow">PRACTICE LEVELS</span><h2>Chọn mức phù hợp với bạn</h2><p>A1, A2.1 và A2.2 là mức hiển thị trong sản phẩm luyện tập.</p></div><div className="level-grid">{levels.map(([level,text])=><article className="level-card" key={level}><span>{level}</span><h3>Thực hành {level}</h3><p>{text}</p></article>)}</div></section><section id="practice" className="public-section soft"><div className="section-intro"><span className="eyebrow">CBT PRACTICE</span><h2>Một bài luyện tập, bốn năng lực thiết yếu</h2></div><div className="feature-grid">{features.map(([jp,vi])=><article key={jp}><b>{jp}</b><span>{vi}</span></article>)}</div></section><section className="public-cta"><h2>Sẵn sàng luyện tập?</h2><p>Tạo tài khoản để lưu bài đang làm và xem lại tiến độ.</p><Link href="/register" className="primary">Tạo tài khoản miễn phí</Link></section><footer className="public-footer"><b>JFT Practice</b><p>Trình mô phỏng luyện tập JFT-Basic không chính thức. Không được Japan Foundation hoặc Prometric bảo trợ hay chứng nhận.</p></footer></main>}
+
+const features = [
+  ['01', 'Mô phỏng CBT', 'Làm quen cách chuyển phần, chọn đáp án và quản lý thời gian.'],
+  ['02', 'Listening', 'Luyện nghe trực tiếp với audio trong bài thi.'],
+  ['03', 'Lưu tiến độ', 'Đáp án được lưu trong quá trình làm bài.'],
+  ['04', 'Xem lại câu sai', 'Kiểm tra đáp án và phần cần luyện thêm sau khi hoàn thành.'],
+];
+const levels = [
+  ['A1', 'Luyện các tình huống và ngôn ngữ cơ bản trong đời sống hằng ngày.'],
+  ['A2.1', 'Tăng khả năng xử lý hội thoại và thông tin thực tế.'],
+  ['A2.2', 'Luyện các tình huống A2 với lượng thông tin và xử lý cao hơn.'],
+];
+const steps = [
+  ['1', 'Chọn đề', 'Chọn cấp độ và bài luyện tập phù hợp.'],
+  ['2', 'Làm bài CBT', 'Làm từng phần với timer, audio và lưu đáp án.'],
+  ['3', 'Xem kết quả', 'Xem điểm luyện tập và kiểm tra lại câu sai.'],
+];
+
+export default function Home() {
+  return <div className="public-site">
+    <header className="public-nav">
+      <Link href="/" className="public-brand" aria-label="JFT Simulator — Trang chủ"><span aria-hidden="true">J</span><b>JFT Simulator</b></Link>
+      <nav aria-label="Điều hướng chính"><a href="#levels">Cấp độ</a><a href="#practice">Nội dung luyện tập</a><a href="#how-it-works">Cách hoạt động</a></nav>
+      <div className="page-actions"><Link href="/login" className="secondary">Đăng nhập</Link><Link href="/register" className="primary">Thi thử miễn phí</Link></div>
+    </header>
+    <main>
+      <section className="public-hero" aria-labelledby="hero-title">
+        <div className="public-hero-copy"><span className="eyebrow">JFT-BASIC PRACTICE</span><h1 id="hero-title">Thi thử JFT theo trải nghiệm CBT</h1><p>Luyện bốn kỹ năng, lưu tiến độ, xem kết quả và kiểm tra lại những câu bạn làm sai.</p><div className="hero-actions"><Link href="/register" className="primary">Thi thử miễn phí</Link><Link href="/login" className="secondary">Đăng nhập</Link></div><small>Không cần cài đặt. Làm bài trực tiếp trên trình duyệt.</small></div>
+        <div className="product-preview" aria-label="Bản xem trước giao diện bài thi CBT">
+          <div className="preview-topbar"><div><b>JFT Practice A1</b><span>Nghe hiểu</span></div><time>42:18</time></div>
+          <div className="preview-progress-meta"><span>Câu 12 / 40</span><span>30%</span></div><div className="preview-progress" aria-hidden="true"><span /></div>
+          <div className="preview-question"><span className="preview-kicker">問題 12</span><div className="preview-audio"><i aria-hidden="true" /><span>Phát âm thanh</span><small>còn 1 lần nghe</small></div><p lang="ja">いちばん いいものを<br />えらんでください。</p><div className="preview-options" aria-hidden="true">{['選択肢 A','選択肢 B','選択肢 C','選択肢 D'].map((choice,index)=><div className={index===1?'selected':''} key={choice}><span>{String.fromCharCode(65+index)}</span>{choice}</div>)}</div><div className="preview-saved"><span aria-hidden="true">✓</span> Đã lưu</div></div>
+        </div>
+      </section>
+      <section id="practice" className="public-section public-value" aria-labelledby="value-title"><div className="section-intro"><span className="eyebrow">TRỌN QUY TRÌNH</span><h2 id="value-title">Một nơi để luyện tập trọn quy trình</h2></div><div className="value-grid">{features.map(([number,title,description])=><article key={number}><span>{number}</span><h3>{title}</h3><p>{description}</p></article>)}</div></section>
+      <section id="levels" className="public-section public-levels" aria-labelledby="levels-title"><div className="section-intro"><span className="eyebrow">CẤP ĐỘ LUYỆN TẬP</span><h2 id="levels-title">Chọn cấp độ luyện tập</h2><p>Mỗi cấp độ tập trung vào khả năng sử dụng tiếng Nhật trong tình huống thực tế.</p></div><div className="level-grid">{levels.map(([level,description])=><article className="level-card" key={level}><span>{level}</span><h3>Thực hành {level}</h3><p>{description}</p></article>)}</div></section>
+      <section id="how-it-works" className="public-section public-how" aria-labelledby="how-title"><div className="section-intro"><span className="eyebrow">BẮT ĐẦU ĐƠN GIẢN</span><h2 id="how-title">Luyện tập chỉ với 3 bước</h2></div><div className="steps-grid">{steps.map(([number,title,description])=><article key={number}><span>{number}</span><div><h3>{title}</h3><p>{description}</p></div></article>)}</div></section>
+      <section className="public-cta" aria-labelledby="cta-title"><div><h2 id="cta-title">Sẵn sàng làm bài đầu tiên?</h2><p>Tạo tài khoản miễn phí để lưu tiến độ và xem lại kết quả.</p></div><div className="page-actions"><Link href="/register" className="primary">Thi thử miễn phí</Link><Link href="/login" className="secondary">Đăng nhập</Link></div></section>
+    </main>
+    <footer className="public-footer"><div><b>JFT Simulator</b><p>Công cụ luyện thi JFT theo trải nghiệm CBT.</p></div><div className="footer-links"><Link href="/login">Đăng nhập</Link><Link href="/register">Đăng ký</Link></div><p className="public-disclaimer">JFT Simulator là công cụ luyện tập không chính thức và không được Japan Foundation hoặc Prometric bảo trợ hoặc chứng nhận.</p></footer>
+  </div>;
+}

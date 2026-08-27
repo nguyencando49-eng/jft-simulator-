@@ -11,7 +11,7 @@ const rate = process.env.AZURE_SPEECH_RATE || '-5%';
 if (!key || !region) throw new Error('AZURE_SPEECH_KEY and AZURE_SPEECH_REGION are required.');
 
 const pack = JSON.parse(
-  await readFile('data/production/controlled-a1-replacement-500.json', 'utf8'),
+  await readFile('data/production/controlled-a1-replacement-1320.json', 'utf8'),
 ) as {
   questions: Array<{ id: string; section: string; audioSrc?: string }>;
   audioScripts: Record<string, string>;

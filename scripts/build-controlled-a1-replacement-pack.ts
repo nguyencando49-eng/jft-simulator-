@@ -10,11 +10,14 @@ type Artifact = {
 const questions: Array<Record<string, unknown>> = [];
 const audioScripts: Record<string, string> = {};
 
-for (let batchNumber = 38; batchNumber <= 62; batchNumber += 1) {
-  const batch = String(batchNumber).padStart(3, '0');
-  const artifact = JSON.parse(
-    await readFile(`data/production/controlled-a1-batch-${batch}.json`, 'utf8'),
-  ) as Artifact;
+const sourceArtifacts = [
+  'data/pilots/generator-recovery-a1-pilot.json',
+  'data/pilots/generator-recovery-a1-pilot-2.json',
+  ...Array.from({ length: 62 }, (_, index) => `data/production/controlled-a1-batch-${String(index + 1).padStart(3, '0')}.json`),
+];
+
+for (const sourceArtifact of sourceArtifacts) {
+  const artifact = JSON.parse(await readFile(sourceArtifact, 'utf8')) as Artifact;
 
   for (const record of artifact.records) {
     const question = {
@@ -22,12 +25,12 @@ for (let batchNumber = 38; batchNumber <= 62; batchNumber += 1) {
       status: 'review',
       audioSrc:
         record.question.section === 'listening'
-          ? `/audio/controlled-a1-500/${record.question.id.toLowerCase()}.mp3`
+          ? `/audio/controlled-a1-1320/${record.question.id.toLowerCase()}.mp3`
           : undefined,
       tags: Array.from(
         new Set([
           ...((record.question.tags as string[]) ?? []),
-          'replacement-batch:CONTROLLED-A1-500-V1',
+          'replacement-batch:CONTROLLED-A1-1320-V1',
           'qa-state:human-review-required',
         ]),
       ),
@@ -40,16 +43,16 @@ for (let batchNumber = 38; batchNumber <= 62; batchNumber += 1) {
   }
 }
 
-if (questions.length !== 500) throw new Error(`Expected 500 questions, received ${questions.length}.`);
-if (new Set(questions.map((question) => question.id)).size !== 500) throw new Error('Duplicate question ID.');
-if (Object.keys(audioScripts).length !== 125) throw new Error('Expected 125 Listening scripts.');
+if (questions.length !== 1320) throw new Error(`Expected 1320 questions, received ${questions.length}.`);
+if (new Set(questions.map((question) => question.id)).size !== 1320) throw new Error('Duplicate question ID.');
+if (Object.keys(audioScripts).length !== 330) throw new Error('Expected 330 Listening scripts.');
 
 await writeFile(
-  'data/production/controlled-a1-replacement-500.json',
+  'data/production/controlled-a1-replacement-1320.json',
   `${JSON.stringify(
     {
-      releaseVersion: 'CONTROLLED_A1_500_V1',
-      sourceBatches: { first: 38, last: 62 },
+      releaseVersion: 'CONTROLLED_A1_1320_V1',
+      sourceArtifacts,
       generatedAt: new Date().toISOString(),
       questions,
       audioScripts,

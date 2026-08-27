@@ -1,9 +1,9 @@
-import replacementPack from '@/data/production/controlled-a1-replacement-500.json';
+import replacementPack from '@/data/production/controlled-a1-replacement-1320.json';
 import type { QuestionRecord, QuestionStatus } from '@/lib/admin-types';
 import type { Repository } from './domain';
 import { runQuestionQa } from './qa';
 
-export const CONTROLLED_A1_REPLACEMENT_VERSION = 'CONTROLLED_A1_500_V1';
+export const CONTROLLED_A1_REPLACEMENT_VERSION = 'CONTROLLED_A1_1320_V1';
 const REPLACEMENT_TAG = `replacement-batch:${CONTROLLED_A1_REPLACEMENT_VERSION}`;
 const REPLACED_TAG = `replaced-by:${CONTROLLED_A1_REPLACEMENT_VERSION}`;
 const PREVIOUS_STATUS_PREFIX = 'replacement-previous-status:';
@@ -21,13 +21,13 @@ export function buildControlledA1ReplacementQuestions(now = new Date().toISOStri
     tags: uniqueTags([...value.tags, REPLACEMENT_TAG, 'qa-state:human-review-required']),
   })) as QuestionRecord[];
 
-  if (questions.length !== 500) throw new Error(`Expected 500 replacement questions, received ${questions.length}.`);
-  if (new Set(questions.map((question) => question.id)).size !== 500) throw new Error('Replacement question IDs must be unique.');
+  if (questions.length !== 1320) throw new Error(`Expected 1320 replacement questions, received ${questions.length}.`);
+  if (new Set(questions.map((question) => question.id)).size !== 1320) throw new Error('Replacement question IDs must be unique.');
   const invalid = questions.find((question) => !runQuestionQa(question).passed);
   if (invalid) throw new Error(`Q0 rejected replacement question ${invalid.id}.`);
   const listening = questions.filter((question) => question.section === 'listening');
-  if (listening.length !== 125 || listening.some((question) => !question.audioSrc?.endsWith('.mp3'))) {
-    throw new Error('Replacement release requires 125 Listening questions with MP3 audio.');
+  if (listening.length !== 330 || listening.some((question) => !question.audioSrc?.endsWith('.mp3'))) {
+    throw new Error('Replacement release requires 330 Listening questions with MP3 audio.');
   }
   return questions;
 }
@@ -58,7 +58,7 @@ export async function applyControlledA1Replacement(repository: Repository) {
   const replacementIds = new Set(replacement.map((question) => question.id));
   const archivedAt = new Date().toISOString();
   const archived = existing
-    .filter((question) => !replacementIds.has(question.id))
+    .filter((question) => !replacementIds.has(question.id) && question.status !== 'archived')
     .map((question) => ({
       ...question,
       status: 'archived' as const,

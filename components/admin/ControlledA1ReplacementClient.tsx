@@ -39,7 +39,7 @@ export default function ControlledA1ReplacementClient() {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
           action,
-          confirmation: action === 'apply' ? 'ARCHIVE_2100_IMPORT_500_PENDING' : 'ROLLBACK_CONTROLLED_A1_500',
+          confirmation: action === 'apply' ? 'IMPORT_1320_PENDING' : 'ROLLBACK_CONTROLLED_A1_1320',
         }),
       });
       const payload = await response.json();
@@ -58,7 +58,7 @@ export default function ControlledA1ReplacementClient() {
   }
 
   return <>
-    <div className="admin-title"><div><span className="eyebrow">PHÁT HÀNH NỘI DUNG</span><h1>Thay Question Bank bằng 500 câu A1</h1><p>Thao tác có thể hoàn tác: câu cũ được lưu trữ, không bị xóa vật lý.</p></div></div>
+    <div className="admin-title"><div><span className="eyebrow">PHÁT HÀNH NỘI DUNG</span><h1>Nạp bộ 1.320 câu A1</h1><p>Câu cũ được lưu trữ, không bị xóa vật lý. Câu chưa đạt đủ QA tiếp tục ở trạng thái chờ duyệt.</p></div></div>
     {error && <div className="admin-alert error" role="alert">{error}</div>}
     {message && <div className="admin-alert ok" role="status">{message}</div>}
     {!preview ? <section className="admin-panel"><p>Đang tải bản xem trước…</p></section> : <>
@@ -71,9 +71,9 @@ export default function ControlledA1ReplacementClient() {
         <h2>Kiểm tra trước khi áp dụng</h2>
         <p>Release: <strong>{preview.releaseVersion}</strong></p>
         <p>Phân bổ: A1 {preview.byLevel.A1 ?? 0} · A2.1 {preview.byLevel['A2.1'] ?? 0} · A2.2 {preview.byLevel['A2.2'] ?? 0}</p>
-        <p>Listening có audio: <strong>{preview.listeningAudio}/125</strong></p>
+        <p>Listening có audio: <strong>{preview.listeningAudio}/330</strong></p>
         <div className="home-actions">
-          <button className="primary" disabled={busy || preview.willUpsert !== 500 || preview.listeningAudio !== 125} onClick={() => void mutate('apply')}>{busy ? 'Đang xử lý…' : 'Áp dụng thay thế'}</button>
+          <button className="primary" disabled={busy || preview.willUpsert !== 1320 || preview.listeningAudio !== 330} onClick={() => void mutate('apply')}>{busy ? 'Đang xử lý…' : 'Áp dụng bộ 1.320 câu'}</button>
           <button className="secondary" disabled={busy} onClick={() => void mutate('rollback')}>Hoàn tác release này</button>
         </div>
       </section>

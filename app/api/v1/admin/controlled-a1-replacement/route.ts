@@ -30,12 +30,12 @@ export async function POST(req: Request) {
     await authorize(req);
     const body = (await req.json()) as { action?: string; confirmation?: string };
     if (body.action === 'rollback') {
-      if (body.confirmation !== 'ROLLBACK_CONTROLLED_A1_500') {
+      if (body.confirmation !== 'ROLLBACK_CONTROLLED_A1_1320') {
         return NextResponse.json({ ok: false, error: 'ROLLBACK_CONFIRMATION_REQUIRED' }, { status: 422 });
       }
       return NextResponse.json({ ok: true, result: await rollbackControlledA1Replacement(getRepository()) });
     }
-    if (body.action !== 'apply' || body.confirmation !== 'ARCHIVE_2100_IMPORT_500_PENDING') {
+    if (body.action !== 'apply' || body.confirmation !== 'IMPORT_1320_PENDING') {
       return NextResponse.json({ ok: false, error: 'REPLACEMENT_CONFIRMATION_REQUIRED' }, { status: 422 });
     }
     return NextResponse.json({ ok: true, result: await applyControlledA1Replacement(getRepository()) });

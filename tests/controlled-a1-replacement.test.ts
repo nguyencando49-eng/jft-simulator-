@@ -8,15 +8,15 @@ import {
 import { runQuestionQa } from '@/lib/server/qa';
 import { hasControlledA1ReplacementToken } from '@/lib/server/controlled-a1-replacement-auth';
 
-describe('controlled A1 500-question replacement release', () => {
-  it('builds exactly 500 pending A1 questions with valid static Listening audio', () => {
+describe('controlled A1 1320-question replacement release', () => {
+  it('builds exactly 1320 pending A1 questions with valid static Listening audio', () => {
     const questions = buildControlledA1ReplacementQuestions('2026-08-26T12:00:00.000Z');
-    expect(questions).toHaveLength(500);
-    expect(new Set(questions.map((question) => question.id)).size).toBe(500);
+    expect(questions).toHaveLength(1320);
+    expect(new Set(questions.map((question) => question.id)).size).toBe(1320);
     expect(questions.every((question) => question.level === 'A1' && question.status === 'review')).toBe(true);
     expect(questions.every((question) => runQuestionQa(question).passed)).toBe(true);
     const listening = questions.filter((question) => question.section === 'listening');
-    expect(listening).toHaveLength(125);
+    expect(listening).toHaveLength(330);
     for (const question of listening) {
       const path = join(process.cwd(), 'public', question.audioSrc!.replace(/^\//, ''));
       const header = readFileSync(path).subarray(0, 3);
@@ -36,9 +36,9 @@ describe('controlled A1 500-question replacement release', () => {
     expect(previewControlledA1Replacement(old)).toMatchObject({
       existing: 2,
       willArchive: 2,
-      willUpsert: 500,
-      byLevel: { A1: 500, 'A2.1': 0, 'A2.2': 0 },
-      listeningAudio: 125,
+      willUpsert: 1320,
+      byLevel: { A1: 1320, 'A2.1': 0, 'A2.2': 0 },
+      listeningAudio: 330,
     });
   });
 

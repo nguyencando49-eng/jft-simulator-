@@ -30,9 +30,14 @@ const sourcePaths = [
   'data/pilots/generator-recovery-a1-pilot-2.json',
   ...Array.from({ length: 62 }, (_, index) => `data/production/controlled-a1-batch-${String(index + 1).padStart(3, '0')}.json`),
 ];
-const records: ArtifactRecord[] = (await Promise.all(sourcePaths.map(async path => (JSON.parse(await readFile(path, 'utf8')) as {records:ArtifactRecord[]}).records))).flat();
-if (records.length !== 1320) throw new Error(`Expected 1320 questions, received ${records.length}.`);
-if (new Set(records.map(record => record.question.id)).size !== 1320) throw new Error('Question IDs are not unique.');
+const allRecords: ArtifactRecord[] = (await Promise.all(sourcePaths.map(async path => (JSON.parse(await readFile(path, 'utf8')) as {records:ArtifactRecord[]}).records))).flat();
+if (allRecords.length !== 1320) throw new Error(`Expected 1320 questions, received ${allRecords.length}.`);
+if (new Set(allRecords.map(record => record.question.id)).size !== 1320) throw new Error('Question IDs are not unique.');
+const controlMode=process.env.QA_INTEGRITY_CONTROL==='1';
+const records=controlMode?(['script_vocabulary','conversation_expression','listening','reading'] as const).flatMap(section=>{
+  const candidates=allRecords.filter(record=>record.question.section===section).sort((a,b)=>a.question.id.localeCompare(b.question.id));
+  return Array.from({length:10},(_,index)=>candidates[Math.floor(index*(candidates.length-1)/9)]);
+}):allRecords;
 
 const qa1Judge = new DeterministicJftContentQaJudge();
 const qa2Provider = new DeterministicAnswerOracleProvider();
@@ -42,7 +47,7 @@ const qa5Provider = new MockJftAlignmentProvider();
 const qa6Provider = new MockDifficultyCalibrationProvider();
 const qa7Provider = new MockOriginalityDuplicateProvider();
 const a1Units = curriculumCatalog.filter(unit => unit.level === 'A1');
-const allNew = records.map(record => ({id:record.question.id, text:`${record.question.instruction}\n${record.question.prompt}\n${record.question.choices.join('\n')}\n${record.audioScript || ''}`}));
+const allNew = allRecords.map(record => ({id:record.question.id, text:`${record.question.instruction}\n${record.question.prompt}\n${record.question.choices.join('\n')}\n${record.audioScript || ''}`}));
 const oldBank = completeProductionQuestionSet.map(question => ({id:question.id,text:`${question.instruction}\n${question.prompt}\n${question.choices.join('\n')}`}));
 
 const gateCounts = Object.fromEntries(Array.from({length:7},(_,index)=>[`qa${index+1}`,{PASS:0,REVIEW:0,FAIL:0}])) as Record<string,Record<string,number>>;
@@ -68,8 +73,9 @@ for (const [index, record] of records.entries()) {
   const qa2Input=buildAnswerOracleInput(question,audioScript);const qa2Solve=await qa2Provider.solve(qa2Input);const qa2=compareOracleWithDeclaredAnswer(qa2Solve,question.answer,{provider:qa2Provider.name,model:qa2Provider.model});
   const qa3Input=buildJapaneseNaturalnessInput(question,{audioScript,category:blueprint.category,topic:blueprint.topic,canDo:blueprint.canDo});const qa3=withJapaneseNaturalnessAudit(validateJapaneseNaturalnessOutput(await qa3Provider.judge(qa3Input),qa3Input),{provider:qa3Provider.name,model:qa3Provider.model});
 
-  const approvedKnowledgeUnits=a1Units.map(value=>({id:value.id,sourceDocumentId:value.sourceDocument,sourceChunkIds:[`CATALOG-${value.id}`],status:'approved' as const,chapter:`Lesson ${value.lesson}`,lesson:String(value.lesson),topic:value.topic,situation:value.title,level:value.level,canDo:value.canDo,grammar:['～です','～ます','～ません','～ませんか','～たいです','～てください'],vocabulary:[...value.anchors],kanji:value.anchors.filter(anchor=>/\p{Script=Han}/u.test(anchor)),expressions:value.anchors.filter(anchor=>/[ぁ-んァ-ヶ]/u.test(anchor)),keyKnowledge:[value.title,value.canDo],skills:['script_vocabulary','conversation_expression','listening','reading']}));
-  const qa4Input:CurriculumGroundingInput={questionId:question.id,instruction:question.instruction,stem:question.prompt,choices:[...question.choices],...(audioScript?{audioScript}:{}),section:question.section,category:blueprint.category,targetLevel:question.level,targetCanDo:blueprint.canDo,topic:blueprint.topic,approvedKnowledgeUnits,sourceChunks:a1Units.map(value=>({id:`CATALOG-${value.id}`,sourceDocumentId:value.sourceDocument,normalizedText:[value.title,value.canDo,...value.anchors].join('、')})),retrieval:{complete:true,strategy:'FULL_APPROVED_CATALOG',totalApprovedUnits:a1Units.length,returnedUnitCount:a1Units.length,searchedSourceDocumentIds:Array.from(new Set(a1Units.map(value=>value.sourceDocument))),intendedKnowledgeUnitIds:blueprint.knowledgeUnitIds,missingIntendedKnowledgeUnitIds:blueprint.knowledgeUnitIds.filter(id=>!a1Units.some(value=>value.id===id))}};
+  // curriculum-catalog.ts is a planning catalog, not persisted APPROVED
+  // KnowledgeUnit + SourceChunk evidence. Do not fabricate approval/provenance.
+  const qa4Input:CurriculumGroundingInput={questionId:question.id,instruction:question.instruction,stem:question.prompt,choices:[...question.choices],...(audioScript?{audioScript}:{}),section:question.section,category:blueprint.category,targetLevel:question.level,targetCanDo:blueprint.canDo,topic:blueprint.topic,approvedKnowledgeUnits:[],sourceChunks:[],retrieval:{complete:false,strategy:'UNAVAILABLE',totalApprovedUnits:0,returnedUnitCount:0,searchedSourceDocumentIds:[],intendedKnowledgeUnitIds:blueprint.knowledgeUnitIds,missingIntendedKnowledgeUnitIds:[...blueprint.knowledgeUnitIds],reason:'The frozen artifacts reference planning-catalog IDs, but no persisted APPROVED KnowledgeUnit and SourceChunk evidence was supplied to this offline rerun.'}};
   const qa4Analysis=validateCurriculumGroundingAnalysis(await qa4Provider.evaluate(qa4Input),qa4Input);const qa4=withCurriculumGroundingAudit(finalizeCurriculumGrounding(qa4Analysis,qa4Input),{provider:qa4Provider.name,model:qa4Provider.model});
   const qa5Input=buildJftAlignmentClassificationInput(question,audioScript);const qa5Analysis=validateJftAlignmentAnalysis(await qa5Provider.classify(qa5Input),qa5Input);const qa5=withJftAlignmentAudit(finalizeJftAlignment(qa5Analysis,buildDeclaredAlignmentTarget(question,{category:blueprint.category,canDo:blueprint.canDo,taskType:blueprint.templateId}),qa5Input,question.id),{provider:qa5Provider.name,model:qa5Provider.model});
   const qa6Input=buildDifficultyCalibrationInput(question,{category:blueprint.category,audioScript});const qa6Analysis=validateDifficultyCalibrationAnalysis(await qa6Provider.estimate(qa6Input),qa6Input);const qa6=withDifficultyCalibrationAudit(finalizeDifficultyCalibration(qa6Analysis,question.level,qa6Input,undefined,question.id),{provider:qa6Provider.name,model:qa6Provider.model});
@@ -85,9 +91,10 @@ for (const [index, record] of records.entries()) {
 }
 
 const allPassCount=output.filter(value=>value.allPass).length;
-const artifact={qaRunVersion:'CONTROLLED_A1_1320_QA_RERUN_V1',generatedAt:new Date().toISOString(),providerMode:'deterministic-specialized-judges',audioSemanticEvidenceAvailable:true,curriculumRetrieval:{complete:true,units:a1Units.length,source:'data/production/curriculum-catalog.ts'},total:records.length,allPass:allPassCount,requiresReview:records.length-allPassCount,gateCounts,records:output};
+const artifact={qaRunVersion:controlMode?'CONTROLLED_A1_QA_INTEGRITY_CONTROL_40_V2':'CONTROLLED_A1_1320_QA_RERUN_V2',generatedAt:new Date().toISOString(),providerMode:'deterministic-specialized-judges',audioSemanticEvidenceAvailable:true,curriculumRetrieval:{complete:false,units:0,planningCatalogUnits:a1Units.length,source:'data/production/curriculum-catalog.ts',reason:'Planning catalog is not approved KnowledgeUnit/SourceChunk evidence.'},total:records.length,allPass:allPassCount,requiresReview:records.length-allPassCount,gateCounts,records:output};
 await mkdir('data/qa',{recursive:true});await mkdir('docs/reviews',{recursive:true});
-await writeFile('data/qa/controlled-a1-1320-qa-rerun.json',`${JSON.stringify(artifact,null,2)}\n`);
+const dataPath=controlMode?'data/qa/controlled-a1-qa-integrity-control-40-v2.json':'data/qa/controlled-a1-1320-qa-rerun-v2.json';
+await writeFile(dataPath,`${JSON.stringify(artifact,null,2)}\n`);
 const rows=Object.entries(gateCounts).map(([gate,counts])=>`| ${gate.toUpperCase()} | ${counts.PASS||0} | ${counts.REVIEW||0} | ${counts.FAIL||0} |`).join('\n');
-await writeFile('docs/reviews/CONTROLLED_A1_1320_QA_RERUN.md',`# Controlled A1 1320 — QA rerun\n\n- Run: ${artifact.generatedAt}\n- Questions: ${records.length}\n- Audio semantic evidence: available for all 330 Listening scripts; production MP3 validation is handled by the release pack.\n- Curriculum retrieval: full checked-in A1 catalog (${a1Units.length} units).\n- Provider mode: deterministic specialized judges. No verdict was coerced or manually changed.\n\n| Gate | PASS | REVIEW | FAIL |\n|---|---:|---:|---:|\n${rows}\n\n- Passed every gate: **${allPassCount}/${records.length}**\n- Still requiring review: **${records.length-allPassCount}/${records.length}**\n\nQuestions that do not pass every gate remain in Question Bank status \`review\`; deployment does not publish them to candidate exams.\n`);
+if(!controlMode)await writeFile('docs/reviews/CONTROLLED_A1_1320_QA_RERUN_V2.md',`# Controlled A1 1320 — QA rerun V2\n\n- Run: ${artifact.generatedAt}\n- Questions: ${records.length}\n- Provider mode: deterministic specialized judges. No verdict was coerced or manually changed.\n- Curriculum retrieval: incomplete; planning catalog is not accepted as APPROVED KnowledgeUnit/SourceChunk evidence.\n\n| Gate | PASS | REVIEW | FAIL |\n|---|---:|---:|---:|\n${rows}\n\n- Passed every gate: **${allPassCount}/${records.length}**\n- Still requiring review: **${records.length-allPassCount}/${records.length}**\n`);
 console.log(JSON.stringify({total:records.length,allPass:allPassCount,requiresReview:records.length-allPassCount,gateCounts},null,2));

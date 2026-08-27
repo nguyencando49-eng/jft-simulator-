@@ -73,8 +73,11 @@ export class DeterministicJftContentQaJudge {
     if(levelMatch!=='MATCH')issues.push(issue('LEVEL_MISMATCH','WARNING',`Declared ${q.level}; estimated ${estimated} from processing load.`,'The declared level does not match the deterministic load estimate.','Require Japanese human calibration.'));
     const metadataComplete=!!(q.id&&q.level&&q.section&&category&&canDo&&ids.length&&q.sourceDocument);
     if(!metadataComplete)issues.push(issue('PROVENANCE_MISSING','MAJOR','One or more of category, Can-do, KnowledgeUnit IDs, or source document is missing.','Source-grounded release requires complete traceability.','Attach missing metadata before release.'));
-    const naturalness=/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u.test(q.prompt)&&!/[�]/.test(q.prompt)?18:4;
-    const scores={japaneseNaturalness:naturalness,canDoAlignment:canDoWeak?4:12,situationRealism:q.prompt.length>20?13:7,answerUniqueness:derived!==null&&answerMatch&&uniqueChoices?15:5,distractorQuality:distractorWeak?3:7,levelAppropriateness:levelMatch==='MATCH'?9:6,categoryAlignment:category&&normalize(category)===normalize(actual)?5:2,originality:evidence.sourceSimilarityScore===undefined?2:evidence.sourceSimilarityScore<.72?5:0,metadataCompleteness:metadataComplete?5:2,total:0};
+    const naturalness=/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u.test(q.prompt)&&!/[�]/.test(q.prompt)?20:4;
+    // These maxima implement the documented 100-point QA1 contract. The old
+    // values capped a flawless item at 89, making the unchanged PASS gate of
+    // 90 mathematically unreachable.
+    const scores={japaneseNaturalness:naturalness,canDoAlignment:canDoWeak?4:15,situationRealism:q.prompt.length>20?15:7,answerUniqueness:derived!==null&&answerMatch&&uniqueChoices?15:5,distractorQuality:distractorWeak?3:10,levelAppropriateness:levelMatch==='MATCH'?10:6,categoryAlignment:category&&normalize(category)===normalize(actual)?5:2,originality:evidence.sourceSimilarityScore===undefined?2:evidence.sourceSimilarityScore<.72?5:0,metadataCompleteness:metadataComplete?5:2,total:0};
     scores.total=Object.values(scores).reduce((sum,value)=>sum+value,0);
     const hardFail=hardCodes.size>0;const assessmentValue=leaked||distractorWeak?'LOW':derived!==null?'MEDIUM':'LOW';
     let verdict:Verdict=hardFail||scores.total<80?'FAIL':scores.total<90?'REVIEW':'PASS';

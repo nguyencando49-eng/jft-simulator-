@@ -1,0 +1,141 @@
+{
+  "artifactVersion": "A1_MACHINE_ACCEPTANCE_V1",
+  "generatedAt": "2026-09-08T11:08:02.024Z",
+  "approvalMode": "MACHINE",
+  "published": false,
+  "sourceArtifact": "data/production/a1-fresh-800-repaired-candidates-v1.json",
+  "sourceHashes": {
+    "data/CONTROLLED_A1_FRESH_200_V3.json": "31b6e1e984073b0d8232b7b2b0e86135e56d7f122fd5057c122b73dcc2839456",
+    "data/CONTROLLED_A1_FRESH_200_V4.json": "5100042ebbb59b2c657b333f578591f1695f33403c419e68f290bdd40ae2b40f",
+    "data/CONTROLLED_A1_FRESH_200_V5.json": "4ffe69afdfe38caf7a9332d4bfd99437b4648677179b7101f0427492c11a5144",
+    "data/CONTROLLED_A1_FRESH_200_V6.json": "f0556f88277083e8cc82df0cbf812cdd919dc10fb9b2ec623f11b935981c4379"
+  },
+  "contract": {
+    "pipelineVersion": "A1_MACHINE_ACCEPTANCE_V1",
+    "acceptanceThreshold": 0.98,
+    "maxRepairAttempts": 2,
+    "requiredFinalStates": [
+      "MACHINE_ACCEPTED",
+      "AUTO_REJECTED"
+    ],
+    "hardGates": [
+      "deterministicChecks",
+      "QA1_STRUCTURAL",
+      "QA2",
+      "QA3",
+      "QA4",
+      "QA5",
+      "QA6",
+      "QA7",
+      "semanticJudgeA",
+      "adversarialJudgeB"
+    ],
+    "policyOnlyQa1NonBlocking": true
+  },
+  "groundingEvidenceArtifact": "data/production/a1-fresh-800-machine-grounding-evidence-v1.json",
+  "summary": {
+    "totalProcessed": 800,
+    "machineAccepted": 447,
+    "autoRejected": 353,
+    "autoRepairedSuccessfully": 313,
+    "autoRepairFailed": 353,
+    "acceptanceRate": 0.5587,
+    "countsBySection": {
+      "script_vocabulary": {
+        "processed": 200,
+        "accepted": 154,
+        "rejected": 46
+      },
+      "conversation_expression": {
+        "processed": 200,
+        "accepted": 41,
+        "rejected": 159
+      },
+      "listening": {
+        "processed": 200,
+        "accepted": 138,
+        "rejected": 62
+      },
+      "reading": {
+        "processed": 200,
+        "accepted": 114,
+        "rejected": 86
+      }
+    },
+    "countsByQaFailureReason": {
+      "ADVERSARIAL_SEMANTIC_UNRESOLVED": 270,
+      "ANSWER_KEY_MISMATCH": 6,
+      "ANSWER_NOT_UNIQUE": 91,
+      "DISTRACTOR_IMPLAUSIBLE": 81,
+      "NEAR_DUPLICATE": 25,
+      "PROMPT_TARGET_IMPLICIT": 32,
+      "SECOND_PLAUSIBLE_ANSWER": 11,
+      "SEMANTIC_UNRESOLVED": 204
+    },
+    "answerUniquenessFailures": 313,
+    "metadataAutoRealignCount": 508,
+    "duplicateRepairCount": 25,
+    "averageMachineConfidence": 0.8021,
+    "minimumAcceptedMachineConfidence": 1,
+    "qaFinalResults": {
+      "QA1": {
+        "PASS": 800
+      },
+      "QA2": {
+        "FAIL": 313,
+        "PASS": 487
+      },
+      "QA3": {
+        "PASS": 800
+      },
+      "QA4": {
+        "PASS": 800
+      },
+      "QA5": {
+        "PASS": 800
+      },
+      "QA6": {
+        "FAIL": 81,
+        "PASS": 719
+      },
+      "QA7": {
+        "FAIL": 25,
+        "PASS": 775
+      }
+    },
+    "mostCommonRejectionReasons": [
+      {
+        "reason": "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "count": 270
+      },
+      {
+        "reason": "SEMANTIC_UNRESOLVED",
+        "count": 204
+      },
+      {
+        "reason": "ANSWER_NOT_UNIQUE",
+        "count": 91
+      },
+      {
+        "reason": "DISTRACTOR_IMPLAUSIBLE",
+        "count": 81
+      },
+      {
+        "reason": "PROMPT_TARGET_IMPLICIT",
+        "count": 32
+      },
+      {
+        "reason": "NEAR_DUPLICATE",
+        "count": 25
+      },
+      {
+        "reason": "SECOND_PLAUSIBLE_ANSWER",
+        "count": 11
+      },
+      {
+        "reason": "ANSWER_KEY_MISMATCH",
+        "count": 6
+      }
+    ]
+  }
+}

@@ -2,7 +2,7 @@ import {afterEach,describe,expect,it,vi} from 'vitest';
 import type {QuestionRecord} from '@/lib/admin-types';
 import type {FactoryCandidate} from '@/lib/server/factory-domain';
 import {ANSWER_ORACLE_PROMPT_VERSION,AnswerOracleError,buildAnswerOracleInput,compareOracleWithDeclaredAnswer,validateAnswerOracleOutput,type AnswerOracleInput,type AnswerOracleSolveResult} from '@/lib/server/answer-oracle';
-import {HttpAnswerOracleProvider,type AnswerOracleProvider} from '@/lib/server/answer-oracle-provider';
+import {DeterministicAnswerOracleProvider,HttpAnswerOracleProvider,type AnswerOracleProvider} from '@/lib/server/answer-oracle-provider';
 import {runAnswerOracleGate} from '@/lib/server/factory-service';
 
 const now='2026-08-18T00:00:00.000Z';
@@ -33,4 +33,11 @@ describe('QA2 provider and pipeline integration',()=>{
   it('turns invalid JSON and provider failure into non-passing REVIEW evidence',async()=>{const c1=candidate();await runAnswerOracleGate(c1,new StubProvider(async()=>{throw new AnswerOracleError('QA_ORACLE_INVALID_OUTPUT','bad')}));expect(c1.answerOracleQa).toMatchObject({verdict:'REVIEW',outcome:'QA_ORACLE_INVALID_OUTPUT'});const c2=candidate();await runAnswerOracleGate(c2,new StubProvider(async()=>{throw new Error('offline')}));expect(c2.answerOracleQa).toMatchObject({verdict:'REVIEW',outcome:'QA_ORACLE_PROVIDER_FAILURE'})});
   it('lets QA2 failure override an existing QA1 PASS',async()=>{const c=candidate();await runAnswerOracleGate(c,new StubProvider(input=>solve(input,[2])));expect(c.contentQa?.verdict).toBe('PASS');expect(c.answerOracleQa?.verdict).toBe('FAIL');expect(c.qa.passed).toBe(false);expect(c.qa.issues.some(x=>x.code==='answer_oracle_fail')).toBe(true)});
   it('supports independent listening semantic derivation',async()=>{const q=question({section:'listening',type:'audio_choice',answer:1,prompt:'何時ですか。'}),c=candidate(q);c.audioScript='9時です。';await runAnswerOracleGate(c,new StubProvider(input=>{expect(input.audioScript).toBe('9時です。');return solve(input,[1])}));expect(c.answerOracleQa?.verdict).toBe('PASS')});
+});
+
+describe('QA2 deterministic semantic relations',()=>{
+  const provider=new DeterministicAnswerOracleProvider();
+  it('resolves an explicit correction after negation',async()=>{const input=buildAnswerOracleInput(question({section:'listening',type:'audio_choice',prompt:'行く日はいつですか。',choices:['土曜日','日曜日','月曜日','火曜日']}),'土曜はだめです。日曜なら大丈夫です。では日曜日にしましょう。');expect((await provider.solve(input)).derivedCorrectOptions).toEqual([1])});
+  it('resolves the first step without selecting the later step',async()=>{const input=buildAnswerOracleInput(question({prompt:'最初に何をしますか。',choices:['受付へ行く','コピー','会議','電話']}));input.stem='まず受付へ行ってください。そのあと、コピーしてください。\n最初に何をしますか。';expect((await provider.solve(input)).derivedCorrectOptions).toEqual([0])});
+  it('binds a requested person to the matching fact',async()=>{const input=buildAnswerOracleInput(question({section:'listening',type:'audio_choice',prompt:'京都に住んでいる人はだれですか。',choices:['父','母','兄','弟']}),'父は東京、母は大阪、弟は京都に住んでいます。');expect((await provider.solve(input)).derivedCorrectOptions).toEqual([3])});
 });

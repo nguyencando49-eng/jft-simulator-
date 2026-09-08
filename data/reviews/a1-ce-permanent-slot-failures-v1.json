@@ -1,0 +1,3527 @@
+{
+  "artifactVersion": "A1_CE_RECOVERY_MACHINE_V1",
+  "generatedAt": "2026-09-08T12:57:00.768Z",
+  "status": "PERMANENT_SLOT_FAILURE",
+  "itemCount": 17,
+  "items": [
+    {
+      "sourceSlotId": "A1-F200-CE-045-R1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidateId": "A1-F200-CE-045-R1-RCV1",
+          "contentHash": "d873ccc810079fbb2a51cfd786ba5dd350b04b0ae2476f1d5d37831b4128e519",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "APOLOGIZE",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ありがとうございます。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "コーヒーです。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 2,
+          "candidateId": "A1-F200-CE-045-R1-RCV2",
+          "contentHash": "39d2f35cb55fde83fff665ffe913233e23148e87846ebc484442e891c7961142",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "APOLOGIZE",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ありがとうございます。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "コーヒーです。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 3,
+          "candidateId": "A1-F200-CE-045-R1-RCV3",
+          "contentHash": "19cdcddc03a0c5d0c9d15b5329881e5fffd184e8426fa7b83095fb6176a38b98",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "APOLOGIZE",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ありがとうございます。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "コーヒーです。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        }
+      ],
+      "finalState": "PERMANENT_SLOT_FAILURE"
+    },
+    {
+      "sourceSlotId": "A1-F400-CO-044-M1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidateId": "A1-F400-CO-044-M1-RCV1",
+          "contentHash": "b1f5f8bf4205570bffd849ab010c49670ce7cb59aa605fd54ff7f3ad2d3c52d1",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "APOLOGIZE",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ありがとうございます。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "コーヒーです。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 2,
+          "candidateId": "A1-F400-CO-044-M1-RCV2",
+          "contentHash": "743cf6b22a62ca19341f6348037c33273d46893e2adcfcd40e21f43475c82c21",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "APOLOGIZE",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ありがとうございます。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "コーヒーです。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 3,
+          "candidateId": "A1-F400-CO-044-M1-RCV3",
+          "contentHash": "f7d81a0a393cdb39899dc9e46cc4ede61d494109e1f8775f2b3d042b1372de61",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "APOLOGIZE",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ありがとうございます。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "コーヒーです。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        }
+      ],
+      "finalState": "PERMANENT_SLOT_FAILURE"
+    },
+    {
+      "sourceSlotId": "A1-F500-CO-043-M1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidateId": "A1-F500-CO-043-M1-RCV1",
+          "contentHash": "cad3efdb6956a08990324f95788f772edd1e726cc5b29237923b8624a079badd",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "APOLOGIZE",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ありがとうございます。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "コーヒーです。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 2,
+          "candidateId": "A1-F500-CO-043-M1-RCV2",
+          "contentHash": "c658f98cfd5b6d32446829e96589d31c356667a2990cfd31d741ddf37bfbb6f0",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "APOLOGIZE",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ありがとうございます。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "コーヒーです。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 3,
+          "candidateId": "A1-F500-CO-043-M1-RCV3",
+          "contentHash": "d3acaaa3ea78a95278bb9668309c3697b6357e97004bcf128af4252936bfc9c5",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "APOLOGIZE",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ありがとうございます。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "コーヒーです。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        }
+      ],
+      "finalState": "PERMANENT_SLOT_FAILURE"
+    },
+    {
+      "sourceSlotId": "A1-F500-CO-045-R1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidateId": "A1-F500-CO-045-R1-RCV1",
+          "contentHash": "e8f1611ad608064120431b4cb8a55ab53037642ea4ba6d7293ac61bc17d8271b",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "APOLOGIZE",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ありがとうございます。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "コーヒーです。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 2,
+          "candidateId": "A1-F500-CO-045-R1-RCV2",
+          "contentHash": "db401ada5a6a72fbb1e0ab50c7f84e14dcf70f53021cd2b92e651756b66dbe8a",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "APOLOGIZE",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ありがとうございます。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "コーヒーです。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 3,
+          "candidateId": "A1-F500-CO-045-R1-RCV3",
+          "contentHash": "9d50b60b4b4c19dfd4c45768a5e7bce01f7af5510c7d85eb606b5efc434b2daa",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "APOLOGIZE",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ありがとうございます。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "コーヒーです。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        }
+      ],
+      "finalState": "PERMANENT_SLOT_FAILURE"
+    },
+    {
+      "sourceSlotId": "A1-F600-CO-044-M1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidateId": "A1-F600-CO-044-M1-RCV1",
+          "contentHash": "d49075828c7a8dd7750e25b1d091d649d0d0af67463f97ce8f3bc1ff650f6f5f",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "APOLOGIZE",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ありがとうございます。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "コーヒーです。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 2,
+          "candidateId": "A1-F600-CO-044-M1-RCV2",
+          "contentHash": "6e6b48060f92fe4e86d106a75f0bc26f4bca0a4847354eba3b5820086714cf6e",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "APOLOGIZE",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ありがとうございます。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "コーヒーです。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 3,
+          "candidateId": "A1-F600-CO-044-M1-RCV3",
+          "contentHash": "360984811d1188f1599d7e7899d24984b0051b9463f1c5a5cf8599175c2460ee",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "APOLOGIZE",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ありがとうございます。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "コーヒーです。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        }
+      ],
+      "finalState": "PERMANENT_SLOT_FAILURE"
+    },
+    {
+      "sourceSlotId": "A1-F400-CO-008-M1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidateId": "A1-F400-CO-008-M1-RCV1",
+          "contentHash": "5ea688e0753d08d308f293258c6d4e7612c4a8558b40493a0fd84238ee35f194",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "THANK",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "3階です。": "WRONG_SPEECH_ACT",
+                "土曜日です。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 2,
+          "candidateId": "A1-F400-CO-008-M1-RCV2",
+          "contentHash": "b786ad12974ed8a3d21300a0d53dc41dca11d3ab48fdb8b766c23fd9d94f31f6",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "THANK",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "3階です。": "WRONG_SPEECH_ACT",
+                "土曜日です。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 3,
+          "candidateId": "A1-F400-CO-008-M1-RCV3",
+          "contentHash": "d01e54716f107159496f3ec4f47c38d32f16a4ecf6e2dadb1e153a003e325950",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "THANK",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "3階です。": "WRONG_SPEECH_ACT",
+                "土曜日です。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        }
+      ],
+      "finalState": "PERMANENT_SLOT_FAILURE"
+    },
+    {
+      "sourceSlotId": "A1-F500-CO-008-M1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidateId": "A1-F500-CO-008-M1-RCV1",
+          "contentHash": "9e8b70cbcef949dd28a1ebd1aaa0a7e83f406a487db74fab912c5b6b72fb8bb2",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "THANK",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "3階です。": "WRONG_SPEECH_ACT",
+                "土曜日です。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 2,
+          "candidateId": "A1-F500-CO-008-M1-RCV2",
+          "contentHash": "483aff59ffd68e95bc4c0fafcb1b39dc1829e6e33d68752ffdb2fe04cebe69eb",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "THANK",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "3階です。": "WRONG_SPEECH_ACT",
+                "土曜日です。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 3,
+          "candidateId": "A1-F500-CO-008-M1-RCV3",
+          "contentHash": "231078097b307339485a0a73e9f210532a56802eb036c1f6850982aa5b2b2e34",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "THANK",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "3階です。": "WRONG_SPEECH_ACT",
+                "土曜日です。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        }
+      ],
+      "finalState": "PERMANENT_SLOT_FAILURE"
+    },
+    {
+      "sourceSlotId": "A1-F500-CO-013-R1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidateId": "A1-F500-CO-013-R1-RCV1",
+          "contentHash": "5119f4571f46c19b2eb514ab645483abc491591c1d091ebeb13d76fd29226e0a",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ASK_LOCATION",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "お名前は？": "WRONG_SPEECH_ACT",
+                "日曜日ですか。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 2,
+          "candidateId": "A1-F500-CO-013-R1-RCV2",
+          "contentHash": "46ea609fa212a49f9eb382d124eeaec9973a80f28482ec0af8fba1a35de5bec4",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ASK_LOCATION",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "お名前は？": "WRONG_SPEECH_ACT",
+                "日曜日ですか。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 3,
+          "candidateId": "A1-F500-CO-013-R1-RCV3",
+          "contentHash": "5057701b6ee7bfd1cc2bbeea0a310d454a9dc703bb93008ed0b0ca50b8658e04",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ASK_LOCATION",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "お名前は？": "WRONG_SPEECH_ACT",
+                "日曜日ですか。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        }
+      ],
+      "finalState": "PERMANENT_SLOT_FAILURE"
+    },
+    {
+      "sourceSlotId": "A1-F500-CO-015-M1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidateId": "A1-F500-CO-015-M1-RCV1",
+          "contentHash": "0de1730237ac6ea68db086cd77ba27e1f34108b8b3263972f700dab1a0714b42",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ASK_LOCATION",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "お名前は？": "WRONG_SPEECH_ACT",
+                "日曜日ですか。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 2,
+          "candidateId": "A1-F500-CO-015-M1-RCV2",
+          "contentHash": "d5ad49e16da046ad2a7444b33605ef91742c7920a53510942788e62662bfa735",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ASK_LOCATION",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "お名前は？": "WRONG_SPEECH_ACT",
+                "日曜日ですか。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 3,
+          "candidateId": "A1-F500-CO-015-M1-RCV3",
+          "contentHash": "0ca60905c4db3001fa653acf09ccab4df07bca08c4e5ff47d9907c6ee10b66d3",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ASK_LOCATION",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "お名前は？": "WRONG_SPEECH_ACT",
+                "日曜日ですか。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        }
+      ],
+      "finalState": "PERMANENT_SLOT_FAILURE"
+    },
+    {
+      "sourceSlotId": "A1-F600-CO-008-M1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidateId": "A1-F600-CO-008-M1-RCV1",
+          "contentHash": "00bf0464d551c93bab51e3917d92e2561df83f8e13804fdc1fce0c2597ffd1ce",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "THANK",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "3階です。": "WRONG_SPEECH_ACT",
+                "土曜日です。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 2,
+          "candidateId": "A1-F600-CO-008-M1-RCV2",
+          "contentHash": "929d02fd58c17a6ad6ff5aa96090593c2a498d3a0aa9e724758dec44892c069d",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "THANK",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "3階です。": "WRONG_SPEECH_ACT",
+                "土曜日です。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 3,
+          "candidateId": "A1-F600-CO-008-M1-RCV3",
+          "contentHash": "2415032565fa8215c8fd04e77159924d364401fef23f315bbb02f3c5b223e711",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "THANK",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "3階です。": "WRONG_SPEECH_ACT",
+                "土曜日です。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        }
+      ],
+      "finalState": "PERMANENT_SLOT_FAILURE"
+    },
+    {
+      "sourceSlotId": "A1-F600-CO-009-M1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidateId": "A1-F600-CO-009-M1-RCV1",
+          "contentHash": "e7aae2c81448f5a52dbf02077099444fb25ad0d836b80677af6eae1f4d57aa1d",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ANSWER_NAME",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ベトナムから来ました。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "日曜日です。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 2,
+          "candidateId": "A1-F600-CO-009-M1-RCV2",
+          "contentHash": "83c96e3d3b3e86d36e55975d4e50df6971d2b1d40db7caa64fff692ac8fba5a9",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ANSWER_NAME",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ベトナムから来ました。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "日曜日です。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 3,
+          "candidateId": "A1-F600-CO-009-M1-RCV3",
+          "contentHash": "3e6cbd394f5211a3427814261aea64379bdedd94a745e12373ca8bf7e80d6948",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ANSWER_NAME",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ベトナムから来ました。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "日曜日です。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        }
+      ],
+      "finalState": "PERMANENT_SLOT_FAILURE"
+    },
+    {
+      "sourceSlotId": "A1-F600-CO-013-M1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidateId": "A1-F600-CO-013-M1-RCV1",
+          "contentHash": "c91a460520ca8b4d5e170c2707cb313cd63b514e85fb8f2d2a12be278bcec089",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ASK_LOCATION",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "お名前は？": "WRONG_SPEECH_ACT",
+                "日曜日ですか。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 2,
+          "candidateId": "A1-F600-CO-013-M1-RCV2",
+          "contentHash": "684756e39d165bdf464cf3f5c04a363f3d48cf565e086d357698efd011603022",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ASK_LOCATION",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "お名前は？": "WRONG_SPEECH_ACT",
+                "日曜日ですか。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 3,
+          "candidateId": "A1-F600-CO-013-M1-RCV3",
+          "contentHash": "68d713bd79f64b7c6d3ae8ebfc42a507169a657b305b6723ea9ae5376ae7c034",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ASK_LOCATION",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "お名前は？": "WRONG_SPEECH_ACT",
+                "日曜日ですか。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        }
+      ],
+      "finalState": "PERMANENT_SLOT_FAILURE"
+    },
+    {
+      "sourceSlotId": "A1-F600-CO-015-M1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidateId": "A1-F600-CO-015-M1-RCV1",
+          "contentHash": "07e74b8a4201289d2524cc2906eab9c7abfab78f8b021f736592ddd37b3bd7b9",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ASK_LOCATION",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "お名前は？": "WRONG_SPEECH_ACT",
+                "日曜日ですか。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 2,
+          "candidateId": "A1-F600-CO-015-M1-RCV2",
+          "contentHash": "48e98a43df4c2de2bff302c47400c881b4a18ce63804510762deb9bd050a7b00",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ASK_LOCATION",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "お名前は？": "WRONG_SPEECH_ACT",
+                "日曜日ですか。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 3,
+          "candidateId": "A1-F600-CO-015-M1-RCV3",
+          "contentHash": "a2b99251fc4d6cba8ce98c72f658895aa78c38fec735cf0a36c4631196e85361",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ASK_LOCATION",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "お名前は？": "WRONG_SPEECH_ACT",
+                "日曜日ですか。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        }
+      ],
+      "finalState": "PERMANENT_SLOT_FAILURE"
+    },
+    {
+      "sourceSlotId": "A1-F400-CO-025-M1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidateId": "A1-F400-CO-025-M1-RCV1",
+          "contentHash": "90c195fa59b16017d282161e5c7e99354fd61373d3e6690a312380080e4475fa",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ANSWER_NAME",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ベトナムから来ました。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "日曜日です。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 2,
+          "candidateId": "A1-F400-CO-025-M1-RCV2",
+          "contentHash": "0202a9117005e07717e9709a7e9ec63162694d8a70af35d69279f80dd9504ba1",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ANSWER_NAME",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ベトナムから来ました。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "日曜日です。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 3,
+          "candidateId": "A1-F400-CO-025-M1-RCV3",
+          "contentHash": "c4eee52aedd8af93e8fc3f47d0d225bd54dffc9a5a204eb39138c5b66c3acbf0",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ANSWER_NAME",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ベトナムから来ました。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "日曜日です。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        }
+      ],
+      "finalState": "PERMANENT_SLOT_FAILURE"
+    },
+    {
+      "sourceSlotId": "A1-F400-CO-026-M1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidateId": "A1-F400-CO-026-M1-RCV1",
+          "contentHash": "4fdeafb418ed216f50a4cc41f1c15b889a5407962372baf0a60009eec7d74369",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ACCEPT_INVITATION",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "受付は3階です。": "WRONG_SPEECH_ACT",
+                "500円です。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 2,
+          "candidateId": "A1-F400-CO-026-M1-RCV2",
+          "contentHash": "5f60a629be42cb29e8408e4fab571b191e745eb8eb49d20b8d93b12ddc1759c8",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ACCEPT_INVITATION",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "受付は3階です。": "WRONG_SPEECH_ACT",
+                "500円です。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 3,
+          "candidateId": "A1-F400-CO-026-M1-RCV3",
+          "contentHash": "befe6b26a7a53ff9c7e7b5684b5ef4c85afe8a699e549fc6231eeb068c136a6a",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ACCEPT_INVITATION",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "受付は3階です。": "WRONG_SPEECH_ACT",
+                "500円です。": "WRONG_SPEECH_ACT",
+                "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        }
+      ],
+      "finalState": "PERMANENT_SLOT_FAILURE"
+    },
+    {
+      "sourceSlotId": "A1-F400-CO-027-R1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidateId": "A1-F400-CO-027-R1-RCV1",
+          "contentHash": "10ad8099b50e0f490164de0a6dbfd5843117dbd86b1491d79049fa3dfb3cef11",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ANSWER_NAME",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ベトナムから来ました。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "日曜日です。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 2,
+          "candidateId": "A1-F400-CO-027-R1-RCV2",
+          "contentHash": "30808a8f406cf61609ddd97fe2e44513a5a078cf4025a3cffcb0e447566a8688",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ANSWER_NAME",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ベトナムから来ました。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "日曜日です。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 3,
+          "candidateId": "A1-F400-CO-027-R1-RCV3",
+          "contentHash": "cd33116fe8f943a0b8cda577ed0203af1eef0882363df21e1f45de93b4c8f890",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ANSWER_NAME",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "ベトナムから来ました。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "日曜日です。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        }
+      ],
+      "finalState": "PERMANENT_SLOT_FAILURE"
+    },
+    {
+      "sourceSlotId": "A1-F400-CO-032-M1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidateId": "A1-F400-CO-032-M1-RCV1",
+          "contentHash": "4caf7471129ea70d96cef00d5522969f51bd5038f72785a29224a2ef0523b2b1",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "THANK",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "いいえ、だめです。": "WRONG_SPEECH_ACT",
+                "3階です。": "WRONG_SPEECH_ACT",
+                "土曜日です。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 2,
+          "candidateId": "A1-F400-CO-032-M1-RCV2",
+          "contentHash": "54630d662afe13af48af79102cef599df9a7e6c292a48f654de9ea8e816e1be8",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ANSWER_LOCATION",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "リンです。": "WRONG_SPEECH_ACT",
+                "土曜日です。": "WRONG_SPEECH_ACT",
+                "500円です。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        },
+        {
+          "attempt": 3,
+          "candidateId": "A1-F400-CO-032-M1-RCV3",
+          "contentHash": "ddf84af6ff545a2b442e51074b9bf1202030646fc3c742508be8b6e4b7e2d86b",
+          "accepted": false,
+          "QA1": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA2": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA3": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA4": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA5": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA6": {
+            "status": "PASS",
+            "reasonCodes": []
+          },
+          "QA7": {
+            "status": "FAIL",
+            "reasonCodes": [
+              "EXACT_DUPLICATE"
+            ],
+            "classification": "EXACT_DUPLICATE"
+          },
+          "semanticJudgeA": {
+            "status": "PASS",
+            "selectedAnswerIndex": 0,
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_SEMANTIC_REPRESENTATION_JUDGE_A",
+              "expectedSpeechAct": "ASK_LOCATION",
+              "correct": [
+                0
+              ]
+            }
+          },
+          "adversarialJudgeB": {
+            "status": "PASS",
+            "defensibleAlternativeIndexes": [],
+            "reasonCodes": [],
+            "evidence": {
+              "method": "CE_ADVERSARIAL_DISTRACTOR_FAILURE_AUDIT",
+              "distractorFailureReasons": {
+                "いくらですか。": "WRONG_SPEECH_ACT",
+                "お名前は？": "WRONG_SPEECH_ACT",
+                "日曜日ですか。": "WRONG_SPEECH_ACT"
+              }
+            }
+          },
+          "duplicateClassification": "EXACT_DUPLICATE",
+          "machineConfidence": 0.75,
+          "reasonCodes": [
+            "EXACT_DUPLICATE"
+          ]
+        }
+      ],
+      "finalState": "PERMANENT_SLOT_FAILURE"
+    }
+  ]
+}

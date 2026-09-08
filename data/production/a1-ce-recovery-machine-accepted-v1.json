@@ -1,0 +1,4033 @@
+{
+  "artifactVersion": "A1_CE_RECOVERY_MACHINE_V1",
+  "generatedAt": "2026-09-08T12:57:00.768Z",
+  "status": "RECOVERED_MACHINE_ACCEPTED",
+  "itemCount": 39,
+  "items": [
+    {
+      "id": "A1-F200-CE-043-R1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about past days off.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【apology_late】会社に少し遅れます。\nA：どう言いますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "すみません、少し遅れます。",
+        "ありがとうございます。",
+        "3階です。",
+        "コーヒーです。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v2",
+      "derivedFrom": "A1-F200-CE-043-R1",
+      "taskType": "expression",
+      "curriculumProvenance": {
+        "groundingState": "GROUNDING_VALIDATED_FROM_CATALOG",
+        "knowledgeUnitId": "A1-N17",
+        "sourceDocument": "TAI LIEU SACH/入門第17課.docx",
+        "persistenceState": "GROUNDING_EVIDENCE_MISSING"
+      },
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "371fc940c3c43c2e0e8d70bfccfaf8407df7a3eb635140b93211383092db2896",
+          "afterHash": "371fc940c3c43c2e0e8d70bfccfaf8407df7a3eb635140b93211383092db2896",
+          "outcome": "UNSUCCESSFUL"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "371fc940c3c43c2e0e8d70bfccfaf8407df7a3eb635140b93211383092db2896",
+          "afterHash": "371fc940c3c43c2e0e8d70bfccfaf8407df7a3eb635140b93211383092db2896",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F200-CE-043",
+      "speechAct": "APOLOGIZE",
+      "scenarioType": "apology_late",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "会社に少し遅れます。",
+        "speakerAIntent": "ask what to say when late",
+        "speakerAUtterance": "どう言いますか。",
+        "expectedSpeechAct": "APOLOGIZE",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "すみません、少し遅れます。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "ありがとうございます。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "3階です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "コーヒーです。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs APOLOGIZE for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "ありがとうございます。": "WRONG_SPEECH_ACT",
+          "3階です。": "WRONG_SPEECH_ACT",
+          "コーヒーです。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "apology_late"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F200-CE-044-R1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about past days off.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【make_plan】予定メモ：1時30分に2階へ行きます。\nA：どう言いますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "1時30分に2階へ行きます。",
+        "500円です。",
+        "事務所です。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v2",
+      "derivedFrom": "A1-F200-CE-044-R1",
+      "taskType": "expression",
+      "curriculumProvenance": {
+        "groundingState": "GROUNDING_VALIDATED_FROM_CATALOG",
+        "knowledgeUnitId": "A1-N17",
+        "sourceDocument": "TAI LIEU SACH/入門第17課.docx",
+        "persistenceState": "GROUNDING_EVIDENCE_MISSING"
+      },
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "3eb9eae55730789a97f9a66c25809a9cfb030c99984a22eec3c497805ec96f97",
+          "afterHash": "3eb9eae55730789a97f9a66c25809a9cfb030c99984a22eec3c497805ec96f97",
+          "outcome": "UNSUCCESSFUL"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "3eb9eae55730789a97f9a66c25809a9cfb030c99984a22eec3c497805ec96f97",
+          "afterHash": "3eb9eae55730789a97f9a66c25809a9cfb030c99984a22eec3c497805ec96f97",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F200-CE-044",
+      "speechAct": "MAKE_PLAN",
+      "scenarioType": "make_plan",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "予定メモ：1時30分に2階へ行きます。",
+        "speakerAIntent": "ask what plan should be said",
+        "speakerAUtterance": "どう言いますか。",
+        "expectedSpeechAct": "MAKE_PLAN",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "1時30分に2階へ行きます。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "事務所です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs MAKE_PLAN for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "500円です。": "WRONG_SPEECH_ACT",
+          "事務所です。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "make_plan"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F400-CO-043-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about past days off.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【make_plan】予定メモ：4時に駅前へ行きます。\nA：どう言いますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "4時に駅前へ行きます。",
+        "500円です。",
+        "事務所です。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-043-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "d41dc29860afa0c2cfb0281322c5be37ba889e91921d2c287ad836ceaca7d75d",
+          "afterHash": "ea65023cc5f2e5f427fcc9a81a2274437f71b6cfb34c71df1a03ae82b15ca010",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "SECOND_PLAUSIBLE_ANSWER",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "ea65023cc5f2e5f427fcc9a81a2274437f71b6cfb34c71df1a03ae82b15ca010",
+          "afterHash": "ea65023cc5f2e5f427fcc9a81a2274437f71b6cfb34c71df1a03ae82b15ca010",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "SECOND_PLAUSIBLE_ANSWER",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-043",
+      "speechAct": "MAKE_PLAN",
+      "scenarioType": "make_plan",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "予定メモ：4時に駅前へ行きます。",
+        "speakerAIntent": "ask what plan should be said",
+        "speakerAUtterance": "どう言いますか。",
+        "expectedSpeechAct": "MAKE_PLAN",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "4時に駅前へ行きます。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "事務所です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs MAKE_PLAN for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "500円です。": "WRONG_SPEECH_ACT",
+          "事務所です。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "make_plan"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F400-CO-045-R1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about past days off.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【make_plan】予定メモ：日曜日に食堂へ行きます。\nA：どう言いますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "日曜日に食堂へ行きます。",
+        "500円です。",
+        "事務所です。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-045-R1",
+      "taskType": "expression",
+      "curriculumProvenance": {
+        "groundingState": "GROUNDING_VALIDATED_FROM_CATALOG",
+        "knowledgeUnitId": "A1-N17",
+        "sourceDocument": "TAI LIEU SACH/入門第17課.docx",
+        "persistenceState": "GROUNDING_EVIDENCE_MISSING"
+      },
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "287f11b8d77765b464cebb7d4dca07fcf037c818e6361d161b7c8e045063fc8c",
+          "afterHash": "287f11b8d77765b464cebb7d4dca07fcf037c818e6361d161b7c8e045063fc8c",
+          "outcome": "UNSUCCESSFUL"
+        },
+        {
+          "attempt": 2,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "287f11b8d77765b464cebb7d4dca07fcf037c818e6361d161b7c8e045063fc8c",
+          "afterHash": "287f11b8d77765b464cebb7d4dca07fcf037c818e6361d161b7c8e045063fc8c",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "DISTRACTOR_IMPLAUSIBLE",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-045",
+      "speechAct": "MAKE_PLAN",
+      "scenarioType": "make_plan",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "予定メモ：日曜日に食堂へ行きます。",
+        "speakerAIntent": "ask what plan should be said",
+        "speakerAUtterance": "どう言いますか。",
+        "expectedSpeechAct": "MAKE_PLAN",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "日曜日に食堂へ行きます。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "事務所です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs MAKE_PLAN for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "500円です。": "WRONG_SPEECH_ACT",
+          "事務所です。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "make_plan"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F500-CO-044-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about past days off.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【make_plan】予定メモ：1時30分に事務所へ行きます。\nA：どう言いますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "1時30分に事務所へ行きます。",
+        "500円です。",
+        "事務所です。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v5",
+      "derivedFrom": "A1-F500-CO-044-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "3f72cda3b070d8f42483b72126f96f4c4046904d0fcace847f894a67e94bc1b1",
+          "afterHash": "a83af279f878d8a76d2776afa2229ee292d2c0f9f6e0ff4b48a07a5a63eb3ad8",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "a83af279f878d8a76d2776afa2229ee292d2c0f9f6e0ff4b48a07a5a63eb3ad8",
+          "afterHash": "a83af279f878d8a76d2776afa2229ee292d2c0f9f6e0ff4b48a07a5a63eb3ad8",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "DISTRACTOR_IMPLAUSIBLE",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F500-CO-044",
+      "speechAct": "MAKE_PLAN",
+      "scenarioType": "make_plan",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "予定メモ：1時30分に事務所へ行きます。",
+        "speakerAIntent": "ask what plan should be said",
+        "speakerAUtterance": "どう言いますか。",
+        "expectedSpeechAct": "MAKE_PLAN",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "1時30分に事務所へ行きます。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "事務所です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs MAKE_PLAN for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "500円です。": "WRONG_SPEECH_ACT",
+          "事務所です。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "make_plan"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F600-CO-043-R1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about past days off.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【make_plan】予定メモ：4時に2階へ行きます。\nA：どう言いますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "4時に2階へ行きます。",
+        "500円です。",
+        "事務所です。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v6",
+      "derivedFrom": "A1-F600-CO-043-R1",
+      "taskType": "expression",
+      "curriculumProvenance": {
+        "groundingState": "GROUNDING_VALIDATED_FROM_CATALOG",
+        "knowledgeUnitId": "A1-N17",
+        "sourceDocument": "TAI LIEU SACH/入門第17課.docx",
+        "persistenceState": "GROUNDING_EVIDENCE_MISSING"
+      },
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "c85f6c7e4f1d740131fa9981c60cc6707a222d225f32e718ccfe1ec87f0ac0e5",
+          "afterHash": "c85f6c7e4f1d740131fa9981c60cc6707a222d225f32e718ccfe1ec87f0ac0e5",
+          "outcome": "UNSUCCESSFUL"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "c85f6c7e4f1d740131fa9981c60cc6707a222d225f32e718ccfe1ec87f0ac0e5",
+          "afterHash": "c85f6c7e4f1d740131fa9981c60cc6707a222d225f32e718ccfe1ec87f0ac0e5",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F600-CO-043",
+      "speechAct": "MAKE_PLAN",
+      "scenarioType": "make_plan",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "予定メモ：4時に2階へ行きます。",
+        "speakerAIntent": "ask what plan should be said",
+        "speakerAUtterance": "どう言いますか。",
+        "expectedSpeechAct": "MAKE_PLAN",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "4時に2階へ行きます。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "事務所です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs MAKE_PLAN for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "500円です。": "WRONG_SPEECH_ACT",
+          "事務所です。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "make_plan"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F600-CO-045-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about past days off.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【make_plan】予定メモ：日曜日に駅前へ行きます。\nA：どう言いますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "日曜日に駅前へ行きます。",
+        "500円です。",
+        "事務所です。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v6",
+      "derivedFrom": "A1-F600-CO-045-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "6d42caa8e97b1beffd7538d1ac91f2e280ba79ba4927f096b580c090b9e187ca",
+          "afterHash": "5cc7137b33e58b54d8ef9597a73aa9cfc3a46ee0ee233939b987f079fe8741e0",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "5cc7137b33e58b54d8ef9597a73aa9cfc3a46ee0ee233939b987f079fe8741e0",
+          "afterHash": "5cc7137b33e58b54d8ef9597a73aa9cfc3a46ee0ee233939b987f079fe8741e0",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "DISTRACTOR_IMPLAUSIBLE",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F600-CO-045",
+      "speechAct": "MAKE_PLAN",
+      "scenarioType": "make_plan",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "予定メモ：日曜日に駅前へ行きます。",
+        "speakerAIntent": "ask what plan should be said",
+        "speakerAUtterance": "どう言いますか。",
+        "expectedSpeechAct": "MAKE_PLAN",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "日曜日に駅前へ行きます。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "事務所です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs MAKE_PLAN for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "500円です。": "WRONG_SPEECH_ACT",
+          "事務所です。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "make_plan"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F200-CE-007-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: say which foods and drinks one likes.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【name_answer】名札には「アン」と書いてあります。\nA：お名前は？\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "アンです。",
+        "ベトナムから来ました。",
+        "3階です。",
+        "日曜日です。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v2",
+      "derivedFrom": "A1-F200-CE-007-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "92790b9632ec68c242a124940b80e4a4224cd45f7dc3c4d465d76d440118e9c3",
+          "afterHash": "8ac91c91d69c073270c7311c0e7bf75b1abb7fc042382283299c3d3e88ded380",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "8ac91c91d69c073270c7311c0e7bf75b1abb7fc042382283299c3d3e88ded380",
+          "afterHash": "8ac91c91d69c073270c7311c0e7bf75b1abb7fc042382283299c3d3e88ded380",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F200-CE-007",
+      "speechAct": "ANSWER_NAME",
+      "scenarioType": "name_answer",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "名札には「アン」と書いてあります。",
+        "speakerAIntent": "ask the listener name",
+        "speakerAUtterance": "お名前は？",
+        "expectedSpeechAct": "ANSWER_NAME",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "アンです。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "ベトナムから来ました。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "3階です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "日曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs ANSWER_NAME for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "ベトナムから来ました。": "WRONG_SPEECH_ACT",
+          "3階です。": "WRONG_SPEECH_ACT",
+          "日曜日です。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "name_answer"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F200-CE-008-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: say which foods and drinks one likes.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【thanks】Bさんが手伝ってくれました。\nA：これで大丈夫です。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "ありがとうございます。",
+        "3階です。",
+        "土曜日です。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v2",
+      "derivedFrom": "A1-F200-CE-008-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "ea158474713146cdba15f409c9d200236f0a87f1e2119f53eafef67e201a1e8e",
+          "afterHash": "7b3bb495379866a73fb50a3c5f7c9cbac516a4ab92094dfb0c6ff82b62e56cb7",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "7b3bb495379866a73fb50a3c5f7c9cbac516a4ab92094dfb0c6ff82b62e56cb7",
+          "afterHash": "7b3bb495379866a73fb50a3c5f7c9cbac516a4ab92094dfb0c6ff82b62e56cb7",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F200-CE-008",
+      "speechAct": "THANK",
+      "scenarioType": "thanks",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "Bさんが手伝ってくれました。",
+        "speakerAIntent": "receive help",
+        "speakerAUtterance": "これで大丈夫です。",
+        "expectedSpeechAct": "THANK",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "ありがとうございます。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "3階です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "土曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs THANK for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "3階です。": "WRONG_SPEECH_ACT",
+          "土曜日です。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "thanks"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F200-CE-014-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: describe a home and say what is available.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【location_answer】案内メモ：切符＝3階\nA：切符はどこですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "3階です。",
+        "リンです。",
+        "土曜日です。",
+        "500円です。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v2",
+      "derivedFrom": "A1-F200-CE-014-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "21869bb330220ccca0013f85be7a53d1cb356168238212a087b37f13a9b66c83",
+          "afterHash": "b51ce5db3d75a3a8cd86a2c19b0def0a1cf4cf51bcdd93d79f52e1a6705ef305",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "b51ce5db3d75a3a8cd86a2c19b0def0a1cf4cf51bcdd93d79f52e1a6705ef305",
+          "afterHash": "b51ce5db3d75a3a8cd86a2c19b0def0a1cf4cf51bcdd93d79f52e1a6705ef305",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F200-CE-014",
+      "speechAct": "ANSWER_LOCATION",
+      "scenarioType": "location_answer",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "案内メモ：切符＝3階",
+        "speakerAIntent": "ask where the target item/person is",
+        "speakerAUtterance": "切符はどこですか。",
+        "expectedSpeechAct": "ANSWER_LOCATION",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "3階です。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "リンです。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "土曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs ANSWER_LOCATION for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "リンです。": "WRONG_SPEECH_ACT",
+          "土曜日です。": "WRONG_SPEECH_ACT",
+          "500円です。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "location_answer"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F200-CE-015-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: describe a home and say what is available.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【location_question】店で袋を探しています。\nA：店員にどう聞きますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "袋はどこですか。",
+        "お名前は？",
+        "日曜日ですか。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v2",
+      "derivedFrom": "A1-F200-CE-015-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "b17dd9b2f76c27e962dab3068ac0ddc5b6ea71ea6c37dbb1b7d12ab6277c655f",
+          "afterHash": "509ff451b8a40ce4c1bc1f5db7015b5d2dc79619cbdc6463db73c55da3233812",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "509ff451b8a40ce4c1bc1f5db7015b5d2dc79619cbdc6463db73c55da3233812",
+          "afterHash": "509ff451b8a40ce4c1bc1f5db7015b5d2dc79619cbdc6463db73c55da3233812",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F200-CE-015",
+      "speechAct": "ASK_LOCATION",
+      "scenarioType": "location_question",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "店で袋を探しています。",
+        "speakerAIntent": "prompt for a location question",
+        "speakerAUtterance": "店員にどう聞きますか。",
+        "expectedSpeechAct": "ASK_LOCATION",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "袋はどこですか。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "お名前は？",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "日曜日ですか。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs ASK_LOCATION for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "お名前は？": "WRONG_SPEECH_ACT",
+          "日曜日ですか。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "location_question"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F400-CO-007-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: say which foods and drinks one likes.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【name_answer】名札には「レイ」と書いてあります。\nA：お名前は？\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "レイです。",
+        "ベトナムから来ました。",
+        "3階です。",
+        "日曜日です。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-007-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "a54fbde6e7860a2ed42b7701830d84ac6345d1df362c59b8710e127d6571c0e4",
+          "afterHash": "fd5e309f9c552caf3457404659b6c999d2fbb34acd1d9413c485a9210f141e93",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "fd5e309f9c552caf3457404659b6c999d2fbb34acd1d9413c485a9210f141e93",
+          "afterHash": "fd5e309f9c552caf3457404659b6c999d2fbb34acd1d9413c485a9210f141e93",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "DISTRACTOR_IMPLAUSIBLE",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-007",
+      "speechAct": "ANSWER_NAME",
+      "scenarioType": "name_answer",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "名札には「レイ」と書いてあります。",
+        "speakerAIntent": "ask the listener name",
+        "speakerAUtterance": "お名前は？",
+        "expectedSpeechAct": "ANSWER_NAME",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "レイです。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "ベトナムから来ました。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "3階です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "日曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs ANSWER_NAME for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "ベトナムから来ました。": "WRONG_SPEECH_ACT",
+          "3階です。": "WRONG_SPEECH_ACT",
+          "日曜日です。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "name_answer"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F400-CO-009-R1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: say which foods and drinks one likes.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【name_answer】名札には「ソラ」と書いてあります。\nA：お名前は？\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "ソラです。",
+        "ベトナムから来ました。",
+        "3階です。",
+        "日曜日です。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-009-R1",
+      "taskType": "expression",
+      "curriculumProvenance": {
+        "groundingState": "GROUNDING_VALIDATED_FROM_CATALOG",
+        "knowledgeUnitId": "A1-N05",
+        "sourceDocument": "TAI LIEU SACH/入門第5課.docx",
+        "persistenceState": "GROUNDING_EVIDENCE_MISSING"
+      },
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "c2345a136a1860d72c23fae63a1bebed5f798eac5ae341b9f64a9f2ea2e51ef2",
+          "afterHash": "c2345a136a1860d72c23fae63a1bebed5f798eac5ae341b9f64a9f2ea2e51ef2",
+          "outcome": "UNSUCCESSFUL"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "c2345a136a1860d72c23fae63a1bebed5f798eac5ae341b9f64a9f2ea2e51ef2",
+          "afterHash": "c2345a136a1860d72c23fae63a1bebed5f798eac5ae341b9f64a9f2ea2e51ef2",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-009",
+      "speechAct": "ANSWER_NAME",
+      "scenarioType": "name_answer",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "名札には「ソラ」と書いてあります。",
+        "speakerAIntent": "ask the listener name",
+        "speakerAUtterance": "お名前は？",
+        "expectedSpeechAct": "ANSWER_NAME",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "ソラです。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "ベトナムから来ました。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "3階です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "日曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs ANSWER_NAME for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "ベトナムから来ました。": "WRONG_SPEECH_ACT",
+          "3階です。": "WRONG_SPEECH_ACT",
+          "日曜日です。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "name_answer"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F400-CO-013-R1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: describe a home and say what is available.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【location_question】店でコピー用紙を探しています。\nA：店員にどう聞きますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "コピー用紙はどこですか。",
+        "お名前は？",
+        "日曜日ですか。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-013-R1",
+      "taskType": "expression",
+      "curriculumProvenance": {
+        "groundingState": "GROUNDING_VALIDATED_FROM_CATALOG",
+        "knowledgeUnitId": "A1-N07",
+        "sourceDocument": "TAI LIEU SACH/入門第7課.docx",
+        "persistenceState": "GROUNDING_EVIDENCE_MISSING"
+      },
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "5830e3031d25c52c8670e1c72b3e49773c9b6cf3b8c864c9857802f5f61b2aa1",
+          "afterHash": "5830e3031d25c52c8670e1c72b3e49773c9b6cf3b8c864c9857802f5f61b2aa1",
+          "outcome": "UNSUCCESSFUL"
+        },
+        {
+          "attempt": 2,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "5830e3031d25c52c8670e1c72b3e49773c9b6cf3b8c864c9857802f5f61b2aa1",
+          "afterHash": "5830e3031d25c52c8670e1c72b3e49773c9b6cf3b8c864c9857802f5f61b2aa1",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "DISTRACTOR_IMPLAUSIBLE",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-013",
+      "speechAct": "ASK_LOCATION",
+      "scenarioType": "location_question",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "店でコピー用紙を探しています。",
+        "speakerAIntent": "prompt for a location question",
+        "speakerAUtterance": "店員にどう聞きますか。",
+        "expectedSpeechAct": "ASK_LOCATION",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "コピー用紙はどこですか。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "お名前は？",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "日曜日ですか。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs ASK_LOCATION for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "お名前は？": "WRONG_SPEECH_ACT",
+          "日曜日ですか。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "location_question"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F400-CO-014-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: describe a home and say what is available.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【location_answer】案内メモ：切符＝受付\nA：切符はどこですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "受付です。",
+        "リンです。",
+        "土曜日です。",
+        "500円です。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-014-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "4e17b5a4ca480c67200217abb4fc432d8ed10907f8dc090a460060d6cea1bee0",
+          "afterHash": "0d5c482a9bb38b94b59cc0b901325a696c0faa656dfb0f3e6a5e1d9993abef42",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "0d5c482a9bb38b94b59cc0b901325a696c0faa656dfb0f3e6a5e1d9993abef42",
+          "afterHash": "0d5c482a9bb38b94b59cc0b901325a696c0faa656dfb0f3e6a5e1d9993abef42",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-014",
+      "speechAct": "ANSWER_LOCATION",
+      "scenarioType": "location_answer",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "案内メモ：切符＝受付",
+        "speakerAIntent": "ask where the target item/person is",
+        "speakerAUtterance": "切符はどこですか。",
+        "expectedSpeechAct": "ANSWER_LOCATION",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "受付です。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "リンです。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "土曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs ANSWER_LOCATION for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "リンです。": "WRONG_SPEECH_ACT",
+          "土曜日です。": "WRONG_SPEECH_ACT",
+          "500円です。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "location_answer"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F400-CO-015-M1-RCV2",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: describe a home and say what is available.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【location_question】店でノートを探しています。\nA：店員にどう聞きますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "ノートはどこですか。",
+        "お名前は？",
+        "日曜日ですか。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-015-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "cfbf7247d86409e24016626608235e744e2f56a16274f69f4daa602fe9958187",
+          "afterHash": "ce583b9df071a7a2c6b3e485494f6d9d05368836700cf9547e2def989c804588",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "SECOND_PLAUSIBLE_ANSWER",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "ce583b9df071a7a2c6b3e485494f6d9d05368836700cf9547e2def989c804588",
+          "afterHash": "ce583b9df071a7a2c6b3e485494f6d9d05368836700cf9547e2def989c804588",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "SECOND_PLAUSIBLE_ANSWER",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-015",
+      "speechAct": "ASK_LOCATION",
+      "scenarioType": "location_question",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "店でノートを探しています。",
+        "speakerAIntent": "prompt for a location question",
+        "speakerAUtterance": "店員にどう聞きますか。",
+        "expectedSpeechAct": "ASK_LOCATION",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "ノートはどこですか。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "お名前は？",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "日曜日ですか。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs ASK_LOCATION for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "お名前は？": "WRONG_SPEECH_ACT",
+          "日曜日ですか。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "location_question"
+      },
+      "recoveryAttempt": 2
+    },
+    {
+      "id": "A1-F500-CO-007-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: say which foods and drinks one likes.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【name_answer】名札には「リン」と書いてあります。\nA：お名前は？\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "リンです。",
+        "ベトナムから来ました。",
+        "3階です。",
+        "日曜日です。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v5",
+      "derivedFrom": "A1-F500-CO-007-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "daf80d846ee7f4cf9117af876e45c4e257fee9ef3a2150c2190a648300a0b137",
+          "afterHash": "aaf55eb6dd0333cc1141b804ed387f201b753a2a2188e1966a4f02519529aa96",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "aaf55eb6dd0333cc1141b804ed387f201b753a2a2188e1966a4f02519529aa96",
+          "afterHash": "aaf55eb6dd0333cc1141b804ed387f201b753a2a2188e1966a4f02519529aa96",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "DISTRACTOR_IMPLAUSIBLE",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F500-CO-007",
+      "speechAct": "ANSWER_NAME",
+      "scenarioType": "name_answer",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "名札には「リン」と書いてあります。",
+        "speakerAIntent": "ask the listener name",
+        "speakerAUtterance": "お名前は？",
+        "expectedSpeechAct": "ANSWER_NAME",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "リンです。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "ベトナムから来ました。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "3階です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "日曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs ANSWER_NAME for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "ベトナムから来ました。": "WRONG_SPEECH_ACT",
+          "3階です。": "WRONG_SPEECH_ACT",
+          "日曜日です。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "name_answer"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F500-CO-009-R1-RCV2",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: say which foods and drinks one likes.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【name_answer】名札には「ホア」と書いてあります。\nA：お名前は？\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "ホアです。",
+        "ベトナムから来ました。",
+        "3階です。",
+        "日曜日です。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v5",
+      "derivedFrom": "A1-F500-CO-009-R1",
+      "taskType": "expression",
+      "curriculumProvenance": {
+        "groundingState": "GROUNDING_VALIDATED_FROM_CATALOG",
+        "knowledgeUnitId": "A1-N05",
+        "sourceDocument": "TAI LIEU SACH/入門第5課.docx",
+        "persistenceState": "GROUNDING_EVIDENCE_MISSING"
+      },
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "ceaebd80dc6d8e9bb43b8a8f5360ee8813873d6c5ff0d6bdadac90e587d6d814",
+          "afterHash": "ceaebd80dc6d8e9bb43b8a8f5360ee8813873d6c5ff0d6bdadac90e587d6d814",
+          "outcome": "UNSUCCESSFUL"
+        },
+        {
+          "attempt": 2,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "ceaebd80dc6d8e9bb43b8a8f5360ee8813873d6c5ff0d6bdadac90e587d6d814",
+          "afterHash": "ceaebd80dc6d8e9bb43b8a8f5360ee8813873d6c5ff0d6bdadac90e587d6d814",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "DISTRACTOR_IMPLAUSIBLE",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F500-CO-009",
+      "speechAct": "ANSWER_NAME",
+      "scenarioType": "name_answer",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "名札には「ホア」と書いてあります。",
+        "speakerAIntent": "ask the listener name",
+        "speakerAUtterance": "お名前は？",
+        "expectedSpeechAct": "ANSWER_NAME",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "ホアです。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "ベトナムから来ました。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "3階です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "日曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs ANSWER_NAME for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "ベトナムから来ました。": "WRONG_SPEECH_ACT",
+          "3階です。": "WRONG_SPEECH_ACT",
+          "日曜日です。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "name_answer"
+      },
+      "recoveryAttempt": 2
+    },
+    {
+      "id": "A1-F500-CO-014-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: describe a home and say what is available.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【location_answer】案内メモ：切符＝会議室\nA：切符はどこですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "会議室です。",
+        "リンです。",
+        "土曜日です。",
+        "500円です。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v5",
+      "derivedFrom": "A1-F500-CO-014-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "8a1cba758bfbfa186eb28b4edc85fac086969acebbb02626eb118b8fa5d35e68",
+          "afterHash": "cec671d68e816dbe6f014e9afc8f53f5ddcf1c654919d0491287a613518278cf",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "cec671d68e816dbe6f014e9afc8f53f5ddcf1c654919d0491287a613518278cf",
+          "afterHash": "cec671d68e816dbe6f014e9afc8f53f5ddcf1c654919d0491287a613518278cf",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F500-CO-014",
+      "speechAct": "ANSWER_LOCATION",
+      "scenarioType": "location_answer",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "案内メモ：切符＝会議室",
+        "speakerAIntent": "ask where the target item/person is",
+        "speakerAUtterance": "切符はどこですか。",
+        "expectedSpeechAct": "ANSWER_LOCATION",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "会議室です。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "リンです。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "土曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs ANSWER_LOCATION for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "リンです。": "WRONG_SPEECH_ACT",
+          "土曜日です。": "WRONG_SPEECH_ACT",
+          "500円です。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "location_answer"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F600-CO-007-M1-RCV3",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: say which foods and drinks one likes.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【name_answer】名札には「ケン」と書いてあります。\nA：お名前は？\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "ケンです。",
+        "ベトナムから来ました。",
+        "3階です。",
+        "日曜日です。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v6",
+      "derivedFrom": "A1-F600-CO-007-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "633e34a2a556aa821c3fc6f60e094a33ca322b59caa34d1a5752c72408eed23e",
+          "afterHash": "ba909b016bf060861b7e13f7c37c8ad61f2c2db3662b26dda09fc64dcfe7309e",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "ba909b016bf060861b7e13f7c37c8ad61f2c2db3662b26dda09fc64dcfe7309e",
+          "afterHash": "ba909b016bf060861b7e13f7c37c8ad61f2c2db3662b26dda09fc64dcfe7309e",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "DISTRACTOR_IMPLAUSIBLE",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F600-CO-007",
+      "speechAct": "ANSWER_NAME",
+      "scenarioType": "name_answer",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "名札には「ケン」と書いてあります。",
+        "speakerAIntent": "ask the listener name",
+        "speakerAUtterance": "お名前は？",
+        "expectedSpeechAct": "ANSWER_NAME",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "ケンです。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "ベトナムから来ました。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "3階です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "日曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs ANSWER_NAME for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "ベトナムから来ました。": "WRONG_SPEECH_ACT",
+          "3階です。": "WRONG_SPEECH_ACT",
+          "日曜日です。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "name_answer"
+      },
+      "recoveryAttempt": 3
+    },
+    {
+      "id": "A1-F600-CO-014-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: describe a home and say what is available.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【location_answer】案内メモ：切符＝入口\nA：切符はどこですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "入口です。",
+        "リンです。",
+        "土曜日です。",
+        "500円です。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v6",
+      "derivedFrom": "A1-F600-CO-014-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "51d876581598c1ca502d72b253283f8ec93aa72d09f6213dd474cb39b87101e0",
+          "afterHash": "368dcd45b88a3614e32c0b890b8c3658dac022da01430ed57011602bf70ab05f",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "368dcd45b88a3614e32c0b890b8c3658dac022da01430ed57011602bf70ab05f",
+          "afterHash": "368dcd45b88a3614e32c0b890b8c3658dac022da01430ed57011602bf70ab05f",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F600-CO-014",
+      "speechAct": "ANSWER_LOCATION",
+      "scenarioType": "location_answer",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "案内メモ：切符＝入口",
+        "speakerAIntent": "ask where the target item/person is",
+        "speakerAUtterance": "切符はどこですか。",
+        "expectedSpeechAct": "ANSWER_LOCATION",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "入口です。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "リンです。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "土曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs ANSWER_LOCATION for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "リンです。": "WRONG_SPEECH_ACT",
+          "土曜日です。": "WRONG_SPEECH_ACT",
+          "500円です。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "location_answer"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F200-CE-005-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N04"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about family and where people live.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【location_answer】案内メモ：電池＝会議室\nA：電池はどこですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "会議室です。",
+        "リンです。",
+        "土曜日です。",
+        "500円です。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v2",
+      "derivedFrom": "A1-F200-CE-005-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "dfad9ce46cc1f6a3d9403f284f37eb755d071d7484f3c4a9c4fdf4fada3f129a",
+          "afterHash": "1f56e6b01fab2c5885764b3df0f79f18ba3dd9b38c80a869e2521faac87d3e7d",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "1f56e6b01fab2c5885764b3df0f79f18ba3dd9b38c80a869e2521faac87d3e7d",
+          "afterHash": "1f56e6b01fab2c5885764b3df0f79f18ba3dd9b38c80a869e2521faac87d3e7d",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F200-CE-005",
+      "speechAct": "ANSWER_LOCATION",
+      "scenarioType": "location_answer",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "案内メモ：電池＝会議室",
+        "speakerAIntent": "ask where the target item/person is",
+        "speakerAUtterance": "電池はどこですか。",
+        "expectedSpeechAct": "ANSWER_LOCATION",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "会議室です。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "リンです。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "土曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs ANSWER_LOCATION for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "リンです。": "WRONG_SPEECH_ACT",
+          "土曜日です。": "WRONG_SPEECH_ACT",
+          "500円です。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "location_answer"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F200-CE-011-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N06"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: order simple food and drinks at a shop or restaurant.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【order_confirmation】注文メモ：お茶を1つ\nA：お茶を1つですね。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "はい、お願いします。",
+        "リンです。",
+        "日曜日にしましょう。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v2",
+      "derivedFrom": "A1-F200-CE-011-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "eb365c86f3e7dd92728b9bbf75f0f453e5ea34f270634926f930ae3eb0807f23",
+          "afterHash": "c2213a8a3eb804fd0d8a48eb3f54c4bd52f99ced32719d23b9c1ad16bbb95363",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "c2213a8a3eb804fd0d8a48eb3f54c4bd52f99ced32719d23b9c1ad16bbb95363",
+          "afterHash": "c2213a8a3eb804fd0d8a48eb3f54c4bd52f99ced32719d23b9c1ad16bbb95363",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F200-CE-011",
+      "speechAct": "CONFIRM_ORDER",
+      "scenarioType": "order_confirmation",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "注文メモ：お茶を1つ",
+        "speakerAIntent": "confirm an order",
+        "speakerAUtterance": "お茶を1つですね。",
+        "expectedSpeechAct": "CONFIRM_ORDER",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "はい、お願いします。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "リンです。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "日曜日にしましょう。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs CONFIRM_ORDER for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "リンです。": "WRONG_SPEECH_ACT",
+          "日曜日にしましょう。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "order_confirmation"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F200-CE-022-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N10"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: make and understand simple workplace requests.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【thanks】Bさんが手伝ってくれました。\nA：これで大丈夫です。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "ありがとうございます。",
+        "いいえ、だめです。",
+        "3階です。",
+        "土曜日です。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v2",
+      "derivedFrom": "A1-F200-CE-022-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "4b2a2e4cb16fc906cc2caa7799fa5c4b929cf79e2ec67c7188e6e72394ce3383",
+          "afterHash": "b0e5fbe6b6fb4b78a3cc151ccc264fc13968497fa3f350a62c64894018ab84f7",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "b0e5fbe6b6fb4b78a3cc151ccc264fc13968497fa3f350a62c64894018ab84f7",
+          "afterHash": "b0e5fbe6b6fb4b78a3cc151ccc264fc13968497fa3f350a62c64894018ab84f7",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F200-CE-022",
+      "speechAct": "THANK",
+      "scenarioType": "thanks",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "Bさんが手伝ってくれました。",
+        "speakerAIntent": "receive help",
+        "speakerAUtterance": "これで大丈夫です。",
+        "expectedSpeechAct": "THANK",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "ありがとうございます。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "いいえ、だめです。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "3階です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "土曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs THANK for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "いいえ、だめです。": "WRONG_SPEECH_ACT",
+          "3階です。": "WRONG_SPEECH_ACT",
+          "土曜日です。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "thanks"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F200-CE-025-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N11"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: talk about hobbies and free-time activities.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【accept_invitation】1時30分はひまです。\nA：1時30分、一緒に行きませんか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "はい、行きましょう。",
+        "受付は3階です。",
+        "500円です。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v2",
+      "derivedFrom": "A1-F200-CE-025-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "999fcb8d54aa490d0453724f69c835e0be282dadd3a17441c73ec17f45e3b8e0",
+          "afterHash": "0b6eb8838e46f29a38f081815c1152a6c3ce2581d137622ff8b18e354d5db5f6",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "0b6eb8838e46f29a38f081815c1152a6c3ce2581d137622ff8b18e354d5db5f6",
+          "afterHash": "0b6eb8838e46f29a38f081815c1152a6c3ce2581d137622ff8b18e354d5db5f6",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F200-CE-025",
+      "speechAct": "ACCEPT_INVITATION",
+      "scenarioType": "accept_invitation",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "1時30分はひまです。",
+        "speakerAIntent": "invite the listener",
+        "speakerAUtterance": "1時30分、一緒に行きませんか。",
+        "expectedSpeechAct": "ACCEPT_INVITATION",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "はい、行きましょう。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "受付は3階です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs ACCEPT_INVITATION for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "受付は3階です。": "WRONG_SPEECH_ACT",
+          "500円です。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "accept_invitation"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F200-CE-032-M1-RCV2",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N13"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: ask about and follow simple transportation routes.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【location_question】店で電池を探しています。\nA：店員にどう聞きますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "電池はどこですか。",
+        "いくらですか。",
+        "お名前は？",
+        "日曜日ですか。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v2",
+      "derivedFrom": "A1-F200-CE-032-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "b7948956a6b47ea99732857cfe0181ae1db984602efb5f65c40cbc42378a62d6",
+          "afterHash": "374ba386f56da9080d876e6d545a253e6d2d2d09a845632ac01d73198a9faaf7",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "374ba386f56da9080d876e6d545a253e6d2d2d09a845632ac01d73198a9faaf7",
+          "afterHash": "374ba386f56da9080d876e6d545a253e6d2d2d09a845632ac01d73198a9faaf7",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F200-CE-032",
+      "speechAct": "ASK_LOCATION",
+      "scenarioType": "location_question",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "店で電池を探しています。",
+        "speakerAIntent": "prompt for a location question",
+        "speakerAUtterance": "店員にどう聞きますか。",
+        "expectedSpeechAct": "ASK_LOCATION",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "電池はどこですか。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "いくらですか。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "お名前は？",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "日曜日ですか。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs ASK_LOCATION for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "いくらですか。": "WRONG_SPEECH_ACT",
+          "お名前は？": "WRONG_SPEECH_ACT",
+          "日曜日ですか。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "location_question"
+      },
+      "recoveryAttempt": 2
+    },
+    {
+      "id": "A1-F200-CE-036-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N14"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: say what one wants to do at a destination.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【accept_invitation】4時はひまです。\nA：4時、一緒に行きませんか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "はい、行きましょう。",
+        "受付は3階です。",
+        "500円です。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v2",
+      "derivedFrom": "A1-F200-CE-036-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "857812e4ae2839d7227c6c9393d14135cd9a42c6af5326b9d82b0f7d36dbb249",
+          "afterHash": "7228a96b50822dd3f1f69d09bd213f064370cb89abf2f9715b427f05abe12a12",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "7228a96b50822dd3f1f69d09bd213f064370cb89abf2f9715b427f05abe12a12",
+          "afterHash": "7228a96b50822dd3f1f69d09bd213f064370cb89abf2f9715b427f05abe12a12",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F200-CE-036",
+      "speechAct": "ACCEPT_INVITATION",
+      "scenarioType": "accept_invitation",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "4時はひまです。",
+        "speakerAIntent": "invite the listener",
+        "speakerAUtterance": "4時、一緒に行きませんか。",
+        "expectedSpeechAct": "ACCEPT_INVITATION",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "はい、行きましょう。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "受付は3階です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs ACCEPT_INVITATION for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "受付は3階です。": "WRONG_SPEECH_ACT",
+          "500円です。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "accept_invitation"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F200-CE-048-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N18"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: say what one wants to experience in Japan.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【make_plan】予定メモ：3時に入口へ行きます。\nA：どう言いますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "3時に入口へ行きます。",
+        "リンです。",
+        "500円です。",
+        "事務所です。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v2",
+      "derivedFrom": "A1-F200-CE-048-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "0b85b3e39049bd20ad73181d27b2548597ba29d56747d13f19705a662d6350c2",
+          "afterHash": "d1abc47a6685474223344ab4bbd8a4dfc671a42a23148164e6fb3a77565037e1",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "d1abc47a6685474223344ab4bbd8a4dfc671a42a23148164e6fb3a77565037e1",
+          "afterHash": "d1abc47a6685474223344ab4bbd8a4dfc671a42a23148164e6fb3a77565037e1",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "DISTRACTOR_IMPLAUSIBLE",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F200-CE-048",
+      "speechAct": "MAKE_PLAN",
+      "scenarioType": "make_plan",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "予定メモ：3時に入口へ行きます。",
+        "speakerAIntent": "ask what plan should be said",
+        "speakerAUtterance": "どう言いますか。",
+        "expectedSpeechAct": "MAKE_PLAN",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "3時に入口へ行きます。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "リンです。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "事務所です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs MAKE_PLAN for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "リンです。": "WRONG_SPEECH_ACT",
+          "500円です。": "WRONG_SPEECH_ACT",
+          "事務所です。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "make_plan"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F400-CO-004-R1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N04"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about family and where people live.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【name_answer】名札には「キム」と書いてあります。\nA：お名前は？\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "キムです。",
+        "3階です。",
+        "日曜日です。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-004-R1",
+      "taskType": "expression",
+      "curriculumProvenance": {
+        "groundingState": "GROUNDING_VALIDATED_FROM_CATALOG",
+        "knowledgeUnitId": "A1-N04",
+        "sourceDocument": "TAI LIEU SACH/入門第4課.docx",
+        "persistenceState": "GROUNDING_EVIDENCE_MISSING"
+      },
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "ff308144ceb37bb0853e98cce4d491a7dcf5fd871ca4fd98d9ad27bc2f578ca7",
+          "afterHash": "ff308144ceb37bb0853e98cce4d491a7dcf5fd871ca4fd98d9ad27bc2f578ca7",
+          "outcome": "UNSUCCESSFUL"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "ff308144ceb37bb0853e98cce4d491a7dcf5fd871ca4fd98d9ad27bc2f578ca7",
+          "afterHash": "ff308144ceb37bb0853e98cce4d491a7dcf5fd871ca4fd98d9ad27bc2f578ca7",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-004",
+      "speechAct": "ANSWER_NAME",
+      "scenarioType": "name_answer",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "名札には「キム」と書いてあります。",
+        "speakerAIntent": "ask the listener name",
+        "speakerAUtterance": "お名前は？",
+        "expectedSpeechAct": "ANSWER_NAME",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "キムです。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "3階です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "日曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs ANSWER_NAME for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "3階です。": "WRONG_SPEECH_ACT",
+          "日曜日です。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "name_answer"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F400-CO-005-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N04"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about family and where people live.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【location_answer】案内メモ：ペン＝会議室\nA：ペンはどこですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "会議室です。",
+        "リンです。",
+        "土曜日です。",
+        "500円です。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-005-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "836748d349790c67e3db6ea99b013af4f02fc8cba01a8aabb44d493fca68682c",
+          "afterHash": "4f0915fb3e89cb179f0f6483c8d6f140b4b5989a05c8ad705e36e1f023543da8",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "4f0915fb3e89cb179f0f6483c8d6f140b4b5989a05c8ad705e36e1f023543da8",
+          "afterHash": "4f0915fb3e89cb179f0f6483c8d6f140b4b5989a05c8ad705e36e1f023543da8",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "DISTRACTOR_IMPLAUSIBLE",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-005",
+      "speechAct": "ANSWER_LOCATION",
+      "scenarioType": "location_answer",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "案内メモ：ペン＝会議室",
+        "speakerAIntent": "ask where the target item/person is",
+        "speakerAUtterance": "ペンはどこですか。",
+        "expectedSpeechAct": "ANSWER_LOCATION",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "会議室です。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "リンです。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "土曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs ANSWER_LOCATION for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "リンです。": "WRONG_SPEECH_ACT",
+          "土曜日です。": "WRONG_SPEECH_ACT",
+          "500円です。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "location_answer"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F400-CO-006-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N04"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about family and where people live.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【name_answer】名札には「ユリ」と書いてあります。\nA：お名前は？\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "ユリです。",
+        "3階です。",
+        "日曜日です。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-006-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "7a77a43c7f27f9b97e2cfb8ed6ce1382f289b9c50d79e7c05e0721fe12d32274",
+          "afterHash": "847f7c8c0e9fea3f15132dfcd8f99a4d7cd3052a41c9b273be8cc31f5a0e9fbf",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "847f7c8c0e9fea3f15132dfcd8f99a4d7cd3052a41c9b273be8cc31f5a0e9fbf",
+          "afterHash": "847f7c8c0e9fea3f15132dfcd8f99a4d7cd3052a41c9b273be8cc31f5a0e9fbf",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-006",
+      "speechAct": "ANSWER_NAME",
+      "scenarioType": "name_answer",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "名札には「ユリ」と書いてあります。",
+        "speakerAIntent": "ask the listener name",
+        "speakerAUtterance": "お名前は？",
+        "expectedSpeechAct": "ANSWER_NAME",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "ユリです。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "3階です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "日曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs ANSWER_NAME for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "3階です。": "WRONG_SPEECH_ACT",
+          "日曜日です。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "name_answer"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F400-CO-010-R1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N06"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: order simple food and drinks at a shop or restaurant.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【order_confirmation】注文メモ：魚セットを1つ\nA：魚セットを1つですね。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "はい、お願いします。",
+        "受付は3階です。",
+        "リンです。",
+        "日曜日にしましょう。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-010-R1",
+      "taskType": "expression",
+      "curriculumProvenance": {
+        "groundingState": "GROUNDING_VALIDATED_FROM_CATALOG",
+        "knowledgeUnitId": "A1-N06",
+        "sourceDocument": "TAI LIEU SACH/入門第6課.docx",
+        "persistenceState": "GROUNDING_EVIDENCE_MISSING"
+      },
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "ecd2e81cdcca174d9a9cd2717ad3afe5f588363b855c751bb9c7e850df94288e",
+          "afterHash": "ecd2e81cdcca174d9a9cd2717ad3afe5f588363b855c751bb9c7e850df94288e",
+          "outcome": "UNSUCCESSFUL"
+        },
+        {
+          "attempt": 2,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "ecd2e81cdcca174d9a9cd2717ad3afe5f588363b855c751bb9c7e850df94288e",
+          "afterHash": "ecd2e81cdcca174d9a9cd2717ad3afe5f588363b855c751bb9c7e850df94288e",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "DISTRACTOR_IMPLAUSIBLE",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-010",
+      "speechAct": "CONFIRM_ORDER",
+      "scenarioType": "order_confirmation",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "注文メモ：魚セットを1つ",
+        "speakerAIntent": "confirm an order",
+        "speakerAUtterance": "魚セットを1つですね。",
+        "expectedSpeechAct": "CONFIRM_ORDER",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "はい、お願いします。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "受付は3階です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "リンです。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "日曜日にしましょう。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs CONFIRM_ORDER for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "受付は3階です。": "WRONG_SPEECH_ACT",
+          "リンです。": "WRONG_SPEECH_ACT",
+          "日曜日にしましょう。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "order_confirmation"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F400-CO-011-R1-RCV2",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N06"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: order simple food and drinks at a shop or restaurant.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【order_confirmation】注文メモ：カレーを1つ\nA：カレーを1つですね。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "はい、お願いします。",
+        "リンです。",
+        "日曜日にしましょう。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-011-R1",
+      "taskType": "expression",
+      "curriculumProvenance": {
+        "groundingState": "GROUNDING_VALIDATED_FROM_CATALOG",
+        "knowledgeUnitId": "A1-N06",
+        "sourceDocument": "TAI LIEU SACH/入門第6課.docx",
+        "persistenceState": "GROUNDING_EVIDENCE_MISSING"
+      },
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "a718d62f1bd1d12bdae6f65e7f2c803f4e9418f7d082e9f9d48bef965ac15673",
+          "afterHash": "a718d62f1bd1d12bdae6f65e7f2c803f4e9418f7d082e9f9d48bef965ac15673",
+          "outcome": "UNSUCCESSFUL"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "a718d62f1bd1d12bdae6f65e7f2c803f4e9418f7d082e9f9d48bef965ac15673",
+          "afterHash": "a718d62f1bd1d12bdae6f65e7f2c803f4e9418f7d082e9f9d48bef965ac15673",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-011",
+      "speechAct": "CONFIRM_ORDER",
+      "scenarioType": "order_confirmation",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "注文メモ：カレーを1つ",
+        "speakerAIntent": "confirm an order",
+        "speakerAUtterance": "カレーを1つですね。",
+        "expectedSpeechAct": "CONFIRM_ORDER",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "はい、お願いします。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "リンです。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "日曜日にしましょう。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs CONFIRM_ORDER for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "リンです。": "WRONG_SPEECH_ACT",
+          "日曜日にしましょう。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "order_confirmation"
+      },
+      "recoveryAttempt": 2
+    },
+    {
+      "id": "A1-F400-CO-012-R1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N06"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: order simple food and drinks at a shop or restaurant.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【food_order】店で水を注文します。\nA：ご注文は？\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "水をください。",
+        "3階です。",
+        "リンです。",
+        "土曜日です。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-012-R1",
+      "taskType": "expression",
+      "curriculumProvenance": {
+        "groundingState": "GROUNDING_VALIDATED_FROM_CATALOG",
+        "knowledgeUnitId": "A1-N06",
+        "sourceDocument": "TAI LIEU SACH/入門第6課.docx",
+        "persistenceState": "GROUNDING_EVIDENCE_MISSING"
+      },
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "5502278ecd75085f8f50a02799808bc7aaa8259d99cc1c423a2aae750f27108a",
+          "afterHash": "5502278ecd75085f8f50a02799808bc7aaa8259d99cc1c423a2aae750f27108a",
+          "outcome": "UNSUCCESSFUL"
+        },
+        {
+          "attempt": 2,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "5502278ecd75085f8f50a02799808bc7aaa8259d99cc1c423a2aae750f27108a",
+          "afterHash": "5502278ecd75085f8f50a02799808bc7aaa8259d99cc1c423a2aae750f27108a",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "DISTRACTOR_IMPLAUSIBLE",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-012",
+      "speechAct": "ORDER_FOOD",
+      "scenarioType": "food_order",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "店で水を注文します。",
+        "speakerAIntent": "ask for the order",
+        "speakerAUtterance": "ご注文は？",
+        "expectedSpeechAct": "ORDER_FOOD",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "水をください。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "3階です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "リンです。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "土曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs ORDER_FOOD for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "3階です。": "WRONG_SPEECH_ACT",
+          "リンです。": "WRONG_SPEECH_ACT",
+          "土曜日です。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "food_order"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F400-CO-022-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N10"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: make and understand simple workplace requests.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【request_response】Aさんはノートを借りたいです。Bさんは貸すことができます。\nA：ノートを貸してください。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "はい、どうぞ。",
+        "ベトナムです。",
+        "何階ですか。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-022-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "4dedf8d580fc5b7906752919d171bfa5b058abd838217521371e6a9acd719496",
+          "afterHash": "bffcce84db550ffb5be34722ce34d456c1e2f657e93bcc38ab7f2c0fe00a6d47",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "bffcce84db550ffb5be34722ce34d456c1e2f657e93bcc38ab7f2c0fe00a6d47",
+          "afterHash": "bffcce84db550ffb5be34722ce34d456c1e2f657e93bcc38ab7f2c0fe00a6d47",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "DISTRACTOR_IMPLAUSIBLE",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-022",
+      "speechAct": "RESPOND_TO_REQUEST",
+      "scenarioType": "request_response",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "Aさんはノートを借りたいです。Bさんは貸すことができます。",
+        "speakerAIntent": "request an item",
+        "speakerAUtterance": "ノートを貸してください。",
+        "expectedSpeechAct": "RESPOND_TO_REQUEST",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "はい、どうぞ。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "ベトナムです。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "何階ですか。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs RESPOND_TO_REQUEST for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "ベトナムです。": "WRONG_SPEECH_ACT",
+          "何階ですか。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "request_response"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F400-CO-023-R1-RCV2",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N10"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: make and understand simple workplace requests.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【request_response】Aさんは切符を借りたいです。Bさんは貸すことができます。\nA：切符を貸してください。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "はい、どうぞ。",
+        "コーヒーをください。",
+        "ベトナムです。",
+        "何階ですか。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-023-R1",
+      "taskType": "expression",
+      "curriculumProvenance": {
+        "groundingState": "GROUNDING_VALIDATED_FROM_CATALOG",
+        "knowledgeUnitId": "A1-N10",
+        "sourceDocument": "TAI LIEU SACH/入門第10課.docx",
+        "persistenceState": "GROUNDING_EVIDENCE_MISSING"
+      },
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "2afd00bc471e5001d0203744322cf2f1061d8bf95abad752838abeb8266a4792",
+          "afterHash": "2afd00bc471e5001d0203744322cf2f1061d8bf95abad752838abeb8266a4792",
+          "outcome": "UNSUCCESSFUL"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "2afd00bc471e5001d0203744322cf2f1061d8bf95abad752838abeb8266a4792",
+          "afterHash": "2afd00bc471e5001d0203744322cf2f1061d8bf95abad752838abeb8266a4792",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-023",
+      "speechAct": "RESPOND_TO_REQUEST",
+      "scenarioType": "request_response",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "Aさんは切符を借りたいです。Bさんは貸すことができます。",
+        "speakerAIntent": "request an item",
+        "speakerAUtterance": "切符を貸してください。",
+        "expectedSpeechAct": "RESPOND_TO_REQUEST",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "はい、どうぞ。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "コーヒーをください。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "ベトナムです。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "何階ですか。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          }
+        ],
+        "correctResponseReason": "The response performs RESPOND_TO_REQUEST for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "コーヒーをください。": "WRONG_SPEECH_ACT",
+          "ベトナムです。": "WRONG_SPEECH_ACT",
+          "何階ですか。": "WRONG_SPEECH_ACT"
+        },
+        "scenarioType": "request_response"
+      },
+      "recoveryAttempt": 2
+    },
+    {
+      "id": "A1-F400-CO-024-M1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N10"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: make and understand simple workplace requests.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【borrow_request】机の上にコピー用紙があります。Aさんはそれを借りたいです。\nA：どう言いますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "コピー用紙を貸してください。",
+        "日曜日にしましょう。",
+        "500円です。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-024-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "9fd6559119e1c42558422e43d28247dbe553a492eec778c5ae4df8d1d43e1abe",
+          "afterHash": "a0ab1753cc0a3f4083a9168bcaa4698d4afadab48f3234a2522907824160ca63",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "a0ab1753cc0a3f4083a9168bcaa4698d4afadab48f3234a2522907824160ca63",
+          "afterHash": "a0ab1753cc0a3f4083a9168bcaa4698d4afadab48f3234a2522907824160ca63",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-024",
+      "speechAct": "MAKE_REQUEST",
+      "scenarioType": "borrow_request",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "机の上にコピー用紙があります。Aさんはそれを借りたいです。",
+        "speakerAIntent": "ask to borrow an item",
+        "speakerAUtterance": "どう言いますか。",
+        "expectedSpeechAct": "MAKE_REQUEST",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "コピー用紙を貸してください。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "日曜日にしましょう。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs MAKE_REQUEST for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "日曜日にしましょう。": "WRONG_SPEECH_ACT",
+          "500円です。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "borrow_request"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F400-CO-031-R1-RCV1",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N13"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: ask about and follow simple transportation routes.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【location_answer】案内メモ：ノート＝食堂\nA：ノートはどこですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "食堂です。",
+        "土曜日です。",
+        "500円です。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-031-R1",
+      "taskType": "expression",
+      "curriculumProvenance": {
+        "groundingState": "GROUNDING_VALIDATED_FROM_CATALOG",
+        "knowledgeUnitId": "A1-N13",
+        "sourceDocument": "TAI LIEU SACH/入門第13課.docx",
+        "persistenceState": "GROUNDING_EVIDENCE_MISSING"
+      },
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "50d4f416919d271d1cdfb7d3a014abba3c996f2a1f525c98047d826eb73c1499",
+          "afterHash": "50d4f416919d271d1cdfb7d3a014abba3c996f2a1f525c98047d826eb73c1499",
+          "outcome": "UNSUCCESSFUL"
+        },
+        {
+          "attempt": 2,
+          "scope": "DISTRACTOR_ONLY",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "DISTRACTOR_IMPLAUSIBLE",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "50d4f416919d271d1cdfb7d3a014abba3c996f2a1f525c98047d826eb73c1499",
+          "afterHash": "50d4f416919d271d1cdfb7d3a014abba3c996f2a1f525c98047d826eb73c1499",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "DISTRACTOR_IMPLAUSIBLE",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-031",
+      "speechAct": "ANSWER_LOCATION",
+      "scenarioType": "location_answer",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "案内メモ：ノート＝食堂",
+        "speakerAIntent": "ask where the target item/person is",
+        "speakerAUtterance": "ノートはどこですか。",
+        "expectedSpeechAct": "ANSWER_LOCATION",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "食堂です。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "土曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs ANSWER_LOCATION for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "土曜日です。": "WRONG_SPEECH_ACT",
+          "500円です。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "location_answer"
+      },
+      "recoveryAttempt": 1
+    },
+    {
+      "id": "A1-F400-CO-033-M1-RCV3",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N13"
+      ],
+      "canDo": "Can select an appropriate expression in a short exchange. Curriculum context: ask about and follow simple transportation routes.",
+      "instruction": "会話を よんで、いちばん いいものを えらんでください。",
+      "prompt": "【location_answer】案内メモ：ノート＝事務所\nA：ノートはどこですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "事務所です。",
+        "土曜日です。",
+        "500円です。",
+        "すみません、わかりません。"
+      ],
+      "answer": 0,
+      "source": "fresh200_v4",
+      "derivedFrom": "A1-F400-CO-033-M1",
+      "taskType": "expression",
+      "repairHistory": [
+        {
+          "attempt": 1,
+          "scope": "METADATA_ONLY",
+          "reasonCodes": [
+            "DECLARED_ALIGNMENT_CANONICALIZED"
+          ],
+          "changedFields": [
+            "taskType",
+            "canDo"
+          ],
+          "beforeHash": "7df26d5bc350510fb7935266da4d003b79a06639e996328811d0105a306ff495",
+          "afterHash": "cc886df41d8e3567db8bf2963269ae9a575e7a284a08468c79b846b619d88dc0",
+          "outcome": "APPLIED"
+        },
+        {
+          "attempt": 2,
+          "scope": "ANSWER_ORACLE_FIX",
+          "reasonCodes": [
+            "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+            "SEMANTIC_UNRESOLVED"
+          ],
+          "changedFields": [],
+          "beforeHash": "cc886df41d8e3567db8bf2963269ae9a575e7a284a08468c79b846b619d88dc0",
+          "afterHash": "cc886df41d8e3567db8bf2963269ae9a575e7a284a08468c79b846b619d88dc0",
+          "outcome": "UNSUCCESSFUL"
+        }
+      ],
+      "pipelineVersion": "A1_CE_RECOVERY_MACHINE_V1",
+      "approvalMode": "MACHINE",
+      "status": "RECOVERED_MACHINE_ACCEPTED",
+      "originalRejectionReasons": [
+        "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "SEMANTIC_UNRESOLVED"
+      ],
+      "sourceId": "A1-F400-CO-033",
+      "speechAct": "ANSWER_LOCATION",
+      "scenarioType": "location_answer",
+      "difficultyTarget": "A1",
+      "semanticRepresentation": {
+        "context": "案内メモ：ノート＝事務所",
+        "speakerAIntent": "ask where the target item/person is",
+        "speakerAUtterance": "ノートはどこですか。",
+        "expectedSpeechAct": "ANSWER_LOCATION",
+        "candidateResponses": [
+          {
+            "index": 0,
+            "text": "事務所です。",
+            "role": "CORRECT",
+            "failureReason": null
+          },
+          {
+            "index": 1,
+            "text": "土曜日です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 2,
+            "text": "500円です。",
+            "role": "DISTRACTOR",
+            "failureReason": "WRONG_SPEECH_ACT"
+          },
+          {
+            "index": 3,
+            "text": "すみません、わかりません。",
+            "role": "DISTRACTOR",
+            "failureReason": "DOES_NOT_ANSWER_QUESTION"
+          }
+        ],
+        "correctResponseReason": "The response performs ANSWER_LOCATION for the explicit context and utterance.",
+        "distractorFailureReasons": {
+          "土曜日です。": "WRONG_SPEECH_ACT",
+          "500円です。": "WRONG_SPEECH_ACT",
+          "すみません、わかりません。": "DOES_NOT_ANSWER_QUESTION"
+        },
+        "scenarioType": "location_answer"
+      },
+      "recoveryAttempt": 3
+    }
+  ]
+}

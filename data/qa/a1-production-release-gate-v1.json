@@ -1,0 +1,1754 @@
+{
+  "artifactVersion": "A1_PRODUCTION_RELEASE_GATE_V1",
+  "generatedAt": "2026-09-08T14:58:31.926Z",
+  "releaseBank": "data/production/releases/a1-machine-bank-v1.json",
+  "manifest": "data/production/releases/a1-machine-bank-v1.manifest.json",
+  "releaseManifest": {
+    "releaseId": "a1-machine-bank",
+    "releaseVersion": "v1",
+    "createdAt": "2026-09-08T14:58:31.926Z",
+    "questionCount": 486,
+    "sectionCounts": {
+      "conversation_expression": 80,
+      "listening": 138,
+      "reading": 114,
+      "script_vocabulary": 154
+    },
+    "categoryCounts": {
+      "announcement_instruction": 10,
+      "content_comprehension": 82,
+      "conversation": 115,
+      "expression": 80,
+      "information_search": 32,
+      "kanji_reading": 79,
+      "shop_public": 13,
+      "word_meaning": 44,
+      "word_usage": 31
+    },
+    "kuCounts": {
+      "A1-N03": 33,
+      "A1-N04": 38,
+      "A1-N05": 34,
+      "A1-N06": 32,
+      "A1-N07": 34,
+      "A1-N08": 32,
+      "A1-N09": 24,
+      "A1-N10": 31,
+      "A1-N11": 30,
+      "A1-N12": 30,
+      "A1-N13": 32,
+      "A1-N14": 29,
+      "A1-N15": 37,
+      "A1-N16": 21,
+      "A1-N17": 21,
+      "A1-N18": 28
+    },
+    "canDoCounts": {
+      "Can locate requested information in a short practical written text. Curriculum context: ask about and follow simple transportation routes.": 3,
+      "Can locate requested information in a short practical written text. Curriculum context: ask where a person is in a workplace.": 3,
+      "Can locate requested information in a short practical written text. Curriculum context: ask where a wanted item can be bought.": 3,
+      "Can locate requested information in a short practical written text. Curriculum context: describe a home and say what is available.": 1,
+      "Can locate requested information in a short practical written text. Curriculum context: introduce oneself and exchange basic identity information.": 6,
+      "Can locate requested information in a short practical written text. Curriculum context: invite someone and arrange a simple outing.": 5,
+      "Can locate requested information in a short practical written text. Curriculum context: make and understand simple workplace requests.": 1,
+      "Can locate requested information in a short practical written text. Curriculum context: say what one wants to do at a destination.": 1,
+      "Can locate requested information in a short practical written text. Curriculum context: talk simply about family and where people live.": 6,
+      "Can locate requested information in a short practical written text. Curriculum context: understand simple workplace times and schedules.": 3,
+      "Can recognize the reading of a Japanese kanji. Curriculum context: ask about and follow simple transportation routes.": 6,
+      "Can recognize the reading of a Japanese kanji. Curriculum context: ask prices and buy quantities of goods.": 4,
+      "Can recognize the reading of a Japanese kanji. Curriculum context: ask where a person is in a workplace.": 5,
+      "Can recognize the reading of a Japanese kanji. Curriculum context: ask where a wanted item can be bought.": 4,
+      "Can recognize the reading of a Japanese kanji. Curriculum context: describe a home and say what is available.": 5,
+      "Can recognize the reading of a Japanese kanji. Curriculum context: introduce oneself and exchange basic identity information.": 6,
+      "Can recognize the reading of a Japanese kanji. Curriculum context: invite someone and arrange a simple outing.": 5,
+      "Can recognize the reading of a Japanese kanji. Curriculum context: make and understand simple workplace requests.": 4,
+      "Can recognize the reading of a Japanese kanji. Curriculum context: order simple food and drinks at a shop or restaurant.": 5,
+      "Can recognize the reading of a Japanese kanji. Curriculum context: say what one wants to do at a destination.": 4,
+      "Can recognize the reading of a Japanese kanji. Curriculum context: say what one wants to experience in Japan.": 3,
+      "Can recognize the reading of a Japanese kanji. Curriculum context: say which foods and drinks one likes.": 6,
+      "Can recognize the reading of a Japanese kanji. Curriculum context: talk about hobbies and free-time activities.": 5,
+      "Can recognize the reading of a Japanese kanji. Curriculum context: talk simply about family and where people live.": 7,
+      "Can recognize the reading of a Japanese kanji. Curriculum context: talk simply about past days off.": 3,
+      "Can recognize the reading of a Japanese kanji. Curriculum context: understand simple workplace times and schedules.": 7,
+      "Can select a common A1 word that fits a short context. Curriculum context: ask about and follow simple transportation routes.": 3,
+      "Can select a common A1 word that fits a short context. Curriculum context: ask prices and buy quantities of goods.": 1,
+      "Can select a common A1 word that fits a short context. Curriculum context: ask where a person is in a workplace.": 1,
+      "Can select a common A1 word that fits a short context. Curriculum context: ask where a wanted item can be bought.": 2,
+      "Can select a common A1 word that fits a short context. Curriculum context: describe a home and say what is available.": 2,
+      "Can select a common A1 word that fits a short context. Curriculum context: introduce oneself and exchange basic identity information.": 3,
+      "Can select a common A1 word that fits a short context. Curriculum context: make and understand simple workplace requests.": 3,
+      "Can select a common A1 word that fits a short context. Curriculum context: order simple food and drinks at a shop or restaurant.": 3,
+      "Can select a common A1 word that fits a short context. Curriculum context: say what one wants to do at a destination.": 2,
+      "Can select a common A1 word that fits a short context. Curriculum context: say what one wants to experience in Japan.": 2,
+      "Can select a common A1 word that fits a short context. Curriculum context: say which foods and drinks one likes.": 3,
+      "Can select a common A1 word that fits a short context. Curriculum context: talk simply about family and where people live.": 2,
+      "Can select a common A1 word that fits a short context. Curriculum context: talk simply about past days off.": 1,
+      "Can select a common A1 word that fits a short context. Curriculum context: understand simple workplace times and schedules.": 3,
+      "Can select an appropriate expression in a short exchange. Curriculum context: ask about and follow simple transportation routes.": 5,
+      "Can select an appropriate expression in a short exchange. Curriculum context: ask prices and buy quantities of goods.": 3,
+      "Can select an appropriate expression in a short exchange. Curriculum context: ask where a person is in a workplace.": 5,
+      "Can select an appropriate expression in a short exchange. Curriculum context: ask where a wanted item can be bought.": 7,
+      "Can select an appropriate expression in a short exchange. Curriculum context: describe a home and say what is available.": 8,
+      "Can select an appropriate expression in a short exchange. Curriculum context: introduce oneself and exchange basic identity information.": 3,
+      "Can select an appropriate expression in a short exchange. Curriculum context: invite someone and arrange a simple outing.": 3,
+      "Can select an appropriate expression in a short exchange. Curriculum context: make and understand simple workplace requests.": 6,
+      "Can select an appropriate expression in a short exchange. Curriculum context: order simple food and drinks at a shop or restaurant.": 6,
+      "Can select an appropriate expression in a short exchange. Curriculum context: say what one wants to do at a destination.": 3,
+      "Can select an appropriate expression in a short exchange. Curriculum context: say what one wants to experience in Japan.": 3,
+      "Can select an appropriate expression in a short exchange. Curriculum context: say which foods and drinks one likes.": 8,
+      "Can select an appropriate expression in a short exchange. Curriculum context: talk about hobbies and free-time activities.": 3,
+      "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about family and where people live.": 6,
+      "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about past days off.": 7,
+      "Can select an appropriate expression in a short exchange. Curriculum context: understand simple workplace times and schedules.": 4,
+      "Can understand a simple spoken announcement or instruction. Curriculum context: ask about and follow simple transportation routes.": 1,
+      "Can understand a simple spoken announcement or instruction. Curriculum context: ask where a person is in a workplace.": 1,
+      "Can understand a simple spoken announcement or instruction. Curriculum context: make and understand simple workplace requests.": 5,
+      "Can understand a simple spoken announcement or instruction. Curriculum context: understand simple workplace times and schedules.": 3,
+      "Can understand key content in a short practical written text. Curriculum context: ask about and follow simple transportation routes.": 4,
+      "Can understand key content in a short practical written text. Curriculum context: ask prices and buy quantities of goods.": 5,
+      "Can understand key content in a short practical written text. Curriculum context: ask where a person is in a workplace.": 5,
+      "Can understand key content in a short practical written text. Curriculum context: ask where a wanted item can be bought.": 6,
+      "Can understand key content in a short practical written text. Curriculum context: describe a home and say what is available.": 5,
+      "Can understand key content in a short practical written text. Curriculum context: introduce oneself and exchange basic identity information.": 2,
+      "Can understand key content in a short practical written text. Curriculum context: invite someone and arrange a simple outing.": 3,
+      "Can understand key content in a short practical written text. Curriculum context: make and understand simple workplace requests.": 5,
+      "Can understand key content in a short practical written text. Curriculum context: order simple food and drinks at a shop or restaurant.": 5,
+      "Can understand key content in a short practical written text. Curriculum context: say what one wants to do at a destination.": 7,
+      "Can understand key content in a short practical written text. Curriculum context: say what one wants to experience in Japan.": 9,
+      "Can understand key content in a short practical written text. Curriculum context: say which foods and drinks one likes.": 7,
+      "Can understand key content in a short practical written text. Curriculum context: talk about hobbies and free-time activities.": 9,
+      "Can understand key content in a short practical written text. Curriculum context: talk simply about family and where people live.": 3,
+      "Can understand key content in a short practical written text. Curriculum context: talk simply about past days off.": 6,
+      "Can understand key content in a short practical written text. Curriculum context: understand simple workplace times and schedules.": 1,
+      "Can understand key information in a simple shop or public-service exchange. Curriculum context: ask prices and buy quantities of goods.": 2,
+      "Can understand key information in a simple shop or public-service exchange. Curriculum context: ask where a wanted item can be bought.": 2,
+      "Can understand key information in a simple shop or public-service exchange. Curriculum context: invite someone and arrange a simple outing.": 1,
+      "Can understand key information in a simple shop or public-service exchange. Curriculum context: order simple food and drinks at a shop or restaurant.": 8,
+      "Can understand key information in a simple spoken conversation. Curriculum context: ask about and follow simple transportation routes.": 7,
+      "Can understand key information in a simple spoken conversation. Curriculum context: ask prices and buy quantities of goods.": 3,
+      "Can understand key information in a simple spoken conversation. Curriculum context: ask where a person is in a workplace.": 9,
+      "Can understand key information in a simple spoken conversation. Curriculum context: ask where a wanted item can be bought.": 10,
+      "Can understand key information in a simple spoken conversation. Curriculum context: describe a home and say what is available.": 10,
+      "Can understand key information in a simple spoken conversation. Curriculum context: introduce oneself and exchange basic identity information.": 10,
+      "Can understand key information in a simple spoken conversation. Curriculum context: invite someone and arrange a simple outing.": 10,
+      "Can understand key information in a simple spoken conversation. Curriculum context: make and understand simple workplace requests.": 4,
+      "Can understand key information in a simple spoken conversation. Curriculum context: order simple food and drinks at a shop or restaurant.": 2,
+      "Can understand key information in a simple spoken conversation. Curriculum context: say what one wants to do at a destination.": 9,
+      "Can understand key information in a simple spoken conversation. Curriculum context: say what one wants to experience in Japan.": 9,
+      "Can understand key information in a simple spoken conversation. Curriculum context: say which foods and drinks one likes.": 7,
+      "Can understand key information in a simple spoken conversation. Curriculum context: talk about hobbies and free-time activities.": 9,
+      "Can understand key information in a simple spoken conversation. Curriculum context: talk simply about family and where people live.": 12,
+      "Can understand key information in a simple spoken conversation. Curriculum context: talk simply about past days off.": 3,
+      "Can understand key information in a simple spoken conversation. Curriculum context: understand simple workplace times and schedules.": 1,
+      "Can understand the meaning of a common A1 word. Curriculum context: ask about and follow simple transportation routes.": 3,
+      "Can understand the meaning of a common A1 word. Curriculum context: ask prices and buy quantities of goods.": 3,
+      "Can understand the meaning of a common A1 word. Curriculum context: ask where a person is in a workplace.": 3,
+      "Can understand the meaning of a common A1 word. Curriculum context: ask where a wanted item can be bought.": 3,
+      "Can understand the meaning of a common A1 word. Curriculum context: describe a home and say what is available.": 3,
+      "Can understand the meaning of a common A1 word. Curriculum context: introduce oneself and exchange basic identity information.": 3,
+      "Can understand the meaning of a common A1 word. Curriculum context: invite someone and arrange a simple outing.": 3,
+      "Can understand the meaning of a common A1 word. Curriculum context: make and understand simple workplace requests.": 3,
+      "Can understand the meaning of a common A1 word. Curriculum context: order simple food and drinks at a shop or restaurant.": 3,
+      "Can understand the meaning of a common A1 word. Curriculum context: say what one wants to do at a destination.": 3,
+      "Can understand the meaning of a common A1 word. Curriculum context: say what one wants to experience in Japan.": 2,
+      "Can understand the meaning of a common A1 word. Curriculum context: say which foods and drinks one likes.": 3,
+      "Can understand the meaning of a common A1 word. Curriculum context: talk about hobbies and free-time activities.": 4,
+      "Can understand the meaning of a common A1 word. Curriculum context: talk simply about family and where people live.": 2,
+      "Can understand the meaning of a common A1 word. Curriculum context: talk simply about past days off.": 1,
+      "Can understand the meaning of a common A1 word. Curriculum context: understand simple workplace times and schedules.": 2
+    },
+    "taskTypeCounts": {
+      "announcement_instruction": 10,
+      "content_comprehension": 82,
+      "conversation": 115,
+      "expression": 80,
+      "information_search": 32,
+      "kanji_reading": 79,
+      "shop_public": 13,
+      "word_meaning": 44,
+      "word_usage": 31
+    },
+    "originalMachineAcceptedCount": 447,
+    "recoveredCECount": 39,
+    "sourceArtifactHashes": {
+      "data/production/a1-machine-bank-release-candidate-v2.json": "4663b4b6131b54b1632bc14d5d1f9d0da559cd9f39060184e26379aab20b214d",
+      "data/qa/a1-bank-exam-simulation-report-v3.json": "2c750819746da467621d233cee80cfd7d73f90c08de232956025bec34b6e3f18",
+      "data/production/a1-ce-recovery-machine-accepted-v1.json": "1abf07acb263dc5d0723a4bd39260de7c85fb0936841787d4fae33817405ebf9"
+    },
+    "releaseBankHash": "3e83d4820a8513c4eaf4ed4d974e8ba92f1fb2484abb2e0e423b059871cdc079",
+    "qaEvidenceHashes": {
+      "data/qa/a1-fresh-800-machine-evidence.json": "84effaac22b1bf257f20cd23c55411dac18bf6b163686876fc92faf01c425080",
+      "data/qa/a1-ce-recovery-machine-evidence-v1.json": "4c13901c2f481d4d784c147335f2fa838d138db26f183b3112c15bc0f6809df5",
+      "data/qa/a1-ce-recovery-report-v1.json": "efd70ca3979464b71320c1d9466209d493d0720a3255bc396e3d82743e4761a7",
+      "data/qa/a1-bank-final-release-gate.json": "e2810d2be34aead308643885193edd0f7cc00f6c2a459e298822fd7b2567a2f4"
+    },
+    "assembler": {
+      "version": "EXAM_CHOICE_PERMUTATION_V1",
+      "codeHashes": {
+        "lib/exam-generator.ts": "0ee9ec5c3cb19e3c4c44dbe8b5be22cece4333caff0b6461afb138713b4968e1",
+        "lib/server/exam-choice-permutation.ts": "b84dc0058a90256e2c072f1861b1bbe652fcdb16df3c19c9c6f7a090d84b47b8",
+        "lib/server/a1-release-bank.ts": "0535d55862e0bcb6f71809dceed0f2ae8fbae0cf7d319710322744950a1549ef",
+        "app/api/v1/exams/route.ts": "ea8555953f85cb2e694abd075c2fc29c20334620b6bb6e255c6e46a743a9d06c",
+        "lib/server/server-scoring.ts": "c59626a0fdcfc4ff8732d78000f807cc7ad0f6b3827cd8cb33cbfa2b86fdfa7e"
+      }
+    },
+    "pipelineVersion": "A1_PRODUCTION_RELEASE_FREEZE_V1",
+    "releaseDecision": "A1_BANK_RELEASE_READY",
+    "approvalMode": "MACHINE",
+    "questionIds": [
+      "A1-F200-SV-001-R1",
+      "A1-F200-SV-002-R1",
+      "A1-F200-SV-003-R1-M1",
+      "A1-F200-SV-004-R1-M1",
+      "A1-F200-SV-005-R1",
+      "A1-F200-SV-006-R1",
+      "A1-F200-SV-007-R1-M1",
+      "A1-F200-SV-008-R1",
+      "A1-F200-SV-009-R1",
+      "A1-F200-SV-010-R1-M1",
+      "A1-F200-SV-011-R1-M1",
+      "A1-F200-SV-012-R1-M1",
+      "A1-F200-SV-013-R1",
+      "A1-F200-SV-014-R1-M1",
+      "A1-F200-SV-015-R1-M1",
+      "A1-F200-SV-016-R1",
+      "A1-F200-SV-017-R1-M1",
+      "A1-F200-SV-018-R1-M1",
+      "A1-F200-SV-019-R1",
+      "A1-F200-SV-020-R1",
+      "A1-F200-CE-001-M1",
+      "A1-F200-LI-002-M1",
+      "A1-F200-RE-002-R1",
+      "A1-F200-LI-003-M1",
+      "A1-F200-RE-003-M1",
+      "A1-F200-CE-004-M1",
+      "A1-F200-LI-004-M1",
+      "A1-F200-RE-004-R1",
+      "A1-F200-LI-005-M1",
+      "A1-F200-RE-005-M1",
+      "A1-F200-CE-006-M1",
+      "A1-F200-LI-006-M1",
+      "A1-F200-RE-006-R1",
+      "A1-F200-LI-007-M1",
+      "A1-F200-RE-007-M1",
+      "A1-F200-LI-008-M1",
+      "A1-F200-RE-008-M1",
+      "A1-F200-CE-009-M1",
+      "A1-F200-LI-009-M1",
+      "A1-F200-RE-009-M1",
+      "A1-F200-CE-010-M1",
+      "A1-F200-LI-010-M1",
+      "A1-F200-RE-010-M1",
+      "A1-F200-CE-012-M1",
+      "A1-F200-LI-012-M1",
+      "A1-F200-RE-012-M1",
+      "A1-F200-CE-013-M1",
+      "A1-F200-LI-013-M1",
+      "A1-F200-RE-013-M1",
+      "A1-F200-LI-014-M1",
+      "A1-F200-RE-014-M1",
+      "A1-F200-LI-015-R1",
+      "A1-F200-RE-015-M1",
+      "A1-F200-CE-016-M1",
+      "A1-F200-LI-016-M1",
+      "A1-F200-RE-016-R1",
+      "A1-F200-CE-017-M1",
+      "A1-F200-LI-017-M1",
+      "A1-F200-CE-018-M1",
+      "A1-F200-RE-018-R1",
+      "A1-F200-CE-019-R1",
+      "A1-F200-RE-019-R1",
+      "A1-F400-LI-049-R1",
+      "A1-F500-LI-006-M1",
+      "A1-F200-SV-021-R1",
+      "A1-F200-SV-022-R1",
+      "A1-F200-SV-024-R1",
+      "A1-F200-SV-025-R1-M1",
+      "A1-F200-SV-026-R1-M1",
+      "A1-F200-SV-027-R1-M1",
+      "A1-F200-SV-028-R1-M1",
+      "A1-F200-SV-029-R1",
+      "A1-F200-SV-030-R1",
+      "A1-F200-SV-031-R1-M1",
+      "A1-F200-SV-032-R1-M1",
+      "A1-F200-SV-033-R1",
+      "A1-F200-SV-034-R1-M1",
+      "A1-F200-SV-035-R1-M1",
+      "A1-F200-SV-036-R1",
+      "A1-F200-SV-037-R1",
+      "A1-F200-SV-038-R1",
+      "A1-F200-SV-039-R1",
+      "A1-F200-SV-040-R1",
+      "A1-F200-SV-041-R1",
+      "A1-F200-SV-042-R1",
+      "A1-F200-SV-043-R1",
+      "A1-F200-SV-044-R1-M1",
+      "A1-F200-SV-045-R1-M1",
+      "A1-F200-SV-046-R1-M1",
+      "A1-F200-SV-047-R1-M1",
+      "A1-F200-SV-048-R1-M1",
+      "A1-F200-SV-049-R1-M1",
+      "A1-F200-SV-050-R1-M1",
+      "A1-F200-LI-018-M1",
+      "A1-F200-LI-019-M1",
+      "A1-F200-RE-020-R1",
+      "A1-F200-RE-021-R1",
+      "A1-F200-LI-022-R1",
+      "A1-F200-CE-023-M1",
+      "A1-F200-LI-023-M1",
+      "A1-F200-RE-023-R1",
+      "A1-F200-CE-024-M1",
+      "A1-F200-LI-024-M1",
+      "A1-F200-RE-024-R1",
+      "A1-F200-CE-026-M1",
+      "A1-F200-LI-026-M1",
+      "A1-F200-RE-026-M1",
+      "A1-F200-CE-027-M1",
+      "A1-F200-LI-027-M1",
+      "A1-F200-RE-027-M1",
+      "A1-F200-CE-028-M1",
+      "A1-F200-LI-028-M1",
+      "A1-F200-RE-028-M1",
+      "A1-F200-CE-029-M1",
+      "A1-F200-LI-029-M1",
+      "A1-F200-RE-029-R1",
+      "A1-F200-CE-031-M1",
+      "A1-F200-LI-031-M1",
+      "A1-F200-RE-031-M1",
+      "A1-F200-LI-032-M1",
+      "A1-F200-RE-032-R1",
+      "A1-F200-CE-033-M1",
+      "A1-F200-LI-033-M1",
+      "A1-F200-RE-033-R1",
+      "A1-F200-CE-034-M1",
+      "A1-F200-LI-034-M1",
+      "A1-F200-RE-034-M1",
+      "A1-F200-CE-035-M1",
+      "A1-F200-LI-035-M1",
+      "A1-F200-RE-035-M1",
+      "A1-F200-LI-036-M1",
+      "A1-F200-RE-036-M1",
+      "A1-F200-CE-037-R1",
+      "A1-F200-LI-037-M1",
+      "A1-F200-RE-037-R1",
+      "A1-F200-CE-038-R1",
+      "A1-F200-LI-038-M1",
+      "A1-F200-RE-038-R1",
+      "A1-F200-CE-039-R1",
+      "A1-F200-LI-039-M1",
+      "A1-F200-RE-039-R1",
+      "A1-F200-CE-040-R1",
+      "A1-F200-CE-041-R1",
+      "A1-F200-CE-042-R1",
+      "A1-F200-LI-042-M1",
+      "A1-F200-RE-042-R1",
+      "A1-F200-LI-043-M1",
+      "A1-F200-RE-043-M1",
+      "A1-F200-LI-044-M1",
+      "A1-F200-RE-044-M1",
+      "A1-F200-LI-045-M1",
+      "A1-F200-RE-045-M1",
+      "A1-F200-CE-046-M1",
+      "A1-F200-LI-046-M1",
+      "A1-F200-RE-046-M1",
+      "A1-F200-CE-047-M1",
+      "A1-F200-LI-047-M1",
+      "A1-F200-RE-047-M1",
+      "A1-F200-LI-048-M1",
+      "A1-F200-RE-048-M1",
+      "A1-F200-CE-049-M1",
+      "A1-F200-LI-049-M1",
+      "A1-F200-RE-049-R1",
+      "A1-F200-LI-050-M1",
+      "A1-F200-RE-050-R1",
+      "A1-F400-SC-001-M1",
+      "A1-F400-SC-002-R1-M1",
+      "A1-F400-SC-003-M1",
+      "A1-F400-SC-006-M1",
+      "A1-F400-SC-007-R1-M1",
+      "A1-F400-SC-008-R1-M1",
+      "A1-F400-SC-009-M1",
+      "A1-F400-SC-011-R1",
+      "A1-F400-SC-012-M1",
+      "A1-F400-SC-015-M1",
+      "A1-F400-SC-020-M1",
+      "A1-F400-SC-022-R1",
+      "A1-F400-SC-023-M1",
+      "A1-F400-SC-024-R1-M1",
+      "A1-F400-SC-027-R1-M1",
+      "A1-F400-SC-028-R1-M1",
+      "A1-F400-SC-031-R1-M1",
+      "A1-F400-SC-032-R1-M1",
+      "A1-F400-SC-033-M1",
+      "A1-F400-SC-034-R1-M1",
+      "A1-F400-SC-035-R1",
+      "A1-F400-SC-038-M1",
+      "A1-F400-SC-039-R1-M1",
+      "A1-F400-SC-041-M1",
+      "A1-F400-SC-042-R1-M1",
+      "A1-F400-SC-044-M1",
+      "A1-F400-SC-046-R1-M1",
+      "A1-F400-SC-047-R1",
+      "A1-F400-SC-050-M1",
+      "A1-F400-CO-021-R1",
+      "A1-F400-CO-037-R1",
+      "A1-F400-LI-001-M1",
+      "A1-F400-LI-002-M1",
+      "A1-F400-LI-003-M1",
+      "A1-F400-LI-005-M1",
+      "A1-F400-LI-006-M1",
+      "A1-F400-LI-007-M1",
+      "A1-F400-LI-008-M1",
+      "A1-F400-LI-010-M1",
+      "A1-F400-LI-011-M1",
+      "A1-F400-LI-013-M1",
+      "A1-F400-LI-015-M1",
+      "A1-F400-LI-017-R1",
+      "A1-F400-LI-018-M1",
+      "A1-F400-LI-023-M1",
+      "A1-F400-LI-024-R1",
+      "A1-F400-LI-025-M1",
+      "A1-F400-LI-027-M1",
+      "A1-F400-LI-028-M1",
+      "A1-F400-LI-029-M1",
+      "A1-F400-LI-034-M1",
+      "A1-F400-LI-036-M1",
+      "A1-F400-LI-038-R1",
+      "A1-F400-LI-039-M1",
+      "A1-F400-LI-042-M1",
+      "A1-F400-LI-046-M1",
+      "A1-F400-LI-048-M1",
+      "A1-F400-LI-050-M1",
+      "A1-F400-RE-001-R1",
+      "A1-F400-RE-002-R1",
+      "A1-F400-RE-006-M1",
+      "A1-F400-RE-008-M1",
+      "A1-F400-RE-009-M1",
+      "A1-F400-RE-011-M1",
+      "A1-F400-RE-013-M1",
+      "A1-F400-RE-016-R1",
+      "A1-F400-RE-021-M1",
+      "A1-F400-RE-024-R1",
+      "A1-F400-RE-025-R1",
+      "A1-F400-RE-026-M1",
+      "A1-F400-RE-029-R1",
+      "A1-F400-RE-034-R1",
+      "A1-F400-RE-037-R1",
+      "A1-F400-RE-038-R1",
+      "A1-F400-RE-042-R1",
+      "A1-F400-RE-046-R1",
+      "A1-F400-RE-047-R1",
+      "A1-F400-RE-048-R1",
+      "A1-F500-SC-001-R1-M1",
+      "A1-F500-SC-002-R1-M1",
+      "A1-F500-SC-003-M1",
+      "A1-F500-SC-004-R1-M1",
+      "A1-F500-SC-005-R1-M1",
+      "A1-F500-SC-006-M1",
+      "A1-F500-SC-008-M1",
+      "A1-F500-SC-009-M1",
+      "A1-F500-SC-012-M1",
+      "A1-F500-SC-013-R1-M1",
+      "A1-F500-SC-014-R1-M1",
+      "A1-F500-SC-015-M1",
+      "A1-F500-SC-016-R1-M1",
+      "A1-F500-SC-017-R1-M1",
+      "A1-F500-SC-018-M1",
+      "A1-F500-SC-019-R1",
+      "A1-F500-SC-020-R1",
+      "A1-F500-SC-021-M1",
+      "A1-F500-SC-022-R1-M1",
+      "A1-F500-SC-023-M1",
+      "A1-F500-SC-024-M1",
+      "A1-F500-SC-026-R1-M1",
+      "A1-F500-SC-028-R1-M1",
+      "A1-F500-SC-029-R1-M1",
+      "A1-F500-SC-033-M1",
+      "A1-F500-SC-035-R1-M1",
+      "A1-F500-SC-036-R1",
+      "A1-F500-SC-038-R1-M1",
+      "A1-F500-SC-039-M1",
+      "A1-F500-SC-041-R1-M1",
+      "A1-F500-SC-044-R1-M1",
+      "A1-F500-SC-047-R1-M1",
+      "A1-F500-SC-048-R1",
+      "A1-F500-SC-049-R1",
+      "A1-F500-SC-050-M1",
+      "A1-F500-CO-017-M1",
+      "A1-F500-CO-021-R1",
+      "A1-F500-CO-037-R1",
+      "A1-F500-CO-038-R1",
+      "A1-F500-LI-001-M1",
+      "A1-F500-LI-002-M1",
+      "A1-F500-LI-003-M1",
+      "A1-F500-LI-004-M1",
+      "A1-F500-LI-005-M1",
+      "A1-F500-LI-008-M1",
+      "A1-F500-LI-010-M1",
+      "A1-F500-LI-011-M1",
+      "A1-F500-LI-012-M1",
+      "A1-F500-LI-013-M1",
+      "A1-F500-LI-014-M1",
+      "A1-F500-LI-015-M1",
+      "A1-F500-LI-017-M1",
+      "A1-F500-LI-018-M1",
+      "A1-F500-LI-023-M1",
+      "A1-F500-LI-024-R1",
+      "A1-F500-LI-025-M1",
+      "A1-F500-LI-026-M1",
+      "A1-F500-LI-027-M1",
+      "A1-F500-LI-028-R1",
+      "A1-F500-LI-029-M1",
+      "A1-F500-LI-031-R1",
+      "A1-F500-LI-032-M1",
+      "A1-F500-LI-034-M1",
+      "A1-F500-LI-035-M1",
+      "A1-F500-LI-036-M1",
+      "A1-F500-LI-037-R1",
+      "A1-F500-LI-038-R1",
+      "A1-F500-LI-039-M1",
+      "A1-F500-LI-042-M1",
+      "A1-F500-LI-046-M1",
+      "A1-F500-LI-047-M1",
+      "A1-F500-LI-049-R1",
+      "A1-F500-LI-050-M1",
+      "A1-F500-RE-001-R1",
+      "A1-F500-RE-003-R1",
+      "A1-F500-RE-006-M1",
+      "A1-F500-RE-008-M1",
+      "A1-F500-RE-009-M1",
+      "A1-F500-RE-011-M1",
+      "A1-F500-RE-013-M1",
+      "A1-F500-RE-016-R1",
+      "A1-F500-RE-024-R1",
+      "A1-F500-RE-025-R1",
+      "A1-F500-RE-026-M1",
+      "A1-F500-RE-027-M1",
+      "A1-F500-RE-030-M1",
+      "A1-F500-RE-032-R1",
+      "A1-F500-RE-034-R1",
+      "A1-F500-RE-035-R1",
+      "A1-F500-RE-038-R1",
+      "A1-F500-RE-042-R1",
+      "A1-F500-RE-044-M1",
+      "A1-F500-RE-046-R1",
+      "A1-F600-SC-001-R1-M1",
+      "A1-F600-SC-002-R1-M1",
+      "A1-F600-SC-003-R1-M1",
+      "A1-F600-SC-005-R1-M1",
+      "A1-F600-SC-006-R1-M1",
+      "A1-F600-SC-007-R1-M1",
+      "A1-F600-SC-008-R1-M1",
+      "A1-F600-SC-009-R1-M1",
+      "A1-F600-SC-010-R1-M1",
+      "A1-F600-SC-011-R1-M1",
+      "A1-F600-SC-012-R1-M1",
+      "A1-F600-SC-013-R1-M1",
+      "A1-F600-SC-014-R1-M1",
+      "A1-F600-SC-016-R1-M1",
+      "A1-F600-SC-017-R1-M1",
+      "A1-F600-SC-018-R1-M1",
+      "A1-F600-SC-020-R1-M1",
+      "A1-F600-SC-021-R1-M1",
+      "A1-F600-SC-022-R1-M1",
+      "A1-F600-SC-024-R1-M1",
+      "A1-F600-SC-025-R1",
+      "A1-F600-SC-026-R1-M1",
+      "A1-F600-SC-027-R1",
+      "A1-F600-SC-028-R1-M1",
+      "A1-F600-SC-030-R1-M1",
+      "A1-F600-SC-031-R1",
+      "A1-F600-SC-033-R1-M1",
+      "A1-F600-SC-034-R1-M1",
+      "A1-F600-SC-035-R1-M1",
+      "A1-F600-SC-036-R1-M1",
+      "A1-F600-SC-039-R1-M1",
+      "A1-F600-SC-040-R1-M1",
+      "A1-F600-SC-042-R1-M1",
+      "A1-F600-SC-043-R1-M1",
+      "A1-F600-SC-044-R1-M1",
+      "A1-F600-SC-045-R1",
+      "A1-F600-SC-046-R1-M1",
+      "A1-F600-SC-047-R1-M1",
+      "A1-F600-SC-048-R1-M1",
+      "A1-F600-SC-049-R1",
+      "A1-F600-SC-050-R1-M1",
+      "A1-F600-CO-001-M1",
+      "A1-F600-CO-002-M1",
+      "A1-F600-CO-017-M1",
+      "A1-F600-CO-021-R1",
+      "A1-F600-CO-037-R1",
+      "A1-F600-LI-001-M1",
+      "A1-F600-LI-002-M1",
+      "A1-F600-LI-003-M1",
+      "A1-F600-LI-004-M1",
+      "A1-F600-LI-006-M1",
+      "A1-F600-LI-008-M1",
+      "A1-F600-LI-009-M1",
+      "A1-F600-LI-010-M1",
+      "A1-F600-LI-012-M1",
+      "A1-F600-LI-015-R1",
+      "A1-F600-LI-016-R1",
+      "A1-F600-LI-020-M1",
+      "A1-F600-LI-021-R1",
+      "A1-F600-LI-023-M1",
+      "A1-F600-LI-025-R1",
+      "A1-F600-LI-026-R1",
+      "A1-F600-LI-028-R1",
+      "A1-F600-LI-031-M1",
+      "A1-F600-LI-032-M1",
+      "A1-F600-LI-034-R1",
+      "A1-F600-LI-035-R1",
+      "A1-F600-LI-036-R1",
+      "A1-F600-LI-037-M1",
+      "A1-F600-LI-038-M1",
+      "A1-F600-LI-039-M1",
+      "A1-F600-LI-040-M1",
+      "A1-F600-LI-041-M1",
+      "A1-F600-LI-042-M1",
+      "A1-F600-LI-043-M1",
+      "A1-F600-LI-044-M1",
+      "A1-F600-LI-046-M1",
+      "A1-F600-LI-047-R1",
+      "A1-F600-LI-048-R1",
+      "A1-F600-RE-001-M1",
+      "A1-F600-RE-002-R1",
+      "A1-F600-RE-003-R1",
+      "A1-F600-RE-004-R1",
+      "A1-F600-RE-008-M1",
+      "A1-F600-RE-009-R1",
+      "A1-F600-RE-011-M1",
+      "A1-F600-RE-012-M1",
+      "A1-F600-RE-015-R1",
+      "A1-F600-RE-016-R1",
+      "A1-F600-RE-019-M1",
+      "A1-F600-RE-020-R1",
+      "A1-F600-RE-022-M1",
+      "A1-F600-RE-023-R1",
+      "A1-F600-RE-024-R1",
+      "A1-F600-RE-026-M1",
+      "A1-F600-RE-028-R1",
+      "A1-F600-RE-029-M1",
+      "A1-F600-RE-030-M1",
+      "A1-F600-RE-031-R1",
+      "A1-F600-RE-032-R1",
+      "A1-F600-RE-035-M1",
+      "A1-F600-RE-036-M1",
+      "A1-F600-RE-037-R1",
+      "A1-F600-RE-038-M1",
+      "A1-F600-RE-041-R1",
+      "A1-F600-RE-042-R1",
+      "A1-F600-RE-043-M1",
+      "A1-F600-RE-044-M1",
+      "A1-F600-RE-046-R1",
+      "A1-F600-RE-047-M1",
+      "A1-F600-RE-048-M1",
+      "A1-F200-CE-043-R1-RCV1",
+      "A1-F200-CE-044-R1-RCV1",
+      "A1-F400-CO-043-M1-RCV1",
+      "A1-F400-CO-045-R1-RCV1",
+      "A1-F500-CO-044-M1-RCV1",
+      "A1-F600-CO-043-R1-RCV1",
+      "A1-F600-CO-045-M1-RCV1",
+      "A1-F200-CE-007-M1-RCV1",
+      "A1-F200-CE-008-M1-RCV1",
+      "A1-F200-CE-014-M1-RCV1",
+      "A1-F200-CE-015-M1-RCV1",
+      "A1-F400-CO-007-M1-RCV1",
+      "A1-F400-CO-009-R1-RCV1",
+      "A1-F400-CO-013-R1-RCV1",
+      "A1-F400-CO-014-M1-RCV1",
+      "A1-F400-CO-015-M1-RCV2",
+      "A1-F500-CO-007-M1-RCV1",
+      "A1-F500-CO-009-R1-RCV2",
+      "A1-F500-CO-014-M1-RCV1",
+      "A1-F600-CO-007-M1-RCV3",
+      "A1-F600-CO-014-M1-RCV1",
+      "A1-F200-CE-005-M1-RCV1",
+      "A1-F200-CE-011-M1-RCV1",
+      "A1-F200-CE-022-M1-RCV1",
+      "A1-F200-CE-025-M1-RCV1",
+      "A1-F200-CE-032-M1-RCV2",
+      "A1-F200-CE-036-M1-RCV1",
+      "A1-F200-CE-048-M1-RCV1",
+      "A1-F400-CO-004-R1-RCV1",
+      "A1-F400-CO-005-M1-RCV1",
+      "A1-F400-CO-006-M1-RCV1",
+      "A1-F400-CO-010-R1-RCV1",
+      "A1-F400-CO-011-R1-RCV2",
+      "A1-F400-CO-012-R1-RCV1",
+      "A1-F400-CO-022-M1-RCV1",
+      "A1-F400-CO-023-R1-RCV2",
+      "A1-F400-CO-024-M1-RCV1",
+      "A1-F400-CO-031-R1-RCV1",
+      "A1-F400-CO-033-M1-RCV3"
+    ],
+    "counts": {
+      "sections": {
+        "conversation_expression": 80,
+        "listening": 138,
+        "reading": 114,
+        "script_vocabulary": 154
+      },
+      "categories": {
+        "announcement_instruction": 10,
+        "content_comprehension": 82,
+        "conversation": 115,
+        "expression": 80,
+        "information_search": 32,
+        "kanji_reading": 79,
+        "shop_public": 13,
+        "word_meaning": 44,
+        "word_usage": 31
+      },
+      "knowledgeUnits": {
+        "A1-N03": 33,
+        "A1-N04": 38,
+        "A1-N05": 34,
+        "A1-N06": 32,
+        "A1-N07": 34,
+        "A1-N08": 32,
+        "A1-N09": 24,
+        "A1-N10": 31,
+        "A1-N11": 30,
+        "A1-N12": 30,
+        "A1-N13": 32,
+        "A1-N14": 29,
+        "A1-N15": 37,
+        "A1-N16": 21,
+        "A1-N17": 21,
+        "A1-N18": 28
+      },
+      "canDos": {
+        "Can locate requested information in a short practical written text. Curriculum context: ask about and follow simple transportation routes.": 3,
+        "Can locate requested information in a short practical written text. Curriculum context: ask where a person is in a workplace.": 3,
+        "Can locate requested information in a short practical written text. Curriculum context: ask where a wanted item can be bought.": 3,
+        "Can locate requested information in a short practical written text. Curriculum context: describe a home and say what is available.": 1,
+        "Can locate requested information in a short practical written text. Curriculum context: introduce oneself and exchange basic identity information.": 6,
+        "Can locate requested information in a short practical written text. Curriculum context: invite someone and arrange a simple outing.": 5,
+        "Can locate requested information in a short practical written text. Curriculum context: make and understand simple workplace requests.": 1,
+        "Can locate requested information in a short practical written text. Curriculum context: say what one wants to do at a destination.": 1,
+        "Can locate requested information in a short practical written text. Curriculum context: talk simply about family and where people live.": 6,
+        "Can locate requested information in a short practical written text. Curriculum context: understand simple workplace times and schedules.": 3,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: ask about and follow simple transportation routes.": 6,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: ask prices and buy quantities of goods.": 4,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: ask where a person is in a workplace.": 5,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: ask where a wanted item can be bought.": 4,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: describe a home and say what is available.": 5,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: introduce oneself and exchange basic identity information.": 6,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: invite someone and arrange a simple outing.": 5,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: make and understand simple workplace requests.": 4,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: order simple food and drinks at a shop or restaurant.": 5,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: say what one wants to do at a destination.": 4,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: say what one wants to experience in Japan.": 3,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: say which foods and drinks one likes.": 6,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: talk about hobbies and free-time activities.": 5,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: talk simply about family and where people live.": 7,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: talk simply about past days off.": 3,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: understand simple workplace times and schedules.": 7,
+        "Can select a common A1 word that fits a short context. Curriculum context: ask about and follow simple transportation routes.": 3,
+        "Can select a common A1 word that fits a short context. Curriculum context: ask prices and buy quantities of goods.": 1,
+        "Can select a common A1 word that fits a short context. Curriculum context: ask where a person is in a workplace.": 1,
+        "Can select a common A1 word that fits a short context. Curriculum context: ask where a wanted item can be bought.": 2,
+        "Can select a common A1 word that fits a short context. Curriculum context: describe a home and say what is available.": 2,
+        "Can select a common A1 word that fits a short context. Curriculum context: introduce oneself and exchange basic identity information.": 3,
+        "Can select a common A1 word that fits a short context. Curriculum context: make and understand simple workplace requests.": 3,
+        "Can select a common A1 word that fits a short context. Curriculum context: order simple food and drinks at a shop or restaurant.": 3,
+        "Can select a common A1 word that fits a short context. Curriculum context: say what one wants to do at a destination.": 2,
+        "Can select a common A1 word that fits a short context. Curriculum context: say what one wants to experience in Japan.": 2,
+        "Can select a common A1 word that fits a short context. Curriculum context: say which foods and drinks one likes.": 3,
+        "Can select a common A1 word that fits a short context. Curriculum context: talk simply about family and where people live.": 2,
+        "Can select a common A1 word that fits a short context. Curriculum context: talk simply about past days off.": 1,
+        "Can select a common A1 word that fits a short context. Curriculum context: understand simple workplace times and schedules.": 3,
+        "Can select an appropriate expression in a short exchange. Curriculum context: ask about and follow simple transportation routes.": 5,
+        "Can select an appropriate expression in a short exchange. Curriculum context: ask prices and buy quantities of goods.": 3,
+        "Can select an appropriate expression in a short exchange. Curriculum context: ask where a person is in a workplace.": 5,
+        "Can select an appropriate expression in a short exchange. Curriculum context: ask where a wanted item can be bought.": 7,
+        "Can select an appropriate expression in a short exchange. Curriculum context: describe a home and say what is available.": 8,
+        "Can select an appropriate expression in a short exchange. Curriculum context: introduce oneself and exchange basic identity information.": 3,
+        "Can select an appropriate expression in a short exchange. Curriculum context: invite someone and arrange a simple outing.": 3,
+        "Can select an appropriate expression in a short exchange. Curriculum context: make and understand simple workplace requests.": 6,
+        "Can select an appropriate expression in a short exchange. Curriculum context: order simple food and drinks at a shop or restaurant.": 6,
+        "Can select an appropriate expression in a short exchange. Curriculum context: say what one wants to do at a destination.": 3,
+        "Can select an appropriate expression in a short exchange. Curriculum context: say what one wants to experience in Japan.": 3,
+        "Can select an appropriate expression in a short exchange. Curriculum context: say which foods and drinks one likes.": 8,
+        "Can select an appropriate expression in a short exchange. Curriculum context: talk about hobbies and free-time activities.": 3,
+        "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about family and where people live.": 6,
+        "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about past days off.": 7,
+        "Can select an appropriate expression in a short exchange. Curriculum context: understand simple workplace times and schedules.": 4,
+        "Can understand a simple spoken announcement or instruction. Curriculum context: ask about and follow simple transportation routes.": 1,
+        "Can understand a simple spoken announcement or instruction. Curriculum context: ask where a person is in a workplace.": 1,
+        "Can understand a simple spoken announcement or instruction. Curriculum context: make and understand simple workplace requests.": 5,
+        "Can understand a simple spoken announcement or instruction. Curriculum context: understand simple workplace times and schedules.": 3,
+        "Can understand key content in a short practical written text. Curriculum context: ask about and follow simple transportation routes.": 4,
+        "Can understand key content in a short practical written text. Curriculum context: ask prices and buy quantities of goods.": 5,
+        "Can understand key content in a short practical written text. Curriculum context: ask where a person is in a workplace.": 5,
+        "Can understand key content in a short practical written text. Curriculum context: ask where a wanted item can be bought.": 6,
+        "Can understand key content in a short practical written text. Curriculum context: describe a home and say what is available.": 5,
+        "Can understand key content in a short practical written text. Curriculum context: introduce oneself and exchange basic identity information.": 2,
+        "Can understand key content in a short practical written text. Curriculum context: invite someone and arrange a simple outing.": 3,
+        "Can understand key content in a short practical written text. Curriculum context: make and understand simple workplace requests.": 5,
+        "Can understand key content in a short practical written text. Curriculum context: order simple food and drinks at a shop or restaurant.": 5,
+        "Can understand key content in a short practical written text. Curriculum context: say what one wants to do at a destination.": 7,
+        "Can understand key content in a short practical written text. Curriculum context: say what one wants to experience in Japan.": 9,
+        "Can understand key content in a short practical written text. Curriculum context: say which foods and drinks one likes.": 7,
+        "Can understand key content in a short practical written text. Curriculum context: talk about hobbies and free-time activities.": 9,
+        "Can understand key content in a short practical written text. Curriculum context: talk simply about family and where people live.": 3,
+        "Can understand key content in a short practical written text. Curriculum context: talk simply about past days off.": 6,
+        "Can understand key content in a short practical written text. Curriculum context: understand simple workplace times and schedules.": 1,
+        "Can understand key information in a simple shop or public-service exchange. Curriculum context: ask prices and buy quantities of goods.": 2,
+        "Can understand key information in a simple shop or public-service exchange. Curriculum context: ask where a wanted item can be bought.": 2,
+        "Can understand key information in a simple shop or public-service exchange. Curriculum context: invite someone and arrange a simple outing.": 1,
+        "Can understand key information in a simple shop or public-service exchange. Curriculum context: order simple food and drinks at a shop or restaurant.": 8,
+        "Can understand key information in a simple spoken conversation. Curriculum context: ask about and follow simple transportation routes.": 7,
+        "Can understand key information in a simple spoken conversation. Curriculum context: ask prices and buy quantities of goods.": 3,
+        "Can understand key information in a simple spoken conversation. Curriculum context: ask where a person is in a workplace.": 9,
+        "Can understand key information in a simple spoken conversation. Curriculum context: ask where a wanted item can be bought.": 10,
+        "Can understand key information in a simple spoken conversation. Curriculum context: describe a home and say what is available.": 10,
+        "Can understand key information in a simple spoken conversation. Curriculum context: introduce oneself and exchange basic identity information.": 10,
+        "Can understand key information in a simple spoken conversation. Curriculum context: invite someone and arrange a simple outing.": 10,
+        "Can understand key information in a simple spoken conversation. Curriculum context: make and understand simple workplace requests.": 4,
+        "Can understand key information in a simple spoken conversation. Curriculum context: order simple food and drinks at a shop or restaurant.": 2,
+        "Can understand key information in a simple spoken conversation. Curriculum context: say what one wants to do at a destination.": 9,
+        "Can understand key information in a simple spoken conversation. Curriculum context: say what one wants to experience in Japan.": 9,
+        "Can understand key information in a simple spoken conversation. Curriculum context: say which foods and drinks one likes.": 7,
+        "Can understand key information in a simple spoken conversation. Curriculum context: talk about hobbies and free-time activities.": 9,
+        "Can understand key information in a simple spoken conversation. Curriculum context: talk simply about family and where people live.": 12,
+        "Can understand key information in a simple spoken conversation. Curriculum context: talk simply about past days off.": 3,
+        "Can understand key information in a simple spoken conversation. Curriculum context: understand simple workplace times and schedules.": 1,
+        "Can understand the meaning of a common A1 word. Curriculum context: ask about and follow simple transportation routes.": 3,
+        "Can understand the meaning of a common A1 word. Curriculum context: ask prices and buy quantities of goods.": 3,
+        "Can understand the meaning of a common A1 word. Curriculum context: ask where a person is in a workplace.": 3,
+        "Can understand the meaning of a common A1 word. Curriculum context: ask where a wanted item can be bought.": 3,
+        "Can understand the meaning of a common A1 word. Curriculum context: describe a home and say what is available.": 3,
+        "Can understand the meaning of a common A1 word. Curriculum context: introduce oneself and exchange basic identity information.": 3,
+        "Can understand the meaning of a common A1 word. Curriculum context: invite someone and arrange a simple outing.": 3,
+        "Can understand the meaning of a common A1 word. Curriculum context: make and understand simple workplace requests.": 3,
+        "Can understand the meaning of a common A1 word. Curriculum context: order simple food and drinks at a shop or restaurant.": 3,
+        "Can understand the meaning of a common A1 word. Curriculum context: say what one wants to do at a destination.": 3,
+        "Can understand the meaning of a common A1 word. Curriculum context: say what one wants to experience in Japan.": 2,
+        "Can understand the meaning of a common A1 word. Curriculum context: say which foods and drinks one likes.": 3,
+        "Can understand the meaning of a common A1 word. Curriculum context: talk about hobbies and free-time activities.": 4,
+        "Can understand the meaning of a common A1 word. Curriculum context: talk simply about family and where people live.": 2,
+        "Can understand the meaning of a common A1 word. Curriculum context: talk simply about past days off.": 1,
+        "Can understand the meaning of a common A1 word. Curriculum context: understand simple workplace times and schedules.": 2
+      },
+      "taskTypes": {
+        "announcement_instruction": 10,
+        "content_comprehension": 82,
+        "conversation": 115,
+        "expression": 80,
+        "information_search": 32,
+        "kanji_reading": 79,
+        "shop_public": 13,
+        "word_meaning": 44,
+        "word_usage": 31
+      }
+    }
+  },
+  "runtimePathAudit": [
+    {
+      "layer": "QUESTION_BANK",
+      "file": "data/production/releases/a1-machine-bank-v1.json",
+      "classification": "ACTIVE_PRODUCTION_PATH"
+    },
+    {
+      "layer": "QUESTION_PROVIDER",
+      "file": "lib/server/a1-release-bank.ts",
+      "classification": "ACTIVE_PRODUCTION_PATH"
+    },
+    {
+      "layer": "EXAM_ASSEMBLY",
+      "file": "app/api/v1/exams/route.ts",
+      "classification": "ACTIVE_PRODUCTION_PATH"
+    },
+    {
+      "layer": "EXAM_ASSEMBLY",
+      "file": "lib/exam-generator.ts",
+      "classification": "ACTIVE_PRODUCTION_PATH"
+    },
+    {
+      "layer": "EXAM_INSTANCE",
+      "file": "lib/server/exam-choice-permutation.ts",
+      "classification": "ACTIVE_PRODUCTION_PATH"
+    },
+    {
+      "layer": "SESSION",
+      "file": "app/api/v1/sessions/route.ts",
+      "classification": "ACTIVE_PRODUCTION_PATH"
+    },
+    {
+      "layer": "FRONTEND_PAYLOAD",
+      "file": "lib/server/candidate-question.ts",
+      "classification": "ACTIVE_PRODUCTION_PATH"
+    },
+    {
+      "layer": "SCORING",
+      "file": "lib/server/server-scoring.ts",
+      "classification": "ACTIVE_PRODUCTION_PATH"
+    },
+    {
+      "layer": "LEGACY_BANK",
+      "file": "data/questions.ts",
+      "classification": "MIGRATION_REQUIRED"
+    },
+    {
+      "layer": "LEGACY_BANK",
+      "file": "data/question-bank-expansion.ts",
+      "classification": "MIGRATION_REQUIRED"
+    },
+    {
+      "layer": "LEGACY_BANK",
+      "file": "data/production/mass-question-candidates.ts",
+      "classification": "MIGRATION_REQUIRED"
+    },
+    {
+      "layer": "TEST_DATA",
+      "file": "data/CONTROLLED_A1_FRESH_200_V3.json through V6",
+      "classification": "LEGACY_UNUSED"
+    }
+  ],
+  "summary": {
+    "releaseBankCount": 486,
+    "releaseBankHash": "3e83d4820a8513c4eaf4ed4d974e8ba92f1fb2484abb2e0e423b059871cdc079",
+    "sectionDistribution": {
+      "conversation_expression": 80,
+      "listening": 138,
+      "reading": 114,
+      "script_vocabulary": 154
+    },
+    "ceCount": 80,
+    "runtimeSourceBefore": "repository listQuestions from legacy seedQuestions or Supabase questions table",
+    "runtimeSourceAfter": "A1-only exam publish uses A1ReleaseBankProvider -> a1-machine-bank-v1.json",
+    "stress": {
+      "examCount": 1000,
+      "totalQuestionInstances": 50000,
+      "examGenerationFailures": 0,
+      "pass": 1000,
+      "fail": 0,
+      "scoringMismatches": 0,
+      "duplicateWithinForm": 0,
+      "answerPositions": {
+        "A": 13000,
+        "B": 13000,
+        "C": 12000,
+        "D": 12000
+      },
+      "sectionCounts": {
+        "conversation_expression": 12000,
+        "listening": 13000,
+        "reading": 12000,
+        "script_vocabulary": 13000
+      },
+      "kuCounts": {
+        "A1-N03": 3206,
+        "A1-N04": 3919,
+        "A1-N05": 3699,
+        "A1-N06": 3269,
+        "A1-N07": 3664,
+        "A1-N08": 3277,
+        "A1-N09": 2444,
+        "A1-N10": 3176,
+        "A1-N11": 3017,
+        "A1-N12": 3012,
+        "A1-N13": 3183,
+        "A1-N14": 2914,
+        "A1-N15": 3870,
+        "A1-N16": 2091,
+        "A1-N17": 2411,
+        "A1-N18": 2848
+      },
+      "canDoCounts": {
+        "Can locate requested information in a short practical written text. Curriculum context: ask about and follow simple transportation routes.": 321,
+        "Can locate requested information in a short practical written text. Curriculum context: ask where a person is in a workplace.": 318,
+        "Can locate requested information in a short practical written text. Curriculum context: ask where a wanted item can be bought.": 347,
+        "Can locate requested information in a short practical written text. Curriculum context: describe a home and say what is available.": 119,
+        "Can locate requested information in a short practical written text. Curriculum context: introduce oneself and exchange basic identity information.": 640,
+        "Can locate requested information in a short practical written text. Curriculum context: invite someone and arrange a simple outing.": 533,
+        "Can locate requested information in a short practical written text. Curriculum context: make and understand simple workplace requests.": 108,
+        "Can locate requested information in a short practical written text. Curriculum context: say what one wants to do at a destination.": 94,
+        "Can locate requested information in a short practical written text. Curriculum context: talk simply about family and where people live.": 649,
+        "Can locate requested information in a short practical written text. Curriculum context: understand simple workplace times and schedules.": 327,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: ask about and follow simple transportation routes.": 510,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: ask prices and buy quantities of goods.": 323,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: ask where a person is in a workplace.": 402,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: ask where a wanted item can be bought.": 342,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: describe a home and say what is available.": 429,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: introduce oneself and exchange basic identity information.": 501,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: invite someone and arrange a simple outing.": 418,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: make and understand simple workplace requests.": 339,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: order simple food and drinks at a shop or restaurant.": 456,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: say what one wants to do at a destination.": 342,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: say what one wants to experience in Japan.": 221,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: say which foods and drinks one likes.": 535,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: talk about hobbies and free-time activities.": 466,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: talk simply about family and where people live.": 579,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: talk simply about past days off.": 256,
+        "Can recognize the reading of a Japanese kanji. Curriculum context: understand simple workplace times and schedules.": 546,
+        "Can select a common A1 word that fits a short context. Curriculum context: ask about and follow simple transportation routes.": 266,
+        "Can select a common A1 word that fits a short context. Curriculum context: ask prices and buy quantities of goods.": 94,
+        "Can select a common A1 word that fits a short context. Curriculum context: ask where a person is in a workplace.": 92,
+        "Can select a common A1 word that fits a short context. Curriculum context: ask where a wanted item can be bought.": 163,
+        "Can select a common A1 word that fits a short context. Curriculum context: describe a home and say what is available.": 173,
+        "Can select a common A1 word that fits a short context. Curriculum context: introduce oneself and exchange basic identity information.": 253,
+        "Can select a common A1 word that fits a short context. Curriculum context: make and understand simple workplace requests.": 257,
+        "Can select a common A1 word that fits a short context. Curriculum context: order simple food and drinks at a shop or restaurant.": 250,
+        "Can select a common A1 word that fits a short context. Curriculum context: say what one wants to do at a destination.": 196,
+        "Can select a common A1 word that fits a short context. Curriculum context: say what one wants to experience in Japan.": 176,
+        "Can select a common A1 word that fits a short context. Curriculum context: say which foods and drinks one likes.": 266,
+        "Can select a common A1 word that fits a short context. Curriculum context: talk simply about family and where people live.": 162,
+        "Can select a common A1 word that fits a short context. Curriculum context: talk simply about past days off.": 87,
+        "Can select a common A1 word that fits a short context. Curriculum context: understand simple workplace times and schedules.": 270,
+        "Can select an appropriate expression in a short exchange. Curriculum context: ask about and follow simple transportation routes.": 695,
+        "Can select an appropriate expression in a short exchange. Curriculum context: ask prices and buy quantities of goods.": 464,
+        "Can select an appropriate expression in a short exchange. Curriculum context: ask where a person is in a workplace.": 711,
+        "Can select an appropriate expression in a short exchange. Curriculum context: ask where a wanted item can be bought.": 1033,
+        "Can select an appropriate expression in a short exchange. Curriculum context: describe a home and say what is available.": 1233,
+        "Can select an appropriate expression in a short exchange. Curriculum context: introduce oneself and exchange basic identity information.": 462,
+        "Can select an appropriate expression in a short exchange. Curriculum context: invite someone and arrange a simple outing.": 442,
+        "Can select an appropriate expression in a short exchange. Curriculum context: make and understand simple workplace requests.": 896,
+        "Can select an appropriate expression in a short exchange. Curriculum context: order simple food and drinks at a shop or restaurant.": 882,
+        "Can select an appropriate expression in a short exchange. Curriculum context: say what one wants to do at a destination.": 469,
+        "Can select an appropriate expression in a short exchange. Curriculum context: say what one wants to experience in Japan.": 435,
+        "Can select an appropriate expression in a short exchange. Curriculum context: say which foods and drinks one likes.": 1240,
+        "Can select an appropriate expression in a short exchange. Curriculum context: talk about hobbies and free-time activities.": 455,
+        "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about family and where people live.": 905,
+        "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about past days off.": 1071,
+        "Can select an appropriate expression in a short exchange. Curriculum context: understand simple workplace times and schedules.": 607,
+        "Can understand a simple spoken announcement or instruction. Curriculum context: ask about and follow simple transportation routes.": 105,
+        "Can understand a simple spoken announcement or instruction. Curriculum context: ask where a person is in a workplace.": 102,
+        "Can understand a simple spoken announcement or instruction. Curriculum context: make and understand simple workplace requests.": 466,
+        "Can understand a simple spoken announcement or instruction. Curriculum context: understand simple workplace times and schedules.": 252,
+        "Can understand key content in a short practical written text. Curriculum context: ask about and follow simple transportation routes.": 397,
+        "Can understand key content in a short practical written text. Curriculum context: ask prices and buy quantities of goods.": 495,
+        "Can understand key content in a short practical written text. Curriculum context: ask where a person is in a workplace.": 522,
+        "Can understand key content in a short practical written text. Curriculum context: ask where a wanted item can be bought.": 630,
+        "Can understand key content in a short practical written text. Curriculum context: describe a home and say what is available.": 490,
+        "Can understand key content in a short practical written text. Curriculum context: introduce oneself and exchange basic identity information.": 190,
+        "Can understand key content in a short practical written text. Curriculum context: invite someone and arrange a simple outing.": 323,
+        "Can understand key content in a short practical written text. Curriculum context: make and understand simple workplace requests.": 502,
+        "Can understand key content in a short practical written text. Curriculum context: order simple food and drinks at a shop or restaurant.": 514,
+        "Can understand key content in a short practical written text. Curriculum context: say what one wants to do at a destination.": 735,
+        "Can understand key content in a short practical written text. Curriculum context: say what one wants to experience in Japan.": 954,
+        "Can understand key content in a short practical written text. Curriculum context: say which foods and drinks one likes.": 769,
+        "Can understand key content in a short practical written text. Curriculum context: talk about hobbies and free-time activities.": 928,
+        "Can understand key content in a short practical written text. Curriculum context: talk simply about family and where people live.": 321,
+        "Can understand key content in a short practical written text. Curriculum context: talk simply about past days off.": 670,
+        "Can understand key content in a short practical written text. Curriculum context: understand simple workplace times and schedules.": 104,
+        "Can understand key information in a simple shop or public-service exchange. Curriculum context: ask prices and buy quantities of goods.": 174,
+        "Can understand key information in a simple shop or public-service exchange. Curriculum context: ask where a wanted item can be bought.": 196,
+        "Can understand key information in a simple shop or public-service exchange. Curriculum context: invite someone and arrange a simple outing.": 100,
+        "Can understand key information in a simple shop or public-service exchange. Curriculum context: order simple food and drinks at a shop or restaurant.": 720,
+        "Can understand key information in a simple spoken conversation. Curriculum context: ask about and follow simple transportation routes.": 651,
+        "Can understand key information in a simple spoken conversation. Curriculum context: ask prices and buy quantities of goods.": 286,
+        "Can understand key information in a simple spoken conversation. Curriculum context: ask where a person is in a workplace.": 867,
+        "Can understand key information in a simple spoken conversation. Curriculum context: ask where a wanted item can be bought.": 939,
+        "Can understand key information in a simple spoken conversation. Curriculum context: describe a home and say what is available.": 963,
+        "Can understand key information in a simple spoken conversation. Curriculum context: introduce oneself and exchange basic identity information.": 910,
+        "Can understand key information in a simple spoken conversation. Curriculum context: invite someone and arrange a simple outing.": 958,
+        "Can understand key information in a simple spoken conversation. Curriculum context: make and understand simple workplace requests.": 359,
+        "Can understand key information in a simple spoken conversation. Curriculum context: order simple food and drinks at a shop or restaurant.": 196,
+        "Can understand key information in a simple spoken conversation. Curriculum context: say what one wants to do at a destination.": 832,
+        "Can understand key information in a simple spoken conversation. Curriculum context: say what one wants to experience in Japan.": 892,
+        "Can understand key information in a simple spoken conversation. Curriculum context: say which foods and drinks one likes.": 677,
+        "Can understand key information in a simple spoken conversation. Curriculum context: talk about hobbies and free-time activities.": 851,
+        "Can understand key information in a simple spoken conversation. Curriculum context: talk simply about family and where people live.": 1146,
+        "Can understand key information in a simple spoken conversation. Curriculum context: talk simply about past days off.": 244,
+        "Can understand key information in a simple spoken conversation. Curriculum context: understand simple workplace times and schedules.": 114,
+        "Can understand the meaning of a common A1 word. Curriculum context: ask about and follow simple transportation routes.": 238,
+        "Can understand the meaning of a common A1 word. Curriculum context: ask prices and buy quantities of goods.": 255,
+        "Can understand the meaning of a common A1 word. Curriculum context: ask where a person is in a workplace.": 263,
+        "Can understand the meaning of a common A1 word. Curriculum context: ask where a wanted item can be bought.": 220,
+        "Can understand the meaning of a common A1 word. Curriculum context: describe a home and say what is available.": 257,
+        "Can understand the meaning of a common A1 word. Curriculum context: introduce oneself and exchange basic identity information.": 250,
+        "Can understand the meaning of a common A1 word. Curriculum context: invite someone and arrange a simple outing.": 238,
+        "Can understand the meaning of a common A1 word. Curriculum context: make and understand simple workplace requests.": 249,
+        "Can understand the meaning of a common A1 word. Curriculum context: order simple food and drinks at a shop or restaurant.": 251,
+        "Can understand the meaning of a common A1 word. Curriculum context: say what one wants to do at a destination.": 246,
+        "Can understand the meaning of a common A1 word. Curriculum context: say what one wants to experience in Japan.": 170,
+        "Can understand the meaning of a common A1 word. Curriculum context: say which foods and drinks one likes.": 212,
+        "Can understand the meaning of a common A1 word. Curriculum context: talk about hobbies and free-time activities.": 317,
+        "Can understand the meaning of a common A1 word. Curriculum context: talk simply about family and where people live.": 157,
+        "Can understand the meaning of a common A1 word. Curriculum context: talk simply about past days off.": 83,
+        "Can understand the meaning of a common A1 word. Curriculum context: understand simple workplace times and schedules.": 224
+      },
+      "taskTypeCounts": {
+        "announcement_instruction": 925,
+        "content_comprehension": 8544,
+        "conversation": 10885,
+        "expression": 12000,
+        "information_search": 3456,
+        "kanji_reading": 6665,
+        "shop_public": 1190,
+        "word_meaning": 3630,
+        "word_usage": 2705
+      },
+      "questionExposure": [
+        {
+          "id": "A1-F200-CE-039-R1",
+          "total": 169
+        },
+        {
+          "id": "A1-F400-CO-010-R1-RCV1",
+          "total": 169
+        },
+        {
+          "id": "A1-F500-CO-009-R1-RCV2",
+          "total": 168
+        },
+        {
+          "id": "A1-F500-CO-044-M1-RCV1",
+          "total": 167
+        },
+        {
+          "id": "A1-F400-CO-015-M1-RCV2",
+          "total": 166
+        },
+        {
+          "id": "A1-F200-CE-009-M1",
+          "total": 165
+        },
+        {
+          "id": "A1-F400-CO-007-M1-RCV1",
+          "total": 164
+        },
+        {
+          "id": "A1-F200-CE-038-R1",
+          "total": 163
+        },
+        {
+          "id": "A1-F600-CO-043-R1-RCV1",
+          "total": 163
+        },
+        {
+          "id": "A1-F200-CE-015-M1-RCV1",
+          "total": 162
+        },
+        {
+          "id": "A1-F400-CO-023-R1-RCV2",
+          "total": 161
+        },
+        {
+          "id": "A1-F200-CE-013-M1",
+          "total": 160
+        },
+        {
+          "id": "A1-F200-CE-026-M1",
+          "total": 160
+        },
+        {
+          "id": "A1-F400-CO-006-M1-RCV1",
+          "total": 160
+        },
+        {
+          "id": "A1-F400-CO-013-R1-RCV1",
+          "total": 160
+        },
+        {
+          "id": "A1-F400-CO-021-R1",
+          "total": 160
+        },
+        {
+          "id": "A1-F400-CO-031-R1-RCV1",
+          "total": 160
+        },
+        {
+          "id": "A1-F200-CE-011-M1-RCV1",
+          "total": 159
+        },
+        {
+          "id": "A1-F200-CE-036-M1-RCV1",
+          "total": 159
+        },
+        {
+          "id": "A1-F200-CE-040-R1",
+          "total": 159
+        },
+        {
+          "id": "A1-F200-CE-046-M1",
+          "total": 159
+        },
+        {
+          "id": "A1-F400-CO-009-R1-RCV1",
+          "total": 157
+        },
+        {
+          "id": "A1-F500-CO-007-M1-RCV1",
+          "total": 157
+        },
+        {
+          "id": "A1-F200-CE-001-M1",
+          "total": 156
+        },
+        {
+          "id": "A1-F400-CO-004-R1-RCV1",
+          "total": 156
+        },
+        {
+          "id": "A1-F400-CO-022-M1-RCV1",
+          "total": 156
+        },
+        {
+          "id": "A1-F200-CE-014-M1-RCV1",
+          "total": 155
+        },
+        {
+          "id": "A1-F200-CE-028-M1",
+          "total": 155
+        },
+        {
+          "id": "A1-F200-CE-034-M1",
+          "total": 155
+        },
+        {
+          "id": "A1-F200-CE-035-M1",
+          "total": 155
+        },
+        {
+          "id": "A1-F400-CO-005-M1-RCV1",
+          "total": 155
+        },
+        {
+          "id": "A1-F600-CO-001-M1",
+          "total": 155
+        },
+        {
+          "id": "A1-F400-CO-043-M1-RCV1",
+          "total": 154
+        },
+        {
+          "id": "A1-F600-CO-014-M1-RCV1",
+          "total": 154
+        },
+        {
+          "id": "A1-F600-CO-021-R1",
+          "total": 154
+        },
+        {
+          "id": "A1-F200-CE-004-M1",
+          "total": 153
+        },
+        {
+          "id": "A1-F200-CE-016-M1",
+          "total": 153
+        },
+        {
+          "id": "A1-F200-CE-042-R1",
+          "total": 153
+        },
+        {
+          "id": "A1-F400-CO-011-R1-RCV2",
+          "total": 153
+        },
+        {
+          "id": "A1-F600-CO-007-M1-RCV3",
+          "total": 153
+        },
+        {
+          "id": "A1-F200-CE-041-R1",
+          "total": 152
+        },
+        {
+          "id": "A1-F200-CE-018-M1",
+          "total": 151
+        },
+        {
+          "id": "A1-F200-CE-029-M1",
+          "total": 151
+        },
+        {
+          "id": "A1-F600-CO-002-M1",
+          "total": 151
+        },
+        {
+          "id": "A1-F200-CE-027-M1",
+          "total": 150
+        },
+        {
+          "id": "A1-F200-CE-043-R1-RCV1",
+          "total": 150
+        },
+        {
+          "id": "A1-F500-CO-021-R1",
+          "total": 149
+        },
+        {
+          "id": "A1-F200-CE-022-M1-RCV1",
+          "total": 148
+        },
+        {
+          "id": "A1-F200-CE-024-M1",
+          "total": 148
+        },
+        {
+          "id": "A1-F200-CE-037-R1",
+          "total": 148
+        }
+      ],
+      "ceExposure": [
+        {
+          "id": "A1-F200-CE-039-R1",
+          "total": 169
+        },
+        {
+          "id": "A1-F400-CO-010-R1-RCV1",
+          "total": 169
+        },
+        {
+          "id": "A1-F500-CO-009-R1-RCV2",
+          "total": 168
+        },
+        {
+          "id": "A1-F500-CO-044-M1-RCV1",
+          "total": 167
+        },
+        {
+          "id": "A1-F400-CO-015-M1-RCV2",
+          "total": 166
+        },
+        {
+          "id": "A1-F200-CE-009-M1",
+          "total": 165
+        },
+        {
+          "id": "A1-F400-CO-007-M1-RCV1",
+          "total": 164
+        },
+        {
+          "id": "A1-F200-CE-038-R1",
+          "total": 163
+        },
+        {
+          "id": "A1-F600-CO-043-R1-RCV1",
+          "total": 163
+        },
+        {
+          "id": "A1-F200-CE-015-M1-RCV1",
+          "total": 162
+        },
+        {
+          "id": "A1-F400-CO-023-R1-RCV2",
+          "total": 161
+        },
+        {
+          "id": "A1-F200-CE-013-M1",
+          "total": 160
+        },
+        {
+          "id": "A1-F200-CE-026-M1",
+          "total": 160
+        },
+        {
+          "id": "A1-F400-CO-006-M1-RCV1",
+          "total": 160
+        },
+        {
+          "id": "A1-F400-CO-013-R1-RCV1",
+          "total": 160
+        },
+        {
+          "id": "A1-F400-CO-021-R1",
+          "total": 160
+        },
+        {
+          "id": "A1-F400-CO-031-R1-RCV1",
+          "total": 160
+        },
+        {
+          "id": "A1-F200-CE-011-M1-RCV1",
+          "total": 159
+        },
+        {
+          "id": "A1-F200-CE-036-M1-RCV1",
+          "total": 159
+        },
+        {
+          "id": "A1-F200-CE-040-R1",
+          "total": 159
+        },
+        {
+          "id": "A1-F200-CE-046-M1",
+          "total": 159
+        },
+        {
+          "id": "A1-F400-CO-009-R1-RCV1",
+          "total": 157
+        },
+        {
+          "id": "A1-F500-CO-007-M1-RCV1",
+          "total": 157
+        },
+        {
+          "id": "A1-F200-CE-001-M1",
+          "total": 156
+        },
+        {
+          "id": "A1-F400-CO-004-R1-RCV1",
+          "total": 156
+        },
+        {
+          "id": "A1-F400-CO-022-M1-RCV1",
+          "total": 156
+        },
+        {
+          "id": "A1-F200-CE-014-M1-RCV1",
+          "total": 155
+        },
+        {
+          "id": "A1-F200-CE-028-M1",
+          "total": 155
+        },
+        {
+          "id": "A1-F200-CE-034-M1",
+          "total": 155
+        },
+        {
+          "id": "A1-F200-CE-035-M1",
+          "total": 155
+        },
+        {
+          "id": "A1-F400-CO-005-M1-RCV1",
+          "total": 155
+        },
+        {
+          "id": "A1-F600-CO-001-M1",
+          "total": 155
+        },
+        {
+          "id": "A1-F400-CO-043-M1-RCV1",
+          "total": 154
+        },
+        {
+          "id": "A1-F600-CO-014-M1-RCV1",
+          "total": 154
+        },
+        {
+          "id": "A1-F600-CO-021-R1",
+          "total": 154
+        },
+        {
+          "id": "A1-F200-CE-004-M1",
+          "total": 153
+        },
+        {
+          "id": "A1-F200-CE-016-M1",
+          "total": 153
+        },
+        {
+          "id": "A1-F200-CE-042-R1",
+          "total": 153
+        },
+        {
+          "id": "A1-F400-CO-011-R1-RCV2",
+          "total": 153
+        },
+        {
+          "id": "A1-F600-CO-007-M1-RCV3",
+          "total": 153
+        },
+        {
+          "id": "A1-F200-CE-041-R1",
+          "total": 152
+        },
+        {
+          "id": "A1-F200-CE-018-M1",
+          "total": 151
+        },
+        {
+          "id": "A1-F200-CE-029-M1",
+          "total": 151
+        },
+        {
+          "id": "A1-F600-CO-002-M1",
+          "total": 151
+        },
+        {
+          "id": "A1-F200-CE-027-M1",
+          "total": 150
+        },
+        {
+          "id": "A1-F200-CE-043-R1-RCV1",
+          "total": 150
+        },
+        {
+          "id": "A1-F500-CO-021-R1",
+          "total": 149
+        },
+        {
+          "id": "A1-F200-CE-022-M1-RCV1",
+          "total": 148
+        },
+        {
+          "id": "A1-F200-CE-024-M1",
+          "total": 148
+        },
+        {
+          "id": "A1-F200-CE-037-R1",
+          "total": 148
+        }
+      ],
+      "templateExposureWarnings": [],
+      "choiceOrderLockedInstances": 1819,
+      "replayFailures": 0,
+      "canonicalMutations": 0,
+      "smokeTests": {
+        "total": 8,
+        "pass": 8,
+        "fail": 0,
+        "details": [
+          {
+            "examId": "JFT-A1-MACHINE-V1-v1",
+            "perfectScore": 100,
+            "wrongScore": 0,
+            "pass": true,
+            "positionCoverage": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "examId": "JFT-A1-MACHINE-V1-v2",
+            "perfectScore": 100,
+            "wrongScore": 0,
+            "pass": true,
+            "positionCoverage": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "examId": "JFT-A1-MACHINE-V1-v3",
+            "perfectScore": 100,
+            "wrongScore": 0,
+            "pass": true,
+            "positionCoverage": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "examId": "JFT-A1-MACHINE-V1-v4",
+            "perfectScore": 100,
+            "wrongScore": 0,
+            "pass": true,
+            "positionCoverage": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "examId": "JFT-A1-MACHINE-V1-v5",
+            "perfectScore": 100,
+            "wrongScore": 0,
+            "pass": true,
+            "positionCoverage": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "examId": "JFT-A1-MACHINE-V1-v6",
+            "perfectScore": 100,
+            "wrongScore": 0,
+            "pass": true,
+            "positionCoverage": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "examId": "JFT-A1-MACHINE-V1-v7",
+            "perfectScore": 100,
+            "wrongScore": 0,
+            "pass": true,
+            "positionCoverage": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "examId": "JFT-A1-MACHINE-V1-v8",
+            "perfectScore": 100,
+            "wrongScore": 0,
+            "pass": true,
+            "positionCoverage": [
+              0,
+              1,
+              2,
+              3
+            ]
+          }
+        ]
+      }
+    },
+    "fullSessionSmoke": {
+      "total": 8,
+      "pass": 8,
+      "fail": 0,
+      "details": [
+        {
+          "examId": "JFT-A1-MACHINE-V1-v1",
+          "perfectScore": 100,
+          "wrongScore": 0,
+          "pass": true,
+          "positionCoverage": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "examId": "JFT-A1-MACHINE-V1-v2",
+          "perfectScore": 100,
+          "wrongScore": 0,
+          "pass": true,
+          "positionCoverage": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "examId": "JFT-A1-MACHINE-V1-v3",
+          "perfectScore": 100,
+          "wrongScore": 0,
+          "pass": true,
+          "positionCoverage": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "examId": "JFT-A1-MACHINE-V1-v4",
+          "perfectScore": 100,
+          "wrongScore": 0,
+          "pass": true,
+          "positionCoverage": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "examId": "JFT-A1-MACHINE-V1-v5",
+          "perfectScore": 100,
+          "wrongScore": 0,
+          "pass": true,
+          "positionCoverage": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "examId": "JFT-A1-MACHINE-V1-v6",
+          "perfectScore": 100,
+          "wrongScore": 0,
+          "pass": true,
+          "positionCoverage": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "examId": "JFT-A1-MACHINE-V1-v7",
+          "perfectScore": 100,
+          "wrongScore": 0,
+          "pass": true,
+          "positionCoverage": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "examId": "JFT-A1-MACHINE-V1-v8",
+          "perfectScore": 100,
+          "wrongScore": 0,
+          "pass": true,
+          "positionCoverage": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "negativeSafetyTests": {
+      "total": 10,
+      "pass": 10,
+      "fail": 0,
+      "details": [
+        {
+          "name": "modified release question without manifest update",
+          "passed": true
+        },
+        {
+          "name": "wrong bank hash",
+          "passed": true
+        },
+        {
+          "name": "duplicate ID",
+          "passed": true
+        },
+        {
+          "name": "rejected question inserted",
+          "passed": true
+        },
+        {
+          "name": "invalid answer index",
+          "passed": true
+        },
+        {
+          "name": "missing KU",
+          "passed": true
+        },
+        {
+          "name": "missing evidence",
+          "passed": true
+        },
+        {
+          "name": "PENDING question",
+          "passed": true
+        },
+        {
+          "name": "corrupt permutation",
+          "passed": true
+        },
+        {
+          "name": "canonical mutation",
+          "passed": true
+        }
+      ]
+    },
+    "productionBankIdentity": {
+      "pass": true,
+      "count": 486
+    },
+    "finalDecision": "A1_PRODUCTION_CANDIDATE_READY"
+  }
+}

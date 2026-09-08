@@ -1,0 +1,407 @@
+{
+  "artifactVersion": "A1_MACHINE_ACCEPTANCE_V1",
+  "approvalMode": "MACHINE",
+  "recordCount": 16,
+  "records": [
+    {
+      "evidenceId": "MACHINE-GROUNDING-A1-N03-V1",
+      "knowledgeUnitId": "A1-N03",
+      "sourceCurriculumReference": "TAI LIEU SACH/入門第3課.docx",
+      "sourceFileHash": "b1a3f8e88b2c12001b8113c6e88dfa69c73f20a82d15f3b24ece81681d0f7944",
+      "catalogEvidence": {
+        "id": "A1-N03",
+        "level": "A1",
+        "lesson": 3,
+        "title": "私のこと",
+        "topic": "personal_information",
+        "canDo": "introduce oneself and exchange basic identity information",
+        "anchors": [
+          "名前",
+          "国",
+          "会社",
+          "友達"
+        ]
+      },
+      "mappingMethod": "CHECKED_IN_CATALOG_ROW_PLUS_SOURCE_FILE_SHA256",
+      "pipelineVersion": "A1_MACHINE_ACCEPTANCE_V1",
+      "contentHash": "76358c95e200fc5d4502216d1e542a6da25746954490aac67c089dfb55dbfd00",
+      "approvalMode": "MACHINE",
+      "status": "MACHINE_APPROVED_CATALOG_EVIDENCE"
+    },
+    {
+      "evidenceId": "MACHINE-GROUNDING-A1-N04-V1",
+      "knowledgeUnitId": "A1-N04",
+      "sourceCurriculumReference": "TAI LIEU SACH/入門第4課.docx",
+      "sourceFileHash": "096b3f470099b2fa328f3266cc2fefbd4a3c285198a75811ddc0f278912b7b83",
+      "catalogEvidence": {
+        "id": "A1-N04",
+        "level": "A1",
+        "lesson": 4,
+        "title": "家族と住まい",
+        "topic": "family",
+        "canDo": "talk simply about family and where people live",
+        "anchors": [
+          "家族",
+          "父",
+          "母",
+          "住んでいます"
+        ]
+      },
+      "mappingMethod": "CHECKED_IN_CATALOG_ROW_PLUS_SOURCE_FILE_SHA256",
+      "pipelineVersion": "A1_MACHINE_ACCEPTANCE_V1",
+      "contentHash": "186fbb749ea7145a68fa6902c5d9043e08950acb217ebe7901e54b6f2025c867",
+      "approvalMode": "MACHINE",
+      "status": "MACHINE_APPROVED_CATALOG_EVIDENCE"
+    },
+    {
+      "evidenceId": "MACHINE-GROUNDING-A1-N05-V1",
+      "knowledgeUnitId": "A1-N05",
+      "sourceCurriculumReference": "TAI LIEU SACH/入門第5課.docx",
+      "sourceFileHash": "ac1de8909c25fa6a0415edf7cff946867facc433c4e61265bce2b571481c579f",
+      "catalogEvidence": {
+        "id": "A1-N05",
+        "level": "A1",
+        "lesson": 5,
+        "title": "好きな食べ物",
+        "topic": "food",
+        "canDo": "say which foods and drinks one likes",
+        "anchors": [
+          "魚",
+          "肉",
+          "野菜",
+          "飲み物"
+        ]
+      },
+      "mappingMethod": "CHECKED_IN_CATALOG_ROW_PLUS_SOURCE_FILE_SHA256",
+      "pipelineVersion": "A1_MACHINE_ACCEPTANCE_V1",
+      "contentHash": "b04019be44c783369a31b7342cc84d5154fbfb010c81924e66f908529754ce2a",
+      "approvalMode": "MACHINE",
+      "status": "MACHINE_APPROVED_CATALOG_EVIDENCE"
+    },
+    {
+      "evidenceId": "MACHINE-GROUNDING-A1-N06-V1",
+      "knowledgeUnitId": "A1-N06",
+      "sourceCurriculumReference": "TAI LIEU SACH/入門第6課.docx",
+      "sourceFileHash": "66fe1c8cba2b6bdc12619559f1c22b4badd45b813274d2736e4dea7638559b0b",
+      "catalogEvidence": {
+        "id": "A1-N06",
+        "level": "A1",
+        "lesson": 6,
+        "title": "店で注文する",
+        "topic": "restaurant",
+        "canDo": "order simple food and drinks at a shop or restaurant",
+        "anchors": [
+          "注文",
+          "ハンバーガー",
+          "コーヒー",
+          "店員"
+        ]
+      },
+      "mappingMethod": "CHECKED_IN_CATALOG_ROW_PLUS_SOURCE_FILE_SHA256",
+      "pipelineVersion": "A1_MACHINE_ACCEPTANCE_V1",
+      "contentHash": "a15728d11f4727d11a83834fa9a79956951f54f72793b5226b132308c1a8fe58",
+      "approvalMode": "MACHINE",
+      "status": "MACHINE_APPROVED_CATALOG_EVIDENCE"
+    },
+    {
+      "evidenceId": "MACHINE-GROUNDING-A1-N07-V1",
+      "knowledgeUnitId": "A1-N07",
+      "sourceCurriculumReference": "TAI LIEU SACH/入門第7課.docx",
+      "sourceFileHash": "9f9e10cb5e0060810369d5ccd9358c98b9b12f2da2768c13c2994675d2213335",
+      "catalogEvidence": {
+        "id": "A1-N07",
+        "level": "A1",
+        "lesson": 7,
+        "title": "部屋が4つあります",
+        "topic": "housing",
+        "canDo": "describe a home and say what is available",
+        "anchors": [
+          "部屋",
+          "冷蔵庫",
+          "台所",
+          "あります"
+        ]
+      },
+      "mappingMethod": "CHECKED_IN_CATALOG_ROW_PLUS_SOURCE_FILE_SHA256",
+      "pipelineVersion": "A1_MACHINE_ACCEPTANCE_V1",
+      "contentHash": "acecc0ff4345cb711bf938809140fed60416aef31e06236fb0759a8aaff7cc68",
+      "approvalMode": "MACHINE",
+      "status": "MACHINE_APPROVED_CATALOG_EVIDENCE"
+    },
+    {
+      "evidenceId": "MACHINE-GROUNDING-A1-N08-V1",
+      "knowledgeUnitId": "A1-N08",
+      "sourceCurriculumReference": "TAI LIEU SACH/入門第8課.docx",
+      "sourceFileHash": "d906c606efbae182f62178590c745eab80fc783fbcd8276febd0b08878356978",
+      "catalogEvidence": {
+        "id": "A1-N08",
+        "level": "A1",
+        "lesson": 8,
+        "title": "山田さんはどこにいますか",
+        "topic": "work",
+        "canDo": "ask where a person is in a workplace",
+        "anchors": [
+          "事務所",
+          "会議室",
+          "受付",
+          "います"
+        ]
+      },
+      "mappingMethod": "CHECKED_IN_CATALOG_ROW_PLUS_SOURCE_FILE_SHA256",
+      "pipelineVersion": "A1_MACHINE_ACCEPTANCE_V1",
+      "contentHash": "7748e522df898f2c6ca06de3c72ca15a0ab8c9de447d0af576d8214e36f2ec52",
+      "approvalMode": "MACHINE",
+      "status": "MACHINE_APPROVED_CATALOG_EVIDENCE"
+    },
+    {
+      "evidenceId": "MACHINE-GROUNDING-A1-N09-V1",
+      "knowledgeUnitId": "A1-N09",
+      "sourceCurriculumReference": "TAI LIEU SACH/入門第9課.docx",
+      "sourceFileHash": "76d2d1b24088db2fc576bee5dc8cedf2420f261c1a84a8014cbdb39dde29b1ce",
+      "catalogEvidence": {
+        "id": "A1-N09",
+        "level": "A1",
+        "lesson": 9,
+        "title": "12時から1時まで昼休みです",
+        "topic": "schedule",
+        "canDo": "understand simple workplace times and schedules",
+        "anchors": [
+          "昼休み",
+          "時間",
+          "始まります",
+          "終わります"
+        ]
+      },
+      "mappingMethod": "CHECKED_IN_CATALOG_ROW_PLUS_SOURCE_FILE_SHA256",
+      "pipelineVersion": "A1_MACHINE_ACCEPTANCE_V1",
+      "contentHash": "f7b7a542b7fb34371540e6f0a036186dcacf6d0ddfdcfba317710a67353cdbfd",
+      "approvalMode": "MACHINE",
+      "status": "MACHINE_APPROVED_CATALOG_EVIDENCE"
+    },
+    {
+      "evidenceId": "MACHINE-GROUNDING-A1-N10-V1",
+      "knowledgeUnitId": "A1-N10",
+      "sourceCurriculumReference": "TAI LIEU SACH/入門第10課 .docx",
+      "sourceFileHash": "28355e86e9110ed409c7dafe6b1f87f95e252e8a9c3b81b9836f1633fb91da1a",
+      "catalogEvidence": {
+        "id": "A1-N10",
+        "level": "A1",
+        "lesson": 10,
+        "title": "ホチキス貸してください",
+        "topic": "workplace_instructions",
+        "canDo": "make and understand simple workplace requests",
+        "anchors": [
+          "ホチキス",
+          "コピー",
+          "段ボール",
+          "貸してください"
+        ]
+      },
+      "mappingMethod": "CHECKED_IN_CATALOG_ROW_PLUS_SOURCE_FILE_SHA256",
+      "pipelineVersion": "A1_MACHINE_ACCEPTANCE_V1",
+      "contentHash": "62b9a85b0bfe9355f1410c965a6e62f83a607c01a6efb47272efd96af0d3db77",
+      "approvalMode": "MACHINE",
+      "status": "MACHINE_APPROVED_CATALOG_EVIDENCE"
+    },
+    {
+      "evidenceId": "MACHINE-GROUNDING-A1-N11-V1",
+      "knowledgeUnitId": "A1-N11",
+      "sourceCurriculumReference": "TAI LIEU SACH/入門第11課.docx",
+      "sourceFileHash": "b1fde31086572a2c79b55e8e96d1389f6d7ea81009e114983c1abd78adedcbb7",
+      "catalogEvidence": {
+        "id": "A1-N11",
+        "level": "A1",
+        "lesson": 11,
+        "title": "どんなマンガが好きですか",
+        "topic": "leisure",
+        "canDo": "talk about hobbies and free-time activities",
+        "anchors": [
+          "漫画",
+          "映画",
+          "スポーツ",
+          "趣味"
+        ]
+      },
+      "mappingMethod": "CHECKED_IN_CATALOG_ROW_PLUS_SOURCE_FILE_SHA256",
+      "pipelineVersion": "A1_MACHINE_ACCEPTANCE_V1",
+      "contentHash": "9de6c219b6cb883d513f958f2742c41677322378f1797a01cc49b4198e97357a",
+      "approvalMode": "MACHINE",
+      "status": "MACHINE_APPROVED_CATALOG_EVIDENCE"
+    },
+    {
+      "evidenceId": "MACHINE-GROUNDING-A1-N12-V1",
+      "knowledgeUnitId": "A1-N12",
+      "sourceCurriculumReference": "TAI LIEU SACH/入門第12課.docx",
+      "sourceFileHash": "721c5dd008eff6951dda7a0bd547007a50e9b5bbe98ca3d0dd7f0d18bbc9bbb3",
+      "catalogEvidence": {
+        "id": "A1-N12",
+        "level": "A1",
+        "lesson": 12,
+        "title": "いっしょに飲みに行きませんか",
+        "topic": "appointment",
+        "canDo": "invite someone and arrange a simple outing",
+        "anchors": [
+          "一緒に",
+          "飲み会",
+          "週末",
+          "行きませんか"
+        ]
+      },
+      "mappingMethod": "CHECKED_IN_CATALOG_ROW_PLUS_SOURCE_FILE_SHA256",
+      "pipelineVersion": "A1_MACHINE_ACCEPTANCE_V1",
+      "contentHash": "14daa672ab965fbf797e9222138ad1dec353b869a544e4793883d0db20ac7671",
+      "approvalMode": "MACHINE",
+      "status": "MACHINE_APPROVED_CATALOG_EVIDENCE"
+    },
+    {
+      "evidenceId": "MACHINE-GROUNDING-A1-N13-V1",
+      "knowledgeUnitId": "A1-N13",
+      "sourceCurriculumReference": "TAI LIEU SACH/入門第13課.docx",
+      "sourceFileHash": "988eca2f8322121bf4835ad8570d6b9ada9c5203df49e496448ddc027c743e6b",
+      "catalogEvidence": {
+        "id": "A1-N13",
+        "level": "A1",
+        "lesson": 13,
+        "title": "このバスは空港に行きますか",
+        "topic": "transportation",
+        "canDo": "ask about and follow simple transportation routes",
+        "anchors": [
+          "バス",
+          "空港",
+          "駅",
+          "乗り換えます"
+        ]
+      },
+      "mappingMethod": "CHECKED_IN_CATALOG_ROW_PLUS_SOURCE_FILE_SHA256",
+      "pipelineVersion": "A1_MACHINE_ACCEPTANCE_V1",
+      "contentHash": "b7477565754ce64cda1dd15616e422349f55a81e0e336a2a17e19c5bad6eb75b",
+      "approvalMode": "MACHINE",
+      "status": "MACHINE_APPROVED_CATALOG_EVIDENCE"
+    },
+    {
+      "evidenceId": "MACHINE-GROUNDING-A1-N14-V1",
+      "knowledgeUnitId": "A1-N14",
+      "sourceCurriculumReference": "TAI LIEU SACH/入門第14課.docx",
+      "sourceFileHash": "63b44f11718460aa8ac8d93f106d32c1898b73c5a023895ffadbe2f0bf68c963",
+      "catalogEvidence": {
+        "id": "A1-N14",
+        "level": "A1",
+        "lesson": 14,
+        "title": "温泉に入りたいです",
+        "topic": "leisure",
+        "canDo": "say what one wants to do at a destination",
+        "anchors": [
+          "温泉",
+          "景色",
+          "寺",
+          "入りたい"
+        ]
+      },
+      "mappingMethod": "CHECKED_IN_CATALOG_ROW_PLUS_SOURCE_FILE_SHA256",
+      "pipelineVersion": "A1_MACHINE_ACCEPTANCE_V1",
+      "contentHash": "2fb801e67ae3cd99ed622b5f3d2f33d4a594fc804695a4ac6fb6690d5803bea3",
+      "approvalMode": "MACHINE",
+      "status": "MACHINE_APPROVED_CATALOG_EVIDENCE"
+    },
+    {
+      "evidenceId": "MACHINE-GROUNDING-A1-N15-V1",
+      "knowledgeUnitId": "A1-N15",
+      "sourceCurriculumReference": "TAI LIEU SACH/入門第15課.docx",
+      "sourceFileHash": "33f945d099624041b3ea18f64eb9a5257da977f11c9af9f1e3f0e4b70cb95343",
+      "catalogEvidence": {
+        "id": "A1-N15",
+        "level": "A1",
+        "lesson": 15,
+        "title": "電池がほしいんですが",
+        "topic": "shopping",
+        "canDo": "ask where a wanted item can be bought",
+        "anchors": [
+          "電池",
+          "売り場",
+          "何階",
+          "ほしい"
+        ]
+      },
+      "mappingMethod": "CHECKED_IN_CATALOG_ROW_PLUS_SOURCE_FILE_SHA256",
+      "pipelineVersion": "A1_MACHINE_ACCEPTANCE_V1",
+      "contentHash": "3a8f1a39477759261449040db7370362ea8316782ccfdb38929b74b1229bbd5f",
+      "approvalMode": "MACHINE",
+      "status": "MACHINE_APPROVED_CATALOG_EVIDENCE"
+    },
+    {
+      "evidenceId": "MACHINE-GROUNDING-A1-N16-V1",
+      "knowledgeUnitId": "A1-N16",
+      "sourceCurriculumReference": "TAI LIEU SACH/入門第16課.docx",
+      "sourceFileHash": "a0ac742bad24777247955040896223185c25a13d318ca9f6570bb281245cdae6",
+      "catalogEvidence": {
+        "id": "A1-N16",
+        "level": "A1",
+        "lesson": 16,
+        "title": "これ、いくらですか",
+        "topic": "shopping",
+        "canDo": "ask prices and buy quantities of goods",
+        "anchors": [
+          "値段",
+          "円",
+          "会計",
+          "ください"
+        ]
+      },
+      "mappingMethod": "CHECKED_IN_CATALOG_ROW_PLUS_SOURCE_FILE_SHA256",
+      "pipelineVersion": "A1_MACHINE_ACCEPTANCE_V1",
+      "contentHash": "de985fcfdc7685010260e09d4f1ceba4491d37e82d7f324068dbd51368c99710",
+      "approvalMode": "MACHINE",
+      "status": "MACHINE_APPROVED_CATALOG_EVIDENCE"
+    },
+    {
+      "evidenceId": "MACHINE-GROUNDING-A1-N17-V1",
+      "knowledgeUnitId": "A1-N17",
+      "sourceCurriculumReference": "TAI LIEU SACH/入門第17課.docx",
+      "sourceFileHash": "d4df7b323cdf43b67a42b99d3d170469b458f8eb7b0db4d61f5c2af8c32260c6",
+      "catalogEvidence": {
+        "id": "A1-N17",
+        "level": "A1",
+        "lesson": 17,
+        "title": "休みは、何をしましたか",
+        "topic": "daily_routine",
+        "canDo": "talk simply about past days off",
+        "anchors": [
+          "休み",
+          "買い物",
+          "掃除",
+          "しました"
+        ]
+      },
+      "mappingMethod": "CHECKED_IN_CATALOG_ROW_PLUS_SOURCE_FILE_SHA256",
+      "pipelineVersion": "A1_MACHINE_ACCEPTANCE_V1",
+      "contentHash": "af8c4815e917df8d7cb704e53366e4aba546f427b95245b7053dac7ffbd7b0f2",
+      "approvalMode": "MACHINE",
+      "status": "MACHINE_APPROVED_CATALOG_EVIDENCE"
+    },
+    {
+      "evidenceId": "MACHINE-GROUNDING-A1-N18-V1",
+      "knowledgeUnitId": "A1-N18",
+      "sourceCurriculumReference": "TAI LIEU SACH/入門第18課.docx",
+      "sourceFileHash": "dfc96f016b710d5f263d83ccc3a70e639d3bedc0561aee87dede1e023e76d30e",
+      "catalogEvidence": {
+        "id": "A1-N18",
+        "level": "A1",
+        "lesson": 18,
+        "title": "日本で何をしたいですか",
+        "topic": "leisure",
+        "canDo": "say what one wants to experience in Japan",
+        "anchors": [
+          "新幹線",
+          "富士山",
+          "旅行",
+          "したい"
+        ]
+      },
+      "mappingMethod": "CHECKED_IN_CATALOG_ROW_PLUS_SOURCE_FILE_SHA256",
+      "pipelineVersion": "A1_MACHINE_ACCEPTANCE_V1",
+      "contentHash": "b1e1ababbe76529707519a889e2b5813b7b94b52a7995c23d90c5ca0d1a11ccc",
+      "approvalMode": "MACHINE",
+      "status": "MACHINE_APPROVED_CATALOG_EVIDENCE"
+    }
+  ]
+}

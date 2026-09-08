@@ -29,6 +29,15 @@ export interface FrozenQuestion {
   questionId: string;
   questionVersion: number;
   snapshot: QuestionRecord;
+  canonicalSnapshot?: QuestionRecord;
+  choicePermutation?: {
+    canonicalAnswerIndex: number;
+    displayAnswerIndex: number;
+    permutation: number[];
+    seed: string;
+    locked: boolean;
+    reasonCodes: string[];
+  };
 }
 
 export interface ExamVersion {

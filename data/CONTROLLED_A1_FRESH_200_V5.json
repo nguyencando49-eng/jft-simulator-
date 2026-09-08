@@ -1,0 +1,4523 @@
+{
+  "artifactVersion": "CONTROLLED_A1_FRESH_200_V5",
+  "status": "DRAFT_PENDING_HUMAN_REVIEW",
+  "itemCount": 200,
+  "comparedAgainst": [
+    "CONTROLLED_A1_FRESH_200_V3",
+    "CONTROLLED_A1_FRESH_200_V4"
+  ],
+  "sectionCounts": {
+    "script_vocabulary": 50,
+    "conversation_expression": 50,
+    "listening": 50,
+    "reading": 50
+  },
+  "policy": {
+    "humanReviewStatus": "PENDING",
+    "autoApprove": false,
+    "autoPublish": false,
+    "derivedFrom": null
+  },
+  "items": [
+    {
+      "id": "A1-F500-SC-001",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "kanji_reading",
+      "knowledgeUnitIds": [
+        "A1-N03"
+      ],
+      "canDo": "Can exchange basic identity information.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「友達」の よみかたは どれですか。",
+      "choices": [
+        "ともだち",
+        "ともたち",
+        "ゆうだち",
+        "ゆうたつ"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-002",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_meaning",
+      "knowledgeUnitIds": [
+        "A1-N03"
+      ],
+      "canDo": "Can exchange basic identity information.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「会社員」は どんな 人ですか。",
+      "choices": [
+        "会社で働く人",
+        "家族の一人",
+        "店のお客さん",
+        "電車の運転手"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-003",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N03"
+      ],
+      "canDo": "Can exchange basic identity information.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "私は日本の会社で ＿＿＿。",
+      "choices": [
+        "働いています",
+        "注文します",
+        "乗ります",
+        "掃除します"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-004",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "kanji_reading",
+      "knowledgeUnitIds": [
+        "A1-N04"
+      ],
+      "canDo": "Can talk simply about family members and where they live.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「兄」の よみかたは どれですか。",
+      "choices": [
+        "あに",
+        "あね",
+        "ちち",
+        "はは"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-005",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "kanji_reading",
+      "knowledgeUnitIds": [
+        "A1-N04"
+      ],
+      "canDo": "Can talk simply about family members and where they live.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「妹」の よみかたは どれですか。",
+      "choices": [
+        "いもうと",
+        "おとうと",
+        "あね",
+        "あに"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-006",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N04"
+      ],
+      "canDo": "Can talk simply about family members and where they live.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "母は名古屋に ＿＿＿。",
+      "choices": [
+        "住んでいます",
+        "始まります",
+        "売ります",
+        "注文します"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-007",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "kanji_reading",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can understand and state simple food and drink preferences.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「食べ物」の「食」の よみかたは どれですか。",
+      "choices": [
+        "た",
+        "しょく",
+        "く",
+        "たべ"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-008",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can understand and state simple food and drink preferences.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "私はコーヒーよりお茶のほうが ＿＿＿です。",
+      "choices": [
+        "好き",
+        "何階",
+        "会計",
+        "予定"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-009",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can understand and state simple food and drink preferences.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "朝、私はコーヒーを ＿＿＿。",
+      "choices": [
+        "飲みます",
+        "住みます",
+        "乗ります",
+        "始まります"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-010",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "kanji_reading",
+      "knowledgeUnitIds": [
+        "A1-N06"
+      ],
+      "canDo": "Can order simple food and drinks.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「料理」の よみかたは どれですか。",
+      "choices": [
+        "りょうり",
+        "りょり",
+        "りょうじ",
+        "りょおり"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-011",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_meaning",
+      "knowledgeUnitIds": [
+        "A1-N06"
+      ],
+      "canDo": "Can order simple food and drinks.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "レストランの「メニュー」は 何ですか。",
+      "choices": [
+        "食べ物や飲み物の名前が書いてあるもの",
+        "店員の名前",
+        "店の住所",
+        "会議の予定"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-012",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N06"
+      ],
+      "canDo": "Can order simple food and drinks.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "食事が終わりました。店員に ＿＿＿をお願いします。",
+      "choices": [
+        "会計",
+        "会議",
+        "家族",
+        "空港"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-013",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "kanji_reading",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can understand simple information about rooms and household items.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「寝室」の よみかたは どれですか。",
+      "choices": [
+        "しんしつ",
+        "ねしつ",
+        "ねむしつ",
+        "しんじつ"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-014",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_meaning",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can understand simple information about rooms and household items.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「ベッド」は 何のためのものですか。",
+      "choices": [
+        "寝るため",
+        "料理するため",
+        "電車に乗るため",
+        "会議するため"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-015",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can understand simple information about rooms and household items.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "寝室にベッドが ＿＿＿。",
+      "choices": [
+        "あります",
+        "います",
+        "始まります",
+        "売ります"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-016",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "kanji_reading",
+      "knowledgeUnitIds": [
+        "A1-N08"
+      ],
+      "canDo": "Can ask and understand where a person or place is at work.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「会議」の よみかたは どれですか。",
+      "choices": [
+        "かいぎ",
+        "かいき",
+        "がいぎ",
+        "かぎ"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-017",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_meaning",
+      "knowledgeUnitIds": [
+        "A1-N08"
+      ],
+      "canDo": "Can ask and understand where a person or place is at work.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "会社の「受付」で することは どれですか。",
+      "choices": [
+        "来た人を案内する",
+        "料理を作る",
+        "電車に乗る",
+        "温泉に入る"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-018",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N08"
+      ],
+      "canDo": "Can ask and understand where a person or place is at work.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "山田さんは会議中です。山田さんは会議室に ＿＿＿。",
+      "choices": [
+        "います",
+        "あります",
+        "始まります",
+        "売ります"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-019",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "kanji_reading",
+      "knowledgeUnitIds": [
+        "A1-N09"
+      ],
+      "canDo": "Can understand a simple work schedule and times.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「終わります」の よみかたは どれですか。",
+      "choices": [
+        "おわります",
+        "おえります",
+        "しゅうわります",
+        "おわりす"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-020",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "kanji_reading",
+      "knowledgeUnitIds": [
+        "A1-N09"
+      ],
+      "canDo": "Can understand a simple work schedule and times.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「仕事」の よみかたは どれですか。",
+      "choices": [
+        "しごと",
+        "しこと",
+        "じごと",
+        "しごど"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-021",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N09"
+      ],
+      "canDo": "Can understand a simple work schedule and times.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "昼休みは12時30分から1時30分 ＿＿＿です。",
+      "choices": [
+        "まで",
+        "だけ",
+        "ごろに",
+        "よりを"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-022",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_meaning",
+      "knowledgeUnitIds": [
+        "A1-N10"
+      ],
+      "canDo": "Can understand and make simple workplace requests.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「コピー用紙」は 何ですか。",
+      "choices": [
+        "コピーに使う紙",
+        "段ボールの箱",
+        "紙をとめる道具",
+        "電池"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-023",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N10"
+      ],
+      "canDo": "Can understand and make simple workplace requests.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "コピーした紙をホチキスで ＿＿＿。",
+      "choices": [
+        "止めます",
+        "飲みます",
+        "住みます",
+        "乗ります"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-024",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N10"
+      ],
+      "canDo": "Can understand and make simple workplace requests.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "荷物を ＿＿＿に 入れます。",
+      "choices": [
+        "段ボール",
+        "ホチキス",
+        "コピー機",
+        "会議室"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-025",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "kanji_reading",
+      "knowledgeUnitIds": [
+        "A1-N11"
+      ],
+      "canDo": "Can talk simply about hobbies and free-time activities.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「趣味」の よみかたは どれですか。",
+      "choices": [
+        "しゅみ",
+        "しゅうみ",
+        "しゅび",
+        "しゅうび"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-026",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_meaning",
+      "knowledgeUnitIds": [
+        "A1-N11"
+      ],
+      "canDo": "Can talk simply about hobbies and free-time activities.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「映画館」は どんな ところですか。",
+      "choices": [
+        "映画を見るところ",
+        "電池を買うところ",
+        "会議をするところ",
+        "温泉に入るところ"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-027",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N11"
+      ],
+      "canDo": "Can talk simply about hobbies and free-time activities.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "日曜日はよく公園でスポーツを ＿＿＿。",
+      "choices": [
+        "します",
+        "注文します",
+        "会計します",
+        "住みます"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-028",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "kanji_reading",
+      "knowledgeUnitIds": [
+        "A1-N12"
+      ],
+      "canDo": "Can make, accept, and understand a simple invitation or meeting plan.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「飲み会」の よみかたは どれですか。",
+      "choices": [
+        "のみかい",
+        "いんみかい",
+        "のみあい",
+        "のむかい"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-029",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_meaning",
+      "knowledgeUnitIds": [
+        "A1-N12"
+      ],
+      "canDo": "Can make, accept, and understand a simple invitation or meeting plan.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「誘う」は どんな ことですか。",
+      "choices": [
+        "いっしょに何かしようと声をかけること",
+        "値段を聞くこと",
+        "場所を説明すること",
+        "名前を書くこと"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-030",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N12"
+      ],
+      "canDo": "Can make, accept, and understand a simple invitation or meeting plan.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "友達に「土曜日、いっしょに公園へ ＿＿＿。」",
+      "choices": [
+        "行きませんか",
+        "行きました",
+        "行きませんでした",
+        "行っていますかでした"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-031",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "kanji_reading",
+      "knowledgeUnitIds": [
+        "A1-N13"
+      ],
+      "canDo": "Can understand simple routes, stations, transfers, and transportation.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「乗り換え」の よみかたは どれですか。",
+      "choices": [
+        "のりかえ",
+        "のりかわ",
+        "じょうかえ",
+        "のりがえ"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-032",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_meaning",
+      "knowledgeUnitIds": [
+        "A1-N13"
+      ],
+      "canDo": "Can understand simple routes, stations, transfers, and transportation.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "駅の「ホーム」は どんな ところですか。",
+      "choices": [
+        "電車を待つところ",
+        "会計するところ",
+        "温泉に入るところ",
+        "料理するところ"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-033",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N13"
+      ],
+      "canDo": "Can understand simple routes, stations, transfers, and transportation.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "空港行きの電車は4番 ＿＿＿です。",
+      "choices": [
+        "ホーム",
+        "売り場",
+        "会議室",
+        "台所"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-034",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "kanji_reading",
+      "knowledgeUnitIds": [
+        "A1-N14"
+      ],
+      "canDo": "Can say what one wants to do at a destination.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「景色」の よみかたは どれですか。",
+      "choices": [
+        "けしき",
+        "けいしき",
+        "けしぎ",
+        "けいし"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-035",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_meaning",
+      "knowledgeUnitIds": [
+        "A1-N14"
+      ],
+      "canDo": "Can say what one wants to do at a destination.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「観光」は どんな ことですか。",
+      "choices": [
+        "旅行先で有名な場所などを見ること",
+        "会社で働くこと",
+        "家で掃除すること",
+        "店で払うこと"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-036",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N14"
+      ],
+      "canDo": "Can say what one wants to do at a destination.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "京都で古い町を ＿＿＿たいです。",
+      "choices": [
+        "歩き",
+        "食べ",
+        "借り",
+        "住み"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-037",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "kanji_reading",
+      "knowledgeUnitIds": [
+        "A1-N15"
+      ],
+      "canDo": "Can ask and understand where a wanted item is sold.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「売り場」の よみかたは どれですか。",
+      "choices": [
+        "うりば",
+        "うれば",
+        "ばいば",
+        "うりじょう"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-038",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_meaning",
+      "knowledgeUnitIds": [
+        "A1-N15"
+      ],
+      "canDo": "Can ask and understand where a wanted item is sold.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「在庫があります」は どんな いみですか。",
+      "choices": [
+        "商品が店に残っている",
+        "店が閉まっている",
+        "商品が無料である",
+        "人が住んでいる"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-039",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N15"
+      ],
+      "canDo": "Can ask and understand where a wanted item is sold.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "ノートは5階の文房具 ＿＿＿にあります。",
+      "choices": [
+        "売り場",
+        "会議室",
+        "台所",
+        "空港"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-040",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "kanji_reading",
+      "knowledgeUnitIds": [
+        "A1-N16"
+      ],
+      "canDo": "Can ask and understand simple prices and quantities.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「値段」の よみかたは どれですか。",
+      "choices": [
+        "ねだん",
+        "ねたん",
+        "ちだん",
+        "ねだい"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-041",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_meaning",
+      "knowledgeUnitIds": [
+        "A1-N16"
+      ],
+      "canDo": "Can ask and understand simple prices and quantities.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「おつり」は 何ですか。",
+      "choices": [
+        "払いすぎたお金から返ってくるお金",
+        "商品の名前",
+        "店の場所",
+        "会議の時間"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-042",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N16"
+      ],
+      "canDo": "Can ask and understand simple prices and quantities.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "500円のものに1000円を払いました。＿＿＿は500円です。",
+      "choices": [
+        "おつり",
+        "売り場",
+        "家族",
+        "趣味"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-043",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "kanji_reading",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can talk simply about what one did on a day off.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「昨日」の よみかたは どれですか。",
+      "choices": [
+        "きのう",
+        "きょう",
+        "あした",
+        "さくご"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-044",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_meaning",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can talk simply about what one did on a day off.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「午前」は いつですか。",
+      "choices": [
+        "昼より前",
+        "昼より後",
+        "夜だけ",
+        "休みの日だけ"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-045",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can talk simply about what one did on a day off.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "昨日の午後、家で映画を ＿＿＿。",
+      "choices": [
+        "見ました",
+        "見ます",
+        "見たいです",
+        "見ています"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-046",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "kanji_reading",
+      "knowledgeUnitIds": [
+        "A1-N18"
+      ],
+      "canDo": "Can say what one wants to experience in Japan.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「旅行」の よみかたは どれですか。",
+      "choices": [
+        "りょこう",
+        "りょうこう",
+        "りょごう",
+        "りこう"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-047",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_meaning",
+      "knowledgeUnitIds": [
+        "A1-N18"
+      ],
+      "canDo": "Can say what one wants to experience in Japan.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "「体験する」は どんな いみですか。",
+      "choices": [
+        "実際にやってみる",
+        "値段を聞く",
+        "人を待つ",
+        "会社で働く"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-048",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N18"
+      ],
+      "canDo": "Can say what one wants to experience in Japan.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "日本で着物を ＿＿＿みたいです。",
+      "choices": [
+        "着て",
+        "乗って",
+        "食べて",
+        "貸して"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-049",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N06"
+      ],
+      "canDo": "Can order simple food and drinks.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "メニューを見て、魚セットに決めました。魚セットを ＿＿＿。",
+      "choices": [
+        "お願いします",
+        "住みます",
+        "会議します",
+        "乗り換えます"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-SC-050",
+      "level": "A1",
+      "section": "script_vocabulary",
+      "category": "word_usage",
+      "knowledgeUnitIds": [
+        "A1-N09"
+      ],
+      "canDo": "Can understand a simple work schedule and times.",
+      "instruction": "ことばや ぶんを みて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "会議は3時に始まり、4時に ＿＿＿。",
+      "choices": [
+        "終わります",
+        "住みます",
+        "売ります",
+        "注文します"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-001",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N03"
+      ],
+      "canDo": "Can exchange basic identity information.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "社員証：ケン／XYZ会社\nA：お名前は？\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "ケンです。",
+        "XYZ会社です。",
+        "日本です。",
+        "東京です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-002",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N03"
+      ],
+      "canDo": "Can exchange basic identity information.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "プロフィール：出身＝タイ\nA：どこから来ましたか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "タイから来ました。",
+        "会社で働きます。",
+        "田中です。",
+        "3階です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-003",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N03"
+      ],
+      "canDo": "Can exchange basic identity information.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "プロフィール：勤務先＝病院\nA：どこで働いていますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "病院で働いています。",
+        "タイから来ました。",
+        "ミンです。",
+        "500円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-004",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N04"
+      ],
+      "canDo": "Can talk simply about family members and where they live.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "家族メモ：母＝札幌\nA：お母さんはどこに住んでいますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "札幌に住んでいます。",
+        "札幌を買います。",
+        "札幌は300円です。",
+        "札幌で注文します。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-005",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N04"
+      ],
+      "canDo": "Can talk simply about family members and where they live.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "家族メモ：兄・妹・私\nA：兄弟は何人ですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "二人です。",
+        "二階です。",
+        "2時です。",
+        "200円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-006",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "grammar",
+      "knowledgeUnitIds": [
+        "A1-N04"
+      ],
+      "canDo": "Can talk simply about family members and where they live.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "A：妹さんは東京に住んでいますか。\nB：いいえ、＿＿＿＿＿＿。",
+      "choices": [
+        "大阪に住んでいます。",
+        "東京は500円です。",
+        "妹は3階です。",
+        "大阪を食べます。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-007",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can understand and state simple food and drink preferences.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "好みメモ：好き＝パン\nA：好きな食べ物は何ですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "パンが好きです。",
+        "パンを三つください。",
+        "パンは500円です。",
+        "パンは2階です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-008",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can understand and state simple food and drink preferences.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "好みメモ：飲み物＝ジュース\nA：好きな飲み物は何ですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "ジュースが好きです。",
+        "魚が好きです。",
+        "肉を買います。",
+        "野菜を食べます。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-009",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "grammar",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can understand and state simple food and drink preferences.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "好みメモ：魚＞肉\nA：魚と肉、どちらが好きですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "魚のほうが好きです。",
+        "肉をお願いします。",
+        "魚は300円です。",
+        "肉は3階です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-010",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N06"
+      ],
+      "canDo": "Can order simple food and drinks.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "メニュー：うどん／カレー\n希望：うどん\n店員：ご注文は？\n客：＿＿＿＿＿＿。",
+      "choices": [
+        "うどんをお願いします。",
+        "カレーは3階です。",
+        "名前はケンです。",
+        "会議は4時です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-011",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N06"
+      ],
+      "canDo": "Can order simple food and drinks.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "希望：水\n店員：お飲み物は？\n客：＿＿＿＿＿＿。",
+      "choices": [
+        "水をお願いします。",
+        "魚をお願いします。",
+        "2階です。",
+        "200円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-012",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N06"
+      ],
+      "canDo": "Can order simple food and drinks.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "食事終了\n客：すみません、＿＿＿＿＿＿。\n店員：はい、少々お待ちください。",
+      "choices": [
+        "会計をお願いします。",
+        "空港へ行きたいです。",
+        "私はリンです。",
+        "受付は左です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-013",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "grammar",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can understand simple information about rooms and household items.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "部屋メモ：ベッドあり／テレビなし\nA：テレビはありますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "いいえ、ありません。",
+        "はい、います。",
+        "3時です。",
+        "500円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-014",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can understand simple information about rooms and household items.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "部屋メモ：部屋＝4\nA：部屋はいくつありますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "四つあります。",
+        "4階です。",
+        "4時です。",
+        "四人です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-015",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can understand simple information about rooms and household items.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "配置：ベッド＝寝室\nA：ベッドはどこですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "寝室にあります。",
+        "寝室にいます。",
+        "3時です。",
+        "300円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-016",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N08"
+      ],
+      "canDo": "Can ask and understand where a person or place is at work.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "勤務表：佐藤＝受付\nA：佐藤さんはどこですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "受付にいます。",
+        "9時です。",
+        "佐藤です。",
+        "500円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-017",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N08"
+      ],
+      "canDo": "Can ask and understand where a person or place is at work.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "案内図：会議室＝3階\nA：会議室はどこですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "3階です。",
+        "3時です。",
+        "三人です。",
+        "300円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-018",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "grammar",
+      "knowledgeUnitIds": [
+        "A1-N08"
+      ],
+      "canDo": "Can ask and understand where a person or place is at work.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "A：山本さんは事務所にいますか。\nB：いいえ、＿＿＿＿＿＿。",
+      "choices": [
+        "会議室にいます。",
+        "事務所があります。",
+        "4時です。",
+        "400円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-019",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N09"
+      ],
+      "canDo": "Can understand a simple work schedule and times.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "予定：仕事開始＝7:30\nA：仕事は何時に始まりますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "7時30分です。",
+        "7階です。",
+        "七人です。",
+        "700円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-020",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N09"
+      ],
+      "canDo": "Can understand a simple work schedule and times.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "予定：昼休み＝12:00～12:45\nA：昼休みは何時までですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "12時45分までです。",
+        "12階です。",
+        "45人です。",
+        "450円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-021",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N09"
+      ],
+      "canDo": "Can understand a simple work schedule and times.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "予定：研修＝金曜日\nA：研修は木曜日ですか。\nB：いいえ、＿＿＿＿＿＿。",
+      "choices": [
+        "金曜日です。",
+        "3階です。",
+        "500円です。",
+        "田中です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-022",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N10"
+      ],
+      "canDo": "Can understand and make simple workplace requests.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "あなたはペンを貸せます。\nA：ペンを貸してください。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "はい、どうぞ。",
+        "はい、借ります。",
+        "はい、食べます。",
+        "はい、3階です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-023",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "grammar",
+      "knowledgeUnitIds": [
+        "A1-N10"
+      ],
+      "canDo": "Can understand and make simple workplace requests.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "A：この書類を8枚コピーしてください。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "はい、8枚コピーします。",
+        "はい、8階です。",
+        "はい、8時です。",
+        "はい、800円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-024",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N10"
+      ],
+      "canDo": "Can understand and make simple workplace requests.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "指示：箱＝机の下\nA：箱はどこに置きますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "机の下に置きます。",
+        "机の下を食べます。",
+        "3時です。",
+        "500円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-025",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N11"
+      ],
+      "canDo": "Can talk simply about hobbies and free-time activities.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "プロフィール：趣味＝料理\nA：趣味は何ですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "料理をすることです。",
+        "料理は500円です。",
+        "料理は3階です。",
+        "昨日会議でした。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-026",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N11"
+      ],
+      "canDo": "Can talk simply about hobbies and free-time activities.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "プロフィール：週末＝本を読む\nA：週末は何をしますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "本を読みます。",
+        "会社は3階です。",
+        "会計は500円です。",
+        "駅で乗り換えます。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-027",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "grammar",
+      "knowledgeUnitIds": [
+        "A1-N11"
+      ],
+      "canDo": "Can talk simply about hobbies and free-time activities.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "A：音楽を聞きますか。\nB：はい、＿＿＿＿＿＿。",
+      "choices": [
+        "よく聞きます。",
+        "音楽は3階です。",
+        "500円です。",
+        "会社です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-028",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N12"
+      ],
+      "canDo": "Can make, accept, and understand a simple invitation or meeting plan.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "土曜日は空いています。\nA：一緒に公園へ行きませんか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "いいですね。行きましょう。",
+        "昨日行きました。",
+        "公園は500円です。",
+        "3階です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-029",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N12"
+      ],
+      "canDo": "Can make, accept, and understand a simple invitation or meeting plan.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "日曜日は病院です。\nA：日曜日に会いませんか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "すみません。日曜日は病院です。",
+        "いいですね。必ず行きます。",
+        "500円です。",
+        "駅は3階です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-030",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N12"
+      ],
+      "canDo": "Can make, accept, and understand a simple invitation or meeting plan.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "予定：11時／駅南口\nA：どこで会いますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "駅の南口で会いましょう。",
+        "11時に会いましょう。",
+        "土曜日に会いましょう。",
+        "二人で会いましょう。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-031",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "grammar",
+      "knowledgeUnitIds": [
+        "A1-N13"
+      ],
+      "canDo": "Can understand simple routes, stations, transfers, and transportation.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "ルート：新宿駅でJR→地下鉄\nA：どこで乗り換えますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "新宿駅で乗り換えます。",
+        "10時に乗り換えます。",
+        "500円で乗り換えます。",
+        "二人で乗り換えます。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-032",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N13"
+      ],
+      "canDo": "Can understand simple routes, stations, transfers, and transportation.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "案内：この電車＝空港行き\nA：この電車は空港へ行きますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "はい、行きます。",
+        "はい、空港は大きいです。",
+        "はい、3階です。",
+        "はい、500円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-033",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N13"
+      ],
+      "canDo": "Can understand simple routes, stations, transfers, and transportation.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "予定：空港までバス\nA：空港まで何で行きますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "バスで行きます。",
+        "3時に行きます。",
+        "二人で行きます。",
+        "500円で行きます。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-034",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N14"
+      ],
+      "canDo": "Can say what one wants to do at a destination.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "希望：山で景色を見る\nA：山で何をしたいですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "きれいな景色を見たいです。",
+        "電池を買います。",
+        "会社で働きます。",
+        "500円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-035",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N14"
+      ],
+      "canDo": "Can say what one wants to do at a destination.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "希望：温泉に入る\nA：旅行先で何をしたいですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "温泉に入りたいです。",
+        "会議をしたいです。",
+        "電池を買いたいです。",
+        "受付へ行きたいです。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-036",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "grammar",
+      "knowledgeUnitIds": [
+        "A1-N14"
+      ],
+      "canDo": "Can say what one wants to do at a destination.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "希望：古い町を歩く\nA：京都で何をしたいですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "古い町を歩きたいです。",
+        "新幹線を食べたいです。",
+        "電池に入りたいです。",
+        "会計を見たいです。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-037",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N15"
+      ],
+      "canDo": "Can ask and understand where a wanted item is sold.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "案内板：ノート＝5階\n客：ノートは何階ですか。\n店員：＿＿＿＿＿＿。",
+      "choices": [
+        "5階です。",
+        "500円です。",
+        "五つです。",
+        "5時です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-038",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N15"
+      ],
+      "canDo": "Can ask and understand where a wanted item is sold.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "案内板：電池＝地下1階\n客：電池はどこですか。\n店員：＿＿＿＿＿＿。",
+      "choices": [
+        "地下1階です。",
+        "100円です。",
+        "一つです。",
+        "1時です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-039",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "grammar",
+      "knowledgeUnitIds": [
+        "A1-N15"
+      ],
+      "canDo": "Can ask and understand where a wanted item is sold.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "案内：文房具＝4階\nA：この店でノートを買えますか。\nB：はい、＿＿＿＿＿＿。",
+      "choices": [
+        "4階で買えます。",
+        "4時です。",
+        "四人です。",
+        "400円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-040",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N16"
+      ],
+      "canDo": "Can ask and understand simple prices and quantities.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "値札：バナナ1本130円\n客：バナナはいくらですか。\n店員：＿＿＿＿＿＿。",
+      "choices": [
+        "一本130円です。",
+        "1階です。",
+        "13時です。",
+        "十三人です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-041",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N16"
+      ],
+      "canDo": "Can ask and understand simple prices and quantities.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "注文：みかん4個\n客：みかんを四つください。\n店員：＿＿＿＿＿＿。",
+      "choices": [
+        "はい、四つですね。",
+        "はい、4階です。",
+        "はい、4時です。",
+        "はい、400人です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-042",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "grammar",
+      "knowledgeUnitIds": [
+        "A1-N16"
+      ],
+      "canDo": "Can ask and understand simple prices and quantities.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "支払方法：現金のみ\n客：カードで払えますか。\n店員：いいえ、＿＿＿＿＿＿。",
+      "choices": [
+        "現金でお願いします。",
+        "カードは3階です。",
+        "500円です。",
+        "田中です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-043",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can talk simply about what one did on a day off.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "メモ：昨日＝映画\nA：昨日、何をしましたか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "映画を見ました。",
+        "映画を見ます。",
+        "3階です。",
+        "500円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-044",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can talk simply about what one did on a day off.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "メモ：午前＝掃除\nA：午前は何をしましたか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "部屋を掃除しました。",
+        "午後です。",
+        "田中です。",
+        "500円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-045",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "grammar",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can talk simply about what one did on a day off.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "A：昨日は休みでしたか。\nB：はい、＿＿＿＿＿＿。",
+      "choices": [
+        "家でゆっくりしました。",
+        "3階です。",
+        "500円です。",
+        "田中です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-046",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N18"
+      ],
+      "canDo": "Can say what one wants to experience in Japan.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "希望：着物を着る\nA：日本で何をしてみたいですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "着物を着てみたいです。",
+        "着物は3階です。",
+        "昨日着ました。",
+        "500円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-047",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N18"
+      ],
+      "canDo": "Can say what one wants to experience in Japan.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "希望：富士山を見る\nA：日本で何を見てみたいですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "富士山を見てみたいです。",
+        "新幹線に乗りたいです。",
+        "温泉に入りたいです。",
+        "漫画を読みたいです。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-048",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "grammar",
+      "knowledgeUnitIds": [
+        "A1-N18"
+      ],
+      "canDo": "Can say what one wants to experience in Japan.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "希望：大阪まで新幹線\nA：大阪まで何に乗りたいですか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "新幹線に乗りたいです。",
+        "富士山を見たいです。",
+        "温泉に入りたいです。",
+        "寺を見たいです。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-049",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N09"
+      ],
+      "canDo": "Can understand a simple work schedule and times.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "予定：研修終了＝17:30\nA：研修は何時に終わりますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "5時30分に終わります。",
+        "5階です。",
+        "五人です。",
+        "500円です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-CO-050",
+      "level": "A1",
+      "section": "conversation_expression",
+      "category": "expression",
+      "knowledgeUnitIds": [
+        "A1-N10"
+      ],
+      "canDo": "Can understand and make simple workplace requests.",
+      "instruction": "会話を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "指示：コピー後に会議室へ\nA：コピーのあと、どこへ持っていきますか。\nB：＿＿＿＿＿＿。",
+      "choices": [
+        "会議室へ持っていきます。",
+        "3時に持っていきます。",
+        "500円です。",
+        "田中です。"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null
+    },
+    {
+      "id": "A1-F500-LI-001",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N03"
+      ],
+      "canDo": "Can exchange basic identity information.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "話し手が働く場所はどこですか。",
+      "choices": [
+        "病院",
+        "学校",
+        "ホテル",
+        "会社"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "はじめまして。私はアリです。インドネシアから来ました。今は病院で働いています。"
+    },
+    {
+      "id": "A1-F500-LI-002",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N03"
+      ],
+      "canDo": "Can exchange basic identity information.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "話し手の名前は何ですか。",
+      "choices": [
+        "アリ",
+        "リン",
+        "ミン",
+        "ケン"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "こんにちは。アリです。インドネシアから来ました。"
+    },
+    {
+      "id": "A1-F500-LI-003",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N03"
+      ],
+      "canDo": "Can exchange basic identity information.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "話し手の出身国はどこですか。",
+      "choices": [
+        "タイ",
+        "インドネシア",
+        "日本",
+        "韓国"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "こんにちは。私はアリです。インドネシアから来ました。"
+    },
+    {
+      "id": "A1-F500-LI-004",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N04"
+      ],
+      "canDo": "Can talk simply about family members and where they live.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "妹はどこに住んでいますか。",
+      "choices": [
+        "東京",
+        "福岡",
+        "大阪",
+        "京都"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "父と母は大阪に住んでいます。妹は福岡に住んでいます。"
+    },
+    {
+      "id": "A1-F500-LI-005",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N04"
+      ],
+      "canDo": "Can talk simply about family members and where they live.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "家族は何人ですか。",
+      "choices": [
+        "三人",
+        "四人",
+        "五人",
+        "六人"
+      ],
+      "answer": 3,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "父、母、兄、妹、弟、私の六人家族です。"
+    },
+    {
+      "id": "A1-F500-LI-006",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N04"
+      ],
+      "canDo": "Can talk simply about family members and where they live.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "京都に住んでいる人はだれですか。",
+      "choices": [
+        "父",
+        "母",
+        "兄",
+        "弟"
+      ],
+      "answer": 3,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "父は東京、母は大阪、弟は京都に住んでいます。"
+    },
+    {
+      "id": "A1-F500-LI-007",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can understand and state simple food and drink preferences.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "Bさんが好きな飲み物は何ですか。",
+      "choices": [
+        "水",
+        "ジュース",
+        "コーヒー",
+        "お茶"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "A：ジュースが好きですか。B：いいえ。水が一番好きです。"
+    },
+    {
+      "id": "A1-F500-LI-008",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can understand and state simple food and drink preferences.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "話し手があまり食べないものは何ですか。",
+      "choices": [
+        "野菜",
+        "魚",
+        "肉",
+        "パン"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "私は野菜が好きです。魚はあまり食べません。"
+    },
+    {
+      "id": "A1-F500-LI-009",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can understand and state simple food and drink preferences.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "一番好きな食べ物は何ですか。",
+      "choices": [
+        "肉",
+        "魚",
+        "野菜",
+        "パン"
+      ],
+      "answer": 3,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "肉も魚も食べますが、一番好きなのはパンです。"
+    },
+    {
+      "id": "A1-F500-LI-010",
+      "level": "A1",
+      "section": "listening",
+      "category": "shop_public",
+      "knowledgeUnitIds": [
+        "A1-N06"
+      ],
+      "canDo": "Can order simple food and drinks.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "客が注文した料理は何ですか。",
+      "choices": [
+        "うどん",
+        "カレー",
+        "魚セット",
+        "サンドイッチ"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "店員：ご注文は？ 客：うどんを一つと水をお願いします。"
+    },
+    {
+      "id": "A1-F500-LI-011",
+      "level": "A1",
+      "section": "listening",
+      "category": "shop_public",
+      "knowledgeUnitIds": [
+        "A1-N06"
+      ],
+      "canDo": "Can order simple food and drinks.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "客が注文した飲み物は何ですか。",
+      "choices": [
+        "水",
+        "お茶",
+        "コーヒー",
+        "ジュース"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "店員：ご注文は？ 客：うどんを一つと水をお願いします。"
+    },
+    {
+      "id": "A1-F500-LI-012",
+      "level": "A1",
+      "section": "listening",
+      "category": "shop_public",
+      "knowledgeUnitIds": [
+        "A1-N06"
+      ],
+      "canDo": "Can order simple food and drinks.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "客はコーヒーをいくつ頼みましたか。",
+      "choices": [
+        "一つ",
+        "二つ",
+        "三つ",
+        "四つ"
+      ],
+      "answer": 2,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "客：サンドイッチを一つ、コーヒーを三つお願いします。"
+    },
+    {
+      "id": "A1-F500-LI-013",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can understand simple information about rooms and household items.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "寝室にあるものは何ですか。",
+      "choices": [
+        "ベッド",
+        "冷蔵庫",
+        "テレビ",
+        "机"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "寝室にはベッドがあります。冷蔵庫は台所です。"
+    },
+    {
+      "id": "A1-F500-LI-014",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can understand simple information about rooms and household items.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "部屋にないものは何ですか。",
+      "choices": [
+        "テレビ",
+        "机",
+        "ベッド",
+        "冷蔵庫"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "この部屋には机とベッドがあります。テレビはありません。"
+    },
+    {
+      "id": "A1-F500-LI-015",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can understand simple information about rooms and household items.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "アパートの部屋数はいくつですか。",
+      "choices": [
+        "一つ",
+        "二つ",
+        "三つ",
+        "五つ"
+      ],
+      "answer": 3,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "このアパートには部屋が五つあります。"
+    },
+    {
+      "id": "A1-F500-LI-016",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N08"
+      ],
+      "canDo": "Can ask and understand where a person or place is at work.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "佐藤さんは今どこにいますか。",
+      "choices": [
+        "受付",
+        "食堂",
+        "事務所",
+        "会議室"
+      ],
+      "answer": 3,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "A：佐藤さんは事務所ですか。B：いいえ、今は会議室にいます。"
+    },
+    {
+      "id": "A1-F500-LI-017",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N08"
+      ],
+      "canDo": "Can ask and understand where a person or place is at work.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "受付はどこにありますか。",
+      "choices": [
+        "入口の左",
+        "入口の右",
+        "2階",
+        "3階"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "受付は入口の右にあります。左は待合室です。"
+    },
+    {
+      "id": "A1-F500-LI-018",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N08"
+      ],
+      "canDo": "Can ask and understand where a person or place is at work.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "山本さんがいる階は何階ですか。",
+      "choices": [
+        "1階",
+        "2階",
+        "3階",
+        "4階"
+      ],
+      "answer": 2,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "山本さんは3階の会議室にいます。"
+    },
+    {
+      "id": "A1-F500-LI-019",
+      "level": "A1",
+      "section": "listening",
+      "category": "announcement_instruction",
+      "knowledgeUnitIds": [
+        "A1-N09"
+      ],
+      "canDo": "Can understand a simple work schedule and times.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "明日の仕事は何時からですか。",
+      "choices": [
+        "7時",
+        "7時30分",
+        "8時",
+        "8時30分"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "明日は7時30分から仕事を始めます。今日は8時からです。"
+    },
+    {
+      "id": "A1-F500-LI-020",
+      "level": "A1",
+      "section": "listening",
+      "category": "announcement_instruction",
+      "knowledgeUnitIds": [
+        "A1-N09"
+      ],
+      "canDo": "Can understand a simple work schedule and times.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "昼休みは何時までですか。",
+      "choices": [
+        "12時",
+        "12時45分",
+        "1時",
+        "1時15分"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "昼休みは12時から12時45分までです。"
+    },
+    {
+      "id": "A1-F500-LI-021",
+      "level": "A1",
+      "section": "listening",
+      "category": "announcement_instruction",
+      "knowledgeUnitIds": [
+        "A1-N09"
+      ],
+      "canDo": "Can understand a simple work schedule and times.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "研修が終わる時刻は何時ですか。",
+      "choices": [
+        "4時",
+        "5時",
+        "5時30分",
+        "6時"
+      ],
+      "answer": 2,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "今日の研修は3時から5時30分までです。"
+    },
+    {
+      "id": "A1-F500-LI-022",
+      "level": "A1",
+      "section": "listening",
+      "category": "announcement_instruction",
+      "knowledgeUnitIds": [
+        "A1-N10"
+      ],
+      "canDo": "Can understand and make simple workplace requests.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "最初に何をしますか。",
+      "choices": [
+        "名前を書く",
+        "受付へ持っていく",
+        "コピーする",
+        "帰る"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "この紙に名前を書いてください。そのあと受付へ持っていってください。"
+    },
+    {
+      "id": "A1-F500-LI-023",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N10"
+      ],
+      "canDo": "Can understand and make simple workplace requests.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "借りるものは何ですか。",
+      "choices": [
+        "ペン",
+        "ノート",
+        "ホチキス",
+        "段ボール"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "A：すみません。ペンを貸してください。B：はい、どうぞ。"
+    },
+    {
+      "id": "A1-F500-LI-024",
+      "level": "A1",
+      "section": "listening",
+      "category": "announcement_instruction",
+      "knowledgeUnitIds": [
+        "A1-N10"
+      ],
+      "canDo": "Can understand and make simple workplace requests.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "書類を置く場所はどこですか。",
+      "choices": [
+        "机の上",
+        "机の下",
+        "受付の前",
+        "入口の右"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "書類は机の下の箱に入れてください。"
+    },
+    {
+      "id": "A1-F500-LI-025",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N11"
+      ],
+      "canDo": "Can talk simply about hobbies and free-time activities.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "Bさんの趣味は何ですか。",
+      "choices": [
+        "料理",
+        "映画",
+        "スポーツ",
+        "漫画"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "A：趣味は何ですか。B：料理をすることです。"
+    },
+    {
+      "id": "A1-F500-LI-026",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N11"
+      ],
+      "canDo": "Can talk simply about hobbies and free-time activities.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "今週末に読むものは何ですか。",
+      "choices": [
+        "本",
+        "漫画",
+        "新聞",
+        "メニュー"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "映画も好きですが、今週末は家で本を読みます。"
+    },
+    {
+      "id": "A1-F500-LI-027",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N11"
+      ],
+      "canDo": "Can talk simply about hobbies and free-time activities.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "よく聞くものは何ですか。",
+      "choices": [
+        "音楽",
+        "ニュース",
+        "会議",
+        "電話"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "休みの日はよく音楽を聞きます。"
+    },
+    {
+      "id": "A1-F500-LI-028",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N12"
+      ],
+      "canDo": "Can make, accept, and understand a simple invitation or meeting plan.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "二人が最終的に会う日は何曜日ですか。",
+      "choices": [
+        "土曜日",
+        "日曜日",
+        "月曜日",
+        "火曜日"
+      ],
+      "answer": 2,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "A：日曜日はどうですか。B：日曜日は病院です。月曜日なら大丈夫です。A：では月曜日にしましょう。"
+    },
+    {
+      "id": "A1-F500-LI-029",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N12"
+      ],
+      "canDo": "Can make, accept, and understand a simple invitation or meeting plan.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "待ち合わせ場所はどこですか。",
+      "choices": [
+        "駅の南口",
+        "駅の北口",
+        "公園",
+        "会社"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "A：どこで会いますか。B：駅の南口で会いましょう。"
+    },
+    {
+      "id": "A1-F500-LI-030",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N12"
+      ],
+      "canDo": "Can make, accept, and understand a simple invitation or meeting plan.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "Bさんは誘いをどうしましたか。",
+      "choices": [
+        "受けた",
+        "断った",
+        "時間だけ聞いた",
+        "場所だけ変えた"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "A：土曜日、公園へ行きませんか。B：いいですね。行きましょう。"
+    },
+    {
+      "id": "A1-F500-LI-031",
+      "level": "A1",
+      "section": "listening",
+      "category": "announcement_instruction",
+      "knowledgeUnitIds": [
+        "A1-N13"
+      ],
+      "canDo": "Can understand simple routes, stations, transfers, and transportation.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "空港行きの電車は何番ホームですか。",
+      "choices": [
+        "1番",
+        "2番",
+        "3番",
+        "5番"
+      ],
+      "answer": 3,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "空港行きの電車は5番ホームです。2番ではありません。"
+    },
+    {
+      "id": "A1-F500-LI-032",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N13"
+      ],
+      "canDo": "Can understand simple routes, stations, transfers, and transportation.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "どこで地下鉄に乗り換えますか。",
+      "choices": [
+        "新宿駅",
+        "空港",
+        "ホテル",
+        "会社"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "新宿駅までJRで行き、新宿駅で地下鉄に乗り換えます。"
+    },
+    {
+      "id": "A1-F500-LI-033",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N13"
+      ],
+      "canDo": "Can understand simple routes, stations, transfers, and transportation.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "空港まで何で行きますか。",
+      "choices": [
+        "バス",
+        "電車",
+        "タクシー",
+        "自転車"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "A：空港まで電車ですか。B：いいえ、バスで行きます。"
+    },
+    {
+      "id": "A1-F500-LI-034",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N14"
+      ],
+      "canDo": "Can say what one wants to do at a destination.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "旅行先で一番したいことは何ですか。",
+      "choices": [
+        "景色を見る",
+        "温泉に入る",
+        "買い物する",
+        "仕事する"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "温泉にも入りたいですが、一番したいのは山の景色を見ることです。"
+    },
+    {
+      "id": "A1-F500-LI-035",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N14"
+      ],
+      "canDo": "Can say what one wants to do at a destination.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "京都で歩きたいところはどこですか。",
+      "choices": [
+        "古い町",
+        "駅",
+        "会社",
+        "売り場"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "京都では古い町をゆっくり歩きたいです。"
+    },
+    {
+      "id": "A1-F500-LI-036",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N14"
+      ],
+      "canDo": "Can say what one wants to do at a destination.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "入りたい場所はどこですか。",
+      "choices": [
+        "温泉",
+        "寺",
+        "店",
+        "駅"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "旅館に着いたら、まず温泉に入りたいです。"
+    },
+    {
+      "id": "A1-F500-LI-037",
+      "level": "A1",
+      "section": "listening",
+      "category": "shop_public",
+      "knowledgeUnitIds": [
+        "A1-N15"
+      ],
+      "canDo": "Can ask and understand where a wanted item is sold.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "ノートは何階ですか。",
+      "choices": [
+        "2階",
+        "3階",
+        "4階",
+        "5階"
+      ],
+      "answer": 3,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "ノートは5階の文房具売り場です。4階は家具です。"
+    },
+    {
+      "id": "A1-F500-LI-038",
+      "level": "A1",
+      "section": "listening",
+      "category": "shop_public",
+      "knowledgeUnitIds": [
+        "A1-N15"
+      ],
+      "canDo": "Can ask and understand where a wanted item is sold.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "電池売り場はどこですか。",
+      "choices": [
+        "エレベーターの左",
+        "エレベーターの右",
+        "入口の前",
+        "レジの後ろ"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "電池は地下1階です。エレベーターの左にあります。"
+    },
+    {
+      "id": "A1-F500-LI-039",
+      "level": "A1",
+      "section": "listening",
+      "category": "shop_public",
+      "knowledgeUnitIds": [
+        "A1-N15"
+      ],
+      "canDo": "Can ask and understand where a wanted item is sold.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "客が探しているものは何ですか。",
+      "choices": [
+        "電池",
+        "ノート",
+        "服",
+        "野菜"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "客：ノートはどこですか。店員：5階です。"
+    },
+    {
+      "id": "A1-F500-LI-040",
+      "level": "A1",
+      "section": "listening",
+      "category": "shop_public",
+      "knowledgeUnitIds": [
+        "A1-N16"
+      ],
+      "canDo": "Can ask and understand simple prices and quantities.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "バナナ一本はいくらですか。",
+      "choices": [
+        "100円",
+        "120円",
+        "130円",
+        "150円"
+      ],
+      "answer": 2,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "バナナは一本130円です。四本で520円です。"
+    },
+    {
+      "id": "A1-F500-LI-041",
+      "level": "A1",
+      "section": "listening",
+      "category": "shop_public",
+      "knowledgeUnitIds": [
+        "A1-N16"
+      ],
+      "canDo": "Can ask and understand simple prices and quantities.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "バナナ四本はいくらですか。",
+      "choices": [
+        "390円",
+        "480円",
+        "500円",
+        "520円"
+      ],
+      "answer": 3,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "バナナは一本130円です。四本で520円です。"
+    },
+    {
+      "id": "A1-F500-LI-042",
+      "level": "A1",
+      "section": "listening",
+      "category": "shop_public",
+      "knowledgeUnitIds": [
+        "A1-N16"
+      ],
+      "canDo": "Can ask and understand simple prices and quantities.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "客は何で払いますか。",
+      "choices": [
+        "現金",
+        "カード",
+        "電子マネー",
+        "まだ払わない"
+      ],
+      "answer": 2,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "店員：950円です。客：電子マネーで払います。"
+    },
+    {
+      "id": "A1-F500-LI-043",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can talk simply about what one did on a day off.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "昨日の午前に何をしましたか。",
+      "choices": [
+        "掃除",
+        "買い物",
+        "映画",
+        "仕事"
+      ],
+      "answer": 2,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "昨日は休みでした。午前は映画を見て、午後は部屋を掃除しました。"
+    },
+    {
+      "id": "A1-F500-LI-044",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can talk simply about what one did on a day off.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "昨日の午後に何をしましたか。",
+      "choices": [
+        "掃除",
+        "買い物",
+        "映画",
+        "仕事"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "昨日は休みでした。午前は映画を見て、午後は部屋を掃除しました。"
+    },
+    {
+      "id": "A1-F500-LI-045",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can talk simply about what one did on a day off.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "昨日読んだものは何ですか。",
+      "choices": [
+        "漫画",
+        "新聞",
+        "本",
+        "メニュー"
+      ],
+      "answer": 2,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "昨日は家で本を読みました。漫画は読みませんでした。"
+    },
+    {
+      "id": "A1-F500-LI-046",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N18"
+      ],
+      "canDo": "Can say what one wants to experience in Japan.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "日本で着てみたいものは何ですか。",
+      "choices": [
+        "着物",
+        "制服",
+        "コート",
+        "スーツ"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "日本では着物を着てみたいです。"
+    },
+    {
+      "id": "A1-F500-LI-047",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N18"
+      ],
+      "canDo": "Can say what one wants to experience in Japan.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "日本で見てみたい山はどれですか。",
+      "choices": [
+        "富士山",
+        "高尾山",
+        "阿蘇山",
+        "六甲山"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "日本では新幹線にも乗りたいですが、富士山を見てみたいです。"
+    },
+    {
+      "id": "A1-F500-LI-048",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N18"
+      ],
+      "canDo": "Can say what one wants to experience in Japan.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "一番したい体験は何ですか。",
+      "choices": [
+        "新幹線に乗る",
+        "買い物する",
+        "会議する",
+        "掃除する"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "着物も着てみたいですが、一番したいのは新幹線に乗ることです。"
+    },
+    {
+      "id": "A1-F500-LI-049",
+      "level": "A1",
+      "section": "listening",
+      "category": "announcement_instruction",
+      "knowledgeUnitIds": [
+        "A1-N09"
+      ],
+      "canDo": "Can understand a simple work schedule and times.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "集合する時刻は何時ですか。",
+      "choices": [
+        "9時20分",
+        "9時30分",
+        "10時",
+        "10時30分"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "会議は10時からです。9時30分までに集まってください。"
+    },
+    {
+      "id": "A1-F500-LI-050",
+      "level": "A1",
+      "section": "listening",
+      "category": "conversation",
+      "knowledgeUnitIds": [
+        "A1-N12"
+      ],
+      "canDo": "Can make, accept, and understand a simple invitation or meeting plan.",
+      "instruction": "音声を 聞いて、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "二人が映画を見る曜日はいつですか。",
+      "choices": [
+        "金曜日",
+        "土曜日",
+        "日曜日",
+        "火曜日"
+      ],
+      "answer": 3,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "audioScript": "A：日曜日に映画を見ませんか。B：日曜日はだめです。火曜日なら大丈夫です。A：では火曜日にしましょう。"
+    },
+    {
+      "id": "A1-F500-RE-001",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N03"
+      ],
+      "canDo": "Can exchange basic identity information.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "カードの人が働いている場所はどこですか。",
+      "choices": [
+        "病院",
+        "学校",
+        "ホテル",
+        "会社"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【プロフィール】名前：アリ／出身：インドネシア／仕事：病院"
+    },
+    {
+      "id": "A1-F500-RE-002",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N03"
+      ],
+      "canDo": "Can exchange basic identity information.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "カードの人の名前は何ですか。",
+      "choices": [
+        "アリ",
+        "インドネシア",
+        "病院",
+        "東京"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【プロフィール】名前：アリ／出身：インドネシア／仕事：病院"
+    },
+    {
+      "id": "A1-F500-RE-003",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N03"
+      ],
+      "canDo": "Can exchange basic identity information.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "出身国として書かれているのはどこですか。",
+      "choices": [
+        "日本",
+        "インドネシア",
+        "韓国",
+        "タイ"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【自己紹介】アリです。インドネシアから来ました。"
+    },
+    {
+      "id": "A1-F500-RE-004",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N04"
+      ],
+      "canDo": "Can talk simply about family members and where they live.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "妹が住んでいる町はどこですか。",
+      "choices": [
+        "東京",
+        "福岡",
+        "大阪",
+        "京都"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "父と母は大阪、妹は福岡に住んでいます。"
+    },
+    {
+      "id": "A1-F500-RE-005",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N04"
+      ],
+      "canDo": "Can talk simply about family members and where they live.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "この家族は何人ですか。",
+      "choices": [
+        "四人",
+        "五人",
+        "六人",
+        "七人"
+      ],
+      "answer": 2,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【家族】父・母・兄・妹・弟・私"
+    },
+    {
+      "id": "A1-F500-RE-006",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N04"
+      ],
+      "canDo": "Can talk simply about family members and where they live.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "京都に住んでいる人はだれですか。",
+      "choices": [
+        "父",
+        "母",
+        "兄",
+        "弟"
+      ],
+      "answer": 3,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "父は東京、母は大阪、弟は京都に住んでいます。"
+    },
+    {
+      "id": "A1-F500-RE-007",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can understand and state simple food and drink preferences.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "一番好きな食べ物は何ですか。",
+      "choices": [
+        "肉",
+        "魚",
+        "野菜",
+        "パン"
+      ],
+      "answer": 3,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "肉も魚も食べますが、パンが一番好きです。"
+    },
+    {
+      "id": "A1-F500-RE-008",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can understand and state simple food and drink preferences.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "飲まないものは何ですか。",
+      "choices": [
+        "水",
+        "ジュース",
+        "コーヒー",
+        "お茶"
+      ],
+      "answer": 2,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "飲み物は水が好きです。コーヒーは飲みません。"
+    },
+    {
+      "id": "A1-F500-RE-009",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N05"
+      ],
+      "canDo": "Can understand and state simple food and drink preferences.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "好きな飲み物として書かれているのは何ですか。",
+      "choices": [
+        "水",
+        "ジュース",
+        "コーヒー",
+        "お茶"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "私は野菜が好きです。飲み物は水が好きです。"
+    },
+    {
+      "id": "A1-F500-RE-010",
+      "level": "A1",
+      "section": "reading",
+      "category": "information_search",
+      "knowledgeUnitIds": [
+        "A1-N06"
+      ],
+      "canDo": "Can order simple food and drinks.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "うどんはいくらですか。",
+      "choices": [
+        "500円",
+        "550円",
+        "600円",
+        "650円"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【メニュー】うどん550円／カレー650円／お茶150円"
+    },
+    {
+      "id": "A1-F500-RE-011",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N06"
+      ],
+      "canDo": "Can order simple food and drinks.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "この注文の料理は何ですか。",
+      "choices": [
+        "うどん",
+        "カレー",
+        "魚セット",
+        "サンドイッチ"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【注文】うどん1つ／水1つ"
+    },
+    {
+      "id": "A1-F500-RE-012",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N06"
+      ],
+      "canDo": "Can order simple food and drinks.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "注文したコーヒーはいくつですか。",
+      "choices": [
+        "一つ",
+        "二つ",
+        "三つ",
+        "四つ"
+      ],
+      "answer": 2,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【注文】サンドイッチ1つ／コーヒー3つ"
+    },
+    {
+      "id": "A1-F500-RE-013",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can understand simple information about rooms and household items.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "この部屋にないものは何ですか。",
+      "choices": [
+        "テレビ",
+        "机",
+        "ベッド",
+        "冷蔵庫"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【部屋】机とベッドがあります。テレビはありません。"
+    },
+    {
+      "id": "A1-F500-RE-014",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can understand simple information about rooms and household items.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "ベッドがある場所はどこですか。",
+      "choices": [
+        "寝室",
+        "台所",
+        "玄関",
+        "外"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "ベッドは寝室にあります。冷蔵庫は台所です。"
+    },
+    {
+      "id": "A1-F500-RE-015",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N07"
+      ],
+      "canDo": "Can understand simple information about rooms and household items.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "この家の部屋はいくつですか。",
+      "choices": [
+        "三つ",
+        "四つ",
+        "五つ",
+        "六つ"
+      ],
+      "answer": 2,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【家】部屋5つ／台所1つ／お風呂1つ"
+    },
+    {
+      "id": "A1-F500-RE-016",
+      "level": "A1",
+      "section": "reading",
+      "category": "information_search",
+      "knowledgeUnitIds": [
+        "A1-N08"
+      ],
+      "canDo": "Can ask and understand where a person or place is at work.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "事務所は何階ですか。",
+      "choices": [
+        "1階",
+        "2階",
+        "3階",
+        "4階"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【会社案内】1階：受付／2階：事務所／4階：会議室"
+    },
+    {
+      "id": "A1-F500-RE-017",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N08"
+      ],
+      "canDo": "Can ask and understand where a person or place is at work.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "佐藤さんが現在いる場所はどこですか。",
+      "choices": [
+        "受付",
+        "食堂",
+        "事務所",
+        "会議室"
+      ],
+      "answer": 3,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "佐藤さんは事務所にはいません。今は会議室です。"
+    },
+    {
+      "id": "A1-F500-RE-018",
+      "level": "A1",
+      "section": "reading",
+      "category": "information_search",
+      "knowledgeUnitIds": [
+        "A1-N08"
+      ],
+      "canDo": "Can ask and understand where a person or place is at work.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "受付の位置はどこですか。",
+      "choices": [
+        "入口の左",
+        "入口の右",
+        "2階",
+        "3階"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【案内】受付：入口の右／待合室：入口の左"
+    },
+    {
+      "id": "A1-F500-RE-019",
+      "level": "A1",
+      "section": "reading",
+      "category": "information_search",
+      "knowledgeUnitIds": [
+        "A1-N09"
+      ],
+      "canDo": "Can understand a simple work schedule and times.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "明日の仕事は何時に始まりますか。",
+      "choices": [
+        "7時",
+        "7時30分",
+        "8時",
+        "8時30分"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【明日の予定】仕事7:30～16:30／昼休み12:00～12:45"
+    },
+    {
+      "id": "A1-F500-RE-020",
+      "level": "A1",
+      "section": "reading",
+      "category": "information_search",
+      "knowledgeUnitIds": [
+        "A1-N09"
+      ],
+      "canDo": "Can understand a simple work schedule and times.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "昼休みは何時に終わりますか。",
+      "choices": [
+        "12時",
+        "12時30分",
+        "12時45分",
+        "1時"
+      ],
+      "answer": 2,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【予定】昼休み12:00～12:45／午後の仕事12:45～16:30"
+    },
+    {
+      "id": "A1-F500-RE-021",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N09"
+      ],
+      "canDo": "Can understand a simple work schedule and times.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "金曜日の予定は何ですか。",
+      "choices": [
+        "会議",
+        "研修",
+        "休み",
+        "飲み会"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【今週】木曜日：会議／金曜日：研修／土曜日：休み"
+    },
+    {
+      "id": "A1-F500-RE-022",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N10"
+      ],
+      "canDo": "Can understand and make simple workplace requests.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "最初にすることは何ですか。",
+      "choices": [
+        "名前を書く",
+        "受付へ出す",
+        "コピーする",
+        "帰る"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【仕事メモ】まずこの紙に名前を書き、そのあと受付へ出してください。"
+    },
+    {
+      "id": "A1-F500-RE-023",
+      "level": "A1",
+      "section": "reading",
+      "category": "information_search",
+      "knowledgeUnitIds": [
+        "A1-N10"
+      ],
+      "canDo": "Can understand and make simple workplace requests.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "ペンがある場所はどこですか。",
+      "choices": [
+        "受付",
+        "倉庫",
+        "会議室",
+        "食堂"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【備品】ペン：受付／段ボール：倉庫／ホチキス：会議室"
+    },
+    {
+      "id": "A1-F500-RE-024",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N10"
+      ],
+      "canDo": "Can understand and make simple workplace requests.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "コピーする枚数はいくつですか。",
+      "choices": [
+        "5枚",
+        "8枚",
+        "10枚",
+        "12枚"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【依頼】この資料を8枚コピーして、会議室へ持ってきてください。"
+    },
+    {
+      "id": "A1-F500-RE-025",
+      "level": "A1",
+      "section": "reading",
+      "category": "information_search",
+      "knowledgeUnitIds": [
+        "A1-N11"
+      ],
+      "canDo": "Can talk simply about hobbies and free-time activities.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "料理教室は何曜日ですか。",
+      "choices": [
+        "金曜日",
+        "土曜日",
+        "日曜日",
+        "月曜日"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【週末】土曜日：料理教室／日曜日：映画"
+    },
+    {
+      "id": "A1-F500-RE-026",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N11"
+      ],
+      "canDo": "Can talk simply about hobbies and free-time activities.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "書き手の趣味は何ですか。",
+      "choices": [
+        "料理",
+        "仕事",
+        "会議",
+        "掃除"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "私の趣味は料理をすることです。"
+    },
+    {
+      "id": "A1-F500-RE-027",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N11"
+      ],
+      "canDo": "Can talk simply about hobbies and free-time activities.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "今週末に読むものは何ですか。",
+      "choices": [
+        "本",
+        "漫画",
+        "新聞",
+        "メニュー"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "映画も好きですが、今週末は本を読みます。"
+    },
+    {
+      "id": "A1-F500-RE-028",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N12"
+      ],
+      "canDo": "Can make, accept, and understand a simple invitation or meeting plan.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "待ち合わせ日は何曜日ですか。",
+      "choices": [
+        "日曜日",
+        "月曜日",
+        "火曜日",
+        "水曜日"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "日曜日は病院なので、月曜日に会いましょう。"
+    },
+    {
+      "id": "A1-F500-RE-029",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N12"
+      ],
+      "canDo": "Can make, accept, and understand a simple invitation or meeting plan.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "待ち合わせ場所はどこですか。",
+      "choices": [
+        "駅南口",
+        "駅北口",
+        "会社入口",
+        "公園"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "月曜日の11時に駅の南口で会いましょう。"
+    },
+    {
+      "id": "A1-F500-RE-030",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N12"
+      ],
+      "canDo": "Can make, accept, and understand a simple invitation or meeting plan.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "このメッセージは何に誘っていますか。",
+      "choices": [
+        "公園へ行く",
+        "会議する",
+        "仕事する",
+        "買い物する"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "土曜日、いっしょに公園へ行きませんか。"
+    },
+    {
+      "id": "A1-F500-RE-031",
+      "level": "A1",
+      "section": "reading",
+      "category": "information_search",
+      "knowledgeUnitIds": [
+        "A1-N13"
+      ],
+      "canDo": "Can understand simple routes, stations, transfers, and transportation.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "空港行きは何番ホームですか。",
+      "choices": [
+        "2番",
+        "3番",
+        "4番",
+        "5番"
+      ],
+      "answer": 3,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【駅】2番：市役所／5番：空港"
+    },
+    {
+      "id": "A1-F500-RE-032",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N13"
+      ],
+      "canDo": "Can understand simple routes, stations, transfers, and transportation.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "どこで地下鉄に乗り換えますか。",
+      "choices": [
+        "新宿駅",
+        "空港",
+        "ホテル",
+        "会社"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "新宿駅までJRで行き、新宿駅で地下鉄に乗り換えます。"
+    },
+    {
+      "id": "A1-F500-RE-033",
+      "level": "A1",
+      "section": "reading",
+      "category": "information_search",
+      "knowledgeUnitIds": [
+        "A1-N13"
+      ],
+      "canDo": "Can understand simple routes, stations, transfers, and transportation.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "空港行きの発車時刻は何時ですか。",
+      "choices": [
+        "9時50分",
+        "10時05分",
+        "10時20分",
+        "10時35分"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【時刻表】空港行き10:05／市役所行き10:20"
+    },
+    {
+      "id": "A1-F500-RE-034",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N14"
+      ],
+      "canDo": "Can say what one wants to do at a destination.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "一番したいことは何ですか。",
+      "choices": [
+        "景色を見る",
+        "温泉に入る",
+        "買い物する",
+        "仕事する"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "温泉にも入りたいですが、一番したいのは山の景色を見ることです。"
+    },
+    {
+      "id": "A1-F500-RE-035",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N14"
+      ],
+      "canDo": "Can say what one wants to do at a destination.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "京都で歩きたい場所はどこですか。",
+      "choices": [
+        "古い町",
+        "駅",
+        "会社",
+        "売り場"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "京都では古い町を歩きたいです。"
+    },
+    {
+      "id": "A1-F500-RE-036",
+      "level": "A1",
+      "section": "reading",
+      "category": "information_search",
+      "knowledgeUnitIds": [
+        "A1-N14"
+      ],
+      "canDo": "Can say what one wants to do at a destination.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "温泉の利用終了時刻は何時ですか。",
+      "choices": [
+        "18時",
+        "19時",
+        "20時",
+        "21時"
+      ],
+      "answer": 3,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【旅館】温泉8:00～21:00／食堂11:00～19:00"
+    },
+    {
+      "id": "A1-F500-RE-037",
+      "level": "A1",
+      "section": "reading",
+      "category": "information_search",
+      "knowledgeUnitIds": [
+        "A1-N15"
+      ],
+      "canDo": "Can ask and understand where a wanted item is sold.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "ノートは何階ですか。",
+      "choices": [
+        "2階",
+        "3階",
+        "4階",
+        "5階"
+      ],
+      "answer": 3,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【売り場】2階：服／4階：家具／5階：文房具"
+    },
+    {
+      "id": "A1-F500-RE-038",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N15"
+      ],
+      "canDo": "Can ask and understand where a wanted item is sold.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "電池売り場の位置はどこですか。",
+      "choices": [
+        "エレベーターの左",
+        "エレベーターの右",
+        "入口の前",
+        "レジの後ろ"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "電池は地下1階、エレベーターの左です。"
+    },
+    {
+      "id": "A1-F500-RE-039",
+      "level": "A1",
+      "section": "reading",
+      "category": "information_search",
+      "knowledgeUnitIds": [
+        "A1-N15"
+      ],
+      "canDo": "Can ask and understand where a wanted item is sold.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "地下1階で買えるものは何ですか。",
+      "choices": [
+        "電池",
+        "服",
+        "食品",
+        "本"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【売り場】地下1階：電池／1階：食品／2階：服"
+    },
+    {
+      "id": "A1-F500-RE-040",
+      "level": "A1",
+      "section": "reading",
+      "category": "information_search",
+      "knowledgeUnitIds": [
+        "A1-N16"
+      ],
+      "canDo": "Can ask and understand simple prices and quantities.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "バナナ一本の値段はいくらですか。",
+      "choices": [
+        "100円",
+        "120円",
+        "130円",
+        "150円"
+      ],
+      "answer": 2,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【果物】バナナ1本130円／みかん1こ120円"
+    },
+    {
+      "id": "A1-F500-RE-041",
+      "level": "A1",
+      "section": "reading",
+      "category": "information_search",
+      "knowledgeUnitIds": [
+        "A1-N16"
+      ],
+      "canDo": "Can ask and understand simple prices and quantities.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "バナナ四本はいくらですか。",
+      "choices": [
+        "390円",
+        "480円",
+        "500円",
+        "520円"
+      ],
+      "answer": 3,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【セール】バナナ4本520円／みかん4こ480円"
+    },
+    {
+      "id": "A1-F500-RE-042",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N16"
+      ],
+      "canDo": "Can ask and understand simple prices and quantities.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "支払い方法は何ですか。",
+      "choices": [
+        "現金",
+        "カード",
+        "電子マネー",
+        "切符"
+      ],
+      "answer": 2,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【会計】950円。電子マネーで払います。"
+    },
+    {
+      "id": "A1-F500-RE-043",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can talk simply about what one did on a day off.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "午前にしたことは何ですか。",
+      "choices": [
+        "映画を見る",
+        "掃除する",
+        "買い物する",
+        "仕事する"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【休み】午前：映画／午後：掃除"
+    },
+    {
+      "id": "A1-F500-RE-044",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can talk simply about what one did on a day off.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "午後にしたことは何ですか。",
+      "choices": [
+        "映画を見る",
+        "掃除する",
+        "買い物する",
+        "仕事する"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【休み】午前：映画／午後：掃除"
+    },
+    {
+      "id": "A1-F500-RE-045",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N17"
+      ],
+      "canDo": "Can talk simply about what one did on a day off.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "昨日読んだものは何ですか。",
+      "choices": [
+        "漫画",
+        "新聞",
+        "本",
+        "メニュー"
+      ],
+      "answer": 2,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "昨日は本を読みました。漫画は読みませんでした。"
+    },
+    {
+      "id": "A1-F500-RE-046",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N18"
+      ],
+      "canDo": "Can say what one wants to experience in Japan.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "日本で着てみたいものは何ですか。",
+      "choices": [
+        "着物",
+        "制服",
+        "コート",
+        "スーツ"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "日本では着物を着てみたいです。"
+    },
+    {
+      "id": "A1-F500-RE-047",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N18"
+      ],
+      "canDo": "Can say what one wants to experience in Japan.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "日本で見てみたいものは何ですか。",
+      "choices": [
+        "富士山",
+        "新幹線",
+        "温泉",
+        "会社"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "新幹線にも乗りたいですが、富士山を見てみたいです。"
+    },
+    {
+      "id": "A1-F500-RE-048",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N18"
+      ],
+      "canDo": "Can say what one wants to experience in Japan.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "一番したいことは何ですか。",
+      "choices": [
+        "新幹線に乗る",
+        "買い物する",
+        "会議する",
+        "掃除する"
+      ],
+      "answer": 0,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "着物も着たいですが、一番したいのは新幹線に乗ることです。"
+    },
+    {
+      "id": "A1-F500-RE-049",
+      "level": "A1",
+      "section": "reading",
+      "category": "information_search",
+      "knowledgeUnitIds": [
+        "A1-N09"
+      ],
+      "canDo": "Can understand a simple work schedule and times.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "会議前の集合時刻は何時ですか。",
+      "choices": [
+        "9時20分",
+        "9時30分",
+        "10時",
+        "10時30分"
+      ],
+      "answer": 1,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "【会議】開始10:00／集合9:30"
+    },
+    {
+      "id": "A1-F500-RE-050",
+      "level": "A1",
+      "section": "reading",
+      "category": "content_comprehension",
+      "knowledgeUnitIds": [
+        "A1-N12"
+      ],
+      "canDo": "Can make, accept, and understand a simple invitation or meeting plan.",
+      "instruction": "文章を よんで、いちばん いいものを ひとつ えらんでください。",
+      "prompt": "映画を見る曜日はいつですか。",
+      "choices": [
+        "土曜日",
+        "日曜日",
+        "月曜日",
+        "火曜日"
+      ],
+      "answer": 3,
+      "humanReviewStatus": "PENDING",
+      "source": "fresh200_v5",
+      "derivedFrom": null,
+      "stimulus": "日曜日は予定があるので、火曜日に映画を見ましょう。"
+    }
+  ]
+}

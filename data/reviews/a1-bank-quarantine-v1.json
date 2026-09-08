@@ -1,0 +1,10 @@
+{
+  "artifactVersion": "A1_MACHINE_BANK_RELEASE_GATE_V1",
+  "generatedAt": "2026-09-08T11:49:24.081Z",
+  "published": false,
+  "sourceArtifact": "data/production/a1-fresh-800-machine-accepted-v1.json",
+  "evidenceArtifact": "data/qa/a1-fresh-800-machine-evidence.json",
+  "rejectedArtifact": "data/reviews/a1-fresh-800-auto-rejected-v1.json",
+  "itemCount": 0,
+  "items": []
+}

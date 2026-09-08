@@ -1,0 +1,156 @@
+{
+  "artifactVersion": "A1_CE_RECOVERY_MACHINE_V1",
+  "generatedAt": "2026-09-08T12:57:00.768Z",
+  "sourceArtifacts": {
+    "acceptedV1": "data/production/a1-machine-bank-release-candidate-v1.json",
+    "rejected": "data/reviews/a1-fresh-800-auto-rejected-v1.json"
+  },
+  "contract": {
+    "scope": "conversation_expression_only",
+    "maxAttemptsPerSlot": 3,
+    "minCe": 60,
+    "targetCe": 80,
+    "humans": false,
+    "gold": false,
+    "published": false
+  },
+  "coverage": {
+    "byKU": {
+      "A1-N04": 4,
+      "A1-N05": 7,
+      "A1-N06": 4,
+      "A1-N07": 7,
+      "A1-N10": 4,
+      "A1-N11": 1,
+      "A1-N13": 3,
+      "A1-N14": 1,
+      "A1-N17": 7,
+      "A1-N18": 1
+    },
+    "byCanDo": {
+      "Can select an appropriate expression in a short exchange. Curriculum context: ask about and follow simple transportation routes.": 3,
+      "Can select an appropriate expression in a short exchange. Curriculum context: describe a home and say what is available.": 7,
+      "Can select an appropriate expression in a short exchange. Curriculum context: make and understand simple workplace requests.": 4,
+      "Can select an appropriate expression in a short exchange. Curriculum context: order simple food and drinks at a shop or restaurant.": 4,
+      "Can select an appropriate expression in a short exchange. Curriculum context: say what one wants to do at a destination.": 1,
+      "Can select an appropriate expression in a short exchange. Curriculum context: say what one wants to experience in Japan.": 1,
+      "Can select an appropriate expression in a short exchange. Curriculum context: say which foods and drinks one likes.": 7,
+      "Can select an appropriate expression in a short exchange. Curriculum context: talk about hobbies and free-time activities.": 1,
+      "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about family and where people live.": 4,
+      "Can select an appropriate expression in a short exchange. Curriculum context: talk simply about past days off.": 7
+    },
+    "bySpeechAct": {
+      "ACCEPT_INVITATION": 2,
+      "ANSWER_LOCATION": 8,
+      "ANSWER_NAME": 8,
+      "APOLOGIZE": 1,
+      "ASK_LOCATION": 4,
+      "CONFIRM_ORDER": 3,
+      "MAKE_PLAN": 7,
+      "MAKE_REQUEST": 1,
+      "ORDER_FOOD": 1,
+      "RESPOND_TO_REQUEST": 2,
+      "THANK": 2
+    },
+    "byTaskType": {
+      "expression": 39
+    },
+    "byScenarioType": {
+      "accept_invitation": 2,
+      "apology_late": 1,
+      "borrow_request": 1,
+      "food_order": 1,
+      "location_answer": 8,
+      "location_question": 4,
+      "make_plan": 7,
+      "name_answer": 8,
+      "order_confirmation": 3,
+      "request_response": 2,
+      "thanks": 2
+    }
+  },
+  "summary": {
+    "initialCeAccepted": 41,
+    "rejectedCeSlotsAvailable": 159,
+    "attempts": [
+      {
+        "attempt": 1,
+        "processed": 56,
+        "accepted": 32,
+        "failed": 24
+      },
+      {
+        "attempt": 2,
+        "processed": 24,
+        "accepted": 5,
+        "failed": 19
+      },
+      {
+        "attempt": 3,
+        "processed": 19,
+        "accepted": 2,
+        "failed": 17
+      }
+    ],
+    "minimumCheckpoint": {
+      "ceAccepted": 60,
+      "recoveredUsed": 19,
+      "pass": 100,
+      "fail": 0,
+      "ceAverageExposure": 20,
+      "ceMaximumExposure": 21,
+      "ceItemsOver20Percent": 27,
+      "continuedReason": "MINIMUM_CHECKPOINT_NOT_SAFE"
+    },
+    "finalCeAccepted": 80,
+    "recoveredAccepted": 39,
+    "permanentFailures": 17,
+    "recoveryAcceptanceRate": 0.3939,
+    "topCeRejectionReasonsBefore": [
+      {
+        "reason": "SEMANTIC_UNRESOLVED",
+        "total": 153
+      },
+      {
+        "reason": "ADVERSARIAL_SEMANTIC_UNRESOLVED",
+        "total": 152
+      },
+      {
+        "reason": "DISTRACTOR_IMPLAUSIBLE",
+        "total": 64
+      },
+      {
+        "reason": "SECOND_PLAUSIBLE_ANSWER",
+        "total": 4
+      },
+      {
+        "reason": "ANSWER_KEY_MISMATCH",
+        "total": 3
+      }
+    ],
+    "topPermanentRejectionReasonsAfter": [
+      {
+        "reason": "EXACT_DUPLICATE",
+        "total": 51
+      }
+    ],
+    "simulation": {
+      "pass": 100,
+      "fail": 0,
+      "answerPositions": {
+        "A": 1300,
+        "B": 1300,
+        "C": 1200,
+        "D": 1200
+      },
+      "ceAverageExposure": 15,
+      "ceMaximumExposure": 17,
+      "ceItemsOver20Percent": 0,
+      "templateExposureRisks": 12,
+      "scoringMismatch": 0,
+      "duplicateWithinForm": 0
+    },
+    "finalA1BankSize": 486,
+    "finalDecision": "A1_BANK_RELEASE_READY"
+  }
+}

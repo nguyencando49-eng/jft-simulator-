@@ -65,6 +65,19 @@ describe('A1 production release V1',()=>{
     expect(loaded.questions.every(q=>Array.isArray((q as unknown as {knowledgeUnitIds:string[]}).knowledgeUnitIds))).toBe(true);
   });
 
+  it('loads the default release bank without depending on the process cwd',async()=>{
+    const originalCwd=process.cwd();
+    process.chdir(process.env.SystemRoot || originalCwd);
+    try {
+      const loaded=await loadA1ReleaseBank();
+      expect(loaded.bank.questionCount).toBe(486);
+      expect(loaded.manifest.releaseBankHash).toBe(hashA1ReleaseBank(loaded.bank));
+      expect(loaded.questions).toHaveLength(486);
+    } finally {
+      process.chdir(originalCwd);
+    }
+  });
+
   it('fails closed for release-bank integrity violations',()=>{
     const bank=readJson<A1ReleaseBankArtifact>(bankPath);
     const manifest=readJson<A1ReleaseManifest>(manifestPath);

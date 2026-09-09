@@ -1,6 +1,8 @@
 import {createHash} from 'node:crypto';
 import {readFile} from 'node:fs/promises';
 import type {ExamDraft, QuestionRecord} from '@/lib/admin-types';
+import staticReleaseBank from '@/data/production/releases/a1-machine-bank-v1.json';
+import staticReleaseManifest from '@/data/production/releases/a1-machine-bank-v1.manifest.json';
 
 export const A1_RELEASE_ID='a1-machine-bank';
 export const A1_RELEASE_VERSION='v1';
@@ -65,6 +67,9 @@ function stable(value:unknown):string {
   if (Array.isArray(value)) return `[${value.map(stable).join(',')}]`;
   if (value && typeof value === 'object') return `{${Object.entries(value as Record<string,unknown>).sort(([a],[b])=>a.localeCompare(b)).map(([key,item])=>`${JSON.stringify(key)}:${stable(item)}`).join(',')}}`;
   return JSON.stringify(value);
+}
+function cloneJson<T>(value:T):T {
+  return JSON.parse(JSON.stringify(value)) as T;
 }
 export function sha256(value:string|Buffer) {
   return createHash('sha256').update(value).digest('hex');
@@ -145,10 +150,16 @@ export function toRuntimeQuestionRecord(question:A1ReleaseQuestion):QuestionReco
 }
 
 export async function loadA1ReleaseBank(paths={bank:A1_RELEASE_BANK_PATH,manifest:A1_RELEASE_MANIFEST_PATH}) {
-  const [bank,manifest]=await Promise.all([
-    readFile(paths.bank,'utf8').then(text=>JSON.parse(text) as A1ReleaseBankArtifact),
-    readFile(paths.manifest,'utf8').then(text=>JSON.parse(text) as A1ReleaseManifest),
-  ]);
+  const useStaticRelease=paths.bank===A1_RELEASE_BANK_PATH && paths.manifest===A1_RELEASE_MANIFEST_PATH;
+  const [bank,manifest]=useStaticRelease
+    ? [
+        cloneJson(staticReleaseBank) as unknown as A1ReleaseBankArtifact,
+        cloneJson(staticReleaseManifest) as unknown as A1ReleaseManifest,
+      ]
+    : await Promise.all([
+        readFile(paths.bank,'utf8').then(text=>JSON.parse(text) as A1ReleaseBankArtifact),
+        readFile(paths.manifest,'utf8').then(text=>JSON.parse(text) as A1ReleaseManifest),
+      ]);
   validateA1ReleaseBank({bank,manifest});
   return {bank,manifest,questions:bank.questions.map(toRuntimeQuestionRecord)};
 }

@@ -1,0 +1,2956 @@
+{
+  "artifactVersion": "A21_PILOT_QA_V1",
+  "batchId": "A21_SOURCE_GROUNDED_PILOT_001",
+  "qaRecords": [
+    {
+      "id": "A21-PILOT-SV-001",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-002",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-003",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-004",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-005",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-006",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-007",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-008",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-009",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-010",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-011",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-012",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-013",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-014",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-015",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-016",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-017",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-018",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-019",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-SV-020",
+      "section": "script_vocabulary",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-021",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-022",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-023",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-024",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-025",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-026",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-027",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-028",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-029",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-030",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-031",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-032",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-033",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-034",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-035",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-036",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-037",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-038",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-039",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-CE-040",
+      "section": "conversation_expression",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-041",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-042",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-043",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-044",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-045",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-046",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-047",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-048",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-049",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-050",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-051",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-052",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-053",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-054",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-055",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-056",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-057",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-058",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-059",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-L-060",
+      "section": "listening",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-061",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-062",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-063",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-064",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-065",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-066",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-067",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-068",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-069",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-070",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-071",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-072",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-073",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-074",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-075",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-076",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-077",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-078",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-079",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    },
+    {
+      "id": "A21-PILOT-R-080",
+      "section": "reading",
+      "gates": {
+        "QA1": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA2": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA3": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA4": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA5": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA6": {
+          "status": "PASS",
+          "reasonCodes": []
+        },
+        "QA7": {
+          "status": "PASS",
+          "reasonCodes": []
+        }
+      },
+      "failureClasses": []
+    }
+  ],
+  "summary": {
+    "script_vocabulary": {
+      "QA1": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA2": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA3": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA4": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA5": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA6": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA7": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      }
+    },
+    "conversation_expression": {
+      "QA1": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA2": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA3": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA4": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA5": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA6": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA7": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      }
+    },
+    "listening": {
+      "QA1": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA2": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA3": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA4": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA5": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA6": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA7": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      }
+    },
+    "reading": {
+      "QA1": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA2": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA3": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA4": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA5": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA6": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      },
+      "QA7": {
+        "PASS": 20,
+        "REVIEW": 0,
+        "FAIL": 0
+      }
+    }
+  }
+}

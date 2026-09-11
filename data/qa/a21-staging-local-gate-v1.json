@@ -1,0 +1,83 @@
+{
+  "artifactVersion": "A21_STAGING_LOCAL_GATE_V1",
+  "createdAt": "2026-09-11T14:54:15.793Z",
+  "classification": "A21_LOCAL_STAGING_READY_FOR_CHECKPOINT",
+  "release": {
+    "count": 334,
+    "uniqueIds": 334,
+    "hash": "698860254d6a7a50e33aa214b4e908fce4de7cc8a789a9c185dba056ead069d7",
+    "canonicalBankHash": "349f41ddaa753f0a9824d06042943b23fd90fc96d2bc2e0d1d5f792023dcbb89",
+    "manifestHashMatches": true,
+    "sectionCounts": {
+      "script_vocabulary": 87,
+      "conversation_expression": 80,
+      "listening": 87,
+      "reading": 80
+    }
+  },
+  "runtime": {
+    "provider": "A21ReleaseBankProvider via loadReleaseBankForDraft()",
+    "examApiRouting": "A1 and A2.1 single-level drafts use immutable release providers; other levels fall back to repository",
+    "serverlessSafe": "static JSON import",
+    "legacyFallbackLeakage": "not used for A2.1 single-level draft"
+  },
+  "listening": {
+    "records": 87,
+    "withPromptScript": 87,
+    "withAudioSrc": 87,
+    "status": "EXPECTED_CURRENT_PRODUCT_BEHAVIOR"
+  },
+  "simulation": {
+    "forms100": {
+      "forms": 100,
+      "pass": 100,
+      "fail": 0,
+      "totalQuestionInstances": 5000,
+      "answerPositions": {
+        "A": 1300,
+        "B": 1300,
+        "C": 1200,
+        "D": 1200
+      },
+      "scoringMismatches": 0,
+      "duplicateWithinForm": 0,
+      "replayFailures": 0,
+      "canonicalMutations": 0,
+      "maxQuestionExposure": 15,
+      "maxExposureRate": 0.15,
+      "lockedChoiceItems": 53
+    },
+    "forms1000": {
+      "forms": 1000,
+      "pass": 1000,
+      "fail": 0,
+      "totalQuestionInstances": 50000,
+      "answerPositions": {
+        "A": 13000,
+        "B": 13000,
+        "C": 12000,
+        "D": 12000
+      },
+      "scoringMismatches": 0,
+      "duplicateWithinForm": 0,
+      "replayFailures": 0,
+      "canonicalMutations": 0,
+      "maxQuestionExposure": 150,
+      "maxExposureRate": 0.15,
+      "lockedChoiceItems": 53
+    }
+  },
+  "a1Regression": {
+    "count": 486,
+    "hash": "3e83d4820a8513c4eaf4ed4d974e8ba92f1fb2484abb2e0e423b059871cdc079",
+    "pass": true
+  },
+  "validation": {
+    "typescript": "PASS",
+    "tests": "PASS 57 files / 340 tests",
+    "build": "PASS"
+  },
+  "preview": {
+    "status": "NOT_RUN_BEFORE_CHECKPOINT"
+  }
+}

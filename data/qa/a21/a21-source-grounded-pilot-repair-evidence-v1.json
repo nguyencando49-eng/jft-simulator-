@@ -1,0 +1,11 @@
+{
+  "artifactVersion": "A21_PILOT_REPAIR_EVIDENCE_V1",
+  "batchId": "A21_SOURCE_GROUNDED_PILOT_001",
+  "repairs": [],
+  "summary": {
+    "attempted": 0,
+    "success": 0,
+    "failed": 0,
+    "note": "No repairable failures occurred in deterministic pilot run."
+  }
+}

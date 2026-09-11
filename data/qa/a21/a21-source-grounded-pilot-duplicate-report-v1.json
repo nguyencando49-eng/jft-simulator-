@@ -1,0 +1,15 @@
+{
+  "artifactVersion": "A21_PILOT_DUPLICATE_REPORT_V1",
+  "batchId": "A21_SOURCE_GROUNDED_PILOT_001",
+  "withinPilot": {
+    "EXACT_DUPLICATE": 0,
+    "NEAR_DUPLICATE": 0,
+    "SEMANTIC_DUPLICATE": 0,
+    "PEDAGOGICALLY_VALID_TEMPLATE_REUSE": 80
+  },
+  "againstA1ReleasedBank": {
+    "checked": true,
+    "blockingDuplicates": 0,
+    "note": "Pilot IDs and A2.1 KU/task semantics are separated from immutable A1 V1 release."
+  }
+}

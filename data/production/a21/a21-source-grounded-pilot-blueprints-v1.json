@@ -1,0 +1,2720 @@
+{
+  "artifactVersion": "A21_PILOT_BLUEPRINTS_V1",
+  "batchId": "A21_SOURCE_GROUNDED_PILOT_001",
+  "blueprints": [
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-01",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L01",
+      "knowledgeUnitIds": [
+        "A21-S01"
+      ],
+      "sourceChunkIds": [
+        "A21-L01-CH0001",
+        "A21-L01-CH0012",
+        "A21-L01-CH0014"
+      ],
+      "communicativeTarget": "talk about work and length of residence",
+      "learnerTask": "Choose the word or expression that matches work.",
+      "requiredEvidence": [
+        "KU A21-S01 is SOURCE_VERIFIED",
+        "Source chunks: A21-L01-CH0001, A21-L01-CH0012, A21-L01-CH0014"
+      ],
+      "answerConcept": "仕事 / 働いています; variant work:0:0",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-02",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L02",
+      "knowledgeUnitIds": [
+        "A21-S02"
+      ],
+      "sourceChunkIds": [
+        "A21-L02-CH0001",
+        "A21-L02-CH0008",
+        "A21-L02-CH0012"
+      ],
+      "communicativeTarget": "describe hobbies and preferred activities",
+      "learnerTask": "Choose the word or expression that matches leisure.",
+      "requiredEvidence": [
+        "KU A21-S02 is SOURCE_VERIFIED",
+        "Source chunks: A21-L02-CH0001, A21-L02-CH0008, A21-L02-CH0012"
+      ],
+      "answerConcept": "映画 / 見るのが好きです; variant leisure:1:0",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-03",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L03",
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "communicativeTarget": "describe seasons and changes in weather",
+      "learnerTask": "Choose the word or expression that matches weather.",
+      "requiredEvidence": [
+        "KU A21-S03 is SOURCE_VERIFIED",
+        "Source chunks: A21-L03-CH0001, A21-L03-CH0004, A21-L03-CH0007"
+      ],
+      "answerConcept": "天気の予定 / 寒くなります; variant weather:2:0",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-04",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L04",
+      "knowledgeUnitIds": [
+        "A21-S04"
+      ],
+      "sourceChunkIds": [
+        "A21-L04-CH0010",
+        "A21-L04-CH0013",
+        "A21-L04-CH0035"
+      ],
+      "communicativeTarget": "exchange comments and predictions about weather",
+      "learnerTask": "Choose the word or expression that matches weather.",
+      "requiredEvidence": [
+        "KU A21-S04 is SOURCE_VERIFIED",
+        "Source chunks: A21-L04-CH0010, A21-L04-CH0013, A21-L04-CH0035"
+      ],
+      "answerConcept": "天気の予定 / 週末、寒くなります; variant weather:3:0",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-05",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L05",
+      "knowledgeUnitIds": [
+        "A21-S05"
+      ],
+      "sourceChunkIds": [
+        "A21-L05-CH0001",
+        "A21-L05-CH0004",
+        "A21-L05-CH0009"
+      ],
+      "communicativeTarget": "describe a town and recommend places",
+      "learnerTask": "Choose the word or expression that matches community.",
+      "requiredEvidence": [
+        "KU A21-S05 is SOURCE_VERIFIED",
+        "Source chunks: A21-L05-CH0001, A21-L05-CH0004, A21-L05-CH0009"
+      ],
+      "answerConcept": "町のこと / 朝、便利です; variant community:0:1",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-06",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L06",
+      "knowledgeUnitIds": [
+        "A21-S06"
+      ],
+      "sourceChunkIds": [
+        "A21-L06-CH0001",
+        "A21-L06-CH0004",
+        "A21-L06-CH0005"
+      ],
+      "communicativeTarget": "ask for and give multi-step directions",
+      "learnerTask": "Choose the word or expression that matches directions.",
+      "requiredEvidence": [
+        "KU A21-S06 is SOURCE_VERIFIED",
+        "Source chunks: A21-L06-CH0001, A21-L06-CH0004, A21-L06-CH0005"
+      ],
+      "answerConcept": "郵便局のこと / 昼、右に曲がります; variant directions:1:1",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-07",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L07",
+      "knowledgeUnitIds": [
+        "A21-S07"
+      ],
+      "sourceChunkIds": [
+        "A21-L07-CH0001",
+        "A21-L07-CH0007",
+        "A21-L07-CH0012"
+      ],
+      "communicativeTarget": "arrange a meeting and report a delay",
+      "learnerTask": "Choose the word or expression that matches appointment.",
+      "requiredEvidence": [
+        "KU A21-S07 is SOURCE_VERIFIED",
+        "Source chunks: A21-L07-CH0001, A21-L07-CH0007, A21-L07-CH0012"
+      ],
+      "answerConcept": "待ち合わせの時間 / 待ち合わせについて話します; variant appointment:2:1",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-08",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L08",
+      "knowledgeUnitIds": [
+        "A21-S08"
+      ],
+      "sourceChunkIds": [
+        "A21-L08-CH0001",
+        "A21-L08-CH0008",
+        "A21-L08-CH0015"
+      ],
+      "communicativeTarget": "talk about past experiences and invitations",
+      "learnerTask": "Choose the word or expression that matches leisure.",
+      "requiredEvidence": [
+        "KU A21-S08 is SOURCE_VERIFIED",
+        "Source chunks: A21-L08-CH0001, A21-L08-CH0008, A21-L08-CH0015"
+      ],
+      "answerConcept": "映画の時間 / 映画について話します; variant leisure:3:1",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-09",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L09",
+      "knowledgeUnitIds": [
+        "A21-S09"
+      ],
+      "sourceChunkIds": [
+        "A21-L09-CH0001",
+        "A21-L09-CH0005",
+        "A21-L09-CH0013"
+      ],
+      "communicativeTarget": "ask politely for language help",
+      "learnerTask": "Choose the word or expression that matches school.",
+      "requiredEvidence": [
+        "KU A21-S09 is SOURCE_VERIFIED",
+        "Source chunks: A21-L09-CH0001, A21-L09-CH0005, A21-L09-CH0013"
+      ],
+      "answerConcept": "日本語教室 / 日本語教室について話します; variant school:0:2",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-10",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L10",
+      "knowledgeUnitIds": [
+        "A21-S10"
+      ],
+      "sourceChunkIds": [
+        "A21-L10-CH0001",
+        "A21-L10-CH0004",
+        "A21-L10-CH0005"
+      ],
+      "communicativeTarget": "ask about joining a class or activity",
+      "learnerTask": "Choose the word or expression that matches school.",
+      "requiredEvidence": [
+        "KU A21-S10 is SOURCE_VERIFIED",
+        "Source chunks: A21-L10-CH0001, A21-L10-CH0004, A21-L10-CH0005"
+      ],
+      "answerConcept": "日本語教室 / 受付で確認します; variant school:1:2",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-11",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L11",
+      "knowledgeUnitIds": [
+        "A21-S11"
+      ],
+      "sourceChunkIds": [
+        "A21-L11-CH0062",
+        "A21-L11-CH0075"
+      ],
+      "communicativeTarget": "coordinate responsibilities for an event",
+      "learnerTask": "Choose the word or expression that matches community.",
+      "requiredEvidence": [
+        "KU A21-S11 is SOURCE_VERIFIED",
+        "Source chunks: A21-L11-CH0062, A21-L11-CH0075"
+      ],
+      "answerConcept": "町の予定 / 駅の前で確認します; variant community:2:2",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-12",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L12",
+      "knowledgeUnitIds": [
+        "A21-S12"
+      ],
+      "sourceChunkIds": [
+        "A21-L12-CH0001",
+        "A21-L12-CH0020",
+        "A21-L12-CH0033"
+      ],
+      "communicativeTarget": "describe food by appearance and taste",
+      "learnerTask": "Choose the word or expression that matches food.",
+      "requiredEvidence": [
+        "KU A21-S12 is SOURCE_VERIFIED",
+        "Source chunks: A21-L12-CH0001, A21-L12-CH0020, A21-L12-CH0033"
+      ],
+      "answerConcept": "弁当の予定 / 食堂で確認します; variant food:3:2",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-13",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L13",
+      "knowledgeUnitIds": [
+        "A21-S13"
+      ],
+      "sourceChunkIds": [
+        "A21-L13-CH0001",
+        "A21-L13-CH0055"
+      ],
+      "communicativeTarget": "report progress and expected completion",
+      "learnerTask": "Choose the word or expression that matches workplace_instructions.",
+      "requiredEvidence": [
+        "KU A21-S13 is SOURCE_VERIFIED",
+        "Source chunks: A21-L13-CH0001, A21-L13-CH0055"
+      ],
+      "answerConcept": "仕事のこと / 終わりそうです; variant workplace_instructions:0:3",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-14",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L14",
+      "knowledgeUnitIds": [
+        "A21-S14"
+      ],
+      "sourceChunkIds": [
+        "A21-L14-CH0001",
+        "A21-L14-CH0005",
+        "A21-L14-CH0033"
+      ],
+      "communicativeTarget": "request leave and explain a workplace need",
+      "learnerTask": "Choose the word or expression that matches work.",
+      "requiredEvidence": [
+        "KU A21-S14 is SOURCE_VERIFIED",
+        "Source chunks: A21-L14-CH0001, A21-L14-CH0005, A21-L14-CH0033"
+      ],
+      "answerConcept": "仕事のこと / 働いています; variant work:1:3",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-15",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L15",
+      "knowledgeUnitIds": [
+        "A21-S15"
+      ],
+      "sourceChunkIds": [
+        "A21-L15-CH0001",
+        "A21-L15-CH0008",
+        "A21-L15-CH0015"
+      ],
+      "communicativeTarget": "describe symptoms at a clinic or pharmacy",
+      "learnerTask": "Choose the word or expression that matches hospital.",
+      "requiredEvidence": [
+        "KU A21-S15 is SOURCE_VERIFIED",
+        "Source chunks: A21-L15-CH0001, A21-L15-CH0008, A21-L15-CH0015"
+      ],
+      "answerConcept": "熱の時間 / のどが痛いです; variant hospital:2:3",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-16",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L16",
+      "knowledgeUnitIds": [
+        "A21-S16"
+      ],
+      "sourceChunkIds": [
+        "A21-L16-CH0001",
+        "A21-L16-CH0008",
+        "A21-L16-CH0014"
+      ],
+      "communicativeTarget": "discuss health habits and advice",
+      "learnerTask": "Choose the word or expression that matches health.",
+      "requiredEvidence": [
+        "KU A21-S16 is SOURCE_VERIFIED",
+        "Source chunks: A21-L16-CH0001, A21-L16-CH0008, A21-L16-CH0014"
+      ],
+      "answerConcept": "健康の時間 / 週末、早く寝るようにしています; variant health:3:3",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-17",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L17",
+      "knowledgeUnitIds": [
+        "A21-S17"
+      ],
+      "sourceChunkIds": [
+        "A21-L17-CH0001",
+        "A21-L17-CH0008",
+        "A21-L17-CH0012"
+      ],
+      "communicativeTarget": "explain gifts and who gave or made them",
+      "learnerTask": "Choose the word or expression that matches family.",
+      "requiredEvidence": [
+        "KU A21-S17 is SOURCE_VERIFIED",
+        "Source chunks: A21-L17-CH0001, A21-L17-CH0008, A21-L17-CH0012"
+      ],
+      "answerConcept": "お土産 / 朝、兄にもらいました; variant family:0:4",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-18",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L18",
+      "knowledgeUnitIds": [
+        "A21-S18"
+      ],
+      "sourceChunkIds": [
+        "A21-L18-CH0001",
+        "A21-L18-CH0005",
+        "A21-L18-CH0008"
+      ],
+      "communicativeTarget": "plan a gift or farewell event with others",
+      "learnerTask": "Choose the word or expression that matches community.",
+      "requiredEvidence": [
+        "KU A21-S18 is SOURCE_VERIFIED",
+        "Source chunks: A21-L18-CH0001, A21-L18-CH0005, A21-L18-CH0008"
+      ],
+      "answerConcept": "町 / 昼、便利です; variant community:1:4",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-19",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L01",
+      "knowledgeUnitIds": [
+        "A21-S01"
+      ],
+      "sourceChunkIds": [
+        "A21-L01-CH0001",
+        "A21-L01-CH0012",
+        "A21-L01-CH0014"
+      ],
+      "communicativeTarget": "talk about work and length of residence",
+      "learnerTask": "Choose the word or expression that matches work.",
+      "requiredEvidence": [
+        "KU A21-S01 is SOURCE_VERIFIED",
+        "Source chunks: A21-L01-CH0001, A21-L01-CH0012, A21-L01-CH0014"
+      ],
+      "answerConcept": "仕事の予定 / 仕事について話します; variant work:2:4",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-20",
+      "level": "A2.1",
+      "section": "script_vocabulary",
+      "lessonId": "A21-L02",
+      "knowledgeUnitIds": [
+        "A21-S02"
+      ],
+      "sourceChunkIds": [
+        "A21-L02-CH0001",
+        "A21-L02-CH0008",
+        "A21-L02-CH0012"
+      ],
+      "communicativeTarget": "describe hobbies and preferred activities",
+      "learnerTask": "Choose the word or expression that matches leisure.",
+      "requiredEvidence": [
+        "KU A21-S02 is SOURCE_VERIFIED",
+        "Source chunks: A21-L02-CH0001, A21-L02-CH0008, A21-L02-CH0012"
+      ],
+      "answerConcept": "映画の予定 / 映画について話します; variant leisure:3:4",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-01",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L01",
+      "knowledgeUnitIds": [
+        "A21-S01"
+      ],
+      "sourceChunkIds": [
+        "A21-L01-CH0001",
+        "A21-L01-CH0012",
+        "A21-L01-CH0014"
+      ],
+      "communicativeTarget": "talk about work and length of residence",
+      "learnerTask": "Choose the best conversational response for work.",
+      "requiredEvidence": [
+        "KU A21-S01 is SOURCE_VERIFIED",
+        "Source chunks: A21-L01-CH0001, A21-L01-CH0012, A21-L01-CH0014"
+      ],
+      "answerConcept": "best response for talk about work and length of residence; variant work:0:0",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-02",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L02",
+      "knowledgeUnitIds": [
+        "A21-S02"
+      ],
+      "sourceChunkIds": [
+        "A21-L02-CH0001",
+        "A21-L02-CH0008",
+        "A21-L02-CH0012"
+      ],
+      "communicativeTarget": "describe hobbies and preferred activities",
+      "learnerTask": "Choose the best conversational response for leisure.",
+      "requiredEvidence": [
+        "KU A21-S02 is SOURCE_VERIFIED",
+        "Source chunks: A21-L02-CH0001, A21-L02-CH0008, A21-L02-CH0012"
+      ],
+      "answerConcept": "best response for describe hobbies and preferred activities; variant leisure:1:0",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-03",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L03",
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "communicativeTarget": "describe seasons and changes in weather",
+      "learnerTask": "Choose the best conversational response for weather.",
+      "requiredEvidence": [
+        "KU A21-S03 is SOURCE_VERIFIED",
+        "Source chunks: A21-L03-CH0001, A21-L03-CH0004, A21-L03-CH0007"
+      ],
+      "answerConcept": "best response for describe seasons and changes in weather; variant weather:2:0",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-04",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L04",
+      "knowledgeUnitIds": [
+        "A21-S04"
+      ],
+      "sourceChunkIds": [
+        "A21-L04-CH0010",
+        "A21-L04-CH0013",
+        "A21-L04-CH0035"
+      ],
+      "communicativeTarget": "exchange comments and predictions about weather",
+      "learnerTask": "Choose the best conversational response for weather.",
+      "requiredEvidence": [
+        "KU A21-S04 is SOURCE_VERIFIED",
+        "Source chunks: A21-L04-CH0010, A21-L04-CH0013, A21-L04-CH0035"
+      ],
+      "answerConcept": "best response for exchange comments and predictions about weather; variant weather:3:0",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-05",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L09",
+      "knowledgeUnitIds": [
+        "A21-S09"
+      ],
+      "sourceChunkIds": [
+        "A21-L09-CH0001",
+        "A21-L09-CH0005",
+        "A21-L09-CH0013"
+      ],
+      "communicativeTarget": "ask politely for language help",
+      "learnerTask": "Choose the best conversational response for school.",
+      "requiredEvidence": [
+        "KU A21-S09 is SOURCE_VERIFIED",
+        "Source chunks: A21-L09-CH0001, A21-L09-CH0005, A21-L09-CH0013"
+      ],
+      "answerConcept": "best response for ask politely for language help; variant school:0:1",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-06",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L10",
+      "knowledgeUnitIds": [
+        "A21-S10"
+      ],
+      "sourceChunkIds": [
+        "A21-L10-CH0001",
+        "A21-L10-CH0004",
+        "A21-L10-CH0005"
+      ],
+      "communicativeTarget": "ask about joining a class or activity",
+      "learnerTask": "Choose the best conversational response for school.",
+      "requiredEvidence": [
+        "KU A21-S10 is SOURCE_VERIFIED",
+        "Source chunks: A21-L10-CH0001, A21-L10-CH0004, A21-L10-CH0005"
+      ],
+      "answerConcept": "best response for ask about joining a class or activity; variant school:1:1",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-07",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L11",
+      "knowledgeUnitIds": [
+        "A21-S11"
+      ],
+      "sourceChunkIds": [
+        "A21-L11-CH0062",
+        "A21-L11-CH0075"
+      ],
+      "communicativeTarget": "coordinate responsibilities for an event",
+      "learnerTask": "Choose the best conversational response for community.",
+      "requiredEvidence": [
+        "KU A21-S11 is SOURCE_VERIFIED",
+        "Source chunks: A21-L11-CH0062, A21-L11-CH0075"
+      ],
+      "answerConcept": "best response for coordinate responsibilities for an event; variant community:2:1",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-08",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L12",
+      "knowledgeUnitIds": [
+        "A21-S12"
+      ],
+      "sourceChunkIds": [
+        "A21-L12-CH0001",
+        "A21-L12-CH0020",
+        "A21-L12-CH0033"
+      ],
+      "communicativeTarget": "describe food by appearance and taste",
+      "learnerTask": "Choose the best conversational response for food.",
+      "requiredEvidence": [
+        "KU A21-S12 is SOURCE_VERIFIED",
+        "Source chunks: A21-L12-CH0001, A21-L12-CH0020, A21-L12-CH0033"
+      ],
+      "answerConcept": "best response for describe food by appearance and taste; variant food:3:1",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-09",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L15",
+      "knowledgeUnitIds": [
+        "A21-S15"
+      ],
+      "sourceChunkIds": [
+        "A21-L15-CH0001",
+        "A21-L15-CH0008",
+        "A21-L15-CH0015"
+      ],
+      "communicativeTarget": "describe symptoms at a clinic or pharmacy",
+      "learnerTask": "Choose the best conversational response for hospital.",
+      "requiredEvidence": [
+        "KU A21-S15 is SOURCE_VERIFIED",
+        "Source chunks: A21-L15-CH0001, A21-L15-CH0008, A21-L15-CH0015"
+      ],
+      "answerConcept": "best response for describe symptoms at a clinic or pharmacy; variant hospital:0:2",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-10",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L16",
+      "knowledgeUnitIds": [
+        "A21-S16"
+      ],
+      "sourceChunkIds": [
+        "A21-L16-CH0001",
+        "A21-L16-CH0008",
+        "A21-L16-CH0014"
+      ],
+      "communicativeTarget": "discuss health habits and advice",
+      "learnerTask": "Choose the best conversational response for health.",
+      "requiredEvidence": [
+        "KU A21-S16 is SOURCE_VERIFIED",
+        "Source chunks: A21-L16-CH0001, A21-L16-CH0008, A21-L16-CH0014"
+      ],
+      "answerConcept": "best response for discuss health habits and advice; variant health:1:2",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-11",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L18",
+      "knowledgeUnitIds": [
+        "A21-S18"
+      ],
+      "sourceChunkIds": [
+        "A21-L18-CH0001",
+        "A21-L18-CH0005",
+        "A21-L18-CH0008"
+      ],
+      "communicativeTarget": "plan a gift or farewell event with others",
+      "learnerTask": "Choose the best conversational response for community.",
+      "requiredEvidence": [
+        "KU A21-S18 is SOURCE_VERIFIED",
+        "Source chunks: A21-L18-CH0001, A21-L18-CH0005, A21-L18-CH0008"
+      ],
+      "answerConcept": "best response for plan a gift or farewell event with others; variant community:2:2",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-12",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L01",
+      "knowledgeUnitIds": [
+        "A21-S01"
+      ],
+      "sourceChunkIds": [
+        "A21-L01-CH0001",
+        "A21-L01-CH0012",
+        "A21-L01-CH0014"
+      ],
+      "communicativeTarget": "talk about work and length of residence",
+      "learnerTask": "Choose the best conversational response for work.",
+      "requiredEvidence": [
+        "KU A21-S01 is SOURCE_VERIFIED",
+        "Source chunks: A21-L01-CH0001, A21-L01-CH0012, A21-L01-CH0014"
+      ],
+      "answerConcept": "best response for talk about work and length of residence; variant work:3:2",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-13",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L02",
+      "knowledgeUnitIds": [
+        "A21-S02"
+      ],
+      "sourceChunkIds": [
+        "A21-L02-CH0001",
+        "A21-L02-CH0008",
+        "A21-L02-CH0012"
+      ],
+      "communicativeTarget": "describe hobbies and preferred activities",
+      "learnerTask": "Choose the best conversational response for leisure.",
+      "requiredEvidence": [
+        "KU A21-S02 is SOURCE_VERIFIED",
+        "Source chunks: A21-L02-CH0001, A21-L02-CH0008, A21-L02-CH0012"
+      ],
+      "answerConcept": "best response for describe hobbies and preferred activities; variant leisure:0:3",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-14",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L03",
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "communicativeTarget": "describe seasons and changes in weather",
+      "learnerTask": "Choose the best conversational response for weather.",
+      "requiredEvidence": [
+        "KU A21-S03 is SOURCE_VERIFIED",
+        "Source chunks: A21-L03-CH0001, A21-L03-CH0004, A21-L03-CH0007"
+      ],
+      "answerConcept": "best response for describe seasons and changes in weather; variant weather:1:3",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-15",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L04",
+      "knowledgeUnitIds": [
+        "A21-S04"
+      ],
+      "sourceChunkIds": [
+        "A21-L04-CH0010",
+        "A21-L04-CH0013",
+        "A21-L04-CH0035"
+      ],
+      "communicativeTarget": "exchange comments and predictions about weather",
+      "learnerTask": "Choose the best conversational response for weather.",
+      "requiredEvidence": [
+        "KU A21-S04 is SOURCE_VERIFIED",
+        "Source chunks: A21-L04-CH0010, A21-L04-CH0013, A21-L04-CH0035"
+      ],
+      "answerConcept": "best response for exchange comments and predictions about weather; variant weather:2:3",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-16",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L09",
+      "knowledgeUnitIds": [
+        "A21-S09"
+      ],
+      "sourceChunkIds": [
+        "A21-L09-CH0001",
+        "A21-L09-CH0005",
+        "A21-L09-CH0013"
+      ],
+      "communicativeTarget": "ask politely for language help",
+      "learnerTask": "Choose the best conversational response for school.",
+      "requiredEvidence": [
+        "KU A21-S09 is SOURCE_VERIFIED",
+        "Source chunks: A21-L09-CH0001, A21-L09-CH0005, A21-L09-CH0013"
+      ],
+      "answerConcept": "best response for ask politely for language help; variant school:3:3",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-17",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L10",
+      "knowledgeUnitIds": [
+        "A21-S10"
+      ],
+      "sourceChunkIds": [
+        "A21-L10-CH0001",
+        "A21-L10-CH0004",
+        "A21-L10-CH0005"
+      ],
+      "communicativeTarget": "ask about joining a class or activity",
+      "learnerTask": "Choose the best conversational response for school.",
+      "requiredEvidence": [
+        "KU A21-S10 is SOURCE_VERIFIED",
+        "Source chunks: A21-L10-CH0001, A21-L10-CH0004, A21-L10-CH0005"
+      ],
+      "answerConcept": "best response for ask about joining a class or activity; variant school:0:4",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-18",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L11",
+      "knowledgeUnitIds": [
+        "A21-S11"
+      ],
+      "sourceChunkIds": [
+        "A21-L11-CH0062",
+        "A21-L11-CH0075"
+      ],
+      "communicativeTarget": "coordinate responsibilities for an event",
+      "learnerTask": "Choose the best conversational response for community.",
+      "requiredEvidence": [
+        "KU A21-S11 is SOURCE_VERIFIED",
+        "Source chunks: A21-L11-CH0062, A21-L11-CH0075"
+      ],
+      "answerConcept": "best response for coordinate responsibilities for an event; variant community:1:4",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-19",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L12",
+      "knowledgeUnitIds": [
+        "A21-S12"
+      ],
+      "sourceChunkIds": [
+        "A21-L12-CH0001",
+        "A21-L12-CH0020",
+        "A21-L12-CH0033"
+      ],
+      "communicativeTarget": "describe food by appearance and taste",
+      "learnerTask": "Choose the best conversational response for food.",
+      "requiredEvidence": [
+        "KU A21-S12 is SOURCE_VERIFIED",
+        "Source chunks: A21-L12-CH0001, A21-L12-CH0020, A21-L12-CH0033"
+      ],
+      "answerConcept": "best response for describe food by appearance and taste; variant food:2:4",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-20",
+      "level": "A2.1",
+      "section": "conversation_expression",
+      "lessonId": "A21-L15",
+      "knowledgeUnitIds": [
+        "A21-S15"
+      ],
+      "sourceChunkIds": [
+        "A21-L15-CH0001",
+        "A21-L15-CH0008",
+        "A21-L15-CH0015"
+      ],
+      "communicativeTarget": "describe symptoms at a clinic or pharmacy",
+      "learnerTask": "Choose the best conversational response for hospital.",
+      "requiredEvidence": [
+        "KU A21-S15 is SOURCE_VERIFIED",
+        "Source chunks: A21-L15-CH0001, A21-L15-CH0008, A21-L15-CH0015"
+      ],
+      "answerConcept": "best response for describe symptoms at a clinic or pharmacy; variant hospital:3:4",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-01",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L01",
+      "knowledgeUnitIds": [
+        "A21-S01"
+      ],
+      "sourceChunkIds": [
+        "A21-L01-CH0001",
+        "A21-L01-CH0012",
+        "A21-L01-CH0014"
+      ],
+      "communicativeTarget": "talk about work and length of residence",
+      "learnerTask": "Listen to a short work exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S01 is SOURCE_VERIFIED",
+        "Source chunks: A21-L01-CH0001, A21-L01-CH0012, A21-L01-CH0014"
+      ],
+      "answerConcept": "仕事 / 働いています; variant work:0:0",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-02",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L03",
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "communicativeTarget": "describe seasons and changes in weather",
+      "learnerTask": "Listen to a short weather exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S03 is SOURCE_VERIFIED",
+        "Source chunks: A21-L03-CH0001, A21-L03-CH0004, A21-L03-CH0007"
+      ],
+      "answerConcept": "天気 / 寒くなります; variant weather:1:0",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-03",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L04",
+      "knowledgeUnitIds": [
+        "A21-S04"
+      ],
+      "sourceChunkIds": [
+        "A21-L04-CH0010",
+        "A21-L04-CH0013",
+        "A21-L04-CH0035"
+      ],
+      "communicativeTarget": "exchange comments and predictions about weather",
+      "learnerTask": "Listen to a short weather exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S04 is SOURCE_VERIFIED",
+        "Source chunks: A21-L04-CH0010, A21-L04-CH0013, A21-L04-CH0035"
+      ],
+      "answerConcept": "天気の予定 / 寒くなります; variant weather:2:0",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-04",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L09",
+      "knowledgeUnitIds": [
+        "A21-S09"
+      ],
+      "sourceChunkIds": [
+        "A21-L09-CH0001",
+        "A21-L09-CH0005",
+        "A21-L09-CH0013"
+      ],
+      "communicativeTarget": "ask politely for language help",
+      "learnerTask": "Listen to a short school exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S09 is SOURCE_VERIFIED",
+        "Source chunks: A21-L09-CH0001, A21-L09-CH0005, A21-L09-CH0013"
+      ],
+      "answerConcept": "日本語教室の予定 / 週末、申し込みます; variant school:3:0",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-05",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L10",
+      "knowledgeUnitIds": [
+        "A21-S10"
+      ],
+      "sourceChunkIds": [
+        "A21-L10-CH0001",
+        "A21-L10-CH0004",
+        "A21-L10-CH0005"
+      ],
+      "communicativeTarget": "ask about joining a class or activity",
+      "learnerTask": "Listen to a short school exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S10 is SOURCE_VERIFIED",
+        "Source chunks: A21-L10-CH0001, A21-L10-CH0004, A21-L10-CH0005"
+      ],
+      "answerConcept": "日本語教室のこと / 朝、申し込みます; variant school:0:1",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-06",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L11",
+      "knowledgeUnitIds": [
+        "A21-S11"
+      ],
+      "sourceChunkIds": [
+        "A21-L11-CH0062",
+        "A21-L11-CH0075"
+      ],
+      "communicativeTarget": "coordinate responsibilities for an event",
+      "learnerTask": "Listen to a short community exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S11 is SOURCE_VERIFIED",
+        "Source chunks: A21-L11-CH0062, A21-L11-CH0075"
+      ],
+      "answerConcept": "町のこと / 昼、便利です; variant community:1:1",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-07",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L15",
+      "knowledgeUnitIds": [
+        "A21-S15"
+      ],
+      "sourceChunkIds": [
+        "A21-L15-CH0001",
+        "A21-L15-CH0008",
+        "A21-L15-CH0015"
+      ],
+      "communicativeTarget": "describe symptoms at a clinic or pharmacy",
+      "learnerTask": "Listen to a short hospital exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S15 is SOURCE_VERIFIED",
+        "Source chunks: A21-L15-CH0001, A21-L15-CH0008, A21-L15-CH0015"
+      ],
+      "answerConcept": "熱の時間 / 熱について話します; variant hospital:2:1",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-08",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L16",
+      "knowledgeUnitIds": [
+        "A21-S16"
+      ],
+      "sourceChunkIds": [
+        "A21-L16-CH0001",
+        "A21-L16-CH0008",
+        "A21-L16-CH0014"
+      ],
+      "communicativeTarget": "discuss health habits and advice",
+      "learnerTask": "Listen to a short health exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S16 is SOURCE_VERIFIED",
+        "Source chunks: A21-L16-CH0001, A21-L16-CH0008, A21-L16-CH0014"
+      ],
+      "answerConcept": "健康の時間 / 健康について話します; variant health:3:1",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-09",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L18",
+      "knowledgeUnitIds": [
+        "A21-S18"
+      ],
+      "sourceChunkIds": [
+        "A21-L18-CH0001",
+        "A21-L18-CH0005",
+        "A21-L18-CH0008"
+      ],
+      "communicativeTarget": "plan a gift or farewell event with others",
+      "learnerTask": "Listen to a short community exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S18 is SOURCE_VERIFIED",
+        "Source chunks: A21-L18-CH0001, A21-L18-CH0005, A21-L18-CH0008"
+      ],
+      "answerConcept": "町 / 町について話します; variant community:0:2",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-10",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L01",
+      "knowledgeUnitIds": [
+        "A21-S01"
+      ],
+      "sourceChunkIds": [
+        "A21-L01-CH0001",
+        "A21-L01-CH0012",
+        "A21-L01-CH0014"
+      ],
+      "communicativeTarget": "talk about work and length of residence",
+      "learnerTask": "Listen to a short work exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S01 is SOURCE_VERIFIED",
+        "Source chunks: A21-L01-CH0001, A21-L01-CH0012, A21-L01-CH0014"
+      ],
+      "answerConcept": "仕事 / レストランで確認します; variant work:1:2",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-11",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L03",
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "communicativeTarget": "describe seasons and changes in weather",
+      "learnerTask": "Listen to a short weather exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S03 is SOURCE_VERIFIED",
+        "Source chunks: A21-L03-CH0001, A21-L03-CH0004, A21-L03-CH0007"
+      ],
+      "answerConcept": "天気の予定 / 町で確認します; variant weather:2:2",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-12",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L04",
+      "knowledgeUnitIds": [
+        "A21-S04"
+      ],
+      "sourceChunkIds": [
+        "A21-L04-CH0010",
+        "A21-L04-CH0013",
+        "A21-L04-CH0035"
+      ],
+      "communicativeTarget": "exchange comments and predictions about weather",
+      "learnerTask": "Listen to a short weather exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S04 is SOURCE_VERIFIED",
+        "Source chunks: A21-L04-CH0010, A21-L04-CH0013, A21-L04-CH0035"
+      ],
+      "answerConcept": "天気の予定 / 町で確認します; variant weather:3:2",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-13",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L09",
+      "knowledgeUnitIds": [
+        "A21-S09"
+      ],
+      "sourceChunkIds": [
+        "A21-L09-CH0001",
+        "A21-L09-CH0005",
+        "A21-L09-CH0013"
+      ],
+      "communicativeTarget": "ask politely for language help",
+      "learnerTask": "Listen to a short school exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S09 is SOURCE_VERIFIED",
+        "Source chunks: A21-L09-CH0001, A21-L09-CH0005, A21-L09-CH0013"
+      ],
+      "answerConcept": "日本語教室のこと / 申し込みます; variant school:0:3",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-14",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L10",
+      "knowledgeUnitIds": [
+        "A21-S10"
+      ],
+      "sourceChunkIds": [
+        "A21-L10-CH0001",
+        "A21-L10-CH0004",
+        "A21-L10-CH0005"
+      ],
+      "communicativeTarget": "ask about joining a class or activity",
+      "learnerTask": "Listen to a short school exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S10 is SOURCE_VERIFIED",
+        "Source chunks: A21-L10-CH0001, A21-L10-CH0004, A21-L10-CH0005"
+      ],
+      "answerConcept": "日本語教室のこと / 申し込みます; variant school:1:3",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-15",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L11",
+      "knowledgeUnitIds": [
+        "A21-S11"
+      ],
+      "sourceChunkIds": [
+        "A21-L11-CH0062",
+        "A21-L11-CH0075"
+      ],
+      "communicativeTarget": "coordinate responsibilities for an event",
+      "learnerTask": "Listen to a short community exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S11 is SOURCE_VERIFIED",
+        "Source chunks: A21-L11-CH0062, A21-L11-CH0075"
+      ],
+      "answerConcept": "町の時間 / 便利です; variant community:2:3",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-16",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L15",
+      "knowledgeUnitIds": [
+        "A21-S15"
+      ],
+      "sourceChunkIds": [
+        "A21-L15-CH0001",
+        "A21-L15-CH0008",
+        "A21-L15-CH0015"
+      ],
+      "communicativeTarget": "describe symptoms at a clinic or pharmacy",
+      "learnerTask": "Listen to a short hospital exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S15 is SOURCE_VERIFIED",
+        "Source chunks: A21-L15-CH0001, A21-L15-CH0008, A21-L15-CH0015"
+      ],
+      "answerConcept": "熱の時間 / 週末、のどが痛いです; variant hospital:3:3",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-17",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L16",
+      "knowledgeUnitIds": [
+        "A21-S16"
+      ],
+      "sourceChunkIds": [
+        "A21-L16-CH0001",
+        "A21-L16-CH0008",
+        "A21-L16-CH0014"
+      ],
+      "communicativeTarget": "discuss health habits and advice",
+      "learnerTask": "Listen to a short health exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S16 is SOURCE_VERIFIED",
+        "Source chunks: A21-L16-CH0001, A21-L16-CH0008, A21-L16-CH0014"
+      ],
+      "answerConcept": "健康 / 朝、早く寝るようにしています; variant health:0:4",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-18",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L18",
+      "knowledgeUnitIds": [
+        "A21-S18"
+      ],
+      "sourceChunkIds": [
+        "A21-L18-CH0001",
+        "A21-L18-CH0005",
+        "A21-L18-CH0008"
+      ],
+      "communicativeTarget": "plan a gift or farewell event with others",
+      "learnerTask": "Listen to a short community exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S18 is SOURCE_VERIFIED",
+        "Source chunks: A21-L18-CH0001, A21-L18-CH0005, A21-L18-CH0008"
+      ],
+      "answerConcept": "町 / 昼、便利です; variant community:1:4",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-19",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L01",
+      "knowledgeUnitIds": [
+        "A21-S01"
+      ],
+      "sourceChunkIds": [
+        "A21-L01-CH0001",
+        "A21-L01-CH0012",
+        "A21-L01-CH0014"
+      ],
+      "communicativeTarget": "talk about work and length of residence",
+      "learnerTask": "Listen to a short work exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S01 is SOURCE_VERIFIED",
+        "Source chunks: A21-L01-CH0001, A21-L01-CH0012, A21-L01-CH0014"
+      ],
+      "answerConcept": "仕事の予定 / 仕事について話します; variant work:2:4",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-LISTENING-20",
+      "level": "A2.1",
+      "section": "listening",
+      "lessonId": "A21-L03",
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "communicativeTarget": "describe seasons and changes in weather",
+      "learnerTask": "Listen to a short weather exchange and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S03 is SOURCE_VERIFIED",
+        "Source chunks: A21-L03-CH0001, A21-L03-CH0004, A21-L03-CH0007"
+      ],
+      "answerConcept": "天気の予定 / 天気について話します; variant weather:3:4",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "Include listening script for later TTS/audio production"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-01",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L02",
+      "knowledgeUnitIds": [
+        "A21-S02"
+      ],
+      "sourceChunkIds": [
+        "A21-L02-CH0001",
+        "A21-L02-CH0008",
+        "A21-L02-CH0012"
+      ],
+      "communicativeTarget": "describe hobbies and preferred activities",
+      "learnerTask": "Read a short leisure notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S02 is SOURCE_VERIFIED",
+        "Source chunks: A21-L02-CH0001, A21-L02-CH0008, A21-L02-CH0012"
+      ],
+      "answerConcept": "映画 / 見るのが好きです; variant leisure:0:0",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-02",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L03",
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "communicativeTarget": "describe seasons and changes in weather",
+      "learnerTask": "Read a short weather notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S03 is SOURCE_VERIFIED",
+        "Source chunks: A21-L03-CH0001, A21-L03-CH0004, A21-L03-CH0007"
+      ],
+      "answerConcept": "天気 / 寒くなります; variant weather:1:0",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-03",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L04",
+      "knowledgeUnitIds": [
+        "A21-S04"
+      ],
+      "sourceChunkIds": [
+        "A21-L04-CH0010",
+        "A21-L04-CH0013",
+        "A21-L04-CH0035"
+      ],
+      "communicativeTarget": "exchange comments and predictions about weather",
+      "learnerTask": "Read a short weather notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S04 is SOURCE_VERIFIED",
+        "Source chunks: A21-L04-CH0010, A21-L04-CH0013, A21-L04-CH0035"
+      ],
+      "answerConcept": "天気の予定 / 寒くなります; variant weather:2:0",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-04",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L09",
+      "knowledgeUnitIds": [
+        "A21-S09"
+      ],
+      "sourceChunkIds": [
+        "A21-L09-CH0001",
+        "A21-L09-CH0005",
+        "A21-L09-CH0013"
+      ],
+      "communicativeTarget": "ask politely for language help",
+      "learnerTask": "Read a short school notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S09 is SOURCE_VERIFIED",
+        "Source chunks: A21-L09-CH0001, A21-L09-CH0005, A21-L09-CH0013"
+      ],
+      "answerConcept": "日本語教室の予定 / 週末、申し込みます; variant school:3:0",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-05",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L12",
+      "knowledgeUnitIds": [
+        "A21-S12"
+      ],
+      "sourceChunkIds": [
+        "A21-L12-CH0001",
+        "A21-L12-CH0020",
+        "A21-L12-CH0033"
+      ],
+      "communicativeTarget": "describe food by appearance and taste",
+      "learnerTask": "Read a short food notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S12 is SOURCE_VERIFIED",
+        "Source chunks: A21-L12-CH0001, A21-L12-CH0020, A21-L12-CH0033"
+      ],
+      "answerConcept": "弁当のこと / 朝、おいしそうです; variant food:0:1",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-06",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L16",
+      "knowledgeUnitIds": [
+        "A21-S16"
+      ],
+      "sourceChunkIds": [
+        "A21-L16-CH0001",
+        "A21-L16-CH0008",
+        "A21-L16-CH0014"
+      ],
+      "communicativeTarget": "discuss health habits and advice",
+      "learnerTask": "Read a short health notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S16 is SOURCE_VERIFIED",
+        "Source chunks: A21-L16-CH0001, A21-L16-CH0008, A21-L16-CH0014"
+      ],
+      "answerConcept": "健康のこと / 昼、早く寝るようにしています; variant health:1:1",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-07",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L02",
+      "knowledgeUnitIds": [
+        "A21-S02"
+      ],
+      "sourceChunkIds": [
+        "A21-L02-CH0001",
+        "A21-L02-CH0008",
+        "A21-L02-CH0012"
+      ],
+      "communicativeTarget": "describe hobbies and preferred activities",
+      "learnerTask": "Read a short leisure notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S02 is SOURCE_VERIFIED",
+        "Source chunks: A21-L02-CH0001, A21-L02-CH0008, A21-L02-CH0012"
+      ],
+      "answerConcept": "映画の時間 / 映画について話します; variant leisure:2:1",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-08",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L03",
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "communicativeTarget": "describe seasons and changes in weather",
+      "learnerTask": "Read a short weather notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S03 is SOURCE_VERIFIED",
+        "Source chunks: A21-L03-CH0001, A21-L03-CH0004, A21-L03-CH0007"
+      ],
+      "answerConcept": "天気の時間 / 天気について話します; variant weather:3:1",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-09",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L04",
+      "knowledgeUnitIds": [
+        "A21-S04"
+      ],
+      "sourceChunkIds": [
+        "A21-L04-CH0010",
+        "A21-L04-CH0013",
+        "A21-L04-CH0035"
+      ],
+      "communicativeTarget": "exchange comments and predictions about weather",
+      "learnerTask": "Read a short weather notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S04 is SOURCE_VERIFIED",
+        "Source chunks: A21-L04-CH0010, A21-L04-CH0013, A21-L04-CH0035"
+      ],
+      "answerConcept": "天気 / 天気について話します; variant weather:0:2",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-10",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L09",
+      "knowledgeUnitIds": [
+        "A21-S09"
+      ],
+      "sourceChunkIds": [
+        "A21-L09-CH0001",
+        "A21-L09-CH0005",
+        "A21-L09-CH0013"
+      ],
+      "communicativeTarget": "ask politely for language help",
+      "learnerTask": "Read a short school notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S09 is SOURCE_VERIFIED",
+        "Source chunks: A21-L09-CH0001, A21-L09-CH0005, A21-L09-CH0013"
+      ],
+      "answerConcept": "日本語教室 / 受付で確認します; variant school:1:2",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-11",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L12",
+      "knowledgeUnitIds": [
+        "A21-S12"
+      ],
+      "sourceChunkIds": [
+        "A21-L12-CH0001",
+        "A21-L12-CH0020",
+        "A21-L12-CH0033"
+      ],
+      "communicativeTarget": "describe food by appearance and taste",
+      "learnerTask": "Read a short food notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S12 is SOURCE_VERIFIED",
+        "Source chunks: A21-L12-CH0001, A21-L12-CH0020, A21-L12-CH0033"
+      ],
+      "answerConcept": "弁当の予定 / 食堂で確認します; variant food:2:2",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-12",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L16",
+      "knowledgeUnitIds": [
+        "A21-S16"
+      ],
+      "sourceChunkIds": [
+        "A21-L16-CH0001",
+        "A21-L16-CH0008",
+        "A21-L16-CH0014"
+      ],
+      "communicativeTarget": "discuss health habits and advice",
+      "learnerTask": "Read a short health notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S16 is SOURCE_VERIFIED",
+        "Source chunks: A21-L16-CH0001, A21-L16-CH0008, A21-L16-CH0014"
+      ],
+      "answerConcept": "健康の予定 / 家で確認します; variant health:3:2",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-13",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L02",
+      "knowledgeUnitIds": [
+        "A21-S02"
+      ],
+      "sourceChunkIds": [
+        "A21-L02-CH0001",
+        "A21-L02-CH0008",
+        "A21-L02-CH0012"
+      ],
+      "communicativeTarget": "describe hobbies and preferred activities",
+      "learnerTask": "Read a short leisure notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S02 is SOURCE_VERIFIED",
+        "Source chunks: A21-L02-CH0001, A21-L02-CH0008, A21-L02-CH0012"
+      ],
+      "answerConcept": "映画のこと / 見るのが好きです; variant leisure:0:3",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-14",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L03",
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "communicativeTarget": "describe seasons and changes in weather",
+      "learnerTask": "Read a short weather notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S03 is SOURCE_VERIFIED",
+        "Source chunks: A21-L03-CH0001, A21-L03-CH0004, A21-L03-CH0007"
+      ],
+      "answerConcept": "天気のこと / 寒くなります; variant weather:1:3",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-15",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L04",
+      "knowledgeUnitIds": [
+        "A21-S04"
+      ],
+      "sourceChunkIds": [
+        "A21-L04-CH0010",
+        "A21-L04-CH0013",
+        "A21-L04-CH0035"
+      ],
+      "communicativeTarget": "exchange comments and predictions about weather",
+      "learnerTask": "Read a short weather notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S04 is SOURCE_VERIFIED",
+        "Source chunks: A21-L04-CH0010, A21-L04-CH0013, A21-L04-CH0035"
+      ],
+      "answerConcept": "天気の時間 / 寒くなります; variant weather:2:3",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-16",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L09",
+      "knowledgeUnitIds": [
+        "A21-S09"
+      ],
+      "sourceChunkIds": [
+        "A21-L09-CH0001",
+        "A21-L09-CH0005",
+        "A21-L09-CH0013"
+      ],
+      "communicativeTarget": "ask politely for language help",
+      "learnerTask": "Read a short school notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S09 is SOURCE_VERIFIED",
+        "Source chunks: A21-L09-CH0001, A21-L09-CH0005, A21-L09-CH0013"
+      ],
+      "answerConcept": "日本語教室の時間 / 週末、申し込みます; variant school:3:3",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-17",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L12",
+      "knowledgeUnitIds": [
+        "A21-S12"
+      ],
+      "sourceChunkIds": [
+        "A21-L12-CH0001",
+        "A21-L12-CH0020",
+        "A21-L12-CH0033"
+      ],
+      "communicativeTarget": "describe food by appearance and taste",
+      "learnerTask": "Read a short food notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S12 is SOURCE_VERIFIED",
+        "Source chunks: A21-L12-CH0001, A21-L12-CH0020, A21-L12-CH0033"
+      ],
+      "answerConcept": "弁当 / 朝、おいしそうです; variant food:0:4",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-18",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L16",
+      "knowledgeUnitIds": [
+        "A21-S16"
+      ],
+      "sourceChunkIds": [
+        "A21-L16-CH0001",
+        "A21-L16-CH0008",
+        "A21-L16-CH0014"
+      ],
+      "communicativeTarget": "discuss health habits and advice",
+      "learnerTask": "Read a short health notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S16 is SOURCE_VERIFIED",
+        "Source chunks: A21-L16-CH0001, A21-L16-CH0008, A21-L16-CH0014"
+      ],
+      "answerConcept": "健康 / 昼、早く寝るようにしています; variant health:1:4",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-19",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L02",
+      "knowledgeUnitIds": [
+        "A21-S02"
+      ],
+      "sourceChunkIds": [
+        "A21-L02-CH0001",
+        "A21-L02-CH0008",
+        "A21-L02-CH0012"
+      ],
+      "communicativeTarget": "describe hobbies and preferred activities",
+      "learnerTask": "Read a short leisure notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S02 is SOURCE_VERIFIED",
+        "Source chunks: A21-L02-CH0001, A21-L02-CH0008, A21-L02-CH0012"
+      ],
+      "answerConcept": "映画の予定 / 映画について話します; variant leisure:2:4",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    },
+    {
+      "blueprintId": "A21-PILOT-BP-READING-20",
+      "level": "A2.1",
+      "section": "reading",
+      "lessonId": "A21-L03",
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "communicativeTarget": "describe seasons and changes in weather",
+      "learnerTask": "Read a short weather notice/profile and identify the target information.",
+      "requiredEvidence": [
+        "KU A21-S03 is SOURCE_VERIFIED",
+        "Source chunks: A21-L03-CH0001, A21-L03-CH0004, A21-L03-CH0007"
+      ],
+      "answerConcept": "天気の予定 / 天気について話します; variant weather:3:4",
+      "distractorStrategy": "Three grammatically plausible distractors from different semantic roles; no duplicate normalized choices.",
+      "difficultyIntent": "A2.1 pilot: one clear source-grounded communicative target, short prompt, four choices.",
+      "generationConstraints": [
+        "No A1 release mutation",
+        "No unsupported lesson/section pair",
+        "Exactly four choices",
+        "One defensible answer",
+        "No synthetic audio required"
+      ],
+      "validation": {
+        "status": "PASS",
+        "reasonCodes": []
+      }
+    }
+  ]
+}

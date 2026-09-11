@@ -1,0 +1,2081 @@
+{
+  "artifactVersion": "A21_PILOT_MACHINE_ACCEPTANCE_V1",
+  "batchId": "A21_SOURCE_GROUNDED_PILOT_001",
+  "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1",
+  "acceptance": [
+    {
+      "id": "A21-PILOT-SV-001",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-01",
+        "knowledgeUnitIds": [
+          "A21-S01"
+        ],
+        "sourceChunkIds": [
+          "A21-L01-CH0001",
+          "A21-L01-CH0012",
+          "A21-L01-CH0014"
+        ],
+        "contentHash": "23f25771a60de505cf0c7762e5dc3ea831de061ecf78d3b970e6b61e9e5d3220",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-002",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-02",
+        "knowledgeUnitIds": [
+          "A21-S02"
+        ],
+        "sourceChunkIds": [
+          "A21-L02-CH0001",
+          "A21-L02-CH0008",
+          "A21-L02-CH0012"
+        ],
+        "contentHash": "d2b70bb6e2997427fb3acd8371658b78f7aa1961c776ea901068c0c701ebd139",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-003",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-03",
+        "knowledgeUnitIds": [
+          "A21-S03"
+        ],
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "contentHash": "582bbbb221cd6cceb8e80a1980061e1a4b3306df0c5d6b4bc728c3e3f6b3c48c",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-004",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-04",
+        "knowledgeUnitIds": [
+          "A21-S04"
+        ],
+        "sourceChunkIds": [
+          "A21-L04-CH0010",
+          "A21-L04-CH0013",
+          "A21-L04-CH0035"
+        ],
+        "contentHash": "9900253b3614364d626d523096b677fe79371fb7b4c46033098e624094021507",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-005",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-05",
+        "knowledgeUnitIds": [
+          "A21-S05"
+        ],
+        "sourceChunkIds": [
+          "A21-L05-CH0001",
+          "A21-L05-CH0004",
+          "A21-L05-CH0009"
+        ],
+        "contentHash": "f79d1025362b9e202f2366492715d706be4cf01a5e0ef34cbbc6df425eb26c3f",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-006",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-06",
+        "knowledgeUnitIds": [
+          "A21-S06"
+        ],
+        "sourceChunkIds": [
+          "A21-L06-CH0001",
+          "A21-L06-CH0004",
+          "A21-L06-CH0005"
+        ],
+        "contentHash": "d27c7ec4f8b2fad8cc63eb62a4c312816ee6db14b3357c4ccddb5399319ed9a3",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-007",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-07",
+        "knowledgeUnitIds": [
+          "A21-S07"
+        ],
+        "sourceChunkIds": [
+          "A21-L07-CH0001",
+          "A21-L07-CH0007",
+          "A21-L07-CH0012"
+        ],
+        "contentHash": "25f3ac203aa85f2a1fb24ab20d357dc614bd0f4d98d7946c7342e4fb611ccf9b",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-008",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-08",
+        "knowledgeUnitIds": [
+          "A21-S08"
+        ],
+        "sourceChunkIds": [
+          "A21-L08-CH0001",
+          "A21-L08-CH0008",
+          "A21-L08-CH0015"
+        ],
+        "contentHash": "0597ff8b8384cf7479cb3ac260774dd56ed0bc56e505d006b9bf3ef8063961ff",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-009",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-09",
+        "knowledgeUnitIds": [
+          "A21-S09"
+        ],
+        "sourceChunkIds": [
+          "A21-L09-CH0001",
+          "A21-L09-CH0005",
+          "A21-L09-CH0013"
+        ],
+        "contentHash": "09202e3b1d8d34cf0943a60176dc44e56fee72a35223f335dd849438d4fd7ff0",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-010",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-10",
+        "knowledgeUnitIds": [
+          "A21-S10"
+        ],
+        "sourceChunkIds": [
+          "A21-L10-CH0001",
+          "A21-L10-CH0004",
+          "A21-L10-CH0005"
+        ],
+        "contentHash": "1cef8cb7fd6426b34dbd0232b27860c18044787b4f27663b1a6dca7838d0e16c",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-011",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-11",
+        "knowledgeUnitIds": [
+          "A21-S11"
+        ],
+        "sourceChunkIds": [
+          "A21-L11-CH0062",
+          "A21-L11-CH0075"
+        ],
+        "contentHash": "c2f5d76da64332d1926535fc83a9ca81345e574c58bdbd467cc91d2ee74172c3",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-012",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-12",
+        "knowledgeUnitIds": [
+          "A21-S12"
+        ],
+        "sourceChunkIds": [
+          "A21-L12-CH0001",
+          "A21-L12-CH0020",
+          "A21-L12-CH0033"
+        ],
+        "contentHash": "f908e0a0853d78dae9fb06c55b6adc1c70a0d124957ab6feadcbb8edd1c6cf56",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-013",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-13",
+        "knowledgeUnitIds": [
+          "A21-S13"
+        ],
+        "sourceChunkIds": [
+          "A21-L13-CH0001",
+          "A21-L13-CH0055"
+        ],
+        "contentHash": "84a547d7b7d96a787060b1f5cbbfd7166b7b92c45d20628871bbab0d17c4a84e",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-014",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-14",
+        "knowledgeUnitIds": [
+          "A21-S14"
+        ],
+        "sourceChunkIds": [
+          "A21-L14-CH0001",
+          "A21-L14-CH0005",
+          "A21-L14-CH0033"
+        ],
+        "contentHash": "dc260718ed14250e79ad64ef9cc0aa4a2cf6e67f70f660029c8e56ebc1d8f851",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-015",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-15",
+        "knowledgeUnitIds": [
+          "A21-S15"
+        ],
+        "sourceChunkIds": [
+          "A21-L15-CH0001",
+          "A21-L15-CH0008",
+          "A21-L15-CH0015"
+        ],
+        "contentHash": "08922ebcfda9a57638f0b4a7ae57b27e9c094bc03d1dec22ef3c40256e471038",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-016",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-16",
+        "knowledgeUnitIds": [
+          "A21-S16"
+        ],
+        "sourceChunkIds": [
+          "A21-L16-CH0001",
+          "A21-L16-CH0008",
+          "A21-L16-CH0014"
+        ],
+        "contentHash": "7574558c5ed2736382a47dedd398472f0553b25e8804249c300d003484216754",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-017",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-17",
+        "knowledgeUnitIds": [
+          "A21-S17"
+        ],
+        "sourceChunkIds": [
+          "A21-L17-CH0001",
+          "A21-L17-CH0008",
+          "A21-L17-CH0012"
+        ],
+        "contentHash": "68b6ea0773e45ef36be5084cbf24ee976b48ebe29db74a00502fe4bbbe2f7e9f",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-018",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-18",
+        "knowledgeUnitIds": [
+          "A21-S18"
+        ],
+        "sourceChunkIds": [
+          "A21-L18-CH0001",
+          "A21-L18-CH0005",
+          "A21-L18-CH0008"
+        ],
+        "contentHash": "6f0b6932cc60fb87f8b72f81fbaa50a7e6e6a9d49fd2a9dda86b69123801c3cf",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-019",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-19",
+        "knowledgeUnitIds": [
+          "A21-S01"
+        ],
+        "sourceChunkIds": [
+          "A21-L01-CH0001",
+          "A21-L01-CH0012",
+          "A21-L01-CH0014"
+        ],
+        "contentHash": "138c2aa528296c855efb9794b40dc9674308893cb539b8d015992f4b90c2a5d3",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-SV-020",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-20",
+        "knowledgeUnitIds": [
+          "A21-S02"
+        ],
+        "sourceChunkIds": [
+          "A21-L02-CH0001",
+          "A21-L02-CH0008",
+          "A21-L02-CH0012"
+        ],
+        "contentHash": "5051c1f3f2f2d6f9dce31869fee21d7f0c4fb2389a4a8473159de5f8083f3691",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-021",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-01",
+        "knowledgeUnitIds": [
+          "A21-S01"
+        ],
+        "sourceChunkIds": [
+          "A21-L01-CH0001",
+          "A21-L01-CH0012",
+          "A21-L01-CH0014"
+        ],
+        "contentHash": "7b7dbe2d03a24232f5c9064b5b8085900512b3d794c854e2194ab5ea8f12f9bc",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-022",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-02",
+        "knowledgeUnitIds": [
+          "A21-S02"
+        ],
+        "sourceChunkIds": [
+          "A21-L02-CH0001",
+          "A21-L02-CH0008",
+          "A21-L02-CH0012"
+        ],
+        "contentHash": "8da7494018ae71474e24ffd83fd5b173125bd83459a778cc567a5c477a56b8fd",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-023",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-03",
+        "knowledgeUnitIds": [
+          "A21-S03"
+        ],
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "contentHash": "06e0576c2605484bc7035908081e74b5e13e547ade39f09fbd484c65e7402715",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-024",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-04",
+        "knowledgeUnitIds": [
+          "A21-S04"
+        ],
+        "sourceChunkIds": [
+          "A21-L04-CH0010",
+          "A21-L04-CH0013",
+          "A21-L04-CH0035"
+        ],
+        "contentHash": "10a4a07a0af21a9395657a221f2d0233b98e1a6b6b46fc1a011a851cdc194306",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-025",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-05",
+        "knowledgeUnitIds": [
+          "A21-S09"
+        ],
+        "sourceChunkIds": [
+          "A21-L09-CH0001",
+          "A21-L09-CH0005",
+          "A21-L09-CH0013"
+        ],
+        "contentHash": "36e639b606fdf3dbe761c0f35e1a53141f65fc496b59500bcf539b68de4b3a59",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-026",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-06",
+        "knowledgeUnitIds": [
+          "A21-S10"
+        ],
+        "sourceChunkIds": [
+          "A21-L10-CH0001",
+          "A21-L10-CH0004",
+          "A21-L10-CH0005"
+        ],
+        "contentHash": "c2ce0c07dd352bab6eeaed081391f888a1b0d8190248f568b709e8c0dc5b82b2",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-027",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-07",
+        "knowledgeUnitIds": [
+          "A21-S11"
+        ],
+        "sourceChunkIds": [
+          "A21-L11-CH0062",
+          "A21-L11-CH0075"
+        ],
+        "contentHash": "c44dd92236cb04eba696589fcd9ea95bf373bc33d4512ec08afb193fc56f1ac9",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-028",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-08",
+        "knowledgeUnitIds": [
+          "A21-S12"
+        ],
+        "sourceChunkIds": [
+          "A21-L12-CH0001",
+          "A21-L12-CH0020",
+          "A21-L12-CH0033"
+        ],
+        "contentHash": "ce707681f52537fd644b01aa936cf52160136e74fb27af9aa8dc7560eb909350",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-029",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-09",
+        "knowledgeUnitIds": [
+          "A21-S15"
+        ],
+        "sourceChunkIds": [
+          "A21-L15-CH0001",
+          "A21-L15-CH0008",
+          "A21-L15-CH0015"
+        ],
+        "contentHash": "a33712fb237f4bafc44977ccd1bddd53830621680dc97cca69a97fc690ec45a2",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-030",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-10",
+        "knowledgeUnitIds": [
+          "A21-S16"
+        ],
+        "sourceChunkIds": [
+          "A21-L16-CH0001",
+          "A21-L16-CH0008",
+          "A21-L16-CH0014"
+        ],
+        "contentHash": "e93ed131f8aeb2c14802faf3d821f87cccc33e2cfcb8259e11058f4e0f9a6791",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-031",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-11",
+        "knowledgeUnitIds": [
+          "A21-S18"
+        ],
+        "sourceChunkIds": [
+          "A21-L18-CH0001",
+          "A21-L18-CH0005",
+          "A21-L18-CH0008"
+        ],
+        "contentHash": "b7b55ac4b3e1d5b81e4be4a273bd923342d762cb282935bd8fe314052038549d",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-032",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-12",
+        "knowledgeUnitIds": [
+          "A21-S01"
+        ],
+        "sourceChunkIds": [
+          "A21-L01-CH0001",
+          "A21-L01-CH0012",
+          "A21-L01-CH0014"
+        ],
+        "contentHash": "c05a2d8737e5dfb108f9ce5c023748bbc30ffb407cc49b18aec8f4486250c246",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-033",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-13",
+        "knowledgeUnitIds": [
+          "A21-S02"
+        ],
+        "sourceChunkIds": [
+          "A21-L02-CH0001",
+          "A21-L02-CH0008",
+          "A21-L02-CH0012"
+        ],
+        "contentHash": "8f60f2aee1322302f99b6b8828ed5238bfe2336f29251aee272acfbf1b1e536d",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-034",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-14",
+        "knowledgeUnitIds": [
+          "A21-S03"
+        ],
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "contentHash": "2fad7f9a02f964799f59e767059d5e9ca403c427e6189a1a5189cdb1fd269365",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-035",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-15",
+        "knowledgeUnitIds": [
+          "A21-S04"
+        ],
+        "sourceChunkIds": [
+          "A21-L04-CH0010",
+          "A21-L04-CH0013",
+          "A21-L04-CH0035"
+        ],
+        "contentHash": "1bdd4da1c6ac8fe14139e59d2a68017d5f3a338ed994bb69783cfecc139e3639",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-036",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-16",
+        "knowledgeUnitIds": [
+          "A21-S09"
+        ],
+        "sourceChunkIds": [
+          "A21-L09-CH0001",
+          "A21-L09-CH0005",
+          "A21-L09-CH0013"
+        ],
+        "contentHash": "ee673707a5c163a5fcb24e4208d8003900112bb206e96eed03395a808bfa69e0",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-037",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-17",
+        "knowledgeUnitIds": [
+          "A21-S10"
+        ],
+        "sourceChunkIds": [
+          "A21-L10-CH0001",
+          "A21-L10-CH0004",
+          "A21-L10-CH0005"
+        ],
+        "contentHash": "f11cf19a96f4ed6450779d87716c66306a96830942b328fdb3e8b8a25374d32b",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-038",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-18",
+        "knowledgeUnitIds": [
+          "A21-S11"
+        ],
+        "sourceChunkIds": [
+          "A21-L11-CH0062",
+          "A21-L11-CH0075"
+        ],
+        "contentHash": "edb708962eb353adda247bd9de8d252bfb0fe79b049e7a8b8268c9d9b5e494e5",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-039",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-19",
+        "knowledgeUnitIds": [
+          "A21-S12"
+        ],
+        "sourceChunkIds": [
+          "A21-L12-CH0001",
+          "A21-L12-CH0020",
+          "A21-L12-CH0033"
+        ],
+        "contentHash": "a5eae93e3cb4b29962f0a6db2973576f6deb9b3e33e5748547935a676ab8b9d6",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-CE-040",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-20",
+        "knowledgeUnitIds": [
+          "A21-S15"
+        ],
+        "sourceChunkIds": [
+          "A21-L15-CH0001",
+          "A21-L15-CH0008",
+          "A21-L15-CH0015"
+        ],
+        "contentHash": "9a694e65cb2d1ae58c48e1906246d3cb1b50c4245bc6a5d428778b03cf5519eb",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-041",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-01",
+        "knowledgeUnitIds": [
+          "A21-S01"
+        ],
+        "sourceChunkIds": [
+          "A21-L01-CH0001",
+          "A21-L01-CH0012",
+          "A21-L01-CH0014"
+        ],
+        "contentHash": "e53763f84ecfcecbef5e794afc1fd219fe75afb2364d8ada34d79d430b2ef996",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-042",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-02",
+        "knowledgeUnitIds": [
+          "A21-S03"
+        ],
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "contentHash": "7235dca04299da97ee747047f662ce58052351956e7327cb52b0a5d28afffbc5",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-043",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-03",
+        "knowledgeUnitIds": [
+          "A21-S04"
+        ],
+        "sourceChunkIds": [
+          "A21-L04-CH0010",
+          "A21-L04-CH0013",
+          "A21-L04-CH0035"
+        ],
+        "contentHash": "528fb2e75e7781030eaa8daec0fa9f337105508c660d3654ac34fe555a8727da",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-044",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-04",
+        "knowledgeUnitIds": [
+          "A21-S09"
+        ],
+        "sourceChunkIds": [
+          "A21-L09-CH0001",
+          "A21-L09-CH0005",
+          "A21-L09-CH0013"
+        ],
+        "contentHash": "c2fbd2a60b3bbd4c3716022473b87b386d7ca0c3aad8317b320f73ffccbe2a32",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-045",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-05",
+        "knowledgeUnitIds": [
+          "A21-S10"
+        ],
+        "sourceChunkIds": [
+          "A21-L10-CH0001",
+          "A21-L10-CH0004",
+          "A21-L10-CH0005"
+        ],
+        "contentHash": "9f3b39dd1c9891b4be64767b3c66624765506f94f0344f0f547e19c2df41ab15",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-046",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-06",
+        "knowledgeUnitIds": [
+          "A21-S11"
+        ],
+        "sourceChunkIds": [
+          "A21-L11-CH0062",
+          "A21-L11-CH0075"
+        ],
+        "contentHash": "30811a9b299a98cb99b3a5bad74dd6f14cf1f0488652a9718d2f092d544c2167",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-047",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-07",
+        "knowledgeUnitIds": [
+          "A21-S15"
+        ],
+        "sourceChunkIds": [
+          "A21-L15-CH0001",
+          "A21-L15-CH0008",
+          "A21-L15-CH0015"
+        ],
+        "contentHash": "0de6efff16ef820bd412e2cbf076316a850c7226871ee266df921fb3bab4dc9c",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-048",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-08",
+        "knowledgeUnitIds": [
+          "A21-S16"
+        ],
+        "sourceChunkIds": [
+          "A21-L16-CH0001",
+          "A21-L16-CH0008",
+          "A21-L16-CH0014"
+        ],
+        "contentHash": "041628776439a55374429a6da7e3c4c9129c1f1cf280d4c5454f0d3c3fcd8051",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-049",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-09",
+        "knowledgeUnitIds": [
+          "A21-S18"
+        ],
+        "sourceChunkIds": [
+          "A21-L18-CH0001",
+          "A21-L18-CH0005",
+          "A21-L18-CH0008"
+        ],
+        "contentHash": "9831882c2d8eeecd53f4ce5b527f819a566e1e610d418114b707a5078d94a2f5",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-050",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-10",
+        "knowledgeUnitIds": [
+          "A21-S01"
+        ],
+        "sourceChunkIds": [
+          "A21-L01-CH0001",
+          "A21-L01-CH0012",
+          "A21-L01-CH0014"
+        ],
+        "contentHash": "3fecf23bffa5280d8465e63afab8d9bbe41489c96bce81d2a9ffe3f67a61efca",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-051",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-11",
+        "knowledgeUnitIds": [
+          "A21-S03"
+        ],
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "contentHash": "71399d9f72da1d7502850bed08be602a64fa03bdced7922fdecc95bba1b4b88d",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-052",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-12",
+        "knowledgeUnitIds": [
+          "A21-S04"
+        ],
+        "sourceChunkIds": [
+          "A21-L04-CH0010",
+          "A21-L04-CH0013",
+          "A21-L04-CH0035"
+        ],
+        "contentHash": "7a974e77caa5daa1f58806d96dd224135d1f54c4f35816974e545a9a4bb8fb38",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-053",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-13",
+        "knowledgeUnitIds": [
+          "A21-S09"
+        ],
+        "sourceChunkIds": [
+          "A21-L09-CH0001",
+          "A21-L09-CH0005",
+          "A21-L09-CH0013"
+        ],
+        "contentHash": "5f955cdb0e85c39bad662bd8d5b487e8cb1327c9283e3027cf18acdcde3bdc7e",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-054",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-14",
+        "knowledgeUnitIds": [
+          "A21-S10"
+        ],
+        "sourceChunkIds": [
+          "A21-L10-CH0001",
+          "A21-L10-CH0004",
+          "A21-L10-CH0005"
+        ],
+        "contentHash": "22cd886170679a47f2c03fdd96b1e787c99b9b51ee5b710090107cca8356787d",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-055",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-15",
+        "knowledgeUnitIds": [
+          "A21-S11"
+        ],
+        "sourceChunkIds": [
+          "A21-L11-CH0062",
+          "A21-L11-CH0075"
+        ],
+        "contentHash": "ab00e4f3abc0c0474fd42fa6a2bd132a7bb6464faa87b67703c492530caab373",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-056",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-16",
+        "knowledgeUnitIds": [
+          "A21-S15"
+        ],
+        "sourceChunkIds": [
+          "A21-L15-CH0001",
+          "A21-L15-CH0008",
+          "A21-L15-CH0015"
+        ],
+        "contentHash": "c6fe616fb783979376064167b9c72b24ae7798a9c9fe807bc6d314b68e5b643a",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-057",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-17",
+        "knowledgeUnitIds": [
+          "A21-S16"
+        ],
+        "sourceChunkIds": [
+          "A21-L16-CH0001",
+          "A21-L16-CH0008",
+          "A21-L16-CH0014"
+        ],
+        "contentHash": "9c7c540c1b1a7c994352842b4f8cb1f9bff9233ce378751aa07d01c82ca1e49d",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-058",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-18",
+        "knowledgeUnitIds": [
+          "A21-S18"
+        ],
+        "sourceChunkIds": [
+          "A21-L18-CH0001",
+          "A21-L18-CH0005",
+          "A21-L18-CH0008"
+        ],
+        "contentHash": "e3d55490a40c7455a641d0cebeebfad4b5e614e67c083f4064f800e0818566de",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-059",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-19",
+        "knowledgeUnitIds": [
+          "A21-S01"
+        ],
+        "sourceChunkIds": [
+          "A21-L01-CH0001",
+          "A21-L01-CH0012",
+          "A21-L01-CH0014"
+        ],
+        "contentHash": "61b34364f909c31ae0e6ae4c5d415b0cccf0c3d63297cd62bf55ce9197d6d458",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-L-060",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-LISTENING-20",
+        "knowledgeUnitIds": [
+          "A21-S03"
+        ],
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "contentHash": "d98f9cbb87e5b4337d990ed224db2908c1ca368d1a2991eb3744bebdb275fe96",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-061",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-01",
+        "knowledgeUnitIds": [
+          "A21-S02"
+        ],
+        "sourceChunkIds": [
+          "A21-L02-CH0001",
+          "A21-L02-CH0008",
+          "A21-L02-CH0012"
+        ],
+        "contentHash": "ef4a5cb91a29d72000ea77d9e247a7a0c05a1fb49ad4394b9c0338b173212502",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-062",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-02",
+        "knowledgeUnitIds": [
+          "A21-S03"
+        ],
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "contentHash": "89c27c7fe32c5f4d3a5eb7a36e6cbefb8991ea5f9babfaa62efdfddfc3097f5d",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-063",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-03",
+        "knowledgeUnitIds": [
+          "A21-S04"
+        ],
+        "sourceChunkIds": [
+          "A21-L04-CH0010",
+          "A21-L04-CH0013",
+          "A21-L04-CH0035"
+        ],
+        "contentHash": "8d313eb08d77e01a37dd0ff58b72c0ca85c6460d10b32090417abd7e853944f2",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-064",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-04",
+        "knowledgeUnitIds": [
+          "A21-S09"
+        ],
+        "sourceChunkIds": [
+          "A21-L09-CH0001",
+          "A21-L09-CH0005",
+          "A21-L09-CH0013"
+        ],
+        "contentHash": "f5cf9baaa00bdd1048da43fc7876b8cdd04039a4eaca36967adfaf6272dea1dc",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-065",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-05",
+        "knowledgeUnitIds": [
+          "A21-S12"
+        ],
+        "sourceChunkIds": [
+          "A21-L12-CH0001",
+          "A21-L12-CH0020",
+          "A21-L12-CH0033"
+        ],
+        "contentHash": "4118875b3764068a47964a2df80f37560d8258c382c4ec174e65b0164d224623",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-066",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-06",
+        "knowledgeUnitIds": [
+          "A21-S16"
+        ],
+        "sourceChunkIds": [
+          "A21-L16-CH0001",
+          "A21-L16-CH0008",
+          "A21-L16-CH0014"
+        ],
+        "contentHash": "8a53600691aa3d1f533d11cf79c08bdcc3b151637450576848dc99de20764ba5",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-067",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-07",
+        "knowledgeUnitIds": [
+          "A21-S02"
+        ],
+        "sourceChunkIds": [
+          "A21-L02-CH0001",
+          "A21-L02-CH0008",
+          "A21-L02-CH0012"
+        ],
+        "contentHash": "808380c9822b5a6c15760ac740bee6b1eb257fcedcff8e79860e048848bec90a",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-068",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-08",
+        "knowledgeUnitIds": [
+          "A21-S03"
+        ],
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "contentHash": "bd8c570df5f85815120d093b92cc870b85132c83ab1fb37f6cdc66b87dc8217e",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-069",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-09",
+        "knowledgeUnitIds": [
+          "A21-S04"
+        ],
+        "sourceChunkIds": [
+          "A21-L04-CH0010",
+          "A21-L04-CH0013",
+          "A21-L04-CH0035"
+        ],
+        "contentHash": "486c7b0528b4f3b7ab7715af4edf99716dfdf2d21aff95b7501a551a1de52869",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-070",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-10",
+        "knowledgeUnitIds": [
+          "A21-S09"
+        ],
+        "sourceChunkIds": [
+          "A21-L09-CH0001",
+          "A21-L09-CH0005",
+          "A21-L09-CH0013"
+        ],
+        "contentHash": "9ccfa6795bd9691d0506a65e5bd446fe388608385cd51fdf4cae67a7cb734e18",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-071",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-11",
+        "knowledgeUnitIds": [
+          "A21-S12"
+        ],
+        "sourceChunkIds": [
+          "A21-L12-CH0001",
+          "A21-L12-CH0020",
+          "A21-L12-CH0033"
+        ],
+        "contentHash": "4b7c6268ae214af73979df6dfca090c385e9bb13da26bb9c994b468086008b19",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-072",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-12",
+        "knowledgeUnitIds": [
+          "A21-S16"
+        ],
+        "sourceChunkIds": [
+          "A21-L16-CH0001",
+          "A21-L16-CH0008",
+          "A21-L16-CH0014"
+        ],
+        "contentHash": "2784e408f8a1883974ee7a342ddacfe9b715624d9f621f7b2586006c3c61885c",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-073",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-13",
+        "knowledgeUnitIds": [
+          "A21-S02"
+        ],
+        "sourceChunkIds": [
+          "A21-L02-CH0001",
+          "A21-L02-CH0008",
+          "A21-L02-CH0012"
+        ],
+        "contentHash": "ce77c80a6fbdf9b76a3c58c2ea650dd31994f2a5e7db84d0cafdea7a9c758489",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-074",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-14",
+        "knowledgeUnitIds": [
+          "A21-S03"
+        ],
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "contentHash": "fb985ec8b74fa8482e5d0c450fbddae14643254fdb5c1e0f96491a7fed47a6bf",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-075",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-15",
+        "knowledgeUnitIds": [
+          "A21-S04"
+        ],
+        "sourceChunkIds": [
+          "A21-L04-CH0010",
+          "A21-L04-CH0013",
+          "A21-L04-CH0035"
+        ],
+        "contentHash": "2d311ad1d4a2b0544b881126b9017a226ad4c99419c652fb6093a43c9c0da748",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-076",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-16",
+        "knowledgeUnitIds": [
+          "A21-S09"
+        ],
+        "sourceChunkIds": [
+          "A21-L09-CH0001",
+          "A21-L09-CH0005",
+          "A21-L09-CH0013"
+        ],
+        "contentHash": "b17217e374dd7456be39b3ecfa528b075091204b2413837234e27a6779e1baa7",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-077",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-17",
+        "knowledgeUnitIds": [
+          "A21-S12"
+        ],
+        "sourceChunkIds": [
+          "A21-L12-CH0001",
+          "A21-L12-CH0020",
+          "A21-L12-CH0033"
+        ],
+        "contentHash": "a280113fbac95242ef8dd0431e2eea0426cc0cc2b44997f490f4c07e54220320",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 0
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-078",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-18",
+        "knowledgeUnitIds": [
+          "A21-S16"
+        ],
+        "sourceChunkIds": [
+          "A21-L16-CH0001",
+          "A21-L16-CH0008",
+          "A21-L16-CH0014"
+        ],
+        "contentHash": "731eece9307e01f81c66046e84c1471ee60e630c8aa517988637deb0a6ed6428",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 1
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-079",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-19",
+        "knowledgeUnitIds": [
+          "A21-S02"
+        ],
+        "sourceChunkIds": [
+          "A21-L02-CH0001",
+          "A21-L02-CH0008",
+          "A21-L02-CH0012"
+        ],
+        "contentHash": "875a600819b7748617c7f35c91eee0818e606d97a7e5ffb43361703c663cc29c",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 2
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    },
+    {
+      "id": "A21-PILOT-R-080",
+      "finalDecision": "MACHINE_ACCEPTED",
+      "machineConfidence": 0.99,
+      "evidence": {
+        "blueprintId": "A21-PILOT-BP-READING-20",
+        "knowledgeUnitIds": [
+          "A21-S03"
+        ],
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "contentHash": "9f0085a8685f7d2498d0498d356a2ebe98ef332990451b567e15903452b93721",
+        "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1"
+      },
+      "semanticJudgeA": {
+        "status": "PASS",
+        "selectedAnswerIndex": 3
+      },
+      "adversarialJudgeB": {
+        "status": "PASS",
+        "defensibleAlternativeIndexes": []
+      }
+    }
+  ]
+}

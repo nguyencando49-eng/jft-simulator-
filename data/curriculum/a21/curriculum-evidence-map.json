@@ -1,0 +1,991 @@
+{
+  "artifactVersion": "A21_CURRICULUM_EVIDENCE_MAP_V1",
+  "mappings": [
+    {
+      "curriculumUnitId": "A21-S01",
+      "lessonId": "A21-L01",
+      "sourceDocumentId": "A21-SOURCE-L01",
+      "knowledgeUnitId": "A21-S01",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "レストランで働いています",
+        "仕事",
+        "工場",
+        "半年",
+        "働いています"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L01-CH0001",
+        "A21-L01-CH0012",
+        "A21-L01-CH0014",
+        "A21-L01-CH0021",
+        "A21-L01-CH0044",
+        "A21-L01-CH0048",
+        "A21-L01-CH0050",
+        "A21-L01-CH0053",
+        "A21-L01-CH0059"
+      ]
+    },
+    {
+      "curriculumUnitId": "A21-S02",
+      "lessonId": "A21-L02",
+      "sourceDocumentId": "A21-SOURCE-L02",
+      "knowledgeUnitId": "A21-S02",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "ゲーム",
+        "映画",
+        "体育館",
+        "好きです"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L02-CH0001",
+        "A21-L02-CH0008",
+        "A21-L02-CH0012",
+        "A21-L02-CH0013",
+        "A21-L02-CH0014",
+        "A21-L02-CH0016",
+        "A21-L02-CH0034",
+        "A21-L02-CH0036",
+        "A21-L02-CH0072"
+      ]
+    },
+    {
+      "curriculumUnitId": "A21-S03",
+      "lessonId": "A21-L03",
+      "sourceDocumentId": "A21-SOURCE-L03",
+      "knowledgeUnitId": "A21-S03",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "冬はとても寒くなります",
+        "季節",
+        "冬",
+        "暖かい",
+        "なります",
+        "寒くなります"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007",
+        "A21-L03-CH0008",
+        "A21-L03-CH0011",
+        "A21-L03-CH0012",
+        "A21-L03-CH0017",
+        "A21-L03-CH0019",
+        "A21-L03-CH0021",
+        "A21-L03-CH0030",
+        "A21-L03-CH0051",
+        "A21-L03-CH0056",
+        "A21-L03-CH0068",
+        "A21-L03-CH0071",
+        "A21-L03-CH0103",
+        "A21-L03-CH0106",
+        "A21-L03-CH0115",
+        "A21-L03-CH0124"
+      ]
+    },
+    {
+      "curriculumUnitId": "A21-S04",
+      "lessonId": "A21-L04",
+      "sourceDocumentId": "A21-SOURCE-L04",
+      "knowledgeUnitId": "A21-S04",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "昨日はすごい雨でしたね",
+        "台風",
+        "雷",
+        "風",
+        "でしょう"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L04-CH0010",
+        "A21-L04-CH0013",
+        "A21-L04-CH0035",
+        "A21-L04-CH0045",
+        "A21-L04-CH0065"
+      ]
+    },
+    {
+      "curriculumUnitId": "A21-S05",
+      "lessonId": "A21-L05",
+      "sourceDocumentId": "A21-SOURCE-L05",
+      "knowledgeUnitId": "A21-S05",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "とてもにぎやかで便利です",
+        "町",
+        "便利",
+        "景色",
+        "できます",
+        "にぎやかで便利です"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L05-CH0001",
+        "A21-L05-CH0004",
+        "A21-L05-CH0009",
+        "A21-L05-CH0010",
+        "A21-L05-CH0011",
+        "A21-L05-CH0013",
+        "A21-L05-CH0062",
+        "A21-L05-CH0067",
+        "A21-L05-CH0089"
+      ]
+    },
+    {
+      "curriculumUnitId": "A21-S06",
+      "lessonId": "A21-L06",
+      "sourceDocumentId": "A21-SOURCE-L06",
+      "knowledgeUnitId": "A21-S06",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "郵便局はどう行ったらいいですか",
+        "郵便局",
+        "信号"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L06-CH0001",
+        "A21-L06-CH0004",
+        "A21-L06-CH0005",
+        "A21-L06-CH0014",
+        "A21-L06-CH0052"
+      ]
+    },
+    {
+      "curriculumUnitId": "A21-S07",
+      "lessonId": "A21-L07",
+      "sourceDocumentId": "A21-SOURCE-L07",
+      "knowledgeUnitId": "A21-S07",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "道に迷ってちょっと遅れます",
+        "待ち合わせ",
+        "遅れます",
+        "事故",
+        "改札"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L07-CH0001",
+        "A21-L07-CH0007",
+        "A21-L07-CH0012",
+        "A21-L07-CH0013",
+        "A21-L07-CH0045"
+      ]
+    },
+    {
+      "curriculumUnitId": "A21-S08",
+      "lessonId": "A21-L08",
+      "sourceDocumentId": "A21-SOURCE-L08",
+      "knowledgeUnitId": "A21-S08",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "野球、したことがありますか",
+        "動物園",
+        "試合",
+        "ことがあります",
+        "したことがありますか"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L08-CH0001",
+        "A21-L08-CH0008",
+        "A21-L08-CH0015",
+        "A21-L08-CH0055",
+        "A21-L08-CH0057",
+        "A21-L08-CH0122",
+        "A21-L08-CH0146"
+      ]
+    },
+    {
+      "curriculumUnitId": "A21-S09",
+      "lessonId": "A21-L09",
+      "sourceDocumentId": "A21-SOURCE-L09",
+      "knowledgeUnitId": "A21-S09",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "読み方を教えてもらいませんか",
+        "漢字",
+        "読み方",
+        "教えて",
+        "教えてもらいませんか"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L09-CH0001",
+        "A21-L09-CH0005",
+        "A21-L09-CH0013",
+        "A21-L09-CH0062",
+        "A21-L09-CH0075",
+        "A21-L09-CH0091",
+        "A21-L09-CH0095",
+        "A21-L09-CH0097"
+      ]
+    },
+    {
+      "curriculumUnitId": "A21-S10",
+      "lessonId": "A21-L10",
+      "sourceDocumentId": "A21-SOURCE-L10",
+      "knowledgeUnitId": "A21-S10",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "日本語教室に参加したいんですが",
+        "日本語教室",
+        "参加",
+        "参加したいんですが"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L10-CH0001",
+        "A21-L10-CH0004",
+        "A21-L10-CH0005",
+        "A21-L10-CH0024",
+        "A21-L10-CH0027",
+        "A21-L10-CH0029",
+        "A21-L10-CH0073",
+        "A21-L10-CH0076",
+        "A21-L10-CH0078",
+        "A21-L10-CH0092"
+      ]
+    },
+    {
+      "curriculumUnitId": "A21-S11",
+      "lessonId": "A21-L11",
+      "sourceDocumentId": "A21-SOURCE-L11",
+      "knowledgeUnitId": "A21-S11",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "肉と野菜は私が買って行きます",
+        "準備",
+        "私が買って行きます"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L11-CH0062",
+        "A21-L11-CH0075"
+      ]
+    },
+    {
+      "curriculumUnitId": "A21-S12",
+      "lessonId": "A21-L12",
+      "sourceDocumentId": "A21-SOURCE-L12",
+      "knowledgeUnitId": "A21-S12",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "お弁当、おいしそうですね",
+        "弁当",
+        "味",
+        "おいしそう",
+        "おいしそうですね"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L12-CH0001",
+        "A21-L12-CH0020",
+        "A21-L12-CH0033",
+        "A21-L12-CH0091"
+      ]
+    },
+    {
+      "curriculumUnitId": "A21-S13",
+      "lessonId": "A21-L13",
+      "sourceDocumentId": "A21-SOURCE-L13",
+      "knowledgeUnitId": "A21-S13",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "あと10分ぐらいで終わりそうです",
+        "終わりそうです"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L13-CH0001",
+        "A21-L13-CH0055"
+      ]
+    },
+    {
+      "curriculumUnitId": "A21-S14",
+      "lessonId": "A21-L14",
+      "sourceDocumentId": "A21-SOURCE-L14",
+      "knowledgeUnitId": "A21-S14",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "休みを取ってもいいですか",
+        "早退",
+        "休み"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L14-CH0001",
+        "A21-L14-CH0005",
+        "A21-L14-CH0033",
+        "A21-L14-CH0044",
+        "A21-L14-CH0059",
+        "A21-L14-CH0072",
+        "A21-L14-CH0076",
+        "A21-L14-CH0098",
+        "A21-L14-CH0111",
+        "A21-L14-CH0119"
+      ]
+    },
+    {
+      "curriculumUnitId": "A21-S15",
+      "lessonId": "A21-L15",
+      "sourceDocumentId": "A21-SOURCE-L15",
+      "knowledgeUnitId": "A21-S15",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "熱があって、のどが痛いんです",
+        "熱",
+        "のど",
+        "薬"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L15-CH0001",
+        "A21-L15-CH0008",
+        "A21-L15-CH0015",
+        "A21-L15-CH0016",
+        "A21-L15-CH0022",
+        "A21-L15-CH0025",
+        "A21-L15-CH0026",
+        "A21-L15-CH0036",
+        "A21-L15-CH0038",
+        "A21-L15-CH0044",
+        "A21-L15-CH0049",
+        "A21-L15-CH0068",
+        "A21-L15-CH0072",
+        "A21-L15-CH0083",
+        "A21-L15-CH0094",
+        "A21-L15-CH0097",
+        "A21-L15-CH0098"
+      ]
+    },
+    {
+      "curriculumUnitId": "A21-S16",
+      "lessonId": "A21-L16",
+      "sourceDocumentId": "A21-SOURCE-L16",
+      "knowledgeUnitId": "A21-S16",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "食べ過ぎないようにしています",
+        "健康",
+        "食事",
+        "ようにしています"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L16-CH0001",
+        "A21-L16-CH0008",
+        "A21-L16-CH0014",
+        "A21-L16-CH0048",
+        "A21-L16-CH0057",
+        "A21-L16-CH0071",
+        "A21-L16-CH0074"
+      ]
+    },
+    {
+      "curriculumUnitId": "A21-S17",
+      "lessonId": "A21-L17",
+      "sourceDocumentId": "A21-SOURCE-L17",
+      "knowledgeUnitId": "A21-S17",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "兄がくれたお守りです",
+        "お土産",
+        "兄",
+        "くれました",
+        "兄がくれた"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L17-CH0001",
+        "A21-L17-CH0008",
+        "A21-L17-CH0012",
+        "A21-L17-CH0056"
+      ]
+    },
+    {
+      "curriculumUnitId": "A21-S18",
+      "lessonId": "A21-L18",
+      "sourceDocumentId": "A21-SOURCE-L18",
+      "knowledgeUnitId": "A21-S18",
+      "planningCatalogStatus": "CONFIRMED_BY_SOURCE",
+      "knowledgeUnitStatus": "SOURCE_VERIFIED",
+      "approvedForGeneration": true,
+      "matchedTerms": [
+        "何かプレゼントをあげませんか",
+        "送別会",
+        "誕生日",
+        "思い出",
+        "プレゼント",
+        "あげませんか"
+      ],
+      "missingTerms": [],
+      "sourceChunkIds": [
+        "A21-L18-CH0001",
+        "A21-L18-CH0005",
+        "A21-L18-CH0008",
+        "A21-L18-CH0009",
+        "A21-L18-CH0046",
+        "A21-L18-CH0064",
+        "A21-L18-CH0069",
+        "A21-L18-CH0083",
+        "A21-L18-CH0093",
+        "A21-L18-CH0100"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "lessonId": "A21-L01",
+      "lesson": 1,
+      "curriculumUnitId": "A21-S01",
+      "sourceChunkCount": 85,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 0,
+        "VOCABULARY": 31,
+        "EXPRESSION": 0,
+        "GRAMMAR": 4,
+        "DIALOGUE": 29,
+        "READING": 0,
+        "LISTENING": 0,
+        "TASK": 5,
+        "OTHER": 16
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary",
+        "conversation_expression",
+        "listening"
+      ],
+      "gaps": [
+        "reading"
+      ]
+    },
+    {
+      "lessonId": "A21-L02",
+      "lesson": 2,
+      "curriculumUnitId": "A21-S02",
+      "sourceChunkCount": 101,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 0,
+        "VOCABULARY": 18,
+        "EXPRESSION": 0,
+        "GRAMMAR": 7,
+        "DIALOGUE": 17,
+        "READING": 0,
+        "LISTENING": 0,
+        "TASK": 6,
+        "OTHER": 53
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary",
+        "conversation_expression",
+        "reading"
+      ],
+      "gaps": [
+        "listening"
+      ]
+    },
+    {
+      "lessonId": "A21-L03",
+      "lesson": 3,
+      "curriculumUnitId": "A21-S03",
+      "sourceChunkCount": 130,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 0,
+        "VOCABULARY": 25,
+        "EXPRESSION": 0,
+        "GRAMMAR": 12,
+        "DIALOGUE": 32,
+        "READING": 0,
+        "LISTENING": 0,
+        "TASK": 6,
+        "OTHER": 55
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary",
+        "conversation_expression",
+        "listening",
+        "reading"
+      ],
+      "gaps": []
+    },
+    {
+      "lessonId": "A21-L04",
+      "lesson": 4,
+      "curriculumUnitId": "A21-S04",
+      "sourceChunkCount": 70,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 0,
+        "VOCABULARY": 14,
+        "EXPRESSION": 0,
+        "GRAMMAR": 10,
+        "DIALOGUE": 16,
+        "READING": 0,
+        "LISTENING": 0,
+        "TASK": 3,
+        "OTHER": 27
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary",
+        "conversation_expression",
+        "listening",
+        "reading"
+      ],
+      "gaps": []
+    },
+    {
+      "lessonId": "A21-L05",
+      "lesson": 5,
+      "curriculumUnitId": "A21-S05",
+      "sourceChunkCount": 105,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 0,
+        "VOCABULARY": 42,
+        "EXPRESSION": 0,
+        "GRAMMAR": 15,
+        "DIALOGUE": 10,
+        "READING": 0,
+        "LISTENING": 0,
+        "TASK": 3,
+        "OTHER": 35
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary"
+      ],
+      "gaps": [
+        "conversation_expression",
+        "listening",
+        "reading"
+      ]
+    },
+    {
+      "lessonId": "A21-L06",
+      "lesson": 6,
+      "curriculumUnitId": "A21-S06",
+      "sourceChunkCount": 77,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 0,
+        "VOCABULARY": 19,
+        "EXPRESSION": 0,
+        "GRAMMAR": 14,
+        "DIALOGUE": 11,
+        "READING": 0,
+        "LISTENING": 0,
+        "TASK": 4,
+        "OTHER": 29
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary"
+      ],
+      "gaps": [
+        "conversation_expression",
+        "listening",
+        "reading"
+      ]
+    },
+    {
+      "lessonId": "A21-L07",
+      "lesson": 7,
+      "curriculumUnitId": "A21-S07",
+      "sourceChunkCount": 67,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 0,
+        "VOCABULARY": 22,
+        "EXPRESSION": 0,
+        "GRAMMAR": 1,
+        "DIALOGUE": 25,
+        "READING": 0,
+        "LISTENING": 0,
+        "TASK": 4,
+        "OTHER": 15
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary"
+      ],
+      "gaps": [
+        "conversation_expression",
+        "listening",
+        "reading"
+      ]
+    },
+    {
+      "lessonId": "A21-L08",
+      "lesson": 8,
+      "curriculumUnitId": "A21-S08",
+      "sourceChunkCount": 157,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 0,
+        "VOCABULARY": 53,
+        "EXPRESSION": 0,
+        "GRAMMAR": 16,
+        "DIALOGUE": 6,
+        "READING": 1,
+        "LISTENING": 0,
+        "TASK": 5,
+        "OTHER": 76
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary"
+      ],
+      "gaps": [
+        "conversation_expression",
+        "listening",
+        "reading"
+      ]
+    },
+    {
+      "lessonId": "A21-L09",
+      "lesson": 9,
+      "curriculumUnitId": "A21-S09",
+      "sourceChunkCount": 121,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 0,
+        "VOCABULARY": 31,
+        "EXPRESSION": 0,
+        "GRAMMAR": 11,
+        "DIALOGUE": 6,
+        "READING": 6,
+        "LISTENING": 0,
+        "TASK": 5,
+        "OTHER": 62
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary",
+        "conversation_expression",
+        "listening",
+        "reading"
+      ],
+      "gaps": []
+    },
+    {
+      "lessonId": "A21-L10",
+      "lesson": 10,
+      "curriculumUnitId": "A21-S10",
+      "sourceChunkCount": 116,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 0,
+        "VOCABULARY": 18,
+        "EXPRESSION": 0,
+        "GRAMMAR": 11,
+        "DIALOGUE": 35,
+        "READING": 2,
+        "LISTENING": 0,
+        "TASK": 8,
+        "OTHER": 42
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary",
+        "conversation_expression",
+        "listening"
+      ],
+      "gaps": [
+        "reading"
+      ]
+    },
+    {
+      "lessonId": "A21-L11",
+      "lesson": 11,
+      "curriculumUnitId": "A21-S11",
+      "sourceChunkCount": 91,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 0,
+        "VOCABULARY": 18,
+        "EXPRESSION": 0,
+        "GRAMMAR": 4,
+        "DIALOGUE": 29,
+        "READING": 0,
+        "LISTENING": 0,
+        "TASK": 5,
+        "OTHER": 35
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary",
+        "conversation_expression",
+        "listening"
+      ],
+      "gaps": [
+        "reading"
+      ]
+    },
+    {
+      "lessonId": "A21-L12",
+      "lesson": 12,
+      "curriculumUnitId": "A21-S12",
+      "sourceChunkCount": 115,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 0,
+        "VOCABULARY": 34,
+        "EXPRESSION": 0,
+        "GRAMMAR": 15,
+        "DIALOGUE": 19,
+        "READING": 0,
+        "LISTENING": 0,
+        "TASK": 9,
+        "OTHER": 38
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary",
+        "conversation_expression",
+        "reading"
+      ],
+      "gaps": [
+        "listening"
+      ]
+    },
+    {
+      "lessonId": "A21-L13",
+      "lesson": 13,
+      "curriculumUnitId": "A21-S13",
+      "sourceChunkCount": 94,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 4,
+        "VOCABULARY": 8,
+        "EXPRESSION": 0,
+        "GRAMMAR": 19,
+        "DIALOGUE": 41,
+        "READING": 0,
+        "LISTENING": 0,
+        "TASK": 5,
+        "OTHER": 17
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary"
+      ],
+      "gaps": [
+        "conversation_expression",
+        "listening",
+        "reading"
+      ]
+    },
+    {
+      "lessonId": "A21-L14",
+      "lesson": 14,
+      "curriculumUnitId": "A21-S14",
+      "sourceChunkCount": 147,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 0,
+        "VOCABULARY": 27,
+        "EXPRESSION": 0,
+        "GRAMMAR": 20,
+        "DIALOGUE": 19,
+        "READING": 1,
+        "LISTENING": 2,
+        "TASK": 4,
+        "OTHER": 74
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary"
+      ],
+      "gaps": [
+        "conversation_expression",
+        "listening",
+        "reading"
+      ]
+    },
+    {
+      "lessonId": "A21-L15",
+      "lesson": 15,
+      "curriculumUnitId": "A21-S15",
+      "sourceChunkCount": 100,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 0,
+        "VOCABULARY": 13,
+        "EXPRESSION": 0,
+        "GRAMMAR": 20,
+        "DIALOGUE": 25,
+        "READING": 0,
+        "LISTENING": 0,
+        "TASK": 6,
+        "OTHER": 36
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary",
+        "conversation_expression",
+        "listening"
+      ],
+      "gaps": [
+        "reading"
+      ]
+    },
+    {
+      "lessonId": "A21-L16",
+      "lesson": 16,
+      "curriculumUnitId": "A21-S16",
+      "sourceChunkCount": 90,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 1,
+        "VOCABULARY": 5,
+        "EXPRESSION": 0,
+        "GRAMMAR": 21,
+        "DIALOGUE": 22,
+        "READING": 0,
+        "LISTENING": 0,
+        "TASK": 3,
+        "OTHER": 38
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary",
+        "conversation_expression",
+        "listening",
+        "reading"
+      ],
+      "gaps": []
+    },
+    {
+      "lessonId": "A21-L17",
+      "lesson": 17,
+      "curriculumUnitId": "A21-S17",
+      "sourceChunkCount": 112,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 0,
+        "VOCABULARY": 33,
+        "EXPRESSION": 0,
+        "GRAMMAR": 10,
+        "DIALOGUE": 6,
+        "READING": 1,
+        "LISTENING": 0,
+        "TASK": 4,
+        "OTHER": 58
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary"
+      ],
+      "gaps": [
+        "conversation_expression",
+        "listening",
+        "reading"
+      ]
+    },
+    {
+      "lessonId": "A21-L18",
+      "lesson": 18,
+      "curriculumUnitId": "A21-S18",
+      "sourceChunkCount": 106,
+      "knowledgeUnitCount": 1,
+      "chunkTypeCounts": {
+        "CAN_DO": 1,
+        "VOCABULARY": 17,
+        "EXPRESSION": 0,
+        "GRAMMAR": 15,
+        "DIALOGUE": 30,
+        "READING": 0,
+        "LISTENING": 1,
+        "TASK": 3,
+        "OTHER": 39
+      },
+      "supportedGenerationSections": [
+        "script_vocabulary",
+        "conversation_expression",
+        "listening"
+      ],
+      "gaps": [
+        "reading"
+      ]
+    }
+  ],
+  "report": {
+    "reportVersion": "A21_SOURCE_EVIDENCE_REPORT_V1",
+    "createdAt": "2026-09-11T14:54:47.938824+00:00",
+    "documentsProcessed": 18,
+    "lessonsCovered": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "sourceChunkCount": 1884,
+    "knowledgeUnitCount": 18,
+    "statusCounts": {
+      "SOURCE_VERIFIED": 18
+    },
+    "planningCatalogMappingCounts": {
+      "CONFIRMED_BY_SOURCE": 18
+    },
+    "sectionCoverage": {
+      "script_vocabulary": 18,
+      "conversation_expression": 11,
+      "listening": 9,
+      "reading": 6
+    },
+    "qualityGates": {
+      "sourceLinkagePresent": true,
+      "chunkIdsUnique": true,
+      "lessonIdsMatch": true,
+      "noUnsupportedApproved": true,
+      "planningClaimsExceedSource": []
+    },
+    "finalClassification": "A21_SOURCE_EVIDENCE_READY"
+  }
+}

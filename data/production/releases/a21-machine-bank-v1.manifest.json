@@ -1,0 +1,51 @@
+{
+  "releaseId": "A21_MACHINE_BANK_V1",
+  "releaseVersion": "a21-machine-bank-v1",
+  "createdAt": "2026-09-11T14:49:12.353Z",
+  "questionCount": 334,
+  "counts": {
+    "sections": {
+      "script_vocabulary": 87,
+      "conversation_expression": 80,
+      "listening": 87,
+      "reading": 80
+    },
+    "knowledgeUnits": {
+      "A21-S01": 25,
+      "A21-S02": 28,
+      "A21-S03": 38,
+      "A21-S04": 36,
+      "A21-S05": 5,
+      "A21-S06": 5,
+      "A21-S07": 5,
+      "A21-S08": 5,
+      "A21-S09": 36,
+      "A21-S10": 21,
+      "A21-S11": 21,
+      "A21-S12": 25,
+      "A21-S13": 5,
+      "A21-S14": 4,
+      "A21-S15": 20,
+      "A21-S16": 32,
+      "A21-S17": 4,
+      "A21-S18": 19
+    }
+  },
+  "pilotAnchorCount": 80,
+  "sourceEvidence": {
+    "documents": 18,
+    "sourceChunks": 1884,
+    "knowledgeUnits": 18,
+    "status": "A21_SOURCE_EVIDENCE_READY"
+  },
+  "sourceArtifactHashes": {
+    "pilot": "e42e45c3a3e2e740b7fedb069530fc718504566fbc7b2476b9ad98f7e0ce47ed",
+    "knowledgeUnits": "99dc55943068c26c03a3fb89c58bd1346cb20d4cd4939118a85c478d05ce750e",
+    "evidenceMap": "9632bb9257db4292765270521af184d21cfa78336bf8fe3a39019b7fa08764b4"
+  },
+  "releaseBankHash": "698860254d6a7a50e33aa214b4e908fce4de7cc8a789a9c185dba056ead069d7",
+  "canonicalBankHash": "349f41ddaa753f0a9824d06042943b23fd90fc96d2bc2e0d1d5f792023dcbb89",
+  "pipelineVersion": "A21_MACHINE_BANK_V1_SCALE",
+  "releaseDecision": "A21_RELEASE_CANDIDATE_READY",
+  "approvalMode": "MACHINE"
+}

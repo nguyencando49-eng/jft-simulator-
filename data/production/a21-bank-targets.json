@@ -1,0 +1,69 @@
+{
+  "targetVersion": "A21_BANK_TARGETS_V1",
+  "level": "A2.1",
+  "status": "FACTORY_TARGETS_DEFINED",
+  "examSpecificationEvidence": {
+    "reference": "A1 V1 release/exam assembler uses the current simulator 50-question production form.",
+    "assumption": "A2.1 uses the same simulator composition until a checked-in product spec overrides it.",
+    "humanConfirmationRequired": "Confirm whether A2.1 production exams should keep SV13 / CE12 / Listening13 / Reading12 or use a distinct A2.1 composition."
+  },
+  "examComposition": {
+    "totalQuestions": 50,
+    "sections": {
+      "script_vocabulary": 13,
+      "conversation_expression": 12,
+      "listening": 13,
+      "reading": 12
+    }
+  },
+  "exposurePolicy": {
+    "maximumAverageExposure": 0.2,
+    "preferredSafetyMultiplier": 1.3333333333,
+    "developmentSimulationForms": 100,
+    "releaseGateSimulationForms": 1000
+  },
+  "sectionTargets": {
+    "script_vocabulary": {
+      "questionsPerExam": 13,
+      "minimumPool": 65,
+      "preferredPool": 87
+    },
+    "conversation_expression": {
+      "questionsPerExam": 12,
+      "minimumPool": 60,
+      "preferredPool": 80
+    },
+    "listening": {
+      "questionsPerExam": 13,
+      "minimumPool": 65,
+      "preferredPool": 87
+    },
+    "reading": {
+      "questionsPerExam": 12,
+      "minimumPool": 60,
+      "preferredPool": 80
+    }
+  },
+  "wholeBankTargets": {
+    "minimum": 250,
+    "preferred": 334
+  },
+  "coverageAxes": [
+    "section",
+    "category",
+    "KnowledgeUnit",
+    "Can-do",
+    "taskType",
+    "topic",
+    "templateId",
+    "semanticTarget"
+  ],
+  "releaseGateConditions": [
+    "all accepted items finalDecision=MACHINE_ACCEPTED",
+    "no AUTO_REPAIR_REQUIRED final states",
+    "no HUMAN_GOLD fabrication",
+    "no A1 release artifacts modified",
+    "coverage meets section minimums",
+    "1000-form simulation passes answer-position, duplicate, exposure, replay, scoring, and canonical-mutation gates"
+  ]
+}

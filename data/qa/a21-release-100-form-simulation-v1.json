@@ -1,0 +1,19 @@
+{
+  "forms": 100,
+  "pass": 100,
+  "fail": 0,
+  "totalQuestionInstances": 5000,
+  "answerPositions": {
+    "A": 1300,
+    "B": 1300,
+    "C": 1200,
+    "D": 1200
+  },
+  "scoringMismatches": 0,
+  "duplicateWithinForm": 0,
+  "replayFailures": 0,
+  "canonicalMutations": 0,
+  "maxQuestionExposure": 15,
+  "maxExposureRate": 0.15,
+  "lockedChoiceItems": 53
+}

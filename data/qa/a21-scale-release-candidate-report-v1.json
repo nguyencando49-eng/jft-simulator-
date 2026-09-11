@@ -1,0 +1,136 @@
+{
+  "artifactVersion": "A21_SCALE_RELEASE_CANDIDATE_REPORT_V1",
+  "pipelineVersion": "A21_MACHINE_BANK_V1_SCALE",
+  "finalClassification": "A21_RELEASE_CANDIDATE_READY",
+  "counts": {
+    "total": 334,
+    "sections": {
+      "script_vocabulary": 87,
+      "conversation_expression": 80,
+      "listening": 87,
+      "reading": 80
+    },
+    "pilotAnchors": 80,
+    "targetedRecovery": 254
+  },
+  "coverage": {
+    "lessonCoverage": 18,
+    "kuCoverage": 18,
+    "sourceChunkUtilization": 135,
+    "kuCounts": {
+      "A21-S01": 25,
+      "A21-S02": 28,
+      "A21-S03": 38,
+      "A21-S04": 36,
+      "A21-S05": 5,
+      "A21-S06": 5,
+      "A21-S07": 5,
+      "A21-S08": 5,
+      "A21-S09": 36,
+      "A21-S10": 21,
+      "A21-S11": 21,
+      "A21-S12": 25,
+      "A21-S13": 5,
+      "A21-S14": 4,
+      "A21-S15": 20,
+      "A21-S16": 32,
+      "A21-S17": 4,
+      "A21-S18": 19
+    }
+  },
+  "diversity": {
+    "templateCount": 172,
+    "semanticTargetCount": 334,
+    "answerAmbiguity": 0,
+    "distractorQualityFailures": 0,
+    "templateConcentrationMax": 6
+  },
+  "qa": {
+    "generated": 334,
+    "MACHINE_ACCEPTED": 334,
+    "AUTO_REJECTED": 0,
+    "QA1": {
+      "PASS": 334,
+      "REVIEW": 0,
+      "FAIL": 0
+    },
+    "QA2": {
+      "PASS": 334,
+      "REVIEW": 0,
+      "FAIL": 0
+    },
+    "QA3": {
+      "PASS": 334,
+      "REVIEW": 0,
+      "FAIL": 0
+    },
+    "QA4": {
+      "PASS": 334,
+      "REVIEW": 0,
+      "FAIL": 0
+    },
+    "QA5": {
+      "PASS": 334,
+      "REVIEW": 0,
+      "FAIL": 0
+    },
+    "QA6": {
+      "PASS": 334,
+      "REVIEW": 0,
+      "FAIL": 0
+    },
+    "QA7": {
+      "PASS": 334,
+      "REVIEW": 0,
+      "FAIL": 0
+    }
+  },
+  "adversarialAudit": {
+    "status": "PASS",
+    "defensibleSecondAnswers": 0
+  },
+  "duplicates": {
+    "exact": 0,
+    "near": 0,
+    "semantic": 0
+  },
+  "simulation100": {
+    "forms": 100,
+    "pass": 100,
+    "fail": 0,
+    "totalQuestionInstances": 5000,
+    "answerPositions": {
+      "A": 1300,
+      "B": 1300,
+      "C": 1200,
+      "D": 1200
+    },
+    "scoringMismatches": 0,
+    "duplicateWithinForm": 0,
+    "replayFailures": 0,
+    "canonicalMutations": 0,
+    "maxQuestionExposure": 15,
+    "maxExposureRate": 0.15,
+    "lockedChoiceItems": 53
+  },
+  "simulation1000": {
+    "forms": 1000,
+    "pass": 1000,
+    "fail": 0,
+    "totalQuestionInstances": 50000,
+    "answerPositions": {
+      "A": 13000,
+      "B": 13000,
+      "C": 12000,
+      "D": 12000
+    },
+    "scoringMismatches": 0,
+    "duplicateWithinForm": 0,
+    "replayFailures": 0,
+    "canonicalMutations": 0,
+    "maxQuestionExposure": 150,
+    "maxExposureRate": 0.15,
+    "lockedChoiceItems": 53
+  },
+  "releaseHash": "698860254d6a7a50e33aa214b4e908fce4de7cc8a789a9c185dba056ead069d7"
+}

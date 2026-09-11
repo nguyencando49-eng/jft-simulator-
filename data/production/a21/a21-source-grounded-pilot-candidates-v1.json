@@ -1,0 +1,3775 @@
+{
+  "artifactVersion": "A21_PILOT_CANDIDATES_V1",
+  "batchId": "A21_SOURCE_GROUNDED_PILOT_001",
+  "pipelineVersion": "A21_SOURCE_GROUNDED_PILOT_V1",
+  "candidates": [
+    {
+      "id": "A21-PILOT-SV-001",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:01",
+        "ku:A21-S01",
+        "topic:work",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「仕事」について正しい表現はどれですか。",
+      "choices": [
+        "働いています",
+        "映画を見ます",
+        "薬を飲みます",
+        "電車で行きます"
+      ],
+      "answer": 0,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: talk about work and length of residence.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-01",
+      "sourceChunkIds": [
+        "A21-L01-CH0001",
+        "A21-L01-CH0012",
+        "A21-L01-CH0014"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S01"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L01",
+        "sourceChunkIds": [
+          "A21-L01-CH0001",
+          "A21-L01-CH0012",
+          "A21-L01-CH0014"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "23f25771a60de505cf0c7762e5dc3ea831de061ecf78d3b970e6b61e9e5d3220"
+    },
+    {
+      "id": "A21-PILOT-SV-002",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:02",
+        "ku:A21-S02",
+        "topic:leisure",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「映画」について正しい表現はどれですか。",
+      "choices": [
+        "薬を飲みます",
+        "見るのが好きです",
+        "道を聞きます",
+        "名前を書きます"
+      ],
+      "answer": 1,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: describe hobbies and preferred activities.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-02",
+      "sourceChunkIds": [
+        "A21-L02-CH0001",
+        "A21-L02-CH0008",
+        "A21-L02-CH0012"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S02"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L02",
+        "sourceChunkIds": [
+          "A21-L02-CH0001",
+          "A21-L02-CH0008",
+          "A21-L02-CH0012"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "d2b70bb6e2997427fb3acd8371658b78f7aa1961c776ea901068c0c701ebd139"
+    },
+    {
+      "id": "A21-PILOT-SV-003",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:03",
+        "ku:A21-S03",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「天気の予定」について正しい表現はどれですか。",
+      "choices": [
+        "料理を注文します",
+        "駅で待ちます",
+        "寒くなります",
+        "少し休みます"
+      ],
+      "answer": 2,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: describe seasons and changes in weather.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-03",
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L03",
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "582bbbb221cd6cceb8e80a1980061e1a4b3306df0c5d6b4bc728c3e3f6b3c48c"
+    },
+    {
+      "id": "A21-PILOT-SV-004",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:04",
+        "ku:A21-S04",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「天気の予定」について正しい表現はどれですか。",
+      "choices": [
+        "切符を買います",
+        "名前を書きます",
+        "料理を注文します",
+        "週末、寒くなります"
+      ],
+      "answer": 3,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: exchange comments and predictions about weather.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-04",
+      "sourceChunkIds": [
+        "A21-L04-CH0010",
+        "A21-L04-CH0013",
+        "A21-L04-CH0035"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S04"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L04",
+        "sourceChunkIds": [
+          "A21-L04-CH0010",
+          "A21-L04-CH0013",
+          "A21-L04-CH0035"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "9900253b3614364d626d523096b677fe79371fb7b4c46033098e624094021507"
+    },
+    {
+      "id": "A21-PILOT-SV-005",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:05",
+        "ku:A21-S05",
+        "topic:community",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「町のこと」について正しい表現はどれですか。",
+      "choices": [
+        "朝、便利です",
+        "漢字を読みます",
+        "早く帰ります",
+        "名前を書きます"
+      ],
+      "answer": 0,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: describe a town and recommend places.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-05",
+      "sourceChunkIds": [
+        "A21-L05-CH0001",
+        "A21-L05-CH0004",
+        "A21-L05-CH0009"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S05"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L05",
+        "sourceChunkIds": [
+          "A21-L05-CH0001",
+          "A21-L05-CH0004",
+          "A21-L05-CH0009"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "f79d1025362b9e202f2366492715d706be4cf01a5e0ef34cbbc6df425eb26c3f"
+    },
+    {
+      "id": "A21-PILOT-SV-006",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:06",
+        "ku:A21-S06",
+        "topic:directions",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「郵便局のこと」について正しい表現はどれですか。",
+      "choices": [
+        "薬を飲みます",
+        "昼、右に曲がります",
+        "名前を書きます",
+        "駅で待ちます"
+      ],
+      "answer": 1,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: ask for and give multi-step directions.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-06",
+      "sourceChunkIds": [
+        "A21-L06-CH0001",
+        "A21-L06-CH0004",
+        "A21-L06-CH0005"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S06"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L06",
+        "sourceChunkIds": [
+          "A21-L06-CH0001",
+          "A21-L06-CH0004",
+          "A21-L06-CH0005"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "d27c7ec4f8b2fad8cc63eb62a4c312816ee6db14b3357c4ccddb5399319ed9a3"
+    },
+    {
+      "id": "A21-PILOT-SV-007",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:07",
+        "ku:A21-S07",
+        "topic:appointment",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「待ち合わせの時間」について正しい表現はどれですか。",
+      "choices": [
+        "料理がおいしいです",
+        "漢字を教えます",
+        "待ち合わせについて話します",
+        "雨が降ります"
+      ],
+      "answer": 2,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: arrange a meeting and report a delay.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-07",
+      "sourceChunkIds": [
+        "A21-L07-CH0001",
+        "A21-L07-CH0007",
+        "A21-L07-CH0012"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S07"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L07",
+        "sourceChunkIds": [
+          "A21-L07-CH0001",
+          "A21-L07-CH0007",
+          "A21-L07-CH0012"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "25f3ac203aa85f2a1fb24ab20d357dc614bd0f4d98d7946c7342e4fb611ccf9b"
+    },
+    {
+      "id": "A21-PILOT-SV-008",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:08",
+        "ku:A21-S08",
+        "topic:leisure",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「映画の時間」について正しい表現はどれですか。",
+      "choices": [
+        "薬を飲みます",
+        "道を聞きます",
+        "名前を書きます",
+        "映画について話します"
+      ],
+      "answer": 3,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: talk about past experiences and invitations.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-08",
+      "sourceChunkIds": [
+        "A21-L08-CH0001",
+        "A21-L08-CH0008",
+        "A21-L08-CH0015"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S08"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L08",
+        "sourceChunkIds": [
+          "A21-L08-CH0001",
+          "A21-L08-CH0008",
+          "A21-L08-CH0015"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "0597ff8b8384cf7479cb3ac260774dd56ed0bc56e505d006b9bf3ef8063961ff"
+    },
+    {
+      "id": "A21-PILOT-SV-009",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:09",
+        "ku:A21-S09",
+        "topic:school",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「日本語教室」について正しい表現はどれですか。",
+      "choices": [
+        "日本語教室について話します",
+        "お土産をあげます",
+        "名前を書きます",
+        "駅で待ちます"
+      ],
+      "answer": 0,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: ask politely for language help.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-09",
+      "sourceChunkIds": [
+        "A21-L09-CH0001",
+        "A21-L09-CH0005",
+        "A21-L09-CH0013"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S09"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L09",
+        "sourceChunkIds": [
+          "A21-L09-CH0001",
+          "A21-L09-CH0005",
+          "A21-L09-CH0013"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "09202e3b1d8d34cf0943a60176dc44e56fee72a35223f335dd849438d4fd7ff0"
+    },
+    {
+      "id": "A21-PILOT-SV-010",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:10",
+        "ku:A21-S10",
+        "topic:school",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「日本語教室」について正しい表現はどれですか。",
+      "choices": [
+        "台風が来ます",
+        "受付で確認します",
+        "弁当を食べます",
+        "お土産をあげます"
+      ],
+      "answer": 1,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: ask about joining a class or activity.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-10",
+      "sourceChunkIds": [
+        "A21-L10-CH0001",
+        "A21-L10-CH0004",
+        "A21-L10-CH0005"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S10"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L10",
+        "sourceChunkIds": [
+          "A21-L10-CH0001",
+          "A21-L10-CH0004",
+          "A21-L10-CH0005"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "1cef8cb7fd6426b34dbd0232b27860c18044787b4f27663b1a6dca7838d0e16c"
+    },
+    {
+      "id": "A21-PILOT-SV-011",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:11",
+        "ku:A21-S11",
+        "topic:community",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「町の予定」について正しい表現はどれですか。",
+      "choices": [
+        "漢字を読みます",
+        "早く帰ります",
+        "駅の前で確認します",
+        "名前を書きます"
+      ],
+      "answer": 2,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: coordinate responsibilities for an event.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-11",
+      "sourceChunkIds": [
+        "A21-L11-CH0062",
+        "A21-L11-CH0075"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S11"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L11",
+        "sourceChunkIds": [
+          "A21-L11-CH0062",
+          "A21-L11-CH0075"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "c2f5d76da64332d1926535fc83a9ca81345e574c58bdbd467cc91d2ee74172c3"
+    },
+    {
+      "id": "A21-PILOT-SV-012",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:12",
+        "ku:A21-S12",
+        "topic:food",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「弁当の予定」について正しい表現はどれですか。",
+      "choices": [
+        "授業に参加します",
+        "名前を書きます",
+        "駅で待ちます",
+        "食堂で確認します"
+      ],
+      "answer": 3,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: describe food by appearance and taste.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-12",
+      "sourceChunkIds": [
+        "A21-L12-CH0001",
+        "A21-L12-CH0020",
+        "A21-L12-CH0033"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S12"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L12",
+        "sourceChunkIds": [
+          "A21-L12-CH0001",
+          "A21-L12-CH0020",
+          "A21-L12-CH0033"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "f908e0a0853d78dae9fb06c55b6adc1c70a0d124957ab6feadcbb8edd1c6cf56"
+    },
+    {
+      "id": "A21-PILOT-SV-013",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:13",
+        "ku:A21-S13",
+        "topic:workplace_instructions",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「仕事のこと」について正しい表現はどれですか。",
+      "choices": [
+        "終わりそうです",
+        "映画を見ます",
+        "薬を買います",
+        "町が便利です"
+      ],
+      "answer": 0,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: report progress and expected completion.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-13",
+      "sourceChunkIds": [
+        "A21-L13-CH0001",
+        "A21-L13-CH0055"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S13"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L13",
+        "sourceChunkIds": [
+          "A21-L13-CH0001",
+          "A21-L13-CH0055"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "84a547d7b7d96a787060b1f5cbbfd7166b7b92c45d20628871bbab0d17c4a84e"
+    },
+    {
+      "id": "A21-PILOT-SV-014",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:14",
+        "ku:A21-S14",
+        "topic:work",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「仕事のこと」について正しい表現はどれですか。",
+      "choices": [
+        "薬を飲みます",
+        "働いています",
+        "電車で行きます",
+        "名前を書きます"
+      ],
+      "answer": 1,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: request leave and explain a workplace need.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-14",
+      "sourceChunkIds": [
+        "A21-L14-CH0001",
+        "A21-L14-CH0005",
+        "A21-L14-CH0033"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S14"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L14",
+        "sourceChunkIds": [
+          "A21-L14-CH0001",
+          "A21-L14-CH0005",
+          "A21-L14-CH0033"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "dc260718ed14250e79ad64ef9cc0aa4a2cf6e67f70f660029c8e56ebc1d8f851"
+    },
+    {
+      "id": "A21-PILOT-SV-015",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:15",
+        "ku:A21-S15",
+        "topic:hospital",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「熱の時間」について正しい表現はどれですか。",
+      "choices": [
+        "弁当を持って行きます",
+        "名前を書きます",
+        "のどが痛いです",
+        "駅で待ちます"
+      ],
+      "answer": 2,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: describe symptoms at a clinic or pharmacy.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-15",
+      "sourceChunkIds": [
+        "A21-L15-CH0001",
+        "A21-L15-CH0008",
+        "A21-L15-CH0015"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S15"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L15",
+        "sourceChunkIds": [
+          "A21-L15-CH0001",
+          "A21-L15-CH0008",
+          "A21-L15-CH0015"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "08922ebcfda9a57638f0b4a7ae57b27e9c094bc03d1dec22ef3c40256e471038"
+    },
+    {
+      "id": "A21-PILOT-SV-016",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:16",
+        "ku:A21-S16",
+        "topic:health",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「健康の時間」について正しい表現はどれですか。",
+      "choices": [
+        "台風でしょう",
+        "改札にいます",
+        "切符を買います",
+        "週末、早く寝るようにしています"
+      ],
+      "answer": 3,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: discuss health habits and advice.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-16",
+      "sourceChunkIds": [
+        "A21-L16-CH0001",
+        "A21-L16-CH0008",
+        "A21-L16-CH0014"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S16"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L16",
+        "sourceChunkIds": [
+          "A21-L16-CH0001",
+          "A21-L16-CH0008",
+          "A21-L16-CH0014"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "7574558c5ed2736382a47dedd398472f0553b25e8804249c300d003484216754"
+    },
+    {
+      "id": "A21-PILOT-SV-017",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:17",
+        "ku:A21-S17",
+        "topic:family",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「お土産」について正しい表現はどれですか。",
+      "choices": [
+        "朝、兄にもらいました",
+        "薬を飲みます",
+        "教室に参加します",
+        "名前を書きます"
+      ],
+      "answer": 0,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: explain gifts and who gave or made them.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-17",
+      "sourceChunkIds": [
+        "A21-L17-CH0001",
+        "A21-L17-CH0008",
+        "A21-L17-CH0012"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S17"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L17",
+        "sourceChunkIds": [
+          "A21-L17-CH0001",
+          "A21-L17-CH0008",
+          "A21-L17-CH0012"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "68b6ea0773e45ef36be5084cbf24ee976b48ebe29db74a00502fe4bbbe2f7e9f"
+    },
+    {
+      "id": "A21-PILOT-SV-018",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:18",
+        "ku:A21-S18",
+        "topic:community",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「町」について正しい表現はどれですか。",
+      "choices": [
+        "早く帰ります",
+        "昼、便利です",
+        "名前を書きます",
+        "駅で待ちます"
+      ],
+      "answer": 1,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: plan a gift or farewell event with others.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-18",
+      "sourceChunkIds": [
+        "A21-L18-CH0001",
+        "A21-L18-CH0005",
+        "A21-L18-CH0008"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S18"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L18",
+        "sourceChunkIds": [
+          "A21-L18-CH0001",
+          "A21-L18-CH0005",
+          "A21-L18-CH0008"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "6f0b6932cc60fb87f8b72f81fbaa50a7e6e6a9d49fd2a9dda86b69123801c3cf"
+    },
+    {
+      "id": "A21-PILOT-SV-019",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:01",
+        "ku:A21-S01",
+        "topic:work",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「仕事の予定」について正しい表現はどれですか。",
+      "choices": [
+        "映画を見ます",
+        "薬を飲みます",
+        "仕事について話します",
+        "電車で行きます"
+      ],
+      "answer": 2,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: talk about work and length of residence.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-19",
+      "sourceChunkIds": [
+        "A21-L01-CH0001",
+        "A21-L01-CH0012",
+        "A21-L01-CH0014"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S01"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L01",
+        "sourceChunkIds": [
+          "A21-L01-CH0001",
+          "A21-L01-CH0012",
+          "A21-L01-CH0014"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "138c2aa528296c855efb9794b40dc9674308893cb539b8d015992f4b90c2a5d3"
+    },
+    {
+      "id": "A21-PILOT-SV-020",
+      "section": "script_vocabulary",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:02",
+        "ku:A21-S02",
+        "topic:leisure",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "正しいことばを選んでください。",
+      "prompt": "「映画の予定」について正しい表現はどれですか。",
+      "choices": [
+        "薬を飲みます",
+        "道を聞きます",
+        "名前を書きます",
+        "映画について話します"
+      ],
+      "answer": 3,
+      "explanationVi": "Đáp án diễn đạt đúng mục tiêu: describe hobbies and preferred activities.",
+      "blueprintId": "A21-PILOT-BP-SCRIPTVOCABULARY-20",
+      "sourceChunkIds": [
+        "A21-L02-CH0001",
+        "A21-L02-CH0008",
+        "A21-L02-CH0012"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S02"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L02",
+        "sourceChunkIds": [
+          "A21-L02-CH0001",
+          "A21-L02-CH0008",
+          "A21-L02-CH0012"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "5051c1f3f2f2d6f9dce31869fee21d7f0c4fb2389a4a8473159de5f8083f3691"
+    },
+    {
+      "id": "A21-PILOT-CE-021",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:01",
+        "ku:A21-S01",
+        "topic:work",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: レストランで仕事のことについて話します。どう言いますか。",
+      "choices": [
+        "はい、仕事について話します。",
+        "いいえ、けっこうです。",
+        "名前を書きます",
+        "駅で待ちます"
+      ],
+      "answer": 0,
+      "explanationVi": "文脈に合う返事は「はい、仕事について話します。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-01",
+      "sourceChunkIds": [
+        "A21-L01-CH0001",
+        "A21-L01-CH0012",
+        "A21-L01-CH0014"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S01"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L01",
+        "sourceChunkIds": [
+          "A21-L01-CH0001",
+          "A21-L01-CH0012",
+          "A21-L01-CH0014"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "7b7dbe2d03a24232f5c9064b5b8085900512b3d794c854e2194ab5ea8f12f9bc"
+    },
+    {
+      "id": "A21-PILOT-CE-022",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:02",
+        "ku:A21-S02",
+        "topic:leisure",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 体育館の近くで映画のことについて話します。どう言いますか。",
+      "choices": [
+        "いいえ、会社で働きます。",
+        "はい、体育館で確認します。",
+        "すみません、わかりません。",
+        "いいえ、けっこうです。"
+      ],
+      "answer": 1,
+      "explanationVi": "文脈に合う返事は「はい、体育館で確認します。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-02",
+      "sourceChunkIds": [
+        "A21-L02-CH0001",
+        "A21-L02-CH0008",
+        "A21-L02-CH0012"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S02"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L02",
+        "sourceChunkIds": [
+          "A21-L02-CH0001",
+          "A21-L02-CH0008",
+          "A21-L02-CH0012"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "8da7494018ae71474e24ffd83fd5b173125bd83459a778cc567a5c477a56b8fd"
+    },
+    {
+      "id": "A21-PILOT-CE-023",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:03",
+        "ku:A21-S03",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 町の前で天気の時間について話します。どう言いますか。",
+      "choices": [
+        "すみません、わかりません。",
+        "いいえ、けっこうです。",
+        "はい、町で確認します。",
+        "名前を書きます"
+      ],
+      "answer": 2,
+      "explanationVi": "文脈に合う返事は「はい、町で確認します。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-03",
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L03",
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "06e0576c2605484bc7035908081e74b5e13e547ade39f09fbd484c65e7402715"
+    },
+    {
+      "id": "A21-PILOT-CE-024",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:04",
+        "ku:A21-S04",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 町の中で天気の時間について話します。どう言いますか。",
+      "choices": [
+        "いいえ、けっこうです。",
+        "名前を書きます",
+        "駅で待ちます",
+        "はい、町で確認します。"
+      ],
+      "answer": 3,
+      "explanationVi": "文脈に合う返事は「はい、町で確認します。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-04",
+      "sourceChunkIds": [
+        "A21-L04-CH0010",
+        "A21-L04-CH0013",
+        "A21-L04-CH0035"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S04"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L04",
+        "sourceChunkIds": [
+          "A21-L04-CH0010",
+          "A21-L04-CH0013",
+          "A21-L04-CH0035"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "10a4a07a0af21a9395657a221f2d0233b98e1a6b6b46fc1a011a851cdc194306"
+    },
+    {
+      "id": "A21-PILOT-CE-025",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:09",
+        "ku:A21-S09",
+        "topic:school",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 受付で日本語教室について話します。どう言いますか。",
+      "choices": [
+        "はい、申し込みます。",
+        "いいえ、台風が来ます。",
+        "すみません、わかりません。",
+        "いいえ、けっこうです。"
+      ],
+      "answer": 0,
+      "explanationVi": "文脈に合う返事は「はい、申し込みます。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-05",
+      "sourceChunkIds": [
+        "A21-L09-CH0001",
+        "A21-L09-CH0005",
+        "A21-L09-CH0013"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S09"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L09",
+        "sourceChunkIds": [
+          "A21-L09-CH0001",
+          "A21-L09-CH0005",
+          "A21-L09-CH0013"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "36e639b606fdf3dbe761c0f35e1a53141f65fc496b59500bcf539b68de4b3a59"
+    },
+    {
+      "id": "A21-PILOT-CE-026",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:10",
+        "ku:A21-S10",
+        "topic:school",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 受付の近くで日本語教室について話します。どう言いますか。",
+      "choices": [
+        "すみません、わかりません。",
+        "はい、申し込みます。",
+        "いいえ、けっこうです。",
+        "名前を書きます"
+      ],
+      "answer": 1,
+      "explanationVi": "文脈に合う返事は「はい、申し込みます。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-06",
+      "sourceChunkIds": [
+        "A21-L10-CH0001",
+        "A21-L10-CH0004",
+        "A21-L10-CH0005"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S10"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L10",
+        "sourceChunkIds": [
+          "A21-L10-CH0001",
+          "A21-L10-CH0004",
+          "A21-L10-CH0005"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "c2ce0c07dd352bab6eeaed081391f888a1b0d8190248f568b709e8c0dc5b82b2"
+    },
+    {
+      "id": "A21-PILOT-CE-027",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:11",
+        "ku:A21-S11",
+        "topic:community",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 駅の前の前で町の予定について話します。どう言いますか。",
+      "choices": [
+        "いいえ、けっこうです。",
+        "名前を書きます",
+        "はい、便利です。",
+        "駅で待ちます"
+      ],
+      "answer": 2,
+      "explanationVi": "文脈に合う返事は「はい、便利です。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-07",
+      "sourceChunkIds": [
+        "A21-L11-CH0062",
+        "A21-L11-CH0075"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S11"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L11",
+        "sourceChunkIds": [
+          "A21-L11-CH0062",
+          "A21-L11-CH0075"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "c44dd92236cb04eba696589fcd9ea95bf373bc33d4512ec08afb193fc56f1ac9"
+    },
+    {
+      "id": "A21-PILOT-CE-028",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:12",
+        "ku:A21-S12",
+        "topic:food",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 食堂の中で弁当の予定について話します。どう言いますか。",
+      "choices": [
+        "いいえ、休みを取ります。",
+        "すみません、わかりません。",
+        "いいえ、けっこうです。",
+        "はい、週末、おいしそうです。"
+      ],
+      "answer": 3,
+      "explanationVi": "文脈に合う返事は「はい、週末、おいしそうです。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-08",
+      "sourceChunkIds": [
+        "A21-L12-CH0001",
+        "A21-L12-CH0020",
+        "A21-L12-CH0033"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S12"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L12",
+        "sourceChunkIds": [
+          "A21-L12-CH0001",
+          "A21-L12-CH0020",
+          "A21-L12-CH0033"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "ce707681f52537fd644b01aa936cf52160136e74fb27af9aa8dc7560eb909350"
+    },
+    {
+      "id": "A21-PILOT-CE-029",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:15",
+        "ku:A21-S15",
+        "topic:hospital",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 病院で熱のことについて話します。どう言いますか。",
+      "choices": [
+        "はい、朝、のどが痛いです。",
+        "すみません、わかりません。",
+        "いいえ、けっこうです。",
+        "名前を書きます"
+      ],
+      "answer": 0,
+      "explanationVi": "文脈に合う返事は「はい、朝、のどが痛いです。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-09",
+      "sourceChunkIds": [
+        "A21-L15-CH0001",
+        "A21-L15-CH0008",
+        "A21-L15-CH0015"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S15"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L15",
+        "sourceChunkIds": [
+          "A21-L15-CH0001",
+          "A21-L15-CH0008",
+          "A21-L15-CH0015"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "a33712fb237f4bafc44977ccd1bddd53830621680dc97cca69a97fc690ec45a2"
+    },
+    {
+      "id": "A21-PILOT-CE-030",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:16",
+        "ku:A21-S16",
+        "topic:health",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 家の近くで健康のことについて話します。どう言いますか。",
+      "choices": [
+        "いいえ、けっこうです。",
+        "はい、昼、早く寝るようにしています。",
+        "名前を書きます",
+        "駅で待ちます"
+      ],
+      "answer": 1,
+      "explanationVi": "文脈に合う返事は「はい、昼、早く寝るようにしています。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-10",
+      "sourceChunkIds": [
+        "A21-L16-CH0001",
+        "A21-L16-CH0008",
+        "A21-L16-CH0014"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S16"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L16",
+        "sourceChunkIds": [
+          "A21-L16-CH0001",
+          "A21-L16-CH0008",
+          "A21-L16-CH0014"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "e93ed131f8aeb2c14802faf3d821f87cccc33e2cfcb8259e11058f4e0f9a6791"
+    },
+    {
+      "id": "A21-PILOT-CE-031",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:18",
+        "ku:A21-S18",
+        "topic:community",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 駅の前の前で町の時間について話します。どう言いますか。",
+      "choices": [
+        "いいえ、熱があります。",
+        "すみません、わかりません。",
+        "はい、町について話します。",
+        "いいえ、けっこうです。"
+      ],
+      "answer": 2,
+      "explanationVi": "文脈に合う返事は「はい、町について話します。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-11",
+      "sourceChunkIds": [
+        "A21-L18-CH0001",
+        "A21-L18-CH0005",
+        "A21-L18-CH0008"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S18"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L18",
+        "sourceChunkIds": [
+          "A21-L18-CH0001",
+          "A21-L18-CH0005",
+          "A21-L18-CH0008"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "b7b55ac4b3e1d5b81e4be4a273bd923342d762cb282935bd8fe314052038549d"
+    },
+    {
+      "id": "A21-PILOT-CE-032",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:01",
+        "ku:A21-S01",
+        "topic:work",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: レストランの中で仕事の時間について話します。どう言いますか。",
+      "choices": [
+        "すみません、わかりません。",
+        "いいえ、けっこうです。",
+        "名前を書きます",
+        "はい、仕事について話します。"
+      ],
+      "answer": 3,
+      "explanationVi": "文脈に合う返事は「はい、仕事について話します。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-12",
+      "sourceChunkIds": [
+        "A21-L01-CH0001",
+        "A21-L01-CH0012",
+        "A21-L01-CH0014"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S01"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L01",
+        "sourceChunkIds": [
+          "A21-L01-CH0001",
+          "A21-L01-CH0012",
+          "A21-L01-CH0014"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "c05a2d8737e5dfb108f9ce5c023748bbc30ffb407cc49b18aec8f4486250c246"
+    },
+    {
+      "id": "A21-PILOT-CE-033",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:02",
+        "ku:A21-S02",
+        "topic:leisure",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 体育館で映画について話します。どう言いますか。",
+      "choices": [
+        "はい、映画について話します。",
+        "いいえ、けっこうです。",
+        "名前を書きます",
+        "駅で待ちます"
+      ],
+      "answer": 0,
+      "explanationVi": "文脈に合う返事は「はい、映画について話します。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-13",
+      "sourceChunkIds": [
+        "A21-L02-CH0001",
+        "A21-L02-CH0008",
+        "A21-L02-CH0012"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S02"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L02",
+        "sourceChunkIds": [
+          "A21-L02-CH0001",
+          "A21-L02-CH0008",
+          "A21-L02-CH0012"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "8f60f2aee1322302f99b6b8828ed5238bfe2336f29251aee272acfbf1b1e536d"
+    },
+    {
+      "id": "A21-PILOT-CE-034",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:03",
+        "ku:A21-S03",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 町の近くで天気について話します。どう言いますか。",
+      "choices": [
+        "いいえ、切符を買います。",
+        "はい、町で確認します。",
+        "すみません、わかりません。",
+        "いいえ、けっこうです。"
+      ],
+      "answer": 1,
+      "explanationVi": "文脈に合う返事は「はい、町で確認します。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-14",
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L03",
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "2fad7f9a02f964799f59e767059d5e9ca403c427e6189a1a5189cdb1fd269365"
+    },
+    {
+      "id": "A21-PILOT-CE-035",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:04",
+        "ku:A21-S04",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 町の前で天気の予定について話します。どう言いますか。",
+      "choices": [
+        "すみません、わかりません。",
+        "いいえ、けっこうです。",
+        "はい、町で確認します。",
+        "名前を書きます"
+      ],
+      "answer": 2,
+      "explanationVi": "文脈に合う返事は「はい、町で確認します。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-15",
+      "sourceChunkIds": [
+        "A21-L04-CH0010",
+        "A21-L04-CH0013",
+        "A21-L04-CH0035"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S04"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L04",
+        "sourceChunkIds": [
+          "A21-L04-CH0010",
+          "A21-L04-CH0013",
+          "A21-L04-CH0035"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "1bdd4da1c6ac8fe14139e59d2a68017d5f3a338ed994bb69783cfecc139e3639"
+    },
+    {
+      "id": "A21-PILOT-CE-036",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:09",
+        "ku:A21-S09",
+        "topic:school",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 受付の中で日本語教室の予定について話します。どう言いますか。",
+      "choices": [
+        "いいえ、けっこうです。",
+        "名前を書きます",
+        "駅で待ちます",
+        "はい、受付で確認します。"
+      ],
+      "answer": 3,
+      "explanationVi": "文脈に合う返事は「はい、受付で確認します。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-16",
+      "sourceChunkIds": [
+        "A21-L09-CH0001",
+        "A21-L09-CH0005",
+        "A21-L09-CH0013"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S09"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L09",
+        "sourceChunkIds": [
+          "A21-L09-CH0001",
+          "A21-L09-CH0005",
+          "A21-L09-CH0013"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "ee673707a5c163a5fcb24e4208d8003900112bb206e96eed03395a808bfa69e0"
+    },
+    {
+      "id": "A21-PILOT-CE-037",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:10",
+        "ku:A21-S10",
+        "topic:school",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 受付で日本語教室のことについて話します。どう言いますか。",
+      "choices": [
+        "はい、申し込みます。",
+        "いいえ、台風が来ます。",
+        "すみません、わかりません。",
+        "いいえ、けっこうです。"
+      ],
+      "answer": 0,
+      "explanationVi": "文脈に合う返事は「はい、申し込みます。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-17",
+      "sourceChunkIds": [
+        "A21-L10-CH0001",
+        "A21-L10-CH0004",
+        "A21-L10-CH0005"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S10"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L10",
+        "sourceChunkIds": [
+          "A21-L10-CH0001",
+          "A21-L10-CH0004",
+          "A21-L10-CH0005"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "f11cf19a96f4ed6450779d87716c66306a96830942b328fdb3e8b8a25374d32b"
+    },
+    {
+      "id": "A21-PILOT-CE-038",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:11",
+        "ku:A21-S11",
+        "topic:community",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 駅の前の近くで町のことについて話します。どう言いますか。",
+      "choices": [
+        "すみません、わかりません。",
+        "はい、便利です。",
+        "いいえ、けっこうです。",
+        "名前を書きます"
+      ],
+      "answer": 1,
+      "explanationVi": "文脈に合う返事は「はい、便利です。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-18",
+      "sourceChunkIds": [
+        "A21-L11-CH0062",
+        "A21-L11-CH0075"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S11"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L11",
+        "sourceChunkIds": [
+          "A21-L11-CH0062",
+          "A21-L11-CH0075"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "edb708962eb353adda247bd9de8d252bfb0fe79b049e7a8b8268c9d9b5e494e5"
+    },
+    {
+      "id": "A21-PILOT-CE-039",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:12",
+        "ku:A21-S12",
+        "topic:food",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 食堂の前で弁当の時間について話します。どう言いますか。",
+      "choices": [
+        "いいえ、けっこうです。",
+        "名前を書きます",
+        "はい、おいしそうです。",
+        "駅で待ちます"
+      ],
+      "answer": 2,
+      "explanationVi": "文脈に合う返事は「はい、おいしそうです。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-19",
+      "sourceChunkIds": [
+        "A21-L12-CH0001",
+        "A21-L12-CH0020",
+        "A21-L12-CH0033"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S12"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L12",
+        "sourceChunkIds": [
+          "A21-L12-CH0001",
+          "A21-L12-CH0020",
+          "A21-L12-CH0033"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "a5eae93e3cb4b29962f0a6db2973576f6deb9b3e33e5748547935a676ab8b9d6"
+    },
+    {
+      "id": "A21-PILOT-CE-040",
+      "section": "conversation_expression",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:15",
+        "ku:A21-S15",
+        "topic:hospital",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "会話に合う返事を選んでください。",
+      "prompt": "A: 病院の中で熱の時間について話します。どう言いますか。",
+      "choices": [
+        "いいえ、会議に遅れます。",
+        "すみません、わかりません。",
+        "いいえ、けっこうです。",
+        "はい、週末、のどが痛いです。"
+      ],
+      "answer": 3,
+      "explanationVi": "文脈に合う返事は「はい、週末、のどが痛いです。」だけです。",
+      "blueprintId": "A21-PILOT-BP-CONVERSATIONEXPRESSION-20",
+      "sourceChunkIds": [
+        "A21-L15-CH0001",
+        "A21-L15-CH0008",
+        "A21-L15-CH0015"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S15"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L15",
+        "sourceChunkIds": [
+          "A21-L15-CH0001",
+          "A21-L15-CH0008",
+          "A21-L15-CH0015"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "9a694e65cb2d1ae58c48e1906246d3cb1b50c4245bc6a5d428778b03cf5519eb"
+    },
+    {
+      "id": "A21-PILOT-L-041",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:01",
+        "ku:A21-S01",
+        "topic:work",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「レストランで何をしますか。」B「仕事について、朝、働いています。」質問: Bは何について話していますか。",
+      "choices": [
+        "仕事",
+        "映画を見ます",
+        "薬を飲みます",
+        "名前を書きます"
+      ],
+      "answer": 0,
+      "explanationVi": "スクリプト中でBは「仕事」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-041",
+      "blueprintId": "A21-PILOT-BP-LISTENING-01",
+      "sourceChunkIds": [
+        "A21-L01-CH0001",
+        "A21-L01-CH0012",
+        "A21-L01-CH0014"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S01"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L01",
+        "sourceChunkIds": [
+          "A21-L01-CH0001",
+          "A21-L01-CH0012",
+          "A21-L01-CH0014"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "e53763f84ecfcecbef5e794afc1fd219fe75afb2364d8ada34d79d430b2ef996"
+    },
+    {
+      "id": "A21-PILOT-L-042",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:03",
+        "ku:A21-S03",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「町の近くで何をしますか。」B「天気について、昼、寒くなります。」質問: Bは何について話していますか。",
+      "choices": [
+        "名前を書きます",
+        "天気",
+        "駅で待ちます",
+        "少し休みます"
+      ],
+      "answer": 1,
+      "explanationVi": "スクリプト中でBは「天気」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-042",
+      "blueprintId": "A21-PILOT-BP-LISTENING-02",
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L03",
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "7235dca04299da97ee747047f662ce58052351956e7327cb52b0a5d28afffbc5"
+    },
+    {
+      "id": "A21-PILOT-L-043",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:04",
+        "ku:A21-S04",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「町の前で何をしますか。」B「天気の予定について、天気について話します。」質問: Bは何について話していますか。",
+      "choices": [
+        "町の前",
+        "切符を買います",
+        "天気の予定",
+        "名前を書きます"
+      ],
+      "answer": 2,
+      "explanationVi": "スクリプト中でBは「天気の予定」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-043",
+      "blueprintId": "A21-PILOT-BP-LISTENING-03",
+      "sourceChunkIds": [
+        "A21-L04-CH0010",
+        "A21-L04-CH0013",
+        "A21-L04-CH0035"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S04"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L04",
+        "sourceChunkIds": [
+          "A21-L04-CH0010",
+          "A21-L04-CH0013",
+          "A21-L04-CH0035"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "528fb2e75e7781030eaa8daec0fa9f337105508c660d3654ac34fe555a8727da"
+    },
+    {
+      "id": "A21-PILOT-L-044",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:09",
+        "ku:A21-S09",
+        "topic:school",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「受付の中で何をしますか。」B「日本語教室の予定について、日本語教室について話します。」質問: Bは何について話していますか。",
+      "choices": [
+        "台風が来ます",
+        "弁当を食べます",
+        "名前を書きます",
+        "日本語教室の予定"
+      ],
+      "answer": 3,
+      "explanationVi": "スクリプト中でBは「日本語教室の予定」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-044",
+      "blueprintId": "A21-PILOT-BP-LISTENING-04",
+      "sourceChunkIds": [
+        "A21-L09-CH0001",
+        "A21-L09-CH0005",
+        "A21-L09-CH0013"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S09"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L09",
+        "sourceChunkIds": [
+          "A21-L09-CH0001",
+          "A21-L09-CH0005",
+          "A21-L09-CH0013"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "c2fbd2a60b3bbd4c3716022473b87b386d7ca0c3aad8317b320f73ffccbe2a32"
+    },
+    {
+      "id": "A21-PILOT-L-045",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:10",
+        "ku:A21-S10",
+        "topic:school",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「受付で何をしますか。」B「日本語教室のことについて、日本語教室について話します。」質問: Bは何について話していますか。",
+      "choices": [
+        "日本語教室のこと",
+        "弁当を食べます",
+        "名前を書きます",
+        "駅で待ちます"
+      ],
+      "answer": 0,
+      "explanationVi": "スクリプト中でBは「日本語教室のこと」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-045",
+      "blueprintId": "A21-PILOT-BP-LISTENING-05",
+      "sourceChunkIds": [
+        "A21-L10-CH0001",
+        "A21-L10-CH0004",
+        "A21-L10-CH0005"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S10"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L10",
+        "sourceChunkIds": [
+          "A21-L10-CH0001",
+          "A21-L10-CH0004",
+          "A21-L10-CH0005"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "9f3b39dd1c9891b4be64767b3c66624765506f94f0344f0f547e19c2df41ab15"
+    },
+    {
+      "id": "A21-PILOT-L-046",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:11",
+        "ku:A21-S11",
+        "topic:community",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「駅の前の近くで何をしますか。」B「町のことについて、駅の前で確認します。」質問: Bは何について話していますか。",
+      "choices": [
+        "駅の前の近く",
+        "町のこと",
+        "熱があります",
+        "漢字を読みます"
+      ],
+      "answer": 1,
+      "explanationVi": "スクリプト中でBは「町のこと」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-046",
+      "blueprintId": "A21-PILOT-BP-LISTENING-06",
+      "sourceChunkIds": [
+        "A21-L11-CH0062",
+        "A21-L11-CH0075"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S11"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L11",
+        "sourceChunkIds": [
+          "A21-L11-CH0062",
+          "A21-L11-CH0075"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "30811a9b299a98cb99b3a5bad74dd6f14cf1f0488652a9718d2f092d544c2167"
+    },
+    {
+      "id": "A21-PILOT-L-047",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:15",
+        "ku:A21-S15",
+        "topic:hospital",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「病院の前で何をしますか。」B「熱の時間について、病院で確認します。」質問: Bは何について話していますか。",
+      "choices": [
+        "会議に遅れます",
+        "漢字を読みます",
+        "熱の時間",
+        "名前を書きます"
+      ],
+      "answer": 2,
+      "explanationVi": "スクリプト中でBは「熱の時間」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-047",
+      "blueprintId": "A21-PILOT-BP-LISTENING-07",
+      "sourceChunkIds": [
+        "A21-L15-CH0001",
+        "A21-L15-CH0008",
+        "A21-L15-CH0015"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S15"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L15",
+        "sourceChunkIds": [
+          "A21-L15-CH0001",
+          "A21-L15-CH0008",
+          "A21-L15-CH0015"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "0de6efff16ef820bd412e2cbf076316a850c7226871ee266df921fb3bab4dc9c"
+    },
+    {
+      "id": "A21-PILOT-L-048",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:16",
+        "ku:A21-S16",
+        "topic:health",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「家の中で何をしますか。」B「健康の時間について、家で確認します。」質問: Bは何について話していますか。",
+      "choices": [
+        "改札にいます",
+        "名前を書きます",
+        "駅で待ちます",
+        "健康の時間"
+      ],
+      "answer": 3,
+      "explanationVi": "スクリプト中でBは「健康の時間」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-048",
+      "blueprintId": "A21-PILOT-BP-LISTENING-08",
+      "sourceChunkIds": [
+        "A21-L16-CH0001",
+        "A21-L16-CH0008",
+        "A21-L16-CH0014"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S16"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L16",
+        "sourceChunkIds": [
+          "A21-L16-CH0001",
+          "A21-L16-CH0008",
+          "A21-L16-CH0014"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "041628776439a55374429a6da7e3c4c9129c1f1cf280d4c5454f0d3c3fcd8051"
+    },
+    {
+      "id": "A21-PILOT-L-049",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:18",
+        "ku:A21-S18",
+        "topic:community",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「駅の前で何をしますか。」B「町について、便利です。」質問: Bは何について話していますか。",
+      "choices": [
+        "町",
+        "駅の前",
+        "熱があります",
+        "漢字を読みます"
+      ],
+      "answer": 0,
+      "explanationVi": "スクリプト中でBは「町」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-049",
+      "blueprintId": "A21-PILOT-BP-LISTENING-09",
+      "sourceChunkIds": [
+        "A21-L18-CH0001",
+        "A21-L18-CH0005",
+        "A21-L18-CH0008"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S18"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L18",
+        "sourceChunkIds": [
+          "A21-L18-CH0001",
+          "A21-L18-CH0005",
+          "A21-L18-CH0008"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "9831882c2d8eeecd53f4ce5b527f819a566e1e610d418114b707a5078d94a2f5"
+    },
+    {
+      "id": "A21-PILOT-L-050",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:01",
+        "ku:A21-S01",
+        "topic:work",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「レストランの近くで何をしますか。」B「仕事について、働いています。」質問: Bは何について話していますか。",
+      "choices": [
+        "映画を見ます",
+        "仕事",
+        "薬を飲みます",
+        "名前を書きます"
+      ],
+      "answer": 1,
+      "explanationVi": "スクリプト中でBは「仕事」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-050",
+      "blueprintId": "A21-PILOT-BP-LISTENING-10",
+      "sourceChunkIds": [
+        "A21-L01-CH0001",
+        "A21-L01-CH0012",
+        "A21-L01-CH0014"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S01"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L01",
+        "sourceChunkIds": [
+          "A21-L01-CH0001",
+          "A21-L01-CH0012",
+          "A21-L01-CH0014"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "3fecf23bffa5280d8465e63afab8d9bbe41489c96bce81d2a9ffe3f67a61efca"
+    },
+    {
+      "id": "A21-PILOT-L-051",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:03",
+        "ku:A21-S03",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「町の前で何をしますか。」B「天気の予定について、寒くなります。」質問: Bは何について話していますか。",
+      "choices": [
+        "名前を書きます",
+        "駅で待ちます",
+        "天気の予定",
+        "少し休みます"
+      ],
+      "answer": 2,
+      "explanationVi": "スクリプト中でBは「天気の予定」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-051",
+      "blueprintId": "A21-PILOT-BP-LISTENING-11",
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L03",
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "71399d9f72da1d7502850bed08be602a64fa03bdced7922fdecc95bba1b4b88d"
+    },
+    {
+      "id": "A21-PILOT-L-052",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:04",
+        "ku:A21-S04",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「町の中で何をしますか。」B「天気の予定について、週末、寒くなります。」質問: Bは何について話していますか。",
+      "choices": [
+        "町の中",
+        "切符を買います",
+        "名前を書きます",
+        "天気の予定"
+      ],
+      "answer": 3,
+      "explanationVi": "スクリプト中でBは「天気の予定」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-052",
+      "blueprintId": "A21-PILOT-BP-LISTENING-12",
+      "sourceChunkIds": [
+        "A21-L04-CH0010",
+        "A21-L04-CH0013",
+        "A21-L04-CH0035"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S04"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L04",
+        "sourceChunkIds": [
+          "A21-L04-CH0010",
+          "A21-L04-CH0013",
+          "A21-L04-CH0035"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "7a974e77caa5daa1f58806d96dd224135d1f54c4f35816974e545a9a4bb8fb38"
+    },
+    {
+      "id": "A21-PILOT-L-053",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:09",
+        "ku:A21-S09",
+        "topic:school",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「受付で何をしますか。」B「日本語教室のことについて、朝、申し込みます。」質問: Bは何について話していますか。",
+      "choices": [
+        "日本語教室のこと",
+        "台風が来ます",
+        "弁当を食べます",
+        "名前を書きます"
+      ],
+      "answer": 0,
+      "explanationVi": "スクリプト中でBは「日本語教室のこと」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-053",
+      "blueprintId": "A21-PILOT-BP-LISTENING-13",
+      "sourceChunkIds": [
+        "A21-L09-CH0001",
+        "A21-L09-CH0005",
+        "A21-L09-CH0013"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S09"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L09",
+        "sourceChunkIds": [
+          "A21-L09-CH0001",
+          "A21-L09-CH0005",
+          "A21-L09-CH0013"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "5f955cdb0e85c39bad662bd8d5b487e8cb1327c9283e3027cf18acdcde3bdc7e"
+    },
+    {
+      "id": "A21-PILOT-L-054",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:10",
+        "ku:A21-S10",
+        "topic:school",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「受付の近くで何をしますか。」B「日本語教室のことについて、昼、申し込みます。」質問: Bは何について話していますか。",
+      "choices": [
+        "弁当を食べます",
+        "日本語教室のこと",
+        "名前を書きます",
+        "駅で待ちます"
+      ],
+      "answer": 1,
+      "explanationVi": "スクリプト中でBは「日本語教室のこと」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-054",
+      "blueprintId": "A21-PILOT-BP-LISTENING-14",
+      "sourceChunkIds": [
+        "A21-L10-CH0001",
+        "A21-L10-CH0004",
+        "A21-L10-CH0005"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S10"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L10",
+        "sourceChunkIds": [
+          "A21-L10-CH0001",
+          "A21-L10-CH0004",
+          "A21-L10-CH0005"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "22cd886170679a47f2c03fdd96b1e787c99b9b51ee5b710090107cca8356787d"
+    },
+    {
+      "id": "A21-PILOT-L-055",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:11",
+        "ku:A21-S11",
+        "topic:community",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「駅の前の前で何をしますか。」B「町の時間について、町について話します。」質問: Bは何について話していますか。",
+      "choices": [
+        "駅の前の前",
+        "熱があります",
+        "町の時間",
+        "漢字を読みます"
+      ],
+      "answer": 2,
+      "explanationVi": "スクリプト中でBは「町の時間」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-055",
+      "blueprintId": "A21-PILOT-BP-LISTENING-15",
+      "sourceChunkIds": [
+        "A21-L11-CH0062",
+        "A21-L11-CH0075"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S11"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L11",
+        "sourceChunkIds": [
+          "A21-L11-CH0062",
+          "A21-L11-CH0075"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "ab00e4f3abc0c0474fd42fa6a2bd132a7bb6464faa87b67703c492530caab373"
+    },
+    {
+      "id": "A21-PILOT-L-056",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:15",
+        "ku:A21-S15",
+        "topic:hospital",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「病院の中で何をしますか。」B「熱の時間について、熱について話します。」質問: Bは何について話していますか。",
+      "choices": [
+        "会議に遅れます",
+        "漢字を読みます",
+        "名前を書きます",
+        "熱の時間"
+      ],
+      "answer": 3,
+      "explanationVi": "スクリプト中でBは「熱の時間」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-056",
+      "blueprintId": "A21-PILOT-BP-LISTENING-16",
+      "sourceChunkIds": [
+        "A21-L15-CH0001",
+        "A21-L15-CH0008",
+        "A21-L15-CH0015"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S15"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L15",
+        "sourceChunkIds": [
+          "A21-L15-CH0001",
+          "A21-L15-CH0008",
+          "A21-L15-CH0015"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "c6fe616fb783979376064167b9c72b24ae7798a9c9fe807bc6d314b68e5b643a"
+    },
+    {
+      "id": "A21-PILOT-L-057",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:16",
+        "ku:A21-S16",
+        "topic:health",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「家で何をしますか。」B「健康について、健康について話します。」質問: Bは何について話していますか。",
+      "choices": [
+        "健康",
+        "改札にいます",
+        "名前を書きます",
+        "駅で待ちます"
+      ],
+      "answer": 0,
+      "explanationVi": "スクリプト中でBは「健康」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-057",
+      "blueprintId": "A21-PILOT-BP-LISTENING-17",
+      "sourceChunkIds": [
+        "A21-L16-CH0001",
+        "A21-L16-CH0008",
+        "A21-L16-CH0014"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S16"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L16",
+        "sourceChunkIds": [
+          "A21-L16-CH0001",
+          "A21-L16-CH0008",
+          "A21-L16-CH0014"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "9c7c540c1b1a7c994352842b4f8cb1f9bff9233ce378751aa07d01c82ca1e49d"
+    },
+    {
+      "id": "A21-PILOT-L-058",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:18",
+        "ku:A21-S18",
+        "topic:community",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「駅の前の近くで何をしますか。」B「町について、駅の前で確認します。」質問: Bは何について話していますか。",
+      "choices": [
+        "駅の前の近く",
+        "町",
+        "熱があります",
+        "漢字を読みます"
+      ],
+      "answer": 1,
+      "explanationVi": "スクリプト中でBは「町」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-058",
+      "blueprintId": "A21-PILOT-BP-LISTENING-18",
+      "sourceChunkIds": [
+        "A21-L18-CH0001",
+        "A21-L18-CH0005",
+        "A21-L18-CH0008"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S18"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L18",
+        "sourceChunkIds": [
+          "A21-L18-CH0001",
+          "A21-L18-CH0005",
+          "A21-L18-CH0008"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "e3d55490a40c7455a641d0cebeebfad4b5e614e67c083f4064f800e0818566de"
+    },
+    {
+      "id": "A21-PILOT-L-059",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:01",
+        "ku:A21-S01",
+        "topic:work",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「レストランの前で何をしますか。」B「仕事の予定について、レストランで確認します。」質問: Bは何について話していますか。",
+      "choices": [
+        "映画を見ます",
+        "薬を飲みます",
+        "仕事の予定",
+        "名前を書きます"
+      ],
+      "answer": 2,
+      "explanationVi": "スクリプト中でBは「仕事の予定」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-059",
+      "blueprintId": "A21-PILOT-BP-LISTENING-19",
+      "sourceChunkIds": [
+        "A21-L01-CH0001",
+        "A21-L01-CH0012",
+        "A21-L01-CH0014"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S01"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L01",
+        "sourceChunkIds": [
+          "A21-L01-CH0001",
+          "A21-L01-CH0012",
+          "A21-L01-CH0014"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "61b34364f909c31ae0e6ae4c5d415b0cccf0c3d63297cd62bf55ce9197d6d458"
+    },
+    {
+      "id": "A21-PILOT-L-060",
+      "section": "listening",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:03",
+        "ku:A21-S03",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "audio_choice",
+      "instruction": "音声を聞いて、答えを選んでください。",
+      "prompt": "音声スクリプト: A「町の中で何をしますか。」B「天気の予定について、町で確認します。」質問: Bは何について話していますか。",
+      "choices": [
+        "名前を書きます",
+        "駅で待ちます",
+        "少し休みます",
+        "天気の予定"
+      ],
+      "answer": 3,
+      "explanationVi": "スクリプト中でBは「天気の予定」について話しています。",
+      "audioSrc": "tts://A21_SOURCE_GROUNDED_PILOT_001/A21-PILOT-L-060",
+      "blueprintId": "A21-PILOT-BP-LISTENING-20",
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L03",
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "d98f9cbb87e5b4337d990ed224db2908c1ca368d1a2991eb3744bebdb275fe96"
+    },
+    {
+      "id": "A21-PILOT-R-061",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:02",
+        "ku:A21-S02",
+        "topic:leisure",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 体育館で映画のことについて話します。見るのが好きです。質問: 場所はどこですか。",
+      "choices": [
+        "体育館",
+        "映画のこと",
+        "会社で働きます",
+        "道を聞きます"
+      ],
+      "answer": 0,
+      "explanationVi": "文章の場所は「体育館」です。",
+      "blueprintId": "A21-PILOT-BP-READING-01",
+      "sourceChunkIds": [
+        "A21-L02-CH0001",
+        "A21-L02-CH0008",
+        "A21-L02-CH0012"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S02"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L02",
+        "sourceChunkIds": [
+          "A21-L02-CH0001",
+          "A21-L02-CH0008",
+          "A21-L02-CH0012"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "ef4a5cb91a29d72000ea77d9e247a7a0c05a1fb49ad4394b9c0338b173212502"
+    },
+    {
+      "id": "A21-PILOT-R-062",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:03",
+        "ku:A21-S03",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 町の近くで天気のことについて話します。寒くなります。質問: 場所はどこですか。",
+      "choices": [
+        "切符を買います",
+        "町の近く",
+        "料理を注文します",
+        "名前を書きます"
+      ],
+      "answer": 1,
+      "explanationVi": "文章の場所は「町の近く」です。",
+      "blueprintId": "A21-PILOT-BP-READING-02",
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L03",
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "89c27c7fe32c5f4d3a5eb7a36e6cbefb8991ea5f9babfaa62efdfddfc3097f5d"
+    },
+    {
+      "id": "A21-PILOT-R-063",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:04",
+        "ku:A21-S04",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 町の前で天気の時間について話します。寒くなります。質問: 場所はどこですか。",
+      "choices": [
+        "料理を注文します",
+        "名前を書きます",
+        "町の前",
+        "駅で待ちます"
+      ],
+      "answer": 2,
+      "explanationVi": "文章の場所は「町の前」です。",
+      "blueprintId": "A21-PILOT-BP-READING-03",
+      "sourceChunkIds": [
+        "A21-L04-CH0010",
+        "A21-L04-CH0013",
+        "A21-L04-CH0035"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S04"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L04",
+        "sourceChunkIds": [
+          "A21-L04-CH0010",
+          "A21-L04-CH0013",
+          "A21-L04-CH0035"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "8d313eb08d77e01a37dd0ff58b72c0ca85c6460d10b32090417abd7e853944f2"
+    },
+    {
+      "id": "A21-PILOT-R-064",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:09",
+        "ku:A21-S09",
+        "topic:school",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 受付の中で日本語教室の時間について話します。週末、申し込みます。質問: 場所はどこですか。",
+      "choices": [
+        "日本語教室の時間",
+        "台風が来ます",
+        "お土産をあげます",
+        "受付の中"
+      ],
+      "answer": 3,
+      "explanationVi": "文章の場所は「受付の中」です。",
+      "blueprintId": "A21-PILOT-BP-READING-04",
+      "sourceChunkIds": [
+        "A21-L09-CH0001",
+        "A21-L09-CH0005",
+        "A21-L09-CH0013"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S09"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L09",
+        "sourceChunkIds": [
+          "A21-L09-CH0001",
+          "A21-L09-CH0005",
+          "A21-L09-CH0013"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "f5cf9baaa00bdd1048da43fc7876b8cdd04039a4eaca36967adfaf6272dea1dc"
+    },
+    {
+      "id": "A21-PILOT-R-065",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:12",
+        "ku:A21-S12",
+        "topic:food",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 食堂で弁当について話します。朝、おいしそうです。質問: 場所はどこですか。",
+      "choices": [
+        "食堂",
+        "休みを取ります",
+        "授業に参加します",
+        "名前を書きます"
+      ],
+      "answer": 0,
+      "explanationVi": "文章の場所は「食堂」です。",
+      "blueprintId": "A21-PILOT-BP-READING-05",
+      "sourceChunkIds": [
+        "A21-L12-CH0001",
+        "A21-L12-CH0020",
+        "A21-L12-CH0033"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S12"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L12",
+        "sourceChunkIds": [
+          "A21-L12-CH0001",
+          "A21-L12-CH0020",
+          "A21-L12-CH0033"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "4118875b3764068a47964a2df80f37560d8258c382c4ec174e65b0164d224623"
+    },
+    {
+      "id": "A21-PILOT-R-066",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:16",
+        "ku:A21-S16",
+        "topic:health",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 家の近くで健康について話します。昼、早く寝るようにしています。質問: 場所はどこですか。",
+      "choices": [
+        "切符を買います",
+        "家の近く",
+        "名前を書きます",
+        "駅で待ちます"
+      ],
+      "answer": 1,
+      "explanationVi": "文章の場所は「家の近く」です。",
+      "blueprintId": "A21-PILOT-BP-READING-06",
+      "sourceChunkIds": [
+        "A21-L16-CH0001",
+        "A21-L16-CH0008",
+        "A21-L16-CH0014"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S16"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L16",
+        "sourceChunkIds": [
+          "A21-L16-CH0001",
+          "A21-L16-CH0008",
+          "A21-L16-CH0014"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "8a53600691aa3d1f533d11cf79c08bdcc3b151637450576848dc99de20764ba5"
+    },
+    {
+      "id": "A21-PILOT-R-067",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:02",
+        "ku:A21-S02",
+        "topic:leisure",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 体育館の前で映画の予定について話します。映画について話します。質問: 場所はどこですか。",
+      "choices": [
+        "映画の予定",
+        "会社で働きます",
+        "体育館の前",
+        "道を聞きます"
+      ],
+      "answer": 2,
+      "explanationVi": "文章の場所は「体育館の前」です。",
+      "blueprintId": "A21-PILOT-BP-READING-07",
+      "sourceChunkIds": [
+        "A21-L02-CH0001",
+        "A21-L02-CH0008",
+        "A21-L02-CH0012"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S02"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L02",
+        "sourceChunkIds": [
+          "A21-L02-CH0001",
+          "A21-L02-CH0008",
+          "A21-L02-CH0012"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "808380c9822b5a6c15760ac740bee6b1eb257fcedcff8e79860e048848bec90a"
+    },
+    {
+      "id": "A21-PILOT-R-068",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:03",
+        "ku:A21-S03",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 町の中で天気の予定について話します。天気について話します。質問: 場所はどこですか。",
+      "choices": [
+        "切符を買います",
+        "料理を注文します",
+        "名前を書きます",
+        "町の中"
+      ],
+      "answer": 3,
+      "explanationVi": "文章の場所は「町の中」です。",
+      "blueprintId": "A21-PILOT-BP-READING-08",
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L03",
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "bd8c570df5f85815120d093b92cc870b85132c83ab1fb37f6cdc66b87dc8217e"
+    },
+    {
+      "id": "A21-PILOT-R-069",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:04",
+        "ku:A21-S04",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 町で天気のことについて話します。天気について話します。質問: 場所はどこですか。",
+      "choices": [
+        "町",
+        "料理を注文します",
+        "名前を書きます",
+        "駅で待ちます"
+      ],
+      "answer": 0,
+      "explanationVi": "文章の場所は「町」です。",
+      "blueprintId": "A21-PILOT-BP-READING-09",
+      "sourceChunkIds": [
+        "A21-L04-CH0010",
+        "A21-L04-CH0013",
+        "A21-L04-CH0035"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S04"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L04",
+        "sourceChunkIds": [
+          "A21-L04-CH0010",
+          "A21-L04-CH0013",
+          "A21-L04-CH0035"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "486c7b0528b4f3b7ab7715af4edf99716dfdf2d21aff95b7501a551a1de52869"
+    },
+    {
+      "id": "A21-PILOT-R-070",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:09",
+        "ku:A21-S09",
+        "topic:school",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 受付の近くで日本語教室のことについて話します。受付で確認します。質問: 場所はどこですか。",
+      "choices": [
+        "日本語教室のこと",
+        "受付の近く",
+        "台風が来ます",
+        "お土産をあげます"
+      ],
+      "answer": 1,
+      "explanationVi": "文章の場所は「受付の近く」です。",
+      "blueprintId": "A21-PILOT-BP-READING-10",
+      "sourceChunkIds": [
+        "A21-L09-CH0001",
+        "A21-L09-CH0005",
+        "A21-L09-CH0013"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S09"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L09",
+        "sourceChunkIds": [
+          "A21-L09-CH0001",
+          "A21-L09-CH0005",
+          "A21-L09-CH0013"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "9ccfa6795bd9691d0506a65e5bd446fe388608385cd51fdf4cae67a7cb734e18"
+    },
+    {
+      "id": "A21-PILOT-R-071",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:12",
+        "ku:A21-S12",
+        "topic:food",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 食堂の前で弁当の時間について話します。食堂で確認します。質問: 場所はどこですか。",
+      "choices": [
+        "休みを取ります",
+        "授業に参加します",
+        "食堂の前",
+        "名前を書きます"
+      ],
+      "answer": 2,
+      "explanationVi": "文章の場所は「食堂の前」です。",
+      "blueprintId": "A21-PILOT-BP-READING-11",
+      "sourceChunkIds": [
+        "A21-L12-CH0001",
+        "A21-L12-CH0020",
+        "A21-L12-CH0033"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S12"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L12",
+        "sourceChunkIds": [
+          "A21-L12-CH0001",
+          "A21-L12-CH0020",
+          "A21-L12-CH0033"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "4b7c6268ae214af73979df6dfca090c385e9bb13da26bb9c994b468086008b19"
+    },
+    {
+      "id": "A21-PILOT-R-072",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:16",
+        "ku:A21-S16",
+        "topic:health",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 家の中で健康の時間について話します。家で確認します。質問: 場所はどこですか。",
+      "choices": [
+        "切符を買います",
+        "名前を書きます",
+        "駅で待ちます",
+        "家の中"
+      ],
+      "answer": 3,
+      "explanationVi": "文章の場所は「家の中」です。",
+      "blueprintId": "A21-PILOT-BP-READING-12",
+      "sourceChunkIds": [
+        "A21-L16-CH0001",
+        "A21-L16-CH0008",
+        "A21-L16-CH0014"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S16"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L16",
+        "sourceChunkIds": [
+          "A21-L16-CH0001",
+          "A21-L16-CH0008",
+          "A21-L16-CH0014"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "2784e408f8a1883974ee7a342ddacfe9b715624d9f621f7b2586006c3c61885c"
+    },
+    {
+      "id": "A21-PILOT-R-073",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:02",
+        "ku:A21-S02",
+        "topic:leisure",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 体育館で映画について話します。見るのが好きです。質問: 場所はどこですか。",
+      "choices": [
+        "体育館",
+        "映画",
+        "会社で働きます",
+        "道を聞きます"
+      ],
+      "answer": 0,
+      "explanationVi": "文章の場所は「体育館」です。",
+      "blueprintId": "A21-PILOT-BP-READING-13",
+      "sourceChunkIds": [
+        "A21-L02-CH0001",
+        "A21-L02-CH0008",
+        "A21-L02-CH0012"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S02"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L02",
+        "sourceChunkIds": [
+          "A21-L02-CH0001",
+          "A21-L02-CH0008",
+          "A21-L02-CH0012"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "ce77c80a6fbdf9b76a3c58c2ea650dd31994f2a5e7db84d0cafdea7a9c758489"
+    },
+    {
+      "id": "A21-PILOT-R-074",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:03",
+        "ku:A21-S03",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 町の近くで天気について話します。寒くなります。質問: 場所はどこですか。",
+      "choices": [
+        "切符を買います",
+        "町の近く",
+        "料理を注文します",
+        "名前を書きます"
+      ],
+      "answer": 1,
+      "explanationVi": "文章の場所は「町の近く」です。",
+      "blueprintId": "A21-PILOT-BP-READING-14",
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L03",
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "fb985ec8b74fa8482e5d0c450fbddae14643254fdb5c1e0f96491a7fed47a6bf"
+    },
+    {
+      "id": "A21-PILOT-R-075",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:04",
+        "ku:A21-S04",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 町の前で天気の予定について話します。寒くなります。質問: 場所はどこですか。",
+      "choices": [
+        "料理を注文します",
+        "名前を書きます",
+        "町の前",
+        "駅で待ちます"
+      ],
+      "answer": 2,
+      "explanationVi": "文章の場所は「町の前」です。",
+      "blueprintId": "A21-PILOT-BP-READING-15",
+      "sourceChunkIds": [
+        "A21-L04-CH0010",
+        "A21-L04-CH0013",
+        "A21-L04-CH0035"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S04"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L04",
+        "sourceChunkIds": [
+          "A21-L04-CH0010",
+          "A21-L04-CH0013",
+          "A21-L04-CH0035"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "2d311ad1d4a2b0544b881126b9017a226ad4c99419c652fb6093a43c9c0da748"
+    },
+    {
+      "id": "A21-PILOT-R-076",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:09",
+        "ku:A21-S09",
+        "topic:school",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 受付の中で日本語教室の予定について話します。週末、申し込みます。質問: 場所はどこですか。",
+      "choices": [
+        "日本語教室の予定",
+        "台風が来ます",
+        "お土産をあげます",
+        "受付の中"
+      ],
+      "answer": 3,
+      "explanationVi": "文章の場所は「受付の中」です。",
+      "blueprintId": "A21-PILOT-BP-READING-16",
+      "sourceChunkIds": [
+        "A21-L09-CH0001",
+        "A21-L09-CH0005",
+        "A21-L09-CH0013"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S09"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L09",
+        "sourceChunkIds": [
+          "A21-L09-CH0001",
+          "A21-L09-CH0005",
+          "A21-L09-CH0013"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "b17217e374dd7456be39b3ecfa528b075091204b2413837234e27a6779e1baa7"
+    },
+    {
+      "id": "A21-PILOT-R-077",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:12",
+        "ku:A21-S12",
+        "topic:food",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 食堂で弁当のことについて話します。朝、おいしそうです。質問: 場所はどこですか。",
+      "choices": [
+        "食堂",
+        "休みを取ります",
+        "授業に参加します",
+        "名前を書きます"
+      ],
+      "answer": 0,
+      "explanationVi": "文章の場所は「食堂」です。",
+      "blueprintId": "A21-PILOT-BP-READING-17",
+      "sourceChunkIds": [
+        "A21-L12-CH0001",
+        "A21-L12-CH0020",
+        "A21-L12-CH0033"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S12"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L12",
+        "sourceChunkIds": [
+          "A21-L12-CH0001",
+          "A21-L12-CH0020",
+          "A21-L12-CH0033"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "a280113fbac95242ef8dd0431e2eea0426cc0cc2b44997f490f4c07e54220320"
+    },
+    {
+      "id": "A21-PILOT-R-078",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:16",
+        "ku:A21-S16",
+        "topic:health",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 家の近くで健康のことについて話します。昼、早く寝るようにしています。質問: 場所はどこですか。",
+      "choices": [
+        "切符を買います",
+        "家の近く",
+        "名前を書きます",
+        "駅で待ちます"
+      ],
+      "answer": 1,
+      "explanationVi": "文章の場所は「家の近く」です。",
+      "blueprintId": "A21-PILOT-BP-READING-18",
+      "sourceChunkIds": [
+        "A21-L16-CH0001",
+        "A21-L16-CH0008",
+        "A21-L16-CH0014"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S16"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L16",
+        "sourceChunkIds": [
+          "A21-L16-CH0001",
+          "A21-L16-CH0008",
+          "A21-L16-CH0014"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "731eece9307e01f81c66046e84c1471ee60e630c8aa517988637deb0a6ed6428"
+    },
+    {
+      "id": "A21-PILOT-R-079",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:02",
+        "ku:A21-S02",
+        "topic:leisure",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 体育館の前で映画の時間について話します。映画について話します。質問: 場所はどこですか。",
+      "choices": [
+        "映画の時間",
+        "会社で働きます",
+        "体育館の前",
+        "道を聞きます"
+      ],
+      "answer": 2,
+      "explanationVi": "文章の場所は「体育館の前」です。",
+      "blueprintId": "A21-PILOT-BP-READING-19",
+      "sourceChunkIds": [
+        "A21-L02-CH0001",
+        "A21-L02-CH0008",
+        "A21-L02-CH0012"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S02"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L02",
+        "sourceChunkIds": [
+          "A21-L02-CH0001",
+          "A21-L02-CH0008",
+          "A21-L02-CH0012"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "875a600819b7748617c7f35c91eee0818e606d97a7e5ffb43361703c663cc29c"
+    },
+    {
+      "id": "A21-PILOT-R-080",
+      "section": "reading",
+      "level": "A2.1",
+      "tags": [
+        "level:A2.1",
+        "lesson:03",
+        "ku:A21-S03",
+        "topic:weather",
+        "batch:A21_SOURCE_GROUNDED_PILOT_001"
+      ],
+      "type": "choice",
+      "instruction": "文章を読んで、答えを選んでください。",
+      "prompt": "案内: 町の中で天気の時間について話します。天気について話します。質問: 場所はどこですか。",
+      "choices": [
+        "切符を買います",
+        "料理を注文します",
+        "名前を書きます",
+        "町の中"
+      ],
+      "answer": 3,
+      "explanationVi": "文章の場所は「町の中」です。",
+      "blueprintId": "A21-PILOT-BP-READING-20",
+      "sourceChunkIds": [
+        "A21-L03-CH0001",
+        "A21-L03-CH0004",
+        "A21-L03-CH0007"
+      ],
+      "knowledgeUnitIds": [
+        "A21-S03"
+      ],
+      "generationBatchId": "A21_SOURCE_GROUNDED_PILOT_001",
+      "status": "GENERATED",
+      "approvalMode": "MACHINE",
+      "machineState": "MACHINE_ACCEPTED",
+      "provenance": {
+        "sourceDocumentId": "A21-SOURCE-L03",
+        "sourceChunkIds": [
+          "A21-L03-CH0001",
+          "A21-L03-CH0004",
+          "A21-L03-CH0007"
+        ],
+        "curriculumEvidence": "SOURCE_VERIFIED",
+        "generator": "deterministic-a21-source-grounded-pilot"
+      },
+      "contentHash": "9f0085a8685f7d2498d0498d356a2ebe98ef332990451b567e15903452b93721"
+    }
+  ]
+}

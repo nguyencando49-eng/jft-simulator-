@@ -1,0 +1,24 @@
+{
+  "artifactVersion": "LEVEL_DEFINITION_V1",
+  "level": "A2.1",
+  "curriculumCatalog": "data/production/a21-curriculum-catalog.json",
+  "bankTargets": "data/production/a21-bank-targets.json",
+  "generation": {
+    "initialStates": ["PENDING", "GENERATED"],
+    "forbiddenInitialStates": ["GOLD", "PUBLISHED", "RELEASED", "HUMAN_GOLD"],
+    "requiredEvidence": ["curriculumUnitId", "section", "answerKey", "provenance", "generationBatchId", "machineState"]
+  },
+  "acceptance": {
+    "allowedFinalStates": ["MACHINE_ACCEPTED", "AUTO_REJECTED"],
+    "intermediateStates": ["AUTO_REPAIR_REQUIRED"],
+    "machineEvidenceRequired": true,
+    "autoPublish": false
+  },
+  "releasePaths": {
+    "candidate": "data/production/a21/a21-machine-candidates-rc0.json",
+    "release": "data/production/releases/a21-machine-bank-rc0.json",
+    "manifest": "data/production/releases/a21-machine-bank-rc0.manifest.json",
+    "gate": "data/qa/a21-production-release-gate-rc0.json",
+    "simulation": "data/qa/a21-production-1000-form-stress-rc0.json"
+  }
+}

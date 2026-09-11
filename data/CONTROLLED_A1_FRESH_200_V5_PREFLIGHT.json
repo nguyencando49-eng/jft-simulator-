@@ -1,0 +1,139 @@
+{
+  "artifactVersion": "CONTROLLED_A1_FRESH_200_V5_PREFLIGHT",
+  "itemCount": 200,
+  "sectionCounts": {
+    "script_vocabulary": 50,
+    "conversation_expression": 50,
+    "listening": 50,
+    "reading": 50
+  },
+  "unitCounts": {
+    "A1-N03": 12,
+    "A1-N04": 12,
+    "A1-N05": 12,
+    "A1-N06": 13,
+    "A1-N07": 12,
+    "A1-N08": 12,
+    "A1-N09": 16,
+    "A1-N10": 13,
+    "A1-N11": 12,
+    "A1-N12": 14,
+    "A1-N13": 12,
+    "A1-N14": 12,
+    "A1-N15": 12,
+    "A1-N16": 12,
+    "A1-N17": 12,
+    "A1-N18": 12
+  },
+  "hardIssues": [],
+  "hardIssueCount": 0,
+  "warnings": [
+    {
+      "id": "A1-F500-SC-010",
+      "code": "PROMPT_MATCH_PREVIOUS",
+      "matches": [
+        "A1-F200-SV-049"
+      ]
+    },
+    {
+      "id": "A1-F500-SC-025",
+      "code": "PROMPT_MATCH_PREVIOUS",
+      "matches": [
+        "A1-F200-SV-027"
+      ]
+    },
+    {
+      "id": "A1-F500-SC-031",
+      "code": "PROMPT_MATCH_PREVIOUS",
+      "matches": [
+        "A1-F200-SV-050"
+      ]
+    },
+    {
+      "id": "A1-F500-SC-034",
+      "code": "PROMPT_MATCH_PREVIOUS",
+      "matches": [
+        "A1-F200-SV-035"
+      ]
+    },
+    {
+      "id": "A1-F500-SC-037",
+      "code": "PROMPT_MATCH_PREVIOUS",
+      "matches": [
+        "A1-F200-SV-037"
+      ]
+    },
+    {
+      "id": "A1-F500-SC-040",
+      "code": "PROMPT_MATCH_PREVIOUS",
+      "matches": [
+        "A1-F200-SV-040"
+      ]
+    },
+    {
+      "id": "A1-F500-SC-043",
+      "code": "PROMPT_MATCH_PREVIOUS",
+      "matches": [
+        "A1-F200-SV-043"
+      ]
+    },
+    {
+      "id": "A1-F500-SC-046",
+      "code": "PROMPT_MATCH_PREVIOUS",
+      "matches": [
+        "A1-F200-SV-048"
+      ]
+    },
+    {
+      "id": "A1-F500-LI-029",
+      "code": "PROMPT_MATCH_PREVIOUS",
+      "matches": [
+        "A1-F400-LI-029"
+      ]
+    },
+    {
+      "id": "A1-F500-LI-049",
+      "code": "PROMPT_MATCH_PREVIOUS",
+      "matches": [
+        "A1-F400-LI-049"
+      ]
+    },
+    {
+      "id": "A1-F500-RE-016",
+      "code": "PROMPT_MATCH_PREVIOUS",
+      "matches": [
+        "A1-F400-RE-016"
+      ]
+    },
+    {
+      "id": "A1-F500-RE-019",
+      "code": "PROMPT_MATCH_PREVIOUS",
+      "matches": [
+        "A1-F400-RE-019"
+      ]
+    },
+    {
+      "id": "A1-F500-RE-024",
+      "code": "PROMPT_MATCH_PREVIOUS",
+      "matches": [
+        "A1-F400-RE-024"
+      ]
+    },
+    {
+      "id": "A1-F500-RE-049",
+      "code": "PROMPT_MATCH_PREVIOUS",
+      "matches": [
+        "A1-F400-RE-049"
+      ]
+    },
+    {
+      "code": "PROMPT_REPEAT_V5",
+      "ids": [
+        "A1-F500-RE-034",
+        "A1-F500-RE-048"
+      ]
+    }
+  ],
+  "warningCount": 15,
+  "note": "Deterministic preflight only; not QA1–QA7."
+}

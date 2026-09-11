@@ -1,0 +1,3929 @@
+{
+  "artifactVersion": "CONTROLLED_A1_AUTHORING_QUEUE_V1",
+  "count": 206,
+  "rules": {
+    "directiveIsNotPatch": true,
+    "createFreshCandidate": true,
+    "preserveDerivedFrom": true,
+    "humanReviewStatus": "PENDING",
+    "mustValidateUniqueAnswer": true,
+    "mustCheckCurriculumGrounding": true,
+    "mustCheckAgainstGoldAnchorsForDuplicates": true
+  },
+  "records": [
+    {
+      "id": "A1-CB034-SV-01",
+      "population": "controlled_batch",
+      "batch": 34,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Serialized reading candidates leak the answer.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB034-SV-01-R1",
+        "derivedFrom": "A1-CB034-SV-01",
+        "repairInstruction": "Replace with a fresh A1 past-day kanji-reading item; learner prompt must contain only the target kanji, e.g. 「買い物」のよみかた.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB034-SV-02",
+      "population": "controlled_batch",
+      "batch": 34,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Family-count item is near-duplicate-heavy.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB034-SV-02-R1",
+        "derivedFrom": "A1-CB034-SV-02",
+        "repairInstruction": "Create a fresh family relationship usage item with one uniquely valid answer, e.g. 父と母と妹は私の＿＿です → 家族.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB034-SV-03",
+      "population": "controlled_batch",
+      "batch": 34,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Serialized semantic candidates leak the answer.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB034-SV-03-R1",
+        "derivedFrom": "A1-CB034-SV-03",
+        "repairInstruction": "Replace with a clean 台所 meaning item; target only in prompt, choices describe distinct places/objects.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB034-SV-05",
+      "population": "controlled_batch",
+      "batch": 34,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Serialized reading candidates leak the answer.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB034-SV-05-R1",
+        "derivedFrom": "A1-CB034-SV-05",
+        "repairInstruction": "Replace with a fresh transportation kanji-reading item such as 空港; target only in prompt.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB034-CE-02",
+      "population": "controlled_batch",
+      "batch": 34,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Generic destination question allows multiple reasonable desires.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB034-CE-02-R1",
+        "derivedFrom": "A1-CB034-CE-02",
+        "repairInstruction": "Ground the desired activity explicitly (お湯につかりたい) and make 温泉に入りたい the only valid response.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB034-LI-02",
+      "population": "controlled_batch",
+      "batch": 34,
+      "section": "listening",
+      "decision": "REAUTHOR",
+      "reason": "Audio incorrectly treats 新幹線 as something to see.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB034-LI-02-R1",
+        "derivedFrom": "A1-CB034-LI-02",
+        "repairInstruction": "Rewrite audio to 新幹線に乗って、富士山を見たい and ask what vehicle the speaker wants to ride.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB034-LI-04",
+      "population": "controlled_batch",
+      "batch": 34,
+      "section": "listening",
+      "decision": "REAUTHOR",
+      "reason": "QA7 marks an exact duplicate despite valid content.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB034-LI-04-R1",
+        "derivedFrom": "A1-CB034-LI-04",
+        "repairInstruction": "Create a fresh workplace-location dialogue with a different person/location and one explicit answer.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB035-SV-01",
+      "population": "controlled_batch",
+      "batch": 35,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "All listed workplace locations are possible without evidence.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB035-SV-01-R1",
+        "derivedFrom": "A1-CB035-SV-01",
+        "repairInstruction": "Create a function-grounded location item, e.g. '会社で会議をする部屋はどれですか' → 会議室.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB035-SV-02",
+      "population": "controlled_batch",
+      "batch": 35,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "スポーツ meaning is near-duplicate-heavy.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB035-SV-02-R1",
+        "derivedFrom": "A1-CB035-SV-02",
+        "repairInstruction": "Replace with a fresh leisure vocabulary meaning item, e.g. 映画.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB035-SV-03",
+      "population": "controlled_batch",
+      "batch": 35,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "泊まりたい, 入りたい and 行きたい can all be reasonable with 温泉.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB035-SV-03-R1",
+        "derivedFrom": "A1-CB035-SV-03",
+        "repairInstruction": "Add semantic cue お湯につかりたい so 入りたい is unique.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB035-SV-04",
+      "population": "controlled_batch",
+      "batch": 35,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "休み reading is repeated heavily.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB035-SV-04-R1",
+        "derivedFrom": "A1-CB035-SV-04",
+        "repairInstruction": "Replace with a fresh past-day kanji reading such as 掃除.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB035-SV-05",
+      "population": "controlled_batch",
+      "batch": 35,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "家族/父/母/友達 can all live in Tokyo.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB035-SV-05-R1",
+        "derivedFrom": "A1-CB035-SV-05",
+        "repairInstruction": "Use an explicit relationship cue so 家族 is uniquely valid.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB035-CE-04",
+      "population": "controlled_batch",
+      "batch": 35,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Both Shinkansen and Fuji responses are equally valid.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB035-CE-04-R1",
+        "derivedFrom": "A1-CB035-CE-04",
+        "repairInstruction": "Add an explicit preference/cue or ask a constrained target such as 何に乗りたいですか.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB035-CE-05",
+      "population": "controlled_batch",
+      "batch": 35,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Several order choices are equally valid without stated desired items.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB035-CE-05-R1",
+        "derivedFrom": "A1-CB035-CE-05",
+        "repairInstruction": "State that the learner wants hamburger+coffee, then ask for the corresponding order.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB036-SV-01",
+      "population": "controlled_batch",
+      "batch": 36,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Serialized 電池 candidates leak the answer.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB036-SV-01-R1",
+        "derivedFrom": "A1-CB036-SV-01",
+        "repairInstruction": "Replace with a clean store-location word meaning item such as 売り場.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB036-SV-02",
+      "population": "controlled_batch",
+      "batch": 36,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Fuji desire template is near-duplicate-heavy.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB036-SV-02-R1",
+        "derivedFrom": "A1-CB036-SV-02",
+        "repairInstruction": "Replace with a fresh Japan-experience usage item, e.g. 新幹線に乗りたい.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB036-SV-03",
+      "population": "controlled_batch",
+      "batch": 36,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Serialized 魚 readings leak the answer.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB036-SV-03-R1",
+        "derivedFrom": "A1-CB036-SV-03",
+        "repairInstruction": "Replace with a fresh food kanji-reading item such as 野菜.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB036-SV-04",
+      "population": "controlled_batch",
+      "batch": 36,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "All locations are possible without evidence.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB036-SV-04-R1",
+        "derivedFrom": "A1-CB036-SV-04",
+        "repairInstruction": "Add a meeting cue or use a functional definition so 会議室 is uniquely correct.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB036-SV-05",
+      "population": "controlled_batch",
+      "batch": 36,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Serialized 趣味 candidates leak the answer.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB036-SV-05-R1",
+        "derivedFrom": "A1-CB036-SV-05",
+        "repairInstruction": "Use a clean 趣味 meaning prompt with distinct semantic distractors.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB037-SV-01",
+      "population": "controlled_batch",
+      "batch": 37,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "All four food/drink choices fit the order frame.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB037-SV-01-R1",
+        "derivedFrom": "A1-CB037-SV-01",
+        "repairInstruction": "State a desired item before the cloze so exactly one order is valid.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB037-SV-02",
+      "population": "controlled_batch",
+      "batch": 37,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "昼休み is an exact duplicate.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB037-SV-02-R1",
+        "derivedFrom": "A1-CB037-SV-02",
+        "repairInstruction": "Replace with a fresh schedule kanji reading such as 午後.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB037-SV-04",
+      "population": "controlled_batch",
+      "batch": 37,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "電池 meaning is exact/near duplicate.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB037-SV-04-R1",
+        "derivedFrom": "A1-CB037-SV-04",
+        "repairInstruction": "Replace with a fresh store-location concept such as 何階 or 売り場.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB037-SV-05",
+      "population": "controlled_batch",
+      "batch": 37,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Fuji, Shinkansen, Tokyo Tower and sea can all be seen.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB037-SV-05-R1",
+        "derivedFrom": "A1-CB037-SV-05",
+        "repairInstruction": "Constrain the semantic target, e.g. '山を見たい/特に＿＿' so 富士山 is unique.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB038-SV-01",
+      "population": "controlled_batch",
+      "batch": 38,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Prompt serializes バス and reading candidates; katakana/hiragana alternatives also make the task ill-defined.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB038-SV-01-R1",
+        "derivedFrom": "A1-CB038-SV-01",
+        "repairInstruction": "Replace with a clean transportation kanji-reading item such as 電車.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB038-SV-03",
+      "population": "controlled_batch",
+      "batch": 38,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Prompt serializes 名前 and synonym/readings, leaking the answer.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB038-SV-03-R1",
+        "derivedFrom": "A1-CB038-SV-03",
+        "repairInstruction": "Replace with a clean identity-vocabulary meaning item such as 会社.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB038-SV-04",
+      "population": "controlled_batch",
+      "batch": 38,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "ください/頼みます/買います/注文します can all form plausible hamburger sentences.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB038-SV-04-R1",
+        "derivedFrom": "A1-CB038-SV-04",
+        "repairInstruction": "Use a waiter prompt ご注文は? and contrast one valid request with unrelated verbs.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB038-SV-05",
+      "population": "controlled_batch",
+      "batch": 38,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Prompt serializes 始まります and all reading candidates.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB038-SV-05-R1",
+        "derivedFrom": "A1-CB038-SV-05",
+        "repairInstruction": "Replace with a clean schedule reading such as 終わります.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB038-CE-01",
+      "population": "controlled_batch",
+      "batch": 38,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Task asks whether the person eats fish, but the can-do is food preference.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB038-CE-01-R1",
+        "derivedFrom": "A1-CB038-CE-01",
+        "repairInstruction": "Rewrite to 魚が好きですか and test 好きです.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB038-CE-02",
+      "population": "controlled_batch",
+      "batch": 38,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Sport/movie/manga are all valid preferences; no evidence selects movie.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB038-CE-02-R1",
+        "derivedFrom": "A1-CB038-CE-02",
+        "repairInstruction": "Add an explicit activity cue or constrain the preference target.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB038-CE-03",
+      "population": "controlled_batch",
+      "batch": 38,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "売り場にあります is tautological and gives no actual location.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB038-CE-03-R1",
+        "derivedFrom": "A1-CB038-CE-03",
+        "repairInstruction": "Provide a directory fact and answer with a specific floor/sales area.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB039-SV-01",
+      "population": "controlled_batch",
+      "batch": 39,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "家族/父/母/友達 can all be the person(s) in a photo; no visual or fact selects 家族.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB039-SV-01-R1",
+        "derivedFrom": "A1-CB039-SV-01",
+        "repairInstruction": "Replace with a relationship/function cue that uniquely selects 家族, or provide the referenced visual.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB039-SV-02",
+      "population": "controlled_batch",
+      "batch": 39,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "冷蔵庫 meaning is marked exact duplicate.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB039-SV-02-R1",
+        "derivedFrom": "A1-CB039-SV-02",
+        "repairInstruction": "Replace with a fresh housing vocabulary meaning item such as 部屋 or 台所.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB039-SV-04",
+      "population": "controlled_batch",
+      "batch": 39,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "空港 reading is near-duplicate-heavy.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB039-SV-04-R1",
+        "derivedFrom": "A1-CB039-SV-04",
+        "repairInstruction": "Replace with a fresh transportation kanji reading such as 電車 or 乗り場, within A1 curriculum.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB040-SV-01",
+      "population": "controlled_batch",
+      "batch": 40,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "漫画 meaning is exact duplicate.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB040-SV-01-R1",
+        "derivedFrom": "A1-CB040-SV-01",
+        "repairInstruction": "Replace with a fresh leisure vocabulary meaning item, e.g. 音楽 or 映画.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB040-SV-03",
+      "population": "controlled_batch",
+      "batch": 40,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "休み reading is near-duplicate-heavy.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB040-SV-03-R1",
+        "derivedFrom": "A1-CB040-SV-03",
+        "repairInstruction": "Replace with a fresh past-day kanji reading such as 昨日 or 掃除.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB040-SV-04",
+      "population": "controlled_batch",
+      "batch": 40,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "母/兄/友達/父 can all live in Kyoto; no fact selects 父.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB040-SV-04-R1",
+        "derivedFrom": "A1-CB040-SV-04",
+        "repairInstruction": "Add explicit family information or use a relationship-based item.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB040-SV-05",
+      "population": "controlled_batch",
+      "batch": 40,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "冷蔵庫 meaning is exact duplicate.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB040-SV-05-R1",
+        "derivedFrom": "A1-CB040-SV-05",
+        "repairInstruction": "Replace with a fresh housing word meaning item.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB040-CE-01",
+      "population": "controlled_batch",
+      "batch": 40,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Stem already says いいですね; keyed answer repeats it, and はい、行きます is also a valid acceptance.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB040-CE-01-R1",
+        "derivedFrom": "A1-CB040-CE-01",
+        "repairInstruction": "Constrain task to proposing a time after acceptance, e.g. ask what to say next and make 土曜日の夜はどうですか the unique option.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB040-CE-03",
+      "population": "controlled_batch",
+      "batch": 40,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Fish/whole set/dislike can all be truthful answers to a subjective preference question.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB040-CE-03-R1",
+        "derivedFrom": "A1-CB040-CE-03",
+        "repairInstruction": "Provide a fact about the speaker's preference or ask for a form, not an invented preference.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB040-CE-04",
+      "population": "controlled_batch",
+      "batch": 40,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "All four activities can be valid hobbies; key is arbitrary.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB040-CE-04-R1",
+        "derivedFrom": "A1-CB040-CE-04",
+        "repairInstruction": "Provide the speaker's known hobby or test a grammar form with only one valid completion.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB041-SV-01",
+      "population": "controlled_batch",
+      "batch": 41,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Fuji-climbing template is near-duplicate-heavy.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB041-SV-01-R1",
+        "derivedFrom": "A1-CB041-SV-01",
+        "repairInstruction": "Replace with a fresh Japan-experience usage item with a different target verb/object.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB041-SV-02",
+      "population": "controlled_batch",
+      "batch": 41,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "魚 reading is near-duplicate-heavy.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB041-SV-02-R1",
+        "derivedFrom": "A1-CB041-SV-02",
+        "repairInstruction": "Replace with a fresh food kanji-reading item such as お茶/野菜.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB041-SV-03",
+      "population": "controlled_batch",
+      "batch": 41,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "All workplace locations are possible without evidence.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB041-SV-03-R1",
+        "derivedFrom": "A1-CB041-SV-03",
+        "repairInstruction": "Add an explicit meeting/reception/office cue that forces one location.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB041-SV-04",
+      "population": "controlled_batch",
+      "batch": 41,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "スポーツ meaning is duplicate/near-duplicate.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB041-SV-04-R1",
+        "derivedFrom": "A1-CB041-SV-04",
+        "repairInstruction": "Replace with a fresh leisure vocabulary meaning item.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB041-SV-05",
+      "population": "controlled_batch",
+      "batch": 41,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "温泉 and 寺 can both be entered; sentence alone does not uniquely determine onsen.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB041-SV-05-R1",
+        "derivedFrom": "A1-CB041-SV-05",
+        "repairInstruction": "Add an お湯 cue so 温泉 is the only semantic fit.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB042-SV-01",
+      "population": "controlled_batch",
+      "batch": 42,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "昼休み reading is an exact duplicate.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB042-SV-01-R1",
+        "derivedFrom": "A1-CB042-SV-01",
+        "repairInstruction": "Replace with a fresh schedule kanji-reading item.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB042-SV-03",
+      "population": "controlled_batch",
+      "batch": 42,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "売り場 meaning is duplicate/near-duplicate.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB042-SV-03-R1",
+        "derivedFrom": "A1-CB042-SV-03",
+        "repairInstruction": "Replace with a fresh shopping-location vocabulary meaning item.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB042-SV-04",
+      "population": "controlled_batch",
+      "batch": 42,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Both 電車 and 新幹線 can validly fit 日本で＿＿に乗りたいです.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB042-SV-04-R1",
+        "derivedFrom": "A1-CB042-SV-04",
+        "repairInstruction": "Add an explicit high-speed-train cue or change distractors so only 新幹線 is valid.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB042-SV-05",
+      "population": "controlled_batch",
+      "batch": 42,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "魚 reading is near-duplicate-heavy.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB042-SV-05-R1",
+        "derivedFrom": "A1-CB042-SV-05",
+        "repairInstruction": "Replace with a fresh food kanji-reading item.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB042-CE-01",
+      "population": "controlled_batch",
+      "batch": 42,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "新幹線に乗りたい, 富士山に行きたい and 旅行がしたい are all valid desires.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB042-CE-01-R1",
+        "derivedFrom": "A1-CB042-CE-01",
+        "repairInstruction": "Constrain question to 何に乗りたいですか or provide a known preference.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB043-SV-01",
+      "population": "controlled_batch",
+      "batch": 43,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "お会計をお願いします is valid but near-duplicate-heavy.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB043-SV-01-R1",
+        "derivedFrom": "A1-CB043-SV-01",
+        "repairInstruction": "Replace with a fresh price/quantity usage item, e.g. この商品はいくらですか or 2個ください.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB043-SV-02",
+      "population": "controlled_batch",
+      "batch": 43,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Task says word meaning but なまえ is only the reading, and the item is near-duplicate-heavy.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB043-SV-02-R1",
+        "derivedFrom": "A1-CB043-SV-02",
+        "repairInstruction": "Replace with a true meaning item for a fresh identity word, e.g. 会社 = 仕事をするところ.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB043-SV-03",
+      "population": "controlled_batch",
+      "batch": 43,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Sentence tests an everyday lunch habit, not ordering food at a shop/restaurant.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB043-SV-03-R1",
+        "derivedFrom": "A1-CB043-SV-03",
+        "repairInstruction": "Rewrite as an actual ordering context with a stated desired food.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB043-SV-04",
+      "population": "controlled_batch",
+      "batch": 43,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "昼休み reading is an exact duplicate.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB043-SV-04-R1",
+        "derivedFrom": "A1-CB043-SV-04",
+        "repairInstruction": "Replace with a fresh schedule kanji-reading item.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB043-CE-02",
+      "population": "controlled_batch",
+      "batch": 43,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Both 新幹線に乗りたい and 富士山を見たい are valid answers to 日本で何をしたいですか.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB043-CE-02-R1",
+        "derivedFrom": "A1-CB043-CE-02",
+        "repairInstruction": "Constrain the question to 何に乗りたいですか or 何を見たいですか.",
+        "humanReviewStatus": "PENDING"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_034_043_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB044-SV-01",
+      "population": "controlled_batch",
+      "batch": 44,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "冷蔵庫 meaning item is an exact/near duplicate in the controlled bank.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB044-SV-01-R1",
+        "derivedFrom": "A1-CB044-SV-01",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Replace with a fresh A1-N07 housing vocabulary target; keep one uniquely valid meaning and avoid reusing 冷蔵庫/台所 templates already saturated in the bank."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB044-SV-02",
+      "population": "controlled_batch",
+      "batch": 44,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "ホチキスを___ください permits several context-dependent commands and is also an exact duplicate pattern.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB044-SV-02-R1",
+        "derivedFrom": "A1-CB044-SV-02",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Create a workplace request with an explicit borrowing intention so only 貸してください is defensible; use new distractors from the same grammatical family."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB044-SV-05",
+      "population": "controlled_batch",
+      "batch": 44,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "友達 meaning item is near-duplicate-heavy.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB044-SV-05-R1",
+        "derivedFrom": "A1-CB044-SV-05",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Replace with a fresh A1-N03 identity/social vocabulary item not already repeated in nearby batches."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB044-CE-01",
+      "population": "controlled_batch",
+      "batch": 44,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Stem ends with はい、 while the keyed response starts with はい again; refusal/delay remains pragmatically possible.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB044-CE-01-R1",
+        "derivedFrom": "A1-CB044-CE-01",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Make willingness explicit and remove duplicated はい, e.g. B: はい、今は使っていません。___ → どうぞ。"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB044-CE-02",
+      "population": "controlled_batch",
+      "batch": 44,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "The context mentions scenery and a temple but the key invents a wish to enter an onsen; multiple actions are possible.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB044-CE-02-R1",
+        "derivedFrom": "A1-CB044-CE-02",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Rebuild the dialogue so the desired destination activity is established before the response; then ask for the matching ～たいです expression."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB044-CE-04",
+      "population": "controlled_batch",
+      "batch": 44,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "The stem ends with ハンバーガーと and the keyed option repeats ハンバーガーと, producing a malformed completion.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB044-CE-04-R1",
+        "derivedFrom": "A1-CB044-CE-04",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Use a full-turn response after ご注文は？, or make the blank only the second item plus request expression."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB044-CE-05",
+      "population": "controlled_batch",
+      "batch": 44,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Stem already contains 一緒に and the keyed choice repeats 一緒に.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB044-CE-05-R1",
+        "derivedFrom": "A1-CB044-CE-05",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Change stem to 週末、飲み会があります。___ and keep 一緒に行きませんか as the complete invitation."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB044-LI-02",
+      "population": "controlled_batch",
+      "batch": 44,
+      "section": "listening",
+      "decision": "REAUTHOR",
+      "reason": "Content is clear but the same Tanaka/meeting-room location template is over-represented and QA7 flags high duplicate risk.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB044-LI-02-R1",
+        "derivedFrom": "A1-CB044-LI-02",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Keep A1-N08 but use a different person, location and conversational frame; preserve one explicit location fact."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB045-SV-02",
+      "population": "controlled_batch",
+      "batch": 45,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "休み reading is repeatedly generated and near-duplicate-heavy.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB045-SV-02-R1",
+        "derivedFrom": "A1-CB045-SV-02",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Use a different A1-N17 kanji target such as 買い物 or 掃除 with fresh phonetic distractors."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB045-SV-03",
+      "population": "controlled_batch",
+      "batch": 45,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "The sentence says 家族は四人 but only father, mother and speaker are described; the item is internally inconsistent.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB045-SV-03-R1",
+        "derivedFrom": "A1-CB045-SV-03",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Create a consistent family-count or relationship item; all stated family members must match the declared count."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB045-SV-04",
+      "population": "controlled_batch",
+      "batch": 45,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "台所 meaning pattern is heavily duplicated.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB045-SV-04-R1",
+        "derivedFrom": "A1-CB045-SV-04",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Replace with a fresh housing word and same-level distractors; do not reuse the recurring 台所/冷蔵庫 definition template."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB045-SV-05",
+      "population": "controlled_batch",
+      "batch": 45,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "貸してください, 取ってください and 使ってください can all be plausible depending intended action.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB045-SV-05-R1",
+        "derivedFrom": "A1-CB045-SV-05",
+        "changeType": "REAUTHOR",
+        "repairDirective": "State the borrowing goal explicitly, then test 貸してください against same-form but semantically incompatible distractors."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB045-CE-01",
+      "population": "controlled_batch",
+      "batch": 45,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "会社は旅行会社です？ does not logically lead to the keyed greeting; the explanation describes information absent from the prompt.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB045-CE-01-R1",
+        "derivedFrom": "A1-CB045-CE-01",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Rebuild as a genuine first-meeting introduction exchange with name/country/company facts aligned to the response."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB045-CE-02",
+      "population": "controlled_batch",
+      "batch": 45,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "A request to borrow a stapler can naturally receive wait/refusal responses; availability is not established.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB045-CE-02-R1",
+        "derivedFrom": "A1-CB045-CE-02",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Add a cue such as 今は使っていません / もちろん and then ask for the acceptance response."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB045-CE-03",
+      "population": "controlled_batch",
+      "batch": 45,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "The Japanese is awkward: 温泉に入りたいし、寺の景色を見たい？ and the response relation is unclear.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB045-CE-03-R1",
+        "derivedFrom": "A1-CB045-CE-03",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Rewrite as a natural wish-sharing exchange, e.g. A: 私は温泉に入りたいです。B: 私も___。"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB045-CE-05",
+      "population": "controlled_batch",
+      "batch": 45,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Customer order is incorrectly punctuated as a question.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB045-CE-05-R1",
+        "derivedFrom": "A1-CB045-CE-05",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Change ハンバーガーとコーヒーをお願いします？ to a statement and keep the clerk confirmation."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB045-LI-03",
+      "population": "controlled_batch",
+      "batch": 45,
+      "section": "listening",
+      "decision": "REAUTHOR",
+      "reason": "新幹線に乗って富士山に行きたい is geographically/semantically awkward for the intended experience item.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB045-LI-03-R1",
+        "derivedFrom": "A1-CB045-LI-03",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Use 新幹線に乗って、富士山を見たいです and ask specifically what the speaker wants to ride or see."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB045-LI-05",
+      "population": "controlled_batch",
+      "batch": 45,
+      "section": "listening",
+      "decision": "REAUTHOR",
+      "reason": "Meeting-room location item is another high-similarity repetition.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB045-LI-05-R1",
+        "derivedFrom": "A1-CB045-LI-05",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Use a fresh workplace-location mini-dialogue with a different person/location and one explicit answer fact."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB046-SV-01",
+      "population": "controlled_batch",
+      "batch": 46,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Learner-visible prompt serializes 野菜 together with the answer and distractor readings.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB046-SV-01-R1",
+        "derivedFrom": "A1-CB046-SV-01",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Render only the target kanji in the prompt; keep readings exclusively in choices and use fresh distractors."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB046-SV-02",
+      "population": "controlled_batch",
+      "batch": 46,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "山田さんは今___ cannot be completed by bare 会議室/事務所/受付; にいます is missing and no fact selects a location.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB046-SV-02-R1",
+        "derivedFrom": "A1-CB046-SV-02",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Create a complete sentence with an explicit contextual cue, e.g. 会議をしています。山田さんは今、___にいます。"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB046-SV-03",
+      "population": "controlled_batch",
+      "batch": 46,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "スポーツ→運動 meaning item is near-duplicate-heavy.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB046-SV-03-R1",
+        "derivedFrom": "A1-CB046-SV-03",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Replace with a different A1-N11 leisure word and fresh distractors."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB046-SV-04",
+      "population": "controlled_batch",
+      "batch": 46,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "温泉に行きたい / 泊まりたい / 入りたい are all defensible.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB046-SV-04-R1",
+        "derivedFrom": "A1-CB046-SV-04",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Add a semantic cue such as お湯につかりたい so only 入りたい is valid, or choose a different destination-activity target."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB046-SV-05",
+      "population": "controlled_batch",
+      "batch": 46,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Learner-visible prompt serializes 掃除 with all reading candidates.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB046-SV-05-R1",
+        "derivedFrom": "A1-CB046-SV-05",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Show only 掃除 in the prompt and generate new reading distractors; avoid duplicate target if possible."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB046-CE-01",
+      "population": "controlled_batch",
+      "batch": 46,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "The third-floor location is invented by the keyed answer; no store-directory fact exists.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB046-CE-01-R1",
+        "derivedFrom": "A1-CB046-CE-01",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Add a visible directory fact such as 電池＝3階の電気売り場 before asking for the response."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB046-CE-03",
+      "population": "controlled_batch",
+      "batch": 46,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Stem already contains どうぞ and keyed answer repeats はい、どうぞ.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB046-CE-03-R1",
+        "derivedFrom": "A1-CB046-CE-03",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Remove どうぞ from the stem; use B: ___ with はい、どうぞ as the complete answer."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB046-CE-04",
+      "population": "controlled_batch",
+      "batch": 46,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Stem 温泉に plus choices repeating 温泉に creates malformed completion; 行きたい and 入りたい are both possible.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB046-CE-04-R1",
+        "derivedFrom": "A1-CB046-CE-04",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Use a full-turn question with a cue that selects 入りたい, and make each choice a complete parallel response."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB046-LI-03",
+      "population": "controlled_batch",
+      "batch": 46,
+      "section": "listening",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Audio script contains malformed Japanese 終わりますは6時です.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB046-LI-03-R1",
+        "derivedFrom": "A1-CB046-LI-03",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Replace with 仕事は6時に終わります while preserving the lunch-time question and answer."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB046-RE-02",
+      "population": "controlled_batch",
+      "batch": 46,
+      "section": "reading",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "肉はあまり食べません does not strictly mean 肉が好きではない.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB046-RE-02-R1",
+        "derivedFrom": "A1-CB046-RE-02",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Change prompt to あまり食べないのはどれですか so the evidence directly supports 肉."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB046-RE-04",
+      "population": "controlled_batch",
+      "batch": 46,
+      "section": "reading",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "週末に漫画を読みます and 映画もよく見ます can both support a broad weekend-activity question.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB046-RE-04-R1",
+        "derivedFrom": "A1-CB046-RE-04",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Ask 週末に何を読みますか to make 漫画 uniquely supported."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB047-SV-01",
+      "population": "controlled_batch",
+      "batch": 47,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "行きませんか and 行きましょう are both valid invitation/proposal completions.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB047-SV-01-R1",
+        "derivedFrom": "A1-CB047-SV-01",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Specify the speech act to test, e.g. invite the listener with a question form, then use parallel distractors."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB047-SV-02",
+      "population": "controlled_batch",
+      "batch": 47,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "電池 meaning is an exact/near duplicate.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB047-SV-02-R1",
+        "derivedFrom": "A1-CB047-SV-02",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Replace with a fresh A1-N15 store/location vocabulary item."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB047-SV-03",
+      "population": "controlled_batch",
+      "batch": 47,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "日本で新幹線に乗って、富士山を見て___ has no uniquely determined continuation and is structurally awkward.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB047-SV-03-R1",
+        "derivedFrom": "A1-CB047-SV-03",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Rebuild as a single target collocation, such as 新幹線に___ or 富士山を___, with one valid verb."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB047-SV-04",
+      "population": "controlled_batch",
+      "batch": 47,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "飲み物 reading item is near-duplicate-heavy.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB047-SV-04-R1",
+        "derivedFrom": "A1-CB047-SV-04",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Use another A1-N05 kanji target with fresh phonetic distractors."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB047-SV-05",
+      "population": "controlled_batch",
+      "batch": 47,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Any listed workplace location can fit; no fact selects 受付.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB047-SV-05-R1",
+        "derivedFrom": "A1-CB047-SV-05",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Add an explicit functional/location cue or reauthor as meaning/usage of 受付."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB047-CE-01",
+      "population": "controlled_batch",
+      "batch": 47,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "はい、漫画が一番好きです is stronger than the yes/no question and “一番” is not established.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB047-CE-01-R1",
+        "derivedFrom": "A1-CB047-CE-01",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Ask 漫画が一番好きですか？ or remove 一番 from the response frame."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB047-CE-02",
+      "population": "controlled_batch",
+      "batch": 47,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "電池は売り場にあります is tautological and does not answer where it can be bought; no concrete location fact exists.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB047-CE-02-R1",
+        "derivedFrom": "A1-CB047-CE-02",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Provide a store directory and require a concrete floor/section response."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB047-CE-05",
+      "population": "controlled_batch",
+      "batch": 47,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "買い物, 温泉, 景色 and 寺 are all plausible answers to a generic destination-wish question.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB047-CE-05-R1",
+        "derivedFrom": "A1-CB047-CE-05",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Provide a prior preference/cue that uniquely determines the intended activity."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB048-SV-01",
+      "population": "controlled_batch",
+      "batch": 48,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "名前 meaning item is near-duplicate-heavy.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB048-SV-01-R1",
+        "derivedFrom": "A1-CB048-SV-01",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Replace with a different A1-N03 identity term and clean same-level distractors."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB048-SV-02",
+      "population": "controlled_batch",
+      "batch": 48,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "すみません、___をお願いします accepts メニュー as well as 注文 in natural restaurant Japanese.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB048-SV-02-R1",
+        "derivedFrom": "A1-CB048-SV-02",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Use an explicit ordering context and test a complete ordering phrase, not an under-specified noun slot."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB048-SV-03",
+      "population": "controlled_batch",
+      "batch": 48,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "昼休み reading is an exact duplicate.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB048-SV-03-R1",
+        "derivedFrom": "A1-CB048-SV-03",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Use a fresh A1-N09 schedule kanji target."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB048-SV-05",
+      "population": "controlled_batch",
+      "batch": 48,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "電池 meaning is exact/near duplicate.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB048-SV-05-R1",
+        "derivedFrom": "A1-CB048-SV-05",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Replace with a different A1-N15 word or a non-duplicated usage task."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB048-CE-01",
+      "population": "controlled_batch",
+      "batch": 48,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Coffee and tea are both valid answers to どちらがいいですか without a preference fact.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB048-CE-01-R1",
+        "derivedFrom": "A1-CB048-CE-01",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Establish the speaker preference first, then ask for the matching response."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB048-CE-02",
+      "population": "controlled_batch",
+      "batch": 48,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "映画を見る and スポーツをする are both valid answers to the either/or question.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB048-CE-02-R1",
+        "derivedFrom": "A1-CB048-CE-02",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Add a stated choice/preference or ask the learner to select a grammatically constrained completion."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB048-CE-03",
+      "population": "controlled_batch",
+      "batch": 48,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "The keyed second-floor location is invented by the answer.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB048-CE-03-R1",
+        "derivedFrom": "A1-CB048-CE-03",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Add a visible directory or prior clerk statement that establishes 2階 before the response selection."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB048-CE-04",
+      "population": "controlled_batch",
+      "batch": 48,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Stem 私の名前は plus keyed choice 私の名前はジョンです duplicates the frame.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB048-CE-04-R1",
+        "derivedFrom": "A1-CB048-CE-04",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Change keyed choice to ジョンです or make all choices complete turns without a prefixed stem."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB049-SV-01",
+      "population": "controlled_batch",
+      "batch": 49,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "貸してください and 使ってもいいですか express different but equally plausible intentions with a stapler.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB049-SV-01-R1",
+        "derivedFrom": "A1-CB049-SV-01",
+        "changeType": "REAUTHOR",
+        "repairDirective": "State the borrowing goal explicitly and test one request form."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB049-SV-02",
+      "population": "controlled_batch",
+      "batch": 49,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "空港 reading is near-duplicate-heavy.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB049-SV-02-R1",
+        "derivedFrom": "A1-CB049-SV-02",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Use a fresh A1-N13 transportation kanji target."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB049-SV-04",
+      "population": "controlled_batch",
+      "batch": 49,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "名前 meaning pattern is heavily repeated.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB049-SV-04-R1",
+        "derivedFrom": "A1-CB049-SV-04",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Replace with a fresh A1-N03 identity/social vocabulary target."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB049-SV-05",
+      "population": "controlled_batch",
+      "batch": 49,
+      "section": "script_vocabulary",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "店員さん、ハンバーガーを注文します is understandable but less natural as an order.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB049-SV-05-R1",
+        "derivedFrom": "A1-CB049-SV-05",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Use ご注文は？ / ハンバーガーをお願いします or ハンバーガーを注文したいです."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB049-CE-01",
+      "population": "controlled_batch",
+      "batch": 49,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "After 買い物と掃除をしました, both empathy and follow-up questions are natural; the keyed response is not unique.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB049-CE-01-R1",
+        "derivedFrom": "A1-CB049-CE-01",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Make the required communicative function explicit or use a grammar-focused past-tense completion."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB049-CE-02",
+      "population": "controlled_batch",
+      "batch": 49,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Prompt asks only drink preference but the key additionally talks about fish and vegetables; コーヒー is also a valid direct answer.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB049-CE-02-R1",
+        "derivedFrom": "A1-CB049-CE-02",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Ask one dimension only and provide one grounded preference."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB049-CE-03",
+      "population": "controlled_batch",
+      "batch": 49,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "The stem 私の趣味は is repeated inside the keyed full sentence.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB049-CE-03-R1",
+        "derivedFrom": "A1-CB049-CE-03",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Use a full-turn answer without a prefixed fragment, or make the choices only the complement after 私の趣味は."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB049-CE-04",
+      "population": "controlled_batch",
+      "batch": 49,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "The answer invents the second-floor electronics area; no directory fact is given.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB049-CE-04-R1",
+        "derivedFrom": "A1-CB049-CE-04",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Add a store-directory fact before asking for the floor."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB049-CE-05",
+      "population": "controlled_batch",
+      "batch": 49,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Prompt only asks 会社は？ while the explanation claims name/country/company; the keyed answer oversupplies unrelated information.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB049-CE-05-R1",
+        "derivedFrom": "A1-CB049-CE-05",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Align the prompt and answer contract: either ask all three identity fields or answer only the company."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB049-LI-01",
+      "population": "controlled_batch",
+      "batch": 49,
+      "section": "listening",
+      "decision": "REAUTHOR",
+      "reason": "Reception-location item is semantically valid but repeats the same person/location pattern flagged by QA7.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB049-LI-01-R1",
+        "derivedFrom": "A1-CB049-LI-01",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Use a fresh person and workplace location while preserving an explicit one-answer audio fact."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB050-SV-01",
+      "population": "controlled_batch",
+      "batch": 50,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Learner-visible prompt serializes 休み and all reading candidates.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB050-SV-01-R1",
+        "derivedFrom": "A1-CB050-SV-01",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Show only the target kanji and keep all candidate readings in choices; preferably use a fresh N17 target."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB050-SV-02",
+      "population": "controlled_batch",
+      "batch": 50,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "友達, 家族, 父 and 母 can all naturally live in Tokyo; no fact selects 家族.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB050-SV-02-R1",
+        "derivedFrom": "A1-CB050-SV-02",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Add an explicit relationship/count cue or choose a different family-usage sentence."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB050-SV-03",
+      "population": "controlled_batch",
+      "batch": 50,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Learner-visible prompt serializes 冷蔵庫 and all definition candidates.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB050-SV-03-R1",
+        "derivedFrom": "A1-CB050-SV-03",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Show only 冷蔵庫 in the prompt or replace with a fresh housing target; candidates belong only in choices."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB050-SV-04",
+      "population": "controlled_batch",
+      "batch": 50,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Stem already contains ください while every choice also contains ください, yielding forms like 貸してくださいください.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB050-SV-04-R1",
+        "derivedFrom": "A1-CB050-SV-04",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Fix the template contract: blank should accept a bare て-form, or remove ください from the stem and use complete request choices."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB050-SV-05",
+      "population": "controlled_batch",
+      "batch": 50,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Learner-visible prompt serializes 駅 and all readings.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB050-SV-05-R1",
+        "derivedFrom": "A1-CB050-SV-05",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Show only 駅 or use a fresh transportation kanji; readings must stay in choices."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB050-CE-02",
+      "population": "controlled_batch",
+      "batch": 50,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "お疲れさまでした, すごいですね and いいですね are all plausible reactions; key is not unique.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB050-CE-02-R1",
+        "derivedFrom": "A1-CB050-CE-02",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Specify the intended reaction function or convert to a past-tense grammar completion."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB050-CE-03",
+      "population": "controlled_batch",
+      "batch": 50,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Prompt asks about both food and drink, but the keyed answer gives only food.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB050-CE-03-R1",
+        "derivedFrom": "A1-CB050-CE-03",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Ask only food preference, or make the correct response include one food and one drink while distractors fail one requirement."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB050-CE-05",
+      "population": "controlled_batch",
+      "batch": 50,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Prompt omits the product and any directory fact; explanation assumes a battery item not visible to learner.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB050-CE-05-R1",
+        "derivedFrom": "A1-CB050-CE-05",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Add the product plus a store directory, then ask the exact floor/section."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB050-LI-02",
+      "population": "controlled_batch",
+      "batch": 50,
+      "section": "listening",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Audio lists several true wishes; generic 何をしたい makes multiple listed choices true.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB050-LI-02-R1",
+        "derivedFrom": "A1-CB050-LI-02",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Ask 何を見たいですか for 富士山 or 何に乗りたいですか for 新幹線."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB050-RE-01",
+      "population": "controlled_batch",
+      "batch": 50,
+      "section": "reading",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Stimulus states both 温泉に入りたい and 景色も見たい; generic 何をしたい has two supported actions.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB050-RE-01-R1",
+        "derivedFrom": "A1-CB050-RE-01",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Ask どこに入りたいですか so 温泉 is uniquely supported."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB050-RE-05",
+      "population": "controlled_batch",
+      "batch": 50,
+      "section": "reading",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "The note contains two requests: lend the stapler and do/copy something; generic 何を頼んでいますか is broad.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB050-RE-05-R1",
+        "derivedFrom": "A1-CB050-RE-05",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Ask 何を貸してほしいですか so ホチキス is the single matching request."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB051-SV-01",
+      "population": "controlled_batch",
+      "batch": 51,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Any listed workplace location can fit; no context selects 会議室.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB051-SV-01-R1",
+        "derivedFrom": "A1-CB051-SV-01",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Add an explicit cue such as 会議をしています or reauthor as a location-word meaning item."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB051-SV-02",
+      "population": "controlled_batch",
+      "batch": 51,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "スポーツ→運動 is near-duplicate-heavy.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB051-SV-02-R1",
+        "derivedFrom": "A1-CB051-SV-02",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Use a fresh A1-N11 leisure word/usage item."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB051-SV-03",
+      "population": "controlled_batch",
+      "batch": 51,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "温泉に行きたい, 泊まりたい and 入りたい are all natural.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB051-SV-03-R1",
+        "derivedFrom": "A1-CB051-SV-03",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Add a semantic cue that forces 入りたい or choose a new destination activity."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB051-SV-04",
+      "population": "controlled_batch",
+      "batch": 51,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "掃除 reading is an exact duplicate.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB051-SV-04-R1",
+        "derivedFrom": "A1-CB051-SV-04",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Use a different N17 kanji target with fresh reading distractors."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB051-SV-05",
+      "population": "controlled_batch",
+      "batch": 51,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "住んでいます, 働いています, 行きました and 住んでいません are all grammatically possible without a fact.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB051-SV-05-R1",
+        "derivedFrom": "A1-CB051-SV-05",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Provide a fact or context that uniquely requires residence, or change task type."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB051-CE-01",
+      "population": "controlled_batch",
+      "batch": 51,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Water, coffee and juice are all valid drink choices after ハンバーガーと; no preference fact selects coffee.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB051-CE-01-R1",
+        "derivedFrom": "A1-CB051-CE-01",
+        "changeType": "REAUTHOR",
+        "repairDirective": "State the desired drink before the response, or make the blank target a grammar marker rather than arbitrary content."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB051-CE-02",
+      "population": "controlled_batch",
+      "batch": 51,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "After いいですね, both 何時にしますか and 一緒に行きましょう are natural acceptance continuations.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB051-CE-02-R1",
+        "derivedFrom": "A1-CB051-CE-02",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Add a cue that the speaker is confirming acceptance rather than arranging time, or ask specifically for the acceptance phrase."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB051-CE-03",
+      "population": "controlled_batch",
+      "batch": 51,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "All past-day activities in the choices are plausible answers because no source fact selects one.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB051-CE-03-R1",
+        "derivedFrom": "A1-CB051-CE-03",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Provide an explicit activity cue or convert to a tense-form completion."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB051-CE-04",
+      "population": "controlled_batch",
+      "batch": 51,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "魚と野菜 and 肉だけ are both valid food preferences without a stated preference.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB051-CE-04-R1",
+        "derivedFrom": "A1-CB051-CE-04",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Ground the speaker preference before asking for the response."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB051-CE-05",
+      "population": "controlled_batch",
+      "batch": 51,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Multiple choices are plausible hobbies; no fact selects 漫画と映画.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB051-CE-05-R1",
+        "derivedFrom": "A1-CB051-CE-05",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Provide a stated hobby or make the task grammar-constrained so only one answer is valid."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB051-RE-05",
+      "population": "controlled_batch",
+      "batch": 51,
+      "section": "reading",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Text says both shopping and cleaning; the broad question accepts both, while key lists only shopping.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB051-RE-05-R1",
+        "derivedFrom": "A1-CB051-RE-05",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Ask 最初に何をしましたか; the sentence order makes 買い物 uniquely correct."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB052-SV-01",
+      "population": "controlled_batch",
+      "batch": 52,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Prompt leaks internal serialization: 電池; options=... is learner-visible.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB052-SV-01-R1",
+        "derivedFrom": "A1-CB052-SV-01",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Render only 電池 in the prompt; keep choices separate, preferably replace the overused battery meaning item with a fresh N15 target."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB052-SV-03",
+      "population": "controlled_batch",
+      "batch": 52,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Prompt leaks internal serialization: 魚; readings=... is learner-visible.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB052-SV-03-R1",
+        "derivedFrom": "A1-CB052-SV-03",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Render only the target kanji; keep readings solely in choices and use a less duplicated N05 target if possible."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB052-SV-04",
+      "population": "controlled_batch",
+      "batch": 52,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "受付 and ロビー can both be at a company entrance; the sentence does not uniquely select 受付.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB052-SV-04-R1",
+        "derivedFrom": "A1-CB052-SV-04",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Use a functional cue such as 来客が最初に話すところ or a specific sign/context."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB052-SV-05",
+      "population": "controlled_batch",
+      "batch": 52,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Prompt leaks internal serialization: 漫画; options=... is learner-visible.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB052-SV-05-R1",
+        "derivedFrom": "A1-CB052-SV-05",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Render a clean learner prompt and use a fresh N11 word to reduce repetition."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB052-CE-01",
+      "population": "controlled_batch",
+      "batch": 52,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Yes/no preference question allows yes, no or another travel desire; no prior preference establishes the key.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB052-CE-01-R1",
+        "derivedFrom": "A1-CB052-CE-01",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Ground the speaker desire first or ask a comprehension-style response with one required fact."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB052-CE-02",
+      "population": "controlled_batch",
+      "batch": 52,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "After an order, upsell/payment questions can be natural too; the task does not state that the clerk must confirm.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB052-CE-02-R1",
+        "derivedFrom": "A1-CB052-CE-02",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Add instruction/cue 店員は注文を確認します before the response selection."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB052-CE-03",
+      "population": "controlled_batch",
+      "batch": 52,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Acceptance, refusal and a follow-up question are all legitimate responses to an invitation.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB052-CE-03-R1",
+        "derivedFrom": "A1-CB052-CE-03",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Add availability/acceptance intent before the blank, or test the invitation phrase itself rather than an unconstrained response."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB052-CE-04",
+      "population": "controlled_batch",
+      "batch": 52,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Past affirmative and past negative responses are both grammatically possible; no fact selects shopping+cleaning.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB052-CE-04-R1",
+        "derivedFrom": "A1-CB052-CE-04",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Provide an activity fact or convert to a pure past-tense form choice."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB052-CE-05",
+      "population": "controlled_batch",
+      "batch": 52,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Fish, meat and vegetables are all valid answers to “which do you like best?” without a preference fact.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB052-CE-05-R1",
+        "derivedFrom": "A1-CB052-CE-05",
+        "changeType": "REAUTHOR",
+        "repairDirective": "State the speaker preference first, then ask for the matching reply."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB052-LI-04",
+      "population": "controlled_batch",
+      "batch": 52,
+      "section": "listening",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Speaker roles are missing: いらっしゃいませ and the customer order appear in one voice, weakening listening semantics.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB052-LI-04-R1",
+        "derivedFrom": "A1-CB052-LI-04",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "Add roles: 店員：いらっしゃいませ。客：ハンバーガー一つとコーヒーをください。店員：少々お待ちください。"
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB053-SV-01",
+      "population": "controlled_batch",
+      "batch": 53,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "注文します, 食べます, 買います and お願いします can all form plausible hamburger utterances depending intent; key is under-specified.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB053-SV-01-R1",
+        "derivedFrom": "A1-CB053-SV-01",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Use a clear restaurant-order frame and one request expression, or test a constrained collocation."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB053-SV-02",
+      "population": "controlled_batch",
+      "batch": 53,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "昼休み reading is an exact duplicate.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB053-SV-02-R1",
+        "derivedFrom": "A1-CB053-SV-02",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Use a fresh A1-N09 schedule kanji target."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB053-SV-03",
+      "population": "controlled_batch",
+      "batch": 53,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "ぜひ and 一緒に can both naturally modify an invitation, so the blank is not unique.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB053-SV-03-R1",
+        "derivedFrom": "A1-CB053-SV-03",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Rebuild the sentence around a uniquely required invitation expression or test a different N12 target."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB053-SV-04",
+      "population": "controlled_batch",
+      "batch": 53,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "電池 meaning is exact/near duplicate and heavily saturated.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB053-SV-04-R1",
+        "derivedFrom": "A1-CB053-SV-04",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Replace with a fresh A1-N15 store/location word or a non-duplicated usage task."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB053-SV-05",
+      "population": "controlled_batch",
+      "batch": 53,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "The keyed collocation is valid but the identical 新幹線に乗りたい template is heavily repeated and QA7 flags near-duplicate risk.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB053-SV-05-R1",
+        "derivedFrom": "A1-CB053-SV-05",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Keep A1-N18 but create a different Japan-experience vocabulary/usage target and structure."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB053-CE-01",
+      "population": "controlled_batch",
+      "batch": 53,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Context mentions scenery and a famous temple but the keyed answer invents an onsen wish with no grounding.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB053-CE-01-R1",
+        "derivedFrom": "A1-CB053-CE-01",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Add an onsen fact/preference or reauthor the response around the visible temple/scenery information."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB053-CE-04",
+      "population": "controlled_batch",
+      "batch": 53,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Both 一緒に飲み会に行きませんか and 一緒に行きましょう can function as invitations/proposals after the stem.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB053-CE-04-R1",
+        "derivedFrom": "A1-CB053-CE-04",
+        "changeType": "REVISE_PRESENTATION",
+        "repairDirective": "State that the speaker asks whether the friend wants to join, making the ～ませんか question form required."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB053-LI-01",
+      "population": "controlled_batch",
+      "batch": 53,
+      "section": "listening",
+      "decision": "REAUTHOR",
+      "reason": "Speaker-role mismatch: B identifies as Tanaka, but A—not Tanaka—states that father/mother/sister live with them; prompt then asks who lives with Tanaka.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB053-LI-01-R1",
+        "derivedFrom": "A1-CB053-LI-01",
+        "changeType": "REAUTHOR",
+        "repairDirective": "Rewrite roles so Tanaka is the speaker who states 家族は父と母と姉です / 一緒に住んでいます, then ask who lives with Tanaka."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_044_053_REPAIR_200.json"
+    },
+    {
+      "id": "A1-CB054-SV-01",
+      "population": "controlled_batch",
+      "batch": 54,
+      "section": "script_vocabulary",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Near-duplicate dạng kanji reading.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB054-SV-01-R1",
+        "derivedFrom": "A1-CB054-SV-01",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 駅で「乗り換えます」。『乗り換えます』の よみかたは どれですか。 Choices: のりかえます / のりかえみます / のりかわります / じょうかえます. Answer: のりかえます."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB054-SV-03",
+      "population": "controlled_batch",
+      "batch": 54,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "word_meaning nhưng đáp án hiện chỉ là reading くに.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB054-SV-03-R1",
+        "derivedFrom": "A1-CB054-SV-03",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「国」は どんな いみですか。 Choices: 日本やベトナムのようなところ / 会社で仕事をするところ / 人の名前 / 仲のいい人. Answer: 日本やベトナムのようなところ."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB054-SV-05",
+      "population": "controlled_batch",
+      "batch": 54,
+      "section": "script_vocabulary",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Exact/near duplicate 昼休み.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB054-SV-05-R1",
+        "derivedFrom": "A1-CB054-SV-05",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「昼休みは12時からです。」の「昼休み」の よみかたは どれですか。 Choices: ひるやすみ / ひるやすむ / ちゅうやすみ / ひるきゅう. Answer: ひるやすみ."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB054-LI-04",
+      "population": "controlled_batch",
+      "batch": 54,
+      "section": "listening",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "「私の家族は田舎です」 không tự nhiên.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB054-LI-04-R1",
+        "derivedFrom": "A1-CB054-LI-04",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Stimulus: 私の家族は田舎に住んでいます。父は大阪に住んでいます。 Prompt: 誰が大阪に住んでいますか？ Choices: 妹 / 父 / 母 / 兄. Answer: 父."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB055-SV-01",
+      "population": "controlled_batch",
+      "batch": 55,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "家族・父・母・兄 đều có thể ở Tokyo; không có đáp án duy nhất.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB055-SV-01-R1",
+        "derivedFrom": "A1-CB055-SV-01",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 私の＿＿＿は、父と母と兄と私の四人です。 Choices: 家族 / 父 / 母 / 兄. Answer: 家族."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB055-SV-02",
+      "population": "controlled_batch",
+      "batch": 55,
+      "section": "script_vocabulary",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Định nghĩa 冷蔵庫 đúng nhưng lặp nhiều.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB055-SV-02-R1",
+        "derivedFrom": "A1-CB055-SV-02",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「冷蔵庫」の せつめいとして いちばん いいものは どれですか。 Choices: 食べ物を冷やすもの / 電車に乗るところ / 料理をするところ / 寝るところ. Answer: 食べ物を冷やすもの."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB055-SV-03",
+      "population": "controlled_batch",
+      "batch": 55,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "貸してください và 使ってもいいですか đều hợp lý.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB055-SV-03-R1",
+        "derivedFrom": "A1-CB055-SV-03",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 同僚のホチキスを借りたいです。すみません、ホチキスを＿＿＿。 Choices: 貸してください / 買ってください / 直してください / 捨ててください. Answer: 貸してください."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB055-CE-03",
+      "population": "controlled_batch",
+      "batch": 55,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "「私も」 thiếu antecedent.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB055-CE-03-R1",
+        "derivedFrom": "A1-CB055-CE-03",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: A：私は温泉に入りたいです。 B：＿＿＿＿＿＿。 Choices: 私も温泉に入りたいです。 / 私は電車で来ました。 / 今日は仕事です。 / お腹がすきました。 Answer: 私も温泉に入りたいです."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB056-SV-01",
+      "population": "controlled_batch",
+      "batch": 56,
+      "section": "script_vocabulary",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Serialized candidate list bị lộ.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB056-SV-01-R1",
+        "derivedFrom": "A1-CB056-SV-01",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「漫画」は どんな いみですか。 Choices: コミック / 映画 / スポーツ / 小説. Answer: コミック."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB056-SV-03",
+      "population": "controlled_batch",
+      "batch": 56,
+      "section": "script_vocabulary",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Serialized readings bị lộ.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB056-SV-03-R1",
+        "derivedFrom": "A1-CB056-SV-03",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「休み」の よみかたは どれですか。 Choices: きゅうし / ひるやすみ / やすみ / やすむ. Answer: やすみ."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB056-SV-05",
+      "population": "controlled_batch",
+      "batch": 56,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "word_meaning nhưng đáp án へや là reading; serialized data bị lộ.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB056-SV-05-R1",
+        "derivedFrom": "A1-CB056-SV-05",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「部屋」は どんな いみですか。 Choices: 家の中で生活する場所 / 食べ物を冷やすもの / 料理をする場所 / 外を見るためのもの. Answer: 家の中で生活する場所."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB056-CE-01",
+      "population": "controlled_batch",
+      "batch": 56,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Tầng 2 bị bịa, không có grounding.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB056-CE-01-R1",
+        "derivedFrom": "A1-CB056-CE-01",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 案内板に「電池：2階」とあります。客：電池はどこですか？ 店員：＿＿。 Choices: 2階です。 / 1階です。 / 3階です。 / 地下です。 Answer: 2階です."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB057-SV-02",
+      "population": "controlled_batch",
+      "batch": 57,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "魚 đứng riêng có nhiều reading hợp lệ.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB057-SV-02-R1",
+        "derivedFrom": "A1-CB057-SV-02",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「魚を食べます」の「魚」の よみかたは どれですか。 Choices: さか / さかな / うお / ぎょ. Answer: さかな."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB057-SV-03",
+      "population": "controlled_batch",
+      "batch": 57,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Không có fact xác định Tanaka ở địa điểm nào.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB057-SV-03-R1",
+        "derivedFrom": "A1-CB057-SV-03",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 田中さんは会議をしています。田中さんは＿＿＿にいます。 Choices: 受付 / ロビー / 会議室 / 事務所. Answer: 会議室."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB057-SV-04",
+      "population": "controlled_batch",
+      "batch": 57,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "word_meaning nhưng đáp án えいが chỉ là reading.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB057-SV-04-R1",
+        "derivedFrom": "A1-CB057-SV-04",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「映画」は どんな いみですか。 Choices: 映画館などで見るもの / 絵と文字で読むもの / 体を動かすこと / 好きなこと. Answer: 映画館などで見るもの."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB057-SV-05",
+      "population": "controlled_batch",
+      "batch": 57,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "温泉に入る và 寺に入る đều có thể đúng.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB057-SV-05-R1",
+        "derivedFrom": "A1-CB057-SV-05",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 体を温めたいです。京都で＿＿＿に入りたいです。 Choices: 温泉 / 景色 / 寺 / 旅行. Answer: 温泉."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB057-CE-01",
+      "population": "controlled_batch",
+      "batch": 57,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Câu 「私は映画が好きです？」 không tự nhiên.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB057-CE-01-R1",
+        "derivedFrom": "A1-CB057-CE-01",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: A：映画が好きですか？ B：はい、＿＿＿が好きです。 Choices: 仕事 / 映画 / 漫画 / スポーツ. Answer: 映画."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB057-CE-03",
+      "population": "controlled_batch",
+      "batch": 57,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Không có dữ kiện cho biết quốc gia là 中国.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB057-CE-03-R1",
+        "derivedFrom": "A1-CB057-CE-03",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 名札に「王さん・中国」とあります。 A：どこの国から来ましたか？ B：＿＿＿から来ました。 Choices: 日本 / アメリカ / 韓国 / 中国. Answer: 中国."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB058-SV-01",
+      "population": "controlled_batch",
+      "batch": 58,
+      "section": "script_vocabulary",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Serialized readings bị lộ.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB058-SV-01-R1",
+        "derivedFrom": "A1-CB058-SV-01",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「昼休み」の よみかたは どれですか。 Choices: ひるやすみ / ひるやみ / ちゅうやすみ / ひるやす. Answer: ひるやすみ."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB058-SV-03",
+      "population": "controlled_batch",
+      "batch": 58,
+      "section": "script_vocabulary",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Serialized candidates bị lộ.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB058-SV-03-R1",
+        "derivedFrom": "A1-CB058-SV-03",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「電池」は どんな いみですか。 Choices: リモコンなどに入れて使うもの / テレビを操作するもの / 電気をつなぐ場所 / 電気をつけるもの. Answer: リモコンなどに入れて使うもの."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB058-SV-04",
+      "population": "controlled_batch",
+      "batch": 58,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "新幹線・山・富士山 đều có thể 「見る」.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB058-SV-04-R1",
+        "derivedFrom": "A1-CB058-SV-04",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 日本の有名な山、＿＿＿を見たいです。 Choices: 新幹線 / 旅行 / 電車 / 富士山. Answer: 富士山."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB058-SV-05",
+      "population": "controlled_batch",
+      "batch": 58,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Serialized readings + 魚 có nhiều reading.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB058-SV-05-R1",
+        "derivedFrom": "A1-CB058-SV-05",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「野菜」の よみかたは どれですか。 Choices: やさい / やな / のやさい / やさな. Answer: やさい."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB058-CE-01",
+      "population": "controlled_batch",
+      "batch": 58,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Câu hỏi sở thích mở, nhiều câu trả lời hợp lệ.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB058-CE-01-R1",
+        "derivedFrom": "A1-CB058-CE-01",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: A：好きな食べ物と飲み物は何ですか？ B：魚と野菜が好きです。飲み物は＿＿＿が好きです。 Choices: お茶 / 肉 / 魚 / 野菜. Answer: お茶."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB058-CE-02",
+      "population": "controlled_batch",
+      "batch": 58,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Hobby là dữ kiện cá nhân mở.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB058-CE-02-R1",
+        "derivedFrom": "A1-CB058-CE-02",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: あなたの趣味は映画と漫画です。友達に「趣味は何ですか？」と聞かれました。どう答えますか？ Choices: 名前はケンです。 / 昨日は忙しかったです。 / 映画と漫画が趣味です。 / 仕事だけです。 Answer: 映画と漫画が趣味です."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB058-CE-03",
+      "population": "controlled_batch",
+      "batch": 58,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Generator tự bịa tầng 2.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB058-CE-03-R1",
+        "derivedFrom": "A1-CB058-CE-03",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 案内板に「電池売り場：2階」とあります。客：売り場は何階ですか。店員：＿＿。 Choices: 地下です。 / 1階です。 / 3階です。 / 2階です。 Answer: 2階です."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB058-CE-05",
+      "population": "controlled_batch",
+      "batch": 58,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Có nhiều phản hồi hợp lệ nếu không biết đồng nghiệp có cho mượn hay không.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB058-CE-05-R1",
+        "derivedFrom": "A1-CB058-CE-05",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 同僚はホチキスを持っていて、貸すことができます。 A：ホチキスを貸してください。 B：＿＿。 Choices: 持っていません。 / はい、どうぞ。 / 使えません。 / それは私のです。 Answer: はい、どうぞ."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB059-SV-01",
+      "population": "controlled_batch",
+      "batch": 59,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "値段 và 価格 đều đúng trong câu cũ.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB059-SV-01-R1",
+        "derivedFrom": "A1-CB059-SV-01",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: このりんごの＿＿＿は100円です。 Choices: 値段 / 重さ / 色 / 大きさ. Answer: 値段."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB059-SV-02",
+      "population": "controlled_batch",
+      "batch": 59,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "word_meaning nhưng なまえ chỉ là reading.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB059-SV-02-R1",
+        "derivedFrom": "A1-CB059-SV-02",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「名前」は どんな いみですか。 Choices: 人を呼ぶときに使うことば / 仲のいい人 / 仕事をする場所 / 生まれた国. Answer: 人を呼ぶときに使うことば."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB059-SV-03",
+      "population": "controlled_batch",
+      "batch": 59,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Mọi món trong options đều có thể đi với 「〜をお願いします」.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB059-SV-03-R1",
+        "derivedFrom": "A1-CB059-SV-03",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: メニューを見て、ハンバーガーを食べたいです。すみません、＿＿＿をお願いします。 Choices: サラダ / ピザ / ハンバーガー / コーヒー. Answer: ハンバーガー."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB059-SV-05",
+      "population": "controlled_batch",
+      "batch": 59,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "一緒に và 一人で đều tạo câu ngữ pháp.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB059-SV-05-R1",
+        "derivedFrom": "A1-CB059-SV-05",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 友達を誘います。週末に＿＿＿映画を見に行きませんか。 Choices: 一緒に / 一人で / あとで / たぶん. Answer: 一緒に."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB059-CE-01",
+      "population": "controlled_batch",
+      "batch": 59,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Câu hỏi ngày nghỉ mở, nhiều đáp án quá khứ đúng.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB059-CE-01-R1",
+        "derivedFrom": "A1-CB059-CE-01",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 昨日は買い物と掃除をしました。 A：この前の休み、何をしましたか？ B：＿＿。 Choices: 家で休みました。 / 買い物と掃除をしました。 / 買い物をします。 / 掃除をします。 Answer: 買い物と掃除をしました."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB059-CE-02",
+      "population": "controlled_batch",
+      "batch": 59,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Sở thích cá nhân không được grounding.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB059-CE-02-R1",
+        "derivedFrom": "A1-CB059-CE-02",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 私は魚と野菜が好きです。飲み物はお茶が好きです。 A：好きな食べ物と飲み物は？ B：＿＿。 Choices: 水だけです。 / 野菜は食べません。 / 魚と野菜が好きです。飲み物はお茶が好きです。 / 肉と魚が嫌いです。 Answer: 魚と野菜が好きです。飲み物はお茶が好きです."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB059-CE-03",
+      "population": "controlled_batch",
+      "batch": 59,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Nhiều hobby có thể đúng; generator tự chọn profile.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB059-CE-03-R1",
+        "derivedFrom": "A1-CB059-CE-03",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 私の趣味は映画と漫画です。週末はスポーツもします。 A：趣味は何ですか？ B：＿＿。 Choices: 仕事です。 / 毎日勉強です。 / 料理が趣味です。 / 映画と漫画が趣味です。スポーツもします。 Answer: 映画と漫画が趣味です。スポーツもします."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB059-CE-04",
+      "population": "controlled_batch",
+      "batch": 59,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Không có dữ kiện xác định tầng 3.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB059-CE-04-R1",
+        "derivedFrom": "A1-CB059-CE-04",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 案内板に「電池：3階の家電売り場」とあります。客：何階ですか？ 店員：＿＿。 Choices: 3階の家電売り場です。 / 1階です。 / 地下です。 / 5階の服売り場です。 Answer: 3階の家電売り場です."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB059-LI-01",
+      "population": "controlled_batch",
+      "batch": 59,
+      "section": "listening",
+      "decision": "REAUTHOR",
+      "reason": "Script nói cả 温泉 và 景色; prompt generic tạo nhiều đáp án đúng.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB059-LI-01-R1",
+        "derivedFrom": "A1-CB059-LI-01",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Giữ stimulus. Đổi prompt thành: Bは何に入りたいと言っていますか？ Choices: 寺 / 海 / 温泉 / 景色. Answer: 温泉."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB060-SV-01",
+      "population": "controlled_batch",
+      "batch": 60,
+      "section": "script_vocabulary",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Exact/near duplicate 冷蔵庫.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB060-SV-01-R1",
+        "derivedFrom": "A1-CB060-SV-01",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「冷蔵庫」の せつめいとして ただしいものは どれですか。 Giữ 4 choices hiện tại. Answer: 食べ物を冷やすもの."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB060-SV-02",
+      "population": "controlled_batch",
+      "batch": 60,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "使って・貸して・買って・持って đều là yêu cầu có thể có.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB060-SV-02-R1",
+        "derivedFrom": "A1-CB060-SV-02",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 同僚のホチキスを借りたいです。ホチキスを＿＿＿ください。 Choices: 捨てて / 貸して / 買って / 直して. Answer: 貸して."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB060-SV-03",
+      "population": "controlled_batch",
+      "batch": 60,
+      "section": "script_vocabulary",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Serialized candidates bị lộ.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB060-SV-03-R1",
+        "derivedFrom": "A1-CB060-SV-03",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「駅」の よみかたは どれですか。 Choices: いち / みせ / えき / まち. Answer: えき."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB060-SV-04",
+      "population": "controlled_batch",
+      "batch": 60,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Sau mua hàng, 会計 và 袋 đều có thể được yêu cầu.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB060-SV-04-R1",
+        "derivedFrom": "A1-CB060-SV-04",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: レジでお金を払います。＿＿＿をお願いします。 Choices: 値段 / 袋 / 注文 / 会計. Answer: 会計."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB060-SV-05",
+      "population": "controlled_batch",
+      "batch": 60,
+      "section": "script_vocabulary",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Near duplicate 名前 meaning.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB060-SV-05-R1",
+        "derivedFrom": "A1-CB060-SV-05",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「名前」の せつめいとして いちばん いいものは どれですか。 Giữ choices. Answer: 自分の呼び方."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB060-CE-01",
+      "population": "controlled_batch",
+      "batch": 60,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Lời mời có thể nhận hoặc từ chối; nhiều response hợp lệ.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB060-CE-01-R1",
+        "derivedFrom": "A1-CB060-CE-01",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: あなたは参加したいです。同僚：週末、一緒に飲み会に行きませんか？ あなた：＿＿。 Choices: わかりません。 / いいですね、行きます。 / すみません、行けません。 / ありがとう、でも忙しいです。 Answer: いいですね、行きます."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB060-CE-04",
+      "population": "controlled_batch",
+      "batch": 60,
+      "section": "conversation_expression",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "「漫画と映画を見ること」 phối hợp động từ không chuẩn.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB060-CE-04-R1",
+        "derivedFrom": "A1-CB060-CE-04",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Đổi answer A thành: 漫画を読むことと映画を見ることです。 Giữ prompt và các distractor còn lại."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB060-CE-05",
+      "population": "controlled_batch",
+      "batch": 60,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Tầng 2 không có grounding.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB060-CE-05-R1",
+        "derivedFrom": "A1-CB060-CE-05",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 案内板に「電池：2階」とあります。客：電池は何階の売り場ですか？ 店員：＿＿。 Choices: 電池は高いです。 / 2階の売り場です。 / 電池はあります。 / 電池はありません。 Answer: 2階の売り場です."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB061-SV-01",
+      "population": "controlled_batch",
+      "batch": 61,
+      "section": "script_vocabulary",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Thiếu object rõ ràng sau 「行ったら、入りたい」.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB061-SV-01-R1",
+        "derivedFrom": "A1-CB061-SV-01",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: この町には有名な温泉があります。私はその温泉に＿＿＿。 Giữ choices. Answer: 入りたい."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB061-SV-02",
+      "population": "controlled_batch",
+      "batch": 61,
+      "section": "script_vocabulary",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Near duplicate 休み reading.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB061-SV-02-R1",
+        "derivedFrom": "A1-CB061-SV-02",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「今日は休みです。」の「休み」の よみかたは どれですか。 Giữ choices. Answer: やすみ."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB061-SV-04",
+      "population": "controlled_batch",
+      "batch": 61,
+      "section": "script_vocabulary",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Exact duplicate định nghĩa 冷蔵庫.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB061-SV-04-R1",
+        "derivedFrom": "A1-CB061-SV-04",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 食べ物を冷やすものは どれですか。 Choices: 台所 / たんす / 電子レンジ / 冷蔵庫. Answer: 冷蔵庫."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB061-SV-05",
+      "population": "controlled_batch",
+      "batch": 61,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "貸す・使う・置く・持ってくる đều có thể đúng nếu không nêu intent.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB061-SV-05-R1",
+        "derivedFrom": "A1-CB061-SV-05",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: ホチキスを借りたいです。ホチキスを＿＿＿。 Giữ choices. Answer: 貸してください."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB061-CE-02",
+      "population": "controlled_batch",
+      "batch": 61,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Một lời mời có nhiều response hợp lệ.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB061-CE-02-R1",
+        "derivedFrom": "A1-CB061-CE-02",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 友だちは参加したいです。 A：週末、一緒に飲み会に行きませんか？ B：＿＿。 Giữ choices. Answer: いいですね、行きます."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB061-CE-05",
+      "population": "controlled_batch",
+      "batch": 61,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Hobby là câu hỏi mở; 「趣味はありません」 cũng hợp lệ.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB061-CE-05-R1",
+        "derivedFrom": "A1-CB061-CE-05",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: あなたの趣味は映画とスポーツです。 A：週末は何をしますか？ B：＿＿。 Giữ choices. Answer: 映画を見たり、スポーツをしたりします."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB062-SV-01",
+      "population": "controlled_batch",
+      "batch": 62,
+      "section": "script_vocabulary",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Near duplicate 魚 reading; thêm context.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB062-SV-01-R1",
+        "derivedFrom": "A1-CB062-SV-01",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「魚を食べます」の「魚」の よみかたは どれですか。 Giữ choices. Answer: さかな."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB062-SV-02",
+      "population": "controlled_batch",
+      "batch": 62,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "Thiếu にいます và không có fact địa điểm.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB062-SV-02-R1",
+        "derivedFrom": "A1-CB062-SV-02",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 田中さんは会議をしています。田中さんは＿＿＿にいます。 Giữ choices. Answer: 会議室."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB062-SV-03",
+      "population": "controlled_batch",
+      "batch": 62,
+      "section": "script_vocabulary",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Near duplicate スポーツ meaning.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB062-SV-03-R1",
+        "derivedFrom": "A1-CB062-SV-03",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「スポーツ」に いちばん ちかい いみは どれですか。 Giữ choices. Answer: 運動."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB062-SV-04",
+      "population": "controlled_batch",
+      "batch": 62,
+      "section": "script_vocabulary",
+      "decision": "REAUTHOR",
+      "reason": "温泉に行きたい・泊まりたい・入りたい đều có thể đúng.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB062-SV-04-R1",
+        "derivedFrom": "A1-CB062-SV-04",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 今、温泉の前にいます。中に＿＿＿。 Giữ choices. Answer: 入りたい."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB062-SV-05",
+      "population": "controlled_batch",
+      "batch": 62,
+      "section": "script_vocabulary",
+      "decision": "REVISE_PRESENTATION",
+      "reason": "Near duplicate 休み reading.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB062-SV-05-R1",
+        "derivedFrom": "A1-CB062-SV-05",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 「明日は休みです。」の「休み」の よみかたは どれですか。 Giữ choices. Answer: やすみ."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB062-CE-04",
+      "population": "controlled_batch",
+      "batch": 62,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "買い物・掃除・休む đều là đáp án quá khứ hợp lệ cho câu hỏi mở.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB062-CE-04-R1",
+        "derivedFrom": "A1-CB062-CE-04",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 昨日は買い物をしました。友達：休みに何をしましたか？ あなた：＿＿。 Giữ choices. Answer: 買い物をしました."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    },
+    {
+      "id": "A1-CB062-CE-05",
+      "population": "controlled_batch",
+      "batch": 62,
+      "section": "conversation_expression",
+      "decision": "REAUTHOR",
+      "reason": "Cả 野菜 và 肉 đều trả lời đúng câu hỏi 「どっちが好き」.",
+      "queue": "AUTHORING_REQUIRED",
+      "repairKind": "DIRECTIVE",
+      "repair": {
+        "newId": "A1-CB062-CE-05-R1",
+        "derivedFrom": "A1-CB062-CE-05",
+        "humanReviewStatus": "PENDING",
+        "proposal": "Prompt: 私は肉より野菜が好きです。 A：肉と野菜、どちらが好きですか？ B：＿＿＿が好きです。 Giữ choices. Answer: 野菜."
+      },
+      "humanReviewStatus": "PENDING",
+      "sourceFrozen": true,
+      "sourceArtifact": "CONTROLLED_A1_BATCH_054_062_REPAIR_180.json"
+    }
+  ]
+}

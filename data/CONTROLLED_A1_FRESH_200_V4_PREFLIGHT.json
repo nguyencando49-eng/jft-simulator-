@@ -1,0 +1,105 @@
+{
+  "artifactVersion": "CONTROLLED_A1_FRESH_200_V4_PREFLIGHT",
+  "itemCount": 200,
+  "sectionCounts": {
+    "script_vocabulary": 50,
+    "conversation_expression": 50,
+    "listening": 50,
+    "reading": 50
+  },
+  "unitCounts": {
+    "A1-N03": 12,
+    "A1-N04": 12,
+    "A1-N05": 12,
+    "A1-N06": 13,
+    "A1-N07": 12,
+    "A1-N08": 12,
+    "A1-N09": 15,
+    "A1-N10": 13,
+    "A1-N11": 12,
+    "A1-N12": 13,
+    "A1-N13": 14,
+    "A1-N14": 12,
+    "A1-N15": 12,
+    "A1-N16": 12,
+    "A1-N17": 12,
+    "A1-N18": 12
+  },
+  "hardIssues": [],
+  "hardIssueCount": 0,
+  "exactWholeItemDuplicatesVsV3": [],
+  "exactWholeItemDuplicatesWithinV4": [],
+  "promptWarnings": [
+    {
+      "id": "A1-F400-SC-004",
+      "code": "PROMPT_MATCH_V3",
+      "matches": [
+        "A1-F200-SV-005"
+      ]
+    },
+    {
+      "id": "A1-F400-SC-005",
+      "code": "PROMPT_MATCH_V3",
+      "matches": [
+        "A1-F200-SV-006"
+      ]
+    },
+    {
+      "id": "A1-F400-SC-010",
+      "code": "PROMPT_MATCH_V3",
+      "matches": [
+        "A1-F200-SV-011"
+      ]
+    },
+    {
+      "id": "A1-F400-SC-013",
+      "code": "PROMPT_MATCH_V3",
+      "matches": [
+        "A1-F200-SV-015"
+      ]
+    },
+    {
+      "id": "A1-F400-SC-016",
+      "code": "PROMPT_MATCH_V3",
+      "matches": [
+        "A1-F200-SV-018"
+      ]
+    },
+    {
+      "id": "A1-F400-SC-019",
+      "code": "PROMPT_MATCH_V3",
+      "matches": [
+        "A1-F200-SV-020"
+      ]
+    },
+    {
+      "id": "A1-F400-SC-025",
+      "code": "PROMPT_MATCH_V3",
+      "matches": [
+        "A1-F200-SV-026"
+      ]
+    },
+    {
+      "id": "A1-F400-SC-037",
+      "code": "PROMPT_MATCH_V3",
+      "matches": [
+        "A1-F200-SV-039"
+      ]
+    },
+    {
+      "id": "A1-F400-SC-040",
+      "code": "PROMPT_MATCH_V3",
+      "matches": [
+        "A1-F200-SV-041"
+      ]
+    },
+    {
+      "id": "A1-F400-SC-043",
+      "code": "PROMPT_MATCH_V3",
+      "matches": [
+        "A1-F200-SV-045"
+      ]
+    }
+  ],
+  "note": "Deterministic preflight only; not QA1–QA7."
+}

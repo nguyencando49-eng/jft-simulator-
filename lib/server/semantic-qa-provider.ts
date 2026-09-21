@@ -49,7 +49,7 @@ class HttpSemanticQaProvider implements SemanticQaProvider {
   async review(candidate:Omit<FactoryCandidate,'qa'>, request:FactoryRequest):Promise<SemanticQaResult>{
     const endpoint=process.env.AI_QA_ENDPOINT || process.env.AI_FACTORY_ENDPOINT;
     if(!endpoint) throw new Error('AI_QA_ENDPOINT or AI_FACTORY_ENDPOINT is required for semantic QA.');
-    const res=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json',...(process.env.AI_QA_API_KEY||process.env.AI_FACTORY_API_KEY?{authorization:`Bearer ${process.env.AI_QA_API_KEY||process.env.AI_FACTORY_API_KEY}`}:{})},body:JSON.stringify({task:'jft_semantic_qa',promptVersion:'v5.1-semantic',request,candidate:{question:candidate.question,audioScript:candidate.audioScript}})});
+    const res=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json',...(process.env.AI_QA_API_KEY||process.env.AI_FACTORY_API_KEY?{authorization:`Bearer ${process.env.AI_QA_API_KEY||process.env.AI_FACTORY_API_KEY}`}:{})},signal:AbortSignal.timeout(Number(process.env.AI_REQUEST_TIMEOUT_MS||45000)),body:JSON.stringify({task:'jft_semantic_qa',promptVersion:'v5.1-semantic',request,candidate:{question:candidate.question,audioScript:candidate.audioScript}})});
     if(!res.ok) throw new Error(`Semantic QA provider failed: ${res.status}`);
     const json=await res.json() as Partial<SemanticQaResult>;
     const score=Number(json.score);

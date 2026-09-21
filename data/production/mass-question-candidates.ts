@@ -18,6 +18,11 @@ const places=['さくらセンター','ひかり駅','みどり会社','あお�
 const days=['月曜日','火曜日','水曜日','木曜日','金曜日','土曜日','日曜日'];
 const actions=['確認します','準備します','受付へ行きます','担当者に聞きます','メモします','電話します','入口で待ちます','案内を読みます'];
 const sceneNotes=['受付の前に情報を確認しています。','同僚と予定を確認しています。','案内を見ながら準備しています。','出かける前に必要なことを確認しています。','仕事を始める前に確認しています。','休憩時間に相談しています。','電話をする前に内容を確認しています。','メモを見ながら確認しています。','担当者に聞く前に整理しています。','今日の予定を確認しています。','必要な情報を一つずつ整理しています。'];
+const vocabularyFocus:Record<string,string>={
+  'A1-N03':'名前','A1-N04':'家族','A1-N05':'野菜','A1-N06':'注文','A1-N07':'台所','A1-N08':'会議室','A1-N09':'昼休み','A1-N10':'ホチキス','A1-N11':'漫画','A1-N12':'飲み会','A1-N13':'バス','A1-N14':'温泉','A1-N15':'売り場','A1-N16':'値段','A1-N17':'休み','A1-N18':'富士山',
+  'A21-S01':'仕事','A21-S02':'ゲーム','A21-S03':'季節','A21-S04':'台風','A21-S05':'町','A21-S06':'信号','A21-S07':'待ち合わせ','A21-S08':'動物園','A21-S09':'読み方','A21-S10':'日本語教室','A21-S11':'担当','A21-S12':'弁当','A21-S13':'作業','A21-S14':'有給休暇','A21-S15':'診察','A21-S16':'睡眠','A21-S17':'お守り','A21-S18':'送別会',
+  'A22-S01':'引っ越し','A22-S02':'性格','A22-S03':'アレルギー','A22-S04':'調味料','A22-S05':'宿泊','A22-S06':'旅行','A22-S07':'雨天','A22-S08':'屋台','A22-S09':'成人の日','A22-S10':'服装','A22-S11':'返品','A22-S12':'掃除機','A22-S13':'展示','A22-S14':'美容院','A22-S15':'会議室','A22-S16':'避難','A22-S17':'上達','A22-S18':'将来',
+};
 
 function crossUnitTitles(unit:CurriculumCatalogUnit,n:number){
   const pool=curriculumCatalog.filter(item=>item.level===unit.level&&item.id!==unit.id&&item.topic!==unit.topic).map(item=>item.title);
@@ -35,7 +40,7 @@ function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,seri
   const practicalDate=`${1+(serial*5)%12}月${1+(serial*11)%28}日`;
   const base={id,level:unit.level,section,canDo:unit.canDo,knowledgeUnitIds:[unit.id],sourceDocument:unit.sourceDocument,productionStatus:'REVIEW' as const,tags:[`topic:${unit.topic}`,`can-do:${unit.id}`,`lesson:${unit.lesson}`,`difficulty:${n%10<3?'easy':n%10<8?'medium':'hard'}`,`generator:controlled-v2`,`section:${section}`]};
   if(section==='script_vocabulary'){
-    const focus=unit.anchors[n%3];
+    const focus=vocabularyFocus[unit.id]||unit.anchors[0];
     const q:ProductionCandidate={...base,category:'word_meaning',tags:[...base.tags,'category:word_meaning'],type:'choice',instruction:'ことばを見て、いちばん関係が深い場面を一つ選んでください。',prompt:practicalDate+'（'+c.day+'）'+c.hour+'時ごろ、'+c.place+'で'+c.name+'さんが「'+focus+'」ということばを確認しています。'+sceneNote+'\nどの場面で使うことばですか。',choices:[unit.title,...crossUnitTitles(unit,n)],answer:0,explanationVi:'「'+focus+'」 là từ/cách nói thuộc tình huống “'+unit.title+'” trong bài '+unit.lesson+'.'};
     return decorate(q,serial);
   }

@@ -37,7 +37,7 @@ function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,seri
     const focus=c.anchor;
     const safeTitle=unit.title.includes(focus)?unit.title.replaceAll(focus,'＿＿'):unit.title;
     const distractors=crossUnitDistractors(unit,focus,n);
-    const q:ProductionCandidate={...base,category:'word_meaning',tags:[...base.tags,'category:word_meaning'],type:'choice',instruction:'場面を読んで、いちばん関係が深いことばを一つ選んでください。',prompt:'【'+safeTitle+'】\\n'+practicalDate+'、'+c.place+'で'+c.name+'さんが使うことばを選びます。どれですか。',choices:[focus,...distractors],answer:0,explanationVi:'Trong tình huống của bài '+unit.lesson+', từ phù hợp nhất là 「'+focus+'」.'};
+    const q:ProductionCandidate={...base,category:'word_meaning',tags:[...base.tags,'category:word_meaning'],type:'choice',instruction:'場面を読んで、いちばん関係が深いことばを一つ選んでください。',prompt:'【'+safeTitle+'】\n'+practicalDate+'、'+c.place+'で'+c.name+'さんが使うことばを選びます。どれですか。',choices:[focus,...distractors],answer:0,explanationVi:'Trong tình huống của bài '+unit.lesson+', từ phù hợp nhất là 「'+focus+'」.'};
     return decorate(q,serial);
   }
   if(section==='conversation_expression'){
@@ -55,7 +55,7 @@ function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,seri
       ['いいですね。いっしょに確認しましょう。','いいですね。でも昨日でした。','そうですね。もう食べましたか。','いいえ、そこは青いです。'],
       ['大丈夫です。必要なら手伝います。','大丈夫です。昨日は休みでした。','そうですね。電車を食べます。','はい、天気を借ります。'],
     ];
-    const q:ProductionCandidate={...base,category:'expression',tags:[...base.tags,'category:expression'],type:'choice',instruction:'会話を完成させるために、いちばん自然な返事を一つ選んでください。',prompt:'【'+unit.title+'】\\n'+requests[mode]+'\\n担当者：＿＿＿＿＿＿。',choices:responseSets[mode],answer:0,explanationVi:'Đáp án đúng phản hồi trực tiếp và lịch sự với lời hỏi hoặc lời nhờ trong hội thoại.'};
+    const q:ProductionCandidate={...base,category:'expression',tags:[...base.tags,'category:expression'],type:'choice',instruction:'会話を完成させるために、いちばん自然な返事を一つ選んでください。',prompt:'【'+unit.title+'】\n'+practicalDate+'、'+c.place+'での会話です。\n'+requests[mode]+'\n担当者：＿＿＿＿＿＿。',choices:responseSets[mode],answer:0,explanationVi:'Đáp án đúng phản hồi trực tiếp và lịch sự với lời hỏi hoặc lời nhờ trong hội thoại.'};
     return decorate(q,serial);
   }
   if(section==='listening'){

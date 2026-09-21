@@ -21,7 +21,7 @@ export class HttpAnswerOracleProvider implements AnswerOracleProvider{
     const endpoint=process.env.ANSWER_ORACLE_ENDPOINT||process.env.AI_QA_ENDPOINT;
     if(!endpoint)throw new AnswerOracleError('QA_ORACLE_PROVIDER_FAILURE','ANSWER_ORACLE_ENDPOINT or AI_QA_ENDPOINT is required.');
     let response:Response;
-    try{response=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json',...(process.env.ANSWER_ORACLE_API_KEY||process.env.AI_QA_API_KEY?{authorization:`Bearer ${process.env.ANSWER_ORACLE_API_KEY||process.env.AI_QA_API_KEY}`}:{})},body:JSON.stringify({task:'jft_independent_answer_oracle',promptVersion:ANSWER_ORACLE_PROMPT_VERSION,input})});}
+    try{response=await fetch(endpoint,{method:'POST',signal:AbortSignal.timeout(Number(process.env.AI_REQUEST_TIMEOUT_MS||45000)),headers:{'content-type':'application/json',...(process.env.ANSWER_ORACLE_API_KEY||process.env.AI_QA_API_KEY?{authorization:`Bearer ${process.env.ANSWER_ORACLE_API_KEY||process.env.AI_QA_API_KEY}`}:{})},body:JSON.stringify({task:'jft_independent_answer_oracle',promptVersion:ANSWER_ORACLE_PROMPT_VERSION,input})});}
     catch(error){throw new AnswerOracleError('QA_ORACLE_PROVIDER_FAILURE',error instanceof Error?error.message:String(error));}
     if(!response.ok)throw new AnswerOracleError('QA_ORACLE_PROVIDER_FAILURE',`Answer Oracle provider failed: ${response.status}`);
     let json:unknown;try{json=await response.json();}catch{throw new AnswerOracleError('QA_ORACLE_INVALID_OUTPUT','Answer Oracle response is not valid JSON.');}

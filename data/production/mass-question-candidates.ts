@@ -17,6 +17,7 @@ const names=['アイン','ビン','チャン','ディン','エマ','ファン','
 const places=['さくらセンター','ひかり駅','みどり会社','あおば公園','中央図書館','北市民館','海浜ホール','つばさ病院','南サービスセンター','若葉店','第一工場','東町会館'];
 const days=['月曜日','火曜日','水曜日','木曜日','金曜日','土曜日','日曜日'];
 const actions=['確認します','準備します','受付へ行きます','担当者に聞きます','メモします','電話します','入口で待ちます','案内を読みます'];
+const sceneNotes=['受付の前に情報を確認しています。','同僚と予定を確認しています。','案内を見ながら準備しています。','出かける前に必要なことを確認しています。','仕事を始める前に確認しています。','休憩時間に相談しています。','電話をする前に内容を確認しています。','メモを見ながら確認しています。','担当者に聞く前に整理しています。','今日の予定を確認しています。','必要な情報を一つずつ整理しています。'];
 
 function crossUnitTitles(unit:CurriculumCatalogUnit,n:number){
   const pool=curriculumCatalog.filter(item=>item.level===unit.level&&item.id!==unit.id&&item.topic!==unit.topic).map(item=>item.title);
@@ -30,12 +31,12 @@ function decorate<T extends Question>(q:T,index:number):T{const shift=(index*3+1
 function context(unit:CurriculumCatalogUnit,n:number){return {name:names[n%names.length],place:places[(n*5+unit.lesson)%places.length],day:days[(n*3+unit.lesson)%days.length],hour:8+(n*7)%11,minute:[0,10,15,20,30,40,45,50][n%8],anchor:unit.anchors[n%4],other:unit.anchors.filter((_,i)=>i!==n%4)};}
 
 function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,serial:number):ProductionCandidate{
-  const c=context(unit,n),id=`PROD-${unit.level.replace('.','')}-${section.slice(0,2).toUpperCase()}-${String(serial).padStart(4,'0')}`;
+  const c=context(unit,n),sceneNote=sceneNotes[serial%sceneNotes.length],id=`PROD-${unit.level.replace('.','')}-${section.slice(0,2).toUpperCase()}-${String(serial).padStart(4,'0')}`;
   const practicalDate=`${1+(serial*5)%12}月${1+(serial*11)%28}日`;
   const base={id,level:unit.level,section,canDo:unit.canDo,knowledgeUnitIds:[unit.id],sourceDocument:unit.sourceDocument,productionStatus:'REVIEW' as const,tags:[`topic:${unit.topic}`,`can-do:${unit.id}`,`lesson:${unit.lesson}`,`difficulty:${n%10<3?'easy':n%10<8?'medium':'hard'}`,`generator:controlled-v2`,`section:${section}`]};
   if(section==='script_vocabulary'){
     const focus=unit.anchors[n%3];
-    const q:ProductionCandidate={...base,category:'word_meaning',tags:[...base.tags,'category:word_meaning'],type:'choice',instruction:'ことばを見て、いちばん関係が深い場面を一つ選んでください。',prompt:practicalDate+'、'+c.name+'さんは「'+focus+'」ということばを確認しています。どの場面で使うことばですか。',choices:[unit.title,...crossUnitTitles(unit,n)],answer:0,explanationVi:'「'+focus+'」 là từ/cách nói thuộc tình huống “'+unit.title+'” trong bài '+unit.lesson+'.'};
+    const q:ProductionCandidate={...base,category:'word_meaning',tags:[...base.tags,'category:word_meaning'],type:'choice',instruction:'ことばを見て、いちばん関係が深い場面を一つ選んでください。',prompt:practicalDate+'（'+c.day+'）'+c.hour+'時ごろ、'+c.place+'で'+c.name+'さんが「'+focus+'」ということばを確認しています。'+sceneNote+'\nどの場面で使うことばですか。',choices:[unit.title,...crossUnitTitles(unit,n)],answer:0,explanationVi:'「'+focus+'」 là từ/cách nói thuộc tình huống “'+unit.title+'” trong bài '+unit.lesson+'.'};
     return decorate(q,serial);
   }
   if(section==='conversation_expression'){
@@ -58,7 +59,7 @@ function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,seri
       ['はい、その予定で大丈夫です。','いいえ、昨日の予定でした。','予定は受付に置いてあります。','終わった予定を見ました。'],
       ['はい、必要なところを手伝います。','すみません、担当者は別の人です。','手伝いは昨日終わりました。','必要な物は受付にあります。'],
     ];
-    const q:ProductionCandidate={...base,category:'expression',tags:[...base.tags,'category:expression'],type:'choice',instruction:'会話を読んで、指定された意味になる返事を一つ選んでください。',prompt:'【'+unit.title+'】\n'+practicalDate+'、'+c.place+'での会話です。\n'+requests[mode]+'\n「'+intentions[mode]+'」はどれですか。',choices:responseSets[mode],answer:0,explanationVi:'Đáp án đúng thể hiện chính xác ý định giao tiếp được nêu trong câu hỏi; các lựa chọn còn lại là những phản hồi khác chức năng.'};
+    const q:ProductionCandidate={...base,category:'expression',tags:[...base.tags,'category:expression'],type:'choice',instruction:'会話を読んで、指定された意味になる返事を一つ選んでください。',prompt:'【'+unit.title+'】\n'+practicalDate+'（'+c.day+'）'+c.hour+'時ごろ、'+c.place+'での会話です。'+sceneNote+'\n'+requests[mode]+'\n「'+intentions[mode]+'」はどれですか。',choices:responseSets[mode],answer:0,explanationVi:'Đáp án đúng thể hiện chính xác ý định giao tiếp được nêu trong câu hỏi; các lựa chọn còn lại là những phản hồi khác chức năng.'};
     return decorate(q,serial);
   }
   if(section==='listening'){

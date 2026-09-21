@@ -32,12 +32,12 @@ function context(unit:CurriculumCatalogUnit,n:number){return {name:names[n%names
 function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,serial:number):ProductionCandidate{
   const c=context(unit,n),id=`PROD-${unit.level.replace('.','')}-${section.slice(0,2).toUpperCase()}-${String(serial).padStart(4,'0')}`;
   const practicalDate=`${1+(serial*5)%12}月${1+(serial*11)%28}日`;
-  const base={id,level:unit.level,section,canDo:unit.canDo,knowledgeUnitIds:[unit.id],sourceDocument:unit.sourceDocument,productionStatus:'REVIEW' as const,tags:[`category:${section}`,`topic:${unit.topic}`,`can-do:${unit.id}`,`lesson:${unit.lesson}`,`difficulty:${n%10<3?'easy':n%10<8?'medium':'hard'}`]};
+  const base={id,level:unit.level,section,canDo:unit.canDo,knowledgeUnitIds:[unit.id],sourceDocument:unit.sourceDocument,productionStatus:'REVIEW' as const,tags:[`topic:${unit.topic}`,`can-do:${unit.id}`,`lesson:${unit.lesson}`,`difficulty:${n%10<3?'easy':n%10<8?'medium':'hard'}`,`generator:controlled-v2`,`section:${section}`]};
   if(section==='script_vocabulary'){
     const focus=c.anchor;
     const safeTitle=unit.title.includes(focus)?unit.title.replaceAll(focus,'＿＿'):unit.title;
     const distractors=crossUnitDistractors(unit,focus,n);
-    const q:ProductionCandidate={...base,category:'word_meaning',type:'choice',instruction:'場面を読んで、いちばん関係が深いことばを一つ選んでください。',prompt:'【'+safeTitle+'】\\n'+practicalDate+'、'+c.place+'で'+c.name+'さんが使うことばを選びます。どれですか。',choices:[focus,...distractors],answer:0,explanationVi:'Trong tình huống của bài '+unit.lesson+', từ phù hợp nhất là 「'+focus+'」.'};
+    const q:ProductionCandidate={...base,category:'word_meaning',tags:[...base.tags,'category:word_meaning'],type:'choice',instruction:'場面を読んで、いちばん関係が深いことばを一つ選んでください。',prompt:'【'+safeTitle+'】\\n'+practicalDate+'、'+c.place+'で'+c.name+'さんが使うことばを選びます。どれですか。',choices:[focus,...distractors],answer:0,explanationVi:'Trong tình huống của bài '+unit.lesson+', từ phù hợp nhất là 「'+focus+'」.'};
     return decorate(q,serial);
   }
   if(section==='conversation_expression'){
@@ -55,13 +55,13 @@ function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,seri
       ['いいですね。いっしょに確認しましょう。','いいですね。でも昨日でした。','そうですね。もう食べましたか。','いいえ、そこは青いです。'],
       ['大丈夫です。必要なら手伝います。','大丈夫です。昨日は休みでした。','そうですね。電車を食べます。','はい、天気を借ります。'],
     ];
-    const q:ProductionCandidate={...base,category:'expression',type:'choice',instruction:'会話を完成させるために、いちばん自然な返事を一つ選んでください。',prompt:'【'+unit.title+'】\\n'+requests[mode]+'\\n担当者：＿＿＿＿＿＿。',choices:responseSets[mode],answer:0,explanationVi:'Đáp án đúng phản hồi trực tiếp và lịch sự với lời hỏi hoặc lời nhờ trong hội thoại.'};
+    const q:ProductionCandidate={...base,category:'expression',tags:[...base.tags,'category:expression'],type:'choice',instruction:'会話を完成させるために、いちばん自然な返事を一つ選んでください。',prompt:'【'+unit.title+'】\\n'+requests[mode]+'\\n担当者：＿＿＿＿＿＿。',choices:responseSets[mode],answer:0,explanationVi:'Đáp án đúng phản hồi trực tiếp và lịch sự với lời hỏi hoặc lời nhờ trong hội thoại.'};
     return decorate(q,serial);
   }
   if(section==='listening'){
     const next=actions[(n+2)%actions.length],later=actions[(n+5)%actions.length];
     const script=`${c.place}からのお知らせです。${c.day}の${c.hour}時${c.minute?`${c.minute}分`:''}に、${c.anchor}について説明します。はじめに${next}。そのあと${later}。わからないときは受付に聞いてください。`;
-    const q:ProductionCandidate={...base,category:'announcement_instruction',type:'audio_choice',instruction:'音声を聞いて、いちばんいい答えを一つ選んでください。',prompt:`${c.place}のお知らせを聞きます。はじめに何をしますか。`,choices:[next,later,actions[(n+3)%actions.length],actions[(n+6)%actions.length]],answer:0,explanationVi:`Thông báo yêu cầu trước tiên “${next}”, sau đó mới “${later}”.`,audioSrc:`/audio/production/${id.toLowerCase()}.mp3`,audioScript:script};
+    const q:ProductionCandidate={...base,category:'announcement_instruction',tags:[...base.tags,'category:announcement_instruction'],type:'audio_choice',instruction:'音声を聞いて、いちばんいい答えを一つ選んでください。',prompt:`${c.place}のお知らせを聞きます。はじめに何をしますか。`,choices:[next,later,actions[(n+3)%actions.length],actions[(n+6)%actions.length]],answer:0,explanationVi:`Thông báo yêu cầu trước tiên “${next}”, sau đó mới “${later}”.`,audioSrc:`/audio/production/${id.toLowerCase()}.mp3`,audioScript:script};
     return decorate(q,serial);
   }
   const closeHour=c.hour+2,first=actions[n%actions.length],second=actions[(n+3)%actions.length];
@@ -72,7 +72,7 @@ function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,seri
     `仕事のメモ\n${c.name}さんは${c.place}で${c.anchor}を確認してください。${c.day}の${c.hour}時から始めます。終わったら${second}。`,
   ];
   const room=`${1+(serial*7)%9}階の第${1+(serial*13)%20}会議室`;
-  const q:ProductionCandidate={...base,category:'content_comprehension',type:'choice',instruction:'文章を読んで、いちばんいい答えを一つ選んでください。',prompt:`${practicalDate}の予定です。会場は${room}です。\n${materials[n%materials.length]}\n\n最初に何をしますか。`,choices:[first,second,actions[(n+5)%actions.length],actions[(n+6)%actions.length]],answer:0,explanationVi:`Thông tin thực hành yêu cầu hành động đầu tiên là “${first}”.`};
+  const q:ProductionCandidate={...base,category:'content_comprehension',tags:[...base.tags,'category:content_comprehension'],type:'choice',instruction:'文章を読んで、いちばんいい答えを一つ選んでください。',prompt:`${practicalDate}の予定です。会場は${room}です。\n${materials[n%materials.length]}\n\n最初に何をしますか。`,choices:[first,second,actions[(n+5)%actions.length],actions[(n+6)%actions.length]],answer:0,explanationVi:`Thông tin thực hành yêu cầu hành động đầu tiên là “${first}”.`};
   return decorate(q,serial);
 }
 

@@ -121,7 +121,7 @@ export class HttpJftAlignmentProvider implements JftAlignmentProvider {
   model=process.env.JFT_ALIGNMENT_MODEL||'external';
   async classify(input:JftAlignmentClassificationInput):Promise<unknown>{
     const endpoint=process.env.JFT_ALIGNMENT_ENDPOINT;if(!endpoint)throw new Error('JFT_ALIGNMENT_ENDPOINT is required for the HTTP provider.');
-    const response=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json',...(process.env.JFT_ALIGNMENT_API_KEY?{authorization:`Bearer ${process.env.JFT_ALIGNMENT_API_KEY}`}:{})},body:JSON.stringify({task:'jft_alignment_classification',promptVersion:JFT_ALIGNMENT_PROMPT_VERSION,referenceVersion:JFT_ALIGNMENT_REFERENCE_VERSION,taxonomyVersion:JFT_ALIGNMENT_TAXONOMY_VERSION,systemPrompt:JFT_ALIGNMENT_SYSTEM_PROMPT_V1,input})});
+    const response=await fetch(endpoint,{method:'POST',signal:AbortSignal.timeout(Number(process.env.AI_REQUEST_TIMEOUT_MS||45000)),headers:{'content-type':'application/json',...(process.env.JFT_ALIGNMENT_API_KEY?{authorization:`Bearer ${process.env.JFT_ALIGNMENT_API_KEY}`}:{})},body:JSON.stringify({task:'jft_alignment_classification',promptVersion:JFT_ALIGNMENT_PROMPT_VERSION,referenceVersion:JFT_ALIGNMENT_REFERENCE_VERSION,taxonomyVersion:JFT_ALIGNMENT_TAXONOMY_VERSION,systemPrompt:JFT_ALIGNMENT_SYSTEM_PROMPT_V1,input})});
     if(!response.ok)throw new Error(`JFT alignment provider failed: ${response.status}`);
     return response.json();
   }

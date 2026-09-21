@@ -44,3 +44,4 @@ export class HttpDifficultyCalibrationProvider implements DifficultyCalibrationP
 }
 
 export function getDifficultyCalibrationProvider():DifficultyCalibrationProvider{return process.env.DIFFICULTY_CALIBRATION_PROVIDER==='http'?new HttpDifficultyCalibrationProvider():new MockDifficultyCalibrationProvider()}
+export function difficultyCalibrationProviderMode(){return process.env.DIFFICULTY_CALIBRATION_PROVIDER==='http'?'http':'mock'}

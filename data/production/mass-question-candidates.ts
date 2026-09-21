@@ -18,8 +18,8 @@ const places=['さくらセンター','ひかり駅','みどり会社','あお�
 const days=['月曜日','火曜日','水曜日','木曜日','金曜日','土曜日','日曜日'];
 const actions=['確認します','準備します','受付へ行きます','担当者に聞きます','メモします','電話します','入口で待ちます','案内を読みます'];
 
-function crossUnitDistractors(unit:CurriculumCatalogUnit,focus:string,n:number){
-  const pool=curriculumCatalog.filter(item=>item.level===unit.level&&item.id!==unit.id&&item.topic!==unit.topic).flatMap(item=>item.anchors).filter(value=>value!==focus);
+function crossUnitTitles(unit:CurriculumCatalogUnit,n:number){
+  const pool=curriculumCatalog.filter(item=>item.level===unit.level&&item.id!==unit.id&&item.topic!==unit.topic).map(item=>item.title);
   const unique=Array.from(new Set(pool));
   const start=(n*7+unit.lesson*3)%Math.max(1,unique.length);
   return [...unique.slice(start),...unique.slice(0,start)].slice(0,3);
@@ -34,34 +34,37 @@ function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,seri
   const practicalDate=`${1+(serial*5)%12}月${1+(serial*11)%28}日`;
   const base={id,level:unit.level,section,canDo:unit.canDo,knowledgeUnitIds:[unit.id],sourceDocument:unit.sourceDocument,productionStatus:'REVIEW' as const,tags:[`topic:${unit.topic}`,`can-do:${unit.id}`,`lesson:${unit.lesson}`,`difficulty:${n%10<3?'easy':n%10<8?'medium':'hard'}`,`generator:controlled-v2`,`section:${section}`]};
   if(section==='script_vocabulary'){
-    const focus=c.anchor;
-    const safeTitle=unit.title.includes(focus)?unit.title.replaceAll(focus,'＿＿'):unit.title;
-    const distractors=crossUnitDistractors(unit,focus,n);
-    const q:ProductionCandidate={...base,category:'word_meaning',tags:[...base.tags,'category:word_meaning'],type:'choice',instruction:'場面を読んで、いちばん関係が深いことばを一つ選んでください。',prompt:'【'+safeTitle+'】\n'+practicalDate+'、'+c.place+'で'+c.name+'さんが使うことばを選びます。どれですか。',choices:[focus,...distractors],answer:0,explanationVi:'Trong tình huống của bài '+unit.lesson+', từ phù hợp nhất là 「'+focus+'」.'};
+    const focus=unit.anchors[n%3];
+    const q:ProductionCandidate={...base,category:'word_meaning',tags:[...base.tags,'category:word_meaning'],type:'choice',instruction:'ことばを見て、いちばん関係が深い場面を一つ選んでください。',prompt:practicalDate+'、'+c.name+'さんは「'+focus+'」ということばを確認しています。どの場面で使うことばですか。',choices:[unit.title,...crossUnitTitles(unit,n)],answer:0,explanationVi:'「'+focus+'」 là từ/cách nói thuộc tình huống “'+unit.title+'” trong bài '+unit.lesson+'.'};
     return decorate(q,serial);
   }
   if(section==='conversation_expression'){
-    const focus=c.anchor;
     const mode=(n+unit.lesson)%4;
     const requests=[
-      c.name+'：すみません。'+focus+'のことで、少し聞いてもいいですか。',
-      c.name+'：'+focus+'について、いっしょに確認してもらえますか。',
-      c.name+'：'+c.day+'に'+c.place+'へ行きたいんですが、少し相談してもいいですか。',
-      c.name+'：このあと'+focus+'のことを確認します。手伝ってもらえますか。',
+      c.name+'：すみません。少し聞いてもいいですか。',
+      c.name+'：すみません。いっしょに確認してもらえますか。',
+      c.name+'：この予定で進めてもいいですか。',
+      c.name+'：少し手伝ってもらえますか。',
+    ];
+    const intentions=[
+      '質問してよいと伝える返事',
+      'いっしょに確認すると伝える返事',
+      'その予定でよいと伝える返事',
+      '手伝うと伝える返事',
     ];
     const responseSets=[
-      ['はい、どうぞ。','はい、もう聞きました。','いいえ、話しませんでした。','はい、あとで帰ります。'],
-      ['わかりました。いっしょに確認しましょう。','わかりました。昨日でした。','そうですか。何も見ません。','いいえ、確認したそうです。'],
-      ['いいですね。いっしょに確認しましょう。','いいですね。でも昨日でした。','そうですね。もう食べましたか。','いいえ、そこは青いです。'],
-      ['大丈夫です。必要なら手伝います。','大丈夫です。昨日は休みでした。','そうですね。電車を食べます。','はい、天気を借ります。'],
+      ['はい、どうぞ。質問してください。','すみません、今は席を外します。','もう一度、予定を確認してください。','受付は向こうにあります。'],
+      ['わかりました。いっしょに確認しましょう。','さっき一人で確認しました。','あとで担当者に聞いてください。','確認は明日までです。'],
+      ['はい、その予定で大丈夫です。','いいえ、昨日の予定でした。','予定は受付に置いてあります。','終わった予定を見ました。'],
+      ['はい、必要なところを手伝います。','すみません、担当者は別の人です。','手伝いは昨日終わりました。','必要な物は受付にあります。'],
     ];
-    const q:ProductionCandidate={...base,category:'expression',tags:[...base.tags,'category:expression'],type:'choice',instruction:'会話を完成させるために、いちばん自然な返事を一つ選んでください。',prompt:'【'+unit.title+'】\n'+practicalDate+'、'+c.place+'での会話です。\n'+requests[mode]+'\n担当者：＿＿＿＿＿＿。',choices:responseSets[mode],answer:0,explanationVi:'Đáp án đúng phản hồi trực tiếp và lịch sự với lời hỏi hoặc lời nhờ trong hội thoại.'};
+    const q:ProductionCandidate={...base,category:'expression',tags:[...base.tags,'category:expression'],type:'choice',instruction:'会話を読んで、指定された意味になる返事を一つ選んでください。',prompt:'【'+unit.title+'】\n'+practicalDate+'、'+c.place+'での会話です。\n'+requests[mode]+'\n「'+intentions[mode]+'」はどれですか。',choices:responseSets[mode],answer:0,explanationVi:'Đáp án đúng thể hiện chính xác ý định giao tiếp được nêu trong câu hỏi; các lựa chọn còn lại là những phản hồi khác chức năng.'};
     return decorate(q,serial);
   }
   if(section==='listening'){
     const next=actions[(n+2)%actions.length],later=actions[(n+5)%actions.length];
     const script=`${c.place}からのお知らせです。${c.day}の${c.hour}時${c.minute?`${c.minute}分`:''}に、${c.anchor}について説明します。はじめに${next}。そのあと${later}。わからないときは受付に聞いてください。`;
-    const q:ProductionCandidate={...base,category:'announcement_instruction',tags:[...base.tags,'category:announcement_instruction'],type:'audio_choice',instruction:'音声を聞いて、いちばんいい答えを一つ選んでください。',prompt:`${c.place}のお知らせを聞きます。はじめに何をしますか。`,choices:[next,later,actions[(n+3)%actions.length],actions[(n+6)%actions.length]],answer:0,explanationVi:`Thông báo yêu cầu trước tiên “${next}”, sau đó mới “${later}”.`,audioSrc:`/audio/production/${id.toLowerCase()}.mp3`,audioScript:script};
+    const q:ProductionCandidate={...base,category:'announcement_instruction',tags:[...base.tags,'category:announcement_instruction'],type:'audio_choice',instruction:'音声を聞いて、いちばんいい答えを一つ選んでください。',prompt:`${practicalDate}に${c.place}で行われる「${unit.title}」のお知らせを聞きます。はじめに何をしますか。`,choices:[next,later,actions[(n+3)%actions.length],actions[(n+6)%actions.length]],answer:0,explanationVi:`Thông báo yêu cầu trước tiên “${next}”, sau đó mới “${later}”.`,audioSrc:`/audio/production/${id.toLowerCase()}.mp3`,audioScript:script};
     return decorate(q,serial);
   }
   const closeHour=c.hour+2,first=actions[n%actions.length],second=actions[(n+3)%actions.length];

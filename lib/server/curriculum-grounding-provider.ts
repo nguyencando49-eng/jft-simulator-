@@ -47,3 +47,4 @@ export class HttpCurriculumGroundingProvider implements CurriculumGroundingProvi
 }
 
 export function getCurriculumGroundingProvider():CurriculumGroundingProvider{return process.env.CURRICULUM_GROUNDING_PROVIDER==='http'?new HttpCurriculumGroundingProvider():new MockCurriculumGroundingProvider()}
+export function curriculumGroundingProviderMode(){return process.env.CURRICULUM_GROUNDING_PROVIDER==='http'?'http':'mock'}

@@ -85,7 +85,26 @@ function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,seri
   return decorate(q,serial);
 }
 
-const base=[...approvedSeedQuestions,...a1Lesson03Candidates];
+function normalizeBaseQuestion(q:Question,index:number):Question{
+  const defaults:Record<SectionId,string>={script_vocabulary:'word_usage',conversation_expression:'expression',listening:'conversation',reading:'content_comprehension'};
+  const aliases:Record<string,string>={
+    'word-meaning':'word_meaning','word-usage':'word_usage','kanji-reading':'kanji_reading','kanji-meaning-usage':'kanji_meaning_usage',
+    'shop-public-place':'shop_public','announcement-instruction':'announcement_instruction',
+    'comprehending-content':'content_comprehension','information-search':'information_search',
+  };
+  const tags=q.tags||[];
+  const rawCategory=tags.find(tag=>tag.startsWith('category:'))?.slice(9)||defaults[q.section];
+  const category=aliases[rawCategory]||rawCategory.replaceAll('-','_');
+  const topic=tags.find(tag=>tag.startsWith('topic:'))?.slice(6)||'general';
+  const canDo=tags.find(tag=>tag.startsWith('can-do:'))?.slice(7)||`curated-${q.section}`;
+  const difficulty=tags.find(tag=>tag.startsWith('difficulty:'))?.slice(11)||(index%5===0?'hard':index%2===0?'medium':'easy');
+  return {...q,tags:Array.from(new Set([
+    ...tags.filter(tag=>!tag.startsWith('category:')&&!tag.startsWith('topic:')&&!tag.startsWith('can-do:')&&!tag.startsWith('difficulty:')),
+    `category:${category}`,`topic:${topic}`,`can-do:${canDo}`,`difficulty:${difficulty}`,'generator:curated-base',`section:${q.section}`,
+  ]))};
+}
+
+const base=[...approvedSeedQuestions,...a1Lesson03Candidates].map(normalizeBaseQuestion);
 const generated:ProductionCandidate[]=[];
 let serial=1;
 for(const level of ['A1','A2.1','A2.2'] as const){

@@ -3,7 +3,7 @@ import type { QuestionRecord } from '@/lib/admin-types';
 import type { Repository } from './domain';
 import { runQuestionQa } from './qa';
 
-export const PRODUCTION_QUESTION_BATCH = 'JFT-2100-V1';
+export const PRODUCTION_QUESTION_BATCH = 'JFT-3000-V2';
 
 export function buildProductionReviewQuestions(now = new Date().toISOString()):QuestionRecord[] {
   const questions = seedQuestions.map((question) => ({
@@ -16,7 +16,7 @@ export function buildProductionReviewQuestions(now = new Date().toISOString()):Q
     ])),
     updatedAt: now,
   }));
-  if (questions.length !== 2100) throw new Error(`Expected 2,100 questions, received ${questions.length}.`);
+  if (questions.length !== 3000) throw new Error(`Expected 3,000 questions, received ${questions.length}.`);
   const invalid = questions.find((question) => !runQuestionQa(question).passed);
   if (invalid) throw new Error(`Q0 rejected ${invalid.id}.`);
   return questions;

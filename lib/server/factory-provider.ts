@@ -63,7 +63,7 @@ class HttpFactoryProvider implements FactoryProvider {
   async generate(input:FactoryRequest){
     const endpoint=process.env.AI_FACTORY_ENDPOINT;
     if(!endpoint) throw new Error('AI_FACTORY_ENDPOINT is required for http provider.');
-    const res=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json',...(process.env.AI_FACTORY_API_KEY?{authorization:`Bearer ${process.env.AI_FACTORY_API_KEY}`}:{})},body:JSON.stringify({task:'jft_question_generation',promptVersion:'v5.2',input})});
+    const res=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json',...(process.env.AI_FACTORY_API_KEY?{authorization:`Bearer ${process.env.AI_FACTORY_API_KEY}`}:{})},signal:AbortSignal.timeout(Number(process.env.AI_REQUEST_TIMEOUT_MS||45000)),body:JSON.stringify({task:'jft_question_generation',promptVersion:'v5.2',input})});
     if(!res.ok) throw new Error(`Factory provider failed: ${res.status}`);
     const json=await res.json() as {questions?:GeneratedQuestionDraft[]};
     if(!Array.isArray(json.questions)) throw new Error('Factory provider response must contain questions[].');

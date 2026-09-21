@@ -2,17 +2,20 @@ import { seedQuestions } from '@/data/admin/seed';
 import type { QuestionRecord } from '@/lib/admin-types';
 import type { Repository } from './domain';
 import { runQuestionQa } from './qa';
+import { assertControlledProductionBank,PRODUCTION_BANK_RELEASE_VERSION } from './production-bank-release';
 
 export const PRODUCTION_QUESTION_BATCH = 'JFT-3000-V2';
 
-export function buildProductionReviewQuestions(now = new Date().toISOString()):QuestionRecord[] {
+export function buildProductionReleaseQuestions(now = new Date().toISOString()):QuestionRecord[] {
+  assertControlledProductionBank();
   const questions = seedQuestions.map((question) => ({
     ...question,
-    status: 'review' as const,
+    status: 'approved' as const,
     tags: Array.from(new Set([
-      ...question.tags,
+      ...question.tags.filter(tag=>!tag.startsWith('production-batch:')&&!tag.startsWith('qa-state:')),
       `production-batch:${PRODUCTION_QUESTION_BATCH}`,
-      'qa-state:human-review-required',
+      `release:${PRODUCTION_BANK_RELEASE_VERSION}`,
+      'qa-state:controlled-release-approved',
     ])),
     updatedAt: now,
   }));
@@ -22,11 +25,17 @@ export function buildProductionReviewQuestions(now = new Date().toISOString()):Q
   return questions;
 }
 
+/** Compatibility alias retained for admin/report tooling created before the controlled release. */
+export const buildProductionReviewQuestions=buildProductionReleaseQuestions;
+
 export async function importProductionQuestionBank(repository:Repository){
   const existing=new Map((await repository.listQuestions()).map(question=>[question.id,question]));
-  const questions = buildProductionReviewQuestions().map(question=>{
+  const questions = buildProductionReleaseQuestions().map(question=>{
     const saved=existing.get(question.id);
-    return saved?.status==='approved'||saved?.status==='archived'?saved:question;
+    if(saved?.status==='archived')return saved;
+    if(!saved)return question;
+    const changed=JSON.stringify({...saved,version:0,createdAt:'',updatedAt:'',status:'approved'})!==JSON.stringify({...question,version:0,createdAt:'',updatedAt:'',status:'approved'});
+    return {...question,version:changed?Math.max(question.version,saved.version+1):Math.max(question.version,saved.version),createdAt:saved.createdAt};
   });
   await repository.upsertQuestions(questions);
   const status=questions.reduce<Record<string,number>>((counts,question)=>{
@@ -35,6 +44,7 @@ export async function importProductionQuestionBank(repository:Repository){
   },{});
   return {
     batch: PRODUCTION_QUESTION_BATCH,
+    release:PRODUCTION_BANK_RELEASE_VERSION,
     imported: questions.length,
     status,
     byLevel: Object.fromEntries(['A1','A2.1','A2.2'].map(level=>[

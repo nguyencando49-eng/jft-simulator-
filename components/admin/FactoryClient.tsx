@@ -4,9 +4,10 @@ import { adminApi } from '@/lib/api-client';
 import { ADMIN_CONFIDENCE_LABELS,ADMIN_SECTION_LABELS,ADMIN_VERDICT_LABELS,humanizeAdminCode } from '@/lib/admin-ui';
 import type { FactoryJob, FactoryRequest } from '@/lib/server/factory-domain';
 import type { SectionId } from '@/lib/types';
+import { JFT_CATEGORIES } from '@/lib/server/content-taxonomy';
 import { formatQuestionPrompt } from '@/lib/question-presentation';
 
-const defaults:FactoryRequest={section:'script_vocabulary',level:'A2.1',topic:'仕事',canDo:'職場で簡単なやり取りができる',count:4,difficulty:'balanced',includeExplanation:true,generateAudioScript:true};
+const defaults:FactoryRequest={section:'script_vocabulary',level:'A2.1',topic:'仕事',canDo:'職場で簡単なやり取りができる',category:'word_meaning',count:4,difficulty:'balanced',includeExplanation:true,generateAudioScript:false};
 const labels=ADMIN_SECTION_LABELS;
 const jobStatus:Record<string,string>={queued:'Đang chờ',running:'Đang chạy',completed:'Hoàn tất',failed:'Thất bại'};
 type Candidate=FactoryJob['candidates'][number];
@@ -25,9 +26,10 @@ export default function FactoryClient(){
     <div className="admin-title"><div><span className="eyebrow">KHÔNG GIAN DUYỆT NỘI DUNG</span><h1>Xưởng tạo câu hỏi AI</h1><p>Sinh theo lô có kiểm soát, kiểm tra nội dung và QA, chuẩn bị âm thanh rồi mới đưa câu đạt chuẩn vào Ngân hàng câu hỏi.</p></div></div>
     {message&&<div className={`admin-alert ${message.includes('failed')||message.includes('required')?'error':'ok'}`}>{message}</div>}
     <section className="factory-layout">
-      <div className="admin-panel factory-form"><div className="panel-head"><h2>Yêu cầu sinh câu hỏi</h2><span className="badge">Prompt v5.1</span></div>
-        <label>Phần thi<select value={form.section} onChange={e=>setForm({...form,section:e.target.value as SectionId})}>{Object.entries(labels).map(([v,l])=><option key={v} value={v}>{l}</option>)}</select></label>
+      <div className="admin-panel factory-form"><div className="panel-head"><h2>Yêu cầu sinh câu hỏi</h2><span className="badge">Prompt v5.2</span></div>
+        <label>Phần thi<select value={form.section} onChange={e=>{const section=e.target.value as SectionId;setForm({...form,section,category:JFT_CATEGORIES[section][0],generateAudioScript:section==='listening'})}}>{Object.entries(labels).map(([v,l])=><option key={v} value={v}>{l}</option>)}</select></label>
         <div className="factory-2"><label>Cấp độ<select value={form.level} onChange={e=>setForm({...form,level:e.target.value as FactoryRequest['level']})}><option>A1</option><option>A2.1</option><option>A2.2</option></select></label><label>Độ khó<select value={form.difficulty} onChange={e=>setForm({...form,difficulty:e.target.value as FactoryRequest['difficulty']})}><option value="easy">Dễ</option><option value="balanced">Cân bằng</option><option value="hard">Khó</option></select></label></div>
+        <label>Loại câu<select value={form.category||""} onChange={e=>setForm({...form,category:e.target.value})}>{JFT_CATEGORIES[form.section].map(category=><option key={category} value={category}>{category}</option>)}</select></label>
         <label>Chủ đề<input value={form.topic} onChange={e=>setForm({...form,topic:e.target.value})} placeholder="仕事 / 買い物 / 病院..."/></label>
         <label>Can-do<textarea value={form.canDo||''} onChange={e=>setForm({...form,canDo:e.target.value})} rows={3}/></label>
         <label>Số lượng<input type="number" min={1} max={20} value={form.count} onChange={e=>setForm({...form,count:Number(e.target.value)})}/></label>

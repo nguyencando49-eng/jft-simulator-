@@ -1,4 +1,4 @@
-import { seedExamDraft, seedQuestions } from '@/data/admin/seed';
+import { seedExamDrafts, seedQuestions } from '@/data/admin/seed';
 import { ExamDraft, ExamVersion, QuestionRecord } from '@/lib/admin-types';
 import { CandidateSessionRecord, ProfileRecord, Repository } from './domain';
 import { generateExamVersion } from '@/lib/exam-generator';
@@ -16,9 +16,10 @@ type Store = {
 };
 
 declare global { var __jftV4MemoryStore: Store | undefined; }
-const initialVersion = generateExamVersion(seedExamDraft, seedQuestions, 1);
+const initialVersions=seedExamDrafts.map(draft=>generateExamVersion(draft,seedQuestions,1));
+const seedVersions=initialVersions.flatMap(result=>result.ok?[structuredClone(result.version)]:[]);
 const store: Store = globalThis.__jftV4MemoryStore ?? {
-  questions: structuredClone(seedQuestions), drafts: [structuredClone(seedExamDraft)], versions: initialVersion.ok ? [structuredClone(initialVersion.version)] : [], sessions: [], profiles: [], factoryJobs: [],sourceDocuments:[],sourceChunks:[],knowledgeUnits:[],questionPlans:[],questionProvenance:[],
+  questions: structuredClone(seedQuestions), drafts: structuredClone(seedExamDrafts), versions: seedVersions, sessions: [], profiles: [], factoryJobs: [],sourceDocuments:[],sourceChunks:[],knowledgeUnits:[],questionPlans:[],questionProvenance:[],
 };
 for(const [key,value] of Object.entries({sourceDocuments:[],sourceChunks:[],knowledgeUnits:[],questionPlans:[],questionProvenance:[]}) as Array<[keyof Store,never[]]>) if(!store[key]) (store as any)[key]=value;
 if (process.env.NODE_ENV !== 'production') globalThis.__jftV4MemoryStore = store;

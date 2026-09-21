@@ -18,6 +18,13 @@ const places=['さくらセンター','ひかり駅','みどり会社','あお�
 const days=['月曜日','火曜日','水曜日','木曜日','金曜日','土曜日','日曜日'];
 const actions=['確認します','準備します','受付へ行きます','担当者に聞きます','メモします','電話します','入口で待ちます','案内を読みます'];
 
+function crossUnitDistractors(unit:CurriculumCatalogUnit,focus:string,n:number){
+  const pool=curriculumCatalog.filter(item=>item.level===unit.level&&item.id!==unit.id&&item.topic!==unit.topic).flatMap(item=>item.anchors).filter(value=>value!==focus);
+  const unique=Array.from(new Set(pool));
+  const start=(n*7+unit.lesson*3)%Math.max(1,unique.length);
+  return [...unique.slice(start),...unique.slice(0,start)].slice(0,3);
+}
+
 function rotate<T>(items:T[],shift:number){return items.map((_,i)=>items[(i-shift+items.length)%items.length]);}
 function decorate<T extends Question>(q:T,index:number):T{const shift=(index*3+1)%q.choices.length;return {...q,choices:rotate(q.choices,shift),answer:(q.answer+shift)%q.choices.length};}
 function context(unit:CurriculumCatalogUnit,n:number){return {name:names[n%names.length],place:places[(n*5+unit.lesson)%places.length],day:days[(n*3+unit.lesson)%days.length],hour:8+(n*7)%11,minute:[0,10,15,20,30,40,45,50][n%8],anchor:unit.anchors[n%4],other:unit.anchors.filter((_,i)=>i!==n%4)};}
@@ -27,42 +34,34 @@ function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,seri
   const practicalDate=`${1+(serial*5)%12}月${1+(serial*11)%28}日`;
   const base={id,level:unit.level,section,canDo:unit.canDo,knowledgeUnitIds:[unit.id],sourceDocument:unit.sourceDocument,productionStatus:'REVIEW' as const,tags:[`category:${section}`,`topic:${unit.topic}`,`can-do:${unit.id}`,`lesson:${unit.lesson}`,`difficulty:${n%10<3?'easy':n%10<8?'medium':'hard'}`]};
   if(section==='script_vocabulary'){
-    const categories=['word_meaning','word_usage','kanji_reading','kanji_meaning_usage'];
-    const schedule=`予定は${practicalDate}の${c.hour}時${c.minute?`${c.minute}分`:''}です。`;
-    const detail=[
-      `そのあと、${actions[(n+1)%actions.length]}。`,
-      `${c.hour}時までに、${actions[(n+2)%actions.length]}。`,
-      `わからないときは、${c.place}の人に聞きます。`,
-      `案内を読んでから、${actions[(n+3)%actions.length]}。`,
-      `${c.day}の予定もいっしょに確認します。`,
-      `${c.anchor}のメモを見て、${actions[(n+4)%actions.length]}。`,
-      `${c.name}さんは入口で短いメモを書きます。`,
-      `必要なときは電話でも確認します。`,
-    ][(n+unit.lesson)%8];
-    const prompts=[
-      `${c.place}で、${c.name}さんは「${c.anchor}」について聞きたいです。関係がいちばん深いことばはどれですか。`,
-      `${c.day}、${c.name}さんは${unit.title}の場面で使うことばを探しています。いちばん合うものはどれですか。`,
-      `${c.place}の「${unit.title}」という案内で大切なことばを一つ選びます。必要なことばはどれですか。`,
-      `${c.name}さんは${unit.title}について短いメモを書きます。中心になることばはどれですか。`,
-    ];
-    const q:ProductionCandidate={...base,category:categories[n%4],type:'choice',instruction:'ことばを見て、いちばんいいものを一つ選んでください。',prompt:`${prompts[n%prompts.length]}\n${schedule} ${detail}`,choices:[c.anchor,...c.other],answer:0,explanationVi:`Từ trọng tâm của tình huống “${unit.title}” trong đơn vị kiến thức ${unit.id} là 「${c.anchor}」.`};
+    const focus=c.anchor;
+    const safeTitle=unit.title.includes(focus)?unit.title.replaceAll(focus,'＿＿'):unit.title;
+    const distractors=crossUnitDistractors(unit,focus,n);
+    const q:ProductionCandidate={...base,category:'word_meaning',type:'choice',instruction:'場面を読んで、いちばん関係が深いことばを一つ選んでください。',prompt:'【'+safeTitle+'】\\n'+practicalDate+'、'+c.place+'で'+c.name+'さんが使うことばを選びます。どれですか。',choices:[focus,...distractors],answer:0,explanationVi:'Trong tình huống của bài '+unit.lesson+', từ phù hợp nhất là 「'+focus+'」.'};
     return decorate(q,serial);
   }
   if(section==='conversation_expression'){
+    const focus=c.anchor;
+    const mode=(n+unit.lesson)%4;
     const requests=[
-      `${c.name}：すみません。${c.anchor}について教えていただけますか。`,
-      `${c.name}：${c.day}に${c.place}へ行きたいんですが、少し聞いてもいいですか。`,
-      `${c.name}：${unit.title}のことで、確認したいことがあります。`,
-      `${c.name}：このあと${c.anchor}を${actions[n%actions.length]}。これでいいですか。`,
+      c.name+'：すみません。'+focus+'のことで、少し聞いてもいいですか。',
+      c.name+'：'+focus+'について、いっしょに確認してもらえますか。',
+      c.name+'：'+c.day+'に'+c.place+'へ行きたいんですが、少し相談してもいいですか。',
+      c.name+'：このあと'+focus+'のことを確認します。手伝ってもらえますか。',
     ];
-    const choices=['はい。わかりました。いっしょに確認しましょう。','いいえ、昨日は雨でした。','いただきます。ごちそうさまでした。','その電車は青いです。'];
-    const q:ProductionCandidate={...base,category:n%2?'expression':'grammar',type:'choice',instruction:'会話を完成させるために、いちばんいいものを一つ選んでください。',prompt:`【${unit.title}】\n${practicalDate}の予定について話しています。\n${requests[n%requests.length]}\n担当者：＿＿＿＿＿＿。`,choices,answer:0,explanationVi:'Người phụ trách đồng ý hỗ trợ và đề nghị cùng kiểm tra, phù hợp với lời hỏi/nhờ trong hội thoại.'};
+    const responseSets=[
+      ['はい、どうぞ。','はい、もう聞きました。','いいえ、話しませんでした。','はい、あとで帰ります。'],
+      ['わかりました。いっしょに確認しましょう。','わかりました。昨日でした。','そうですか。何も見ません。','いいえ、確認したそうです。'],
+      ['いいですね。いっしょに確認しましょう。','いいですね。でも昨日でした。','そうですね。もう食べましたか。','いいえ、そこは青いです。'],
+      ['大丈夫です。必要なら手伝います。','大丈夫です。昨日は休みでした。','そうですね。電車を食べます。','はい、天気を借ります。'],
+    ];
+    const q:ProductionCandidate={...base,category:'expression',type:'choice',instruction:'会話を完成させるために、いちばん自然な返事を一つ選んでください。',prompt:'【'+unit.title+'】\\n'+requests[mode]+'\\n担当者：＿＿＿＿＿＿。',choices:responseSets[mode],answer:0,explanationVi:'Đáp án đúng phản hồi trực tiếp và lịch sự với lời hỏi hoặc lời nhờ trong hội thoại.'};
     return decorate(q,serial);
   }
   if(section==='listening'){
     const next=actions[(n+2)%actions.length],later=actions[(n+5)%actions.length];
     const script=`${c.place}からのお知らせです。${c.day}の${c.hour}時${c.minute?`${c.minute}分`:''}に、${c.anchor}について説明します。はじめに${next}。そのあと${later}。わからないときは受付に聞いてください。`;
-    const q:ProductionCandidate={...base,category:['conversation','shop_public','announcement_instruction'][n%3],type:'audio_choice',instruction:'音声を聞いて、いちばんいい答えを一つ選んでください。',prompt:`${practicalDate}に行われる、${c.place}の${c.day}の「${unit.title}」について聞きます。${c.name}さんは、はじめに何をしますか。`,choices:[next,later,'すぐ家に帰ります','何もしません'],answer:0,explanationVi:`Thông báo yêu cầu trước tiên “${next}”, sau đó mới “${later}”.`,audioSrc:`/audio/production/${id.toLowerCase()}.mp3`,audioScript:script};
+    const q:ProductionCandidate={...base,category:'announcement_instruction',type:'audio_choice',instruction:'音声を聞いて、いちばんいい答えを一つ選んでください。',prompt:`${c.place}のお知らせを聞きます。はじめに何をしますか。`,choices:[next,later,actions[(n+3)%actions.length],actions[(n+6)%actions.length]],answer:0,explanationVi:`Thông báo yêu cầu trước tiên “${next}”, sau đó mới “${later}”.`,audioSrc:`/audio/production/${id.toLowerCase()}.mp3`,audioScript:script};
     return decorate(q,serial);
   }
   const closeHour=c.hour+2,first=actions[n%actions.length],second=actions[(n+3)%actions.length];
@@ -73,7 +72,7 @@ function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,seri
     `仕事のメモ\n${c.name}さんは${c.place}で${c.anchor}を確認してください。${c.day}の${c.hour}時から始めます。終わったら${second}。`,
   ];
   const room=`${1+(serial*7)%9}階の第${1+(serial*13)%20}会議室`;
-  const q:ProductionCandidate={...base,category:n%2?'information_search':'content_comprehension',type:'choice',instruction:'文章を読んで、いちばんいい答えを一つ選んでください。',prompt:`${practicalDate}の予定です。会場は${room}です。\n${materials[n%materials.length]}\n\n最初に何をしますか。`,choices:[first,second,'家で休みます','予定を全部中止します'],answer:0,explanationVi:`Thông tin thực hành yêu cầu hành động đầu tiên là “${first}”.`};
+  const q:ProductionCandidate={...base,category:'content_comprehension',type:'choice',instruction:'文章を読んで、いちばんいい答えを一つ選んでください。',prompt:`${practicalDate}の予定です。会場は${room}です。\n${materials[n%materials.length]}\n\n最初に何をしますか。`,choices:[first,second,actions[(n+5)%actions.length],actions[(n+6)%actions.length]],answer:0,explanationVi:`Thông tin thực hành yêu cầu hành động đầu tiên là “${first}”.`};
   return decorate(q,serial);
 }
 
@@ -91,5 +90,19 @@ for(const level of ['A1','A2.1','A2.2'] as const){
   }
 }
 
+// Add 900 controlled non-Listening questions after the legacy 2,100 layout.
+// Appending them keeps every existing Listening ID/audio asset stable.
+for(const level of ['A1','A2.1','A2.2'] as const){
+  const units=curriculumCatalog.filter(unit=>unit.level===level);
+  for(const section of ['script_vocabulary','conversation_expression','reading'] as const){
+    for(let i=0;i<100;i++){
+      const unit=units[(i*5+3)%units.length];
+      const n=1000+Math.floor(i/units.length)*7+(i%units.length);
+      generated.push(makeQuestion(unit,section,n,serial++));
+    }
+  }
+}
+
 export const massQuestionCandidates:ProductionCandidate[]=generated;
 export const completeProductionQuestionSet:Question[]=[...base,...massQuestionCandidates];
+if(completeProductionQuestionSet.length!==3000)throw new Error('Production bank must contain exactly 3,000 questions.');

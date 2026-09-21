@@ -14,7 +14,7 @@ class HttpTtsProvider implements TtsProvider {
   name='http'; voice=process.env.TTS_VOICE || 'default';
   async synthesize(text:string):Promise<TtsResult>{
     const endpoint=process.env.TTS_ENDPOINT; if(!endpoint) throw new Error('TTS_ENDPOINT is required for http TTS provider.');
-    const res=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json',...(process.env.TTS_API_KEY?{authorization:`Bearer ${process.env.TTS_API_KEY}`}:{})},body:JSON.stringify({task:'tts',text,voice:this.voice,language:'ja-JP',format:'mp3'})});
+    const res=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json',...(process.env.TTS_API_KEY?{authorization:`Bearer ${process.env.TTS_API_KEY}`}:{})},signal:AbortSignal.timeout(Number(process.env.TTS_REQUEST_TIMEOUT_MS||45000)),body:JSON.stringify({task:'tts',text,voice:this.voice,language:'ja-JP',format:'mp3'})});
     if(!res.ok) throw new Error(`TTS provider failed: ${res.status}`);
     const ct=res.headers.get('content-type')||'';
     if(ct.startsWith('audio/')){const bytes=new Uint8Array(await res.arrayBuffer());return {bytes,contentType:ct,extension:ct.includes('wav')?'wav':'mp3',provider:this.name,voice:this.voice};}
@@ -32,7 +32,7 @@ export class AzureTtsProvider implements TtsProvider {
     if(!key||!region) throw new Error('AZURE_SPEECH_KEY and AZURE_SPEECH_REGION are required for Azure TTS.');
     const endpoint=`https://${region}.tts.speech.microsoft.com/cognitiveservices/v1`;
     const ssml=`<speak version="1.0" xml:lang="ja-JP"><voice name="${escapeXml(this.voice)}"><prosody rate="${escapeXml(process.env.AZURE_SPEECH_RATE||'-5%')}">${escapeXml(text)}</prosody></voice></speak>`;
-    const res=await fetch(endpoint,{method:'POST',headers:{'Ocp-Apim-Subscription-Key':key,'Content-Type':'application/ssml+xml','X-Microsoft-OutputFormat':'riff-48khz-16bit-mono-pcm','User-Agent':'jft-simulator'},body:ssml});
+    const res=await fetch(endpoint,{method:'POST',headers:{'Ocp-Apim-Subscription-Key':key,'Content-Type':'application/ssml+xml','X-Microsoft-OutputFormat':'riff-48khz-16bit-mono-pcm','User-Agent':'jft-simulator'},signal:AbortSignal.timeout(Number(process.env.TTS_REQUEST_TIMEOUT_MS||45000)),body:ssml});
     if(!res.ok) throw new Error(`Azure Speech synthesis failed: ${res.status} ${await res.text()}`);
     const bytes=new Uint8Array(await res.arrayBuffer());
     if(bytes.length<44||String.fromCharCode(...bytes.slice(0,4))!=='RIFF') throw new Error('Azure Speech returned invalid WAV audio.');

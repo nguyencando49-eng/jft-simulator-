@@ -41,3 +41,4 @@ export class HttpJapaneseNaturalnessProvider implements JapaneseNaturalnessProvi
 }
 
 export function getJapaneseNaturalnessProvider():JapaneseNaturalnessProvider{return process.env.JAPANESE_NATURALNESS_PROVIDER==='http'?new HttpJapaneseNaturalnessProvider():new MockJapaneseNaturalnessProvider()}
+export function japaneseNaturalnessProviderMode(){return process.env.JAPANESE_NATURALNESS_PROVIDER==='http'?'http':'mock'}

@@ -128,3 +128,4 @@ export class HttpJftAlignmentProvider implements JftAlignmentProvider {
 }
 
 export function getJftAlignmentProvider():JftAlignmentProvider{return process.env.JFT_ALIGNMENT_PROVIDER==='http'?new HttpJftAlignmentProvider():new MockJftAlignmentProvider()}
+export function jftAlignmentProviderMode(){return process.env.JFT_ALIGNMENT_PROVIDER==='http'?'http':'mock'}

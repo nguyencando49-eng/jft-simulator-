@@ -16,10 +16,23 @@ type Store = {
 };
 
 declare global { var __jftV4MemoryStore: Store | undefined; }
-const initialVersions=seedExamDrafts.map(draft=>generateExamVersion(draft,seedQuestions,1));
+const e2eDraft:ExamDraft={
+  id:'JFT-E2E-001',
+  title:'E2E Mini Journey',
+  durationMinutes:60,
+  status:'published',
+  rules:[
+    {section:'script_vocabulary',count:2,allowBack:true,levels:['A1']},
+    {section:'conversation_expression',count:2,allowBack:true,levels:['A1']},
+    {section:'listening',count:2,allowBack:false,levels:['A1']},
+    {section:'reading',count:2,allowBack:true,levels:['A1']},
+  ],
+};
+const seededDrafts=process.env.E2E_TEST_MODE==='true'?[...seedExamDrafts,e2eDraft]:seedExamDrafts;
+const initialVersions=seededDrafts.map(draft=>generateExamVersion(draft,seedQuestions,1));
 const seedVersions=initialVersions.flatMap(result=>result.ok?[structuredClone(result.version)]:[]);
 const store: Store = globalThis.__jftV4MemoryStore ?? {
-  questions: structuredClone(seedQuestions), drafts: structuredClone(seedExamDrafts), versions: seedVersions, sessions: [], profiles: [], factoryJobs: [],sourceDocuments:[],sourceChunks:[],knowledgeUnits:[],questionPlans:[],questionProvenance:[],
+  questions: structuredClone(seedQuestions), drafts: structuredClone(seededDrafts), versions: seedVersions, sessions: [], profiles: [], factoryJobs: [],sourceDocuments:[],sourceChunks:[],knowledgeUnits:[],questionPlans:[],questionProvenance:[],
 };
 for(const [key,value] of Object.entries({sourceDocuments:[],sourceChunks:[],knowledgeUnits:[],questionPlans:[],questionProvenance:[]}) as Array<[keyof Store,never[]]>) if(!store[key]) (store as any)[key]=value;
 if (process.env.NODE_ENV !== 'production') globalThis.__jftV4MemoryStore = store;

@@ -5,6 +5,7 @@ import type { FactoryJob, FactoryRequest } from './server/factory-domain';
 import type { KnowledgeUnit, QuestionPlan, QuestionProvenance, SourceChunk, SourceDocument } from './server/source-domain';
 import type { CoverageCell, ReadinessResult } from './server/curriculum-production';
 import type { A1MvpReleaseReport } from './server/a1-mvp-release';
+import type { ProductionReleaseReport } from './server/production-release';
 
 export type ApiErrorPayload={ok?:false;error?:string;[key:string]:unknown};
 export class ApiError extends Error{status:number;payload:ApiErrorPayload;constructor(status:number,payload:ApiErrorPayload){super(payload.error||`API ${status}`);this.status=status;this.payload=payload;}}
@@ -40,6 +41,8 @@ export const adminApi={
   publishExam:(examId:string)=>raw<{ok:true;version:ExamVersion}>('/api/v1/exams',{method:'POST',body:JSON.stringify({examId})}),
   a1MvpRelease:()=>raw<{ok:true;ready:true;report:A1MvpReleaseReport;publishedVersionIds:string[];seedPromotionRequired:string[]}>('/api/v1/admin/a1-mvp-release'),
   publishA1MvpRelease:()=>raw<{ok:true;seedSync:{promoted:string[];preserved:string[]};published:string[];skipped:string[];report:A1MvpReleaseReport}>('/api/v1/admin/a1-mvp-release',{method:'POST'}),
+  productionRelease:()=>raw<{ok:true;ready:boolean;bankCount:number;expectedBankCount:number;publishedVersionIds:string[];missingVersionIds:string[];conflictingVersionIds:string[];report:ProductionReleaseReport}>('/api/v1/admin/production-release'),
+  publishProductionRelease:()=>raw<{ok:true;bankImport:{batch:string;release:string;imported:number;status:Record<string,number>;byLevel:Record<string,number>};published:string[];skipped:string[];report:ProductionReleaseReport}>('/api/v1/admin/production-release',{method:'POST'}),
   attempts:()=>raw<{ok:true;attempts:Array<{id:string;examVersionId:string;status:string;startedAt:string;submittedAt?:string;answered:number;total:number;scorePercent?:number}>}>('/api/v1/attempts'),
   candidates:()=>raw<{ok:true;candidates:Array<UserProfile&{attempts:number;submitted:number;active:number;averageScore:number|null;lastAttemptAt?:string}>}>('/api/v1/admin/candidates'),
   updateCandidateRole:(id:string,role:UserRole)=>raw<{ok:true;profile:UserProfile}>(`/api/v1/admin/candidates/${encodeURIComponent(id)}`,{method:'PATCH',body:JSON.stringify({role})}),

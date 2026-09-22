@@ -1,6 +1,7 @@
 import { questions as authoredQuestions } from '../questions';
 import { completeProductionQuestionSet } from '../production/mass-question-candidates';
 import { QuestionRecord, ExamDraft, AttemptSummary } from '@/lib/admin-types';
+import { PRODUCTION_EXAM_DRAFTS } from '../production/exam-catalog';
 import { assertControlledProductionBank,PRODUCTION_BANK_RELEASE_VERSION } from '@/lib/server/production-bank-release';
 
 const now = '2026-09-21T17:00:00.000Z';
@@ -17,20 +18,7 @@ export const seedQuestions: QuestionRecord[] = completeProductionQuestionSet.map
   updatedAt: now,
 }));
 
-const examRules=(level:'A1'|'A2.1'|'A2.2')=>[
-  { section: 'script_vocabulary' as const, count: 12, allowBack: true, levels: [level] },
-  { section: 'conversation_expression' as const, count: 12, allowBack: true, levels: [level] },
-  { section: 'listening' as const, count: 12, allowBack: false, levels: [level] },
-  { section: 'reading' as const, count: 12, allowBack: true, levels: [level] },
-];
-
-export const seedExamDrafts: ExamDraft[] = (['A1','A2.1','A2.2'] as const).map(level=>({
-  id:`JFT-PRACTICE-${level.replaceAll('.','-')}-001`,
-  title:`JFT Practice ${level} — Đề 01`,
-  durationMinutes:60,
-  status:'published' as const,
-  rules:examRules(level),
-}));
+export const seedExamDrafts: ExamDraft[] = structuredClone(PRODUCTION_EXAM_DRAFTS);
 
 // Backward-compatible fixture used by a few admin flows.
 export const seedExamDraft: ExamDraft = seedExamDrafts[0];

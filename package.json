@@ -15,6 +15,8 @@
     "audio:production": "vite-node scripts/generate-production-audio.ts",
     "audio:a1-mvp": "vite-node scripts/generate-a1-mvp-audio.ts",
     "questions:import-production": "vite-node scripts/import-production-question-bank.ts",
+    "release:production": "vite-node scripts/release-production.ts",
+    "smoke:production": "vite-node scripts/smoke-production.ts",
     "qa:content": "vite-node scripts/run-jft-content-qa.ts",
     "qa:full": "npm run typecheck && npm test && npm run build && npm run test:e2e"
   },

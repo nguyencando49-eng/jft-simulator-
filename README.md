@@ -1,39 +1,52 @@
-# JFT Simulator V5.1.2 E2E QA Factory
+# JFT Simulator — Production 3000
 
-Unofficial JFT-style CBT practice simulator + versioned Question Factory + server backend + account authentication.
+Unofficial JFT-style CBT practice simulator with a controlled 3,000-question bank, immutable exam versions, account-backed candidate sessions, and an AI-assisted Question Factory.
 
-> This project is not affiliated with Japan Foundation or Prometric. Demo questions are original practice content and the project must not ingest leaked/live exam content.
+> This project is not affiliated with or certified by the Japan Foundation or Prometric. The A1 / A2.1 / A2.2 labels are internal practice tiers, not an official score prediction or official exam calibration. Never ingest leaked/live exam content.
 
-## Current production-oriented scope
+## Production release
 
-### Candidate
-- Candidate registration and password recovery
-- Profile/settings and per-attempt history detail
-- `/login` account sign-in
-- `/candidate` portal with available exam, active-session resume and exam history
-- CBT flow with server timer/session recovery
-- answer autosave and server-side scoring
-- candidate ownership checks on every session/result mutation
+The controlled repository bank contains exactly:
 
-### Admin
-- Admin role management for user profiles
+- A1: 1,000 questions
+- A2.1: 1,000 questions
+- A2.2: 1,000 questions
+- Total: 3,000 questions
+
+The initial production catalog contains three immutable practice forms:
+
+- `JFT-PRACTICE-A1-001-v1`
+- `JFT-PRACTICE-A2-1-001-v1`
+- `JFT-PRACTICE-A2-2-001-v1`
+
+Each form contains 48 questions (12 per section) and has a 60-minute practice timer.
+
+## Candidate product
+
+- registration, login, recovery and profile lifecycle
+- practice catalog filtered by A1 / A2.1 / A2.2
+- CBT flow across Script/Vocabulary, Conversation/Expression, Listening and Reading
+- server-backed timer, autosave and session resume
+- Listening no-back rule and bounded playback
+- server-side scoring
+- post-submit answer review
+- account-scoped history
+- learner APIs never expose the answer key while an attempt is active
+
+## Admin product
+
 - role-protected `/admin/*`
-- Question Bank lifecycle and QA gate
-- Exam Builder + immutable ExamVersion publish
-- Attempts analytics
-- `/admin/candidates` candidate/account activity
-- `/admin/system` runtime/backend status
+- Question Bank lifecycle
+- Production 3000 release control
+- immutable ExamVersion publishing
+- Question Factory v5.2
+- QA1–QA7 evidence gates
+- TTS/audio generation
+- source/curriculum pipeline
+- attempts and candidate analytics
+- explicit runtime readiness screen at `/admin/system`
 
-### Backend
-- Repository abstraction: in-memory dev fallback or Supabase/PostgreSQL
-- Supabase Auth password login through server BFF routes
-- HttpOnly access/refresh cookies; browser storage does not hold auth tokens
-- automatic access-token refresh
-- `profiles` projection for account/admin analytics
-- server-only service-role access
-- immutable exam snapshots and server scoring
-
-## Run locally
+## Local development
 
 ```bash
 cp .env.example .env.local
@@ -41,71 +54,107 @@ npm install
 npm run dev
 ```
 
-With `AUTH_DISABLED=true`, the simulator intentionally uses the in-memory repository and `/login` provides a development role switch (Candidate/Admin).
+With `AUTH_DISABLED=true`, local development uses the in-memory repository and a development role switch.
 
-Open:
-- Login: `http://localhost:3000/login`
-- Candidate portal: `http://localhost:3000/candidate`
-- Admin: `http://localhost:3000/admin`
-- Runtime: `http://localhost:3000/admin/system`
+Useful routes:
 
-## Production setup
+- `/login`
+- `/candidate`
+- `/admin`
+- `/admin/system`
+- `/api/v1/system`
 
-1. Run `supabase/migrations/0001_v4_core.sql`.
-2. Run `supabase/migrations/0002_v4_2_auth_profiles.sql`.
-3. Create Supabase Storage bucket `exam-assets`.
-4. Configure `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`.
-5. Set `AUTH_DISABLED=false`.
-6. Assign `app_metadata.role=admin` only to administrative Supabase users. All other users are treated as candidates.
+## Production infrastructure
 
-The service-role key is server-only. Never expose it via `NEXT_PUBLIC_*`.
+Apply all SQL migrations in order from:
 
-## Core architecture
+```text
+supabase/migrations/0001_v4_core.sql
+...
+supabase/migrations/0007_factory_qa_evidence_rls.sql
+```
+
+Create the Supabase Storage bucket `exam-assets`, then configure the server-only values from `.env.production.example`, including:
+
+- `SUPABASE_URL`
+- `SUPABASE_ANON_KEY`
+- `SUPABASE_SERVICE_ROLE_KEY`
+- real Factory / semantic QA providers
+- real QA2–QA7 providers
+- real TTS provider
+- `AUTH_DISABLED=false`
+
+The service-role key and all provider secrets must remain server-side.
+
+## Publish the Production 3000 data release
+
+After the Supabase schema and production environment are configured:
+
+```bash
+npm run release:production
+```
+
+This operation is idempotent. It imports/updates the controlled 3,000-question bank, publishes the three v1 production exam snapshots, skips matching snapshots that already exist, and refuses to overwrite a conflicting immutable version.
+
+The same operation is available to an authenticated admin at:
+
+```text
+GET  /api/v1/admin/production-release
+POST /api/v1/admin/production-release
+```
+
+A server-side `PRODUCTION_IMPORT_TOKEN` may also authorize one-time release automation through the dedicated import-token header.
+
+## Production smoke
+
+Configure `PRODUCTION_SMOKE_TOKEN` and optionally `PRODUCTION_URL`, then run:
+
+```bash
+npm run smoke:production
+```
+
+The smoke journey verifies the real three-level catalog, 48-question A1 exam, autosave/resume, active-answer secrecy, Listening audio, submit/idempotency, result review and history.
+
+## Release gate
+
+GitHub Actions blocks release on:
+
+```text
+npm ci
+→ TypeScript typecheck
+→ production dependency security audit
+→ unit/integration tests
+→ Next.js production build
+→ Playwright browser E2E
+```
+
+The controlled-bank release tests also enforce the 3,000-item invariant, per-level balance, metadata, audio presence and duplicate safeguards.
+
+## Architecture
 
 ```text
 Supabase Auth
-    -> HttpOnly session cookies
-    -> role boundary
-        -> Candidate Portal -> CandidateSession -> autosave -> server scoring
-        -> Admin -> Question QA -> Exam Blueprint -> immutable ExamVersion
+  -> HttpOnly session cookies
+  -> role boundary
+      -> Candidate -> CandidateSession -> autosave -> immutable ExamVersion -> server scoring
+      -> Admin -> Source/Factory -> QA1..QA7 -> Question Bank -> Production Release
+
+GitHub
+  -> QA Gate
+  -> main
+  -> Vercel deployment
 ```
 
-Published exam versions are insert-only snapshots. Editing Question Bank content or navigation rules does not mutate an already-published exam.
+Published ExamVersion snapshots are insert-only. Later edits to Question Bank content never mutate an existing published attempt contract.
 
-## Documentation
+## Key docs
+
+- `docs/PRODUCTION_3000_PLAN.md`
 - `docs/JFT_SIMULATOR_REQUIREMENTS.md`
 - `docs/EXAM_ENGINE_V2.md`
-- `docs/V3_QUESTION_FACTORY.md`
 - `docs/V4_BACKEND.md`
-- `docs/V4_1_API_INTEGRATION.md`
 - `docs/V4_2_AUTH_ACCOUNTS.md`
-- `docs/V4_3_ACCOUNT_LIFECYCLE.md`
-- `docs/API_V1.md`
 - `docs/V5_AI_QUESTION_FACTORY.md`
 - `docs/V5_1_LISTENING_FACTORY.md`
 - `docs/V5_1_1_QA_FACTORY.md`
-- `docs/V5_1_1_QA_REPORT.md`
 - `docs/V5_1_2_E2E_QA.md`
-- `docs/V5_1_2_E2E_QA_REPORT.md`
-
-
-## V4.3
-
-V4.3 adds candidate registration, email-verification-ready signup, password recovery, profile settings, account-backed attempt detail, admin role management, and explicit session-expiration UX. See `docs/V4_3_ACCOUNT_LIFECYCLE.md`.
-
-## V5 — AI Question Factory
-
-Admin route `/admin/factory` adds a controlled Generate → Automated QA → Human Review → Question Bank pipeline. The default `mock` provider requires no API key. Production AI can be connected through the provider-neutral HTTP adapter documented in `docs/V5_AI_QUESTION_FACTORY.md`.
-
-## V5.1 Listening Factory
-
-V5.1 adds a second semantic QA pass, near-duplicate detection, TTS rendering, generated-audio storage and listening preview. AI-generated questions remain in human review and Listening items cannot be approved until a playable audio asset exists. See `docs/V5_1_LISTENING_FACTORY.md`.
-
-## V5.1.1 QA gate
-
-V5.1.1 hardens exam/session integrity and introduces an automated release gate (`typecheck → test → build`). See `docs/V5_1_1_QA_FACTORY.md`.
-
-
-## V5.1.2 browser E2E gate
-
-V5.1.2 adds Playwright journeys for Candidate CBT, timeout auto-finalize, and Admin Factory → TTS → approve → publish. CI now runs browser E2E only after typecheck/unit/build are green. See `docs/V5_1_2_E2E_QA.md`.

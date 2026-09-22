@@ -136,7 +136,7 @@ test.describe.serial('JFT E2E release journeys',()=>{
       expect(question).not.toHaveProperty('provider');
     }
     expect(activePayload.session).not.toHaveProperty('candidateId');
-    const releaseDenied=await page.request.post('/api/v1/admin/a1-mvp-release');
+    const releaseDenied=await page.request.post('/api/v1/admin/production-release');
     expect(releaseDenied.status()).toBe(403);
 
     await page.evaluate(async()=>{await fetch('/api/v1/auth/logout',{method:'POST'});});
@@ -171,10 +171,13 @@ test.describe.serial('JFT E2E release journeys',()=>{
     await expect(page.getByRole('heading',{name:'Trình tạo đề'})).toBeVisible();
     await page.getByRole('button',{name:'Phát hành phiên bản'}).click();
     await expect(page.getByText(/Đã phát hành JFT-PRACTICE-A1-001-v\d+/)).toBeVisible({timeout:15_000});
-    await expect(page.getByTestId('a1-mvp-release-pack')).toBeVisible();
-    await page.getByRole('button',{name:'Phát hành 5 đề A1'}).click();
-    await expect(page.getByText(/Đã phát hành 5 đề A1/)).toBeVisible({timeout:15_000});
-    await expect(page.getByRole('button',{name:'Đã phát hành đủ 5 đề'})).toBeDisabled();
+    await expect(page.getByTestId('production-3000-release')).toBeVisible();
+    await expect(page.getByRole('button',{name:'Production 3000 đã phát hành'})).toBeDisabled();
+    const release=await page.request.post('/api/v1/admin/production-release');
+    expect(release.status()).toBe(200);
+    const releasePayload=await release.json();
+    expect(releasePayload.published).toEqual([]);
+    expect(releasePayload.skipped).toHaveLength(3);
   });
 
   test('admin can run source pilot into Factory Review',async({page})=>{

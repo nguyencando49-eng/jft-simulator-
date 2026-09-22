@@ -24,6 +24,7 @@ export async function GET(req:Request){
 }
 
 export async function POST(req:Request){
+  if(process.env.NODE_ENV==='production')return NextResponse.json({ok:false,error:'LEGACY_RELEASE_DISABLED',message:'The A1 mini MVP release is retired. Use /api/v1/admin/production-release.'},{status:410});
   try{
     await requireReleaseAuthorization(req);
     const repo=getRepository();

@@ -12,7 +12,9 @@ async function devLogin(page: Page, role: 'candidate'|'admin', email = `e2e-${ro
 async function startCandidateExam(page: Page, durationSeconds = 120, fromCatalog = false) {
   await page.context().addCookies([{name:'jft-e2e-duration-seconds',value:String(durationSeconds),url:'http://127.0.0.1:3100'}]);
   if(fromCatalog){
-    await page.getByTestId('candidate-exam-card').first().getByRole('link',{name:/^(Bắt đầu|Làm lại)$/}).click();
+    const mini=page.getByTestId('candidate-exam-card').filter({hasText:'E2E Mini Journey'}).first();
+    await expect(mini).toBeVisible();
+    await mini.getByRole('link',{name:/^(Bắt đầu|Làm lại)$/}).click();
     await expect(page).toHaveURL(/\/exam\?examVersionId=/);
   }else await page.goto('/exam');
   await expect(page.getByRole('heading',{name:'Hướng dẫn làm bài'})).toBeVisible();
@@ -168,7 +170,7 @@ test.describe.serial('JFT E2E release journeys',()=>{
     await page.goto('/admin/exams');
     await expect(page.getByRole('heading',{name:'Trình tạo đề'})).toBeVisible();
     await page.getByRole('button',{name:'Phát hành phiên bản'}).click();
-    await expect(page.getByText(/Đã phát hành JFT-MOCK-001-v\d+/)).toBeVisible({timeout:15_000});
+    await expect(page.getByText(/Đã phát hành JFT-PRACTICE-A1-001-v\d+/)).toBeVisible({timeout:15_000});
     await expect(page.getByTestId('a1-mvp-release-pack')).toBeVisible();
     await page.getByRole('button',{name:'Phát hành 5 đề A1'}).click();
     await expect(page.getByText(/Đã phát hành 5 đề A1/)).toBeVisible({timeout:15_000});

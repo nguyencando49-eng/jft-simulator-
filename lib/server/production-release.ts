@@ -104,7 +104,10 @@ export async function previewProductionRelease(repo:Repository):Promise<Producti
 
 export async function publishProductionRelease(repo:Repository,publishedAt=new Date().toISOString()){
   const bankImport=await importProductionQuestionBank(repo);
-  const pack=buildProductionExamReleasePack(await repo.listQuestions(),publishedAt);
+  const importedBank=await repo.listQuestions();
+  if(controlledBank(importedBank).length!==3000)throw new ProductionReleaseError('PRODUCTION_BANK_IMPORT_INCOMPLETE','Production database does not contain all 3,000 controlled release questions after import.');
+  const { seedQuestions }=await import('@/data/admin/seed');
+  const pack=buildProductionExamReleasePack(seedQuestions,publishedAt);
   const existing=await repo.listExamVersions();
   const existingById=new Map(existing.map(version=>[version.id,version]));
   const published:string[]=[],skipped:string[]=[];

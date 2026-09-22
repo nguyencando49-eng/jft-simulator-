@@ -32,6 +32,7 @@ export interface ProductionReleasePreview{
   expectedBankCount:number;
   publishedVersionIds:string[];
   missingVersionIds:string[];
+  conflictingVersionIds:string[];
   report:ProductionReleaseReport;
 }
 
@@ -96,10 +97,15 @@ export async function previewProductionRelease(repo:Repository):Promise<Producti
   const { seedQuestions }=await import('@/data/admin/seed');
   const pack=buildProductionExamReleasePack(seedQuestions,'2026-09-21T17:00:00.000Z');
   const existing=await repo.listExamVersions();
-  const existingIds=new Set(existing.map(version=>version.id));
-  const publishedVersionIds=pack.versions.filter(version=>existingIds.has(version.id)).map(version=>version.id);
-  const missingVersionIds=pack.versions.filter(version=>!existingIds.has(version.id)).map(version=>version.id);
-  return {ready:bankCount===3000&&missingVersionIds.length===0,bankCount,expectedBankCount:3000,publishedVersionIds,missingVersionIds,report:pack.report};
+  const existingById=new Map(existing.map(version=>[version.id,version]));
+  const publishedVersionIds:string[]=[],missingVersionIds:string[]=[],conflictingVersionIds:string[]=[];
+  for(const expected of pack.versions){
+    const current=existingById.get(expected.id);
+    if(!current)missingVersionIds.push(expected.id);
+    else if(snapshotSignature(current)===snapshotSignature(expected))publishedVersionIds.push(expected.id);
+    else conflictingVersionIds.push(expected.id);
+  }
+  return {ready:bankCount===3000&&missingVersionIds.length===0&&conflictingVersionIds.length===0,bankCount,expectedBankCount:3000,publishedVersionIds,missingVersionIds,conflictingVersionIds,report:pack.report};
 }
 
 export async function publishProductionRelease(repo:Repository,publishedAt=new Date().toISOString()){

@@ -12,7 +12,7 @@ import {
 import CandidateShell from './CandidateShell';
 import { Alert, Card, EmptyState, Skeleton, StatCard } from '@/components/ui';
 
-const levelLabel:Record<CandidateExamSummary['level'],string>={A1:'A1',A2.1:'A2.1',A2.2:'A2.2',MIXED:'Nhiều cấp độ'};
+const levelLabel:Record<CandidateExamSummary['level'],string>={A1:'A1','A2.1':'A2.1','A2.2':'A2.2',MIXED:'Nhiều cấp độ'};
 const sectionShort:Record<string,string>={script_vocabulary:'Từ vựng',conversation_expression:'Hội thoại',listening:'Nghe',reading:'Đọc'};
 
 export default function CandidateDashboard(){

@@ -16,7 +16,13 @@ jobs:
           node-version: 22
       - name: Install dependencies
         run: |
-          if [ -f package-lock.json ]; then npm ci; else npm install --no-audit --no-fund; fi
+          npm install --no-audit --no-fund
+      - name: Upload resolved lockfile
+        uses: actions/upload-artifact@v4
+        with:
+          name: resolved-package-lock
+          path: package-lock.json
+          retention-days: 1
       - run: npm run typecheck
       - name: Audit production dependencies
         run: npm audit --omit=dev --audit-level=high
@@ -38,7 +44,7 @@ jobs:
           node-version: 22
       - name: Install dependencies
         run: |
-          if [ -f package-lock.json ]; then npm ci; else npm install --no-audit --no-fund; fi
+          npm install --no-audit --no-fund
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
       - name: Run browser E2E

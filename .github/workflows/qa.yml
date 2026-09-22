@@ -23,6 +23,11 @@ jobs:
           name: resolved-package-lock
           path: package-lock.json
           retention-days: 1
+      - name: Emit resolved lockfile
+        run: |
+          echo '---LOCKFILE_BEGIN---'
+          cat package-lock.json
+          echo '---LOCKFILE_END---'
       - run: npm run typecheck
       - name: Audit production dependencies
         run: npm audit --omit=dev --audit-level=high

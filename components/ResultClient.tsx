@@ -27,12 +27,19 @@ export default function ResultClient({sessionId}:{sessionId?:string}){
 
   const sections=Object.entries(result.sectionScores) as [SectionId,{correct:number;total:number;percent:number}][];
   const weakest=[...sections].sort((a,b)=>a[1].percent-b[1].percent)[0];
-  return <CandidateShell><div className="candidate-page result-page">
-    <section className="result-hero">
-      <span className="eyebrow">KẾT QUẢ LUYỆN TẬP</span>
-      <h1>{title}</h1>
-      <div className="practice-score"><strong>{result.scorePercent}%</strong><span>Practice Score</span></div>
-      <p>{result.correct}/{result.total} câu đúng · {result.answered} câu đã trả lời</p>
+  const strongest=[...sections].sort((a,b)=>b[1].percent-a[1].percent)[0];
+  return <CandidateShell><div className="candidate-page result-page result-page-pro">
+    <section className="result-hero result-hero-pro">
+      <div className="result-heading">
+        <span className="eyebrow">KẾT QUẢ LUYỆN TẬP</span>
+        <h1>{title}</h1>
+        <p>Đã chấm trên snapshot đề bạn vừa hoàn thành.</p>
+      </div>
+      <div className="practice-score">
+        <span className="practice-score-label">Practice Score</span>
+        <strong>{result.scorePercent}%</strong>
+        <span>{result.correct}/{result.total} câu đúng · {result.answered} câu đã trả lời</span>
+      </div>
       <Alert tone="info">Điểm này chỉ phản ánh bài luyện tập và không tương đương điểm hoặc cấp độ JFT-Basic chính thức.</Alert>
     </section>
 
@@ -43,9 +50,14 @@ export default function ResultClient({sessionId}:{sessionId?:string}){
       <StatCard label="Tổng số câu" value={result.total}/>
     </div>
 
-    <div className="candidate-grid">
+    <div className="candidate-grid result-grid-pro">
       <Card title="Kết quả theo phần">{sections.map(([id,section])=><div className="result-section" key={id}><div><b>{labels[id]}</b><span>{section.correct}/{section.total} câu đúng</span></div><Progress value={section.percent}/></div>)}</Card>
-      <Card title="Bước tiếp theo" className="next-step"><h3>{weakest?`Ưu tiên ${labels[weakest[0]]}`:'Tiếp tục luyện tập'}</h3><p>{weakest&&weakest[1].percent<70?'Hãy xem lại các câu sai ở phần này trước khi làm bài tiếp theo.':'Kết quả khá cân bằng. Hãy tiếp tục luyện đều bốn phần.'}</p><div className="candidate-stack"><Link href="/candidate#exams" className="primary">Chọn bài tiếp theo</Link><Link href={`/candidate/history/${sessionId}`} className="secondary">Mở trong lịch sử</Link></div></Card>
+      <Card title="Bước tiếp theo" className="next-step result-next">
+        {strongest&&<div className="result-insight good"><span>Mạnh nhất</span><b>{labels[strongest[0]]}</b><small>{Math.round(strongest[1].percent)}%</small></div>}
+        {weakest&&<div className="result-insight focus"><span>Nên ưu tiên</span><b>{labels[weakest[0]]}</b><small>{Math.round(weakest[1].percent)}%</small></div>}
+        <p>{weakest&&weakest[1].percent<70?'Hãy xem lại các câu sai ở phần cần ưu tiên trước khi làm bài tiếp theo.':'Kết quả khá cân bằng. Hãy tiếp tục luyện đều bốn phần.'}</p>
+        <div className="candidate-stack"><Link href="/candidate#exams" className="primary">Chọn bài tiếp theo</Link><Link href={'/candidate/history/'+sessionId} className="secondary">Mở trong lịch sử</Link></div>
+      </Card>
     </div>
 
     <AnswerReview items={result.review}/>

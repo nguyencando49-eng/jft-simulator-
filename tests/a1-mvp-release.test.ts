@@ -62,17 +62,17 @@ describe('A1 MVP five-exam release pack',()=>{
     expect(frozenAfter).toEqual(frozenBefore);
   });
 
-  it('promotes only the 50 canonical authored seeds and leaves mass review content untouched',async()=>{
+  it('repairs authored-seed status without downgrading the controlled production release',async()=>{
     const repo=new MemoryRepository();
-    const authored=await repo.getExamDraft('JFT-MOCK-001');
+    const authored=await repo.getExamDraft('JFT-PRACTICE-A1-001');
     expect(authored).toBeTruthy();
     const sv001=(await repo.listQuestions()).find(question=>question.id==='SV-001')!;
     await repo.upsertQuestion({...sv001,status:'review'});
     const massBefore=(await repo.listQuestions()).find(question=>question.id.startsWith('PROD-'))!;
-    expect(massBefore.status).toBe('review');
-    const result=await syncApprovedAuthoredSeed(repo,'2026-08-23T00:00:00.000Z');
+    expect(massBefore.status).toBe('approved');
+    const result=await syncApprovedAuthoredSeed(repo,'2026-09-21T00:00:00.000Z');
     expect(result.promoted).toContain('SV-001');
     expect((await repo.listQuestions()).filter(question=>['SV-001','SV-002','CE-001'].includes(question.id)).every(question=>question.status==='approved')).toBe(true);
-    expect((await repo.listQuestions()).find(question=>question.id===massBefore.id)?.status).toBe('review');
+    expect((await repo.listQuestions()).find(question=>question.id===massBefore.id)?.status).toBe('approved');
   });
 });

@@ -1,6 +1,7 @@
 import { QuestionRecord } from '@/lib/admin-types';
 import { createHash } from 'node:crypto';
 import { FactoryCandidate, FactoryJob, FactoryRequest } from './factory-domain';
+import { isCategoryForSection } from './content-taxonomy';
 import { getFactoryProvider } from './factory-provider';
 import { runFactoryQa } from './factory-qa';
 import { runQuestionQa } from './qa';
@@ -191,6 +192,9 @@ export function validateFactoryRequest(input:FactoryRequest){
   if(!input.topic?.trim()) throw new Error('topic is required');
   if(!['script_vocabulary','conversation_expression','listening','reading'].includes(input.section)) throw new Error('invalid section');
   if(!['A1','A2.1','A2.2'].includes(input.level)) throw new Error('invalid level');
+  if(!input.canDo?.trim()) throw new Error('canDo is required');
+  if(!input.category?.trim()||!isCategoryForSection(input.section,input.category)) throw new Error('category is required and must match section');
+  if(input.section==='listening'&&!input.generateAudioScript) throw new Error('listening generation requires audioScript');
   if(!Number.isInteger(input.count)||input.count<1||input.count>20) throw new Error('count must be 1..20');
 }
 
@@ -198,12 +202,13 @@ export async function runFactoryJob(job:FactoryJob):Promise<FactoryJob>{
   const repo=getRepository(); const provider=getFactoryProvider(); const semantic=getSemanticQaProvider();
   job.status='running'; job.updatedAt=new Date().toISOString(); await repo.saveFactoryJob(job);
   try{
+    if(process.env.NODE_ENV==='production'&&process.env.E2E_TEST_MODE!=='true'&&(provider.name==='mock'||semantic.name==='mock-semantic')) throw new Error('Production Question Factory requires non-mock generation and semantic QA providers.');
     const drafts=await provider.generate(job.request);
     const candidates:FactoryCandidate[]=[];
     for(let i=0;i<drafts.length;i++){
       const d=drafts[i], now=new Date().toISOString();
-      const q:QuestionRecord={id:`AI-${job.request.section.toUpperCase().replaceAll('_','-')}-${job.id.slice(0,8)}-${String(i+1).padStart(3,'0')}`,section:job.request.section,type:job.request.section==='listening'?'audio_choice':'choice',level:job.request.level,instruction:d.instruction,prompt:d.prompt,choices:d.choices,answer:d.answer,explanationVi:job.request.includeExplanation?d.explanationVi:'',audioSrc:undefined,tags:Array.from(new Set([...(d.tags||[]),job.request.topic,job.request.canDo||''].filter(Boolean))),version:1,status:'review',source:'ai',createdAt:now,updatedAt:now};
-      const bare:Omit<FactoryCandidate,'qa'>={id:crypto.randomUUID(),question:q,audioScript:job.request.generateAudioScript?d.audioScript:undefined,generation:{provider:provider.name,model:provider.model,promptVersion:'v5.1',createdAt:now},audio:q.type==='audio_choice'?{status:'pending'}:undefined};
+      const q:QuestionRecord={id:`AI-${job.request.section.toUpperCase().replaceAll('_','-')}-${job.id.slice(0,8)}-${String(i+1).padStart(3,'0')}`,section:job.request.section,type:job.request.section==='listening'?'audio_choice':'choice',level:job.request.level,instruction:d.instruction,prompt:d.prompt,choices:d.choices,answer:d.answer,explanationVi:job.request.includeExplanation?d.explanationVi:'',audioSrc:undefined,tags:Array.from(new Set([...(d.tags||[]),`category:${job.request.category||''}`,`topic:${job.request.topic}`,`can-do:${job.request.canDo||''}`,`difficulty:${job.request.difficulty}`].filter(Boolean))),version:1,status:'review',source:'ai',createdAt:now,updatedAt:now};
+      const bare:Omit<FactoryCandidate,'qa'>={id:crypto.randomUUID(),question:q,audioScript:job.request.generateAudioScript?d.audioScript:undefined,generation:{provider:provider.name,model:provider.model,promptVersion:'v5.2',createdAt:now},audio:q.type==='audio_choice'?{status:'pending'}:undefined};
       const semanticQa=await semantic.review(bare,job.request);
       const withSemantic={...bare,semanticQa};
       candidates.push({...withSemantic,qa:runFactoryQa(withSemantic)});
@@ -230,7 +235,9 @@ export async function renderFactoryCandidateAudio(jobId:string,candidateId:strin
   const c=job.candidates.find(x=>x.id===candidateId); if(!c) throw new Error('Factory candidate not found');
   if(c.question.type!=='audio_choice') throw new Error('Audio rendering is only available for listening candidates.');
   if(!c.audioScript?.trim()) throw new Error('Audio script is required before TTS rendering.');
-  const tts=getTtsProvider(); c.audio={status:'pending',provider:tts.name,voice:tts.voice}; await repo.saveFactoryJob(job);
+  const tts=getTtsProvider();
+  if(process.env.NODE_ENV==='production'&&process.env.E2E_TEST_MODE!=='true'&&tts.name==='mock') throw new Error('Production Listening Factory requires a real TTS provider.');
+  c.audio={status:'pending',provider:tts.name,voice:tts.voice}; await repo.saveFactoryJob(job);
   try{
     const rendered=await tts.synthesize(c.audioScript); const stored=await persistGeneratedAudio(rendered,job.id,c.id); const now=new Date().toISOString();
     c.question.audioSrc=stored.src; c.question.updatedAt=now; c.audio={status:'ready',provider:rendered.provider,voice:rendered.voice,storage:stored.storage,renderedAt:now};

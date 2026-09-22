@@ -57,6 +57,7 @@ export async function requestAzureOpenAiJson<T>(request: AzureOpenAiJsonRequest)
     response = await fetch(chatCompletionsUrl(request.endpoint), {
       method: 'POST',
       headers: { 'content-type': 'application/json', 'api-key': apiKey },
+      signal:AbortSignal.timeout(Number(process.env.AI_REQUEST_TIMEOUT_MS||45000)),
       body: JSON.stringify({
         model: deployment,
         messages: [

@@ -17,52 +17,60 @@ const names=['アイン','ビン','チャン','ディン','エマ','ファン','
 const places=['さくらセンター','ひかり駅','みどり会社','あおば公園','中央図書館','北市民館','海浜ホール','つばさ病院','南サービスセンター','若葉店','第一工場','東町会館'];
 const days=['月曜日','火曜日','水曜日','木曜日','金曜日','土曜日','日曜日'];
 const actions=['確認します','準備します','受付へ行きます','担当者に聞きます','メモします','電話します','入口で待ちます','案内を読みます'];
+const sceneNotes=['受付の前に情報を確認しています。','同僚と予定を確認しています。','案内を見ながら準備しています。','出かける前に必要なことを確認しています。','仕事を始める前に確認しています。','休憩時間に相談しています。','電話をする前に内容を確認しています。','メモを見ながら確認しています。','担当者に聞く前に整理しています。','今日の予定を確認しています。','必要な情報を一つずつ整理しています。'];
+const vocabularyFocus:Record<string,string>={
+  'A1-N03':'名前','A1-N04':'家族','A1-N05':'野菜','A1-N06':'注文','A1-N07':'台所','A1-N08':'会議室','A1-N09':'昼休み','A1-N10':'ホチキス','A1-N11':'漫画','A1-N12':'飲み会','A1-N13':'バス','A1-N14':'温泉','A1-N15':'売り場','A1-N16':'値段','A1-N17':'休み','A1-N18':'富士山',
+  'A21-S01':'仕事','A21-S02':'ゲーム','A21-S03':'季節','A21-S04':'台風','A21-S05':'町','A21-S06':'信号','A21-S07':'待ち合わせ','A21-S08':'動物園','A21-S09':'読み方','A21-S10':'日本語教室','A21-S11':'担当','A21-S12':'弁当','A21-S13':'作業','A21-S14':'有給休暇','A21-S15':'診察','A21-S16':'睡眠','A21-S17':'お守り','A21-S18':'送別会',
+  'A22-S01':'引っ越し','A22-S02':'性格','A22-S03':'アレルギー','A22-S04':'調味料','A22-S05':'宿泊','A22-S06':'旅行','A22-S07':'雨天','A22-S08':'屋台','A22-S09':'成人の日','A22-S10':'服装','A22-S11':'返品','A22-S12':'掃除機','A22-S13':'展示','A22-S14':'美容院','A22-S15':'会議室','A22-S16':'避難','A22-S17':'上達','A22-S18':'将来',
+};
+
+function crossUnitTitles(unit:CurriculumCatalogUnit,n:number){
+  const pool=curriculumCatalog.filter(item=>item.level===unit.level&&item.id!==unit.id&&item.topic!==unit.topic).map(item=>item.title);
+  const unique=Array.from(new Set(pool));
+  const start=(n*7+unit.lesson*3)%Math.max(1,unique.length);
+  return [...unique.slice(start),...unique.slice(0,start)].slice(0,3);
+}
 
 function rotate<T>(items:T[],shift:number){return items.map((_,i)=>items[(i-shift+items.length)%items.length]);}
 function decorate<T extends Question>(q:T,index:number):T{const shift=(index*3+1)%q.choices.length;return {...q,choices:rotate(q.choices,shift),answer:(q.answer+shift)%q.choices.length};}
 function context(unit:CurriculumCatalogUnit,n:number){return {name:names[n%names.length],place:places[(n*5+unit.lesson)%places.length],day:days[(n*3+unit.lesson)%days.length],hour:8+(n*7)%11,minute:[0,10,15,20,30,40,45,50][n%8],anchor:unit.anchors[n%4],other:unit.anchors.filter((_,i)=>i!==n%4)};}
 
 function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,serial:number):ProductionCandidate{
-  const c=context(unit,n),id=`PROD-${unit.level.replace('.','')}-${section.slice(0,2).toUpperCase()}-${String(serial).padStart(4,'0')}`;
+  const c=context(unit,n),sceneNote=sceneNotes[serial%sceneNotes.length],id=`PROD-${unit.level.replace('.','')}-${section.slice(0,2).toUpperCase()}-${String(serial).padStart(4,'0')}`;
   const practicalDate=`${1+(serial*5)%12}月${1+(serial*11)%28}日`;
-  const base={id,level:unit.level,section,canDo:unit.canDo,knowledgeUnitIds:[unit.id],sourceDocument:unit.sourceDocument,productionStatus:'REVIEW' as const,tags:[`category:${section}`,`topic:${unit.topic}`,`can-do:${unit.id}`,`lesson:${unit.lesson}`,`difficulty:${n%10<3?'easy':n%10<8?'medium':'hard'}`]};
+  const base={id,level:unit.level,section,canDo:unit.canDo,knowledgeUnitIds:[unit.id],sourceDocument:unit.sourceDocument,productionStatus:'REVIEW' as const,tags:[`topic:${unit.topic}`,`can-do:${unit.id}`,`lesson:${unit.lesson}`,`difficulty:${n%10<3?'easy':n%10<8?'medium':'hard'}`,`generator:controlled-v2`,`section:${section}`]};
   if(section==='script_vocabulary'){
-    const categories=['word_meaning','word_usage','kanji_reading','kanji_meaning_usage'];
-    const schedule=`予定は${practicalDate}の${c.hour}時${c.minute?`${c.minute}分`:''}です。`;
-    const detail=[
-      `そのあと、${actions[(n+1)%actions.length]}。`,
-      `${c.hour}時までに、${actions[(n+2)%actions.length]}。`,
-      `わからないときは、${c.place}の人に聞きます。`,
-      `案内を読んでから、${actions[(n+3)%actions.length]}。`,
-      `${c.day}の予定もいっしょに確認します。`,
-      `${c.anchor}のメモを見て、${actions[(n+4)%actions.length]}。`,
-      `${c.name}さんは入口で短いメモを書きます。`,
-      `必要なときは電話でも確認します。`,
-    ][(n+unit.lesson)%8];
-    const prompts=[
-      `${c.place}で、${c.name}さんは「${c.anchor}」について聞きたいです。関係がいちばん深いことばはどれですか。`,
-      `${c.day}、${c.name}さんは${unit.title}の場面で使うことばを探しています。いちばん合うものはどれですか。`,
-      `${c.place}の「${unit.title}」という案内で大切なことばを一つ選びます。必要なことばはどれですか。`,
-      `${c.name}さんは${unit.title}について短いメモを書きます。中心になることばはどれですか。`,
-    ];
-    const q:ProductionCandidate={...base,category:categories[n%4],type:'choice',instruction:'ことばを見て、いちばんいいものを一つ選んでください。',prompt:`${prompts[n%prompts.length]}\n${schedule} ${detail}`,choices:[c.anchor,...c.other],answer:0,explanationVi:`Từ trọng tâm của tình huống “${unit.title}” trong đơn vị kiến thức ${unit.id} là 「${c.anchor}」.`};
+    const focus=vocabularyFocus[unit.id]||unit.anchors[0];
+    const q:ProductionCandidate={...base,category:'word_meaning',tags:[...base.tags,'category:word_meaning'],type:'choice',instruction:'ことばを見て、いちばん関係が深い場面を一つ選んでください。',prompt:practicalDate+'（'+c.day+'）'+c.hour+'時ごろ、'+c.place+'で'+c.name+'さんが「'+focus+'」ということばを確認しています。'+sceneNote+'\nどの場面で使うことばですか。',choices:[unit.title,...crossUnitTitles(unit,n)],answer:0,explanationVi:'「'+focus+'」 là từ/cách nói thuộc tình huống “'+unit.title+'” trong bài '+unit.lesson+'.'};
     return decorate(q,serial);
   }
   if(section==='conversation_expression'){
+    const mode=(n+unit.lesson)%4;
     const requests=[
-      `${c.name}：すみません。${c.anchor}について教えていただけますか。`,
-      `${c.name}：${c.day}に${c.place}へ行きたいんですが、少し聞いてもいいですか。`,
-      `${c.name}：${unit.title}のことで、確認したいことがあります。`,
-      `${c.name}：このあと${c.anchor}を${actions[n%actions.length]}。これでいいですか。`,
+      c.name+'：すみません。少し聞いてもいいですか。',
+      c.name+'：すみません。いっしょに確認してもらえますか。',
+      c.name+'：この予定で進めてもいいですか。',
+      c.name+'：少し手伝ってもらえますか。',
     ];
-    const choices=['はい。わかりました。いっしょに確認しましょう。','いいえ、昨日は雨でした。','いただきます。ごちそうさまでした。','その電車は青いです。'];
-    const q:ProductionCandidate={...base,category:n%2?'expression':'grammar',type:'choice',instruction:'会話を完成させるために、いちばんいいものを一つ選んでください。',prompt:`【${unit.title}】\n${practicalDate}の予定について話しています。\n${requests[n%requests.length]}\n担当者：＿＿＿＿＿＿。`,choices,answer:0,explanationVi:'Người phụ trách đồng ý hỗ trợ và đề nghị cùng kiểm tra, phù hợp với lời hỏi/nhờ trong hội thoại.'};
+    const intentions=[
+      '質問してよいと伝える返事',
+      'いっしょに確認すると伝える返事',
+      'その予定でよいと伝える返事',
+      '手伝うと伝える返事',
+    ];
+    const responseSets=[
+      ['はい、どうぞ。質問してください。','すみません、今は席を外します。','もう一度、予定を確認してください。','受付は向こうにあります。'],
+      ['わかりました。いっしょに確認しましょう。','さっき一人で確認しました。','あとで担当者に聞いてください。','確認は明日までです。'],
+      ['はい、その予定で大丈夫です。','いいえ、昨日の予定でした。','予定は受付に置いてあります。','終わった予定を見ました。'],
+      ['はい、必要なところを手伝います。','すみません、担当者は別の人です。','手伝いは昨日終わりました。','必要な物は受付にあります。'],
+    ];
+    const q:ProductionCandidate={...base,category:'expression',tags:[...base.tags,'category:expression'],type:'choice',instruction:'会話を読んで、指定された意味になる返事を一つ選んでください。',prompt:'【'+unit.title+'】\n'+practicalDate+'（'+c.day+'）'+c.hour+'時ごろ、'+c.place+'での会話です。'+sceneNote+'\n'+requests[mode]+'\n「'+intentions[mode]+'」はどれですか。',choices:responseSets[mode],answer:0,explanationVi:'Đáp án đúng thể hiện chính xác ý định giao tiếp được nêu trong câu hỏi; các lựa chọn còn lại là những phản hồi khác chức năng.'};
     return decorate(q,serial);
   }
   if(section==='listening'){
     const next=actions[(n+2)%actions.length],later=actions[(n+5)%actions.length];
     const script=`${c.place}からのお知らせです。${c.day}の${c.hour}時${c.minute?`${c.minute}分`:''}に、${c.anchor}について説明します。はじめに${next}。そのあと${later}。わからないときは受付に聞いてください。`;
-    const q:ProductionCandidate={...base,category:['conversation','shop_public','announcement_instruction'][n%3],type:'audio_choice',instruction:'音声を聞いて、いちばんいい答えを一つ選んでください。',prompt:`${practicalDate}に行われる、${c.place}の${c.day}の「${unit.title}」について聞きます。${c.name}さんは、はじめに何をしますか。`,choices:[next,later,'すぐ家に帰ります','何もしません'],answer:0,explanationVi:`Thông báo yêu cầu trước tiên “${next}”, sau đó mới “${later}”.`,audioSrc:`/audio/production/${id.toLowerCase()}.mp3`,audioScript:script};
+    const q:ProductionCandidate={...base,category:'announcement_instruction',tags:[...base.tags,'category:announcement_instruction'],type:'audio_choice',instruction:'音声を聞いて、いちばんいい答えを一つ選んでください。',prompt:`${practicalDate}に${c.place}で行われる「${unit.title}」のお知らせを聞きます。はじめに何をしますか。`,choices:[next,later,actions[(n+3)%actions.length],actions[(n+6)%actions.length]],answer:0,explanationVi:`Thông báo yêu cầu trước tiên “${next}”, sau đó mới “${later}”.`,audioSrc:`/audio/production/${id.toLowerCase()}.mp3`,audioScript:script};
     return decorate(q,serial);
   }
   const closeHour=c.hour+2,first=actions[n%actions.length],second=actions[(n+3)%actions.length];
@@ -73,11 +81,30 @@ function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,seri
     `仕事のメモ\n${c.name}さんは${c.place}で${c.anchor}を確認してください。${c.day}の${c.hour}時から始めます。終わったら${second}。`,
   ];
   const room=`${1+(serial*7)%9}階の第${1+(serial*13)%20}会議室`;
-  const q:ProductionCandidate={...base,category:n%2?'information_search':'content_comprehension',type:'choice',instruction:'文章を読んで、いちばんいい答えを一つ選んでください。',prompt:`${practicalDate}の予定です。会場は${room}です。\n${materials[n%materials.length]}\n\n最初に何をしますか。`,choices:[first,second,'家で休みます','予定を全部中止します'],answer:0,explanationVi:`Thông tin thực hành yêu cầu hành động đầu tiên là “${first}”.`};
+  const q:ProductionCandidate={...base,category:'content_comprehension',tags:[...base.tags,'category:content_comprehension'],type:'choice',instruction:'文章を読んで、いちばんいい答えを一つ選んでください。',prompt:`${practicalDate}の予定です。会場は${room}です。\n${materials[n%materials.length]}\n\n最初に何をしますか。`,choices:[first,second,actions[(n+5)%actions.length],actions[(n+6)%actions.length]],answer:0,explanationVi:`Thông tin thực hành yêu cầu hành động đầu tiên là “${first}”.`};
   return decorate(q,serial);
 }
 
-const base=[...approvedSeedQuestions,...a1Lesson03Candidates];
+function normalizeBaseQuestion(q:Question,index:number):Question{
+  const defaults:Record<SectionId,string>={script_vocabulary:'word_usage',conversation_expression:'expression',listening:'conversation',reading:'content_comprehension'};
+  const aliases:Record<string,string>={
+    'word-meaning':'word_meaning','word-usage':'word_usage','kanji-reading':'kanji_reading','kanji-meaning-usage':'kanji_meaning_usage',
+    'shop-public-place':'shop_public','announcement-instruction':'announcement_instruction',
+    'comprehending-content':'content_comprehension','information-search':'information_search',
+  };
+  const tags=q.tags||[];
+  const rawCategory=tags.find(tag=>tag.startsWith('category:'))?.slice(9)||defaults[q.section];
+  const category=aliases[rawCategory]||rawCategory.replaceAll('-','_');
+  const topic=tags.find(tag=>tag.startsWith('topic:'))?.slice(6)||'general';
+  const canDo=tags.find(tag=>tag.startsWith('can-do:'))?.slice(7)||`curated-${q.section}`;
+  const difficulty=tags.find(tag=>tag.startsWith('difficulty:'))?.slice(11)||(index%5===0?'hard':index%2===0?'medium':'easy');
+  return {...q,tags:Array.from(new Set([
+    ...tags.filter(tag=>!tag.startsWith('category:')&&!tag.startsWith('topic:')&&!tag.startsWith('can-do:')&&!tag.startsWith('difficulty:')),
+    `category:${category}`,`topic:${topic}`,`can-do:${canDo}`,`difficulty:${difficulty}`,'generator:curated-base',`section:${q.section}`,
+  ]))};
+}
+
+const base=[...approvedSeedQuestions,...a1Lesson03Candidates].map(normalizeBaseQuestion);
 const generated:ProductionCandidate[]=[];
 let serial=1;
 for(const level of ['A1','A2.1','A2.2'] as const){
@@ -91,5 +118,19 @@ for(const level of ['A1','A2.1','A2.2'] as const){
   }
 }
 
+// Add 900 controlled non-Listening questions after the legacy 2,100 layout.
+// Appending them keeps every existing Listening ID/audio asset stable.
+for(const level of ['A1','A2.1','A2.2'] as const){
+  const units=curriculumCatalog.filter(unit=>unit.level===level);
+  for(const section of ['script_vocabulary','conversation_expression','reading'] as const){
+    for(let i=0;i<100;i++){
+      const unit=units[(i*5+3)%units.length];
+      const n=1000+Math.floor(i/units.length)*7+(i%units.length);
+      generated.push(makeQuestion(unit,section,n,serial++));
+    }
+  }
+}
+
 export const massQuestionCandidates:ProductionCandidate[]=generated;
 export const completeProductionQuestionSet:Question[]=[...base,...massQuestionCandidates];
+if(completeProductionQuestionSet.length!==3000)throw new Error('Production bank must contain exactly 3,000 questions.');

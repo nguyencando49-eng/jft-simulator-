@@ -38,9 +38,10 @@ export class HttpDifficultyCalibrationProvider implements DifficultyCalibrationP
   name='http-difficulty-calibration';model=process.env.DIFFICULTY_CALIBRATION_MODEL||'external';
   async estimate(input:DifficultyCalibrationInput):Promise<unknown>{
     const endpoint=process.env.DIFFICULTY_CALIBRATION_ENDPOINT;if(!endpoint)throw new Error('DIFFICULTY_CALIBRATION_ENDPOINT is required for the HTTP provider.');
-    const response=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json',...(process.env.DIFFICULTY_CALIBRATION_API_KEY?{authorization:`Bearer ${process.env.DIFFICULTY_CALIBRATION_API_KEY}`}:{})},body:JSON.stringify({task:'difficulty_calibration_profile',promptVersion:DIFFICULTY_CALIBRATION_PROMPT_VERSION,calibrationVersion:DIFFICULTY_CALIBRATION_POLICY_V1.version,systemPrompt:DIFFICULTY_CALIBRATION_SYSTEM_PROMPT_V1,input})});
+    const response=await fetch(endpoint,{method:'POST',signal:AbortSignal.timeout(Number(process.env.AI_REQUEST_TIMEOUT_MS||45000)),headers:{'content-type':'application/json',...(process.env.DIFFICULTY_CALIBRATION_API_KEY?{authorization:`Bearer ${process.env.DIFFICULTY_CALIBRATION_API_KEY}`}:{})},body:JSON.stringify({task:'difficulty_calibration_profile',promptVersion:DIFFICULTY_CALIBRATION_PROMPT_VERSION,calibrationVersion:DIFFICULTY_CALIBRATION_POLICY_V1.version,systemPrompt:DIFFICULTY_CALIBRATION_SYSTEM_PROMPT_V1,input})});
     if(!response.ok)throw new Error(`Difficulty calibration provider failed: ${response.status}`);return response.json();
   }
 }
 
 export function getDifficultyCalibrationProvider():DifficultyCalibrationProvider{return process.env.DIFFICULTY_CALIBRATION_PROVIDER==='http'?new HttpDifficultyCalibrationProvider():new MockDifficultyCalibrationProvider()}
+export function difficultyCalibrationProviderMode(){return process.env.DIFFICULTY_CALIBRATION_PROVIDER==='http'?'http':'mock'}

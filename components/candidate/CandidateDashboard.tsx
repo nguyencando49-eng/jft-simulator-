@@ -20,6 +20,7 @@ export default function CandidateDashboard(){
   const [profile,setProfile]=useState<UserProfile|null>(null);
   const [error,setError]=useState('');
   const [loading,setLoading]=useState(true);
+  const [levelFilter,setLevelFilter]=useState<'ALL'|'A1'|'A2.1'|'A2.2'>('ALL');
 
   useEffect(()=>{
     void Promise.all([candidateApi.attempts(),candidateApi.publishedExams(),authApi.me()])
@@ -40,6 +41,7 @@ export default function CandidateDashboard(){
     attempts.find(item=>item.examVersionId===exam.id),
   ])),[attempts,exams]);
   const learnerName=profile?.displayName?.trim()||profile?.email?.split('@')[0]||'bạn';
+  const visibleExams=useMemo(()=>levelFilter==='ALL'?exams:exams.filter(exam=>exam.level===levelFilter),[exams,levelFilter]);
 
   return <CandidateShell><div className="candidate-page">
     {error&&<Alert tone="danger" title="Không thể tải trang">{error}</Alert>}
@@ -61,9 +63,9 @@ export default function CandidateDashboard(){
 
       <div className="candidate-grid">
         <div className="candidate-stack">
-          <Card title="Đề luyện tập hiện có" className="candidate-card" action={<span className="ui-badge info">CBT</span>}>
+          <Card title="Đề luyện tập hiện có" className="candidate-card" action={<label className="catalog-filter"><span className="sr-only">Lọc theo cấp độ</span><select value={levelFilter} onChange={e=>setLevelFilter(e.target.value as typeof levelFilter)}><option value="ALL">Tất cả cấp độ</option><option value="A1">A1</option><option value="A2.1">A2.1</option><option value="A2.2">A2.2</option></select></label>}>
             <div id="exams" className="exam-catalog">
-              {exams.length?exams.map(exam=>{
+              {visibleExams.length?visibleExams.map(exam=>{
                 const attempt=recentByExam.get(exam.id);
                 const isActive=attempt?.status==='active'&&Date.now()<new Date(attempt.expiresAt).getTime();
                 const completed=attempt?.status==='submitted';
@@ -77,7 +79,7 @@ export default function CandidateDashboard(){
                     <Link href={isActive&&attempt?`/exam?sessionId=${encodeURIComponent(attempt.id)}`:`/exam?examVersionId=${encodeURIComponent(exam.id)}`} className="primary">{isActive?'Tiếp tục':completed?'Làm lại':'Bắt đầu'}</Link>
                   </div>
                 </article>;
-              }):<EmptyState title="Chưa có đề luyện tập" description="Các đề luyện tập đang được chuẩn bị. Vui lòng quay lại sau."/>}
+              }):<EmptyState title={exams.length?'Không có đề ở cấp độ này':'Chưa có đề luyện tập'} description={exams.length?'Chọn cấp độ khác để xem các đề đang phát hành.':'Các đề luyện tập đang được chuẩn bị. Vui lòng quay lại sau.'}/>}
             </div>
           </Card>
 

@@ -1,12 +1,12 @@
 import { FactoryRequest, GeneratedQuestionDraft } from './factory-domain';
 import { AZURE_OPENAI_PROVIDER, azureOpenAiConfig, requestAzureOpenAiJson } from './azure-openai';
 
-export const JFT_FACTORY_AZURE_OPENAI_PROMPT_VERSION='JFT_FACTORY_AZURE_OPENAI_V1';
+export const JFT_FACTORY_AZURE_OPENAI_PROMPT_VERSION='JFT_FACTORY_AZURE_OPENAI_V2';
 const AZURE_FACTORY_SYSTEM_PROMPT=`You are a Japanese-language assessment author for an unofficial JFT-Basic practice simulator.
 Create original, practical A1/A2.1/A2.2 multiple-choice questions from the supplied brief. Never copy official questions or claim official calibration.
 Return JSON only with this exact top-level shape: {"questions":[...]}. Each question must contain:
 instruction (Japanese string), prompt (Japanese string), choices (exactly four Japanese strings), answer (zero-based integer index), explanationVi (concise Vietnamese explanation), tags (string array), and optional audioScript (Japanese string).
-There must be exactly one defensible answer. Distractors must be plausible and the same semantic or grammatical type. For listening, the answer-discriminating information must occur in audioScript and must not be revealed by visible text. For non-listening items, omit audioScript. Obey the requested count, level, section, category, Can-do, topic, difficulty and source originality rules.`;
+There must be exactly one defensible answer. Distractors must be plausible, grammatical, similar in length, and belong to the same decision space as the correct answer.\nSection rules:\n- script_vocabulary: assess the requested word/kanji category directly; never repeat the keyed option in a way that reveals the answer.\n- conversation_expression: every option must be a plausible conversational utterance; the keyed option must be best because of context/register, not because the others are nonsense.\n- listening: visible text must not reveal the answer; all answer-discriminating evidence must be in audioScript; use a practical conversation, shop/public-place interaction, or announcement matching the requested category.\n- reading: include a practical message, notice, email, schedule, sign, or short document; distractors must be credible misreadings of the same document.\nKeep A1 concise and concrete; A2.1 may require one inference; A2.2 may combine two pieces of practical information. Do not estimate level from text length alone.\nFor non-listening items, omit audioScript. Obey the requested count, level, section, category, Can-do, topic, difficulty and source originality rules. Never use unrelated stock or nonsense distractors.`;
 
 export interface FactoryProvider {
   name: string;
@@ -63,7 +63,7 @@ class HttpFactoryProvider implements FactoryProvider {
   async generate(input:FactoryRequest){
     const endpoint=process.env.AI_FACTORY_ENDPOINT;
     if(!endpoint) throw new Error('AI_FACTORY_ENDPOINT is required for http provider.');
-    const res=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json',...(process.env.AI_FACTORY_API_KEY?{authorization:`Bearer ${process.env.AI_FACTORY_API_KEY}`}:{})},body:JSON.stringify({task:'jft_question_generation',promptVersion:'v5.1',input})});
+    const res=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json',...(process.env.AI_FACTORY_API_KEY?{authorization:`Bearer ${process.env.AI_FACTORY_API_KEY}`}:{})},signal:AbortSignal.timeout(Number(process.env.AI_REQUEST_TIMEOUT_MS||45000)),body:JSON.stringify({task:'jft_question_generation',promptVersion:'v5.2',input})});
     if(!res.ok) throw new Error(`Factory provider failed: ${res.status}`);
     const json=await res.json() as {questions?:GeneratedQuestionDraft[]};
     if(!Array.isArray(json.questions)) throw new Error('Factory provider response must contain questions[].');

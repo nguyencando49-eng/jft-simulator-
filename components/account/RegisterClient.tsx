@@ -44,7 +44,7 @@ export default function RegisterClient(){
           <form onSubmit={submit} className="auth-form">
             <label>Tên hiển thị<input value={name} onChange={e=>setName(e.target.value)} maxLength={80} autoComplete="name" placeholder="Tên bạn muốn hiển thị"/></label>
             <label>Email<input type="email" value={email} onChange={e=>setEmail(e.target.value)} autoComplete="email" placeholder="you@example.com" required/></label>
-            <label>Mật khẩu<div className="password-field"><input type={show?'text':'password'} value={password} onChange={e=>setPassword(e.target.value)} minLength={8} autoComplete="new-password" required/><button type="button" onClick={()=>setShow(v=>!v)} aria-label={show?'Ẩn mật khẩu':'Hiện mật khẩu'}>{show?'Ẩn':'Hiện'}</button></div><small>Tối thiểu 8 ký tự.</small></label>
+            <label>Mật khẩu<div className="password-field"><input type={show?'text':'password'} value={password} onChange={e=>setPassword(e.target.value)} minLength={8} autoComplete="new-password" required/><button type="button" onClick={()=>setShow(v=>!v)} aria-label={show?'Ẩn nội dung':'Hiện nội dung'}>{show?'Ẩn':'Hiện'}</button></div><small>Tối thiểu 8 ký tự.</small></label>
             <button className="primary auth-submit" disabled={loading}>{loading?'Đang tạo tài khoản…':'Tạo tài khoản'}</button>
           </form>
           <div className="auth-links"><Link href="/login">Đã có tài khoản? Đăng nhập</Link></div>

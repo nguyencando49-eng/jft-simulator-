@@ -51,7 +51,7 @@ export default function LoginClient(){
         {error&&<Alert tone="danger">{error}</Alert>}
         <form onSubmit={submit} className="auth-form">
           <label>Email<input type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder={dev?'dev@example.com':'you@example.com'} autoComplete="email" required={!dev}/></label>
-          {!dev&&<label>Mật khẩu<div className="password-field"><input type={show?'text':'password'} value={password} onChange={e=>setPassword(e.target.value)} autoComplete="current-password" required/><button type="button" onClick={()=>setShow(v=>!v)} aria-label={show?'Ẩn mật khẩu':'Hiện mật khẩu'}>{show?'Ẩn':'Hiện'}</button></div></label>}
+          {!dev&&<label>Mật khẩu<div className="password-field"><input type={show?'text':'password'} value={password} onChange={e=>setPassword(e.target.value)} autoComplete="current-password" required/><button type="button" onClick={()=>setShow(v=>!v)} aria-label={show?'Ẩn nội dung':'Hiện nội dung'}>{show?'Ẩn':'Hiện'}</button></div></label>}
           {dev&&<label>Vai trò phát triển<select value={role} onChange={e=>setRole(e.target.value as UserRole)}><option value="candidate">Học viên</option><option value="admin">Quản trị viên</option></select></label>}
           <button className="primary auth-submit" disabled={loading}>{loading?'Đang đăng nhập…':'Đăng nhập'}</button>
         </form>

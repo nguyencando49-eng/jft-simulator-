@@ -40,9 +40,19 @@ export function auditControlledProductionBank(questions:Question[]=completeProdu
   }
   const generated=questions.filter(question=>question.id.startsWith('PROD-'));
   const requiredTaskDiversity:Record<SectionId,number>={script_vocabulary:2,conversation_expression:8,listening:3,reading:4};
-  for(const section of sections){
-    const tasks=new Set(generated.filter(question=>question.section===section).map(question=>tagValue(question,'task:')).filter(Boolean));
-    if(tasks.size<requiredTaskDiversity[section])issues.push({code:'TASK_DIVERSITY',message:`${section} requires at least ${requiredTaskDiversity[section]} task blueprints; found ${tasks.size}.`});
+  const maxTaskShare:Record<SectionId,number>={script_vocabulary:.60,conversation_expression:.20,listening:.45,reading:.35};
+  for(const level of levels){
+    for(const section of sections){
+      const group=generated.filter(question=>question.level===level&&question.section===section);
+      const counts=new Map<string,number>();
+      for(const question of group){
+        const task=tagValue(question,'task:');
+        if(task)counts.set(task,(counts.get(task)||0)+1);
+      }
+      if(counts.size<requiredTaskDiversity[section])issues.push({code:'TASK_DIVERSITY',message:`${level}/${section} requires at least ${requiredTaskDiversity[section]} task blueprints; found ${counts.size}.`});
+      const largest=Math.max(0,...counts.values());
+      if(group.length&&largest/group.length>maxTaskShare[section])issues.push({code:'TASK_CONCENTRATION',message:`${level}/${section} is over-concentrated in one task blueprint (${largest}/${group.length}).`});
+    }
   }
   const byLevel=Object.fromEntries(levels.map(level=>[level,questions.filter(question=>question.level===level).length]));
   const bySection=Object.fromEntries(sections.map(section=>[section,questions.filter(question=>question.section===section).length]));

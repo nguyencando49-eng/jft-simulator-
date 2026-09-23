@@ -113,7 +113,7 @@ function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,seri
       const q:ProductionCandidate={...base,category:'announcement_instruction',tags:[...base.tags,'category:announcement_instruction','task:listening-after'],type:'audio_choice',instruction:'音声を聞いて、いちばんいい答えを一つ選んでください。',prompt:`${practicalDate}の「${unit.title}」のお知らせです。最初のことが終わったあと、何をしますか。`,choices:[later,next,actions[(n+1)%actions.length],actions[(n+7)%actions.length]],answer:0,explanationVi:`Sau hành động đầu tiên, thông báo yêu cầu “${later}”.`,audioSrc:`/audio/production/${id.toLowerCase()}.mp3`,audioScript:script};
       return decorate(q,serial);
     }
-    const q:ProductionCandidate={...base,category:'announcement_instruction',tags:[...base.tags,'category:announcement_instruction','task:listening-time'],type:'audio_choice',instruction:'音声を聞いて、いちばんいい答えを一つ選んでください。',prompt:`${c.place}のお知らせです。説明は何時ですか。`,choices:timeChoices(c.hour,c.minute),answer:0,explanationVi:`Trong audio, thời gian được thông báo là ${timeLabel(c.hour,c.minute)}.`,audioSrc:`/audio/production/${id.toLowerCase()}.mp3`,audioScript:script};
+    const q:ProductionCandidate={...base,category:'announcement_instruction',tags:[...base.tags,'category:announcement_instruction','task:listening-time'],type:'audio_choice',instruction:'音声を聞いて、いちばんいい答えを一つ選んでください。',prompt:`${practicalDate}（${c.day}）に${c.place}で行われる「${unit.title}」のお知らせです。説明は何時ですか。`,choices:timeChoices(c.hour,c.minute),answer:0,explanationVi:`Trong audio, thời gian được thông báo là ${timeLabel(c.hour,c.minute)}.`,audioSrc:`/audio/production/${id.toLowerCase()}.mp3`,audioScript:script};
     return decorate(q,serial);
   }
   const closeHour=c.hour+2,first=actions[n%actions.length],second=actions[(n+3)%actions.length];

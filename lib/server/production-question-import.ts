@@ -4,7 +4,7 @@ import type { Repository } from './domain';
 import { runQuestionQa } from './qa';
 import { assertControlledProductionBank,PRODUCTION_BANK_RELEASE_VERSION } from './production-bank-release';
 
-export const PRODUCTION_QUESTION_BATCH = 'JFT-3000-V2';
+export const PRODUCTION_QUESTION_BATCH = 'JFT-3000-V3';
 
 export function buildProductionReleaseQuestions(now = new Date().toISOString()):QuestionRecord[] {
   assertControlledProductionBank();

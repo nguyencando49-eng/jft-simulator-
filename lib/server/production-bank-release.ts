@@ -2,7 +2,7 @@ import { completeProductionQuestionSet } from '@/data/production/mass-question-c
 import type { Question,SectionId } from '@/lib/types';
 import { isCategoryForSection } from './content-taxonomy';
 
-export const PRODUCTION_BANK_RELEASE_VERSION='JFT_3000_CONTROLLED_V2_2026_09_21' as const;
+export const PRODUCTION_BANK_RELEASE_VERSION='JFT_3000_CONTROLLED_V3_2026_09_23' as const;
 export type ProductionBankIssue={questionId?:string;code:string;message:string};
 
 const levels:Question['level'][]=['A1','A2.1','A2.2'];
@@ -27,12 +27,22 @@ export function auditControlledProductionBank(questions:Question[]=completeProdu
     const category=tagValue(question,'category:');
     if(!category||!isCategoryForSection(question.section,category))issues.push({questionId:question.id,code:'CATEGORY_METADATA',message:`Invalid category "${category}" for ${question.section}.`});
     for(const prefix of ['topic:','can-do:','difficulty:','section:'])if(!tagValue(question,prefix))issues.push({questionId:question.id,code:'METADATA_REQUIRED',message:`Missing ${prefix} metadata.`});
+    if(question.id.startsWith('PROD-')){
+      if(!question.tags.includes('generator:controlled-v3'))issues.push({questionId:question.id,code:'GENERATOR_VERSION',message:'Generated production items must use controlled-v3.'});
+      if(!tagValue(question,'task:'))issues.push({questionId:question.id,code:'TASK_METADATA',message:'Generated production items require an explicit task blueprint tag.'});
+    }
     if(question.section==='listening'&&(!question.audioSrc||question.type!=='audio_choice'))issues.push({questionId:question.id,code:'LISTENING_ASSET',message:'Listening item requires audio_choice and an audio source.'});
     if(question.section!=='listening'&&question.type==='audio_choice')issues.push({questionId:question.id,code:'TYPE_SECTION_MISMATCH',message:'Only Listening may use audio_choice.'});
     if(/undefined|\[object Object\]|NaN/.test(question.prompt+question.choices.join(' ')))issues.push({questionId:question.id,code:'GENERATION_ARTIFACT',message:'Learner-visible content contains a generation artifact.'});
     const key=signature(question),previous=signatures.get(key);
     if(previous)issues.push({questionId:question.id,code:'EXACT_DUPLICATE',message:`Learner-visible item duplicates ${previous}.`});
     else signatures.set(key,question.id);
+  }
+  const generated=questions.filter(question=>question.id.startsWith('PROD-'));
+  const requiredTaskDiversity:Record<SectionId,number>={script_vocabulary:2,conversation_expression:8,listening:3,reading:4};
+  for(const section of sections){
+    const tasks=new Set(generated.filter(question=>question.section===section).map(question=>tagValue(question,'task:')).filter(Boolean));
+    if(tasks.size<requiredTaskDiversity[section])issues.push({code:'TASK_DIVERSITY',message:`${section} requires at least ${requiredTaskDiversity[section]} task blueprints; found ${tasks.size}.`});
   }
   const byLevel=Object.fromEntries(levels.map(level=>[level,questions.filter(question=>question.level===level).length]));
   const bySection=Object.fromEntries(sections.map(section=>[section,questions.filter(question=>question.section===section).length]));

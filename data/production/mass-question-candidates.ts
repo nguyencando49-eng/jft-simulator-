@@ -82,7 +82,7 @@ function makeQuestion(unit:CurriculumCatalogUnit,section:SectionId,n:number,seri
       return decorate(q,serial);
     }
     const focus=vocabularyFocus[unit.id]||c.anchor;
-    const q:ProductionCandidate={...base,category:'word_meaning',tags:[...base.tags,'category:word_meaning','task:vocab-scene'],type:'choice',instruction:'ことばを見て、いちばん関係が深い場面を一つ選んでください。',prompt:'「'+focus+'」は、次のどの場面といちばん関係がありますか。',choices:[unit.title,...crossUnitTitles(unit,n)],answer:0,explanationVi:'「'+focus+'」 gắn trực tiếp với tình huống “'+unit.title+'” trong đơn vị bài học này.'};
+    const q:ProductionCandidate={...base,category:'word_meaning',tags:[...base.tags,'category:word_meaning','task:vocab-scene'],type:'choice',instruction:'ことばを見て、いちばん関係が深い場面を一つ選んでください。',prompt:practicalDate+'（'+c.day+'）'+c.hour+'時ごろ、'+c.place+'で'+c.name+'さんが「'+focus+'」ということばを確認しています。\n次のどの場面といちばん関係がありますか。',choices:[unit.title,...crossUnitTitles(unit,n)],answer:0,explanationVi:'「'+focus+'」 gắn trực tiếp với tình huống “'+unit.title+'” trong đơn vị bài học này.'};
     return decorate(q,serial);
   }
   if(section==='conversation_expression'){

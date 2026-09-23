@@ -31,7 +31,7 @@ describe('3,000-question controlled production batch',()=>{
       expect(q.tags).toContain(`category:${q.category}`);
       expect(q.tags.some(tag=>tag.startsWith('topic:'))).toBe(true);
       expect(q.tags.some(tag=>tag.startsWith('can-do:'))).toBe(true);
-      expect(q.tags).toContain('generator:controlled-v2');
+      expect(q.tags).toContain('generator:controlled-v3');
     }
   });
   it('passes deterministic structural QA before the audio-file gate',()=>{

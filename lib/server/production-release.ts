@@ -5,7 +5,8 @@ import type { Repository } from './domain';
 import { PRODUCTION_BANK_RELEASE_VERSION } from './production-bank-release';
 import { importProductionQuestionBank } from './production-question-import';
 
-export const PRODUCTION_RELEASE_VERSION='JFT_3000_PRODUCTION_RELEASE_V1' as const;
+export const PRODUCTION_RELEASE_VERSION='JFT_3000_PRODUCTION_RELEASE_V2' as const;
+export const PRODUCTION_EXAM_VERSION=2 as const;
 
 export interface ProductionReleaseExamSummary{
   examId:string;
@@ -62,7 +63,7 @@ export function buildProductionExamReleasePack(bank:QuestionRecord[],publishedAt
   if(releaseBank.length!==3000)throw new ProductionReleaseError('PRODUCTION_BANK_NOT_READY',`Expected 3,000 controlled release questions, received ${releaseBank.length}.`);
   const drafts=structuredClone(PRODUCTION_EXAM_DRAFTS);
   const versions:ExamVersion[]=drafts.map((draft,index)=>{
-    const result=generateExamVersion(draft,releaseBank,1);
+    const result=generateExamVersion(draft,releaseBank,PRODUCTION_EXAM_VERSION);
     if(!result.ok)throw new ProductionReleaseError('PRODUCTION_EXAM_GENERATION_FAILED',result.errors.join(' | '));
     const version={...result.version,createdAt:publishedAt,publishedAt};
     const level=PRODUCTION_EXAM_LEVELS[index];

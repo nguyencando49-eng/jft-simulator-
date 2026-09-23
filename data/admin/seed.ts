@@ -10,7 +10,7 @@ assertControlledProductionBank();
 
 export const seedQuestions: QuestionRecord[] = completeProductionQuestionSet.map((question) => ({
   ...question,
-  version: 2,
+  version: 3,
   status: 'approved' as const,
   source: authoredIds.has(question.id) ? 'original' as const : 'ai' as const,
   tags:Array.from(new Set([...question.tags,`release:${PRODUCTION_BANK_RELEASE_VERSION}`,'qa-state:controlled-release-approved'])),

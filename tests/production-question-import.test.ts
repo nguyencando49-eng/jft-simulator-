@@ -6,7 +6,7 @@ import { runQuestionQa } from '@/lib/server/qa';
 describe('production Question Bank import',()=>{
   it('builds the audited 3,000-question controlled release',()=>{
     const questions=buildProductionReleaseQuestions('2026-09-21T00:00:00.000Z');
-    expect(PRODUCTION_QUESTION_BATCH).toBe('JFT-3000-V2');
+    expect(PRODUCTION_QUESTION_BATCH).toBe('JFT-3000-V3');
     expect(questions).toHaveLength(3000);
     expect(new Set(questions.map(question=>question.id)).size).toBe(3000);
     expect(questions.every(question=>question.status==='approved')).toBe(true);

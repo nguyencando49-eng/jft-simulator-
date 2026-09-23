@@ -13,11 +13,11 @@ The controlled repository bank contains exactly:
 - A2.2: 1,000 questions
 - Total: 3,000 questions
 
-The initial production catalog contains three immutable practice forms:
+The current semantically hardened production catalog contains three immutable practice forms:
 
-- `JFT-PRACTICE-A1-001-v1`
-- `JFT-PRACTICE-A2-1-001-v1`
-- `JFT-PRACTICE-A2-2-001-v1`
+- `JFT-PRACTICE-A1-001-v2`
+- `JFT-PRACTICE-A2-1-001-v2`
+- `JFT-PRACTICE-A2-2-001-v2`
 
 Each form contains 48 questions (12 per section) and has a 60-minute practice timer.
 
@@ -94,7 +94,7 @@ After the Supabase schema and production environment are configured:
 npm run release:production
 ```
 
-This operation is idempotent. It imports/updates the controlled 3,000-question bank, publishes the three v1 production exam snapshots, skips matching snapshots that already exist, and refuses to overwrite a conflicting immutable version.
+This operation is idempotent. It imports/updates the controlled 3,000-question bank, publishes the three v2 production exam snapshots, skips matching snapshots that already exist, and refuses to overwrite a conflicting immutable version.
 
 The same operation is available to an authenticated admin at:
 
@@ -128,7 +128,7 @@ npm ci
 → Playwright browser E2E
 ```
 
-The controlled-bank release tests also enforce the 3,000-item invariant, per-level balance, metadata, audio presence and duplicate safeguards.
+The controlled-bank release tests also enforce the 3,000-item invariant, per-level balance, metadata, audio presence, duplicate safeguards and minimum task-blueprint diversity (2 Vocabulary, 8 Conversation, 3 Listening, 4 Reading blueprints).
 
 ## Architecture
 

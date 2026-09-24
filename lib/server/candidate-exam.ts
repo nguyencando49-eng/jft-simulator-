@@ -16,8 +16,8 @@ export interface CandidateExamSummary {
 
 /** Candidate catalog exposes only the newest immutable version of each exam. */
 export function latestPublishedVersions(versions: ExamVersion[]) {
-  const visible=process.env.NODE_ENV==='production'
-    ? versions.filter(version=>!version.examId.startsWith('JFT-A1-')&&version.examId!=='JFT-E2E-001')
+  const visible=process.env.NODE_ENV==='production'&&process.env.E2E_TEST_MODE!=='true'
+    ? versions.filter(version=>version.examId.startsWith('JFT-PRACTICE-'))
     : versions;
   const latest = new Map<string, ExamVersion>();
   for (const version of [...visible].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))) {

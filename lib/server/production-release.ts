@@ -53,12 +53,23 @@ function sectionCounts(version:ExamVersion){
     version.questions.filter(item=>item.snapshot.section===section).length,
   ]));
 }
+function canonicalJson(value:unknown):unknown{
+  if(Array.isArray(value))return value.map(canonicalJson);
+  if(value&&typeof value==='object'){
+    return Object.fromEntries(
+      Object.entries(value as Record<string,unknown>)
+        .sort(([left],[right])=>left.localeCompare(right))
+        .map(([key,nested])=>[key,canonicalJson(nested)]),
+    );
+  }
+  return value;
+}
 function snapshotSignature(version:ExamVersion){
-  return JSON.stringify({
+  return JSON.stringify(canonicalJson({
     id:version.id,examId:version.examId,version:version.version,title:version.title,
     durationMinutes:version.durationMinutes,rules:version.rules,
     questions:version.questions.map(item=>({questionId:item.questionId,questionVersion:item.questionVersion,snapshot:item.snapshot})),
-  });
+  }));
 }
 function draftLevel(draft:ExamDraft):ProductionExamLevel{
   const levels=Array.from(new Set(draft.rules.flatMap(rule=>rule.levels)));

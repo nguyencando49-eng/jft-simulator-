@@ -1,6 +1,6 @@
 import { seedExamDrafts, seedQuestions } from '@/data/admin/seed';
 import { ExamDraft, ExamVersion, QuestionRecord } from '@/lib/admin-types';
-import { CandidateSessionRecord, ProfileRecord, Repository } from './domain';
+import { CandidateSessionRecord, ProfileRecord, Repository, SessionProgressMutation } from './domain';
 import { generateExamVersion } from '@/lib/exam-generator';
 import type { FactoryJob } from './factory-domain';
 import type { KnowledgeUnit, QuestionPlan, QuestionProvenance, SourceChunk, SourceDocument } from './source-domain';
@@ -53,7 +53,16 @@ export class MemoryRepository implements Repository {
     if(current.status!=='submitted'){current.status=s.status;current.submittedAt=s.submittedAt;}
     return structuredClone(current);
   }
-  async saveSessionProgress(id:string,m:{questionId?:string;choice?:number;currentIndex?:number}){ const i=store.sessions.findIndex(x=>x.id===id); if(i<0) return null; const s=store.sessions[i]; if(s.status!=='active'||Date.now()>=new Date(s.expiresAt).getTime()) return null; if(m.questionId!==undefined&&m.choice!==undefined)s.answers[m.questionId]=m.choice; if(m.currentIndex!==undefined)s.currentIndex=m.currentIndex; return structuredClone(s); }
+  async saveSessionProgress(id:string,m:SessionProgressMutation){
+    const i=store.sessions.findIndex(x=>x.id===id);
+    if(i<0) return null;
+    const s=store.sessions[i];
+    if(s.status!=='active'||Date.now()>=new Date(s.expiresAt).getTime()) return null;
+    if(m.expectedCurrentIndex!==undefined&&s.currentIndex!==m.expectedCurrentIndex) return null;
+    if(m.questionId!==undefined&&m.choice!==undefined)s.answers[m.questionId]=m.choice;
+    if(m.currentIndex!==undefined)s.currentIndex=m.currentIndex;
+    return structuredClone(s);
+  }
   async listSessions(){ return structuredClone(store.sessions); }
   async upsertProfile(p:ProfileRecord){ const i=store.profiles.findIndex(x=>x.id===p.id); if(i>=0) store.profiles[i]=structuredClone(p); else store.profiles.push(structuredClone(p)); return structuredClone(p); }
   async getProfile(id:string){ return structuredClone(store.profiles.find(p=>p.id===id) ?? null); }

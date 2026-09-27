@@ -29,6 +29,13 @@ export interface CandidateSessionRecord {
   answers: Record<string, number>;
 }
 
+export type SessionProgressMutation = {
+  questionId?: string;
+  choice?: number;
+  currentIndex?: number;
+  expectedCurrentIndex?: number;
+};
+
 export interface ImportResult { accepted: QuestionRecord[]; rejected: Array<{ row: number; issues: QaIssue[] }>; }
 
 export interface Repository {
@@ -42,7 +49,7 @@ export interface Repository {
   createSession(session: CandidateSessionRecord): Promise<CandidateSessionRecord>;
   getSession(id: string): Promise<CandidateSessionRecord | null>;
   saveSession(session: CandidateSessionRecord): Promise<CandidateSessionRecord>;
-  saveSessionProgress(id: string, mutation: { questionId?: string; choice?: number; currentIndex?: number }): Promise<CandidateSessionRecord | null>;
+  saveSessionProgress(id: string, mutation: SessionProgressMutation): Promise<CandidateSessionRecord | null>;
   listSessions(): Promise<CandidateSessionRecord[]>;
   upsertProfile(profile: ProfileRecord): Promise<ProfileRecord>;
   getProfile(id: string): Promise<ProfileRecord | null>;

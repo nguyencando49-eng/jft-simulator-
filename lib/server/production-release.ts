@@ -1,6 +1,6 @@
 import type { ExamDraft,ExamVersion,QuestionRecord } from '@/lib/admin-types';
 import { PRODUCTION_EXAM_DRAFTS,PRODUCTION_EXAM_DURATION_MINUTES,PRODUCTION_EXAM_LEVELS,PRODUCTION_EXAM_QUESTIONS,PRODUCTION_EXAM_QUESTIONS_PER_SECTION,PRODUCTION_EXAMS_PER_LEVEL,type ProductionExamLevel } from '@/data/production/exam-catalog';
-import { seededShuffle } from '@/lib/exam-generator';
+import { createHash } from 'node:crypto';
 import type { Repository } from './domain';
 import { PRODUCTION_BANK_RELEASE_VERSION } from './production-bank-release';
 import { importProductionQuestionBank } from './production-question-import';
@@ -71,6 +71,22 @@ function pairKey(left:number,right:number){
   return left<right?`${left}:${right}`:`${right}:${left}`;
 }
 
+function stablePoolOrder(
+  bank:QuestionRecord[],
+  level:ProductionExamLevel,
+  section:(typeof PRODUCTION_SECTIONS)[number],
+){
+  const prefix=`${PRODUCTION_RELEASE_VERSION}:${level}:${section}:`;
+  return bank
+    .filter(question=>question.status==='approved'&&question.level===level&&question.section===section)
+    .map(question=>({
+      question,
+      key:createHash('md5').update(`${prefix}${question.id}`).digest('hex'),
+    }))
+    .sort((left,right)=>left.key.localeCompare(right.key)||left.question.id.localeCompare(right.question.id))
+    .map(item=>item.question);
+}
+
 function allocateSectionAcrossForms(
   bank:QuestionRecord[],
   level:ProductionExamLevel,
@@ -78,10 +94,7 @@ function allocateSectionAcrossForms(
   formCount:number,
   countPerForm:number,
 ){
-  const pool=seededShuffle(
-    bank.filter(question=>question.status==='approved'&&question.level===level&&question.section===section),
-    `${PRODUCTION_RELEASE_VERSION}:${level}:${section}`,
-  );
+  const pool=stablePoolOrder(bank,level,section);
   if(pool.length<countPerForm){
     throw new ProductionReleaseError('PRODUCTION_EXAM_GENERATION_FAILED',`${level}/${section}: need at least ${countPerForm} approved questions, received ${pool.length}.`);
   }
@@ -97,9 +110,11 @@ function allocateSectionAcrossForms(
     return assignments;
   }
 
-  // Listening currently has 175 questions for 240 slots. Use every item once,
-  // then reuse only enough items to fill the remaining slots. A question is
-  // reused at most once and an unordered pair of forms may share at most one.
+  // Listening currently has 175 questions for 240 slots. Give every item one
+  // owner form first, then add deterministic cross-form edges. Each repeated
+  // question is used by exactly one extra form and each unordered form pair is
+  // used at most once. This layout is reproducible in PostgreSQL for controlled
+  // production publication without shipping question snapshots through a client.
   if(pool.length*2<totalSlots){
     throw new ProductionReleaseError(
       'PRODUCTION_EXAM_POOL_TOO_SMALL',
@@ -111,26 +126,37 @@ function allocateSectionAcrossForms(
   pool.forEach((question,index)=>owned[index%formCount].push(question));
   for(let form=0;form<formCount;form++)assignments[form]=[...owned[form]];
 
-  const repeated=new Set<string>();
+  const edges:Array<{owner:number;target:number}>=[];
   const usedPairs=new Set<string>();
   for(let target=0;target<formCount;target++){
-    let delta=1;
-    let attempts=0;
-    while(assignments[target].length<countPerForm){
-      if(attempts++>formCount*formCount*2){
-        throw new ProductionReleaseError('PRODUCTION_EXAM_ALLOCATION_FAILED',`${level}/${section}: unable to satisfy low-overlap allocation.`);
-      }
-      const owner=(target+delta)%formCount;
-      delta=delta%Math.max(formCount-1,1)+1;
-      if(owner===target)continue;
+    const deficit=countPerForm-owned[target].length;
+    for(let offset=1;offset<=deficit;offset++){
+      const owner=(target+offset)%formCount;
       const key=pairKey(target,owner);
-      if(usedPairs.has(key))continue;
-      const candidate=owned[owner].find(question=>!repeated.has(question.id));
-      if(!candidate)continue;
-      assignments[target].push(candidate);
-      repeated.add(candidate.id);
+      if(usedPairs.has(key)){
+        throw new ProductionReleaseError('PRODUCTION_EXAM_ALLOCATION_FAILED',`${level}/${section}: duplicate form-pair reuse detected.`);
+      }
       usedPairs.add(key);
+      edges.push({owner,target});
     }
+  }
+
+  const outgoing=new Map<number,Array<{owner:number;target:number}>>();
+  for(const edge of edges){
+    const list=outgoing.get(edge.owner)??[];
+    list.push(edge);
+    outgoing.set(edge.owner,list);
+  }
+  for(const [owner,list] of outgoing){
+    list.sort((left,right)=>left.target-right.target);
+    if(list.length>owned[owner].length){
+      throw new ProductionReleaseError('PRODUCTION_EXAM_ALLOCATION_FAILED',`${level}/${section}: owner form ${owner+1} lacks unique questions for controlled reuse.`);
+    }
+    list.forEach((edge,index)=>assignments[edge.target].push(owned[owner][index]));
+  }
+
+  if(assignments.some(items=>items.length!==countPerForm)){
+    throw new ProductionReleaseError('PRODUCTION_EXAM_ALLOCATION_FAILED',`${level}/${section}: allocation did not fill every form.`);
   }
   return assignments;
 }

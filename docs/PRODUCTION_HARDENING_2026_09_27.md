@@ -3,7 +3,7 @@
 ## Scope
 
 Repository: `nguyencando49-eng/jft-simulator-`  
-Baseline: `main@2b8b025a87b579371db821f598f82f9cafb94509`  
+Baseline: `main@68ef00d2cbcfd10fe4edeee84e7c3c5bb9e9e8b9`  
 Supabase project: `jft-simulator` (`wwwxzwfmlxuibsvoztnp`)  
 Vercel project: `jft-simulator` (`prj_dqEkURBqnhHf3z42eGaSG1enhmkd`)
 
@@ -42,6 +42,12 @@ Nine constraints introduced as `NOT VALID` in V5.1.1 were checked against produc
 ### Query performance
 
 Covering indexes were added for all seven foreign keys identified by the Supabase performance advisor. The `unindexed_foreign_keys` advisor finding is now clear.
+
+### Concurrent session progress
+
+Supabase migration `20260927041219_session_progress_compare_and_swap` adds a compare-and-swap RPC overload. Candidate progress writes now carry the server-observed `currentIndex`; if another tab has already advanced the session, the stale write returns a conflict instead of rewriting navigation or a closed-section answer.
+
+The legacy RPC overload remains temporarily for zero-downtime compatibility with the deployment that existed before this PR. Both overloads remain service-role-only.
 
 ### Application error handling
 

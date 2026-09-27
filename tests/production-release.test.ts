@@ -36,6 +36,20 @@ function overlap(left:ExamVersion,right:ExamVersion){
   const ids=new Set(left.questions.map(item=>item.questionId));
   return right.questions.reduce((count,item)=>count+(ids.has(item.questionId)?1:0),0);
 }
+function jsonbRoundTrip<T>(value:T):T{
+  const reorder=(input:unknown):unknown=>{
+    if(Array.isArray(input))return input.map(reorder);
+    if(input&&typeof input==='object'){
+      return Object.fromEntries(
+        Object.entries(input as Record<string,unknown>)
+          .sort(([left],[right])=>right.localeCompare(left))
+          .map(([key,nested])=>[key,reorder(nested)]),
+      );
+    }
+    return input;
+  };
+  return reorder(value) as T;
+}
 
 describe('Production 3000 exam release',()=>{
   it('builds 20 low-overlap immutable 48-question forms for every production level',()=>{
@@ -86,6 +100,9 @@ describe('Production 3000 exam release',()=>{
     expect(state.versions).toHaveLength(60);
     expect(state.drafts).toHaveLength(60);
 
+    // PostgreSQL jsonb does not preserve object key order. Simulate that
+    // round-trip so semantic equality, not insertion order, defines immutability.
+    state.versions.splice(0,state.versions.length,...jsonbRoundTrip(state.versions));
     const second=await publishProductionRelease(state.repo,'2026-09-23T00:00:00.000Z');
     expect(second.published).toEqual([]);
     expect(second.skipped).toHaveLength(60);

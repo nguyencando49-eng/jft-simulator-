@@ -126,7 +126,7 @@ function allocateSectionAcrossForms(
   pool.forEach((question,index)=>owned[index%formCount].push(question));
   for(let form=0;form<formCount;form++)assignments[form]=[...owned[form]];
 
-  const edges:Array<{owner:number;target:number}>=[];
+  const edges:Array<{owner:number;target:number;offset:number}>=[];
   const usedPairs=new Set<string>();
   for(let target=0;target<formCount;target++){
     const deficit=countPerForm-owned[target].length;
@@ -137,22 +137,21 @@ function allocateSectionAcrossForms(
         throw new ProductionReleaseError('PRODUCTION_EXAM_ALLOCATION_FAILED',`${level}/${section}: duplicate form-pair reuse detected.`);
       }
       usedPairs.add(key);
-      edges.push({owner,target});
+      edges.push({owner,target,offset});
     }
   }
 
-  const outgoing=new Map<number,Array<{owner:number;target:number}>>();
+  // Edges are generated target-by-target and offset-by-offset. The per-owner
+  // reuse counter therefore matches PostgreSQL row_number(partition by owner
+  // order by target), while append order inside a target matches edge offset.
+  const ownerReuseCount=new Map<number,number>();
   for(const edge of edges){
-    const list=outgoing.get(edge.owner)??[];
-    list.push(edge);
-    outgoing.set(edge.owner,list);
-  }
-  for(const [owner,list] of outgoing){
-    list.sort((left,right)=>left.target-right.target);
-    if(list.length>owned[owner].length){
-      throw new ProductionReleaseError('PRODUCTION_EXAM_ALLOCATION_FAILED',`${level}/${section}: owner form ${owner+1} lacks unique questions for controlled reuse.`);
+    const reuseIndex=ownerReuseCount.get(edge.owner)??0;
+    if(reuseIndex>=owned[edge.owner].length){
+      throw new ProductionReleaseError('PRODUCTION_EXAM_ALLOCATION_FAILED',`${level}/${section}: owner form ${edge.owner+1} lacks unique questions for controlled reuse.`);
     }
-    list.forEach((edge,index)=>assignments[edge.target].push(owned[owner][index]));
+    assignments[edge.target].push(owned[edge.owner][reuseIndex]);
+    ownerReuseCount.set(edge.owner,reuseIndex+1);
   }
 
   if(assignments.some(items=>items.length!==countPerForm)){

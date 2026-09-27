@@ -1,5 +1,5 @@
 import { ExamDraft, ExamVersion, QuestionRecord } from '@/lib/admin-types';
-import { CandidateSessionRecord, ProfileRecord, Repository } from './domain';
+import { CandidateSessionRecord, ProfileRecord, Repository, SessionProgressMutation } from './domain';
 import type { FactoryJob } from './factory-domain';
 import type { KnowledgeUnit, QuestionPlan, QuestionProvenance, SourceChunk, SourceDocument } from './source-domain';
 
@@ -28,7 +28,7 @@ export class SupabaseRepository implements Repository {
     if(!saved)throw new Error('Session not found');
     return saved;
   }
-  async saveSessionProgress(id:string,m:{questionId?:string;choice?:number;currentIndex?:number}){ const rows=await request('/rpc/save_session_progress',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify({p_id:id,p_question_id:m.questionId??null,p_choice:m.choice??null,p_current_index:m.currentIndex??null})}); const r=Array.isArray(rows)?rows[0]:rows; if(!r)return null; return {id:r.id,examVersionId:r.exam_version_id,candidateId:r.candidate_id??undefined,status:r.status,startedAt:r.started_at,expiresAt:r.expires_at,submittedAt:r.submitted_at??undefined,currentIndex:r.current_index,answers:r.answers??{}}; }
+  async saveSessionProgress(id:string,m:SessionProgressMutation){ const body=m.expectedCurrentIndex===undefined?{p_id:id,p_question_id:m.questionId??null,p_choice:m.choice??null,p_current_index:m.currentIndex??null}:{p_id:id,p_expected_current_index:m.expectedCurrentIndex,p_question_id:m.questionId??null,p_choice:m.choice??null,p_current_index:m.currentIndex??null}; const rows=await request('/rpc/save_session_progress',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify(body)}); const r=Array.isArray(rows)?rows[0]:rows; if(!r)return null; return {id:r.id,examVersionId:r.exam_version_id,candidateId:r.candidate_id??undefined,status:r.status,startedAt:r.started_at,expiresAt:r.expires_at,submittedAt:r.submitted_at??undefined,currentIndex:r.current_index,answers:r.answers??{}}; }
   async listSessions(){ const rows=await request('/candidate_sessions?select=*&order=started_at.desc'); return rows.map((r:any)=>({id:r.id,examVersionId:r.exam_version_id,candidateId:r.candidate_id??undefined,status:r.status,startedAt:r.started_at,expiresAt:r.expires_at,submittedAt:r.submitted_at??undefined,currentIndex:r.current_index,answers:r.answers??{}})); }
   async upsertProfile(p:ProfileRecord){ await request('/profiles?on_conflict=id',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=minimal'},body:JSON.stringify([{id:p.id,email:p.email,display_name:p.displayName??null,role:p.role,created_at:p.createdAt,last_seen_at:p.lastSeenAt}])}); return p; }
   async getProfile(id:string){ const rows=await request(`/profiles?id=eq.${encode(id)}&select=*&limit=1`); const r=rows[0]; return r?{id:r.id,email:r.email,displayName:r.display_name??undefined,role:r.role,createdAt:r.created_at,lastSeenAt:r.last_seen_at}:null; }

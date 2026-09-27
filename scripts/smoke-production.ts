@@ -78,7 +78,11 @@ try{
   if(!audio.ok()||(await audio.body()).byteLength<1_000||!audio.headers()['content-type']?.startsWith('audio/'))throw new Error('Production Listening audio is not playable.');
 
   const jump=await context.request.put(`${base}/api/v1/sessions/${encodeURIComponent(active.id)}/answers`,{data:{currentIndex:listeningIndex}});
-  if(!jump.ok())throw new Error(`Could not move smoke session to Listening: ${jump.status()}.`);
+  if(jump.status()!==409)throw new Error('Production API allowed skipping entire sections.');
+  for(let currentIndex=1;currentIndex<=listeningIndex;currentIndex++){
+    const next=await context.request.put(`${base}/api/v1/sessions/${encodeURIComponent(active.id)}/answers`,{data:{currentIndex}});
+    if(!next.ok())throw new Error(`Could not advance smoke session to question ${currentIndex+1}: ${next.status()}.`);
+  }
   await page.reload();
   await expect(page.getByRole('button',{name:'Phát âm thanh'})).toBeVisible({timeout:20_000});
   await page.getByRole('button',{name:'Phát âm thanh'}).click();

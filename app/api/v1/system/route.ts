@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { repositoryMode } from '@/lib/server/repository';
+import { authDisabled } from '@/lib/server/auth';
 import { factoryProviderMode } from '@/lib/server/factory-provider';
 import { semanticQaProviderMode } from '@/lib/server/semantic-qa-provider';
 import { ttsProviderMode } from '@/lib/server/tts-provider';
@@ -12,7 +13,7 @@ import { originalityDuplicateProviderMode } from '@/lib/server/originality-dupli
 
 export async function GET(){
   const repository=repositoryMode();
-  const authentication=process.env.AUTH_DISABLED==='true'?'disabled-dev':(process.env.SUPABASE_URL&&process.env.SUPABASE_ANON_KEY?'supabase':'not-configured');
+  const authentication=authDisabled()?'disabled-dev':(process.env.SUPABASE_URL&&process.env.SUPABASE_ANON_KEY?'supabase':'not-configured');
   const assetStorage=process.env.SUPABASE_URL&&process.env.SUPABASE_SERVICE_ROLE_KEY?'supabase-storage':'inline-dev';
   const factory=factoryProviderMode(),semantic=semanticQaProviderMode(),tts=ttsProviderMode();
   const specialized={answerOracle:answerOracleProviderMode(),japaneseNaturalness:japaneseNaturalnessProviderMode(),curriculumGrounding:curriculumGroundingProviderMode(),jftAlignment:jftAlignmentProviderMode(),difficultyCalibration:difficultyCalibrationProviderMode(),originalityDuplicate:originalityDuplicateProviderMode()};

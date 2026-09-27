@@ -4,13 +4,13 @@ import Link from 'next/link';
 import { FormEvent,useEffect,useState } from 'react';
 import { useRouter,useSearchParams } from 'next/navigation';
 import { authApi } from '@/lib/api-client';
+import { safeLoginDestination } from '@/lib/auth-redirect';
 import type { UserRole } from '@/lib/server/domain';
 import { Alert } from '@/components/ui';
 
 export default function LoginClient(){
   const router=useRouter(),params=useSearchParams();
-  const requested=params.get('next')||'/';
-  const next=requested.startsWith('/')&&!requested.startsWith('//')?requested:'/candidate';
+  const next=safeLoginDestination(params.get('next'));
   const verified=params.get('verified')==='1';
   const [email,setEmail]=useState(''),[password,setPassword]=useState(''),[show,setShow]=useState(false),[role,setRole]=useState<UserRole>('candidate'),[dev,setDev]=useState(false),[error,setError]=useState(''),[loading,setLoading]=useState(false);
 
@@ -18,9 +18,9 @@ export default function LoginClient(){
     void fetch('/api/v1/system',{cache:'no-store'}).then(r=>r.json()).then(async x=>{
       const disabled=x.authentication==='disabled-dev';
       setDev(disabled);
-      if(!disabled){try{const me=await authApi.me();router.replace(me.user.role==='admin'?'/admin':'/candidate')}catch{/* Login form remains visible. */}}
+      if(!disabled){try{const me=await authApi.me();router.replace(next==='/'?(me.user.role==='admin'?'/admin':'/candidate'):next)}catch{/* Login form remains visible. */}}
     }).catch(()=>{});
-  },[router]);
+  },[router,next]);
 
   async function submit(e:FormEvent){
     e.preventDefault();setLoading(true);setError('');

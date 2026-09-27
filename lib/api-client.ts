@@ -13,7 +13,7 @@ export class ApiError extends Error{status:number;payload:ApiErrorPayload;constr
 async function raw<T>(path:string,init:RequestInit={},allowRefresh=true):Promise<T>{
   const headers=new Headers(init.headers||{}); if(init.body && !(init.body instanceof FormData))headers.set('Content-Type','application/json');
   const res=await fetch(path,{...init,headers,cache:'no-store',credentials:'same-origin'});
-  if(res.status===401&&allowRefresh&&path!=='/api/v1/auth/refresh'){const rr=await fetch('/api/v1/auth/refresh',{method:'POST',credentials:'same-origin'});if(rr.ok)return raw<T>(path,init,false);}
+  if(res.status===401&&allowRefresh&&path!=='/api/v1/auth/refresh'){const rr=await fetch('/api/v1/auth/refresh',{method:'POST',credentials:'same-origin',signal:AbortSignal.timeout(15_000)});if(rr.ok)return raw<T>(path,init,false);}
   const text=await res.text(); let payload:any={}; try{payload=text?JSON.parse(text):{}}catch{payload={error:text||`API ${res.status}`}}; if(!res.ok)throw new ApiError(res.status,payload); return payload as T;
 }
 
@@ -76,7 +76,7 @@ export const candidateApi={
   attempts:()=>raw<{ok:true;attempts:CandidateAttempt[]}>('/api/v1/sessions'),
   createSession:(examVersionId:string)=>raw<{ok:true;session:CandidateSession;exam:CandidateExam}>('/api/v1/sessions',{method:'POST',body:JSON.stringify({examVersionId})}),
   resume:(sessionId:string)=>raw<{ok:true;session:CandidateSession;exam:CandidateExam}>(`/api/v1/sessions/${encodeURIComponent(sessionId)}`),
-  saveAnswer:(sessionId:string,questionId?:string,choice?:number,currentIndex?:number)=>raw<{ok:true;savedAt:string}>(`/api/v1/sessions/${encodeURIComponent(sessionId)}/answers`,{method:'PUT',body:JSON.stringify({questionId,choice,currentIndex})}),
-  submit:(sessionId:string)=>raw<{ok:true;alreadySubmitted?:boolean;result:ServerResult}>(`/api/v1/sessions/${encodeURIComponent(sessionId)}/submit`,{method:'POST'}),
+  saveAnswer:(sessionId:string,questionId?:string,choice?:number,currentIndex?:number)=>raw<{ok:true;savedAt:string}>(`/api/v1/sessions/${encodeURIComponent(sessionId)}/answers`,{method:'PUT',signal:AbortSignal.timeout(10_000),body:JSON.stringify({questionId,choice,currentIndex})}),
+  submit:(sessionId:string)=>raw<{ok:true;alreadySubmitted?:boolean;result:ServerResult}>(`/api/v1/sessions/${encodeURIComponent(sessionId)}/submit`,{method:'POST',signal:AbortSignal.timeout(15_000)}),
   result:(sessionId:string)=>raw<{ok:true;result:ServerResult;exam:{id:string;title:string}}>(`/api/v1/sessions/${encodeURIComponent(sessionId)}/result`),
 };

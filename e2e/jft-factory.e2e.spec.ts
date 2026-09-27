@@ -16,7 +16,7 @@ async function startCandidateExam(page: Page, durationSeconds = 120, fromCatalog
     await expect(mini).toBeVisible();
     await mini.getByRole('link',{name:/^(Bắt đầu|Làm lại)$/}).click();
     await expect(page).toHaveURL(/\/exam\?examVersionId=/);
-  }else await page.goto('/exam');
+  }else await page.goto('/exam?examVersionId=JFT-E2E-001-v1');
   await expect(page.getByRole('heading',{name:'Hướng dẫn làm bài'})).toBeVisible();
   await page.getByRole('button',{name:'Kiểm tra âm thanh'}).click();
   await expect(page.getByRole('heading',{name:'Kiểm tra âm thanh'})).toBeVisible();
@@ -247,7 +247,7 @@ test.describe.serial('JFT E2E release journeys',()=>{
     const release=await page.request.post('/api/v1/admin/production-release');
     expect([200,201]).toContain(release.status());
     const releasePayload=await release.json();
-    expect(releasePayload.published.length+releasePayload.skipped.length).toBe(3);
+    expect(releasePayload.published.length+releasePayload.skipped.length).toBe(60);
     await page.reload();
     await expect(page.getByRole('button',{name:'Production 3000 đã phát hành'})).toBeDisabled({timeout:15_000});
   });

@@ -47,7 +47,12 @@ export class MemoryRepository implements Repository {
   async saveExamVersion(v:ExamVersion){ if(store.versions.some(x=>x.id===v.id)) throw new Error(`Exam version ${v.id} already exists`); store.versions.push(structuredClone(v)); return structuredClone(v); }
   async createSession(s:CandidateSessionRecord){ store.sessions.push(structuredClone(s)); return structuredClone(s); }
   async getSession(id:string){ return structuredClone(store.sessions.find(s=>s.id===id) ?? null); }
-  async saveSession(s:CandidateSessionRecord){ const i=store.sessions.findIndex(x=>x.id===s.id); if(i<0) throw new Error('Session not found'); store.sessions[i]=structuredClone(s); return structuredClone(s); }
+  async saveSession(s:CandidateSessionRecord){
+    const current=store.sessions.find(x=>x.id===s.id);
+    if(!current)throw new Error('Session not found');
+    if(current.status!=='submitted'){current.status=s.status;current.submittedAt=s.submittedAt;}
+    return structuredClone(current);
+  }
   async saveSessionProgress(id:string,m:{questionId?:string;choice?:number;currentIndex?:number}){ const i=store.sessions.findIndex(x=>x.id===id); if(i<0) return null; const s=store.sessions[i]; if(s.status!=='active'||Date.now()>=new Date(s.expiresAt).getTime()) return null; if(m.questionId!==undefined&&m.choice!==undefined)s.answers[m.questionId]=m.choice; if(m.currentIndex!==undefined)s.currentIndex=m.currentIndex; return structuredClone(s); }
   async listSessions(){ return structuredClone(store.sessions); }
   async upsertProfile(p:ProfileRecord){ const i=store.profiles.findIndex(x=>x.id===p.id); if(i>=0) store.profiles[i]=structuredClone(p); else store.profiles.push(structuredClone(p)); return structuredClone(p); }

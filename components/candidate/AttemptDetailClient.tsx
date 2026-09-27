@@ -19,6 +19,10 @@ export default function AttemptDetailClient({sessionId}:{sessionId:string}){
   useEffect(()=>{
     void candidateApi.resume(sessionId)
       .then(async response=>{
+        if(response.session.status==='expired'){
+          await candidateApi.submit(sessionId);
+          response=await candidateApi.resume(sessionId);
+        }
         setSession(response.session);
         setExam(response.exam);
         if(response.session.status==='submitted')setResult((await candidateApi.result(sessionId)).result);

@@ -16,9 +16,10 @@ export async function POST(req:Request,{params}:{params:Promise<{id:string}>}){
       const scored=scoreFrozenExam(version,s);
       return NextResponse.json({ok:true,alreadySubmitted:true,result:{...scored,submittedAt:s.submittedAt,review:buildSubmittedReview(version,s)}});
     }
-    const scored=scoreFrozenExam(version,s); const finalized=finalizeSessionForSubmission(s);
+    const finalized=finalizeSessionForSubmission(s);
     if(!finalized.ok)return NextResponse.json({ok:false,error:finalized.error},{status:409});
-    await repo.saveSession(s);
-    return NextResponse.json({ok:true,result:{...scored,submittedAt:s.submittedAt,timedOut:finalized.timedOut,review:buildSubmittedReview(version,s)}});
+    const saved=await repo.saveSession(s);
+    const scored=scoreFrozenExam(version,saved);
+    return NextResponse.json({ok:true,result:{...scored,submittedAt:saved.submittedAt,timedOut:finalized.timedOut,review:buildSubmittedReview(version,saved)}});
   }catch(e){return apiError(e);}
 }

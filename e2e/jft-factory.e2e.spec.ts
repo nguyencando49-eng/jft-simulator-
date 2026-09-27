@@ -146,6 +146,78 @@ test.describe.serial('JFT E2E release journeys',()=>{
     expect(denied.body.error).toBe('FORBIDDEN');
   });
 
+  test('failed autosave blocks navigation and can retry the same selected answer',async({page})=>{
+    await devLogin(page,'candidate','e2e-save-retry@local.test');
+    await startCandidateExam(page);
+    await page.route('**/api/v1/sessions/*/answers',route=>route.fulfill({status:503,contentType:'application/json',body:JSON.stringify({ok:false,error:'offline'})}));
+    await page.getByRole('radio').first().check();
+    await expect(page.getByRole('button',{name:'Thử lưu lại'})).toBeVisible();
+    await expect(page.getByRole('button',{name:'Tiếp theo'})).toBeDisabled();
+    await page.unroute('**/api/v1/sessions/*/answers');
+    await page.getByRole('button',{name:'Thử lưu lại'}).click();
+    await expect(page.getByText('Đã lưu tự động')).toBeVisible();
+    await expect(page.getByRole('radio').first()).toBeChecked();
+    await page.reload();
+    await expect(page.getByRole('radio').first()).toBeChecked();
+    await moveNext(page);
+    await expect(page.getByText(/Câu 2 \/ 2/)).toBeVisible();
+  });
+
+  test('timeout submits acknowledged answers even when the last autosave fails',async({page})=>{
+    await devLogin(page,'candidate','e2e-timeout-offline@local.test');
+    await startCandidateExam(page,8);
+    await answerCurrent(page,0);
+    await page.route('**/api/v1/sessions/*/answers',route=>route.fulfill({status:503,contentType:'application/json',body:'{"ok":false}'}));
+    await page.getByRole('radio').nth(1).check();
+    await expect(page).toHaveURL(/\/result\?sessionId=/,{timeout:20_000});
+    const id=new URL(page.url()).searchParams.get('sessionId')!;
+    const result=await (await page.request.get(`/api/v1/sessions/${id}/result`)).json();
+    expect(result.result.review[0].selectedAnswer).toBe(0);
+  });
+
+  for(const destination of ['exam','history'] as const){
+    test(`a session that expired while closed produces a result from ${destination}`,async({page})=>{
+      await devLogin(page,'candidate',`e2e-expired-${destination}@local.test`);
+      await page.context().addCookies([{name:'jft-e2e-duration-seconds',value:'2',url:'http://127.0.0.1:3100'}]);
+      const catalog=await (await page.request.get('/api/v1/exams/published')).json();
+      const created=await (await page.request.post('/api/v1/sessions',{data:{examVersionId:catalog.version.id}})).json();
+      const id=created.session.id;
+      expect((await page.request.put(`/api/v1/sessions/${id}/answers`,{data:{questionId:created.exam.questions[0].id,choice:0}})).status()).toBe(200);
+      await expect.poll(async()=>(await (await page.request.get(`/api/v1/sessions/${id}`)).json()).session.status).toBe('expired');
+      await page.goto(destination==='exam'?`/exam?sessionId=${id}`:`/candidate/history/${id}`);
+      await expect(page.getByTestId('answer-review')).toBeVisible();
+      const result=await (await page.request.get(`/api/v1/sessions/${id}/result`)).json();
+      expect(result.result.review[0].selectedAnswer).toBe(0);
+    });
+  }
+
+  test('server prevents skipping sections and editing a completed section',async({page})=>{
+    await devLogin(page,'candidate','e2e-section-boundary@local.test');
+    await startCandidateExam(page);
+    const own=await (await page.request.get('/api/v1/sessions')).json();
+    const id=own.attempts.find((item:{status:string})=>item.status==='active').id;
+    const payload=await (await page.request.get(`/api/v1/sessions/${id}`)).json();
+    expect((await page.request.put(`/api/v1/sessions/${id}/answers`,{data:{currentIndex:4}})).status()).toBe(409);
+    for(let currentIndex=1;currentIndex<=6;currentIndex++)expect((await page.request.put(`/api/v1/sessions/${id}/answers`,{data:{currentIndex}})).status()).toBe(200);
+    expect((await page.request.put(`/api/v1/sessions/${id}/answers`,{data:{currentIndex:0}})).status()).toBe(409);
+    expect((await page.request.put(`/api/v1/sessions/${id}/answers`,{data:{questionId:payload.exam.questions[0].id,choice:1}})).status()).toBe(409);
+  });
+
+  test('login keeps the requested exam query string',async({page})=>{
+    let signedIn=false;
+    await page.route('**/api/v1/auth/me',route=>signedIn?route.continue():route.fulfill({status:401,contentType:'application/json',body:'{"ok":false}'}));
+    await page.route('**/api/v1/auth/refresh',route=>route.fulfill({status:401,contentType:'application/json',body:'{"ok":false}'}));
+    await page.goto('/exam?examVersionId=JFT-E2E-001-v1');
+    await expect(page).toHaveURL(/\/login\?next=/);
+    expect(new URL(page.url()).searchParams.get('next')).toBe('/exam?examVersionId=JFT-E2E-001-v1');
+    await page.getByLabel('Email').fill('e2e-deep-link@local.test');
+    await page.getByLabel('Vai trò phát triển').selectOption('candidate');
+    signedIn=true;
+    await page.getByRole('button',{name:'Đăng nhập'}).click();
+    await expect(page).toHaveURL(/\/exam\?examVersionId=JFT-E2E-001-v1/);
+    await expect(page.getByRole('heading',{name:'Hướng dẫn làm bài'})).toBeVisible();
+  });
+
   test('admin can generate Listening, render TTS, approve, and publish an exam version',async({page})=>{
     await devLogin(page,'admin');
     await page.goto('/admin/factory');

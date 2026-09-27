@@ -16,9 +16,10 @@ type AudioState='idle'|'loading'|'ready'|'playing'|'error';
 export default function ExamClient(){
   const bootstrapped=useRef(false);
   const timeoutTriggered=useRef(false);
+  const submitting=useRef(false);
   const saveQueue=useRef<Promise<void>>(Promise.resolve());
   const pendingSaves=useRef(0);
-  const failedSaves=useRef(new Set<string>());
+  const failedSaves=useRef(new Map<string,{index?:number;id?:string;choice?:number}>());
   const router=useRouter();
   const params=useSearchParams();
   const audioRef=useRef<HTMLAudioElement|null>(null);
@@ -37,6 +38,13 @@ export default function ExamClient(){
 
   useEffect(()=>{if(bootstrapped.current)return;bootstrapped.current=true;void bootstrap();},[]);
   useEffect(()=>{setAudioState('idle');},[currentIndex]);
+  useEffect(()=>{
+    const warnUnsaved=(event:BeforeUnloadEvent)=>{
+      if(pendingSaves.current||failedSaves.current.size){event.preventDefault();event.returnValue='';}
+    };
+    window.addEventListener('beforeunload',warnUnsaved);
+    return()=>window.removeEventListener('beforeunload',warnUnsaved);
+  },[]);
   useEffect(()=>{
     if(!session||session.status!=='active')return;
     const tick=()=>{
@@ -57,11 +65,9 @@ export default function ExamClient(){
       return true;
     }
     if(response.session.status==='expired'||Date.now()>=new Date(response.session.expiresAt).getTime()){
+      await candidateApi.submit(response.session.id);
       localStorage.removeItem(SESSION_KEY);
-      setSession(response.session);
-      setExam(response.exam);
-      setError('Bài luyện tập đã hết thời gian. Hãy mở lịch sử để kiểm tra trạng thái lần làm bài.');
-      setPhase('expired');
+      router.replace(`/result?sessionId=${encodeURIComponent(response.session.id)}`);
       return true;
     }
     localStorage.setItem(SESSION_KEY,response.session.id);
@@ -155,21 +161,31 @@ export default function ExamClient(){
         if(attempt>0){setSync('retrying');await new Promise(resolve=>setTimeout(resolve,attempt*450));}
         try{await candidateApi.saveAnswer(session.id,id,choice,index);saved=true;}catch{/* bounded retry below */}
       }
-      if(saved)failedSaves.current.delete(key);else failedSaves.current.add(key);
+      if(saved)failedSaves.current.delete(key);else failedSaves.current.set(key,{index,id,choice});
       pendingSaves.current-=1;
       if(failedSaves.current.size)setSync('error');else if(pendingSaves.current===0)setSync('saved');
     };
     saveQueue.current=saveQueue.current.then(operation,operation);
   }
 
+  async function retrySaves(){
+    if(pendingSaves.current||submitting.current)return;
+    for(const mutation of [...failedSaves.current.values()])persist(mutation.index,mutation.id,mutation.choice);
+    await saveQueue.current;
+  }
+
+  function progressBlocked(){
+    return !session||submitting.current||pendingSaves.current>0||failedSaves.current.size>0||Date.now()>=new Date(session.expiresAt).getTime();
+  }
+
   function choose(choice:number){
-    if(!q)return;
+    if(!q||progressBlocked())return;
     setAnswers(current=>({...current,[q.id]:choice}));
     persist(undefined,q.id,choice);
   }
 
   function go(index:number){
-    if(!exam||!q)return;
+    if(!exam||!q||progressBlocked())return;
     const next=Math.max(0,Math.min(exam.questions.length-1,index));
     if(!rule?.allowBack&&next!==currentIndex)return;
     if(exam.questions[next].section!==q.section)return;
@@ -178,7 +194,7 @@ export default function ExamClient(){
   }
 
   function advance(){
-    if(!exam||!q)return;
+    if(!exam||!q||progressBlocked())return;
     if(currentIndex===exam.questions.length-1){setPhase('final_confirm');return;}
     const next=currentIndex+1;
     if(exam.questions[next].section!==q.section){setPhase('section_confirm');return;}
@@ -187,7 +203,7 @@ export default function ExamClient(){
   }
 
   function enterNextSection(){
-    if(!exam)return;
+    if(!exam||progressBlocked())return;
     const next=currentIndex+1;
     setCurrentIndex(next);
     persist(next);
@@ -195,13 +211,15 @@ export default function ExamClient(){
   }
 
   async function finish(){
-    if(!session)return;
+    if(!session||submitting.current)return;
+    submitting.current=true;
     setPhase('loading');
     await saveQueue.current;
-    if(failedSaves.current.size){
-      setError('Một số thay đổi chưa lưu được. Hãy kiểm tra kết nối, chọn lại đáp án đang báo lỗi rồi nộp bài.');
+    // At the deadline the server scores only acknowledged answers. Failed late
+    // writes must not prevent finalization or repeatedly reopen the exam.
+    if(failedSaves.current.size&&Date.now()<new Date(session.expiresAt).getTime()){
       setPhase('testing');
-      timeoutTriggered.current=false;
+      submitting.current=false;
       return;
     }
     try{
@@ -211,7 +229,7 @@ export default function ExamClient(){
     }catch{
       setError('Không thể nộp bài ngay lúc này. Đáp án đã lưu; vui lòng thử lại.');
       setPhase('error');
-    }
+    }finally{submitting.current=false;}
   }
 
   function playAudio(){
@@ -244,7 +262,8 @@ export default function ExamClient(){
   const position=sectionQuestions.findIndex(entry=>entry.index===currentIndex)+1;
   const used=plays[q.id]||0;
   const saveLabel=sync==='saving'?'Đang lưu…':sync==='retrying'?'Đang thử lưu lại…':sync==='error'?'Lưu thất bại · kiểm tra mạng':sync==='saved'?'Đã lưu tự động':'Chưa có thay đổi';
-  return <Frame timer={timer} section={labels[q.section]} progress={`${currentIndex+1}/${exam.questions.length}`}><div className="cbt-layout"><aside className="question-palette" aria-label="Danh sách câu hỏi"><b>{labels[q.section]}</b><div className="qgrid">{sectionQuestions.map(({item,index},number)=><button key={item.id} aria-label={`Câu ${number+1}${answers[item.id]!==undefined?', đã trả lời':''}`} disabled={!rule?.allowBack&&index!==currentIndex} className={`qnum ${index===currentIndex?'current':''} ${answers[item.id]!==undefined?'answered':''}`} onClick={()=>go(index)}>{number+1}</button>)}</div><div className="palette-legend"><span><i className="legend-current"/>Đang làm</span><span><i className="legend-answered"/>Đã trả lời</span></div></aside><section className="cbt-question"><header><div><span>Câu {position} / {sectionQuestions.length}</span><b>{q.level}</b><span className={`save-status ${sync}`} role="status">{saveLabel}</span></div><button className="language-btn" onClick={()=>setLanguage(value=>value==='ja'?'vi':'ja')}>Hướng dẫn: {language==='ja'?'日本語':'Tiếng Việt'}</button></header><div className="cbt-body">{error&&<Alert tone="danger" title="Có thay đổi chưa được xử lý">{error}</Alert>}<p className="instruction">{language==='vi'?'Chọn một đáp án phù hợp nhất.':q.instruction}</p>{q.type==='audio_choice'&&<div className={`listening-player ${audioState==='error'?'has-error':''}`}><audio ref={audioRef} src={q.audioSrc} preload="metadata" onCanPlay={()=>setAudioState(current=>current==='playing'?current:'ready')} onEnded={()=>setAudioState('ready')} onError={()=>{setAudioState('error');setError('Tệp âm thanh không tải được. Vui lòng kiểm tra kết nối hoặc báo cho quản trị viên.');}}/><button className="audio-btn" onClick={playAudio} disabled={used>=2||audioState==='loading'||audioState==='error'} aria-label="Phát âm thanh">▶</button><div><b>{audioState==='error'?'Âm thanh không khả dụng':used>=2?'Đã dùng hết lượt phát':audioState==='loading'?'Đang tải âm thanh…':audioState==='playing'?'Đang phát…':'Phát âm thanh'}</b><span>Còn {Math.max(0,2-used)} / 2 lượt</span></div></div>}<div className="prompt" lang="ja">{formatQuestionPrompt(q.prompt)}</div><fieldset className="choices"><legend className="sr-only">Các lựa chọn</legend>{q.choices.map((choice,index)=><label key={index} className={`choice ${answers[q.id]===index?'selected':''}`}><input type="radio" name={q.id} checked={answers[q.id]===index} onChange={()=>choose(index)}/><span className="choice-index">{String.fromCharCode(65+index)}</span><span className="choice-label" lang="ja">{choice}</span></label>)}</fieldset></div><footer><span>Toàn bài: {Object.keys(answers).length}/{exam.questions.length} câu đã trả lời</span><div className="actions"><button className="secondary" disabled={!rule?.allowBack||sectionQuestions[0].index===currentIndex} onClick={()=>go(currentIndex-1)}>Quay lại</button><button className="primary" onClick={advance}>{currentIndex===exam.questions.length-1?'Kiểm tra & nộp':'Tiếp theo'}</button></div></footer></section></div></Frame>;
+  const blocked=sync==='saving'||sync==='retrying'||sync==='error'||remaining===0;
+  return <Frame timer={timer} section={labels[q.section]} progress={`${currentIndex+1}/${exam.questions.length}`}><div className="cbt-layout"><aside className="question-palette" aria-label="Danh sách câu hỏi"><b>{labels[q.section]}</b><div className="qgrid">{sectionQuestions.map(({item,index},number)=><button key={item.id} aria-label={`Câu ${number+1}${answers[item.id]!==undefined?', đã trả lời':''}`} disabled={blocked||(!rule?.allowBack&&index!==currentIndex)} className={`qnum ${index===currentIndex?'current':''} ${answers[item.id]!==undefined?'answered':''}`} onClick={()=>go(index)}>{number+1}</button>)}</div><div className="palette-legend"><span><i className="legend-current"/>Đang làm</span><span><i className="legend-answered"/>Đã trả lời</span></div></aside><section className="cbt-question"><header><div><span>Câu {position} / {sectionQuestions.length}</span><b>{q.level}</b><span className={`save-status ${sync}`} role="status">{saveLabel}</span></div><button className="language-btn" onClick={()=>setLanguage(value=>value==='ja'?'vi':'ja')}>Hướng dẫn: {language==='ja'?'日本語':'Tiếng Việt'}</button></header><div className="cbt-body">{sync==='error'&&<Alert tone="danger" title="Đáp án chưa được lưu"><p>Kiểm tra kết nối và thử lưu lại trước khi chuyển câu. Giữ trang này mở để không mất thay đổi.</p><button className="secondary" onClick={()=>void retrySaves()}>Thử lưu lại</button></Alert>}{error&&<Alert tone="danger" title="Có thay đổi chưa được xử lý">{error}</Alert>}<p className="instruction">{language==='vi'?'Chọn một đáp án phù hợp nhất.':q.instruction}</p>{q.type==='audio_choice'&&<div className={`listening-player ${audioState==='error'?'has-error':''}`}><audio ref={audioRef} src={q.audioSrc} preload="metadata" onCanPlay={()=>setAudioState(current=>current==='playing'?current:'ready')} onEnded={()=>setAudioState('ready')} onError={()=>{setAudioState('error');setError('Tệp âm thanh không tải được. Vui lòng kiểm tra kết nối hoặc báo cho quản trị viên.');}}/><button className="audio-btn" onClick={playAudio} disabled={used>=2||audioState==='loading'||audioState==='error'} aria-label="Phát âm thanh">▶</button><div><b>{audioState==='error'?'Âm thanh không khả dụng':used>=2?'Đã dùng hết lượt phát':audioState==='loading'?'Đang tải âm thanh…':audioState==='playing'?'Đang phát…':'Phát âm thanh'}</b><span>Còn {Math.max(0,2-used)} / 2 lượt</span></div></div>}<div className="prompt" lang="ja">{formatQuestionPrompt(q.prompt)}</div><fieldset className="choices"><legend className="sr-only">Các lựa chọn</legend>{q.choices.map((choice,index)=><label key={index} className={`choice ${answers[q.id]===index?'selected':''}`}><input type="radio" disabled={blocked} name={q.id} checked={answers[q.id]===index} onChange={()=>choose(index)}/><span className="choice-index">{String.fromCharCode(65+index)}</span><span className="choice-label" lang="ja">{choice}</span></label>)}</fieldset></div><footer><span>Toàn bài: {Object.keys(answers).length}/{exam.questions.length} câu đã trả lời</span><div className="actions"><button className="secondary" disabled={blocked||!rule?.allowBack||sectionQuestions[0].index===currentIndex} onClick={()=>go(currentIndex-1)}>Quay lại</button><button className="primary" disabled={blocked} onClick={advance}>{currentIndex===exam.questions.length-1?'Kiểm tra & nộp':'Tiếp theo'}</button></div></footer></section></div></Frame>;
 }
 
 function Frame({timer,section,progress,children}:{timer:string;section?:string;progress?:string;children:React.ReactNode}){

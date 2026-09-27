@@ -26,6 +26,23 @@ describe('session integrity',()=>{
     const result=validateSessionMutation(version,session({currentIndex:1}),{currentIndex:3});
     expect(result.ok).toBe(false);
   });
+  it('does not allow skipping into a later section from a reviewable section',()=>{
+    expect(validateSessionMutation(version,session(),{currentIndex:3}).ok).toBe(false);
+  });
+  it('closes previous sections even when the current section allows review',()=>{
+    const reading=q('q5','reading');
+    const full={...version,questions:[...version.questions,{questionId:reading.id,questionVersion:1,snapshot:reading}],rules:[...version.rules!,{section:'reading' as const,count:1,allowBack:true,levels:['A2.1' as const]}]};
+    expect(validateSessionMutation(full,session({currentIndex:4}),{currentIndex:0}).ok).toBe(false);
+    expect(validateSessionMutation(full,session({currentIndex:4}),{questionId:'q1',choice:1}).ok).toBe(false);
+    expect(validateSessionMutation(full,session({currentIndex:3}),{currentIndex:4}).ok).toBe(true);
+  });
+  it('applies the Listening no-back default to legacy snapshots without rules',()=>{
+    expect(validateSessionMutation({...version,rules:[]},session({currentIndex:2}),{currentIndex:1}).ok).toBe(false);
+    expect(validateSessionMutation({...version,rules:[]},session({currentIndex:2}),{questionId:'q2',choice:1}).ok).toBe(false);
+  });
+  it('rejects rewriting a Listening answer bundled with a move to the next question',()=>{
+    expect(validateSessionMutation(version,session({currentIndex:1}),{questionId:'q2',choice:1,currentIndex:2}).ok).toBe(false);
+  });
   it('enforces ownership but permits admins',()=>{
     const s=session();
     expect(canAccessSession(s,'u1','candidate')).toBe(true);

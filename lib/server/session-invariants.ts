@@ -35,20 +35,19 @@ export function validateSessionMutation(
     return { ok: false, status: 409, error: 'Session currentIndex is invalid' };
   }
 
+  const currentSection = version.questions[session.currentIndex]?.snapshot.section;
+  const allowBack = (section: typeof currentSection) =>
+    version.rules?.find(rule => rule.section === section)?.allowBack ?? section !== 'listening';
+
   if (mutation.currentIndex !== undefined) {
     if (!Number.isInteger(mutation.currentIndex) || mutation.currentIndex < 0 || mutation.currentIndex >= total) {
       return { ok: false, status: 422, error: 'currentIndex is outside exam range' };
     }
-    if (mutation.currentIndex < session.currentIndex) {
-      const current = version.questions[session.currentIndex];
-      const rule = version.rules?.find(r => r.section === current?.snapshot.section);
-      if (rule && !rule.allowBack) return { ok: false, status: 409, error: 'Back navigation is disabled for this section' };
-    }
-    if (mutation.currentIndex > session.currentIndex + 1) {
-      const current = version.questions[session.currentIndex];
-      const rule = version.rules?.find(r => r.section === current?.snapshot.section);
-      if (rule && !rule.allowBack) return { ok: false, status: 409, error: 'This section must be completed sequentially' };
-    }
+    const targetSection = version.questions[mutation.currentIndex].snapshot.section;
+    if (targetSection !== currentSection && mutation.currentIndex !== session.currentIndex + 1)
+      return { ok: false, status: 409, error: 'Sections must be completed in order; previous sections are closed' };
+    if (!allowBack(currentSection) && mutation.currentIndex !== session.currentIndex && mutation.currentIndex !== session.currentIndex + 1)
+      return { ok: false, status: 409, error: 'This section must be completed sequentially' };
   }
 
   if (mutation.questionId !== undefined) {
@@ -59,11 +58,12 @@ export function validateSessionMutation(
     if (mutation.choice! < 0 || mutation.choice! >= frozen.snapshot.choices.length) {
       return { ok: false, status: 422, error: 'Choice is outside question choices' };
     }
-    const rule = version.rules?.find(r => r.section === frozen.snapshot.section);
-    if (rule && !rule.allowBack && index < session.currentIndex) {
+    const effectiveIndex = mutation.currentIndex ?? session.currentIndex;
+    if (frozen.snapshot.section !== version.questions[effectiveIndex]?.snapshot.section)
+      return { ok: false, status: 409, error: 'Answers can only be changed in the current section' };
+    if (!allowBack(frozen.snapshot.section) && index < effectiveIndex) {
       return { ok: false, status: 409, error: 'Answer can no longer be changed for this section' };
     }
-    const effectiveIndex = mutation.currentIndex ?? session.currentIndex;
     if (index > effectiveIndex) {
       return { ok: false, status: 409, error: 'Cannot answer a future question before navigating to it' };
     }

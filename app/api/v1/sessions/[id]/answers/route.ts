@@ -16,7 +16,7 @@ export async function PUT(req:Request,{params}:{params:Promise<{id:string}>}){
     const body=await req.json() as {questionId?:string;choice?:number;currentIndex?:number};
     const invariant=validateSessionMutation(version,s,body);
     if(!invariant.ok)return NextResponse.json({ok:false,error:invariant.error},{status:invariant.status});
-    const saved=await repo.saveSessionProgress(s.id,body);
+    const saved=await repo.saveSessionProgress(s.id,{...body,expectedCurrentIndex:s.currentIndex});
     if(!saved)return NextResponse.json({ok:false,error:'Session changed or expired while saving progress'},{status:409});
     return NextResponse.json({ok:true,savedAt:new Date().toISOString()});
   }catch(e){return apiError(e);}

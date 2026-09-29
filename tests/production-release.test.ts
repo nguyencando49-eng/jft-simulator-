@@ -3,6 +3,7 @@ import { seedQuestions } from '@/data/admin/seed';
 import type { ExamDraft,ExamVersion,QuestionRecord } from '@/lib/admin-types';
 import type { Repository } from '@/lib/server/domain';
 import { buildProductionExamReleasePack,publishProductionRelease,PRODUCTION_RELEASE_VERSION } from '@/lib/server/production-release';
+import { PRODUCTION_EXAM_LEVELS,PRODUCTION_EXAMS_PER_LEVEL } from '@/data/production/exam-catalog';
 
 function repository(){
   let questions:QuestionRecord[]=[];
@@ -31,38 +32,81 @@ function repository(){
   return {repo,versions,drafts,get questions(){return questions}};
 }
 
+function overlap(left:ExamVersion,right:ExamVersion){
+  const ids=new Set(left.questions.map(item=>item.questionId));
+  return right.questions.reduce((count,item)=>count+(ids.has(item.questionId)?1:0),0);
+}
+function jsonbRoundTrip<T>(value:T):T{
+  const reorder=(input:unknown):unknown=>{
+    if(Array.isArray(input))return input.map(reorder);
+    if(input&&typeof input==='object'){
+      return Object.fromEntries(
+        Object.entries(input as Record<string,unknown>)
+          .sort(([left],[right])=>right.localeCompare(left))
+          .map(([key,nested])=>[key,reorder(nested)]),
+      );
+    }
+    return input;
+  };
+  return reorder(value) as T;
+}
+
 describe('Production 3000 exam release',()=>{
-  it('builds one immutable 48-question form for every production level',()=>{
+  it('builds 20 low-overlap immutable 48-question forms for every production level',()=>{
     const pack=buildProductionExamReleasePack(seedQuestions,'2026-09-22T00:00:00.000Z');
     expect(pack.report.releaseVersion).toBe(PRODUCTION_RELEASE_VERSION);
-    expect(pack.versions).toHaveLength(3);
-    expect(pack.report.levels).toEqual(['A1','A2.1','A2.2']);
-    for(const [index,version] of pack.versions.entries()){
-      expect(version.questions).toHaveLength(48);
-      expect(version.durationMinutes).toBe(60);
-      expect(new Set(version.questions.map(item=>item.questionId)).size).toBe(48);
-      expect(new Set(version.questions.map(item=>item.snapshot.level))).toEqual(new Set([pack.report.levels[index]]));
-      expect(version.questions.every(item=>item.snapshot.status==='approved')).toBe(true);
-      for(const section of ['script_vocabulary','conversation_expression','listening','reading']){
-        expect(version.questions.filter(item=>item.snapshot.section===section),`${version.id}/${section}`).toHaveLength(12);
+    expect(pack.report.examsPerLevel).toBe(PRODUCTION_EXAMS_PER_LEVEL);
+    expect(pack.versions).toHaveLength(PRODUCTION_EXAM_LEVELS.length*PRODUCTION_EXAMS_PER_LEVEL);
+    expect(pack.report.maxPairwiseOverlap).toBeLessThanOrEqual(1);
+
+    for(const level of PRODUCTION_EXAM_LEVELS){
+      const forms=pack.versions.filter(version=>version.questions[0]?.snapshot.level===level);
+      expect(forms).toHaveLength(PRODUCTION_EXAMS_PER_LEVEL);
+      for(const version of forms){
+        expect(version.questions).toHaveLength(48);
+        expect(version.durationMinutes).toBe(60);
+        expect(new Set(version.questions.map(item=>item.questionId)).size).toBe(48);
+        expect(new Set(version.questions.map(item=>item.snapshot.level))).toEqual(new Set([level]));
+        expect(version.questions.every(item=>item.snapshot.status==='approved')).toBe(true);
+        for(const section of ['script_vocabulary','conversation_expression','listening','reading']){
+          expect(version.questions.filter(item=>item.snapshot.section===section),`${version.id}/${section}`).toHaveLength(12);
+        }
       }
+      for(let left=0;left<forms.length;left++){
+        for(let right=left+1;right<forms.length;right++){
+          expect(overlap(forms[left],forms[right]),`${forms[left].id} vs ${forms[right].id}`).toBeLessThanOrEqual(1);
+        }
+      }
+
+      for(const section of ['script_vocabulary','conversation_expression','reading'] as const){
+        const ids=forms.flatMap(version=>version.questions.filter(item=>item.snapshot.section===section).map(item=>item.questionId));
+        expect(new Set(ids).size).toBe(ids.length);
+      }
+      const listeningIds=forms.flatMap(version=>version.questions.filter(item=>item.snapshot.section==='listening').map(item=>item.questionId));
+      const exposure=new Map<string,number>();
+      listeningIds.forEach(id=>exposure.set(id,(exposure.get(id)??0)+1));
+      expect(new Set(listeningIds).size).toBe(175);
+      expect(Math.max(...exposure.values())).toBe(2);
     }
   });
 
-  it('imports the 3,000-bank and publishes exactly three versions idempotently',async()=>{
+  it('imports the 3,000-bank and publishes exactly 60 versions idempotently',async()=>{
     const state=repository();
     const first=await publishProductionRelease(state.repo,'2026-09-22T00:00:00.000Z');
     expect(first.bankImport.imported).toBe(3000);
-    expect(first.published).toHaveLength(3);
+    expect(first.published).toHaveLength(60);
     expect(first.skipped).toEqual([]);
     expect(state.questions).toHaveLength(3000);
-    expect(state.versions).toHaveLength(3);
-    expect(state.drafts).toHaveLength(3);
+    expect(state.versions).toHaveLength(60);
+    expect(state.drafts).toHaveLength(60);
 
+    // PostgreSQL jsonb does not preserve object key order. Simulate that
+    // round-trip so semantic equality, not insertion order, defines immutability.
+    state.versions.splice(0,state.versions.length,...jsonbRoundTrip(state.versions));
     const second=await publishProductionRelease(state.repo,'2026-09-23T00:00:00.000Z');
     expect(second.published).toEqual([]);
-    expect(second.skipped).toHaveLength(3);
-    expect(state.versions).toHaveLength(3);
+    expect(second.skipped).toHaveLength(60);
+    expect(state.versions).toHaveLength(60);
   });
 
   it('refuses to overwrite an existing production version with a different snapshot',async()=>{

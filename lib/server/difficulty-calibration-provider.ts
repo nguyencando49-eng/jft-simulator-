@@ -1,3 +1,4 @@
+import { requestSpecializedAzureQa, specializedAzureQaConfig } from './specialized-azure-qa';
 import {DIFFICULTY_CALIBRATION_POLICY_V1,DIFFICULTY_CALIBRATION_PROMPT_VERSION,DIFFICULTY_CALIBRATION_SYSTEM_PROMPT_V1,type AcousticAssessment,type DifficultyCalibrationAnalysis,type DifficultyCalibrationInput,type DifficultyProfile,type DifficultyReasoningDepth,type DistractorStrength} from './difficulty-calibration';
 
 export interface DifficultyCalibrationProvider {name:string;model?:string;estimate(input:DifficultyCalibrationInput):Promise<unknown>}
@@ -43,5 +44,14 @@ export class HttpDifficultyCalibrationProvider implements DifficultyCalibrationP
   }
 }
 
-export function getDifficultyCalibrationProvider():DifficultyCalibrationProvider{return process.env.DIFFICULTY_CALIBRATION_PROVIDER==='http'?new HttpDifficultyCalibrationProvider():new MockDifficultyCalibrationProvider()}
-export function difficultyCalibrationProviderMode(){return process.env.DIFFICULTY_CALIBRATION_PROVIDER==='http'?'http':'mock'}
+export class AzureOpenAiDifficultyCalibrationProvider implements DifficultyCalibrationProvider {
+  name='azure-openai-difficulty-calibration';
+  model=specializedAzureQaConfig('DIFFICULTY_CALIBRATION').deployment;
+  async estimate(input:DifficultyCalibrationInput):Promise<unknown>{
+    const result=await requestSpecializedAzureQa('DIFFICULTY_CALIBRATION',DIFFICULTY_CALIBRATION_SYSTEM_PROMPT_V1,input);
+    return result;
+  }
+}
+
+export function getDifficultyCalibrationProvider():DifficultyCalibrationProvider{return process.env.DIFFICULTY_CALIBRATION_PROVIDER==='azure-openai'?new AzureOpenAiDifficultyCalibrationProvider():process.env.DIFFICULTY_CALIBRATION_PROVIDER==='http'?new HttpDifficultyCalibrationProvider():new MockDifficultyCalibrationProvider()}
+export function difficultyCalibrationProviderMode(){return process.env.DIFFICULTY_CALIBRATION_PROVIDER==='azure-openai'?'azure-openai':process.env.DIFFICULTY_CALIBRATION_PROVIDER==='http'?'http':'mock'}

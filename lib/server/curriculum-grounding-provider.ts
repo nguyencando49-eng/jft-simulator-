@@ -1,3 +1,4 @@
+import { requestSpecializedAzureQa, specializedAzureQaConfig } from './specialized-azure-qa';
 import {CURRICULUM_GROUNDING_PROMPT_VERSION,CURRICULUM_GROUNDING_SYSTEM_PROMPT_V1,CurriculumGroundingError,validateCurriculumGroundingAnalysis,type ApprovedKnowledgeUnitEvidence,type CurriculumGroundingAnalysis,type CurriculumGroundingInput,type CurriculumKnowledgeAnalysisItem,type CurriculumKnowledgeSource,type CurriculumKnowledgeType,type CurriculumSupport} from './curriculum-grounding';
 
 export interface CurriculumGroundingProvider{name:string;model?:string;evaluate(input:CurriculumGroundingInput):Promise<CurriculumGroundingAnalysis>}
@@ -46,5 +47,14 @@ export class HttpCurriculumGroundingProvider implements CurriculumGroundingProvi
   }
 }
 
-export function getCurriculumGroundingProvider():CurriculumGroundingProvider{return process.env.CURRICULUM_GROUNDING_PROVIDER==='http'?new HttpCurriculumGroundingProvider():new MockCurriculumGroundingProvider()}
-export function curriculumGroundingProviderMode(){return process.env.CURRICULUM_GROUNDING_PROVIDER==='http'?'http':'mock'}
+export class AzureOpenAiCurriculumGroundingProvider implements CurriculumGroundingProvider {
+  name='azure-openai-curriculum-grounding';
+  model=specializedAzureQaConfig('CURRICULUM_GROUNDING').deployment;
+  async evaluate(input:CurriculumGroundingInput):Promise<CurriculumGroundingAnalysis>{
+    const result=await requestSpecializedAzureQa('CURRICULUM_GROUNDING',CURRICULUM_GROUNDING_SYSTEM_PROMPT_V1,input);
+    return validateCurriculumGroundingAnalysis(result,input);
+  }
+}
+
+export function getCurriculumGroundingProvider():CurriculumGroundingProvider{return process.env.CURRICULUM_GROUNDING_PROVIDER==='azure-openai'?new AzureOpenAiCurriculumGroundingProvider():process.env.CURRICULUM_GROUNDING_PROVIDER==='http'?new HttpCurriculumGroundingProvider():new MockCurriculumGroundingProvider()}
+export function curriculumGroundingProviderMode(){return process.env.CURRICULUM_GROUNDING_PROVIDER==='azure-openai'?'azure-openai':process.env.CURRICULUM_GROUNDING_PROVIDER==='http'?'http':'mock'}

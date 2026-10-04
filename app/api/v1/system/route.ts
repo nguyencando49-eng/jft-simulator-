@@ -10,6 +10,7 @@ import { curriculumGroundingProviderMode } from '@/lib/server/curriculum-groundi
 import { jftAlignmentProviderMode } from '@/lib/server/jft-alignment-provider';
 import { difficultyCalibrationProviderMode } from '@/lib/server/difficulty-calibration-provider';
 import { originalityDuplicateProviderMode } from '@/lib/server/originality-duplicate-provider';
+import { SPECIALIZED_QA_PREFIXES, specializedQaConfigurationBlockers } from '@/lib/server/specialized-azure-qa';
 
 export async function GET(){
   const repository=repositoryMode();
@@ -26,6 +27,7 @@ export async function GET(){
   if(semantic==='mock')authoringBlockers.push('Semantic QA is using the mock reviewer.');
   if(tts==='mock')authoringBlockers.push('Listening Factory is using mock TTS.');
   for(const [name,mode] of Object.entries(specialized))if(mode==='mock')authoringBlockers.push(`${name} is using a mock/deterministic QA provider.`);
+  for(const prefix of SPECIALIZED_QA_PREFIXES)authoringBlockers.push(...specializedQaConfigurationBlockers(prefix));
   return NextResponse.json({
     ok:true,
     ready:blockers.length===0,

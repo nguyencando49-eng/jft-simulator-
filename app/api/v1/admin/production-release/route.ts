@@ -5,7 +5,7 @@ import { getRepository } from '@/lib/server/repository';
 import { hasProductionImportToken } from '@/lib/server/production-import-auth';
 import { previewProductionRelease,publishProductionRelease,ProductionReleaseError } from '@/lib/server/production-release';
 
-export const maxDuration=60;
+export const maxDuration=300;
 
 async function authorize(req:Request){
   if(!hasProductionImportToken(req))await requireAuth(req,'admin');

@@ -1,4 +1,4 @@
-import { describe,expect,it } from 'vitest';
+import { describe,expect,it,vi } from 'vitest';
 import { seedQuestions } from '@/data/admin/seed';
 import type { ExamDraft,ExamVersion,QuestionRecord } from '@/lib/admin-types';
 import type { Repository } from '@/lib/server/domain';
@@ -103,10 +103,26 @@ describe('Production 3000 exam release',()=>{
     // PostgreSQL jsonb does not preserve object key order. Simulate that
     // round-trip so semantic equality, not insertion order, defines immutability.
     state.versions.splice(0,state.versions.length,...jsonbRoundTrip(state.versions));
+    const writes=vi.spyOn(state.repo,'upsertQuestions');
+    const draftWrites=vi.spyOn(state.repo,'saveExamDraft');
     const second=await publishProductionRelease(state.repo,'2026-09-23T00:00:00.000Z');
     expect(second.published).toEqual([]);
     expect(second.skipped).toHaveLength(60);
     expect(state.versions).toHaveLength(60);
+    expect(writes).not.toHaveBeenCalled();
+    expect(draftWrites).not.toHaveBeenCalled();
+  });
+
+  it('resumes a partial release without replacing saved versions',async()=>{
+    const state=repository();
+    await publishProductionRelease(state.repo);
+    const retained=state.versions.splice(0,22);
+    state.versions.splice(0,state.versions.length,...retained);
+    const result=await publishProductionRelease(state.repo);
+    expect(result.skipped).toHaveLength(22);
+    expect(result.published).toHaveLength(38);
+    expect(state.versions).toHaveLength(60);
+    expect(state.versions.slice(0,22)).toEqual(retained);
   });
 
   it('refuses to overwrite an existing production version with a different snapshot',async()=>{

@@ -2,6 +2,7 @@ import { seedQuestions } from '@/data/admin/seed';
 import type { QuestionRecord } from '@/lib/admin-types';
 import type { Repository } from './domain';
 import { runQuestionQa } from './qa';
+import { isDeepStrictEqual } from 'node:util';
 import { assertControlledProductionBank,PRODUCTION_BANK_RELEASE_VERSION } from './production-bank-release';
 
 export const PRODUCTION_QUESTION_BATCH = 'JFT-3000-V3';
@@ -34,10 +35,12 @@ export async function importProductionQuestionBank(repository:Repository){
     const saved=existing.get(question.id);
     if(saved?.status==='archived')return saved;
     if(!saved)return question;
-    const changed=JSON.stringify({...saved,version:0,createdAt:'',updatedAt:'',status:'approved'})!==JSON.stringify({...question,version:0,createdAt:'',updatedAt:'',status:'approved'});
+    const changed=!isDeepStrictEqual(JSON.parse(JSON.stringify({...saved,version:0,createdAt:'',updatedAt:'',status:'approved'})),JSON.parse(JSON.stringify({...question,version:0,createdAt:'',updatedAt:'',status:'approved'})));
+    if(!changed&&saved.status==='approved'&&saved.version>=question.version)return saved;
     return {...question,version:changed?Math.max(question.version,saved.version+1):Math.max(question.version,saved.version),createdAt:saved.createdAt};
   });
-  await repository.upsertQuestions(questions);
+  const pending=questions.filter(question=>question!==existing.get(question.id));
+  if(pending.length)await repository.upsertQuestions(pending);
   const status=questions.reduce<Record<string,number>>((counts,question)=>{
     counts[question.status]=(counts[question.status]??0)+1;
     return counts;

@@ -43,6 +43,7 @@ export default function FactoryClient(){
       </div>
     </section>
     {selected&&<section className="admin-panel"><div className="panel-head"><div><h2>Hàng chờ duyệt thủ công</h2><small className="mono">công việc {selected.id}</small></div><button className="primary" disabled={busy||!Object.values(picked).some(Boolean)} onClick={approve}>Duyệt mục đã chọn → Ngân hàng câu hỏi</button></div>
+      {selected.error?<div role="alert" className="admin-alert error">{selected.error}</div>:null}
       <div className="factory-candidates">{selected.candidates.map((c,idx)=><article key={c.id} className={`factory-candidate ${!c.qa.passed?'fail':hasSpecializedReview(c)?'review':'pass'}`}>
         <div className="candidate-top"><label><input type="checkbox" disabled={!c.qa.passed||!!c.approvedAt} checked={!!picked[c.id]&&!c.approvedAt} onChange={e=>setPicked({...picked,[c.id]:e.target.checked})}/><b>Ứng viên {idx+1}</b></label><div><span className={`qa-score ${c.qa.score>=85?'good':c.qa.score>=65?'warn':'bad'}`}>QA {c.qa.score}</span>{c.approvedAt&&<span className="badge green">Đã duyệt</span>}</div></div>
         <p className="factory-prompt">{formatQuestionPrompt(c.question.prompt)}</p><ol>{c.question.choices.map((x,i)=><li key={i} className={i===c.question.answer?'correct':''}>{x}</li>)}</ol>

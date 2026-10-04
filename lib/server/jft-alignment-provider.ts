@@ -1,3 +1,4 @@
+import { requestSpecializedAzureQa, specializedAzureQaConfig } from './specialized-azure-qa';
 import {
   JFT_ALIGNMENT_PROMPT_VERSION,
   JFT_ALIGNMENT_REFERENCE_VERSION,
@@ -127,5 +128,14 @@ export class HttpJftAlignmentProvider implements JftAlignmentProvider {
   }
 }
 
-export function getJftAlignmentProvider():JftAlignmentProvider{return process.env.JFT_ALIGNMENT_PROVIDER==='http'?new HttpJftAlignmentProvider():new MockJftAlignmentProvider()}
-export function jftAlignmentProviderMode(){return process.env.JFT_ALIGNMENT_PROVIDER==='http'?'http':'mock'}
+export class AzureOpenAiJftAlignmentProvider implements JftAlignmentProvider {
+  name='azure-openai-jft-alignment';
+  model=specializedAzureQaConfig('JFT_ALIGNMENT').deployment;
+  async classify(input:JftAlignmentClassificationInput):Promise<unknown>{
+    const result=await requestSpecializedAzureQa('JFT_ALIGNMENT',JFT_ALIGNMENT_SYSTEM_PROMPT_V1,input);
+    return result;
+  }
+}
+
+export function getJftAlignmentProvider():JftAlignmentProvider{return process.env.JFT_ALIGNMENT_PROVIDER==='azure-openai'?new AzureOpenAiJftAlignmentProvider():process.env.JFT_ALIGNMENT_PROVIDER==='http'?new HttpJftAlignmentProvider():new MockJftAlignmentProvider()}
+export function jftAlignmentProviderMode(){return process.env.JFT_ALIGNMENT_PROVIDER==='azure-openai'?'azure-openai':process.env.JFT_ALIGNMENT_PROVIDER==='http'?'http':'mock'}

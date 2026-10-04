@@ -1,4 +1,6 @@
 import { chromium, expect } from '@playwright/test';
+import { assertProductionCatalog } from '../lib/server/production-catalog-check';
+import type { CandidateExamSummary } from '../lib/server/candidate-exam';
 
 const base=(process.env.PRODUCTION_URL||'https://jft-simulator.vercel.app').replace(/\/$/,'');
 const token=process.env.PRODUCTION_SMOKE_TOKEN;
@@ -33,7 +35,8 @@ try{
 
   const catalogResponse=await context.request.get(`${base}/api/v1/exams/published`);
   if(!catalogResponse.ok())throw new Error(`Published exam catalog returned ${catalogResponse.status()}.`);
-  const catalog=await catalogResponse.json() as {versions:Array<{id:string;examId:string;title:string;level:string;durationMinutes:number;questionCount:number;sections:string[]}>};
+  const catalog=await catalogResponse.json() as {versions:CandidateExamSummary[]};
+  const catalogCheck=assertProductionCatalog(catalog.versions);
   for(const item of expected){
     const exam=catalog.versions.find(version=>version.examId===item.examId);
     if(!exam)throw new Error(`Missing production exam ${item.examId}.`);
@@ -74,7 +77,7 @@ try{
   if(listeningIndex<0)throw new Error('Production exam has no Listening section.');
   const listening=activePayload.exam.questions[listeningIndex];
   if(!listening.audioSrc)throw new Error('Production Listening question has no audioSrc.');
-  const audio=await context.request.get(`${base}${listening.audioSrc}`);
+  const audio=await context.request.get(new URL(listening.audioSrc,base).href);
   if(!audio.ok()||(await audio.body()).byteLength<1_000||!audio.headers()['content-type']?.startsWith('audio/'))throw new Error('Production Listening audio is not playable.');
 
   const jump=await context.request.put(`${base}/api/v1/sessions/${encodeURIComponent(active.id)}/answers`,{data:{currentIndex:listeningIndex}});
@@ -106,6 +109,7 @@ try{
 
   console.log(JSON.stringify({
     status:'PASS',base,
+    ...catalogCheck,
     productionExams:expected.map(item=>item.examId),
     questionCount:48,questionsPerSection:12,durationMinutes:60,
     autosaveResume:true,answerLeak:false,listeningAudio:true,answerReview:true,idempotentSubmit:true,history:true,

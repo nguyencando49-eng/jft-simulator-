@@ -1,4 +1,5 @@
-import { ANSWER_ORACLE_PROMPT_VERSION,AnswerOracleError,type AnswerOracleInput,type AnswerOracleSolveResult,validateAnswerOracleOutput } from './answer-oracle';
+import { requestSpecializedAzureQa, specializedAzureQaConfig } from './specialized-azure-qa';
+import { ANSWER_ORACLE_PROMPT_VERSION,ANSWER_ORACLE_SYSTEM_PROMPT_V1,AnswerOracleError,type AnswerOracleInput,type AnswerOracleSolveResult,validateAnswerOracleOutput } from './answer-oracle';
 
 export interface AnswerOracleProvider {name:string;model?:string;solve(input:AnswerOracleInput):Promise<AnswerOracleSolveResult>}
 
@@ -29,5 +30,14 @@ export class HttpAnswerOracleProvider implements AnswerOracleProvider{
   }
 }
 
-export function getAnswerOracleProvider():AnswerOracleProvider{return process.env.ANSWER_ORACLE_PROVIDER==='http'?new HttpAnswerOracleProvider():new DeterministicAnswerOracleProvider()}
-export function answerOracleProviderMode(){return process.env.ANSWER_ORACLE_PROVIDER==='http'?'http':'mock'}
+export class AzureOpenAiAnswerOracleProvider implements AnswerOracleProvider {
+  name='azure-openai-answer-oracle';
+  model=specializedAzureQaConfig('ANSWER_ORACLE').deployment;
+  async solve(input:AnswerOracleInput):Promise<AnswerOracleSolveResult>{
+    const result=await requestSpecializedAzureQa('ANSWER_ORACLE',ANSWER_ORACLE_SYSTEM_PROMPT_V1,input);
+    return validateAnswerOracleOutput(result,input);
+  }
+}
+
+export function getAnswerOracleProvider():AnswerOracleProvider{return process.env.ANSWER_ORACLE_PROVIDER==='azure-openai'?new AzureOpenAiAnswerOracleProvider():process.env.ANSWER_ORACLE_PROVIDER==='http'?new HttpAnswerOracleProvider():new DeterministicAnswerOracleProvider()}
+export function answerOracleProviderMode(){return process.env.ANSWER_ORACLE_PROVIDER==='azure-openai'?'azure-openai':process.env.ANSWER_ORACLE_PROVIDER==='http'?'http':'mock'}

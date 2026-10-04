@@ -13,11 +13,9 @@ The controlled repository bank contains exactly:
 - A2.2: 1,000 questions
 - Total: 3,000 questions
 
-The current semantically hardened production catalog contains three immutable practice forms:
+The v3 release pack defines 60 immutable practice forms: 20 for each of A1, A2.1 and A2.2. IDs run from `JFT-PRACTICE-A1-001-v3` to `JFT-PRACTICE-A1-020-v3`, with equivalent ranges for `A2-1` and `A2-2`.
 
-- `JFT-PRACTICE-A1-001-v2`
-- `JFT-PRACTICE-A2-1-001-v2`
-- `JFT-PRACTICE-A2-2-001-v2`
+Within each level, forms overlap by at most one question. Non-Listening questions are not reused across forms; Listening exposure is at most two forms per question. Source deployment alone does not publish these snapshots: run the release operation and confirm the persisted catalog using the production smoke test. Existing v2 snapshots and learner attempts remain intact.
 
 Each form contains 48 questions (12 per section) and has a 60-minute practice timer.
 
@@ -71,7 +69,7 @@ Apply all SQL migrations in order from:
 ```text
 supabase/migrations/0001_v4_core.sql
 ...
-supabase/migrations/0007_factory_qa_evidence_rls.sql
+supabase/migrations/20260927041219_session_progress_compare_and_swap.sql
 ```
 
 Create the Supabase Storage bucket `exam-assets`, then configure the server-only values from `.env.production.example`, including:
@@ -86,6 +84,15 @@ Create the Supabase Storage bucket `exam-assets`, then configure the server-only
 
 The service-role key and all provider secrets must remain server-side.
 
+### Native Azure QA2–QA7
+
+Each specialized provider supports `mock`, `http`, and `azure-openai`. Set `ANSWER_ORACLE_PROVIDER`, `JAPANESE_NATURALNESS_PROVIDER`, `CURRICULUM_GROUNDING_PROVIDER`, `JFT_ALIGNMENT_PROVIDER`, `DIFFICULTY_CALIBRATION_PROVIDER`, and `ORIGINALITY_DUPLICATE_PROVIDER` to `azure-openai` to use native Azure chat-completions without an external adapter service.
+
+Azure uses the existing shared `AOAI_ENDPOINT`, `API_KEY`, and `AZURE_OPENAI_DEPLOYMENT` settings (or `AI_QA_ENDPOINT`, `AI_QA_API_KEY`, `AI_QA_MODEL`). Optional per-judge overrides are `<PREFIX>_AZURE_ENDPOINT`, `<PREFIX>_AZURE_API_KEY`, and `<PREFIX>_MODEL`. Generic `<PREFIX>_ENDPOINT`/`<PREFIX>_API_KEY` remain reserved for HTTP adapters.
+
+Missing credentials block authoring readiness. Outputs still pass the existing validators and release policies; provider failures remain review/block conditions. `authoringReady` describes configuration, not a successful live provider call or human approval. Enabling real providers does not re-audit the existing bank automatically; run a controlled sample and review evidence before bulk QA.
+
+
 ## Publish the Production 3000 data release
 
 After the Supabase schema and production environment are configured:
@@ -94,7 +101,7 @@ After the Supabase schema and production environment are configured:
 npm run release:production
 ```
 
-This operation is idempotent. It imports/updates the controlled 3,000-question bank, publishes the three v2 production exam snapshots, skips matching snapshots that already exist, and refuses to overwrite a conflicting immutable version.
+This operation is idempotent. It imports/updates the controlled 3,000-question bank, publishes all 60 v3 production exam snapshots, skips matching snapshots that already exist, and refuses to overwrite a conflicting immutable version.
 
 The same operation is available to an authenticated admin at:
 
@@ -113,7 +120,7 @@ Configure `PRODUCTION_SMOKE_TOKEN` and optionally `PRODUCTION_URL`, then run:
 npm run smoke:production
 ```
 
-The smoke journey verifies the real three-level catalog, 48-question A1 exam, autosave/resume, active-answer secrecy, Listening audio, submit/idempotency, result review and history.
+The smoke journey requires all 60 v3 forms across the three-level catalog, 48-question A1 exam, autosave/resume, active-answer secrecy, Listening audio, submit/idempotency, result review and history.
 
 ## Release gate
 

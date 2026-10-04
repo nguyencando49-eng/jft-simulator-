@@ -1,3 +1,4 @@
+import { requestSpecializedAzureQa, specializedAzureQaConfig } from './specialized-azure-qa';
 import {JAPANESE_NATURALNESS_PROMPT_VERSION,JAPANESE_NATURALNESS_SYSTEM_PROMPT_V1,JapaneseNaturalnessError,finalizeJapaneseNaturalnessAssessment,validateJapaneseNaturalnessOutput,type JapaneseNaturalnessAssessment,type JapaneseNaturalnessInput,type JapaneseNaturalnessIssue,type JapaneseNaturalnessIssueCode} from './japanese-naturalness';
 
 export interface JapaneseNaturalnessProvider{name:string;model?:string;judge(input:JapaneseNaturalnessInput):Promise<JapaneseNaturalnessAssessment>}
@@ -40,5 +41,14 @@ export class HttpJapaneseNaturalnessProvider implements JapaneseNaturalnessProvi
   }
 }
 
-export function getJapaneseNaturalnessProvider():JapaneseNaturalnessProvider{return process.env.JAPANESE_NATURALNESS_PROVIDER==='http'?new HttpJapaneseNaturalnessProvider():new MockJapaneseNaturalnessProvider()}
-export function japaneseNaturalnessProviderMode(){return process.env.JAPANESE_NATURALNESS_PROVIDER==='http'?'http':'mock'}
+export class AzureOpenAiJapaneseNaturalnessProvider implements JapaneseNaturalnessProvider {
+  name='azure-openai-japanese-naturalness';
+  model=specializedAzureQaConfig('JAPANESE_NATURALNESS').deployment;
+  async judge(input:JapaneseNaturalnessInput):Promise<JapaneseNaturalnessAssessment>{
+    const result=await requestSpecializedAzureQa('JAPANESE_NATURALNESS',JAPANESE_NATURALNESS_SYSTEM_PROMPT_V1,input);
+    return validateJapaneseNaturalnessOutput(result,input);
+  }
+}
+
+export function getJapaneseNaturalnessProvider():JapaneseNaturalnessProvider{return process.env.JAPANESE_NATURALNESS_PROVIDER==='azure-openai'?new AzureOpenAiJapaneseNaturalnessProvider():process.env.JAPANESE_NATURALNESS_PROVIDER==='http'?new HttpJapaneseNaturalnessProvider():new MockJapaneseNaturalnessProvider()}
+export function japaneseNaturalnessProviderMode(){return process.env.JAPANESE_NATURALNESS_PROVIDER==='azure-openai'?'azure-openai':process.env.JAPANESE_NATURALNESS_PROVIDER==='http'?'http':'mock'}

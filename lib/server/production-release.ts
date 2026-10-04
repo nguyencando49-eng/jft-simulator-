@@ -277,20 +277,27 @@ export async function publishProductionRelease(repo:Repository,publishedAt=new D
   const pack=buildProductionExamReleasePack(seedQuestions,publishedAt);
   const existing=await repo.listExamVersions();
   const existingById=new Map(existing.map(version=>[version.id,version]));
-  const published:string[]=[],skipped:string[]=[];
-  for(let index=0;index<pack.versions.length;index++){
-    const draft:ExamDraft=pack.drafts[index];
-    const version=pack.versions[index];
+  // Validate every immutable snapshot before writing any new exam.
+  for(const version of pack.versions){
     const current=existingById.get(version.id);
-    if(current){
-      if(snapshotSignature(current)!==snapshotSignature(version))throw new ProductionReleaseError('PRODUCTION_VERSION_CONFLICT',`${version.id} already exists with a different immutable snapshot.`);
+    if(current&&snapshotSignature(current)!==snapshotSignature(version))throw new ProductionReleaseError('PRODUCTION_VERSION_CONFLICT',`${version.id} already exists with a different immutable snapshot.`);
+  }
+  const published:string[]=[],skipped:string[]=[];
+  for(let start=0;start<pack.versions.length;start+=5){
+    const results=await Promise.allSettled(pack.versions.slice(start,start+5).map(async(version,offset)=>{
+      const index=start+offset;
+      const draft:ExamDraft=pack.drafts[index];
+      const current=existingById.get(version.id);
+      if(current){
+        skipped.push(version.id);
+        return;
+      }
       await repo.saveExamDraft(draft);
-      skipped.push(version.id);
-      continue;
-    }
-    await repo.saveExamDraft(draft);
-    await repo.saveExamVersion(version);
-    published.push(version.id);
+      await repo.saveExamVersion(version);
+      published.push(version.id);
+    }));
+    const failure=results.find(result=>result.status==='rejected');
+    if(failure?.status==='rejected')throw failure.reason;
   }
   return {bankImport,published,skipped,report:pack.report};
 }

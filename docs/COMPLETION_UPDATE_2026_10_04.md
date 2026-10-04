@@ -20,14 +20,10 @@
 
 ## Production và việc còn chặn
 
-Website công khai vẫn báo Supabase auth/repository/storage; QA2–QA7 còn mock và `authoringReady=false` tại lúc kiểm tra. Code mới không tự thay đổi environment hay dữ liệu production.
+Ngày 04/10/2026, production đã nhận đủ sáu biến `<PREFIX>_PROVIDER=azure-openai` và được redeploy. `/api/v1/system` báo `ready=true`, `authoringReady=true`, sáu specialized QA đều là `azure-openai`. Đây chỉ là readiness cấu hình.
 
-Kết nối Vercel trả 403 cho scope `jft-simiulator`; cần kết nối lại tài khoản có quyền trong scope này. Supabase báo dự án `jft-simulator` ACTIVE_HEALTHY, nhưng `execute_sql` trả lỗi xác thực postgres. Vì vậy chưa xác nhận được 60 đề đã thực sự được phát hành và chưa chạy live smoke bằng tài khoản production.
+Admin release preview xác nhận 3.000 câu và 60 đề v3, không có snapshot xung đột. Lượt phát hành đầu bị `FUNCTION_INVOCATION_TIMEOUT` sau khi ghi 22 đề. PR #18 sửa đường ghi: bỏ qua câu không đổi, kiểm tra xung đột trước khi ghi, tiếp tục phần đề thiếu theo nhóm giới hạn và tăng `maxDuration` lên 300 giây. CI QA/E2E đều PASS. Lượt phát hành tiếp theo tạo 38 đề mới, giữ 22 snapshot cũ. Sau khi tải lại trang quản trị, trạng thái `ĐÃ PHÁT HÀNH`, 60/60 snapshot và 3.000/3.000 câu được xác nhận từ production. Phiên bản v2 trước đây vẫn tồn tại.
 
-Sau khi khôi phục quyền truy cập:
+Một lần sinh thử một câu bằng xưởng AI thất bại. Job đã lưu báo Azure OpenAI `401`: khóa subscription không hợp lệ hoặc endpoint không khớp resource. Vì vậy chưa có bằng chứng QA2–QA7 chạy thành công bằng model thật. Không chạy hàng loạt, không duyệt câu sinh thử thất bại. Cần sửa cặp endpoint/API key Azure trong môi trường Vercel production bằng thao tác bảo mật, redeploy, rồi sinh một mẫu và kiểm tra evidence của từng judge.
 
-1. Kiểm tra environment hiện tại, đặt sáu biến `<PREFIX>_PROVIDER=azure-openai` theo `.env.production.example`, xác nhận credential Azure và redeploy.
-2. Gọi preview release bằng admin để xác nhận 3.000 câu, các ID v3 còn thiếu/xung đột. Nếu xung đột, điều tra snapshot; không ghi đè.
-3. Chạy `npm run release:production` với credential server hợp lệ để bổ sung snapshot còn thiếu. Giữ nguyên phiên bản cũ và lịch sử.
-4. Chạy `npm run smoke:production` bằng token server, yêu cầu đủ 60 đề và luồng thi thực tế PASS.
-5. Chạy mẫu QA thật, kiểm tra evidence của từng judge; chỉ chạy hàng loạt sau khi mẫu được nghiệm thu. Nghiệm thu ngôn ngữ/audio và email recovery thật vẫn cần bằng chứng riêng.
+Chưa chạy `npm run smoke:production` vì không có production smoke token; phiên quản trị không thể thay cho vai trò học viên để kiểm thử toàn bộ luồng thi. Nghiệm thu âm thanh/ngôn ngữ và email recovery thật cũng còn cần bằng chứng riêng. Vercel plugin trả 403 trên scope `jft-simiulator`; thao tác được hoàn thành qua phiên trình duyệt đã đăng nhập. Supabase SQL connector vẫn báo lỗi xác thực postgres.
